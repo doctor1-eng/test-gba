@@ -229,3 +229,17 @@
 - **Arc 3 amorcé** : la rencontre avec Ondine annoncée en fin de proposition Arc 2 est faite. Son
   développement complet (ville d'Azuria, arène, etc.) reste à concevoir plus tard, hors périmètre de
   cette session
+
+## Session 4 (suite 6) — Aparté : analyse statique Pokémon Unbound (hors développement du jeu)
+- Quatre fichiers ROM/paquets fournis par Thomas pour analyse : trois refusés (ROMs de jeux commerciaux
+  complètes, hackées ou non — Unbound v2.1.1.1, un hack FireRed "Squirrels", une FireRed vanilla), un
+  accepté après vérification de son contenu réel (un pack de métadonnées d'analyse statique sans aucune
+  ROM/image/son à l'intérieur — CSV d'offsets, entropie, compteurs de références)
+- Analyse complète documentée dans `docs/pokemon-unbound-analysis/` (14 documents + FINAL-REPORT.md) et
+  outillage réutilisable dans `tools/unbound_analysis/` (3 scripts Python)
+- Conclusion principale : peu d'éléments concrets exploitables pour notre projet (les données ne
+  contiennent aucun contenu réel, seulement des statistiques), mais confirmation croisée qu'Unbound est
+  bâti sur FireRed (cohérent avec nos notes de Session 1), et une découverte méthodologique utile (deux
+  signaux statistiques sur sept se sont avérés dominés par des faux positifs à l'échelle de la ROM
+  entière — détaillé dans `code-analysis.md`/`compression.md`)
+- Sans rapport avec l'avancement du jeu — aucun fichier `engine/`/`changed_files/` touché cette étape
