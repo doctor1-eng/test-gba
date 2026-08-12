@@ -105,3 +105,37 @@
 - Le binaire `qa_runner` fourni dans le paquet n'a pas été exécuté (provenance non vérifiable dans ce
   nouvel environnement) ; à recompiler depuis la source si besoin de reprendre le QA harness
 - Aucune modification de contenu/scénario cette session — session d'infrastructure uniquement
+
+## Session 4 (suite) — Épisode 1.1 : réécriture de la maison du joueur
+- Proposition de scène (dialogues + séquence) validée par Thomas avant implémentation, comme demandé
+- **Suppression complète de l'intrigue "emménagement"**, jusqu'à sa racine :
+  - `src/new_game.c` : la nouvelle partie ne warp plus vers `InsideOfTruck` (camion) mais directement dans
+    la chambre du joueur (`LittlerootTown_BrendansHouse_2F` ou `MaysHouse_2F` selon le genre), fonction
+    renommée `WarpToPlayerBedroom`. Le point de respawn (`SetLastHealLocationWarp`) est fixé au même
+    endroit puisque `InsideOfTruck` ne s'exécute plus pour le faire.
+  - `LittlerootTown/scripts.inc` : retrait de la scène "sortie du camion" (Maman accueille le joueur
+    devant la maison, dialogue "we're here, honey"), des mouvements et du texte associés
+  - `LittlerootTown_BrendansHouse_1F` et `MaysHouse_1F` : retrait des cartons de déménagement, du blocage
+    scénarisé de l'escalier, du bulletin télé "Arène d'Argenta / p Papa sera peut-être à l'écran"
+  - `LittlerootTown_BrendansHouse_2F` et `MaysHouse_2F` : retrait du blocage d'escalier lié à l'horloge
+  - `data/scripts/players_house.inc` : nouveau dialogue unique de Maman
+    (`PlayersHouse_1F_EventScript_BonjourMaman`) — accueil + annonce que le professeur Chen attend au
+    labo + rappel de prudence sur la route (fusion des deux beats "accueil"/"au revoir" proposés,
+    simplification volontaire pour rester sur des "scripts minimes" comme demandé dans EPISODES.md)
+  - Nouvelle sémantique simplifiée de `VAR_LITTLEROOT_INTRO_STATE` : 0 = pas encore parlé à Maman,
+    1 = fait (contre 8 états auparavant)
+- **Contenu non traité, signalé pour une session dédiée future** (découvert en creusant les dépendances,
+  pas dans le périmètre validé par Thomas cette fois) :
+  - La maison du RIVAL (Régis) contient une scène "nouveau voisin" symétrique
+    (`RivalsHouse_1F_Text_MayWhoAreYou` / `BrendanWhoAreYou`, "so your move was today", "mon père le
+    champion d'arène") — toujours accessible indépendamment de ce qui vient d'être corrigé, car son
+    déclenchement (`VAR_LITTLEROOT_RIVAL_STATE`) ne dépend pas de la scène du camion
+  - Vérifié avant de laisser en l'état : ce contenu n'est référencé par aucun fichier déjà validé
+    (`Route103/scripts.inc`, `oak_speech.c`, `rival_graphics.inc`) — aucun risque de casser le combat de
+    rival existant en le laissant de côté pour l'instant
+  - La quête SS Ticket/Latios-Latias livrée par "papa" (`PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV`)
+    et le cadeau post-badge 5 ("Amulet Coin... did DAD give you that badge?") restent également non traités,
+    comme déjà noté avant implémentation — toujours atteignables via le Hall of Fame, donc pas de
+    régression de compilabilité
+- Build validé (13e build propre au global) : `engine/pokeemerald.gba`, 32 Mo, toujours 79,02 % —
+  cohérent (code retiré ≈ code ajouté)

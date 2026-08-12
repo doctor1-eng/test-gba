@@ -2,7 +2,8 @@
 
 Ce paquet ne contient PAS le moteur complet (trop volumineux — plusieurs centaines de Mo d'assets
 graphiques/sonores communs à tous les hacks basés sur pokeemerald-expansion). Il contient uniquement :
-- `changed_files/` — les 21 fichiers qu'on a réellement modifiés ou créés (1,1 Mo)
+- `changed_files/` — les fichiers qu'on a réellement modifiés ou créés (28 au 2026-08-12, Session 4 suite —
+  liste amenée à grandir à chaque session, toujours resynchronisée depuis `engine/` avant chaque commit)
 - `docs/` — toute la documentation du projet
 - `tools/qa_harness/` — l'outil de QA headless
 - `GETTING_STARTED.md` — contexte général du projet

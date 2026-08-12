@@ -2,12 +2,21 @@
 
 ## Arc 1 — Bourg Palette
 
-### Épisode 1.1 — Réveil et découverte
+### Épisode 1.1 — Réveil et découverte — **fait, Session 4**
 - Emplacement : maison du joueur, Bourg Palette
 - Personnages : Joueur, Maman
-- Événements : réveil, présentation du village, direction indiquée vers le labo
-- Maps concernées : `LittlerootTown_PlayersHouse_1F/2F` (à renommer)
-- Scripts : minimes, dialogues d'intro existants à franciser/adapter
+- Événements : réveil (le joueur habite déjà Bourg Palette, plus d'arrivée en camion), dialogue avec
+  Maman (accueil + annonce que le professeur Chen l'attend au labo + "présentation du village" en une
+  ligne), direction vers Route 1
+- Maps concernées : `LittlerootTown_BrendansHouse_1F/2F` et `LittlerootTown_MaysHouse_1F/2F` (miroir
+  selon le genre du joueur), `LittlerootTown` (suppression de la scène du camion), `InsideOfTruck`
+  (contournée, plus jamais chargée)
+- Scripts : intrigue "emménagement/papa champion d'arène" entièrement retirée (camion, cartons, horloge
+  à régler de force, bulletin TV de l'Arène d'Argenta) ; remplacée par un dialogue unique de Maman
+  (`PlayersHouse_1F_EventScript_BonjourMaman`, `data/scripts/players_house.inc`)
+- **Non traité cette session** (contenu apparenté découvert en cours de route, cf. CHANGELOG) : la maison
+  du rival (Régis) contient une scène "nouveau voisin" avec les mêmes références père/déménagement,
+  toujours techniquement accessible indépendamment de ce qu'on vient de corriger
 
 ### Épisode 1.2 — Rencontre avec le Professeur Chen
 - Emplacement : labo du Professeur Chen (ex-labo Birch)

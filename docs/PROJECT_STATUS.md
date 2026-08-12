@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4)
+Dernière mise à jour : 2026-08-12 (Session 4, suite)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -191,10 +191,26 @@ Dernière mise à jour : 2026-08-12 (Session 4)
 - [ ] `qa_runner` fourni dans le paquet non ré-exécuté (binaire non vérifié) — à recompiler depuis la source
   si la calibration du QA harness reprend
 
-## PROCHAINES ÉTAPES (mise à jour Session 4)
-1. Réécriture narrative complète de la maison du joueur (Épisode 1.1) — toujours en attente, priorité
-   inchangée (ne pas traduire littéralement, cf. CHANGELOG Session 3 suite 5)
+## Mise à jour Session 4 (suite) — Épisode 1.1 fonctionnellement complet
+- [x] Proposition de scène (dialogues + séquence) validée par Thomas avant implémentation
+- [x] Intrigue "emménagement/papa champion d'arène" retirée à la racine : plus de camion (`new_game.c`
+  warp directement dans la chambre du joueur), plus de cartons, plus de blocage d'escalier, plus de
+  bulletin TV Arène d'Argenta
+- [x] Nouveau dialogue Maman unique (accueil + direction labo + rappel de prudence), `VAR_LITTLEROOT_INTRO_STATE`
+  simplifiée à 2 états (0/1) contre 8 avant
+- [x] Build validé (13e build propre), ROM toujours 79,02 % d'occupation
+- [ ] DÉCOUVERT EN COURS DE ROUTE, PAS TRAITÉ : la maison du rival (Régis) contient une scène "nouveau
+  voisin" symétrique avec les mêmes références père/déménagement, toujours accessible indépendamment de
+  ce qui vient d'être corrigé (vérifié : ne touche à rien du combat de rival Route 103 déjà validé si on
+  la laisse de côté pour l'instant) — nécessite une session dédiée
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite)
+1. Traiter la maison du rival (Régis) — scène "nouveau voisin" avec références père/déménemgent
+   (`RivalsHouse_1F_Text_MayWhoAreYou`/`BrendanWhoAreYou`), symétrique à ce qu'on vient de corriger côté
+   joueur
 2. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
 3. Script Python de preview PNG des maps
 4. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
 5. Balayage plus large des dialogues restants en anglais
+6. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+   d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
