@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 9)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 10)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -328,3 +328,15 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 9)
    pas de conflit identifié avec le travail d'Argenta
 12. Après Azuria : décider de la suite (route vers Céladopole/Carmin-sur-Mer, ou consolidation/polish des
    arcs existants) avec Thomas
+
+## Mise à jour Session 4 (suite 10) — Correction d'une régression critique
+- [x] Retour de test : "le jeu redémarre en passant le village" — la suppression du blocage de la Jumelle
+  (suite 8) était une erreur, ce verrou est en réalité le mécanisme qui garantit que le joueur passe par la
+  maison du rival avant d'atteindre la Route 1 et la scène de sauvetage du Professeur Chen (remise de
+  Pikachu). Restauré intégralement dans `data/maps/LittlerootTown/scripts.inc` et `map.json`
+- [x] Vérifié : les corrections trucs/mamans de la suite 8 (`src/new_game.c`) sont indépendantes et restent
+  valides, non concernées par cette régression
+- [x] Build validé, ROM 79,01 %
+- **Point de vigilance méthodologique** : avant de qualifier un mécanisme de "reliquat vanilla obsolète" et
+  de le supprimer, toujours vérifier s'il pose une variable de progression consultée ailleurs — la note de
+  la Session 4 suite 2 documentait déjà ce rôle, relue trop vite avant la suite 8

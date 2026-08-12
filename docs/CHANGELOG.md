@@ -338,3 +338,25 @@
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`src/data/trainers.party`, `data/maps/RustboroCity_Gym/scripts.inc`, `data/maps/RustboroCity/scripts.inc`,
   `data/maps/RustboroCity_House2/scripts.inc`)
+
+## Session 4 (suite 10) — Correction d'une régression : le blocage de la Jumelle était intentionnel
+- Retour de test de Thomas : "Ça relance le jeu dès que je passe le village" — crash/redémarrage en
+  quittant Bourg Palette par le nord
+- Cause identifiée après relecture du CHANGELOG (Session 4 suite 2) : le retrait du blocage de la Jumelle
+  fait en suite 8 était une **erreur**. Ce blocage n'est pas un reliquat vanilla obsolète — il pose
+  `VAR_LITTLEROOT_TOWN_STATE` à une valeur non nulle uniquement après la scène de la maison du rival, et
+  c'est ce verrou qui garantissait que le joueur passe par cette scène (mise en place, choréographie
+  validées par Thomas) avant d'atteindre la Route 1 et la scène de sauvetage du Professeur Chen
+  (`Route101_EventScript_StartBirchRescue`/`BirchsBag`, qui donne Pikachu). En retirant le verrou, il
+  devenait possible d'atteindre la Route 1 sans être passé par la maison du rival — combinaison d'états
+  jamais testée ni prévue, très probablement la cause du crash
+- Correctif : restauration intégrale du verrou tel qu'il existait avant la suite 8
+  (`LittlerootTown_EventScript_SetTwinPos`/`SetTwinGuardingRoutePos`, les triggers
+  `NeedPokemonTriggerLeft`/`Right`, la scène `DangerousWithoutPokemon` et son texte) dans
+  `data/maps/LittlerootTown/scripts.inc` et `map.json`. Les corrections trucs/mamans de la suite 8
+  (`src/new_game.c`) restent en place, elles ne sont pas concernées par cette régression
+- Leçon retenue : avant de qualifier un mécanisme de "reliquat vanilla obsolète" et de le supprimer,
+  vérifier d'abord s'il pose une variable de progression consultée ailleurs (ici, la note de la suite 2
+  documentait déjà explicitement ce rôle — elle avait été relue trop vite)
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`data/maps/LittlerootTown/scripts.inc`, `data/maps/LittlerootTown/map.json`)

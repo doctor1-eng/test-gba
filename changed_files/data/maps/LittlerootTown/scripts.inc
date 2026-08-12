@@ -68,11 +68,15 @@ LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent::
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 5
 	return
 
-@ Kanto Saison 1 : plus de blocage de la sortie nord (le joueur a déjà Pikachu dès le début), la Jumelle
-@ reste simplement en position d'accueil près du passage.
 LittlerootTown_EventScript_SetTwinPos::
+	goto_if_eq VAR_LITTLEROOT_TOWN_STATE, 0, LittlerootTown_EventScript_SetTwinGuardingRoutePos
 	setobjectxyperm LOCALID_LITTLEROOT_TWIN, 10, 1
 	setobjectmovementtype LOCALID_LITTLEROOT_TWIN, MOVEMENT_TYPE_FACE_UP
+	return
+
+LittlerootTown_EventScript_SetTwinGuardingRoutePos::
+	setobjectxyperm LOCALID_LITTLEROOT_TWIN, 7, 2
+	setobjectmovementtype LOCALID_LITTLEROOT_TWIN, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos::
@@ -172,6 +176,98 @@ LittlerootTown_EventScript_GoodLuck::
 	msgbox LittlerootTown_Text_GoodLuckCatchingPokemon, MSGBOX_DEFAULT
 	release
 	end
+
+LittlerootTown_EventScript_NeedPokemonTriggerLeft::
+	lockall
+	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinApproachPlayerLeft
+	waitmovement 0
+	call LittlerootTown_EventScript_DangerousWithoutPokemon
+	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinReturnLeft
+	waitmovement 0
+	releaseall
+	end
+
+LittlerootTown_EventScript_DangerousWithoutPokemon::
+	msgbox LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinPushPlayerFromRoute
+	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PushPlayerBackFromRoute
+	waitmovement 0
+	msgbox LittlerootTown_Text_DangerousIfYouDontHavePokemon, MSGBOX_DEFAULT
+	closemessage
+	return
+
+LittlerootTown_Movement_TwinApproachPlayerLeft:
+	face_right
+	delay_8
+	disable_jump_landing_ground_effect
+	jump_in_place_right
+	delay_8
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	face_down
+	step_end
+
+LittlerootTown_Movement_TwinPushPlayerFromRoute:
+	walk_down
+	step_end
+
+LittlerootTown_Movement_TwinReturnLeft:
+	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_in_place_faster_down
+	step_end
+
+LittlerootTown_Movement_PushPlayerBackFromRoute:
+	lock_facing_direction
+	walk_down
+	unlock_facing_direction
+	step_end
+
+LittlerootTown_EventScript_NeedPokemonTriggerRight::
+	lockall
+	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinApproachPlayerRight
+	waitmovement 0
+	call LittlerootTown_EventScript_DangerousWithoutPokemon
+	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinReturnRight
+	waitmovement 0
+	releaseall
+	end
+
+LittlerootTown_Movement_TwinApproachPlayerRight:
+	face_right
+	delay_8
+	disable_jump_landing_ground_effect
+	jump_in_place_right
+	delay_8
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	face_down
+	step_end
+
+LittlerootTown_Movement_TwinReturnRight:
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_down
+	step_end
 
 LittlerootTown_EventScript_GoSaveBirchTrigger::
 	lockall
@@ -757,6 +853,10 @@ LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
 	.string "Um, um, um!\p"
 	.string "If you go outside and go in the grass,\n"
 	.string "wild POKéMON will jump out!$"
+
+LittlerootTown_Text_DangerousIfYouDontHavePokemon:
+	.string "It's dangerous if you don't have\n"
+	.string "your own POKéMON.$"
 
 LittlerootTown_Text_CanYouGoSeeWhatsHappening:
 	.string "Um, hi!\p"
