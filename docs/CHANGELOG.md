@@ -85,3 +85,23 @@
   scène Route 1/Labo), pas d'une simple traduction — tâche notée pour une session dédiée à l'Épisode 1.1.
 - QA harness : blocage input documenté (voir tools/qa_harness/README.md) — les pressions de touches ne
   semblent pas prises en compte par le core, cause racine non identifiée, ne pas retenter à l'aveugle.
+
+## Session 4 — 2026-08-12 — Migration vers un vrai dépôt git (Claude Code)
+- Transfert du projet depuis l'environnement bac-à-sable éphémère vers un vrai dépôt git
+  (`doctor1-eng/test-gba`, branche `claude/pokeemerald-setup-context-wayy1t`), conformément au plan annoncé
+  dans GETTING_STARTED.md
+- Reconstruction complète depuis le paquet léger (`kanto_saison1_leger.tar`) : clone frais de
+  `rh-hideout/pokeemerald-expansion` dans `engine/`, copie des 21 fichiers modifiés (`changed_files/`)
+  par-dessus
+- Toolchain installée (`build-essential`, `binutils-arm-none-eabi`, `libpng-dev`, `gcc-arm-none-eabi`)
+- Build validé (12e build propre au global) : `engine/pokeemerald.gba`, 32 Mo, 79,02 % d'occupation ROM —
+  strictement identique au taux d'occupation constaté en session 2/3, confirmant que la reconstruction est
+  fidèle
+- Décision de structure de dépôt : `engine/` (moteur cloné, ~800 Mo dont ~500 Mo de son propre `.git`) reste
+  **hors suivi git** (`.gitignore`), conformément à la logique déjà actée dans INSTALL.md ("paquet léger").
+  Le contenu réellement versionné est `changed_files/` (à la racine, copié depuis le paquet) + `docs/` +
+  `tools/qa_harness/` (sans le binaire précompilé `qa_runner`, ignoré — seule sa source `qa_runner.c` est
+  suivie). `engine/` se régénère à chaque session via `INSTALL.md`.
+- Le binaire `qa_runner` fourni dans le paquet n'a pas été exécuté (provenance non vérifiable dans ce
+  nouvel environnement) ; à recompiler depuis la source si besoin de reprendre le QA harness
+- Aucune modification de contenu/scénario cette session — session d'infrastructure uniquement

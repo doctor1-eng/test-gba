@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-11 (Session 1)
+Dernière mise à jour : 2026-08-12 (Session 4)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -179,3 +179,22 @@ Dernière mise à jour : 2026-08-11 (Session 1)
 2. Déboguer l'input du QA harness (vérifier core->getKeys())
 3. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
 4. Script Python de preview PNG des maps (alternative plus simple au QA harness, jamais commencé)
+
+## Mise à jour Session 4 — Migration vers dépôt git réel (Claude Code)
+- [x] Projet transféré dans un vrai dépôt git (`doctor1-eng/test-gba`, branche
+  `claude/pokeemerald-setup-context-wayy1t`) — fin de la dépendance à l'environnement bac-à-sable éphémère
+  annoncée en fin de Session 3
+- [x] Reconstruction depuis le paquet léger validée : clone `engine/` frais + `changed_files/` appliqués +
+  toolchain installée + build propre (12e build global, ROM 79,02 %, identique aux sessions précédentes)
+- [x] Structure de dépôt actée : `engine/` gitignoré (trop volumineux, se reclone via INSTALL.md),
+  `changed_files/` + `docs/` + `tools/qa_harness/` (hors binaire `qa_runner`) versionnés
+- [ ] `qa_runner` fourni dans le paquet non ré-exécuté (binaire non vérifié) — à recompiler depuis la source
+  si la calibration du QA harness reprend
+
+## PROCHAINES ÉTAPES (mise à jour Session 4)
+1. Réécriture narrative complète de la maison du joueur (Épisode 1.1) — toujours en attente, priorité
+   inchangée (ne pas traduire littéralement, cf. CHANGELOG Session 3 suite 5)
+2. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+3. Script Python de preview PNG des maps
+4. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
+5. Balayage plus large des dialogues restants en anglais
