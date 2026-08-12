@@ -280,3 +280,31 @@
   "parent et enfant" complet — accessibles uniquement en post-Ligue, non bloquant pour l'instant
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`src/data/trainers.party`, `data/maps/PetalburgCity_Gym/scripts.inc`)
+
+## Session 4 (suite 8) — Corrections suite au premier test de Thomas sur Bourg Palette
+- Retour de test (4 points) : écran qui tremble/joueur bloqué à l'ouverture, deux camions visibles en
+  permanence dans la ville, deux "mamans" superposées dans chaque maison, une PNJ (la Jumelle) qui bloque
+  physiquement la sortie nord de la ville
+- Cause racine identifiée pour 3 des 4 points : `InsideOfTruck_EventScript_SetIntroFlagsMale/Female`
+  posait, en plus de l'animation du camion elle-même, toute une série de `setflag` de nettoyage (cacher
+  les deux camions, cacher la "maman du rival"/le "frère ou sœur du rival"/la Poké Ball du rival dans la
+  maison du joueur). En supprimant l'entrée dans `MAP_INSIDE_OF_TRUCK` (cf. Épisode 1.1), ce nettoyage
+  n'était plus jamais exécuté — d'où les doublons et les camions résiduels
+- `src/new_game.c` (`WarpToPlayerBedroom`) : les `FlagSet()` correspondants sont maintenant posés
+  directement en C, par genre, au moment du warp direct vers la chambre — sans passer par le camion ni son
+  animation. Les deux camions de Bourg Palette sont cachés dans tous les cas
+- `data/maps/LittlerootTown/scripts.inc` + `map.json` : suppression du verrou "pas de sortie sans
+  POKéMON" (déclencheurs `NeedPokemonTriggerLeft`/`Right` + scène `DangerousWithoutPokemon` qui faisait
+  physiquement reculer le joueur) — obsolète dans notre histoire puisque Pikachu est donné dès le départ
+  par le Professeur Chen. La Jumelle reste en PNJ d'accueil près du passage nord, sans plus jamais bloquer
+  le passage ; le code mort associé (scripts, mouvements, texte) a été retiré
+- Le tremblement d'écran/blocage total à l'ouverture correspond au comportement de
+  `Task_HandleTruckSequence`/`ExecuteTruckSequence`, qui n'est déclenché que par les coord_events internes
+  à `MAP_INSIDE_OF_TRUCK` — or `WarpToPlayerBedroom` ne warpe plus jamais vers cette carte (vérifié dans
+  `src/new_game.c` et via recherche exhaustive des appelants d'`ExecuteTruckSequence`). Aucun chemin de
+  code ne peut plus déclencher cette scène sur une nouvelle partie avec ce build ; le plus probable est que
+  Thomas testait avec une sauvegarde créée sur une build antérieure à la réécriture de l'Épisode 1.1 (le
+  camion n'a jamais existé dans les commits d'après Session 4). À vérifier avec une sauvegarde neuve sur ce
+  build
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`src/new_game.c`, `data/maps/LittlerootTown/scripts.inc`, `data/maps/LittlerootTown/map.json`)

@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 7)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 8)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -271,22 +271,39 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 7)
   Soin/Force/K.O.) — restent en anglais sauf les répliques à réécrire pour la cohérence "pas de lien
   familial", fait cette étape
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 7)
-1. Reprendre l'Arc 3 (Ondine → Azuria, ville et arène) — non commencé, à concevoir avant implémentation
+## Mise à jour Session 4 (suite 8) — Corrections suite au premier test de Thomas
+- [x] Retour de test traité (4 points) : écran qui tremble/joueur bloqué à l'ouverture, deux camions
+  visibles en permanence à Bourg Palette, deux "mamans" superposées dans chaque maison, la Jumelle qui
+  bloquait la sortie nord de la ville
+- [x] Cause racine des 3 premiers points : `InsideOfTruck_EventScript_SetIntroFlagsMale/Female` posait
+  aussi des `setflag` de nettoyage (camions, maman/frère-sœur/Poké Ball du rival dans la maison du joueur)
+  jamais rejoués depuis la suppression de l'entrée dans `MAP_INSIDE_OF_TRUCK` — ces `FlagSet()` sont
+  maintenant posés directement dans `WarpToPlayerBedroom` (`src/new_game.c`)
+- [x] Verrou "pas de sortie sans POKéMON" retiré de `LittlerootTown` (obsolète : Pikachu donné dès le
+  départ par le Professeur Chen)
+- [ ] Tremblement d'écran à l'ouverture : aucun chemin de code ne peut plus déclencher
+  `ExecuteTruckSequence`/`Task_HandleTruckSequence` sur une nouvelle partie avec ce build (vérifié) —
+  probablement une sauvegarde d'une build antérieure à l'Épisode 1.1 ; à confirmer avec Thomas via une
+  sauvegarde neuve sur le prochain build envoyé
+- [x] Build validé, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 8)
+1. Confirmer avec Thomas (sauvegarde neuve) que le tremblement d'écran à l'ouverture a bien disparu
+2. Reprendre l'Arc 3 (Ondine → Azuria, ville et arène) — non commencé, à concevoir avant implémentation
    comme les arcs précédents
-2. Traduction complète des 7 salles du gauntlet d'Argenta (actuellement en anglais, hors répliques
+3. Traduction complète des 7 salles du gauntlet d'Argenta (actuellement en anglais, hors répliques
    "famille" déjà neutralisées)
-3. Textes de rematch post-Ligue de Pierre (`NormanPreRematch`/`NormanRematchDefeat`/`NormanPostRematch`/
+4. Textes de rematch post-Ligue de Pierre (`NormanPreRematch`/`NormanRematchDefeat`/`NormanPostRematch`/
    `NormanRematchNeedTwoMons`) — thème "parent et enfant" à retirer, non urgent (post-Ligue uniquement)
-4. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
-5. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
+5. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+6. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
    deviner des coordonnées à l'aveugle (limite rencontrée pour placer Ondine)
-6. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
-7. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
+7. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
+8. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
   d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)
-8. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
+9. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
    non bloquant, jamais déclenché
-9. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+10. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
    d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
-10. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
+11. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
    pas de conflit identifié avec le travail d'Argenta
