@@ -14,9 +14,9 @@
 - Scripts : intrigue "emménagement/papa champion d'arène" entièrement retirée (camion, cartons, horloge
   à régler de force, bulletin TV de l'Arène d'Argenta) ; remplacée par un dialogue unique de Maman
   (`PlayersHouse_1F_EventScript_BonjourMaman`, `data/scripts/players_house.inc`)
-- **Non traité cette session** (contenu apparenté découvert en cours de route, cf. CHANGELOG) : la maison
-  du rival (Régis) contient une scène "nouveau voisin" avec les mêmes références père/déménagement,
-  toujours techniquement accessible indépendamment de ce qu'on vient de corriger
+- **Maison du rival (Régis) traitée également, Session 4 suite 2** : les scènes "qui es-tu / nouveau
+  voisin" (chez le joueur ET chez Régis) réécrites pour une rivalité déjà établie, sans casser le
+  déblocage de la Route 1 qui en dépendait (cf. CHANGELOG)
 
 ### Épisode 1.2 — Rencontre avec le Professeur Chen
 - Emplacement : labo du Professeur Chen (ex-labo Birch)
@@ -43,9 +43,10 @@
 - Personnages : Joueur, Maman (au revoir), Régis (première provocation)
 - Événements : premier point de contact avec Régis, ouverture du monde
 
-**Statut global Arc 1** : conception terminée (ce document), implémentation technique non commencée
-hormis 1.2 (texte du discours). Prochaine étape : construire 1.1 → 1.5 dans le moteur (vertical slice,
-cf. cahier des charges Phase 2).
+**Statut global Arc 1** : narrativement complet (Session 4, suite 2) — les épisodes 1.1 à 1.5 sont tous
+implémentés et compilent proprement, sans référence Hoenn/père résiduelle connue dans le contenu actif.
+Reste hors texte : renommage visuel des maps (level design, cf. MAPS.md), balayage des derniers dialogues
+anglais résiduels non narratifs (objets, PNJ secondaires).
 
 ---
 

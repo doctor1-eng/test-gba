@@ -139,3 +139,32 @@
     régression de compilabilité
 - Build validé (13e build propre au global) : `engine/pokeemerald.gba`, 32 Mo, toujours 79,02 % —
   cohérent (code retiré ≈ code ajouté)
+
+## Session 4 (suite 2) — Maison du rival (Régis) : correction des références père/déménagement
+- Découverte importante en creusant : la scène "Poké Ball" de la chambre de Régis n'est pas du code mort
+  comme supposé initialement — elle pose `setvar VAR_LITTLEROOT_TOWN_STATE, 1`, la variable qui débloque
+  physiquement l'accès à la Route 1 (le PNJ qui garde la sortie du village vérifie cette variable). La
+  supprimer comme proposé initialement aurait bloqué le jeu après l'Épisode 1.1. Proposition corrigée
+  validée par Thomas avant implémentation.
+- Découverte d'une deuxième scène équivalente (Régis vient voir le joueur chez lui, `MeetRival0/1/2`),
+  menant au même déblocage, avec le même texte incohérent — traitée en même temps
+- Décision de généalogie actée avec Thomas : Régis est le petit-fils de Chen via l'un de ses enfants (donc
+  le PNJ "mère du rival" est la fille de Chen, pas son épouse — le texte "my husband spends his days at
+  the lab" sous-entendant que son mari est le professeur ne pouvait pas être traduit tel quel)
+- Textes réécrits (mise en scène/choréographie et logique de déblocage entièrement conservées, seul le
+  contenu parlé change) :
+  - `RivalsHouse_1F_Text_LikeChildLikeFather` → `CommeSonGrandPere` (PNJ mère de Régis, dialogue par défaut)
+  - `RivalsHouse_1F_Text_WentOutToRoute103` → `PartiRoute103` ("comme son grand-père" au lieu de "comme
+    son père", écho avec le texte déjà existant sur Chen qui alterne labo/terrain)
+  - `RivalsHouse_1F_Text_DoYouHavePokemon` → `TuAsDejaUnPokemon` (PNJ enfant du quartier, retrait du
+    cadrage "nouveau voisin")
+  - `RivalsHouse_1F_Text_BrendanWhoAreYou` / `MayWhoAreYou` (scène "Régis vient te voir") et
+    `RivalsHouse_2F_Text_BrendanWhoAreYou` / `MayWhoAreYou` (scène "Poké Ball" dans sa chambre) : les 4
+    remplacés par un texte cohérent avec une rivalité déjà établie (plus de "qui es-tu, tu viens
+    d'emménager, mon père le champion d'arène..."), ton "sûr de lui, compétitif" conforme à CHARACTERS.md
+  - Contenu identique entre les variantes Brendan/May (le sprite du rival n'est pas encore fixé sur Régis
+    dans cette zone contrairement à Route 103 — limitation technique connue, non traitée cette session,
+    n'affecte pas le texte qui reste cohérent dans les deux cas)
+- `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` : toujours orpheline (scène "la mère de Régis visite ta
+  maison", morte depuis la suppression du camion), non traitée — signalée, hors périmètre validé cette fois
+- Build validé (14e build propre), ROM 79,01 % (quasi inchangé)

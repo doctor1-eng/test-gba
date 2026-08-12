@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 2)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -204,13 +204,28 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite)
   ce qui vient d'être corrigé (vérifié : ne touche à rien du combat de rival Route 103 déjà validé si on
   la laisse de côté pour l'instant) — nécessite une session dédiée
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite)
-1. Traiter la maison du rival (Régis) — scène "nouveau voisin" avec références père/déménemgent
-   (`RivalsHouse_1F_Text_MayWhoAreYou`/`BrendanWhoAreYou`), symétrique à ce qu'on vient de corriger côté
-   joueur
-2. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+## Mise à jour Session 4 (suite 2) — Maison du rival (Régis) : fait
+- [x] Scènes "qui es-tu / nouveau voisin" (maison du joueur ET chambre de Régis) réécrites — Régis et le
+  joueur se connaissent déjà, plus de référence "papa champion d'arène"
+- [x] Généalogie actée : Régis = petit-fils de Chen via un de ses enfants (PNJ "mère de Régis" = fille de
+  Chen, pas son épouse)
+- [x] Déblocage de la Route 1 (`VAR_LITTLEROOT_TOWN_STATE`) vérifié intact — risque de blocage total évité
+  (découvert avant implémentation, pas en production)
+- [x] Build validé (14e build propre), ROM 79,01 %
+- **Arc 1 narrativement complet** : les 5 épisodes prévus dans EPISODES.md (réveil → labo → Pikachu →
+  Team Rocket → départ/premier combat de rival) sont maintenant tous implémentés et cohérents avec notre
+  histoire (plus aucune intrigue Hoenn/père résiduelle connue dans le contenu actif de l'Arc 1)
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 2)
+1. **Concevoir puis implémenter l'Arc 2** (Jadielle, forêt de Jade, Route 2-3) — nouvel arc, rien n'existe
+   encore au niveau EPISODES.md pour cet arc au-delà du squelette une ligne ; à détailler avant
+   implémentation, comme fait pour l'Arc 1
+2. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte) — pertinent dès qu'on
+   travaille les nouvelles zones de l'Arc 2
 3. Script Python de preview PNG des maps
 4. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
 5. Balayage plus large des dialogues restants en anglais
-6. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+6. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
+   non bloquant, jamais déclenché
+7. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
    d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
