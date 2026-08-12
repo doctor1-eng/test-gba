@@ -16908,3 +16908,19 @@ Level: 4
 Ability: Levitate
 - Tackle
 - Smog
+
+=== TRAINER_ROCKET_JESSIE_2 ===
+Name: JESSIE
+Class: Rocket
+Pic: Rocket Grunt F Frlg
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer / Check Bad Move / Try To Faint
+
+Ekans
+Level: 12
+Ability: Intimidate
+- Poison Sting
+- Wrap
+- Leer

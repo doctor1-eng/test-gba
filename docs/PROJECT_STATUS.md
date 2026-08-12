@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 3)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 4)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -225,16 +225,23 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 3)
 - Repéré pour plus tard (Arc 4/Argenta, pas maintenant) : textes "WALLY" partagés dans Route102 mais
   utilisés par PetalburgCity/scripts.inc
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 3)
-1. Soumettre le texte de la scène Team Rocket en forêt de Jade (remplace Team Aqua/Devon Corp, combat
-   obligatoire — bloquant tant que non traité, la forêt reste injouable en l'état)
-2. Soumettre le texte de la première rencontre avec Ondine (Arc 3, personnage central nouveau)
-3. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
-4. Script Python de preview PNG des maps
-5. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
-6. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, etc.)
-7. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
+## Mise à jour Session 4 (suite 4) — Épisode 2.2 fait : Team Rocket en forêt de Jade
+- [x] Texte validé, combat Team Aqua/Devon Corp remplacé par Jessie (Ekans niv. 12, nouveau dresseur
+  `TRAINER_ROCKET_JESSIE_2`) épaulée par James — inversion des rôles par rapport à Route 1
+- [x] Build validé (16e build propre), ROM 79,01 %
+- [ ] Ondine : texte proposé, question ouverte posée à Thomas (rejoint réellement l'équipe à l'écran, ou
+  rivale récurrente recroisée ponctuellement) — implémentation en attente de sa réponse
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 4)
+1. Trancher puis implémenter la première rencontre avec Ondine (Arc 3) — mécanique de suivi façon Pikachu,
+   ou simple rivale récurrente ? En attente de la décision de Thomas
+2. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+3. Script Python de preview PNG des maps
+4. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
+5. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
+  d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)
+6. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
    non bloquant, jamais déclenché
-8. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+7. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
    d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
-9. Textes "WALLY" (Route102/PetalburgCity) — à traiter avec l'Arc 4 (Argenta/Pierre)
+8. Textes "WALLY" (Route102/PetalburgCity) — à traiter avec l'Arc 4 (Argenta/Pierre)

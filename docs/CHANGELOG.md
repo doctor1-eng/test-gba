@@ -187,3 +187,21 @@
   Route102 (scène "attraper un Pokémon" + retour à l'Arène) — hors périmètre Route 2/forêt, concerne
   Argenta (Arc 4 Pierre), à traiter le moment venu
 - Build validé (15e build propre), ROM 79,01 %
+
+## Session 4 (suite 4) — Épisode 2.2 : Team Rocket en forêt de Jade
+- Texte validé par Thomas avant implémentation. Combat obligatoire "Grunt Team Aqua vole des documents
+  Devon Corp" (bloquait le passage) remplacé par une réapparition de Jessie/James/Miaouss — cohérent avec
+  GAME_DESIGN_DOCUMENT.md ("rencontres scriptées à des points clés de chaque arc")
+- Inversion des rôles par rapport à Route 1 : cette fois Jessie combat (Ekans niveau 12, nouveau dresseur
+  `TRAINER_ROCKET_JESSIE_2`), James l'encourage — garde le duo vivant sur la durée sans répéter Route 1
+  à l'identique
+- Mise en scène simplifiée par rapport à l'original (choréographie "chercheur fuit / grunt poursuit"
+  abandonnée au profit d'un format court façon Route 1 : sursaut, dialogue, combat, fuite comique) — les
+  deux PNJ (sprites Team Aqua/employé Devon) recyclés en Jessie/James (`OBJ_EVENT_GFX_ROCKET_F/M`) plutôt
+  que recréés, `map.json` édité directement (source de vérité, `events.inc` se régénère automatiquement —
+  confirmé en vérifiant les règles Make, ne jamais éditer `events.inc` à la main)
+- Budget dresseurs : 858/864 utilisés (6 de marge restante)
+- Repéré au passage, non traité : un dresseur générique "James" (chasseur d'insectes vanilla, sans lien
+  avec notre Team Rocket) existe déjà dans cette forêt — coïncidence de nom à corriger lors du balayage
+  de traduction général
+- Build validé (16e build propre), ROM 79,01 %
