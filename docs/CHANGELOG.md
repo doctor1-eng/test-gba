@@ -243,3 +243,40 @@
   signaux statistiques sur sept se sont avérés dominés par des faux positifs à l'échelle de la ROM
   entière — détaillé dans `code-analysis.md`/`compression.md`)
 - Sans rapport avec l'avancement du jeu — aucun fichier `engine/`/`changed_files/` touché cette étape
+
+## Session 4 (suite 7) — Arc 4 : Argenta/Pierre (ex-Norman), retrait de l'intrigue "papa champion d'arène"
+- Priorité fixée par Thomas ("Traite Argenta d'abord") : traiter la plus grosse zone "papa" restante avant
+  de poursuivre l'Arc 3 (Ondine/Azuria)
+- Proposition validée par Thomas ("Je valide") : Norman → PIERRE, aucun lien de parenté avec le joueur,
+  équipe recentrée Roche (au lieu de Normal), suppression du palier "reviens avec 4 badges", intrigue
+  Wally conservée telle quelle (elle ne référence jamais la famille du joueur), badge renommé
+- `TRAINER_NORMAN_1` (constante interne conservée pour limiter le risque sur les fichiers qui la
+  référencent) : Nom PIERRE, objets Potion/Potion, équipe remplacée par du Roche — Geodude niv. 12
+  (Tacle/Amorce/Jet-Pierres) et Onix niv. 14 (Tacle/Cri Perçant/Étreinte/Jet-Pierres) — remplace Spinda
+  niv. 27/Vigoroth niv. 27/Linoone niv. 29/Slaking niv. 31 @Baie Sitrus (Normal, bien trop fort pour une
+  première arène)
+- 7 dresseurs du gauntlet (Randall, Parker, George, Berke, Mary, Alexia, Jody — tous Cooltrainer) baissés
+  de niveau 26 à niveau 12 et objet Hyper Potion → Potion, espèces/attaques inchangées (les 7 salles à
+  thème Vitesse/Précision/Confusion/Défense/Soin/Force/K.O. restent en l'état, jugées neutres
+  narrativement)
+- `PetalburgCity_Gym/scripts.inc` : switch `VAR_PETALBURG_GYM_STATE` simplifié — les cas 2 à 5 (paliers
+  "reviens avec 1/2/3/4 badges", textes `NormanGoToRustboro`/`NormanGoToDewford`/`YouHaveGottenStronger`
+  supprimés avec leurs scripts) mènent désormais tous directement au combat contre Pierre, cohérent avec
+  Argenta = première arène (MAPS.md)
+- ~30 blocs de texte réécrits/traduits dans `PetalburgCity_Gym/scripts.inc` : toute la séquence Wally
+  (accueil, prêt du Zigzagoon, retour de tutoriel) traduite en français et débarrassée du cadre
+  père-fils ; intro/défaite de Pierre, remise du badge, explication CT Répercussion, réaction post-combat,
+  textes de re-provocation post-badge ; scène "PleaseComeWithMe/LetMeBorrowPlayer" du père de Wally
+  reformulée (n'emprunte plus "le fils du champion" mais simplement le dresseur qui a aidé Wally) ; dans le
+  gauntlet, les répliques évoquant "le gamin du champion"/"ton père" (Berke, Jody, George, guide de la
+  salle) neutralisées (restent en anglais, traduction complète de ces 7 salles différée — hors scope de
+  cette étape) ; panneaux de l'arène traduits (`ARÈNE POKéMON D'ARGENTA`)
+- `PetalburgCity_Gym_Text_ReceivedBalanceBadge` (seule occurrence de "BALANCE BADGE" dans tout le dépôt) →
+  "BADGE ROCHE", effet mécanique (HM Surf, +DÉF) inchangé
+- `PetalburgCity/scripts.inc` vérifié : aucune référence au père du joueur (les seules mentions "DAD"
+  restantes concernent le père de Wally, un personnage distinct, non affecté)
+- Hors scope, sciemment différé : les 4 textes de rematch post-Ligue (`NormanPreRematch`,
+  `NormanRematchDefeat`, `NormanPostRematch`, `NormanRematchNeedTwoMons`) contiennent encore un thème
+  "parent et enfant" complet — accessibles uniquement en post-Ligue, non bloquant pour l'instant
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`src/data/trainers.party`, `data/maps/PetalburgCity_Gym/scripts.inc`)
