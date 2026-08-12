@@ -1,0 +1,3 @@
+# Attendre le tout début du boot
+60 0
+SHOT boot_00.png

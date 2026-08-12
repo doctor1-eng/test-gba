@@ -1,0 +1,8 @@
+1900 0
+10 8
+5 0
+10 8
+5 0
+10 8
+30 0
+SHOT after_multi_start.png

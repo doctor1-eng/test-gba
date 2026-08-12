@@ -1,0 +1,35 @@
+# Logos + boot
+180 0
+SHOT 01_boot.png
+# Ecran titre : appui Start
+5 8
+30 0
+5 8
+30 0
+SHOT 02_title_menu.png
+# Confirme "Nouvelle partie" (A)
+5 1
+60 0
+SHOT 03_after_newgame.png
+# Rafales de A pour avancer dans les dialogues d'intro
+5 1
+40 0
+5 1
+40 0
+5 1
+40 0
+5 1
+40 0
+5 1
+40 0
+5 1
+40 0
+5 1
+40 0
+5 1
+40 0
+5 1
+40 0
+5 1
+40 0
+SHOT 04_intro_progress.png

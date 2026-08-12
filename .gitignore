@@ -1,0 +1,5 @@
+# Le moteur pokeemerald-expansion n'est pas versionné ici (voir INSTALL.md) :
+# trop volumineux (assets graphiques/sonores communs à tous les hacks du moteur).
+# Il se reconstruit via `git clone` + copie de changed_files/ (voir INSTALL.md).
+engine/
+tools/qa_harness/qa_runner
