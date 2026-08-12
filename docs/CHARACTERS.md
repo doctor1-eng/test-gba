@@ -20,8 +20,13 @@
 - Ton : sûr de lui, compétitif, mais jamais malveillant — évolue vers plus de respect envers le joueur
 - Équipe : évolutive à chaque rencontre, cohérente avec la progression du joueur (ne pas être artificiellement surpuissant, cf. cahier des charges §17)
 
-## Ondine (à venir — Arc 3)
-- Ton distinct à définir : franche, un peu autoritaire, passionnée par les Pokémon Eau
+## Ondine — première rencontre faite (Arc 3, Route 2)
+- Ton établi : franche, un peu autoritaire, passionnée par les Pokémon Eau — premier contact abrasif
+  (Pikachu perturbe sa pêche), pas de coup de foudre immédiat, elle teste le joueur en combat avant de
+  lui accorder un minimum de respect
+- Statut : rivale récurrente (pas de suivi à l'écran comme Pikachu) — recroisée ponctuellement dans les
+  arcs suivants, reste à définir où/quand précisément
+- Rôle prévu : Arc 3 porte son nom (Azuria), sa ville et son arène restent à concevoir
 
 ## Pierre (à venir — Arc 4)
 - Ton distinct à définir : calme, posé, protecteur, passionné de minéralogie

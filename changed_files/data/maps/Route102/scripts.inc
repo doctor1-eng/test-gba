@@ -13,8 +13,23 @@ Route102_EventScript_RouteSignPetalburg::
 	msgbox Route102_Text_RouteSignPetalburg, MSGBOX_SIGN
 	end
 
-Route102_EventScript_Boy::
-	msgbox Route102_Text_CatchWholeBunchOfPokemon, MSGBOX_NPC
+@ Kanto Saison 1 : première rencontre avec Ondine (Arc 3), rivale récurrente qu'on recroisera plus tard
+@ dans le jeu. Objet réutilisé depuis le PNJ "Boy" d'origine (position déjà validée), pas de nouvelle
+@ coordonnée inventée.
+Route102_EventScript_Ondine::
+	lock
+	faceplayer
+	msgbox Route102_Text_OndineInterruption, MSGBOX_DEFAULT
+	msgbox Route102_Text_OndineChallenge, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_single TRAINER_ONDINE_1, Route102_Text_OndineBattleIntro, Route102_Text_OndineDefeat, Route102_EventScript_OndineAfterBattle
+	end
+
+Route102_EventScript_OndineAfterBattle::
+	msgbox Route102_Text_OndineJoinParty, MSGBOX_DEFAULT
+	setflag FLAG_ONDINE_ROUTE2_DEFEATED
+	setflag FLAG_HIDE_ROUTE_2_ONDINE_ENCOUNTER
+	release
 	end
 
 Route102_EventScript_Calvin::
@@ -96,9 +111,31 @@ Route102_Text_ImNotVeryTall:
 	.string "Fwafwafwafwafwa…\p"
 	.string "Fwatchoo !$"
 
-Route102_Text_CatchWholeBunchOfPokemon:
-	.string "Je vais attraper plein de\n"
-	.string "POKéMON !$"
+Route102_Text_OndineInterruption:
+	.string "Hé ! Tu comptes laisser ce POKéMON\n"
+	.string "flanquer la pagaille encore\l"
+	.string "longtemps ?\p"
+	.string "Je pêchais tranquillement,\n"
+	.string "figure-toi !$"
+
+Route102_Text_OndineChallenge:
+	.string "Un dresseur qui ne sait même pas\n"
+	.string "tenir son POKéMON en laisse…\p"
+	.string "Tu ferais mieux de me prouver que\n"
+	.string "tu sais au moins te battre.$"
+
+Route102_Text_OndineBattleIntro:
+	.string "Je m'appelle Ondine.\p"
+	.string "Et question POKéMON EAU, personne\n"
+	.string "ne m'arrive à la cheville !$"
+
+Route102_Text_OndineDefeat:
+	.string "Hmpf. Pas mal, pour un débutant.$"
+
+Route102_Text_OndineJoinParty:
+	.string "Je vais à Argenta de toute façon.\p"
+	.string "Alors ne traîne pas, je te garde\n"
+	.string "à l'œil.$"
 
 Route102_Text_RouteSignOldale:
 	.string "ROUTE 2\n"

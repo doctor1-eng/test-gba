@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 4)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 5)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -232,11 +232,21 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 4)
 - [ ] Ondine : texte proposé, question ouverte posée à Thomas (rejoint réellement l'équipe à l'écran, ou
   rivale récurrente recroisée ponctuellement) — implémentation en attente de sa réponse
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 4)
-1. Trancher puis implémenter la première rencontre avec Ondine (Arc 3) — mécanique de suivi façon Pikachu,
-   ou simple rivale récurrente ? En attente de la décision de Thomas
+## Mise à jour Session 4 (suite 5) — Ondine (Arc 3) : première rencontre faite
+- [x] Rivale récurrente (pas de suivi à l'écran), rencontre sur Route 2, dresseur `TRAINER_ONDINE_1`
+  (Poliwag niv. 13), sprite `OBJ_EVENT_GFX_SWIMMER_F`
+- [x] Build validé (17e build propre), ROM 79,01 %
+- Demande hors-sujet refusée cette session : analyse/extraction d'une ROM Pokémon Unbound fournie par
+  Thomas — refusé (ROM commerciale protégée, contrairement à pokeemerald-expansion qui est un moteur
+  décompilé propre) ; alternatives proposées (techniques ROM hacking documentées publiquement, inspiration
+  conceptuelle sans toucher au binaire)
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 5)
+1. Développer la suite d'Ondine/Arc 3 (ville d'Azuria, arène) — non commencé, à concevoir avant
+   implémentation comme les arcs précédents
 2. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
-3. Script Python de preview PNG des maps
+3. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
+   deviner des coordonnées à l'aveugle (limite rencontrée pour placer Ondine)
 4. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
 5. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
   d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)

@@ -53,8 +53,8 @@
 
 #define FLAG_HIDE_ROUTE_1_TEAM_ROCKET_ENCOUNTER    0x20 // Custom : rencontre Team Rocket (Arc 1) déjà vue
 #define FLAG_TEAM_ROCKET_ROUTE1_DEFEATED    0x21 // Custom : rencontre Team Rocket (Arc 1) résolue définitivement
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_HIDE_ROUTE_2_ONDINE_ENCOUNTER    0x22 // Custom : première rencontre Ondine (Arc 2/3) déjà vue
+#define FLAG_ONDINE_ROUTE2_DEFEATED    0x23 // Custom : première rencontre Ondine résolue, rivale récurrente
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag

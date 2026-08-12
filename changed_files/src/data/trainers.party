@@ -16924,3 +16924,18 @@ Ability: Intimidate
 - Poison Sting
 - Wrap
 - Leer
+
+=== TRAINER_ONDINE_1 ===
+Name: ONDINE
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Check Bad Move / Try To Faint
+
+Poliwag
+Level: 13
+Ability: Water Absorb
+- Bubble
+- Hypnosis

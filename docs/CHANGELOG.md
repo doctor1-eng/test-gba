@@ -205,3 +205,27 @@
   avec notre Team Rocket) existe déjà dans cette forêt — coïncidence de nom à corriger lors du balayage
   de traduction général
 - Build validé (16e build propre), ROM 79,01 %
+
+## Session 4 (suite 5) — Arc 3, début : première rencontre avec Ondine
+- Texte validé par Thomas, ainsi que le choix de conception : Ondine reste une **rivale récurrente**
+  (recroisée ponctuellement plus tard), pas de mécanique de suivi façon Pikachu — plus simple, aucun
+  risque technique nouveau
+- Scène placée sur Route 2, en réutilisant le PNJ générique "Boy" déjà existant (position déjà validée
+  praticable) plutôt qu'en inventant de nouvelles coordonnées à l'aveugle (pas d'outil de preview de map
+  disponible pour vérifier visuellement)
+- Nouveau dresseur `TRAINER_ONDINE_1` (Poliwag niveau 13, légèrement au-dessus de Jessie/Route 2 pour
+  rester crédible comme "test" de la part d'Ondine), classe de combat `Swimmer F` / sprite overworld
+  `OBJ_EVENT_GFX_SWIMMER_F` (pas de sprite dédié Ondine existant, réutilisation d'un sprite vanilla)
+  cohérente avec le thème "passionnée de POKéMON EAU"
+- Deux nouveaux flags custom ajoutés (`FLAG_HIDE_ROUTE_2_ONDINE_ENCOUNTER`, `FLAG_ONDINE_ROUTE2_DEFEATED`,
+  0x22/0x23) dans la même plage libre que les flags Team Rocket de la Session 2 — attention en ajoutant
+  un flag : bien remplacer la ligne `FLAG_UNUSED_0x0xx` existante, pas juste insérer avant (erreur commise
+  puis corrigée pendant cette étape, cf. duplication de valeur détectée et nettoyée)
+- Budget dresseurs : 859/864 utilisés (5 de marge restante)
+- Un premier build a échoué (`Class: Swimmer` n'est pas un nom de classe valide, corrigé en `Swimmer F`
+  — leçon : toujours vérifier le nom exact de `Class:` par grep sur une entrée existante utilisant le
+  même `Pic:` avant d'écrire une nouvelle entrée `trainers.party`)
+- Build validé (17e build propre), ROM 79,01 %
+- **Arc 3 amorcé** : la rencontre avec Ondine annoncée en fin de proposition Arc 2 est faite. Son
+  développement complet (ville d'Azuria, arène, etc.) reste à concevoir plus tard, hors périmètre de
+  cette session
