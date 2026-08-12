@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 8)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 9)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -287,17 +287,36 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 8)
   sauvegarde neuve sur le prochain build envoyé
 - [x] Build validé, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 8)
+## Mise à jour Session 4 (suite 9) — Arc 3 : Azuria, l'arène d'Ondine
+- [x] Proposition présentée et validée (identité d'Ondine, équipe Eau, BADGE CASCADE) avant implémentation
+- [x] `TRAINER_ROXANNE_1` → ONDINE : équipe Roche (Geodude x2, Nosepass) → Eau (Poliwag niv. 12, Goldeen
+  niv. 12, Staryu niv. 15 @Baie Oran), même structure de niveaux, nom interne conservé
+- [x] 3 dresseurs du gauntlet reconvertis en Eau (Josh→Horsea, Tommy→2x Goldeen, Marc→2x Tentacool,
+  classe Hiker→Fisherman)
+- [x] Tous les textes de l'arène traduits et réécrits (intro d'Ondine référence leur rencontre Route 2,
+  défaite, badge, PostBattle, GymGuide, statue, appel PokéNav) — panneau de ville et un PNJ neutre
+  également corrigés
+- [x] "STONE BADGE" → "BADGE CASCADE" (nom canon d'Ondine/Misty)
+- [x] Bug latent retiré : `addvar VAR_PETALBURG_GYM_STATE, 1` dans `RoxanneDefeated` (vestige de l'ordre
+  vanilla Rustboro-1er/Petalburg-5e, aurait fait sauter Pierre en mode revanche prématurément vu
+  l'inversion de notre ordre)
+- [x] Build validé, ROM 79,01 %
+- Sciemment différé, même logique que pour Pierre : TM Éboulement/Rock Tomb gardée telle quelle
+  (mécanique inchangée, juste traduite), 4 textes de revanche post-Ligue d'Ondine non traités
+  (`TRAINER_ROXANNE_2`–`_5`)
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 9)
 1. Confirmer avec Thomas (sauvegarde neuve) que le tremblement d'écran à l'ouverture a bien disparu
-2. Reprendre l'Arc 3 (Ondine → Azuria, ville et arène) — non commencé, à concevoir avant implémentation
-   comme les arcs précédents
-3. Traduction complète des 7 salles du gauntlet d'Argenta (actuellement en anglais, hors répliques
+2. Traduction complète des 7 salles du gauntlet d'Argenta (actuellement en anglais, hors répliques
    "famille" déjà neutralisées)
-4. Textes de rematch post-Ligue de Pierre (`NormanPreRematch`/`NormanRematchDefeat`/`NormanPostRematch`/
-   `NormanRematchNeedTwoMons`) — thème "parent et enfant" à retirer, non urgent (post-Ligue uniquement)
+3. Traduction complète du reste de la ville d'Azuria (Rustboro City) — signalétique restante, PNJ
+   génériques, sous-intrigue Devon Corp (grunt qui vole des documents, à évaluer : remplacer par Team
+   Rocket comme pour la forêt de Jade, ou laisser neutre ?)
+4. Textes de rematch post-Ligue de Pierre et d'Ondine (thème "parent et enfant" pour Pierre, identité
+   Roxanne pour Ondine) — non urgent (post-Ligue uniquement)
 5. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
 6. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
-   deviner des coordonnées à l'aveugle (limite rencontrée pour placer Ondine)
+   deviner des coordonnées à l'aveugle
 7. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
 8. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
   d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)
@@ -307,3 +326,5 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 8)
    d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
 11. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
    pas de conflit identifié avec le travail d'Argenta
+12. Après Azuria : décider de la suite (route vers Céladopole/Carmin-sur-Mer, ou consolidation/polish des
+   arcs existants) avec Thomas

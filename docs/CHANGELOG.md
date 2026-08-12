@@ -308,3 +308,33 @@
   build
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`src/new_game.c`, `data/maps/LittlerootTown/scripts.inc`, `data/maps/LittlerootTown/map.json`)
+
+## Session 4 (suite 9) — Arc 3 : Azuria, l'arène d'Ondine (Rustboro/Roxanne repurposée)
+- Proposition validée : `TRAINER_ROXANNE_1` devient ONDINE, déjà annoncée comme rivale récurrente
+  (`CHARACTERS.md`) et déjà rencontrée sur la Route 2. Contrairement à Argenta/Pierre, aucune intrigue
+  familiale à retirer ici — Roxanne n'a jamais eu de lien de parenté avec le joueur en vanilla
+- `src/data/trainers.party` : équipe passée de Roche (Geodude x2 + Nosepass) à Eau (Poliwag niv. 12,
+  Goldeen niv. 12, Staryu niv. 15 @Baie Oran), même structure de niveaux que l'original. Le nom interne
+  `TRAINER_ROXANNE_1` est conservé (même logique que `TRAINER_NORMAN_1`→Pierre) pour ne pas toucher aux
+  nombreux fichiers qui le référencent (`battle_setup.c` REMATCH_ROXANNE, `trainers.h`, `opponents.h`)
+- 3 dresseurs du gauntlet reconvertis en Eau : Josh (Geodude→Horsea), Tommy (2x Geodude→2x Goldeen), Marc
+  (2x Geodude→2x Tentacool, classe Hiker→Fisherman puisque sa réplique vantait littéralement "mes POKéMON
+  ROCHE")
+- `data/maps/RustboroCity_Gym/scripts.inc` : tous les textes Roxanne→Ondine réécrits en français (intro,
+  défaite, badge, PostBattle, GymGuide, statue, appel PokéNav). L'intro d'Ondine référence explicitement
+  leur rencontre de la Route 2 ("On se retrouve, {PLAYER}… Je t'avais bien dit qu'on n'en resterait pas
+  là"). Badge renommé STONE BADGE → **BADGE CASCADE** (nom canon d'Ondine/Misty dans les jeux originaux)
+- Retrait d'un bug latent : `RoxanneDefeated` faisait `addvar VAR_PETALBURG_GYM_STATE, 1` +
+  `call_if_eq VAR_PETALBURG_GYM_STATE, 6, ...ReadyPetalburgGymForBattle` — un vestige de l'ordre vanilla où
+  Rustboro est le 1er badge et Petalburg le 5e (gate à 4 badges). Comme on a inversé cet ordre (Argenta = 1er
+  badge désormais), ce code aurait fait sauter Pierre en mode "revanche" (`VAR_PETALBURG_GYM_STATE = 8`) dès
+  qu'Ondine est battue, même sans revanche légitime déclenchée. Supprimé
+- Décisions de scope, mêmes principes que pour Argenta : la TM offerte (Éboulement/Rock Tomb) reste
+  inchangée mécaniquement (texte traduit mais neutre, pas de redesign d'objet) ; les textes de revanche
+  post-Ligue (`RoxannePreRematch`/`RoxanneRematchDefeat`/`RoxannePostRematch`/`RoxanneRematchNeedTwoMons`,
+  `TRAINER_ROXANNE_2`–`_5`) restent non traités, différés comme pour Pierre
+- Panneau de ville (`RustboroCity_Text_GymSign`) et un PNJ neutre (`RustboroCity_House2`) qui nommaient
+  Roxanne corrigés pour cohérence
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`src/data/trainers.party`, `data/maps/RustboroCity_Gym/scripts.inc`, `data/maps/RustboroCity/scripts.inc`,
+  `data/maps/RustboroCity_House2/scripts.inc`)

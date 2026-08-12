@@ -4791,7 +4791,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Crunch
 
 === TRAINER_ROXANNE_1 ===
-Name: ROXANNE
+Name: ONDINE
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
@@ -4800,29 +4800,28 @@ Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
 
-Geodude
+Poliwag
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Bubble
+- Hypnosis
 - Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
 
-Geodude
+Goldeen
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+- Horn Attack
+- Water Gun
+- Peck
+- Supersonic
 
-Nosepass @ Oran Berry
+Staryu @ Oran Berry
 Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
 - Tackle
-- Rock Tomb
+- Water Gun
+- Harden
+- Rapid Spin
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
@@ -5964,10 +5963,10 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Horsea
 Level: 10
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
+- Bubble
 
 === TRAINER_TOMMY ===
 Name: TOMMY
@@ -5978,11 +5977,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Goldeen
 Level: 8
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
-Geodude
+Goldeen
 Level: 8
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
@@ -10539,18 +10538,18 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_MARC ===
 Name: MARC
-Class: Hiker
-Pic: Hiker
+Class: Fisherman
+Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Tentacool
 Level: 8
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
-Geodude
+Tentacool
 Level: 8
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
