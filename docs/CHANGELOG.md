@@ -360,3 +360,15 @@
   documentait déjà explicitement ce rôle — elle avait été relue trop vite)
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`data/maps/LittlerootTown/scripts.inc`, `data/maps/LittlerootTown/map.json`)
+
+## Session 4 (suite 11) — Traduction complète du gauntlet d'Argenta
+- Les 7 dresseurs du gauntlet (Randall/Vitesse, Parker/Confusion, George/Soin, Berke/K.O., Mary/Précision,
+  Alexia/Défense, Jody/Force), leurs panneaux de porte et le guide d'arène (`GymGuideAdvice`/
+  `GymGuidePostVictory`) traduits en français — jusqu'ici laissés en anglais le temps de neutraliser
+  d'abord les répliques "gamin du champion" (fait en suite 7)
+- Références à PIERRE et "champion d'arène d'Argenta" gardées cohérentes avec le reste du fichier
+- Restent volontairement non traduits : les 4 textes de revanche post-Ligue de Pierre
+  (`NormanPreRematch`/`NormanRematchDefeat`/`NormanPostRematch`/`NormanRematchNeedTwoMons`, thème "parent
+  et enfant" toujours présent) — différé comme déjà noté, non bloquant (post-Ligue uniquement)
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`data/maps/PetalburgCity_Gym/scripts.inc`)

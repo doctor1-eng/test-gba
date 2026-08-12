@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 10)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 11)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -340,3 +340,36 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 10)
 - **Point de vigilance méthodologique** : avant de qualifier un mécanisme de "reliquat vanilla obsolète" et
   de le supprimer, toujours vérifier s'il pose une variable de progression consultée ailleurs — la note de
   la Session 4 suite 2 documentait déjà ce rôle, relue trop vite avant la suite 8
+
+## Mise à jour Session 4 (suite 11) — Traduction complète du gauntlet d'Argenta
+- [x] Les 7 dresseurs du gauntlet (Vitesse/Confusion/Soin/K.O./Précision/Défense/Force), leurs panneaux de
+  porte, et le guide d'arène traduits en français
+- [x] Build validé, ROM 79,01 %
+- Reste volontairement non traduit : les 4 textes de revanche post-Ligue de Pierre (thème "parent et
+  enfant") — non bloquant
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 11)
+1. Confirmer avec Thomas (sauvegarde neuve) que le crash au passage de Bourg Palette a bien disparu, et
+   que l'Arc 3 (Azuria/Ondine) fonctionne
+2. Traduction complète du reste de la ville d'Azuria (Rustboro City) — signalétique restante, PNJ
+   génériques, sous-intrigue Devon Corp (grunt qui vole des documents, à évaluer : remplacer par Team
+   Rocket comme pour la forêt de Jade, ou laisser neutre ?)
+3. Textes de rematch post-Ligue de Pierre et d'Ondine (thème "parent et enfant" pour Pierre, identité
+   Roxanne pour Ondine) — non urgent (post-Ligue uniquement)
+4. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+5. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
+   deviner des coordonnées à l'aveugle
+6. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`) — deux
+   binaires headless disponibles (`tools/qa_harness/qa_runner`, `engine/tools/mgba/mgba-rom-test`), le
+   premier a une lib manquante (`libmgba.so.0.10` introuvable dans cet environnement) à réinstaller avant
+   de reprendre le débogage
+7. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
+  d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)
+8. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
+   non bloquant, jamais déclenché
+9. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+   d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
+10. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
+   pas de conflit identifié avec le travail d'Argenta
+11. Après Azuria : décider de la suite (route vers Céladopole/Carmin-sur-Mer, ou consolidation/polish des
+   arcs existants) avec Thomas
