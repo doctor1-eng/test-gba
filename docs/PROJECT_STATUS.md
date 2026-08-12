@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 2)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 3)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -216,16 +216,25 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 2)
   Team Rocket → départ/premier combat de rival) sont maintenant tous implémentés et cohérents avec notre
   histoire (plus aucune intrigue Hoenn/père résiduelle connue dans le contenu actif de l'Arc 1)
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 2)
-1. **Concevoir puis implémenter l'Arc 2** (Jadielle, forêt de Jade, Route 2-3) — nouvel arc, rien n'existe
-   encore au niveau EPISODES.md pour cet arc au-delà du squelette une ligne ; à détailler avant
-   implémentation, comme fait pour l'Arc 1
-2. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte) — pertinent dès qu'on
-   travaille les nouvelles zones de l'Arc 2
-3. Script Python de preview PNG des maps
-4. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
-5. Balayage plus large des dialogues restants en anglais
-6. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
+## Mise à jour Session 4 (suite 3) — Arc 2 démarré : Jadielle + Route 2
+- [x] Découpage Arc 2 validé par Thomas : 2.1 Jadielle/Route 2 (fait), 2.2 forêt de Jade/Team Rocket (texte
+  à soumettre), 3.1 rencontre Ondine (texte à soumettre)
+- [x] Jadielle : panneau ville corrigé, PNJ neutres traduits, caméo de Régis "papa" → "grand-père"
+- [x] Route 2 : panneaux traduits/renommés (Jadielle/Argenta), contenu déjà neutre sinon
+- [x] Build validé (15e build propre), ROM 79,01 %
+- Repéré pour plus tard (Arc 4/Argenta, pas maintenant) : textes "WALLY" partagés dans Route102 mais
+  utilisés par PetalburgCity/scripts.inc
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 3)
+1. Soumettre le texte de la scène Team Rocket en forêt de Jade (remplace Team Aqua/Devon Corp, combat
+   obligatoire — bloquant tant que non traité, la forêt reste injouable en l'état)
+2. Soumettre le texte de la première rencontre avec Ondine (Arc 3, personnage central nouveau)
+3. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+4. Script Python de preview PNG des maps
+5. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
+6. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, etc.)
+7. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
    non bloquant, jamais déclenché
-7. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+8. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
    d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
+9. Textes "WALLY" (Route102/PetalburgCity) — à traiter avec l'Arc 4 (Argenta/Pierre)

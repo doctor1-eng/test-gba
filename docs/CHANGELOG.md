@@ -168,3 +168,22 @@
 - `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` : toujours orpheline (scène "la mère de Régis visite ta
   maison", morte depuis la suppression du camion), non traitée — signalée, hors périmètre validé cette fois
 - Build validé (14e build propre), ROM 79,01 % (quasi inchangé)
+
+## Session 4 (suite 3) — Début Arc 2 : Jadielle et Route 2
+- Découpage Arc 2 proposé et validé par Thomas : 2.1 Jadielle/Route 2, 2.2 forêt de Jade (Team Rocket
+  remplace Team Aqua/Devon Corp), 3.1 rencontre avec Ondine — les deux dernières restent à écrire et
+  soumettre avant implémentation, trop centrales pour y aller à l'aveugle
+- Jadielle : panneau physique de la ville corrigé (affichait encore "OLDALE TOWN" en anglais malgré le
+  renommage déjà fait sur la carte région depuis la Session 3) ; PNJ boutique/potion/chercheur
+  d'empreintes traduits (contenu neutre, aucune incohérence Hoenn)
+- Caméo de Régis à Jadielle ("MAY/BRENDAN : je rentre au labo de mon père") : même travers "papa" que la
+  maison du rival, corrigé avec la même formule ("je file aider mon grand-père") — caméo isolé, sans
+  effet de bord sur la progression (juste `VAR_OLDALE_RIVAL_STATE` local à la scène), donc traité
+  directement sans round de validation séparé
+- Route 2 (ex-Route102) : contenu neutre (dresseurs génériques, PNJ, arbres à baies), panneaux traduits
+  et renommés (Jadielle/Argenta) ; textes de combat génériques (Calvin/Rick/Tiana/Allen) laissés pour le
+  balayage de traduction général, pas de contenu narratif dedans
+- Repéré en chemin : `PetalburgCity/scripts.inc` référence des textes "WALLY" partagés depuis ce fichier
+  Route102 (scène "attraper un Pokémon" + retour à l'Arène) — hors périmètre Route 2/forêt, concerne
+  Argenta (Arc 4 Pierre), à traiter le moment venu
+- Build validé (15e build propre), ROM 79,01 %
