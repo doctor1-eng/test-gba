@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 5)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 6)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -241,17 +241,30 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 5)
   décompilé propre) ; alternatives proposées (techniques ROM hacking documentées publiquement, inspiration
   conceptuelle sans toucher au binaire)
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 5)
-1. Développer la suite d'Ondine/Arc 3 (ville d'Azuria, arène) — non commencé, à concevoir avant
+## Mise à jour Session 4 (suite 6) — Découverte de topologie importante
+- [x] Vérifié via `map.json`/connections : Route 2 mène directement à Argenta (Petalburg City), la forêt
+  de Jade (Team Rocket, Épisode 2.2) est en réalité accessible plus loin, depuis Argenta via Route 4, sur
+  le chemin vers Azuria — pas entre Jadielle et Argenta comme supposé dans la proposition initiale de
+  l'Arc 2. Le déroulé jouable actuel n'est donc pas cassé, mais l'ordre géographique réel est : Jadielle →
+  Route 2 (Ondine) → **Argenta non modifiée (Arc 4, pas commencé)** → Route 4 → forêt de Jade (fait) →
+  Azuria (Arc 3 suite, pas commencé)
+- v0.3 envoyée à Thomas pour test — porte cet avertissement : au-delà de la forêt, tout redevient anglais
+  vanilla Hoenn (Argenta/Petalburg City, y compris l'intrigue "papa champion d'arène" intacte)
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 6)
+1. Décider avec Thomas : traiter Argenta/Arc 4 (Pierre) en priorité — c'est la plus grosse zone "papa"
+   restante (le père du joueur EST le champion d'arène dans la version vanilla) — ou continuer Arc 3
+   (Ondine → Azuria) d'abord et laisser Argenta de côté temporairement
+2. Développer la suite d'Ondine/Arc 3 (ville d'Azuria, arène) — non commencé, à concevoir avant
    implémentation comme les arcs précédents
-2. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
-3. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
+3. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+4. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
    deviner des coordonnées à l'aveugle (limite rencontrée pour placer Ondine)
-4. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
-5. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
+5. Recompiler `qa_runner` depuis la source et reprendre le débogage de l'input (`core->getKeys()`)
+6. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
   d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)
-6. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
+7. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
    non bloquant, jamais déclenché
-7. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+8. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
    d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
-8. Textes "WALLY" (Route102/PetalburgCity) — à traiter avec l'Arc 4 (Argenta/Pierre)
+9. Textes "WALLY" (Route102/PetalburgCity) — à traiter avec l'Arc 4 (Argenta/Pierre)
