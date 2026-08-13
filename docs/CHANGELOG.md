@@ -372,3 +372,43 @@
   et enfant" toujours présent) — différé comme déjà noté, non bloquant (post-Ligue uniquement)
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`data/maps/PetalburgCity_Gym/scripts.inc`)
+
+## Session 4 (suite 12) — Vrai correctif du crash à la sortie de Bourg Palette
+- Retour de test : "Même dans la V0.5 ça redémarre automatiquement quand j'essaie de sortir de Bourg
+  Palette" — la restauration du verrou de la Jumelle (suite 10) n'a pas suffi, le jeu redémarrait
+  toujours en traversant vers la Route 1
+- Root cause trouvée par test headless (mGBA/libmgba installé, `tools/qa_harness/qa_runner` recompilé —
+  l'ancien blocage "input non détecté" documenté en Session 3 n'existait plus une fois `libmgba-dev`
+  correctement installé). Séquence de diagnostic : build `DEBUG=1` avec le menu debug embarqué du moteur
+  (`Utilities > Warp to map warp`, `Scripts > Script N`), scripts de test temporaires dans
+  `data/scripts/debug.inc` (jamais committés) pour isoler la variable en cause par bissection
+- Chaîne de tests qui a permis d'isoler le bug : varier texte (accents/plein texte), position de warp,
+  délai avant l'action, dresseurs visibles un par un (Team Rocket, Zigzagoon, Birch/Chen, PNJ générique) —
+  jusqu'à isoler `LOCALID_ROUTE101_BIRCH` (le Professeur Chen) comme seul déclencheur, reproductible aussi
+  bien par script que par marche normale dans le jeu
+- **Cause exacte** : `LOCALID_ROUTE101_BIRCH` utilise `movement_type: MOVEMENT_TYPE_JOG_IN_PLACE_RIGHT`
+  (hérité tel quel du Professeur Chen/Birch d'origine). Or son sprite a été remplacé plus tôt cette session
+  de développement (`OBJ_EVENT_GFX_PROF_BIRCH` → `OBJ_EVENT_GFX_PROF_OAK`, repris de FRLG, cf. Session 3)
+  sans jamais être testé en jeu jusqu'ici — la Jumelle bloquait l'accès à la Route 1 depuis le début, donc
+  personne n'avait jamais atteint physiquement ce PNJ avant cette session. Le sprite FRLG de Chen n'a pas
+  le même jeu d'animation "jogging sur place" que l'ancien sprite Birch : après quelques secondes d'inactivité,
+  le moteur tente de lire une frame d'animation hors des bornes du sprite, corrompant la mémoire et
+  provoquant un redémarrage matériel (confirmé dans les logs mGBA : lectures mémoire à des adresses
+  invalides comme `0xE3A02024`, juste après un `CpuSet` à adresse source non alignée)
+- Vérifié : `LOCALID_ROUTE101_BIRCH` est la SEULE occurrence de `OBJ_EVENT_GFX_PROF_OAK` dans tout le
+  dépôt utilisant un movement_type animé (`JOG_IN_PLACE`) — toutes les autres (Bourg Palette, labo,
+  Route 103, Route 110, salle du champion, générique FRLG) utilisent des types statiques
+  (`FACE_UP`/`FACE_DOWN`/`LOOK_AROUND`), jamais problématiques
+- Correctif : `data/maps/Route101/map.json`, `LOCALID_ROUTE101_BIRCH` et `LOCALID_ROUTE101_ZIGZAGOON`
+  passés à `MOVEMENT_TYPE_LOOK_AROUND` (type sûr déjà utilisé par le second PNJ Chen du même plan et par
+  Route 110). Aucun impact sur la cinématique elle-même : la scène scriptée (fuite, poursuite) pilote leurs
+  déplacements explicitement via `applymovement`, ce réglage ne concernait que leur animation d'attente
+  par défaut
+- Testé et confirmé résolu : traversée complète Bourg Palette → Route 1 → déclenchement de la scène de
+  sauvetage du Professeur Chen → dialogue → remise de Pikachu, sans plus aucun redémarrage, reproduit par
+  script ET par marche normale dans l'émulateur headless
+- Outillage : `tools/qa_harness/qa_runner` remis en état de marche (dépendance `libmgba.so.0.10`
+  installée via `apt-get install libmgba-dev mgba-sdl`, recompilation propre). Le blocage d'input
+  documenté en Session 3 était bien un faux problème d'environnement, pas un bug du harness lui-même
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`data/maps/Route101/map.json`)
