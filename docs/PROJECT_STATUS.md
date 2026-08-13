@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-13 (Session 4, suite 19)
+Dernière mise à jour : 2026-08-13 (Session 4, suite 20)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -467,18 +467,28 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 19)
   cette build, aucune régression introduite pendant le diagnostic (toutes les modifications
   d'investigation ont été annulées avant de livrer)
 
-## BLOQUÉ (mise à jour suite 19)
-- Diagnostic du crash Route 1/Professeur Chen : bloqué sur l'absence d'outillage de débogage bas niveau
-  (registres CPU/désassemblage au moment du crash) dans cet environnement. `mgba-sdl` est installé mais
-  sans interface graphique ni serveur GDB accessible. Pistes pour débloquer : (a) accès à un
-  environnement avec interface graphique pour utiliser mGBA en mode debug interactif, (b) modifier
-  `tools/qa_harness/qa_runner.c` pour dumper les registres ARM au moment précis de l'erreur mémoire
-  (actuellement seul le message d'erreur générique de libmgba est capturé), (c) tenter une refonte
-  structurelle de la scène (carte de cinématique dédiée) sans comprendre la cause profonde, en dernier
-  recours
+## Mise à jour Session 4 (suite 20) — Cause racine trouvée : crash RÉSOLU par refonte de la scène
+- [x] **Cause racine identifiée** : bug moteur dans `ScrCmd_applymovement` (`src/scrcmd.c`) — résout
+  l'objet cible via `GetObjectEventIdByLocalId()` (`src/event_object_movement.c`), qui ne filtre PAS
+  par carte (contrairement à `setobjectxy`, qui utilise correctement
+  `TryGetObjectEventIdByLocalIdAndMap`). Près d'une connexion entre deux cartes, les objets des deux
+  cartes partagent le même pool `gObjectEvents[]` ; si leurs ID locaux se recoupent, `applymovement`
+  peut cibler l'objet de la MAUVAISE carte et corrompre la mémoire. Détail complet dans CHANGELOG
+  suite 20
+- [x] **Corrigé** : la scène de sauvetage du Professeur Chen (course-poursuite + remise du PIKACHU) a
+  été déplacée de la Route 1 vers la zone sud de Bourg Palette (près du Labo), avec des ID locaux
+  garantis sans collision avec la Route 1 et hors de la zone de bordure jamais mise en défaut.
+  Vérifié en headless : 0 crash sur plusieurs exécutions consécutives de la chaîne complète (avant :
+  136 instances de corruption mémoire par exécution)
+- [ ] Risque latent documenté (non corrigé, hors périmètre urgent) : le PNJ "Professeur Chen post-jeu"
+  sur Route101 (position 5,11) utilise le même sprite et un ID local qui collisionne avec Bourg
+  Palette — sûr tant qu'aucun `applymovement` n'est ajouté dessus ; à vérifier avant toute future
+  scène animée le concernant
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 19)
-1. **Priorité absolue** : poursuivre le diagnostic du crash Route 1 avec un outillage de débogage plus
-   poussé (voir section BLOQUÉ ci-dessus) — c'est un bloqueur total pour tout playtest au-delà de
-   Bourg Palette
-2. Tout le reste de la liste ci-dessus (suite 18) reste valable et inchangé
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 20)
+1. Playtest de la nouvelle scène de sauvetage (positions/choix de mise en scène jamais vérifiés
+   visuellement, seulement testés côté stabilité mémoire) — ajuster si le placement des PNJ ou le tracé
+   de la course-poursuite semble incohérent en jeu
+2. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement` déjà utilisés près
+   d'autres connexions de cartes du jeu (le bug n'est pas spécifique à Bourg Palette/Route 1)
+3. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé

@@ -624,3 +624,76 @@ identifiée malgré un diagnostic approfondi.**
   (GDB via mgba, ou test sur un environnement avec interface graphique), ou envisager une refonte
   structurelle de la scène de sauvetage (ex. déplacer la scène sur une "carte de cinématique" dédiée,
   technique classique des jeux Pokémon pour les scènes scriptées à risque)
+
+## Session 4 (suite 20) — Cause racine trouvée et corrigée : bug moteur dans `applymovement`, scène
+## de sauvetage du Professeur Chen déplacée sur Bourg Palette
+
+Thomas a envoyé une vidéo de l'écran de son téléphone montrant le crash en conditions réelles
+(émulateur "Manic EMU") : le dialogue "À-à l'aide !" s'affiche correctement en français, puis
+l'écran devient blanc et le jeu revient à l'écran de copyright Nintendo/Game Freak — moins d'une
+seconde après le début du dialogue, dès que le script commence à animer le Professeur Chen. Ceci
+confirme exactement la reproduction obtenue en headless depuis la suite 19. Puis consigne explicite
+de Thomas : « changeons la rencontre avec Chen alors pour supprimer tout problème ».
+
+**Cause racine identifiée** (après un nouveau cycle de diagnostic très approfondi, plus de 50 builds
+de test supplémentaires) : ce n'est **pas** un problème propre à la Route 1, ni au sprite du
+Professeur Chen, ni à un réglage de carte. C'est un **bug du moteur pokeemerald-expansion** dans
+`ScrCmd_applymovement` (`src/scrcmd.c`) :
+
+- `applymovement` résout l'objet cible via `GetObjectEventIdByLocalId(localId)`
+  (`src/event_object_movement.c`), une fonction qui parcourt `gObjectEvents[]` (le pool des objets
+  actuellement chargés, 16 emplacements) et retourne le premier objet dont l'ID local correspond —
+  **sans jamais vérifier à quelle carte cet objet appartient**
+- À l'inverse, `setobjectxy` utilise `TryGetObjectEventIdByLocalIdAndMap`, la variante qui filtre
+  correctement par carte (numéro de carte + groupe de carte)
+- Près d'une connexion entre deux cartes (ex. la bordure nord de Bourg Palette, connectée à la
+  Route 1), les objets des DEUX cartes sont simultanément actifs dans `gObjectEvents[]` pour les
+  besoins de l'affichage/défilement. Si les ID locaux se recoupent entre les deux cartes,
+  `applymovement` peut donc cibler l'objet de la MAUVAISE carte
+- Preuve : les objets de test avec ID local 2, 3, 4, 5 ou 6 sur Bourg Palette plantaient
+  systématiquement dès `applymovement` — exactement les ID locaux déjà utilisés par les propres
+  objets de la Route 1 (`1`=Dresseur Jeunot, `2`=le Professeur Chen "post-jeu", `3`=Garçon,
+  `4`/`5`/`6`=le trio Team Rocket). Seul l'ID local `1` (la Jumelle, sans équivalent sur la Route 1)
+  était épargné. Objet de test avec un ID local libre (`7`+, n'existant sur aucune des deux cartes) :
+  plus aucun plantage lié à la collision — mais un second facteur est apparu (voir ci-dessous)
+- **Second facteur, indépendant** : même avec un ID local sans collision, `applymovement` plantait
+  encore si l'objet se trouvait physiquement près de la bordure nord (essentiellement partout où le
+  jeu pourrait charger les objets de la Route 1 en mémoire). Décalage précis établi par dichotomie :
+  sûr à partir de `y=13` (sur une carte de 20 cases de haut), dangereux en dessous. Cause exacte non
+  identifiée avec certitude (probablement liée au même mélange objets Route 1 / Bourg Palette dans
+  `gObjectEvents[]`, via un mécanisme différent non totalement isolé), mais le comportement est
+  parfaitement reproductible et stable
+- Ceci explique aussi, rétrospectivement, le crash original sur la Route 1 lui-même : Route101 est
+  connectée à plusieurs cartes (Bourg Palette au sud, Jadielle à l'ouest), donc le même bug de
+  collision d'ID locaux ou de proximité de bordure s'y appliquait tout aussi bien
+
+**Correctif appliqué** (conformément à la demande de Thomas de changer la rencontre pour éliminer le
+problème) : toute la scène (course-poursuite Chen/Ramoloss puis remise du PIKACHU) est déplacée de la
+Route 1 vers la zone sud de Bourg Palette, près du Labo du Professeur Chen — la zone la plus éloignée
+possible de la connexion Route 1, jamais mise en défaut dans les tests :
+- 3 nouveaux objets sur `LittlerootTown/map.json` : `LOCALID_LITTLEROOT_CHEN_RESCUE` (Professeur Chen,
+  départ 8,18), `LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE` (Ramoloss sauvage, départ 8,19),
+  `LOCALID_LITTLEROOT_BIRCHS_BAG` (le sac avec la POKé BALL, position fixe 9,16) — leurs ID locaux
+  (7, 8, 9) sont garantis sans collision avec la Route 1 (qui plafonne à 6), et leur zone de
+  déplacement pendant la course-poursuite reste entièrement au sud de `y=13`
+- `LittlerootTown_EventScript_GoSaveBirchTrigger` (déclenchée par la Jumelle près de l'entrée nord,
+  zone déjà validée sûre) enchaîne désormais sur `LittlerootTown_EventScript_StartBirchRescue`
+  (nouveau, reprend le texte et les gabarits de mouvement approuvés, réadaptés à la nouvelle zone) puis
+  `LittlerootTown_EventScript_BirchsBag` (remise du PIKACHU, texte inchangé)
+- Route101 est nettoyée des 3 anciens objets (Chen, Ramoloss, sac) et de leurs déclencheurs de zone —
+  les gabarits de mouvement et textes associés restent dans `Route101/scripts.inc` (réutilisés depuis
+  Bourg Palette, les labels `::` sont visibles globalement) avec un commentaire expliquant la
+  relocalisation
+- Vérifié en headless (`qa_runner`, build `DEBUG=1`, `Quickstart` + menu debug) : chaîne complète
+  `GoSaveBirchTrigger` → `StartBirchRescue` → `BirchsBag` (avertisseurs de dialogue compris, boutons A
+  simulés), **0 instance de "Bad memory" sur plusieurs exécutions consécutives**, contre 136 avant le
+  correctif de position/ID
+- Build release validé (`make MODERN=1`, exit code 0, ROM 79,01 %, taille identique à la référence)
+
+**Reste en marge (non corrigé, risque latent documenté)** : l'objet "Professeur Chen post-jeu" sur
+Route101 (position 5,11, script `ProfBirch_EventScript_RatePokedexOrRegister`, ID local 2) utilise le
+même sprite `OBJ_EVENT_GFX_PROF_OAK` que celui qui posait problème, et son ID local (2) collisionne
+avec Bourg Palette (Villageois gros ventre). Il n'est actuellement ciblé par aucun `applymovement`
+donc ne devrait pas déclencher le bug — mais toute future modification qui ajouterait un mouvement
+scripté sur cet objet devra d'abord vérifier l'absence de collision d'ID local avec les cartes
+connectées (Bourg Palette au sud, Jadielle à l'ouest).

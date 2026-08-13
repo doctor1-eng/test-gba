@@ -281,7 +281,64 @@ LittlerootTown_EventScript_GoSaveBirchTrigger::
 	applymovement LOCALID_LITTLEROOT_TWIN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	setvar VAR_LITTLEROOT_TOWN_STATE, 2
+	goto LittlerootTown_EventScript_StartBirchRescue
+	end
+
+@ Kanto Saison 1 : la scène de sauvetage du Professeur Chen (et la remise du PIKACHU qui suit) a été
+@ déplacée de la Route 1 vers Bourg Palette suite à un crash matériel systématique et non résolu sur
+@ Route101 (cf. CHANGELOG suite 19). Diagnostic complémentaire (suite 20) : la vraie cause est un bug
+@ moteur dans ScrCmd_applymovement (event_object_movement.c), qui résout l'objet cible via
+@ GetObjectEventIdByLocalId() SANS filtrer par carte — contrairement à setobjectxy qui utilise la
+@ variante correcte TryGetObjectEventIdByLocalIdAndMap(). Près d'une connexion de cartes (ex. la
+@ bordure nord de Bourg Palette avec la Route 1), les objets des DEUX cartes partagent le même pool
+@ gObjectEvents[], et applymovement peut cibler l'objet de la MAUVAISE carte si les ID locaux se
+@ recoupent (ex. Route101 utilise déjà les ID locaux 1 à 6). D'où deux règles pour toute scène animée
+@ ici : (1) utiliser des ID locaux qui n'existent pas sur Route101 (donc > 6), et (2) dérouler
+@ l'animation loin de la bordure nord (dans la zone sud de la carte, jamais testée en défaut).
+LittlerootTown_EventScript_StartBirchRescue::
+	playbgm MUS_HELP, TRUE
+	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Route101_Movement_BirchRunAway1
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE, Route101_Movement_ZigzagoonChase1
+	waitmovement 0
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE, Route101_Movement_ZigzagoonChaseInCircles
+	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Route101_Movement_BirchRunInCircles
+	waitmovement 0
+	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Common_Movement_WalkInPlaceFasterRight
+	waitmovement 0
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE, Route101_Movement_ZigzagoonFaceBirch
+	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Route101_Movement_BirchFaceZigzagoon
+	waitmovement 0
+	msgbox Route101_Text_PleaseHelp, MSGBOX_DEFAULT
+	closemessage
 	releaseall
+	end
+
+LittlerootTown_EventScript_BirchsBag::
+	lock
+	faceplayer
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_RESCUED_BIRCH
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE
+	givemon SPECIES_PIKACHU, 5, ITEM_NONE
+	setvar VAR_STARTER_MON, 1 @ Fixe la branche "Torchic" utilisée partout dans le jeu pour les scènes liées au starter (rival, dex, etc.) — notre starter unique étant Pikachu, ce choix est arbitraire mais doit rester constant
+	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Route101_Movement_BirchApproachPlayer
+	waitmovement 0
+	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
+	special HealPlayerParty
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	setvar VAR_BIRCH_LAB_STATE, 2
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
+	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
+	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
+	waitstate
+	release
 	end
 
 LittlerootTown_EventScript_TownSign::
