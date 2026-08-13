@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-13 (Session 4, suite 18)
+Dernière mise à jour : 2026-08-13 (Session 4, suite 19)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -453,3 +453,32 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 18)
 14. Traduction complète de la base d'objets `items.h` (873 entrées, encore entièrement en anglais côté
     nom/description) — chantier séparé, pas commencé, à discuter avec Thomas avant de s'y attaquer vu
     l'ampleur
+
+## Mise à jour Session 4 (suite 19) — Retour de test v0.7 : camion corrigé, crash Route 1 non résolu
+- [x] Bug du tremblement de caméra du camion au tout début d'une nouvelle partie : corrigé
+  (`src/overworld.c`, `CB2_NewGame` utilisait `ExecuteTruckSequence` sans condition sur la carte
+  d'arrivée réelle)
+- [ ] **Crash confirmé à la rencontre avec le Professeur Chen sur la Route 1** (2e/3e phrase du
+  dialogue) : reproduit de façon fiable en headless, diagnostiqué en profondeur (30+ builds de test),
+  mais cause exacte NON identifiée — voir CHANGELOG suite 19 pour le détail complet des hypothèses
+  testées et éliminées. Nécessite un accès à un débogueur bas niveau (GDB/désassemblage) pour continuer,
+  indisponible dans cet environnement actuel
+- Build livrée à Thomas avec uniquement le correctif du camion — le crash Route 1 reste présent dans
+  cette build, aucune régression introduite pendant le diagnostic (toutes les modifications
+  d'investigation ont été annulées avant de livrer)
+
+## BLOQUÉ (mise à jour suite 19)
+- Diagnostic du crash Route 1/Professeur Chen : bloqué sur l'absence d'outillage de débogage bas niveau
+  (registres CPU/désassemblage au moment du crash) dans cet environnement. `mgba-sdl` est installé mais
+  sans interface graphique ni serveur GDB accessible. Pistes pour débloquer : (a) accès à un
+  environnement avec interface graphique pour utiliser mGBA en mode debug interactif, (b) modifier
+  `tools/qa_harness/qa_runner.c` pour dumper les registres ARM au moment précis de l'erreur mémoire
+  (actuellement seul le message d'erreur générique de libmgba est capturé), (c) tenter une refonte
+  structurelle de la scène (carte de cinématique dédiée) sans comprendre la cause profonde, en dernier
+  recours
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 19)
+1. **Priorité absolue** : poursuivre le diagnostic du crash Route 1 avec un outillage de débogage plus
+   poussé (voir section BLOQUÉ ci-dessus) — c'est un bloqueur total pour tout playtest au-delà de
+   Bourg Palette
+2. Tout le reste de la liste ci-dessus (suite 18) reste valable et inchangé

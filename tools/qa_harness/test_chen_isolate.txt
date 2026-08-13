@@ -1,0 +1,51 @@
+# Boot to title screen idle
+4500 0
+# Quickstart (SELECT)
+30 4
+90 0
+60 0
+# Open debug menu: hold R + press START
+10 264
+20 0
+# Navigate to "Scripts..." (index 5): DOWN x5
+10 128
+5 0
+10 128
+5 0
+10 128
+5 0
+10 128
+5 0
+10 128
+5 0
+# Open Scripts submenu (A)
+10 1
+20 0
+# Execute Script 1 (A, first item)
+10 1
+30 0
+SHOT 01_after_warp_before_move.png
+5 0
+SHOT 02_plus5.png
+5 0
+SHOT 03_plus10.png
+5 0
+SHOT 04_plus15.png
+5 0
+SHOT 05_plus20.png
+5 0
+SHOT 06_plus25.png
+5 0
+SHOT 07_plus30.png
+5 0
+SHOT 08_plus35.png
+5 0
+SHOT 09_plus40.png
+5 0
+SHOT 10_plus45.png
+5 0
+SHOT 11_plus50.png
+5 0
+SHOT 12_plus55.png
+5 0
+SHOT 13_plus60.png

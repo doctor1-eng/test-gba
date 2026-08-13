@@ -551,3 +551,76 @@
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`data/maps/LavaridgeTown/scripts.inc`, `data/maps/LilycoveCity/scripts.inc`,
   `data/maps/EverGrandeCity_ChampionsRoom/scripts.inc`)
+
+## Session 4 (suite 19) — Retour de test v0.7 : camion corrigé, crash Route 1 confirmé et diagnostiqué
+Retour de Thomas sur la v0.7 : (1) l'animation de tremblement du camion est toujours présente au tout
+début d'une nouvelle partie ; (2) le jeu redémarre à la 2e/3e phrase du dialogue de rencontre avec le
+Professeur Chen sur la Route 1.
+
+**Bug 1 — tremblement du camion : corrigé.**
+- Cause trouvée dans `src/overworld.c`, `CB2_NewGame()` (le point d'entrée de toute nouvelle partie) :
+  pour les builds non-FRLG (donc notre base Émeraude), le moteur fixait inconditionnellement
+  `gFieldCallback = ExecuteTruckSequence` — la cinématique de caméra/tremblement du camion vanilla —
+  quelle que soit la carte de destination réelle. `WarpToPlayerBedroom()` (`src/new_game.c`, déjà
+  adapté en Session 2/3 pour faire apparaître le joueur directement dans sa chambre, sans camion) change
+  la DESTINATION du warp mais ne touche jamais à ce champ de rappel, qui continuait donc à tourner en
+  arrière-plan sur toute nouvelle partie, indépendamment de la carte réellement chargée
+- Corrigé : `gFieldCallback` utilise désormais `FieldCB_WarpExitFadeFromBlack` (le fondu de sortie de
+  warp standard, déjà utilisé par les builds FRLG et à de nombreux autres endroits du moteur) au lieu de
+  `ExecuteTruckSequence`, pour toutes les nouvelles parties
+- `ExecuteTruckSequence`/`Task_Truck1`/`2`/`3` (dans `field_special_scene.c`) ne sont plus jamais
+  appelés mais volontairement laissés intacts (code mort, pas de risque à les garder)
+- Build validé, testé en isolation (pas de régression sur le warp standard vers la chambre)
+
+**Bug 2 — crash au dialogue de rencontre avec le Professeur Chen : confirmé, cause profonde non
+identifiée malgré un diagnostic approfondi.**
+- Reproduit de façon fiable en headless (`tools/qa_harness/qa_runner`, build `DEBUG=1` + fonctionnalité
+  `Quickstart` du moteur pour atteindre l'overworld sans avoir à scripter l'écran de saisie du nom) :
+  chaque `warp` vers `MAP_ROUTE101` suivi de la présence active de l'objet `LOCALID_ROUTE101_BIRCH`
+  (le Professeur Chen, sprite `OBJ_EVENT_GFX_PROF_OAK`) déclenche la même signature de corruption
+  mémoire que celle documentée en suite 12 (lectures `GBA Memory: Bad memory Load...` avec des valeurs
+  qui ressemblent à des opcodes ARM, précédées d'appels BIOS `SWI 0x0C` CpuFastSet) — cohérent avec un
+  crash matériel réel, pas un artefact de l'émulateur
+- Plus de 30 builds de test ont permis d'ISOLER le comportement mais pas sa cause exacte. Cause
+  RETENUE comme fausse piste, testée et éliminée individuellement (le crash persiste identique dans
+  tous les cas) :
+  - Le sprite substitué (`OBJ_EVENT_GFX_PROF_OAK`, porté depuis FRLG) — remplacé par `OBJ_EVENT_GFX_MAN`
+    (sprite natif, sain, utilisé partout ailleurs sans problème) : crash identique
+  - Le mécanisme d'animation "jog in place" déjà corrigé en suite 12 (`movement_type`) — testé
+    `LOOK_AROUND` (valeur actuelle) et `FACE_DOWN` : crash identique dans les deux cas
+  - La position de l'objet sur la carte (testé à 3 positions différentes, dont une à l'autre bout de
+    la carte) : crash identique partout SAUF quand le joueur apparaît assez loin pour que l'objet ne
+    soit pas chargé/actif (auquel cas, logiquement, aucun crash)
+  - L'élévation de l'objet (0 vs 3, correspondant à l'instance qui fonctionne sans problème dans le
+    labo du Professeur Chen) : crash identique
+  - Le numéro d'ID local de l'objet (`LOCALID_ROUTE101_BIRCH`, testé avec sa valeur d'origine et avec
+    une valeur arbitraire différente) : crash identique
+  - Le script attaché à l'objet (`0x0` vs un script valide) : crash identique
+  - Le nom/l'ID du flag qui contrôle sa visibilité : crash identique
+  - Sa position dans le tableau `object_events` de la carte (déplacé en dernière position) : crash
+    identique
+  - Le mécanisme d'apparition (déclaré directement dans `map.json` vs `addobject` dynamique au moment
+    du déclenchement scripté) : crash identique
+  - La présence d'objets voisins (Zigzagoon, trio Team Rocket) — masqués un par un ou ensemble : aucune
+    combinaison ne change le résultat, sauf masquer `LOCALID_ROUTE101_BIRCH` lui-même
+  - Le réglage moteur `OW_GFX_COMPRESS` (compression des graphismes overworld, recommandé à `FALSE` en
+    cas de pression VRAM par la doc du moteur) : testé à `FALSE`, crash quasi identique (grossit
+    fortement la ROM sans résoudre le problème — revert immédiat)
+- **Seul levier qui élimine le crash à coup sûr** : que `LOCALID_ROUTE101_BIRCH` ne soit tout simplement
+  jamais actif près du joueur (masqué en permanence, ou joueur trop loin). Inutilisable tel quel comme
+  correctif définitif puisque cette scène (arrivée du Professeur Chen, remise de PIKACHU) est centrale
+  au tout début du jeu
+- Confirmé par élimination que ce n'est PAS le même bug que celui corrigé en suite 12 (qui portait sur
+  le `movement_type` par défaut d'IDLE) : ce nouveau crash apparaît dès l'activation de l'objet, avant
+  toute animation ou inactivité prolongée, et persiste même avec un `movement_type` sûr
+- **Conclusion honnête** : je n'ai pas trouvé la cause exacte malgré une élimination quasi exhaustive de
+  toutes les hypothèses testables en boîte noire (config JSON, scripts, réglages moteur). Il me manque
+  un outil de débogage bas niveau (registres CPU/désassemblage au moment du crash) pour aller plus loin
+  — `mgba-sdl` est installé mais sans interface graphique ni serveur GDB accessibles dans cet
+  environnement. Toutes les modifications de diagnostic (map.json, debug.inc, overworld.h) ont été
+  intégralement annulées avant de livrer cette build ; seul le correctif du camion (Bug 1, confirmé et
+  sûr) est inclus
+- Prochaine étape recommandée : reprendre ce diagnostic avec un accès à un débogueur bas niveau
+  (GDB via mgba, ou test sur un environnement avec interface graphique), ou envisager une refonte
+  structurelle de la scène de sauvetage (ex. déplacer la scène sur une "carte de cinématique" dédiée,
+  technique classique des jeux Pokémon pour les scènes scriptées à risque)
