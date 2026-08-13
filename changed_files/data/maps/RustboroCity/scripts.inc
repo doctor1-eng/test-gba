@@ -1019,34 +1019,39 @@ RustboroCity_Text_WeShortenItToDevon:
 	.string "convenient products.$"
 
 RustboroCity_Text_SneakyLookingManWentAroundCorner:
-	.string "Hm? A sneaky-looking man?\p"
-	.string "Come to think of it, yes, a shady-\n"
-	.string "looking guy went around the corner.$"
+	.string "Hm ? Un type louche ?\p"
+	.string "Maintenant que tu le dis, oui, un\n"
+	.string "gars à l'air suspect a tourné au coin.$"
 
 RustboroCity_Text_HaveYouChallengedGym:
-	.string "Have you taken the POKéMON GYM\n"
-	.string "challenge?\p"
-	.string "When you get that shiny GYM BADGE\n"
-	.string "in hand, I guess TRAINERS begin to\l"
-	.string "realize what is required of them.$"
+	.string "Tu as déjà tenté ta chance à\n"
+	.string "l'arène POKéMON ?\p"
+	.string "Quand on tient enfin ce badge\n"
+	.string "brillant entre les mains, je crois\l"
+	.string "qu'on comprend ce qu'être dresseur\l"
+	.string "veut vraiment dire.$"
 
 RustboroCity_Text_HeyThatsRustborosGymBadge:
-	.string "Hey, that's RUSTBORO's GYM BADGE!\p"
-	.string "Out of all the POKéMON GYM BADGES,\n"
-	.string "RUSTBORO's is the coolest, I'd say.$"
+	.string "Hé, c'est le badge de l'arène\n"
+	.string "d'Azuria !\p"
+	.string "De tous les badges d'arène, celui\n"
+	.string "d'Azuria est clairement le plus\l"
+	.string "classe.$"
 
 RustboroCity_Text_YoureNewAroundHere:
-	.string "Oh? Who might you be?\n"
-	.string "You're a new face around these parts.\p"
-	.string "Have you just transferred into the\n"
-	.string "POKéMON TRAINER'S SCHOOL?$"
+	.string "Oh ? Et toi, qui es-tu donc ?\n"
+	.string "Je ne t'ai jamais vu dans le coin.\p"
+	.string "Tu viens d'arriver à l'École des\n"
+	.string "Dresseurs ?$"
 
 RustboroCity_Text_GymLeaderIsntEasyWithFire:
-	.string "I challenged the GYM LEADER, but…\p"
-	.string "It's not going to be easy winning with\n"
-	.string "my FIRE-type POKéMON…\p"
-	.string "FIRE-type POKéMON don't match up\n"
-	.string "well against ROCK-type POKéMON…$"
+	.string "J'ai défié la championne d'arène,\n"
+	.string "mais…\p"
+	.string "Ça ne va pas être facile de\n"
+	.string "gagner avec mes POKéMON de\l"
+	.string "type FEU…\p"
+	.string "Le FEU ne fait pas le poids face\n"
+	.string "à l'EAU…$"
 
 RustboroCity_Text_MrBrineyWalksInTheTunnel:
 	.string "The old sailor MR. BRINEY lives in\n"
@@ -1063,29 +1068,33 @@ RustboroCity_Text_MrBrineyLovesPeeko:
 	.string "that PEEKO.$"
 
 RustboroCity_Text_WowYouHavePokemon:
-	.string "Wow, you have POKéMON with you, too.\p"
-	.string "When I get bigger, I'm going to go\n"
-	.string "places with POKéMON, too.$"
+	.string "Waouh, toi aussi tu as des\n"
+	.string "POKéMON avec toi !\p"
+	.string "Quand je serai grand, moi aussi\n"
+	.string "j'irai explorer le monde avec des\l"
+	.string "POKéMON.$"
 
 RustboroCity_Text_CatchRarePokemonIfIGoToSchool:
-	.string "POKéMON TRAINER'S SCHOOL!\p"
-	.string "If I go to this school, will I be able\n"
-	.string "to catch rare POKéMON easily?$"
+	.string "L'ÉCOLE DES DRESSEURS !\p"
+	.string "Si j'y vais, est-ce que je pourrai\n"
+	.string "attraper des POKéMON rares plus\l"
+	.string "facilement ?$"
 
 RustboroCity_Text_PokemonCanChangeLookFromExp:
-	.string "If a POKéMON gains experience in\n"
-	.string "battles, it can sometimes change in\l"
-	.string "the way it looks.$"
+	.string "Quand un POKéMON gagne de\n"
+	.string "l'expérience au combat, il peut\l"
+	.string "parfois changer d'apparence.$"
 
 RustboroCity_Text_PokemonChangeShape:
-	.string "A POKéMON changes shape?\n"
-	.string "If one did that, I would be shocked!$"
+	.string "Un POKéMON qui change de\n"
+	.string "forme ? Si ça m'arrivait, je serais\l"
+	.string "sous le choc !$"
 
 RustboroCity_Text_TradePokemonGrowFast:
-	.string "A POKéMON you get in a trade from\n"
-	.string "someone grows fast.\p"
-	.string "But if you don't have certain GYM\n"
-	.string "BADGES, it may not obey you…$"
+	.string "Un POKéMON obtenu par échange\n"
+	.string "grandit plus vite.\p"
+	.string "Mais sans certains badges d'arène,\n"
+	.string "il pourrait refuser de t'obéir…$"
 
 RustboroCity_Text_OutOfTheWay:
 	.string "Get out!\n"
@@ -1241,50 +1250,56 @@ RustboroCity_Text_DevonCorpBranchOfficeSign:
 	.string "and authorized personnel.”$"
 
 RustboroCity_Text_CitySign:
-	.string "RUSTBORO CITY\p"
-	.string "“The city probing the integration of\n"
-	.string "nature and science.”$"
+	.string "AZURIA\p"
+	.string "“La ville qui explore l'alliance\n"
+	.string "entre nature et science.”$"
 
 RustboroCity_Text_TrainersSchoolSign:
-	.string "POKéMON TRAINER'S SCHOOL\p"
-	.string "“We'll teach you anything about\n"
-	.string "POKéMON!”$"
+	.string "ÉCOLE DES DRESSEURS\p"
+	.string "“On t'apprend tout sur les\n"
+	.string "POKéMON !”$"
 
 RustboroCity_Text_CuttersHouse:
-	.string "CUTTER'S HOUSE$"
+	.string "MAISON DU BÛCHERON$"
 
 RustboroCity_Text_DevelopedNewPokenavFeature:
-	.string "I've been developing an added feature\n"
-	.string "for the POKéNAV…\p"
-	.string "And it turned out great!\p"
-	.string "{PLAYER}, may I see that POKéNAV?\n"
-	.string "The one our PRESIDENT gave you?$"
+	.string "Je développais une nouvelle\n"
+	.string "fonction pour le POKéNAV…\p"
+	.string "Et le résultat est excellent !\p"
+	.string "{PLAYER}, je peux voir ton\n"
+	.string "POKéNAV ? Celui que notre\l"
+	.string "PRÉSIDENT t'a offert ?$"
 
 RustboroCity_Text_AddedMatchCallPleaseCallMrStone:
-	.string "There you go, {PLAYER}!\p"
-	.string "I added a new feature named\n"
-	.string "MATCH CALL to your POKéNAV.\p"
-	.string "Using the MATCH CALL feature,\n"
-	.string "you can chat with people who have\l"
-	.string "been registered in your POKéNAV.\p"
-	.string "{PLAYER}, our PRESIDENT STONE should\n"
-	.string "be registered in your POKéNAV.\p"
-	.string "Test it out.\n"
-	.string "Please give our PRESIDENT a call.$"
+	.string "Voilà, {PLAYER} !\p"
+	.string "J'ai ajouté une nouvelle fonction\n"
+	.string "à ton POKéNAV : APPEL VIDÉO.\p"
+	.string "Elle te permet de discuter avec\n"
+	.string "les gens enregistrés dans ton\l"
+	.string "POKéNAV.\p"
+	.string "{PLAYER}, notre PRÉSIDENT STONE\n"
+	.string "devrait être enregistré dans ton\l"
+	.string "POKéNAV.\p"
+	.string "Essaie donc.\n"
+	.string "Appelle notre PRÉSIDENT.$"
 
 RustboroCity_Text_PleaseSelectPokenav:
-	.string "Please select the POKéNAV.$"
+	.string "Sélectionne le POKéNAV.$"
 
 RustboroCity_Text_IdBetterGetBackToWork:
-	.string "Okay, I'd better get back to work.\n"
-	.string "Please take care, {PLAYER}!$"
+	.string "Bon, je ferais mieux de me\n"
+	.string "remettre au travail.\p"
+	.string "Prends soin de toi, {PLAYER} !$"
 
 RustboroCity_Text_YouCanHave2On2Battle:
-	.string "Did you know this?\p"
-	.string "You can have a 2-on-2 battle even\n"
-	.string "if you're not with another TRAINER.\p"
-	.string "If you catch the eyes of two TRAINERS\n"
-	.string "when you have two or more POKéMON,\l"
-	.string "they'll both challenge you.\p"
-	.string "Don't you think it'd be cool if you\n"
-	.string "could beat two TRAINERS by yourself?$"
+	.string "Tu savais ça ?\p"
+	.string "Tu peux faire un combat 2 contre 2\n"
+	.string "même sans être accompagné d'un\l"
+	.string "autre dresseur.\p"
+	.string "Si tu attires le regard de deux\n"
+	.string "dresseurs alors que tu as au moins\l"
+	.string "deux POKéMON, ils te défieront\n"
+	.string "tous les deux en même temps.\p"
+	.string "Tu ne trouves pas que ce serait\n"
+	.string "classe de battre deux dresseurs\l"
+	.string "tout seul ?$"

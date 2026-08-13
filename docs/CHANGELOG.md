@@ -412,3 +412,21 @@
   documenté en Session 3 était bien un faux problème d'environnement, pas un bug du harness lui-même
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`data/maps/Route101/map.json`)
+
+## Session 4 (suite 13) — Azuria : traduction neutre + décision sur les fils narratifs restants
+- Exploration complète de `RustboroCity/scripts.inc` (1290 lignes) : identifié 3 fils narratifs vanilla
+  encore non traités, tous interconnectés et s'étendant sur plusieurs cartes (Rustboro/Azuria, Tunnel
+  Rusturf, maison de Briney) :
+  1. Vol des affaires DEVON CORP par un sbire Team Aqua (musique, sprite, texte inchangés)
+  2. Le marin MR. BRINEY / son PEEKO (transport en bateau vers Dewford)
+  3. Un combat de rival scripté (May/Brendan = Régis chez nous), conditionné à avoir croisé Briney
+- Proposition faite à Thomas avant d'implémenter quoi que ce soit sur ces trois fils, vu leur portée
+  multi-cartes — décision : remplacer le sbire par la Team Rocket (même traitement que la forêt de Jade)
+- En attendant la conception de ce remplacement (à faire dans une prochaine étape, cf. PROCHAINES ÉTAPES),
+  traduit en français tout le contenu neutre et sans dépendance à ces trois fils : panneaux de ville
+  (`CitySign`→AZURIA, `TrainersSchoolSign`, `CuttersHouse`), PNJ de discussion générale (arène, école des
+  dresseurs, POKéNAV/MATCH CALL, combat 2v2, changement d'apparence par l'XP)
+- `RustboroCity_Text_GymLeaderIsntEasyWithFire` corrigé au passage : référençait encore "FEU contre
+  ROCHE" (ancien typage de Roxanne) — mis à jour en "FEU contre EAU" pour refléter le typage EAU d'Ondine
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`data/maps/RustboroCity/scripts.inc`)

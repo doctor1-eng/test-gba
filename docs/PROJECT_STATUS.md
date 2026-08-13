@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 12)
+Dernière mise à jour : 2026-08-12 (Session 4, suite 13)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -365,12 +365,22 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 12)
   bug du harness
 - [x] Build validé, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 12)
-1. Confirmer avec Thomas (nouveau build) que le crash a bien disparu et que l'Arc 3 (Azuria/Ondine)
+## Mise à jour Session 4 (suite 13) — Azuria : traduction neutre + décision Team Rocket
+- [x] `RustboroCity/scripts.inc` exploré en entier (1290 lignes) — 3 fils vanilla identifiés (vol Devon
+  Corp/Team Aqua, marin Briney, combat de rival), tous multi-cartes (Rustboro, Tunnel Rusturf, maison de
+  Briney)
+- [x] Décision prise avec Thomas : remplacer le sbire par la Team Rocket, même traitement que la forêt de
+  Jade — proposition de texte à faire avant implémentation (portée multi-cartes, scène centrale)
+- [x] Contenu neutre traduit en français (panneaux de ville, PNJ génériques arène/école/POKéNAV/combat
+  2v2) ; `GymLeaderIsntEasyWithFire` mis à jour (FEU vs ROCHE → FEU vs EAU, typage d'Ondine)
+- [x] Build validé, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 13)
+1. Concevoir et proposer le remplacement Team Rocket du fil Devon Corp/Briney/rival à Azuria (portée :
+   `RustboroCity/scripts.inc`, Tunnel Rusturf, maison de Briney — cartes pas encore explorées) — attendre
+   validation du texte avant implémentation, comme pour les scènes centrales précédentes
+2. Confirmer avec Thomas (nouveau build) que le crash a bien disparu et que l'Arc 3 (Azuria/Ondine)
    fonctionne
-2. Traduction complète du reste de la ville d'Azuria (Rustboro City) — signalétique restante, PNJ
-   génériques, sous-intrigue Devon Corp (grunt qui vole des documents, à évaluer : remplacer par Team
-   Rocket comme pour la forêt de Jade, ou laisser neutre ?)
 3. Textes de rematch post-Ligue de Pierre et d'Ondine (thème "parent et enfant" pour Pierre, identité
    Roxanne pour Ondine) — non urgent (post-Ligue uniquement)
 4. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
@@ -385,5 +395,3 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 12)
    d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
 9. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
    pas de conflit identifié avec le travail d'Argenta
-10. Après Azuria : décider de la suite (route vers Céladopole/Carmin-sur-Mer, ou consolidation/polish des
-   arcs existants) avec Thomas
