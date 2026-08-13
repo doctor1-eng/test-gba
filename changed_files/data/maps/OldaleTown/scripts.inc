@@ -253,19 +253,10 @@ OldaleTown_EventScript_RivalTrigger3::
 	goto OldaleTown_EventScript_ShowRivalMessage
 	end
 
+@ Kanto Saison 1 : Régis est un rival fixe (pas de variante May/Brendan selon le genre du joueur) ;
+@ les deux anciens textes vanilla étaient déjà identiques ici, la branche gender était donc morte.
 OldaleTown_EventScript_ShowRivalMessage::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, OldaleTown_EventScript_ShowMayMessage
-	goto_if_eq VAR_RESULT, FEMALE, OldaleTown_EventScript_ShowBrendanMessage
-	end
-
-OldaleTown_EventScript_ShowMayMessage::
 	msgbox OldaleTown_Text_MayLetsGoBack, MSGBOX_DEFAULT
-	goto OldaleTown_EventScript_RivalFinish
-	end
-
-OldaleTown_EventScript_ShowBrendanMessage::
-	msgbox OldaleTown_Text_BrendanLetsGoBack, MSGBOX_DEFAULT
 	goto OldaleTown_EventScript_RivalFinish
 	end
 
