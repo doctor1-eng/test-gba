@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-13 (Session 4, suite 14)
+Dernière mise à jour : 2026-08-13 (Session 4, suite 16)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -383,23 +383,52 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 14)
   en français ; identifiants internes (symboles, flags, musique) laissés inchangés par convention
 - [x] Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 14)
-1. Confirmer avec Thomas (nouveau build) que le crash a bien disparu et que l'Arc 3 (Azuria/Ondine)
-   ainsi que le nouveau fil Team Rocket (Tunnel Rusturf/Briney) fonctionnent comme attendu
-2. Traduire le reste d'Azuria non lié à la Team Rocket : panneaux `DevonCorpSign`/
-   `DevonCorpBranchOfficeSign`, combat de rival scripté (Régis) et son texte d'enregistrement,
-   sous-fil Wanda/petit ami dans le Tunnel Rusturf, `Route104_MrBrineysHouse`
-3. Textes de rematch post-Ligue de Pierre et d'Ondine (thème "parent et enfant" pour Pierre, identité
+## Mise à jour Session 4 (suite 15) — Combat de rival d'Azuria : bug corrigé + traduction
+- [x] Bug trouvé : le combat de rival scripté d'Azuria utilisait encore l'ancien branchement vanilla
+  May/Brendan selon le genre du joueur au lieu de Régis fixe (incohérent avec Route 103) — corrigé
+  (`Custom_EventScript_SetupRegisGfxId`, suppression du `checkplayergender`)
+- [x] Traduit en français toute la branche de texte désormais utilisée (8 textes, label "RÉGIS :")
+- [x] Traduit au passage `DevonCorpSign`, `DevonCorpBranchOfficeSign`, `TunnelNearingCompletion`
+- [x] Build validé, ROM 79,01 %
+
+## Mise à jour Session 4 (suite 16) — Bug de branchement Régis : 9 cartes touchées, pas seulement Azuria
+- [x] Découvert et corrigé sur 9 cartes (`LittlerootTown`, `LittlerootTown_ProfessorBirchsLab`,
+  `OldaleTown`, `Route104`, `Route110`, `Route119`, `LavaridgeTown`, `LilycoveCity`,
+  `EverGrandeCity_ChampionsRoom`) : le sprite de Régis utilisait encore le branchement vanilla May/
+  Brendan selon le genre du joueur — toutes appellent maintenant `Custom_EventScript_SetupRegisGfxId`
+- [x] Routage de texte (choix de la branche de dialogue) corrigé sur les 6 cartes qui ont un vrai combat/
+  scène de rival scriptée (en plus d'Azuria, déjà fait en suite 15) : `LittlerootTown_
+  ProfessorBirchsLab`, `Route104`, `Route110`, `LavaridgeTown`, `LilycoveCity`,
+  `EverGrandeCity_ChampionsRoom`
+- [x] Traduit en français le texte de `LittlerootTown_ProfessorBirchsLab` atteignable à court/moyen
+  terme (dialogue du Professeur Chen post-victoire sur Route 103, remise des POKé BALLS, etc.)
+- [x] Build validé, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 16)
+1. Confirmer avec Thomas (nouveau build) que le crash a bien disparu, que l'Arc 3 (Azuria/Ondine), le
+   fil Team Rocket (Tunnel Rusturf/Briney), le combat de rival d'Azuria et le sprite de Régis (partout)
+   fonctionnent comme attendu
+2. Traduire le texte de la branche Régis encore en anglais sur `Route104`, `Route110`, `LavaridgeTown`,
+   `LilycoveCity`, `EverGrandeCity_ChampionsRoom` (routage déjà corrigé, seul le texte reste à faire)
+3. Auditer les autres occurrences du schéma `checkplayergender`/MAY trouvées par grep mais pas encore
+   vérifiées : `LittlerootTown_MaysHouse_2F`, `MossdeepCity_SpaceCenter_2F`, `OldaleTown` (ligne 258),
+   `Route101` (ligne 252), `Route119` (combat de rival ligne 57) — déterminer si c'est le même bug ou un
+   usage légitime (ex. logement du joueur selon son propre genre) avant de corriger
+4. Traduire ce qui reste à Azuria/Route104 : sous-fil Wanda/petit ami dans le Tunnel Rusturf,
+   `Route104_MrBrineysHouse`
+5. Contenu très tardif de `LittlerootTown_ProfessorBirchsLab` (post-Ligue) resté en anglais : mise à
+   niveau POKéDEX NATIONAL, choix du starter Johto, appel de Scott — non urgent (post-Ligue uniquement)
+6. Textes de rematch post-Ligue de Pierre et d'Ondine (thème "parent et enfant" pour Pierre, identité
    Roxanne pour Ondine) — non urgent (post-Ligue uniquement)
-4. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
-5. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
+7. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+8. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
    deviner des coordonnées à l'aveugle (le QA harness headless peut aussi servir de filet de sécurité
    ponctuel pour vérifier qu'un PNJ animé/scripté ne crashe pas avant de livrer une build)
-6. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
+9. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
   d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)
-7. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le joueur) —
-   non bloquant, jamais déclenché
-8. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
-   d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
-9. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
-   pas de conflit identifié avec le travail d'Argenta
+10. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le
+    joueur) — non bloquant, jamais déclenché
+11. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+    d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
+12. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
+    pas de conflit identifié avec le travail d'Argenta

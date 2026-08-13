@@ -451,3 +451,65 @@
   tous purement neutres (pas de Team Aqua), traduction reportée à une prochaine étape
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`data/maps/RustboroCity/scripts.inc`, `data/maps/RusturfTunnel/scripts.inc`)
+
+## Session 4 (suite 15) — Combat de rival d'Azuria : bug de branchement corrigé + traduction
+- Régression latente trouvée en reprenant le combat de rival scripté d'Azuria (`RustboroCity_EventScript_
+  RivalEncounter`) : la carte utilisait encore l'ancien mécanisme vanilla `Common_EventScript_
+  SetupRivalGfxId` et un `checkplayergender` pour choisir entre les branches "MAY" et "BRENDAN" — alors
+  que Régis a été fixé ailleurs dans le projet (Route 103, `Custom_EventScript_SetupRegisGfxId`) comme
+  personnage unique (petit-fils du Professeur Chen) affichant toujours le même sprite, quel que soit le
+  genre choisi par le joueur. Sans ce correctif, un joueur masculin aurait vu le sprite "MAY" et
+  déclenché la branche de texte "MAY" à Azuria — incohérent avec Régis partout ailleurs dans le jeu
+- Corrigé : `RustboroCity_OnTransition` appelle désormais `Custom_EventScript_SetupRegisGfxId` ;
+  `RustboroCity_EventScript_RivalEncounter` et `RustboroCity_EventScript_PlayRivalMusic` vont
+  directement vers la branche "Brendan" (celle qui utilise le sprite et la musique de Régis), sans plus
+  jamais tester le genre du joueur
+- Traduit en français toute la branche de texte désormais utilisée (`BrendanHiLetsRegister`,
+  `RegisteredBrendan`, `BrendanPassedBrineyWantToBattle`, `BrendanNoConfidenceInPokemon`,
+  `BrendanWantToBattle`, `BrendanIWontGoEasy`, `BrendanDefeat`, `BrendanMrBrineyHint`) avec le label
+  "RÉGIS :" ; référence à "PETALBURG WOODS" adaptée en "forêt de Jade"
+- La branche "MAY" (`RustboroCity_EventScript_MayEncounter` et ses textes) devient du code mort
+  inatteignable — volontairement laissée en l'état (non supprimée) par prudence, conformément à la
+  leçon retenue en suite 10 : ne pas retirer un mécanisme sans être sûr qu'il n'est réellement plus
+  sollicité nulle part ; elle ne sera plus jamais atteinte en jeu
+- Traduit au passage : `RustboroCity_Text_DevonCorpSign`, `DevonCorpBranchOfficeSign`,
+  `TunnelNearingCompletion` (panneaux neutres, sans lien avec la Team Rocket)
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`data/maps/RustboroCity/scripts.inc`)
+
+## Session 4 (suite 16) — Le bug de branchement Régis touchait 9 cartes, pas seulement Azuria
+- En creusant le correctif de suite 15, découverte que le même bug (branchement vanilla May/Brendan
+  selon `checkplayergender` au lieu du personnage fixe Régis) touchait `Common_EventScript_
+  SetupRivalGfxId` — donc potentiellement le sprite de Régis — sur 9 cartes au total : `LittlerootTown`,
+  `LittlerootTown_ProfessorBirchsLab`, `OldaleTown`, `Route104`, `Route110`, `Route119`, `LavaridgeTown`,
+  `LilycoveCity`, `EverGrandeCity_ChampionsRoom`
+- Corrigé partout : les 9 cartes appellent désormais `Custom_EventScript_SetupRegisGfxId` au lieu de
+  `Common_EventScript_SetupRivalGfxId` — le sprite de Régis est maintenant cohérent sur l'ensemble du
+  jeu, quel que soit le genre choisi par le joueur (avant ce correctif, un joueur masculin aurait vu le
+  sprite "MAY" comme rival dans toutes ces scènes)
+- Corrigé aussi le routage de texte (le `checkplayergender` qui choisissait entre la branche "MAY" et la
+  branche "BRENDAN" pour le dialogue) dans les 7 cartes qui avaient un vrai combat/scène de rival
+  scriptée avec du texte dupliqué : `LittlerootTown_ProfessorBirchsLab` (5 points de branchement),
+  `Route104`, `Route110`, `LavaridgeTown`, `LilycoveCity`, `EverGrandeCity_ChampionsRoom` (en plus
+  d'Azuria, déjà fait en suite 15) — toutes redirigent maintenant directement vers la branche "Brendan"
+  (celle qui porte l'identité de Régis)
+- Traduit en français le texte de `LittlerootTown_ProfessorBirchsLab` réellement atteignable à court/
+  moyen terme : `BirchRivalGoneHome`, `HeardYouBeatRivalTakePokedex`, `ExplainPokedex`,
+  `CountlessPokemonAwait` (texte du Professeur Chen), et toute la branche Brendan/Régis désormais
+  utilisée (`BrendanGotPokedexTooTakeThese`, `CatchCoolPokemonWithPokeBalls`, `HeyYourBagsFull`,
+  `BrendanWhereShouldIGoNext`, `BrendanTakeBreakFromFieldwork`, `BrendanYouCanThankMe`,
+  `BrendanPreferCollectingSlowly`, `BrendanHaveYouGoneToBattleFrontier`)
+- Les branches "MAY" (`LittlerootTown_ProfessorBirchsLab_EventScript_May*`) dans ce fichier deviennent du
+  code mort inatteignable, volontairement laissées en l'état (même prudence qu'en suite 15)
+- **Périmètre non traité, identifié mais reporté** :
+  - `Route104`, `Route110`, `LavaridgeTown`, `LilycoveCity`, `EverGrandeCity_ChampionsRoom` : le texte de
+    la branche Brendan/Régis reste en anglais (seul le routage a été corrigé) — traduction à faire dans
+    une prochaine étape
+  - Contenu très tardif de `LittlerootTown_ProfessorBirchsLab` (post-Ligue/Elite 4) resté en anglais :
+    cérémonie de mise à niveau du POKéDEX NATIONAL, choix du starter Johto, appel de Scott (S.S. Tidal)
+  - D'autres occurrences isolées du même schéma de branchement `checkplayergender`/MAY trouvées par grep
+    (`LittlerootTown_MaysHouse_2F`, `MossdeepCity_SpaceCenter_2F`, `OldaleTown`, `Route101`, `Route119`)
+    n'ont pas été auditées cette fois — à vérifier une par une avant de conclure s'il s'agit du même bug
+    ou d'un usage différent (ex. logement du joueur selon son propre genre, qui lui est légitime)
+- Build validé (compilation propre, exit code 0) après chaque étape, ROM 79,01 %, `changed_files/`
+  synchronisé pour les 9 cartes touchées

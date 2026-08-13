@@ -5,7 +5,7 @@ RustboroCity_MapScripts::
 
 RustboroCity_OnTransition:
 	setflag FLAG_VISITED_RUSTBORO_CITY
-	call Common_EventScript_SetupRivalGfxId
+	call Custom_EventScript_SetupRegisGfxId
 	call_if_eq VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_EventScript_HideMapNamePopup
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	goto_if_eq VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_EventScript_PositionScientistForExit
@@ -676,10 +676,7 @@ RustboroCity_EventScript_Rival::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_PlayRivalMusic::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, RustboroCity_EventScript_PlayMayMusic
-	goto_if_eq VAR_RESULT, FEMALE, RustboroCity_EventScript_PlayBrendanMusic
-	return
+	goto RustboroCity_EventScript_PlayBrendanMusic
 
 RustboroCity_EventScript_PlayMayMusic::
 	playbgm MUS_ENCOUNTER_MAY, TRUE
@@ -818,9 +815,7 @@ RustboroCity_EventScript_RivalTrigger7::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalEncounter::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, RustboroCity_EventScript_MayEncounter
-	goto_if_eq VAR_RESULT, FEMALE, RustboroCity_EventScript_BrendanEncounter
+	goto RustboroCity_EventScript_BrendanEncounter
 	end
 
 RustboroCity_EventScript_MayEncounter::
@@ -1186,62 +1181,63 @@ RustboroCity_Text_MayMrBrineyHint:
 	.string "was once a revered seafarer.$"
 
 RustboroCity_Text_BrendanHiLetsRegister:
-	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
-	.string "You had a MATCH CALL feature put\n"
-	.string "on your POKéNAV! Cool!\p"
-	.string "Let's register each other so we can\n"
-	.string "get in touch anytime!\p"
+	.string "RÉGIS : Oh, salut, {PLAYER} !\p"
+	.string "Tu as reçu la fonction MATCH CALL\n"
+	.string "sur ton POKéNAV ! Trop bien !\p"
+	.string "Enregistrons-nous mutuellement pour\n"
+	.string "pouvoir se contacter à tout moment !\p"
 	.string "… … … … … …$"
 
 RustboroCity_Text_RegisteredBrendan:
-	.string "Registered BRENDAN\n"
-	.string "in the POKéNAV.$"
+	.string "RÉGIS enregistré\n"
+	.string "dans le POKéNAV.$"
 
 RustboroCity_Text_BrendanPassedBrineyWantToBattle:
-	.string "BRENDAN: By the way, {PLAYER}, I walked\n"
-	.string "by MR. BRINEY in PETALBURG WOODS.\p"
-	.string "I bet he was on his way home to his\n"
-	.string "cottage by the sea.\p"
-	.string "{PLAYER}, how's your POKéDEX?\n"
-	.string "Have you filled in any pages yet?\p"
-	.string "Mine rules.\p"
-	.string "Want to have a battle to test how\n"
-	.string "far you've progressed?$"
+	.string "RÉGIS : Au fait, {PLAYER}, j'ai croisé\n"
+	.string "MR. BRINEY dans la forêt de Jade.\p"
+	.string "Je pense qu'il rentrait chez lui, dans\n"
+	.string "sa cabane au bord de la mer.\p"
+	.string "{PLAYER}, où en est ton POKéDEX ?\n"
+	.string "Tu as déjà rempli quelques pages ?\p"
+	.string "Le mien est plutôt pas mal.\p"
+	.string "Ça te dit un petit combat pour voir\n"
+	.string "où tu en es ?$"
 
 RustboroCity_Text_BrendanNoConfidenceInPokemon:
-	.string "BRENDAN: What's the matter? Don't have\n"
-	.string "any confidence in your POKéMON?$"
+	.string "RÉGIS : Qu'est-ce qui se passe ?\n"
+	.string "Pas confiance en tes POKéMON ?$"
 
 RustboroCity_Text_BrendanWantToBattle:
-	.string "BRENDAN: What's up?\n"
-	.string "Want to have a battle with me?$"
+	.string "RÉGIS : Alors, quoi de neuf ?\n"
+	.string "Ça te dit un petit combat ?$"
 
 RustboroCity_Text_BrendanIWontGoEasy:
-	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
+	.string "RÉGIS : Je sais que tu viens tout\n"
+	.string "juste de devenir dresseur, mais je ne\l"
+	.string "vais pas te faire de cadeau !$"
 
 RustboroCity_Text_BrendanDefeat:
 	.string "Hmm…\n"
-	.string "You're pretty good.$"
+	.string "T'es plutôt doué.$"
 
 RustboroCity_Text_BrendanMrBrineyHint:
-	.string "BRENDAN: By the way, you know\n"
-	.string "MR. BRINEY? The guy I just passed?\p"
-	.string "I bet you didn't know this, since you\n"
-	.string "just moved here, {PLAYER}, but\l"
-	.string "MR. BRINEY was once a great sailor.$"
+	.string "RÉGIS : Au fait, tu connais MR. BRINEY ?\n"
+	.string "Le type que je viens de croiser ?\p"
+	.string "Tu ne le sais peut-être pas, vu que tu\n"
+	.string "viens d'arriver ici, {PLAYER}, mais\l"
+	.string "MR. BRINEY a été un grand marin.$"
 
 RustboroCity_Text_TunnelNearingCompletion:
-	.string "“Timesaving tunnel nearing\n"
-	.string "completion!”\p"
-	.string "…Is what it says on the sign, but\n"
-	.string "there's also a big “X” splashed\l"
-	.string "across it in red paint…$"
+	.string "“Tunnel de raccourci : travaux\n"
+	.string "bientôt terminés !”\p"
+	.string "…C'est ce que dit le panneau, mais\n"
+	.string "il y a aussi un gros “X” tracé\l"
+	.string "par-dessus, à la peinture rouge…$"
 
 RustboroCity_Text_DevonCorpSign:
 	.string "DEVON CORPORATION\p"
-	.string "“For all your living needs, we make\n"
-	.string "it all.”$"
+	.string "“Pour tous vos besoins du quotidien,\n"
+	.string "on fabrique de tout.”$"
 
 RustboroCity_Text_GymSign:
 	.string "ARÈNE POKéMON D'AZURIA\n"
@@ -1249,9 +1245,9 @@ RustboroCity_Text_GymSign:
 	.string "“Passionnée de POKéMON EAU !”$"
 
 RustboroCity_Text_DevonCorpBranchOfficeSign:
-	.string "DEVON CORP. BRANCH OFFICE\p"
-	.string "“Access limited to DEVON employees\n"
-	.string "and authorized personnel.”$"
+	.string "SUCCURSALE DE DEVON CORP.\p"
+	.string "“Accès réservé aux employés DEVON\n"
+	.string "et au personnel autorisé.”$"
 
 RustboroCity_Text_CitySign:
 	.string "AZURIA\p"
