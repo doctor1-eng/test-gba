@@ -273,48 +273,51 @@ EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver:
 	.string "It's already over?$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanAdvice:
-	.string "BRENDAN: {PLAYER}!\p"
-	.string "How would you like some advice before\n"
-	.string "you challenge the CHAMPION?…$"
+	.string "RÉGIS : {PLAYER} !\p"
+	.string "Ça te dirait un conseil avant\n"
+	.string "d'affronter le MAÎTRE ?…$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon:
-	.string "BRENDAN: {PLAYER}…\p"
-	.string "Are you trying to tell me…\n"
-	.string "You've beaten the CHAMPION?$"
+	.string "RÉGIS : {PLAYER}…\p"
+	.string "Tu es en train de me dire…\n"
+	.string "que tu as battu le MAÎTRE ?$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
-	.string "PROF. BIRCH: See?\n"
-	.string "What did I tell you, {RIVAL}?\p"
-	.string "Didn't I tell you that you don't need\n"
-	.string "to worry about {PLAYER}{KUN}?\p"
+	.string "PROFESSEUR CHEN : Tu vois ?\n"
+	.string "Qu'est-ce que je te disais, {RIVAL} ?\p"
+	.string "Je te l'avais bien dit que tu n'avais\n"
+	.string "pas à t'inquiéter pour {PLAYER}{KUN} ?\p"
 	.string "… … … … … … … …\n"
-	.string "{PLAYER}{KUN}, you've finally done it.\p"
-	.string "When I heard that you defeated your\n"
-	.string "own father at the PETALBURG GYM,\l"
-	.string "I thought perhaps you had a chance…\p"
-	.string "But to think you've actually become\n"
-	.string "the CHAMPION!\p"
-	.string "Ah, yes!\p"
-	.string "What became of your POKéDEX?\n"
-	.string "Here, let me see.$"
+	.string "{PLAYER}{KUN}, tu y es enfin arrivé.\p"
+	.string "Quand j'ai appris que tu avais battu\n"
+	.string "PIERRE, le champion d'Argenta,\l"
+	.string "je me suis dit que tu avais peut-être\l"
+	.string "une chance…\p"
+	.string "Mais de là à devenir le MAÎTRE de la\n"
+	.string "LIGUE !\p"
+	.string "Ah, oui !\p"
+	.string "Et ton POKéDEX, où il en est ?\n"
+	.string "Tiens, fais voir.$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
-	.string "PROF. BIRCH: Anyways,\n"
-	.string "congratulations!\p"
-	.string "Now, go proudly into the final room!$"
+	.string "PROFESSEUR CHEN : Bref,\n"
+	.string "félicitations !\p"
+	.string "Maintenant, va fièrement dans la\n"
+	.string "dernière salle !$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe:
-	.string "WALLACE: {PLAYER}{KUN}…\p"
-	.string "No, let me rephrase that properly.\p"
-	.string "The new CHAMPION!\p"
-	.string "Come with me.$"
+	.string "WALLACE : {PLAYER}{KUN}…\p"
+	.string "Non, laisse-moi reformuler ça\n"
+	.string "correctement.\p"
+	.string "Le nouveau MAÎTRE DE LA LIGUE !\p"
+	.string "Suis-moi.$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside:
-	.string "WALLACE: I'm sorry, but…\p"
-	.string "From here on, only those TRAINERS who\n"
-	.string "have become CHAMPIONS may enter.\p"
-	.string "You'll have to wait outside with\n"
-	.string "PROF. BIRCH.$"
+	.string "WALLACE : Je suis désolé, mais…\p"
+	.string "À partir d'ici, seuls les dresseurs\n"
+	.string "devenus MAÎTRES peuvent entrer.\p"
+	.string "Tu vas devoir attendre dehors avec\n"
+	.string "le PROFESSEUR CHEN.$"
 
 EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 	.string "MAY: Groan…\p"
@@ -326,9 +329,9 @@ EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 	.string "Honestly, congratulations!$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
-	.string "BRENDAN: Whaaaat?! … … … … …\n"
+	.string "RÉGIS : Quoiii ?! … … … … …\n"
 	.string "… … … … … … … …\p"
-	.string "It can't be helped if that's the rule.\p"
-	.string "{PLAYER}, way to go!\n"
-	.string "Congratulations!$"
+	.string "Bon, tant pis, c'est la règle.\p"
+	.string "{PLAYER}, bien joué !\n"
+	.string "Félicitations !$"
 

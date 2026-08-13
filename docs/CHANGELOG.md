@@ -524,3 +524,30 @@
   la traduction complète de la base d'objets (873 entrées) est un chantier séparé, non commencé
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`data/maps/Route104/scripts.inc`, `data/maps/Route110/scripts.inc`)
+
+## Session 4 (suite 18) — Fin de la traduction de la branche Régis + 2 reliquats "papa" trouvés
+- Traduit en français le texte de la branche Régis (routage déjà corrigé en suite 16) sur `LavaridgeTown`
+  (remise des GO-GOGGLES), `LilycoveCity` (combat, discussion sur la suite du jeu), et
+  `EverGrandeCity_ChampionsRoom` (scène finale post-victoire contre le MAÎTRE DE LA LIGUE)
+- Deux nouveaux reliquats "papa champion d'arène" trouvés et corrigés au passage (même travers que Pierre/
+  Norman traité en suite 7, jamais audité sur ces cartes tardives) :
+  - `LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad` : "je vais défier NORMAN, champion d'arène
+    de PETALBURG, ton père" → réécrit sans lien de parenté ("PIERRE, le champion de l'arène d'Argenta")
+  - `EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex` (discours du Professeur Chen à l'arrivée
+    dans la salle du Champion) : "tu as battu ton propre père à l'arène de PETALBURG" → réécrit
+    ("tu as battu PIERRE, le champion d'Argenta")
+- Également corrigé : Régis appelait le Professeur Chen "mon père" dans deux textes de `LilycoveCity`
+  (`BrendanShoppingLetsBattle`, `BrendanGoingBackToLittleroot`) — incohérent avec la relation
+  grand-père/petit-fils établie ailleurs dans le projet (Chen est le grand-père de Régis, pas son père) ;
+  remplacé par "mon grand-père"
+- `EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex`/`BirchCongratulations`/
+  `WallaceWaitOutside` : label "PROF. BIRCH" remplacé par "PROFESSEUR CHEN", cohérent avec le reste du
+  jeu ; "CHAMPION"/le titre du protagoniste victorieux traduit en "MAÎTRE DE LA LIGUE"
+  ("WALLACE", le nom du champion final, laissé tel quel — personnage de fin de jeu jamais encore traité
+  dans les docs, pas de nom français décidé)
+- Bug de compilation trouvé et corrigé en cours de route : deux tirets cadratins (—) introduits par
+  erreur dans `LilycoveCity/scripts.inc` — le charmap du jeu ne les supporte pas (`unknown character
+  U+2014`), remplacés par une simple virgule, cohérent avec la règle du projet ("pas de tiret cadratin")
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`data/maps/LavaridgeTown/scripts.inc`, `data/maps/LilycoveCity/scripts.inc`,
+  `data/maps/EverGrandeCity_ChampionsRoom/scripts.inc`)

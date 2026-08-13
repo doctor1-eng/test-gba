@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-13 (Session 4, suite 17)
+Dernière mise à jour : 2026-08-13 (Session 4, suite 18)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -408,35 +408,48 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 17)
 - [x] `Route104` et `Route110` traduits en français (routage déjà corrigé en suite 16)
 - [x] Build validé, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 17)
+## Mise à jour Session 4 (suite 18) — Fin de la traduction Régis + 2 reliquats "papa" trouvés
+- [x] `LavaridgeTown`, `LilycoveCity`, `EverGrandeCity_ChampionsRoom` traduits en français (routage déjà
+  corrigé en suite 16) — la branche Régis est désormais intégralement traduite sur les 7 cartes à combat
+  scripté (Azuria, labo, Route104, Route110, Lavaridge, Lilycove, salle du Champion)
+- [x] 2 nouveaux reliquats "papa champion d'arène" trouvés et corrigés (Lavaridge, salle du Champion) —
+  même travers que Pierre/Norman traité en suite 7, sur des cartes tardives jamais auditées jusqu'ici
+- [x] Confusion père/grand-père corrigée : Régis appelait le Pr Chen "mon père" à Lilycove, corrigé en
+  "mon grand-père" (cohérent avec la relation établie ailleurs dans le projet)
+- [x] Bug de compilation (tirets cadratins non supportés par le charmap) trouvé et corrigé
+- [x] Build validé, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 18)
 1. Confirmer avec Thomas (nouveau build .gba fourni) que le crash a bien disparu, que l'Arc 3 (Azuria/
-   Ondine), le fil Team Rocket (Tunnel Rusturf/Briney), le combat de rival (Azuria/Route104/Route110) et
-   le sprite de Régis (partout) fonctionnent comme attendu
-2. Traduire le texte de la branche Régis encore en anglais sur `LavaridgeTown`, `LilycoveCity`,
-   `EverGrandeCity_ChampionsRoom` (routage déjà corrigé, seul le texte reste à faire — post-3e/4e badge
-   et post-Ligue, moins urgent que Route104/110 déjà faits)
-3. Auditer les autres occurrences du schéma `checkplayergender`/MAY trouvées par grep mais pas encore
+   Ondine), le fil Team Rocket (Tunnel Rusturf/Briney), le combat de rival (toutes cartes) et le sprite
+   de Régis (partout) fonctionnent comme attendu
+2. Auditer les autres occurrences du schéma `checkplayergender`/MAY trouvées par grep mais pas encore
    vérifiées : `LittlerootTown_MaysHouse_2F`, `MossdeepCity_SpaceCenter_2F`, `OldaleTown` (ligne 258),
    `Route101` (ligne 252), `Route119` (combat de rival ligne 57) — déterminer si c'est le même bug ou un
    usage légitime (ex. logement du joueur selon son propre genre) avant de corriger
-4. Traduire ce qui reste à Azuria/Route104 : sous-fil Wanda/petit ami dans le Tunnel Rusturf,
+3. Balayage ciblé "papa"/"father" à faire sur le reste du dépôt — 2 reliquats retrouvés cette suite sur
+   des cartes tardives non auditées ; probable qu'il en reste d'autres (post-Ligue, Battle Frontier,
+   contenu FRLG type Bourg Palette/Cramois'Île) à vérifier au fur et à mesure
+4. Décider d'un nom français pour WALLACE (champion final) si le contenu post-Ligue est un jour prioritaire
+   — laissé tel quel pour l'instant, jamais traité dans les docs
+5. Traduire ce qui reste à Azuria/Route104 : sous-fil Wanda/petit ami dans le Tunnel Rusturf,
    `Route104_MrBrineysHouse`
-5. Contenu très tardif de `LittlerootTown_ProfessorBirchsLab` (post-Ligue) resté en anglais : mise à
+6. Contenu très tardif de `LittlerootTown_ProfessorBirchsLab` (post-Ligue) resté en anglais : mise à
    niveau POKéDEX NATIONAL, choix du starter Johto, appel de Scott — non urgent (post-Ligue uniquement)
-6. Textes de rematch post-Ligue de Pierre et d'Ondine (thème "parent et enfant" pour Pierre, identité
+7. Textes de rematch post-Ligue de Pierre et d'Ondine (thème "parent et enfant" pour Pierre, identité
    Roxanne pour Ondine) — non urgent (post-Ligue uniquement)
-7. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
-8. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
+8. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)
+9. Script Python de preview PNG des maps — utile aussi pour valider les futurs placements de PNJ sans
    deviner des coordonnées à l'aveugle (le QA harness headless peut aussi servir de filet de sécurité
    ponctuel pour vérifier qu'un PNJ animé/scripté ne crashe pas avant de livrer une build)
-9. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
-  d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)
-10. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le
+10. Balayage plus large des dialogues restants en anglais (dresseurs génériques Route 2, "James" chasseur
+    d'insectes de la forêt à renommer pour éviter la confusion avec Team Rocket)
+11. `RivalsHouse_1F_Text_OhYoureTheNewNeighbor` (scène orpheline restante, mère de Régis visite le
     joueur) — non bloquant, jamais déclenché
-11. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
+12. Quête SS Ticket/Latios (livrée par "papa") et cadeau Amulet Coin post-badge 5 — toujours en attente
     d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
-12. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
+13. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
     pas de conflit identifié avec le travail d'Argenta
-13. Traduction complète de la base d'objets `items.h` (873 entrées, encore entièrement en anglais côté
+14. Traduction complète de la base d'objets `items.h` (873 entrées, encore entièrement en anglais côté
     nom/description) — chantier séparé, pas commencé, à discuter avec Thomas avant de s'y attaquer vu
     l'ampleur
