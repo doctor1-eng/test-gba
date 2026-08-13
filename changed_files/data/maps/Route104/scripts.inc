@@ -1122,45 +1122,47 @@ Route104_Text_MayPostBattle:
 	.string "POKéMON, too.$"
 
 Route104_Text_BrendanWeShouldRegister:
-	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
-	.string "Cool, you had DEVON install the MATCH\n"
-	.string "CALL system on your POKéNAV!\p"
-	.string "Let's register each other in our\n"
-	.string "POKéNAVS so we can keep in touch.$"
+	.string "RÉGIS : Oh, salut, {PLAYER} !\p"
+	.string "Cool, DEVON a installé le système\n"
+	.string "MATCH CALL sur ton POKéNAV !\p"
+	.string "Enregistrons-nous mutuellement dans\n"
+	.string "nos POKéNAVS pour rester en contact.$"
 
 Route104_Text_RegisteredBrendan:
-	.string "{PLAYER} registered BRENDAN\n"
-	.string "in the POKéNAV.$"
+	.string "{PLAYER} a enregistré RÉGIS\n"
+	.string "dans le POKéNAV.$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "BRENDAN: {PLAYER}, how's your POKéDEX?\n"
-	.string "Have you filled in any pages yet?$"
+	.string "RÉGIS : {PLAYER}, où en est ton\n"
+	.string "POKéDEX ? Tu as déjà rempli quelques\l"
+	.string "pages ?$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
-	.string "Me, I'm doing great!\p"
-	.string "Want to check out how good I am with\n"
-	.string "a battle?$"
+	.string "Moi, ça se passe très bien !\p"
+	.string "Ça te dit de vérifier ça avec un petit\n"
+	.string "combat ?$"
 
 Route104_Text_BrendanNoConfidence:
-	.string "BRENDAN: What's the matter? Don't have\n"
-	.string "any confidence in your POKéMON?$"
+	.string "RÉGIS : Qu'est-ce qui se passe ?\n"
+	.string "Pas confiance en tes POKéMON ?$"
 
 Route104_Text_BrendanLetsBattle:
-	.string "BRENDAN: What's up?\n"
-	.string "Want to have a battle with me?$"
+	.string "RÉGIS : Alors, quoi de neuf ?\n"
+	.string "Ça te dit un petit combat ?$"
 
 Route104_Text_BrendanIntro:
-	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
+	.string "RÉGIS : Je sais que tu viens tout\n"
+	.string "juste de devenir dresseur, mais je ne\l"
+	.string "vais pas te faire de cadeau !$"
 
 Route104_Text_BrendanDefeat:
 	.string "Hmm…\n"
-	.string "You're pretty good.$"
+	.string "T'es plutôt doué.$"
 
 Route104_Text_BrendanPostBattle:
-	.string "BRENDAN: You've gotten pretty decent\n"
-	.string "at handling POKéMON.\p"
-	.string "But, you know, you shouldn't just be\n"
-	.string "making POKéMON battle.\p"
-	.string "Like MR. BRINEY, it's important to\n"
-	.string "become friends with your POKéMON.$"
+	.string "RÉGIS : Tu te débrouilles plutôt bien\n"
+	.string "avec les POKéMON.\p"
+	.string "Mais tu sais, tu ne devrais pas te\n"
+	.string "contenter de les faire combattre.\p"
+	.string "Comme MR. BRINEY, c'est important de\n"
+	.string "devenir ami avec ses POKéMON aussi.$"

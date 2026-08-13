@@ -513,3 +513,14 @@
     ou d'un usage différent (ex. logement du joueur selon son propre genre, qui lui est légitime)
 - Build validé (compilation propre, exit code 0) après chaque étape, ROM 79,01 %, `changed_files/`
   synchronisé pour les 9 cartes touchées
+
+## Session 4 (suite 17) — Traduction de la branche Régis sur Route 104 et Route 110
+- Traduit en français le texte de la branche Régis (routage déjà corrigé en suite 16, seul le texte
+  restait en anglais) sur `Route104` (enregistrement POKéNAV, combat, conseil post-combat sur
+  l'amitié avec les POKéMON — référence à MR. BRINEY conservée, cohérente avec le fil Tunnel Rusturf) et
+  `Route110` (combat sur CYCLING ROAD, remise du DÉTECTEUR d'objets)
+- Le DÉTECTEUR (`ITEM_DOWSING_MACHINE`) est traduit uniquement dans le dialogue, comme la SUPER BALL
+  ailleurs dans le projet — le nom d'objet lui-même dans `items.h` reste en anglais ("Dowsing Machine"),
+  la traduction complète de la base d'objets (873 entrées) est un chantier séparé, non commencé
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`data/maps/Route104/scripts.inc`, `data/maps/Route110/scripts.inc`)

@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-13 (Session 4, suite 16)
+Dernière mise à jour : 2026-08-13 (Session 4, suite 17)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -404,12 +404,17 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 16)
   terme (dialogue du Professeur Chen post-victoire sur Route 103, remise des POKé BALLS, etc.)
 - [x] Build validé, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 16)
-1. Confirmer avec Thomas (nouveau build) que le crash a bien disparu, que l'Arc 3 (Azuria/Ondine), le
-   fil Team Rocket (Tunnel Rusturf/Briney), le combat de rival d'Azuria et le sprite de Régis (partout)
-   fonctionnent comme attendu
-2. Traduire le texte de la branche Régis encore en anglais sur `Route104`, `Route110`, `LavaridgeTown`,
-   `LilycoveCity`, `EverGrandeCity_ChampionsRoom` (routage déjà corrigé, seul le texte reste à faire)
+## Mise à jour Session 4 (suite 17) — Traduction de la branche Régis sur Route 104 et Route 110
+- [x] `Route104` et `Route110` traduits en français (routage déjà corrigé en suite 16)
+- [x] Build validé, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 17)
+1. Confirmer avec Thomas (nouveau build .gba fourni) que le crash a bien disparu, que l'Arc 3 (Azuria/
+   Ondine), le fil Team Rocket (Tunnel Rusturf/Briney), le combat de rival (Azuria/Route104/Route110) et
+   le sprite de Régis (partout) fonctionnent comme attendu
+2. Traduire le texte de la branche Régis encore en anglais sur `LavaridgeTown`, `LilycoveCity`,
+   `EverGrandeCity_ChampionsRoom` (routage déjà corrigé, seul le texte reste à faire — post-3e/4e badge
+   et post-Ligue, moins urgent que Route104/110 déjà faits)
 3. Auditer les autres occurrences du schéma `checkplayergender`/MAY trouvées par grep mais pas encore
    vérifiées : `LittlerootTown_MaysHouse_2F`, `MossdeepCity_SpaceCenter_2F`, `OldaleTown` (ligne 258),
    `Route101` (ligne 252), `Route119` (combat de rival ligne 57) — déterminer si c'est le même bug ou un
@@ -432,3 +437,6 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 16)
     d'un autre messager que "papa", non bloquant (atteignable seulement en post-Ligue)
 12. Textes "WALLY" partagés (Route102/PetalburgCity) — toujours partagés entre fichiers, fonctionnels,
     pas de conflit identifié avec le travail d'Argenta
+13. Traduction complète de la base d'objets `items.h` (873 entrées, encore entièrement en anglais côté
+    nom/description) — chantier séparé, pas commencé, à discuter avec Thomas avant de s'y attaquer vu
+    l'ampleur

@@ -777,30 +777,30 @@ Route110_Text_MayExplainItemfinder:
 	.string "harder for the next time.$"
 
 Route110_Text_BrendanLetsBattle:
-	.string "BRENDAN: Hey, {PLAYER}.\n"
-	.string "So this is where you were.\l"
-	.string "How's it going?\p"
-	.string "Have you been raising your POKéMON?\n"
-	.string "I'll check for you.$"
+	.string "RÉGIS : Hé, {PLAYER}.\n"
+	.string "C'est donc là que tu étais.\l"
+	.string "Comment ça va ?\p"
+	.string "Tu as bien entraîné tes POKéMON ?\n"
+	.string "Je vais vérifier ça pour toi.$"
 
 Route110_Text_BrendanDefeated:
 	.string "Hmm…\n"
-	.string "You're pretty good.$"
+	.string "T'es plutôt doué.$"
 
 Route110_Text_BrendanTakeThis:
-	.string "BRENDAN: {PLAYER}, you've trained\n"
-	.string "without me noticing…\p"
-	.string "Good enough!\n"
-	.string "Here, take this.$"
+	.string "RÉGIS : {PLAYER}, tu t'es entraîné\n"
+	.string "sans que je m'en rende compte…\p"
+	.string "Pas mal du tout !\n"
+	.string "Tiens, prends ça.$"
 
 Route110_Text_BrendanExplainItemfinder:
-	.string "BRENDAN: That's an ITEMFINDER.\p"
-	.string "Use it to root around for items that\n"
-	.string "aren't visible.\p"
-	.string "If it senses something, it emits\n"
-	.string "a sound.\p"
-	.string "Anyway, I'm off to look for new\n"
-	.string "POKéMON.$"
+	.string "RÉGIS : Ça, c'est un DÉTECTEUR.\p"
+	.string "Utilise-le pour fouiller à la\n"
+	.string "recherche d'objets invisibles.\p"
+	.string "S'il détecte quelque chose, il émet\n"
+	.string "un son.\p"
+	.string "Bon, je repars à la recherche de\n"
+	.string "nouveaux POKéMON.$"
 
 Route110_Text_RideBikeAtFullSpeed:
 	.string "Wouldn't it be great to ride a BIKE\n"
