@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-12 (Session 4, suite 13)
+Dernière mise à jour : 2026-08-13 (Session 4, suite 14)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -375,12 +375,20 @@ Dernière mise à jour : 2026-08-12 (Session 4, suite 13)
   2v2) ; `GymLeaderIsntEasyWithFire` mis à jour (FEU vs ROCHE → FEU vs EAU, typage d'Ondine)
 - [x] Build validé, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 13)
-1. Concevoir et proposer le remplacement Team Rocket du fil Devon Corp/Briney/rival à Azuria (portée :
-   `RustboroCity/scripts.inc`, Tunnel Rusturf, maison de Briney — cartes pas encore explorées) — attendre
-   validation du texte avant implémentation, comme pour les scènes centrales précédentes
-2. Confirmer avec Thomas (nouveau build) que le crash a bien disparu et que l'Arc 3 (Azuria/Ondine)
-   fonctionne
+## Mise à jour Session 4 (suite 14) — Team Rocket remplace le vol Devon Corp (Azuria + Tunnel Rusturf)
+- [x] Proposition de texte validée par Thomas ("Je valide continue") puis implémentée dans
+  `RustboroCity/scripts.inc` et `RusturfTunnel/scripts.inc` : le sbire anonyme devient un membre de la
+  Team Rocket, avec un rappel explicite à la forêt de Jade dans la réplique du PNJ DEVON
+- [x] Texte du combat contre le sbire et de la scène de sauvetage de MR. BRINEY/PEEKO entièrement traduits
+  en français ; identifiants internes (symboles, flags, musique) laissés inchangés par convention
+- [x] Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 14)
+1. Confirmer avec Thomas (nouveau build) que le crash a bien disparu et que l'Arc 3 (Azuria/Ondine)
+   ainsi que le nouveau fil Team Rocket (Tunnel Rusturf/Briney) fonctionnent comme attendu
+2. Traduire le reste d'Azuria non lié à la Team Rocket : panneaux `DevonCorpSign`/
+   `DevonCorpBranchOfficeSign`, combat de rival scripté (Régis) et son texte d'enregistrement,
+   sous-fil Wanda/petit ami dans le Tunnel Rusturf, `Route104_MrBrineysHouse`
 3. Textes de rematch post-Ligue de Pierre et d'Ondine (thème "parent et enfant" pour Pierre, identité
    Roxanne pour Ondine) — non urgent (post-Ligue uniquement)
 4. Renommage complet des maps Hoenn → Kanto (level design, au-delà du texte)

@@ -1013,10 +1013,10 @@ RustboroCity_EventScript_Boy1::
 	end
 
 RustboroCity_Text_WeShortenItToDevon:
-	.string "The DEVON CORPORATION…\n"
-	.string "We all just shorten it to DEVON.\p"
-	.string "That company makes all sorts of\n"
-	.string "convenient products.$"
+	.string "La DEVON CORPORATION…\n"
+	.string "On dit juste DEVON, pour faire court.\p"
+	.string "Cette entreprise fabrique toutes\n"
+	.string "sortes de produits pratiques.$"
 
 RustboroCity_Text_SneakyLookingManWentAroundCorner:
 	.string "Hm ? Un type louche ?\p"
@@ -1097,42 +1097,46 @@ RustboroCity_Text_TradePokemonGrowFast:
 	.string "il pourrait refuser de t'obéir…$"
 
 RustboroCity_Text_OutOfTheWay:
-	.string "Get out!\n"
-	.string "Out of the way!$"
+	.string "Dégage !\n"
+	.string "Pousse-toi de là !$"
 
 RustboroCity_Text_WaitDontTakeMyGoods:
-	.string "Wait! Pleeeaaase!\p"
-	.string "Don't take my GOODS!$"
+	.string "Attends ! Je t'en priiie !\p"
+	.string "Ne prends pas mes affaires !$"
 
 RustboroCity_Text_HelpMeIWasRobbed:
-	.string "Oh, it's you!\p"
-	.string "You're that fantastic TRAINER who\n"
-	.string "helped me in PETALBURG WOODS!\p"
-	.string "Help me! I was robbed by TEAM AQUA!\n"
-	.string "I have to get the DEVON GOODS back!\p"
-	.string "If I don't…\n"
-	.string "I'm going to be in serious trouble.$"
+	.string "Oh, c'est toi !\p"
+	.string "Le dresseur formidable qui m'a\n"
+	.string "aidé dans la forêt de Jade !\p"
+	.string "Aide-moi ! La Team Rocket vient de\n"
+	.string "me voler !\p"
+	.string "Je dois récupérer les affaires de\n"
+	.string "DEVON !\p"
+	.string "Si je n'y arrive pas…\n"
+	.string "Je vais avoir de sérieux ennuis.$"
 
 RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel:
-	.string "That shady character, I think he took\n"
-	.string "off towards the tunnel over there.$"
+	.string "Ce type louche, je crois qu'il est\n"
+	.string "parti par le tunnel, là-bas.$"
 
 RustboroCity_Text_YouGotItThankYou:
-	.string "Oh! How did it go?\n"
-	.string "The DEVON GOODS?\p"
-	.string "You did!\n"
-	.string "You got them back!\p"
-	.string "You really are a great TRAINER!\p"
-	.string "I know! As my thanks, I'll give you\n"
-	.string "another GREAT BALL!$"
+	.string "Oh ! Alors ?\n"
+	.string "Les affaires de DEVON ?\p"
+	.string "Tu les as !\n"
+	.string "Tu les as récupérées !\p"
+	.string "Tu es vraiment un dresseur\n"
+	.string "formidable !\p"
+	.string "Tiens ! Pour te remercier, je te\n"
+	.string "donne une SUPER BALL de plus !$"
 
 RustboroCity_Text_YoureLoadedWithItems:
-	.string "You're loaded with items.\n"
-	.string "I can't give you this GREAT BALL.$"
+	.string "Tu es surchargé d'objets.\n"
+	.string "Je ne peux pas te donner cette\l"
+	.string "SUPER BALL.$"
 
 RustboroCity_Text_PleaseComeWithMe:
-	.string "Excuse me, please!\n"
-	.string "Please come with me!$"
+	.string "Excuse-moi !\n"
+	.string "Viens avec moi, s'il te plaît !$"
 
 RustboroCity_Text_MayHiLetsRegister:
 	.string "MAY: Oh, hi, {PLAYER}{KUN}!\p"

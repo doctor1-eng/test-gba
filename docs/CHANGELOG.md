@@ -430,3 +430,24 @@
   ROCHE" (ancien typage de Roxanne) — mis à jour en "FEU contre EAU" pour refléter le typage EAU d'Ondine
 - Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
   (`data/maps/RustboroCity/scripts.inc`)
+
+## Session 4 (suite 14) — Team Rocket remplace le sbire du vol DEVON CORP (Azuria + Tunnel Rusturf)
+- Implémentation du remplacement narratif validé par Thomas ("Je valide continue") : le sbire anonyme
+  qui vole les affaires DEVON CORP à Azuria puis se réfugie dans le Tunnel Rusturf devient un membre de
+  la Team Rocket, avec une réplique du PNJ DEVON rappelant explicitement la forêt de Jade (cohérence avec
+  le fil Team Rocket déjà établi sur cette carte)
+- `data/maps/RustboroCity/scripts.inc` traduit et réécrit en français : `WeShortenItToDevon`,
+  `OutOfTheWay`, `WaitDontTakeMyGoods`, `HelpMeIWasRobbed` (référence à la forêt de Jade),
+  `ShadyCharacterTookOffTowardsTunnel`, `YouGotItThankYou`, `YoureLoadedWithItems`, `PleaseComeWithMe`
+- `data/maps/RusturfTunnel/scripts.inc` traduit et réécrit en français : `ComeAndGetSome`, `Peeko`,
+  `GruntIntro`, `GruntDefeat`, `GruntTakePackage`, `PeekoGladToSeeYouSafe`, et le long monologue de
+  remerciement de MR. BRINEY (`ThankYouLetsGoHomePeeko`)
+- Les identifiants internes (noms de symboles `TRAINER_GRUNT_RUSTURF_TUNNEL`, flags, `MUS_ENCOUNTER_AQUA`)
+  sont volontairement laissés inchangés — seul le texte visible par le joueur change, conformément à la
+  convention déjà suivie pour le remplacement de la forêt de Jade
+- Périmètre restant hors de ce correctif, non lié à la Team Rocket : panneaux `DevonCorpSign`/
+  `DevonCorpBranchOfficeSign` (encore en anglais), le combat de rival scripté (Régis) et son texte
+  d'enregistrement, le sous-fil Wanda/petit ami dans le Tunnel Rusturf, et `Route104_MrBrineysHouse` —
+  tous purement neutres (pas de Team Aqua), traduction reportée à une prochaine étape
+- Build validé (compilation propre, exit code 0), ROM 79,01 %, `changed_files/` synchronisé
+  (`data/maps/RustboroCity/scripts.inc`, `data/maps/RusturfTunnel/scripts.inc`)
