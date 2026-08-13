@@ -45,3 +45,7 @@ EventScript_SetupRivalGfxIdFemale2::
 Custom_EventScript_SetupRegisGfxId::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	return
+
+Custom_EventScript_SetupRegisOnBikeGfxId::
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE
+	return

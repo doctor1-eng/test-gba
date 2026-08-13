@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-13 (Session 4, suite 20)
+Dernière mise à jour : 2026-08-13 (Session 4, suite 21)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -485,10 +485,23 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 20)
   Palette — sûr tant qu'aucun `applymovement` n'est ajouté dessus ; à vérifier avant toute future
   scène animée le concernant
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 20)
-1. Playtest de la nouvelle scène de sauvetage (positions/choix de mise en scène jamais vérifiés
-   visuellement, seulement testés côté stabilité mémoire) — ajuster si le placement des PNJ ou le tracé
-   de la course-poursuite semble incohérent en jeu
-2. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement` déjà utilisés près
-   d'autres connexions de cartes du jeu (le bug n'est pas spécifique à Bourg Palette/Route 1)
-3. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
+## Mise à jour Session 4 (suite 21) — Combat de rival de la Route 119 converti en Régis
+- [x] Deuxième combat de rival (Route 119, remise de la CS Vol) : branche `checkplayergender`
+  supprimée, fusionnée en un seul combat contre Régis, texte traduit en français dans sa voix établie
+  (cf. Route 103). Équipe de dresseur reprise de `TRAINER_BRENDAN_ROUTE_119_TORCHIC` sans changement
+  (Lombre/Slugma/Marshtomp) — non rééquilibrée cette suite
+- [x] Bug annexe trouvé en creusant : le graphisme "rival à vélo" n'avait jamais été fixé en variante
+  Régis (contrairement au graphisme debout) — corrigé sur les 3 cartes concernées (Route 119, Route 110,
+  LavaridgeTown) via une nouvelle fonction `Custom_EventScript_SetupRegisOnBikeGfxId`
+- [x] Build release validée, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 21)
+1. Playtest de la nouvelle scène de sauvetage du Professeur Chen (positions/choix de mise en scène
+   jamais vérifiés visuellement, seulement testés côté stabilité mémoire) — ajuster si le placement des
+   PNJ ou le tracé de la course-poursuite semble incohérent en jeu
+2. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis)
+3. Reste du même audit May/Brendan : la scène de rencontre du rival à Bourg Palette (maison 2F, grosse
+   cutscene avec mouvements/PC) et l'appel post-Ligue de Mossdeep (encore en anglais, non prioritaire)
+4. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement` déjà utilisés près
+   d'autres connexions de cartes du jeu (le bug de suite 20 n'est pas spécifique à Bourg Palette/Route 1)
+5. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé

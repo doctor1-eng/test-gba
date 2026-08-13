@@ -15,7 +15,7 @@ Route119_EventScript_TryRemoveKecleon::
 
 Route119_OnTransition:
 	call Custom_EventScript_SetupRegisGfxId
-	call Common_EventScript_SetupRivalOnBikeGfxId
+	call Custom_EventScript_SetupRegisOnBikeGfxId
 	call_if_eq VAR_WEATHER_INSTITUTE_STATE, 1, Route119_EventScript_MoveInstituteWorkersDownstairs
 	special SetRoute119Weather
 	end
@@ -36,12 +36,15 @@ Route119_EventScript_RivalTrigger2::
 	goto Route119_EventScript_RivalEncounter
 	end
 
+@ Kanto Saison 1 : Régis est un rival fixe, plus de branche May/Brendan selon le genre du joueur.
+@ VAR_STARTER_MON vaut toujours 1 (index "Torchic", cf. LittlerootTown_EventScript_BirchsBag) puisque
+@ le starter unique est Pikachu — le switch d'origine est donc simplifié pour n'appeler que cette
+@ branche. Équipe de dresseur reprise telle quelle de TRAINER_BRENDAN_ROUTE_119_TORCHIC (Lombre/
+@ Slugma/Marshtomp), cohérent avec le choix déjà fait pour le combat de Route 103.
 Route119_EventScript_RivalEncounter::
 	lockall
 	addobject LOCALID_ROUTE119_RIVAL_ON_BIKE
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route119_EventScript_PlayMayMusic
-	call_if_eq VAR_RESULT, FEMALE, Route119_EventScript_PlayBrendanMusic
+	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	delay 65
 	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_RivalEnter1
 	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_RivalEnter2
@@ -53,77 +56,15 @@ Route119_EventScript_RivalEncounter::
 	removeobject LOCALID_ROUTE119_RIVAL_ON_BIKE
 	addobject LOCALID_ROUTE119_RIVAL
 	delay 30
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Route119_EventScript_BattleMay
-	goto_if_eq VAR_RESULT, FEMALE, Route119_EventScript_BattleBrendan
-	releaseall
+	goto Route119_EventScript_BattleRegis
 	end
 
-Route119_EventScript_PlayMayMusic::
-	playbgm MUS_ENCOUNTER_MAY, TRUE
-	return
-
-Route119_EventScript_PlayBrendanMusic::
-	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
-	return
-
-Route119_EventScript_BattleMay::
-	msgbox Route119_Text_MayIntro, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
-	case 0, Route119_EventScript_BattleMayTreecko
-	case 1, Route119_EventScript_BattleMayTorchic
-	case 2, Route119_EventScript_BattleMayMudkip
-	end
-
-Route119_EventScript_BattleMayTreecko::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_TREECKO, Route119_Text_MayDefeat
-	goto Route119_EventScript_DefeatedMay
-	end
-
-Route119_EventScript_BattleMayTorchic::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_TORCHIC, Route119_Text_MayDefeat
-	goto Route119_EventScript_DefeatedMay
-	end
-
-Route119_EventScript_BattleMayMudkip::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_119_MUDKIP, Route119_Text_MayDefeat
-	goto Route119_EventScript_DefeatedMay
-	end
-
-Route119_EventScript_DefeatedMay::
-	msgbox Route119_Text_MayPresentForYou, MSGBOX_DEFAULT
+Route119_EventScript_BattleRegis::
+	msgbox Route119_Text_RegisIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_TORCHIC, Route119_Text_RegisDefeat
+	msgbox Route119_Text_RegisPresentForYou, MSGBOX_DEFAULT
 	call Route119_EventScript_GiveFlyHM
-	msgbox Route119_Text_MayExplainFly, MSGBOX_DEFAULT
-	goto Route119_EventScript_RivalExitScottArrive
-	end
-
-Route119_EventScript_BattleBrendan::
-	msgbox Route119_Text_BrendanIntro, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
-	case 0, Route119_EventScript_BattleBrendanTreecko
-	case 1, Route119_EventScript_BattleBrendanTorchic
-	case 2, Route119_EventScript_BattleBrendanMudkip
-	end
-
-Route119_EventScript_BattleBrendanTreecko::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_TREECKO, Route119_Text_BrendanDefeat
-	goto Route119_EventScript_DefeatedBrendan
-	end
-
-Route119_EventScript_BattleBrendanTorchic::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_TORCHIC, Route119_Text_BrendanDefeat
-	goto Route119_EventScript_DefeatedBrendan
-	end
-
-Route119_EventScript_BattleBrendanMudkip::
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_119_MUDKIP, Route119_Text_BrendanDefeat
-	goto Route119_EventScript_DefeatedBrendan
-	end
-
-Route119_EventScript_DefeatedBrendan::
-	msgbox Route119_Text_BrendanIllGiveYouThis, MSGBOX_DEFAULT
-	call Route119_EventScript_GiveFlyHM
-	msgbox Route119_Text_BrendanExplainFly, MSGBOX_DEFAULT
+	msgbox Route119_Text_RegisExplainFly, MSGBOX_DEFAULT
 	goto Route119_EventScript_RivalExitScottArrive
 	end
 
@@ -475,63 +416,33 @@ Route119_EventScript_ScottWonAtFortreeGymCall::
 	releaseall
 	end
 
-Route119_Text_MayIntro:
-	.string "MAY: {PLAYER}{KUN}!\n"
-	.string "Where were you? I was looking for you!\p"
-	.string "How much stronger have you gotten?\n"
-	.string "Let me check for you!\p"
-	.string "Ready with your POKéMON?\n"
-	.string "Of course you are! Go!$"
+Route119_Text_RegisIntro:
+	.string "RÉGIS : Oh, {PLAYER}{KUN} !\n"
+	.string "Alors c'est ici que tu cherchais\l"
+	.string "des POKéMON ?\p"
+	.string "Voyons voir jusqu'où tu es arrivé…\n"
+	.string "Je vais te tester !\p"
+	.string "Allez !\n"
+	.string "Un combat, c'est un combat !$"
 
-Route119_Text_MayDefeat:
-	.string "Achah!\n"
-	.string "{PLAYER}{KUN}, you're strong!\p"
-	.string "I was worried that you might be\n"
-	.string "struggling with your training.$"
+Route119_Text_RegisDefeat:
+	.string "Aïe…\n"
+	.string "T'es vraiment devenu costaud,\l"
+	.string "{PLAYER}{KUN} !$"
 
-Route119_Text_MayPresentForYou:
-	.string "MAY: But I had absolutely nothing to\n"
-	.string "worry about! Keep it up!\p"
-	.string "And, here! I have a present for you.$"
+Route119_Text_RegisPresentForYou:
+	.string "RÉGIS : Je crois que t'es prêt à\n"
+	.string "chercher des POKéMON n'importe où.\p"
+	.string "Tiens, je vais te donner ça.\n"
+	.string "Essaie voir ce que ça fait.$"
 
-Route119_Text_MayExplainFly:
-	.string "MAY: Use FLY, and your POKéMON will\n"
-	.string "instantly carry you to any town you've\l"
-	.string "already visited.\p"
-	.string "But, to use FLY, you have to get\n"
-	.string "the GYM BADGE from FORTREE CITY.\l"
-	.string "That's important, so don't forget.\p"
-	.string "You should FLY home and visit\n"
-	.string "LITTLEROOT for a change.\p"
-	.string "I bet your mom's worried about you,\n"
-	.string "{PLAYER}{KUN}.\p"
-	.string "Well, let's meet again somewhere!$"
-
-Route119_Text_BrendanIntro:
-	.string "BRENDAN: {PLAYER}! So this is where\n"
-	.string "you've been looking for POKéMON?\p"
-	.string "Let me see how good you got.\n"
-	.string "I'll test you!\p"
-	.string "Now!\n"
-	.string "It's a battle, so battle!$"
-
-Route119_Text_BrendanDefeat:
-	.string "Hmm…\n"
-	.string "You've gotten pretty darn decent.$"
-
-Route119_Text_BrendanIllGiveYouThis:
-	.string "BRENDAN: I'd say you're good enough\n"
-	.string "to search for POKéMON anywhere.\p"
-	.string "Here, I'll give you this.\n"
-	.string "Try it out.$"
-
-Route119_Text_BrendanExplainFly:
-	.string "BRENDAN: Use FLY, and your POKéMON\n"
-	.string "instantly carries you to any town\l"
-	.string "you've already visited.\p"
-	.string "But you need the FORTREE GYM BADGE \n"
-	.string "to do that.\p"
-	.string "Anyway, I have to move along.$"
+Route119_Text_RegisExplainFly:
+	.string "RÉGIS : Avec VOL, ton POKéMON peut\n"
+	.string "t'emmener instantanément dans\l"
+	.string "n'importe quelle ville déjà visitée.\p"
+	.string "Mais il te faut d'abord le BADGE\n"
+	.string "de l'ARÈNE de FORTREE pour ça.\p"
+	.string "Bon, je dois y aller.$"
 
 Route119_Text_ScottWayToGoBeSeeingYou:
 	.string "SCOTT: Hahahah!\n"

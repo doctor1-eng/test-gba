@@ -10,7 +10,7 @@ Route110_OnResume:
 
 Route110_OnTransition:
 	call Custom_EventScript_SetupRegisGfxId
-	call Common_EventScript_SetupRivalOnBikeGfxId
+	call Custom_EventScript_SetupRegisOnBikeGfxId
 	call_if_eq VAR_CYCLING_CHALLENGE_STATE, 1, Route110_EventScript_SaveCyclingMusic
 	end
 

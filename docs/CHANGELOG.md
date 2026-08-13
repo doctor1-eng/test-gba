@@ -697,3 +697,36 @@ avec Bourg Palette (Villageois gros ventre). Il n'est actuellement ciblé par au
 donc ne devrait pas déclencher le bug — mais toute future modification qui ajouterait un mouvement
 scripté sur cet objet devra d'abord vérifier l'absence de collision d'ID local avec les cartes
 connectées (Bourg Palette au sud, Jadielle à l'ouest).
+
+## Session 4 (suite 21) — Combat de rival de la Route 119 (CS Vol) converti en Régis
+
+Suite de l'audit des branches `checkplayergender` May/Brendan commencé en suite 20. Trois occurrences
+supplémentaires identifiées comme du vrai contenu à corriger (pas de simples doublons comme Jadielle) :
+Route 119 (deuxième combat de rival, remise de la CS Vol), la scène de rencontre du rival dans sa
+chambre à Bourg Palette (2F), et un appel post-Ligue à Mossdeep (contenu jamais traduit). Priorité
+donnée à la Route 119, sur consigne de Thomas, contenu actif tôt dans le jeu.
+
+- `Route119_EventScript_RivalEncounter` simplifiée : suppression de la branche
+  `checkplayergender`/`PlayMayMusic`/`PlayBrendanMusic` (musique unique, celle déjà utilisée pour
+  Régis ailleurs), fusion de `BattleMay`/`BattleBrendan` en une seule `Route119_EventScript_BattleRegis`
+- Le `switch VAR_STARTER_MON` (Treecko/Torchic/Mudkip) a été supprimé : cette variable vaut toujours 1
+  (index "Torchic") dans Kanto Saison 1 puisque le starter unique est Pikachu (cf.
+  `LittlerootTown_EventScript_BirchsBag`), les branches Treecko/Mudkip n'étaient donc jamais atteignables
+- Équipe de dresseur reprise telle quelle de `TRAINER_BRENDAN_ROUTE_119_TORCHIC` (Lombre/Slugma/
+  Marshtomp), cohérent avec le choix déjà fait pour le premier combat de rival (Route 103) — pas de
+  rééquilibrage de l'équipe pour cette suite, à revoir si Thomas le juge trop/pas assez difficile
+- 4 textes traduits en français dans la voix déjà établie de Régis (cf. Route 103 : tutoiement, ton
+  compétitif mais jamais malveillant) : intro du combat, texte de défaite, remise de la CS Vol,
+  explication de VOL. La référence à "FORTREE" (arène qui débloque VOL) est laissée telle quelle,
+  cette ville n'a pas encore été renommée dans le projet — hors périmètre de cette suite
+- **Bug annexe trouvé et corrigé en le croisant** : `Common_EventScript_SetupRivalOnBikeGfxId`
+  (graphisme du rival à vélo, utilisé uniquement dans les scènes où il arrive en vélo avant de
+  descendre pour le combat) n'avait jamais été converti en variante Régis fixe, contrairement au
+  graphisme standard (`Custom_EventScript_SetupRegisGfxId`, déjà en place depuis plusieurs suites).
+  Trouvé sur 3 cartes : Route 119, Route 110 (Cycling Road), LavaridgeTown (Arc post-Ligue). Nouvelle
+  fonction `Custom_EventScript_SetupRegisOnBikeGfxId` ajoutée dans `data/scripts/rival_graphics.inc`
+  (réutilise le sprite vélo de Brendan, cohérent avec le sprite debout) et substituée aux 3 endroits
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
+- Reste dans le backlog (non traité cette suite) : la scène de rencontre du rival à Bourg Palette
+  (maison 2F, cutscene complète avec mouvements et PC) et l'appel post-Ligue de Mossdeep (contenu
+  encore en anglais)
