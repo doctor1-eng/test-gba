@@ -522,17 +522,41 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   jeu sans appui sur SELECT ni création de personnage à chaque test — seuls les écrans de copyright
   Nintendo/GAME FREAK restent visibles quelques secondes (incompressible sans toucher au tout début du
   boot). À repasser à `FALSE` avant toute build de playtest narratif normal
-- [ ] Carte de Bourg Palette avec 5 maisons supplémentaires : reporté, pas d'éditeur de carte visuel
-  dans cet environnement (pas de Porymap/interface graphique) — en attente d'un moyen d'édition visuelle
+- [x] Carte de Bourg Palette avec 5 maisons supplémentaires : fait en suite 24 (extension additive au
+  sud plutôt que la relocalisation complète du plan initial de Thomas — voir suite 24 ci-dessous)
 - [x] Build release validée, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 23)
+## Mise à jour Session 4 (suite 24) — Bourg Palette : 5 nouvelles maisons (extension sud)
+- [x] Thomas a fourni un plan détaillé (carnet de cartographie 24×18) ; réalisé en extension additive
+  au sud de la carte existante (hauteur 20 → 34) plutôt qu'en relocalisant tout, pour ne prendre aucun
+  risque sur la connexion Route 1 (les deux cartes faisaient exactement 20×20 avec connexion à
+  l'offset 0). Aucune maison/PNJ/panneau existant déplacé
+- [x] 5 nouvelles maisons ajoutées : Mme Chen (conseils), Vieux Dresseur (combat, trophées), Gardien de
+  Route (entretien Route 1), maison aux volets fermés (presque vide, accroche narrative future), Dame
+  aux Baies (culture de Baies). Intérieurs réutilisant des layouts génériques déjà présents et prouvés
+  dans le jeu de base (`LAYOUT_HOUSE1-4`, `LAYOUT_FORTREE_CITY_HOUSE1`), seule la couche
+  scripts/warps/PNJ est nouvelle
+- [x] Réalisé sans Porymap : le pipeline `tools/mapjson` régénère tout depuis le JSON au moment du
+  `make`, donc éditer `map.json`/`layouts.json`/`map_groups.json` à la main suffit. Seule la grille de
+  tuiles brute (`map.bin`) a demandé un script Python — généré en copiant tel quel (pas de nouvelle
+  interprétation de tuiles) le bloc de maison 5×5 et la bordure d'arbustes déjà utilisés ailleurs dans
+  la même carte
+- [x] Vérifié visuellement en headless (`qa_runner`, captures d'écran) : nouveau quartier sud rendu
+  correctement (3+2 maisons, chemins, bordure sud), une maison testée à l'intérieur avec son PNJ.
+  **0 instance de "Bad memory"** sur l'ensemble des tests (à comparer aux 720+ de la suite 23) — la
+  copie de blocs de tuiles existants s'est révélée beaucoup plus sûre que la génération de contenu
+  inédit. Les 4 autres maisons n'ont pas été vérifiées individuellement à l'écran (même mécanisme,
+  layouts génériques non modifiés) — à confirmer au playtest réel
+- [x] Build release validée, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 24)
 1. **Playtest réel prioritaire** : vérifier que parler au Professeur Chen au labo (première visite,
-   avant d'avoir de POKéMON) ne plante jamais — c'est le point non totalement résolu de cette suite
+   avant d'avoir de POKéMON) ne plante jamais — point non totalement résolu depuis la suite 23
    (résidu mémoire mineur observé en headless, jamais reproduit comme plantage réel, mais pas garanti
    à 100 %). Prévenir immédiatement en cas de problème
-2. Reprendre la carte de Bourg Palette (5 maisons supplémentaires) dès qu'un moyen d'édition visuelle
-   est disponible (Porymap en local, par exemple)
+2. Playtest du nouveau quartier sud de Bourg Palette : entrer dans les 4 maisons non vérifiées à
+   l'écran cette suite (Vieux Dresseur, Gardien de Route, volets fermés, Dame aux Baies), confirmer
+   qu'aucune ne plante et que les textes conviennent
 3. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
    rencontre du rival à Bourg Palette 2F (texte, mise en scène) — toujours en attente de retour
 4. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,

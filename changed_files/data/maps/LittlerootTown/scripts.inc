@@ -881,3 +881,39 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+@ Kanto Saison 1 : panneaux des 5 nouvelles maisons du quartier sud de Bourg Palette (cf. CHANGELOG).
+LittlerootTown_EventScript_MmeChenHouseSign::
+	msgbox LittlerootTown_Text_MmeChenHouseSign, MSGBOX_SIGN
+	end
+
+LittlerootTown_EventScript_VieuxDresseurHouseSign::
+	msgbox LittlerootTown_Text_VieuxDresseurHouseSign, MSGBOX_SIGN
+	end
+
+LittlerootTown_EventScript_GardienRouteHouseSign::
+	msgbox LittlerootTown_Text_GardienRouteHouseSign, MSGBOX_SIGN
+	end
+
+LittlerootTown_EventScript_VoletsFermesHouseSign::
+	msgbox LittlerootTown_Text_VoletsFermesHouseSign, MSGBOX_SIGN
+	end
+
+LittlerootTown_EventScript_DameBaiesHouseSign::
+	msgbox LittlerootTown_Text_DameBaiesHouseSign, MSGBOX_SIGN
+	end
+
+LittlerootTown_Text_MmeChenHouseSign:
+	.string "MAISON DE MME CHEN$"
+
+LittlerootTown_Text_VieuxDresseurHouseSign:
+	.string "MAISON DU VIEUX DRESSEUR$"
+
+LittlerootTown_Text_GardienRouteHouseSign:
+	.string "MAISON DU GARDIEN DE ROUTE$"
+
+LittlerootTown_Text_VoletsFermesHouseSign:
+	.string "??? (volets fermés)$"
+
+LittlerootTown_Text_DameBaiesHouseSign:
+	.string "MAISON DE LA DAME AUX BAIES$"
+

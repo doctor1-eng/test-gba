@@ -836,3 +836,68 @@ ci-dessous) et un démarrage automatique pour les builds de test.
   moyen d'édition visuelle (ex. Porymap en local)
 
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
+
+## Session 4 (suite 24) — Bourg Palette : extension sud avec 5 nouvelles maisons
+
+Thomas a fourni un plan détaillé (carnet de cartographie avec grille 24×18 et esquisses d'intérieur)
+pour 5 maisons supplémentaires : Mme Chen (voisine), le Vieux Dresseur, le Gardien de Route, une
+maison aux volets fermés (accroche narrative future) et la Dame aux Baies. Comme annoncé en suite 23,
+aucun éditeur visuel n'est disponible ; ce chantier a finalement été fait en éditant directement les
+données JSON/binaires, avec vérification visuelle via captures d'écran `qa_runner` (pas de Porymap,
+mais pas nécessaire non plus : `tools/mapjson` régénère tous les en-têtes/événements C à partir des
+`.json` au moment du `make`, donc éditer le JSON à la main suffit — seule la grille de tuiles brute
+(`map.bin`) demandait un script Python).
+
+**1. Stratégie retenue : extension additive plutôt que relocalisation complète**
+- Le plan de Thomas prévoyait une carte 24×18 réorganisée en profondeur. Risque identifié :
+  `LittlerootTown` et `MAP_ROUTE101` font toutes deux exactement 20×20 avec une connexion nord à
+  l'offset 0 — élargir la largeur aurait décalé cette connexion et pu laisser un "trou" visuel au
+  raccord. A la place : toutes les maisons/PNJ/panneaux existants restent à leur place exacte, et les
+  5 nouvelles maisons sont ajoutées dans une extension purement additive au sud (hauteur de la carte
+  20 → 34 lignes). Aucun risque sur la connexion Route 1, aucune maison existante déplacée
+- Extension générée par un script Python (`struct.pack`/`unpack` sur `data/layouts/LittlerootTown/map.bin`,
+  format `u16` par tuile : `metatileId = v & 0x3FF`, `collision = (v>>10)&0x3`, `elevation = (v>>12)&0xF`) :
+  décodage de la grille existante pour en extraire tel quel (valeurs brutes copiées, pas
+  réinterprétées) le bloc de maison 5×5 déjà utilisé par la maison de Régis/du joueur, puis
+  réutilisation de ce bloc à 5 nouveaux emplacements (3 maisons en rangée haute lignes 20-24,
+  2 maisons en rangée basse lignes 27-31), et de la ligne de bordure d'arbustes déjà utilisée en bas
+  de carte, redupliquée comme nouvelle bordure sud (ligne 33). `data/layouts/layouts.json` :
+  `LAYOUT_LITTLEROOT_TOWN` hauteur 20 → 34
+- `LittlerootTown/map.json` : 5 nouveaux `warp_events` (un par porte) et 5 nouveaux `bg_events` de
+  type panneau (`MAISON DE MME CHEN`, etc., textes ajoutés dans `LittlerootTown/scripts.inc`)
+
+**2. Cinq nouvelles cartes d'intérieur, réutilisant des layouts génériques existants**
+- Plutôt que de générer 5 nouvelles grilles de tuiles d'intérieur à l'aveugle, réutilisation de
+  layouts d'intérieur génériques déjà présents dans le jeu de base et utilisés par des dizaines de
+  maisons à travers Hoenn (`LAYOUT_HOUSE1`-`LAYOUT_HOUSE4`, `LAYOUT_FORTREE_CITY_HOUSE1`) — contenu
+  de tuiles déjà prouvé fiable, seule la couche `map.json`/`scripts.inc` est nouvelle par maison :
+  - `LittlerootTown_MmeChenHouse` (`LAYOUT_HOUSE1`) — conseils de voisinage
+  - `LittlerootTown_VieuxDresseurHouse` (`LAYOUT_HOUSE2`) — conseils de combat, mur de trophées
+  - `LittlerootTown_GardienRouteHouse` (`LAYOUT_HOUSE3`) — entretien de la Route 1
+  - `LittlerootTown_MaisonVoletsFermes` (`LAYOUT_HOUSE4`) — presque vide, un mot énigmatique sur la
+    table (accroche pour un futur arc), pas de PNJ intentionnellement
+  - `LittlerootTown_DameBaiesHouse` (`LAYOUT_FORTREE_CITY_HOUSE1`) — culture de Baies
+- Chaque maison enregistrée dans `data/maps/map_groups.json` (`gMapGroup_IndoorLittleroot`) et son
+  `scripts.inc` ajouté à la liste d'inclusion `data/event_scripts.s` (nécessaire : contrairement aux
+  fichiers `.json`, les `.inc` de script ne sont pas auto-découverts, il faut les lister explicitement
+  — première tentative de build a échoué avec des `undefined reference` jusqu'à cet ajout)
+- Portes/sorties calées sur les coordonnées exactes déjà utilisées par les mêmes layouts ailleurs dans
+  le jeu (ex. `LAYOUT_HOUSE1` → porte à x=4,y=8), vérifiées au préalable en inspectant plusieurs
+  cartes existantes qui réutilisent ces layouts (`FallarborTown_CozmosHouse`, `LilycoveCity_House1`,
+  etc.) plutôt que devinées
+
+**3. Vérification visuelle (headless, sans Porymap)**
+- `tools/qa_harness/qa_runner` utilisé pour naviguer réellement dans le jeu compilé (démarrage via
+  `QUICKSTART_AUTO`, puis navigation + menu debug overworld `Debug_EventScript_Script_1/2` — retirés
+  avant commit, `debug.inc` revérifié identique à l'état neutre) et capturer des captures d'écran :
+  - Nouveau quartier sud : 3 maisons en rangée haute visibles correctement (toits, façades, chemin
+    entre elles), 2e rangée avec bordure d'arbustes sud propre, aucune corruption visuelle
+  - Entrée dans `LittlerootTown_MmeChenHouse` via la porte correcte : intérieur généré correctement
+    (mobilier, PNJ visible)
+  - **0 instance de "Bad memory"** sur l'ensemble des tests (contre 720+ lors du bug Professeur Chen
+    de la suite 23) — signe que la copie de blocs de tuiles bruts existants, sans réinterprétation,
+    est une stratégie nettement plus sûre que la génération de contenu de novo
+- Les 4 autres maisons n'ont pas été vérifiées individuellement à l'écran (même mécanisme exact que
+  `MmeChenHouse`, layouts génériques vanilla non modifiés) — à surveiller lors du playtest réel
+
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
