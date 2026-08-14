@@ -55,8 +55,8 @@
 #define FLAG_TEAM_ROCKET_ROUTE1_DEFEATED    0x21 // Custom : rencontre Team Rocket (Arc 1) résolue définitivement
 #define FLAG_HIDE_ROUTE_2_ONDINE_ENCOUNTER    0x22 // Custom : première rencontre Ondine (Arc 2/3) déjà vue
 #define FLAG_ONDINE_ROUTE2_DEFEATED    0x23 // Custom : première rencontre Ondine résolue, rivale récurrente
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_MT_SELENITE_FOSSIL_TAKEN    0x24 // Custom : un fossile du Mont Sélénite a déjà été pris (les deux gisements partagent ce flag)
+#define FLAG_MT_SELENITE_RARE_MON_TAKEN    0x25 // Custom : le Pokémon rare de la zone secrète du Mont Sélénite a déjà été pris
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag

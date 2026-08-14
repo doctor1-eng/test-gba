@@ -1098,3 +1098,70 @@ Thomas a signalé qu'à la sortie de Bourg Palette, sur la Route 1, seul Miaouss
   joueur
 
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
+
+## Session 4 (suite 29) — Nouvelle zone : le Mont Sélénite
+
+Thomas a fourni un carnet de cartographie complet (plan HTML) pour une nouvelle zone montagneuse à
+système souterrain sur 3 niveaux, à construire entre Argenta et Azuria. Demande explicite :
+implémenter la carte complète depuis le plan, avec une sortie nord d'Argenta, en construisant les 4
+cartes de zéro (plutôt que de réutiliser des cartes existantes) pour rester fidèle au plan fourni.
+
+**1. Clarification géographique préalable**
+- Vérifié que dans ce hack, `PetalburgCity` = Argenta (1ère arène) et `RustboroCity` = Azuria (2e
+  arène, Ondine) — l'inverse de ce qu'on pourrait supposer par analogie avec les noms Hoenn/Kanto
+- `Route104` relie déjà Argenta et Azuria directement et s'appelle "ROUTE 4" en jeu — cohérent avec le
+  Kanto canon (Argenta → Mont Sélénite → Route 4 → Azuria)
+- Argenta n'avait alors aucune sortie nord : une nouvelle connexion `up` a été ajoutée sur
+  `PetalburgCity/map.json`, avec une brèche de 3 cases percée dans la bordure nord de la carte (zone
+  déjà dégagée, place déjà ouverte juste en dessous, aucun bâtiment perturbé)
+
+**2. Quatre nouvelles cartes construites depuis le plan HTML**
+- `MtSelenite` (extérieur, 26×20) : re-génération en Python du même algorithme de tracé
+  (`carve`/`blob`) que le JavaScript du plan fourni, avec une palette de tuiles sûres extraite de
+  `Route115` (route montagneuse déjà existante au nord d'Azuria) : herbe, sentier, blocs rocheux,
+  entrées de grotte — toutes des tuiles déjà utilisées ailleurs dans ce hack ou dans le jeu de base,
+  aucune tuile inédite
+- `MtSelenite_1F`/`_B1F`/`_B2F` (tunnels, salles, cavernes, 26×22/28×22/28×24) : même principe de
+  génération, palette extraite de `GraniteCave` (sol, parois, variantes décoratives)
+- Tentative initiale de réutiliser le tileset `cave_frlg` (rendu Kanto authentique, choix initial de
+  Thomas) — **abandonnée** : ce tileset et les layouts au format `frlg` ne sont compilés que pour un
+  build FireRed/LeafGreen (`MAP_VERSION=firered`), pas pour ce hack qui reste un build Emerald sous le
+  capot malgré son habillage Kanto. Remplacé par le tileset `cave` standard (Granite Cave/Victory
+  Road), seul choix réellement disponible dans ce build
+- Rivière souterraine et cristaux du plan simplifiés en variantes de sol décoratives praticables
+  (aucune tuile "eau" ou "cristal" fiable disponible dans ce tileset) — simplification assumée, comme
+  pour la mare de Bourg Palette en suite 27
+
+**3. Contenu**
+- 2 fossiles au choix exclusif (FOSSILE DÔME / FOSSILE SPIRALE, un seul flag partagé) dans les
+  cavernes profondes, sur le modèle du script `MtMoon_B2F_Frlg` déjà présent dans le jeu de base
+- Une zone secrète accessible par un chemin détourné, avec un combat sauvage statique unique
+  (Mélofée) sur le modèle des combats statiques déjà présents (`AquaHideout_B1F`)
+- Tables de rencontres sauvages ajoutées pour les 4 cartes (Nosferapti/Racaillou/Coco en surface et
+  dans les niveaux supérieurs, Ténéfix/Grolem en profondeur)
+- Panneau d'entrée ("MONT SÉLÉNITE ↓ ARGENTA")
+
+**4. Câblage complet**
+- Argenta → Mont Sélénite (nouvelle connexion `up`) → 2 entrées de grotte menant au niveau 1 → 2
+  échelles vers le niveau 2 → 2 échelles vers le niveau 3 → sortie nord vers un nouveau point d'entrée
+  sur `Route104` (déjà reliée à Azuria) — toutes les références croisées entre cartes
+  (`dest_map`/`dest_warp_id`) vérifiées programmatiquement avant compilation
+- Nouvelle section `MAPSEC_MT_SELENITE` ajoutée à la mini-carte (région Hoenn active, pas la carte
+  Kanto FRLG dormante)
+
+**5. Bug trouvé et corrigé pendant les tests**
+- Les deux entrées de grotte de la carte extérieure étaient placées puis immédiatement écrasées par
+  les blobs décoratifs de falaise générés après coup (même défaut d'ordre que dans l'algorithme
+  JavaScript d'origine) — corrigé en générant les blobs décoratifs avant les marqueurs d'entrée
+
+**6. Vérification headless**
+- **0 instance de "Bad memory"** sur l'ensemble des tests (extérieur, entrée en grotte, niveau
+  profond, fossiles visibles et distincts)
+- Carte extérieure et niveau profond accessibles et rendus correctement en jeu, connexion Argenta ⇄
+  Mont Sélénite traversée dans les deux sens sans plantage ni décalage visuel
+- Note méthodologique supplémentaire : la navigation dans le sous-menu "Group" de l'utilitaire de
+  warp de débogage utilise les touches gauche/droite pour changer le pas d'incrémentation (1/10/100)
+  et haut/bas pour appliquer ce pas — piège à éviter pour les futurs tests headless de cartes situées
+  dans des groupes autres que le groupe 0
+
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,03 %)

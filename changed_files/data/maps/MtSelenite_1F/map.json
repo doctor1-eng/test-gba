@@ -1,0 +1,50 @@
+{
+    "id": "MAP_MT_SELENITE_1F",
+    "name": "MtSelenite_1F",
+    "layout": "LAYOUT_MT_SELENITE_1F",
+    "music": "MUS_RG_MT_MOON",
+    "region": "REGION_HOENN",
+    "region_map_section": "MAPSEC_MT_SELENITE",
+    "requires_flash": false,
+    "weather": "WEATHER_NONE",
+    "map_type": "MAP_TYPE_UNDERGROUND",
+    "allow_cycling": false,
+    "allow_escaping": true,
+    "allow_running": true,
+    "show_map_name": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": null,
+    "object_events": [],
+    "warp_events": [
+        {
+            "x": 2,
+            "y": 1,
+            "elevation": 3,
+            "dest_map": "MAP_MT_SELENITE",
+            "dest_warp_id": "0"
+        },
+        {
+            "x": 16,
+            "y": 7,
+            "elevation": 3,
+            "dest_map": "MAP_MT_SELENITE",
+            "dest_warp_id": "1"
+        },
+        {
+            "x": 9,
+            "y": 19,
+            "elevation": 3,
+            "dest_map": "MAP_MT_SELENITE_B1F",
+            "dest_warp_id": "0"
+        },
+        {
+            "x": 24,
+            "y": 10,
+            "elevation": 3,
+            "dest_map": "MAP_MT_SELENITE_B1F",
+            "dest_warp_id": "1"
+        }
+    ],
+    "coord_events": [],
+    "bg_events": []
+}

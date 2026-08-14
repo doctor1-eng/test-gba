@@ -9323,6 +9323,56 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_MT_SELENITE",
+      "name": "MtSelenite_Layout",
+      "width": 26,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/MtSelenite/border.bin",
+      "blockdata_filepath": "data/layouts/MtSelenite/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_MT_SELENITE_1F",
+      "name": "MtSelenite_1F_Layout",
+      "width": 26,
+      "height": 22,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtSelenite_1F/border.bin",
+      "blockdata_filepath": "data/layouts/MtSelenite_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_MT_SELENITE_B1F",
+      "name": "MtSelenite_B1F_Layout",
+      "width": 28,
+      "height": 22,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtSelenite_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/MtSelenite_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_MT_SELENITE_B2F",
+      "name": "MtSelenite_B2F_Layout",
+      "width": 28,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtSelenite_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/MtSelenite_B2F/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

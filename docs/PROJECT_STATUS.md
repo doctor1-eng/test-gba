@@ -615,20 +615,41 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   déclenché avec succès par interaction directe (texte de devise Team Rocket affiché correctement)
 - [x] Build release validée, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 28)
-1. **Playtest réel prioritaire** : confirmer que Jessie/James/Miaouss s'affichent et s'enchaînent bien
-   en jeu réel sur la Route 1 (pas seulement en isolation headless), et que le combat de James se
-   lance normalement
-2. Confirmer la nouvelle disposition de Bourg Palette dans son ensemble (déplacements, tous les warps,
+## Mise à jour Session 4 (suite 29) — Nouvelle zone : le Mont Sélénite
+- [x] Nouvelle zone montagneuse à 3 niveaux souterrains construite depuis le plan HTML fourni par
+  Thomas, insérée entre Argenta et Azuria : `MtSelenite` (extérieur, 26×20), `MtSelenite_1F` (tunnels,
+  26×22), `MtSelenite_B1F` (salles, 28×22), `MtSelenite_B2F` (cavernes, 28×24)
+- [x] Nouvelle connexion nord depuis Argenta (`PetalburgCity`, qui n'avait aucune sortie nord),
+  câblage complet des 4 cartes entre elles, sortie nord du niveau profond vers `Route104` (déjà reliée
+  à Azuria) ; nouvelle entrée `MAPSEC_MT_SELENITE` sur la mini-carte
+- [x] Contenu : 2 fossiles au choix exclusif, une zone secrète avec un Pokémon rare (Mélofée), tables
+  de rencontres sauvages sur les 4 cartes, panneau d'entrée
+- [x] Tileset `cave_frlg` initialement prévu abandonné en cours de route : incompatible avec ce build
+  Emerald (réservé aux builds FireRed/LeafGreen) — remplacé par le tileset `cave` standard
+  (Granite Cave/Victory Road), seul disponible ici
+- [x] Bug trouvé et corrigé en test headless : les 2 entrées de grotte de la carte extérieure étaient
+  écrasées par les blobs décoratifs générés après coup (ordre hérité du plan JS d'origine)
+- [x] Vérifié en headless : 0 plantage, carte extérieure et niveau profond accessibles et rendus
+  correctement, connexion Argenta ⇄ Mont Sélénite traversée dans les deux sens
+- [x] Build release validée, ROM 79,03 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 29)
+1. **Playtest réel prioritaire** : parcourir le Mont Sélénite en jeu réel de bout en bout (les 2
+   entrées, les 4 échelles inter-niveaux, les 2 fossiles, la zone secrète, la sortie vers la Route 4) —
+   seule une vérification headless partielle a été faite (navigation complète bloquée par les limites
+   du menu de débogage pour les cartes hors groupe 0)
+2. Confirmer que Jessie/James/Miaouss s'affichent et s'enchaînent bien en jeu réel sur la Route 1, et
+   que le combat de James se lance normalement
+3. Confirmer la nouvelle disposition de Bourg Palette dans son ensemble (déplacements, tous les warps,
    scène des Chaussures de Course jusqu'au bout), le Professeur Chen au labo, et l'absence de blocage
    de la Jumelle à la sortie nord
-3. Entrer dans les 5 nouvelles maisons à leurs nouvelles positions (Mme Chen, Vieux Dresseur, Gardien
+4. Entrer dans les 5 nouvelles maisons à leurs nouvelles positions (Mme Chen, Vieux Dresseur, Gardien
    de Route, volets fermés, Dame aux Baies) pour confirmer qu'aucune ne plante
-4. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
+5. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
    rencontre du rival à Bourg Palette 2F (texte, mise en scène) — toujours en attente de retour
-5. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
+6. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
    non prioritaire, contenu post-Ligue)
-6. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
+7. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
    utilisés près d'autres connexions de cartes ou d'autres PNJ du jeu (le bug de suite 20/23/25/26/28
    n'est pas spécifique à Bourg Palette/Route 1/Chen/Rocket — pourrait resurgir ailleurs)
-7. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
+8. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
