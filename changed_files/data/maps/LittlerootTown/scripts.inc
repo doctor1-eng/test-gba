@@ -171,104 +171,19 @@ LittlerootTown_EventScript_GoodLuck::
 	release
 	end
 
-LittlerootTown_EventScript_NeedPokemonTriggerLeft::
-	lockall
-	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinApproachPlayerLeft
-	waitmovement 0
-	call LittlerootTown_EventScript_DangerousWithoutPokemon
-	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinReturnLeft
-	waitmovement 0
-	releaseall
-	end
-
-LittlerootTown_EventScript_DangerousWithoutPokemon::
-	msgbox LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinPushPlayerFromRoute
-	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PushPlayerBackFromRoute
-	waitmovement 0
-	msgbox LittlerootTown_Text_DangerousIfYouDontHavePokemon, MSGBOX_DEFAULT
-	closemessage
-	return
-
-LittlerootTown_Movement_TwinApproachPlayerLeft:
-	face_right
-	delay_8
-	disable_jump_landing_ground_effect
-	jump_in_place_right
-	delay_8
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	walk_fast_up
-	walk_fast_left
-	face_down
-	step_end
-
-LittlerootTown_Movement_TwinPushPlayerFromRoute:
-	walk_down
-	step_end
-
-LittlerootTown_Movement_TwinReturnLeft:
-	walk_right
-	walk_down
-	walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_in_place_faster_down
-	step_end
-
-LittlerootTown_Movement_PushPlayerBackFromRoute:
-	lock_facing_direction
-	walk_down
-	unlock_facing_direction
-	step_end
-
-LittlerootTown_EventScript_NeedPokemonTriggerRight::
-	lockall
-	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinApproachPlayerRight
-	waitmovement 0
-	call LittlerootTown_EventScript_DangerousWithoutPokemon
-	applymovement LOCALID_LITTLEROOT_TWIN, LittlerootTown_Movement_TwinReturnRight
-	waitmovement 0
-	releaseall
-	end
-
-LittlerootTown_Movement_TwinApproachPlayerRight:
-	face_right
-	delay_8
-	disable_jump_landing_ground_effect
-	jump_in_place_right
-	delay_8
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_up
-	walk_fast_up
-	walk_fast_right
-	face_down
-	step_end
-
-LittlerootTown_Movement_TwinReturnRight:
-	walk_left
-	walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_in_place_faster_down
-	step_end
-
 @ Kanto Saison 1 : la scène de sauvetage du Professeur Chen sur la Route 1 (et la remise du PIKACHU
 @ qui suivait) a été entièrement supprimée sur consigne de Thomas — le joueur reçoit maintenant
 @ PIKACHU directement en discutant avec le Professeur Chen dans son laboratoire
 @ (LittlerootTown_ProfessorBirchsLab_EventScript_GiveDirectPikachu, cf. CHANGELOG). Cette scène avait
 @ été déplacée ici en suite 20 pour contourner un bug moteur dans applymovement (cf. commit précédent
 @ pour le détail), mais le nouveau design l'élimine complètement au lieu de le contourner.
+
+@ Kanto Saison 1 (suite 26) : sur nouvelle demande de Thomas, la Jumelle (Twin) ne bloque plus jamais
+@ la sortie nord vers la Route 1 — l'ancien verrou (LittlerootTown_EventScript_NeedPokemonTrigger{Left,
+@ Right}, qui la faisait accourir pour repousser le joueur tant qu'il n'avait pas de POKéMON) et toute
+@ sa machinerie de déplacement associée ont été entièrement supprimés, ainsi que les coord_events qui
+@ les déclenchaient dans map.json. Twin reste présente ailleurs en ville (PNJ normal, cf. object_events)
+@ mais ne bloque plus aucun passage.
 
 LittlerootTown_EventScript_TownSign::
 	msgbox LittlerootTown_Text_TownSign, MSGBOX_SIGN
@@ -843,10 +758,6 @@ LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
 	.string "Tu devrais d'abord aller voir le\n"
 	.string "Professeur Chen à son labo, il\l"
 	.string "pourra sûrement t'aider.$"
-
-LittlerootTown_Text_DangerousIfYouDontHavePokemon:
-	.string "C'est dangereux si tu n'as pas\n"
-	.string "encore ton propre POKéMON.$"
 
 LittlerootTown_Text_YouSavedBirch:
 	.string "Alors, PIKACHU te plaît ?\p"

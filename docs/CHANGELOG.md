@@ -955,3 +955,52 @@ ne suffit pas à valider qu'une fonctionnalité marche réellement ; il faut aus
 n'était pas mineur, juste mal caractérisé.
 
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
+
+## Session 4 (suite 26) — Retour de test négatif : le correctif de suite 25 ne marchait toujours pas
+
+Retour de test de Thomas sur la build de suite 25 : "toujours pas de remise de pikachu", "tu n'as
+toujours pas supprimer la fillette à la sortie du village", et "la map de bourg palette n'a rien à voir
+avec le fichier html que je t'ai fourni".
+
+**1. PIKACHU toujours pas remis : le déclencheur par coord_event n'était pas assez robuste**
+- Le correctif de suite 25 (message déclenché par un `coord_event` une case après l'entrée de la
+  pièce) fonctionnait en test headless, mais pas de façon fiable en jeu réel. Hypothèse la plus
+  probable : le Professeur Chen étant invisible (aucun sprite, cf. suite 25), un joueur qui entre,
+  ne voit personne, et ressort directement sans avoir marché précisément sur la case du trigger ne
+  déclenche jamais rien
+- Tentative intermédiaire (déclenchement direct depuis `OnTransition`, avant même la fin du fondu
+  d'entrée) : **provoque un écran figé en test headless** (`lockall`+`msgbox` trop tôt dans la
+  transition) — immédiatement abandonnée avant d'être livrée, aurait été un bug bien pire que celui
+  qu'elle cherchait à corriger
+- **Solution retenue** : réutilisation du mécanisme `MAP_SCRIPT_ON_FRAME_TABLE`/`map_script_2`, déjà
+  utilisé de façon fiable par ce même fichier pour `GiveStarterEvent`/`GivePokedexEvent` (contenu
+  post-Ligue) — vérifie en continu, à chaque frame où le joueur a le contrôle (donc jamais pendant une
+  transition), l'état de `VAR_DEX_UPGRADE_JOHTO_STARTER_STATE` (reste à 0 tout le début du jeu) et
+  déclenche la remise du PIKACHU dès que le joueur a le contrôle dans la pièce, sans dépendre d'un
+  déplacement précis. Un garde-fou interne (`goto_if_set FLAG_SYS_POKEMON_GET`) empêche toute
+  répétition une fois le POKéMON reçu
+- Revérifié en headless avec une entrée 100 % naturelle par la porte (aucun raccourci de script) :
+  le dialogue s'affiche dès l'entrée dans la pièce sans qu'aucun pas supplémentaire ne soit
+  nécessaire, confirmé jusqu'à mi-parcours du texte de remise, **0 instance de "Bad memory"**
+
+**2. La Jumelle bloquait toujours la sortie nord : supprimée cette fois pour de bon**
+- Sur nouvelle demande explicite de Thomas, l'ancien verrou (`LittlerootTown_EventScript_
+  NeedPokemonTrigger{Left,Right}`, qui faisait accourir la Jumelle pour repousser le joueur tant qu'il
+  n'avait pas de POKéMON) est entièrement supprimé : les 4 `coord_events` qui le déclenchaient dans
+  `map.json`, les deux scripts, les 6 blocs de mouvement associés, et le texte devenu orphelin
+  (`Text_DangerousIfYouDontHavePokemon`). La Jumelle reste présente ailleurs en ville comme PNJ normal
+  mais ne bloque plus aucun passage, avec ou sans POKéMON
+- Vérifié en headless : un joueur sans aucun POKéMON peut désormais marcher directement de Bourg
+  Palette jusqu'à la Route 1 sans aucune interruption
+
+**3. Carte de Bourg Palette : décalage avec le plan HTML — question ouverte, pas encore traitée**
+- Thomas signale que le nouveau quartier sud (suite 24) ne correspond pas à son plan détaillé fourni
+  en carnet de cartographie HTML (grille 24×18, bâtiments repositionnés). C'est exact et assumé : le
+  choix de suite 24 avait été d'étendre la carte existante vers le sud plutôt que de relocaliser tous
+  les bâtiments selon le plan, pour ne pas risquer de désaligner la connexion vers la Route 1 (les
+  deux cartes faisaient exactement 20×20). Ce choix n'a pas été validé explicitement par Thomas avant
+  d'être implémenté. **Non retraité cette suite** — nécessite de clarifier avec Thomas s'il veut une
+  refonte plus fidèle au plan original (avec le risque technique expliqué) ou des ajustements ciblés
+  sur la disposition actuelle
+
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)

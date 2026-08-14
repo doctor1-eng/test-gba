@@ -34,20 +34,24 @@ LittlerootTown_ProfessorBirchsLab_OnTransition:
 @ s'approcher de sa position déclenche une corruption mémoire massive (600+ occurrences, signature
 @ identique au tout premier bug découvert en suite 23). Cet objet (LOCALID_BIRCHS_LAB_BIRCH) est
 @ manifestement instable tant que le joueur ne l'a pas atteint par les chemins vanilla habituels
-@ (plus tard dans le jeu). Solution retenue : la remise du PIKACHU se déclenche automatiquement dès
-@ l'entrée dans la pièce, sans jamais faire apparaître le sprite de Chen pour cette interaction — cf.
-@ LittlerootTown_ProfessorBirchsLab_EventScript_TriggerGivePikachu, appelée par coord_event
-LittlerootTown_ProfessorBirchsLab_EventScript_ShowBirchBeforeStarter::
-	goto_if_set FLAG_SYS_POKEMON_GET, LittlerootTown_ProfessorBirchsLab_EventScript_Ret
-	addobject LOCALID_BIRCHS_LAB_BIRCH
-	end
-
+@ (plus tard dans le jeu).
+@ Deux mécanismes de déclenchement essayés et abandonnés en suite 26 :
+@ - coord_event à l'entrée : fonctionnait en test headless mais pas fiable en jeu réel (retour de
+@   test) — sans doute parce qu'un joueur qui ne voit personne dans la pièce (Chen invisible) peut très
+@   bien ressortir sans jamais marcher sur la case du trigger
+@ - déclenchement direct depuis OnTransition (`lockall`+`msgbox` avant la fin du fondu d'entrée) :
+@   provoque un écran noir bloqué en test headless (jeu figé) — dangereux, à ne jamais refaire
+@ Solution retenue : le même mécanisme `OnFrame`/`map_script_2` que ce fichier utilise déjà de façon
+@ fiable pour `GiveStarterEvent`/`GivePokedexEvent` (contenu post-Ligue) — vérifie en continu à chaque
+@ frame que la carte est complètement chargée et que le joueur a le contrôle, donc jamais de bug de
+@ timing pendant une transition. Se déclenche dès que le joueur a le contrôle dans la pièce, sans
+@ dépendre d'un déplacement précis
 LittlerootTown_ProfessorBirchsLab_EventScript_TriggerGivePikachu::
-	goto_if_set FLAG_SYS_POKEMON_GET, LittlerootTown_ProfessorBirchsLab_EventScript_Ret
+	goto_if_set FLAG_SYS_POKEMON_GET, LittlerootTown_ProfessorBirchsLab_EventScript_TriggerGivePikachuDone
 	lockall
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveDirectPikachu
 
-LittlerootTown_ProfessorBirchsLab_EventScript_Ret::
+LittlerootTown_ProfessorBirchsLab_EventScript_TriggerGivePikachuDone::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForJohtoStarter::
@@ -119,6 +123,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
 	end
 
 LittlerootTown_ProfessorBirchsLab_OnFrame:
+	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, LittlerootTown_ProfessorBirchsLab_EventScript_TriggerGivePikachu
 	map_script_2 VAR_BIRCH_LAB_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent
 	map_script_2 VAR_BIRCH_LAB_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedexEvent
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_UpgradeToNationalDex

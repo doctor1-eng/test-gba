@@ -564,19 +564,40 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   l'écran par capture, `givemon`/`setflag`/`setvar` confirmés exécutés
 - [x] Build release validée, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 25)
-1. **Playtest réel prioritaire** : confirmer que le Professeur Chen donne bien PIKACHU dès la première
-   visite au labo, sans plantage, et que la suite (surnom, "aller voir le rival") se déroule
-   normalement jusqu'au bout (testé en headless jusqu'à l'entrée dans `GiveStarterEvent`, mais pas la
-   toute fin de la conversation caractère par caractère)
-2. Playtest du nouveau quartier sud de Bourg Palette : entrer dans les 4 maisons non vérifiées à
+## Mise à jour Session 4 (suite 26) — Retour de test négatif, deux bugs re-corrigés + question ouverte
+- [x] Le correctif de suite 25 (PIKACHU via `coord_event`) ne marchait pas de façon fiable en jeu réel
+  malgré un test headless positif — probablement parce que Chen étant invisible, un joueur pouvait
+  ressortir de la pièce sans avoir marché sur la case exacte du déclencheur. Remplacé par le mécanisme
+  `OnFrame`/`map_script_2` (le même que celui déjà utilisé de façon fiable dans ce fichier pour
+  `GiveStarterEvent`/`GivePokedexEvent`) : se déclenche dès que le joueur a le contrôle dans la pièce,
+  sans dépendre d'un déplacement précis. Une tentative intermédiaire (déclenchement direct depuis
+  `OnTransition`) a été testée et **rejetée** car elle provoquait un écran figé en headless
+- [x] Revérifié avec une entrée 100 % naturelle par la porte (aucun raccourci de script) : dialogue
+  confirmé à l'écran dès l'entrée, 0 plantage
+- [x] La Jumelle ne bloque plus JAMAIS la sortie nord (sur nouvelle demande explicite) : tout l'ancien
+  verrou (coord_events, scripts, mouvements, texte orphelin) supprimé entièrement, pas juste contourné.
+  Vérifié : un joueur sans aucun POKéMON peut marcher directement jusqu'à la Route 1
+- [ ] **Question ouverte, non traitée cette suite** : Thomas signale que le quartier sud de Bourg
+  Palette (suite 24) ne correspond pas à son plan HTML fourni. C'est un choix de conception assumé
+  (extension additive plutôt que relocalisation, pour ne pas risquer la connexion Route 1) qui n'a
+  jamais été validé explicitement avec lui avant implémentation — à clarifier : refonte plus fidèle au
+  plan original (avec le risque technique) ou ajustements ciblés ?
+- [x] Build release validée, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 26)
+1. **Clarifier avec Thomas** l'approche pour la carte de Bourg Palette : refonte fidèle au plan HTML
+   original (24×18, bâtiments repositionnés, risque d'un décalage visuel possible au raccord avec la
+   Route 1) ou conserver l'extension actuelle avec des ajustements ciblés ?
+2. **Playtest réel prioritaire** : confirmer que le Professeur Chen donne bien PIKACHU dès l'entrée au
+   labo (nouveau mécanisme `OnFrame`), et que la Jumelle ne bloque plus jamais la sortie nord
+3. Playtest du nouveau quartier sud de Bourg Palette : entrer dans les 4 maisons non vérifiées à
    l'écran (Vieux Dresseur, Gardien de Route, volets fermés, Dame aux Baies), confirmer qu'aucune ne
    plante et que les textes conviennent
-3. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
+4. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
    rencontre du rival à Bourg Palette 2F (texte, mise en scène) — toujours en attente de retour
-4. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
+5. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
    non prioritaire, contenu post-Ligue)
-5. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
-   utilisés près d'autres connexions de cartes ou d'autres PNJ du jeu (le bug de suite 20/23/25 n'est
-   pas spécifique à Bourg Palette/Route 1/Chen — pourrait resurgir ailleurs)
-6. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
+6. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
+   utilisés près d'autres connexions de cartes ou d'autres PNJ du jeu (le bug de suite 20/23/25/26
+   n'est pas spécifique à Bourg Palette/Route 1/Chen — pourrait resurgir ailleurs)
+7. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
