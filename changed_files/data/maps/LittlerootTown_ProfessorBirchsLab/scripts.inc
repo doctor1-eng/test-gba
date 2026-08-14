@@ -22,25 +22,33 @@ LittlerootTown_ProfessorBirchsLab_MapScripts::
 LittlerootTown_ProfessorBirchsLab_OnTransition:
 	call Custom_EventScript_SetupRegisGfxId
 	call ProfBirch_EventScript_UpdateLocation
-	call LittlerootTown_ProfessorBirchsLab_EventScript_ShowBirchBeforeStarter
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterJohtoStarterLayout
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_SetJohtoStarterLayout
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForJohtoStarter
 	end
 
-@ Kanto Saison 1 : le Professeur Chen doit être visible dès la première visite (avant même que le
-@ joueur ait son PIKACHU), pour la nouvelle remise directe du starter au labo (cf. CHANGELOG). Un
-@ bug moteur non élucidé fait planter le jeu si cet objet est simplement déclaré visible par défaut
-@ dans map.json (`flag: "0"`) ou rendu visible via un clearflag précoce — mais l'ajouter dynamiquement
-@ via addobject, comme le fait déjà le reste de ce fichier pour ses autres apparitions tardives, est
-@ sûr (vérifié en headless, 0 crash contre 720+ avec l'approche flag). D'où ce détour.
+@ Kanto Saison 1 : tentatives abandonnées de rendre le Professeur Chen visible/interactif avant que le
+@ joueur ait son PIKACHU (déclaration visible par défaut dans map.json, `clearflag` précoce, `addobject`
+@ pendant OnTransition, `addobject` via un coord_event à l'entrée de la pièce) : dans TOUS les cas testés
+@ en jeu réel (pas seulement en comptant les plantages), soit Chen n'apparaît jamais à l'écran, soit
+@ s'approcher de sa position déclenche une corruption mémoire massive (600+ occurrences, signature
+@ identique au tout premier bug découvert en suite 23). Cet objet (LOCALID_BIRCHS_LAB_BIRCH) est
+@ manifestement instable tant que le joueur ne l'a pas atteint par les chemins vanilla habituels
+@ (plus tard dans le jeu). Solution retenue : la remise du PIKACHU se déclenche automatiquement dès
+@ l'entrée dans la pièce, sans jamais faire apparaître le sprite de Chen pour cette interaction — cf.
+@ LittlerootTown_ProfessorBirchsLab_EventScript_TriggerGivePikachu, appelée par coord_event
 LittlerootTown_ProfessorBirchsLab_EventScript_ShowBirchBeforeStarter::
 	goto_if_set FLAG_SYS_POKEMON_GET, LittlerootTown_ProfessorBirchsLab_EventScript_Ret
 	addobject LOCALID_BIRCHS_LAB_BIRCH
-	return
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_TriggerGivePikachu::
+	goto_if_set FLAG_SYS_POKEMON_GET, LittlerootTown_ProfessorBirchsLab_EventScript_Ret
+	lockall
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveDirectPikachu
 
 LittlerootTown_ProfessorBirchsLab_EventScript_Ret::
-	return
+	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForJohtoStarter::
 	specialvar VAR_RESULT, HasAllHoennMons

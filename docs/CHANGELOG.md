@@ -901,3 +901,57 @@ mais pas nécessaire non plus : `tools/mapjson` régénère tous les en-têtes/�
   `MmeChenHouse`, layouts génériques vanilla non modifiés) — à surveiller lors du playtest réel
 
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
+
+## Session 4 (suite 25) — Bug critique résolu : le Professeur Chen n'apparaissait pas au labo
+
+Retour de test de Thomas : "Toujours cette petite fille qui bloque le passage" (la Jumelle/Twin
+bloque toujours la sortie nord tant qu'on n'a pas de POKéMON). En creusant : "Comment avoir pikachu au
+labo ? Je ne l'avais pas prit" — le joueur était bien allé au labo, mais le Professeur Chen n'était
+tout simplement jamais apparu pour le lui donner.
+
+**Root cause enfin identifiée** : le résidu "8 instances de Bad memory" documenté en suite 23 comme
+"mineur, jamais reproduit comme plantage réel" avait en fait un effet bien réel — juste invisible dans
+les tests précédents, qui ne vérifiaient que le nombre de plantages en log, jamais si le Professeur
+Chen apparaissait effectivement à l'écran. Un test headless plus poussé cette suite (marche naturelle
+jusqu'au labo + captures d'écran, plutôt qu'un simple comptage de plantages) a montré que :
+- Avec `addobject` déclenché à l'entrée de la pièce (via `OnTransition` en suite 23, ou même via un
+  `coord_event` après le premier pas du joueur, testé cette suite) : Chen n'apparaît jamais à l'écran
+- En marchant vers l'endroit où Chen est censé se trouver (même sans jamais l'avoir vu apparaître) :
+  **plantage massif de 616 instances "Bad memory"**, signature identique au tout premier bug de la
+  suite 23 (720+ instances) — donc le même bug moteur non élucidé, pas un phénomène différent
+- Conclusion : l'objet `LOCALID_BIRCHS_LAB_BIRCH` est fondamentalement instable dans ce labo tant que
+  le joueur ne l'atteint pas par les chemins vanilla habituels (bien plus tard dans le jeu) — aucune
+  variante testée (déclaration statique, `clearflag`, `addobject` à la transition, `addobject` via
+  trigger) ne le rend fiable en avance
+
+**Correctif retenu** : abandon complet de la tentative de rendre Chen visible/interactif avant que le
+joueur ait son POKéMON. La remise de PIKACHU se déclenche maintenant automatiquement dès que le joueur
+fait un pas dans la pièce (nouveaux `coord_events` juste après les deux cases d'entrée, `x=6/7,y=11`),
+sans jamais faire apparaître l'objet de Chen pour cette interaction :
+- Nouvelle fonction `LittlerootTown_ProfessorBirchsLab_EventScript_TriggerGivePikachu` (`lockall` puis
+  `goto GiveDirectPikachu`, sans passer par `addobject`)
+- `LittlerootTown_ProfessorBirchsLab_EventScript_ShowBirchBeforeStarter` conservée mais plus jamais
+  appelée pour ce chemin — l'ancien mécanisme est documenté en commentaire comme non fiable
+- `EventScript_Birch` (script d'interaction directe avec le PNJ) garde son ancienne branche
+  `goto_if_unset FLAG_SYS_POKEMON_GET` en code mort défensif — elle ne peut plus jamais se déclencher
+  puisque Chen n'est plus jamais spawné avant que le joueur ait déjà son PIKACHU, mais elle ne gêne pas
+- Chen ne sera donc plus jamais visible à l'écran pour cette scène précise (juste une voix qui
+  s'exprime en entrant), mais le reste de la mise en scène est identique (texte, remise du POKéMON,
+  surnom, aller voir le rival)
+- **Vérifié en profondeur en headless** : marche naturelle jusqu'au labo (via la porte, pas de
+  téléportation par script), déclenchement du dialogue confirmé à l'écran (capture montrant
+  "PROFESSEUR C..." puis le texte complet défiler), enchaînement confirmé jusque dans
+  `GiveStarterEvent` (texte "En vérité, il ne me reste..." bien affiché, preuve que `givemon`/
+  `setflag`/`setvar` se sont exécutés avant), **0 instance de "Bad memory"** sur l'intégralité du test
+  (~30 pressions A à travers tout le dialogue, plus la marche jusqu'à l'ancien emplacement de Chen)
+- La suite de la conversation (choix du surnom, écran de saisie, "aller voir le rival") n'a pas été
+  testée jusqu'au bout caractère par caractère car c'est une mécanique préexistante du jeu de base,
+  non modifiée cette session — seul le déclenchement en amont (la partie réellement à risque) a été
+  vérifié
+
+**Point important** : cette session confirme une leçon méthodologique — compter les plantages en log
+ne suffit pas à valider qu'une fonctionnalité marche réellement ; il faut aussi vérifier visuellement
+(captures d'écran) que le contenu attendu apparaît bien à l'écran. Le "résidu mineur" de la suite 23
+n'était pas mineur, juste mal caractérisé.
+
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)

@@ -549,18 +549,34 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   layouts génériques non modifiés) — à confirmer au playtest réel
 - [x] Build release validée, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 24)
-1. **Playtest réel prioritaire** : vérifier que parler au Professeur Chen au labo (première visite,
-   avant d'avoir de POKéMON) ne plante jamais — point non totalement résolu depuis la suite 23
-   (résidu mémoire mineur observé en headless, jamais reproduit comme plantage réel, mais pas garanti
-   à 100 %). Prévenir immédiatement en cas de problème
+## Mise à jour Session 4 (suite 25) — Bug critique résolu : PIKACHU jamais reçu au labo
+- [x] Retour de test : Thomas restait bloqué par la Jumelle à la sortie nord car il n'avait jamais pu
+  obtenir PIKACHU — le Professeur Chen n'apparaissait tout simplement jamais au labo. Root cause
+  trouvée : le "résidu mineur" documenté en suite 23 n'était pas mineur — vérification approfondie
+  (marche naturelle + captures d'écran, pas juste un comptage de plantages) a montré que l'objet
+  Chen ne s'affiche jamais quand il est ajouté dynamiquement (`addobject`), et que s'en approcher
+  déclenche un plantage massif (616 instances, même signature que le bug d'origine de suite 23)
+- [x] Corrigé en abandonnant complètement l'idée de rendre Chen visible avant que le joueur ait son
+  POKéMON : la remise de PIKACHU se déclenche maintenant automatiquement dès l'entrée dans la pièce
+  (nouveau `coord_event`), sans jamais faire apparaître son sprite pour cette scène précise
+- [x] Vérifié en profondeur en headless (marche réelle jusqu'au labo par la porte, ~30 pressions A à
+  travers tout le dialogue jusque dans `GiveStarterEvent`) : **0 plantage**, dialogue confirmé à
+  l'écran par capture, `givemon`/`setflag`/`setvar` confirmés exécutés
+- [x] Build release validée, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 25)
+1. **Playtest réel prioritaire** : confirmer que le Professeur Chen donne bien PIKACHU dès la première
+   visite au labo, sans plantage, et que la suite (surnom, "aller voir le rival") se déroule
+   normalement jusqu'au bout (testé en headless jusqu'à l'entrée dans `GiveStarterEvent`, mais pas la
+   toute fin de la conversation caractère par caractère)
 2. Playtest du nouveau quartier sud de Bourg Palette : entrer dans les 4 maisons non vérifiées à
-   l'écran cette suite (Vieux Dresseur, Gardien de Route, volets fermés, Dame aux Baies), confirmer
-   qu'aucune ne plante et que les textes conviennent
+   l'écran (Vieux Dresseur, Gardien de Route, volets fermés, Dame aux Baies), confirmer qu'aucune ne
+   plante et que les textes conviennent
 3. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
    rencontre du rival à Bourg Palette 2F (texte, mise en scène) — toujours en attente de retour
 4. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
    non prioritaire, contenu post-Ligue)
-5. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement` déjà utilisés près
-   d'autres connexions de cartes du jeu (le bug de suite 20 n'est pas spécifique à Bourg Palette/Route 1)
+5. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
+   utilisés près d'autres connexions de cartes ou d'autres PNJ du jeu (le bug de suite 20/23/25 n'est
+   pas spécifique à Bourg Palette/Route 1/Chen — pourrait resurgir ailleurs)
 6. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
