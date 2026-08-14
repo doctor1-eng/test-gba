@@ -1004,3 +1004,53 @@ avec le fichier html que je t'ai fourni".
   sur la disposition actuelle
 
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
+
+## Session 4 (suite 27) — Bourg Palette refaite fidèlement au plan HTML de Thomas
+
+Thomas a redemandé la refonte fidèle ("Réécrit proprement la scène pour déplacer ma maison comme
+prévu"), après que la suite 26 ait identifié un risque : la position de la maison du joueur était
+codée en dur dans la scène des Chaussures de Course (remise par Maman plus tard dans le jeu). Cette
+suite réécrit cette scène pour la rendre indépendante de la position des maisons, ce qui débloque enfin
+une refonte complète et fidèle de la carte.
+
+**1. Réécriture de la scène des Chaussures de Course**
+- L'ancienne version codait en dur une douzaine de trajets de marche (`applymovement` avec un nombre
+  de pas précis par variante, 6 positions de déclenchement × 2 genres) calibrés sur les anciennes
+  coordonnées de porte — cassait dès qu'une maison bougeait
+- Remplacée par une version simple et indépendante de la position : Maman apparaît directement
+  (`setobjectxy`) à un point fixe du chemin d'entrée (indépendant de sa propre maison), donne les
+  Chaussures, disparaît. Les deux seules valeurs encore liées à la position des maisons
+  (`SetHomeDoorCoordsMale/Female`, utilisées pour l'animation d'ouverture de porte quand on parle
+  directement à Maman) sont maintenant de simples constantes faciles à mettre à jour
+- Vérifié en headless (déclenchement réel du trigger, pas un raccourci scripté) : dialogue complet
+  affiché correctement ("Maman ! Tu as pensé à te présenter au Pr. Chen ?" → "Tiens, chérie ! Pour
+  ton aventure, mets ces..."), **0 plantage**
+
+**2. Carte de Bourg Palette entièrement refaite selon le plan HTML**
+- Nouvelle carte 24×19 recalculée directement à partir du code JavaScript du plan fourni par Thomas
+  (mêmes fonctions `building()`/`makeGrid` réimplémentées en Python pour extraire les coordonnées
+  exactes), avec les 8 bâtiments réorganisés en 3 rangées fidèles à l'agencement du plan :
+  - Rangée 1 : Maison du joueur, Laboratoire du Pr. Chen
+  - Rangée 2 : Mme Chen, maison aux volets fermés, Régis
+  - Rangée 3 : Gardien de Route, Vieux Dresseur, Dame aux Baies
+  - Coordonnées de porte très proches du plan original (écart d'au plus 1 case sur la plupart des
+    bâtiments, plusieurs correspondances exactes) — légèrement adaptées pour utiliser un bloc de
+    maison unique de taille fixe (5×5, 7×5 pour le labo), déjà vérifié fiable en suite 24, plutôt que
+    de générer des tailles de bâtiment variables sans retour visuel
+  - **La connexion vers la Route 1 n'a pas bougé** (sortie toujours aux mêmes colonnes qu'avant,
+    `offset` de connexion inchangé) — tous les bâtiments ont été agencés autour de ce couloir d'entrée
+    fixe pour ne courir aucun risque de désalignement avec la Route 1
+  - Mare et herbes hautes décoratives du plan non reproduites (auraient nécessité de nouvelles tuiles
+    dont l'identifiant n'est pas garanti sûr sans retour visuel direct ; les herbes hautes créeraient
+    en plus des rencontres sauvages en pleine ville) — simplification assumée
+- Tous les warps, PNJ et panneaux redéplacés vers les nouvelles positions ; les 5 maisons de la
+  suite 24 (intérieurs déjà créés) et les warps `MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F`/
+  `..._BRENDANS_HOUSE_1F`/`..._PROFESSOR_BIRCHS_LAB` (déjà existants) réutilisés tels quels — seules
+  leurs coordonnées côté Bourg Palette changent, aucun fichier de carte intérieure modifié
+- **Vérifié en profondeur en headless** : rendu visuel des 3 rangées de bâtiments correct, **raccord
+  avec la Route 1 sans aucun décalage visible** (bordure d'arbres parfaitement alignée), entrée dans le
+  Labo à sa nouvelle position (déclencheur PIKACHU toujours fonctionnel), entrée dans la maison du
+  joueur à sa nouvelle position (Maman bien présente à l'intérieur), scène des Chaussures de Course
+  fonctionnelle à la nouvelle position — **0 instance de "Bad memory"** sur l'ensemble des tests
+
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)

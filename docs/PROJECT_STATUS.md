@@ -584,20 +584,35 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   plan original (avec le risque technique) ou ajustements ciblés ?
 - [x] Build release validée, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 26)
-1. **Clarifier avec Thomas** l'approche pour la carte de Bourg Palette : refonte fidèle au plan HTML
-   original (24×18, bâtiments repositionnés, risque d'un décalage visuel possible au raccord avec la
-   Route 1) ou conserver l'extension actuelle avec des ajustements ciblés ?
-2. **Playtest réel prioritaire** : confirmer que le Professeur Chen donne bien PIKACHU dès l'entrée au
-   labo (nouveau mécanisme `OnFrame`), et que la Jumelle ne bloque plus jamais la sortie nord
-3. Playtest du nouveau quartier sud de Bourg Palette : entrer dans les 4 maisons non vérifiées à
-   l'écran (Vieux Dresseur, Gardien de Route, volets fermés, Dame aux Baies), confirmer qu'aucune ne
-   plante et que les textes conviennent
-4. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
+## Mise à jour Session 4 (suite 27) — Bourg Palette refaite fidèlement au plan de Thomas
+- [x] Scène des Chaussures de Course (Maman) entièrement réécrite pour être indépendante de la
+  position des maisons — l'ancienne version codait en dur une douzaine de trajets de marche calibrés
+  sur les anciennes coordonnées, ce qui bloquait tout déplacement de bâtiment
+- [x] Carte de Bourg Palette refaite en 24×19 à partir du code JavaScript du plan HTML fourni par
+  Thomas (coordonnées extraites directement de sa logique `building()`), 3 rangées de bâtiments très
+  proches du plan original (Labo + maison du joueur ; Mme Chen + volets fermés + Régis ; Gardien de
+  Route + Vieux Dresseur + Dame aux Baies)
+- [x] La connexion vers la Route 1 n'a pas bougé (aucun risque de désalignement) — tous les bâtiments
+  réorganisés autour du couloir d'entrée existant
+- [x] Mare/herbes hautes décoratives du plan non reproduites (tuiles non garanties sûres sans retour
+  visuel, et les herbes hautes créeraient des rencontres sauvages en pleine ville) — simplification
+  assumée
+- [x] Vérifié en profondeur en headless : rendu des 3 rangées correct, raccord Route 1 sans décalage
+  visible, Labo (déclencheur PIKACHU) et maison du joueur fonctionnels à leurs nouvelles positions,
+  scène des Chaussures de Course fonctionnelle — 0 plantage sur l'ensemble des tests
+- [x] Build release validée, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 27)
+1. **Playtest réel prioritaire** : confirmer la nouvelle disposition de Bourg Palette dans son
+   ensemble (déplacements, tous les warps, scène des Chaussures de Course jusqu'au bout), le
+   Professeur Chen au labo, et l'absence de blocage de la Jumelle à la sortie nord
+2. Entrer dans les 5 nouvelles maisons à leurs nouvelles positions (Mme Chen, Vieux Dresseur, Gardien
+   de Route, volets fermés, Dame aux Baies) pour confirmer qu'aucune ne plante
+3. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
    rencontre du rival à Bourg Palette 2F (texte, mise en scène) — toujours en attente de retour
-5. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
+4. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
    non prioritaire, contenu post-Ligue)
-6. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
+5. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
    utilisés près d'autres connexions de cartes ou d'autres PNJ du jeu (le bug de suite 20/23/25/26
    n'est pas spécifique à Bourg Palette/Route 1/Chen — pourrait resurgir ailleurs)
-7. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
+6. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé

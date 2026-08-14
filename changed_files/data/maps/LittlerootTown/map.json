@@ -24,8 +24,8 @@
         {
             "local_id": "LOCALID_LITTLEROOT_TWIN",
             "graphics_id": "OBJ_EVENT_GFX_TWIN",
-            "x": 16,
-            "y": 10,
+            "x": 7,
+            "y": 9,
             "elevation": 3,
             "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
             "movement_range_x": 1,
@@ -37,8 +37,8 @@
         },
         {
             "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-            "x": 12,
-            "y": 13,
+            "x": 7,
+            "y": 15,
             "elevation": 3,
             "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
             "movement_range_x": 2,
@@ -51,7 +51,7 @@
         {
             "graphics_id": "OBJ_EVENT_GFX_BOY_2",
             "x": 14,
-            "y": 17,
+            "y": 15,
             "elevation": 3,
             "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
             "movement_range_x": 2,
@@ -64,8 +64,8 @@
         {
             "local_id": "LOCALID_LITTLEROOT_MOM",
             "graphics_id": "OBJ_EVENT_GFX_MOM",
-            "x": 5,
-            "y": 8,
+            "x": 4,
+            "y": 5,
             "elevation": 3,
             "movement_type": "MOVEMENT_TYPE_FACE_UP",
             "movement_range_x": 0,
@@ -78,8 +78,8 @@
         {
             "local_id": "LOCALID_LITTLEROOT_RIVAL",
             "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-            "x": 13,
-            "y": 10,
+            "x": 14,
+            "y": 9,
             "elevation": 3,
             "movement_type": "MOVEMENT_TYPE_FACE_UP",
             "movement_range_x": 1,
@@ -92,7 +92,7 @@
         {
             "local_id": "LOCALID_LITTLEROOT_BIRCH",
             "graphics_id": "OBJ_EVENT_GFX_PROF_OAK",
-            "x": 14,
+            "x": 20,
             "y": 10,
             "elevation": 3,
             "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -106,57 +106,57 @@
     ],
     "warp_events": [
         {
-            "x": 14,
-            "y": 8,
+            "x": 17,
+            "y": 11,
             "elevation": 0,
             "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
             "dest_warp_id": "1"
         },
         {
-            "x": 5,
-            "y": 8,
+            "x": 4,
+            "y": 5,
             "elevation": 0,
             "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
             "dest_warp_id": "1"
         },
         {
-            "x": 7,
-            "y": 16,
+            "x": 19,
+            "y": 5,
             "elevation": 0,
             "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
             "dest_warp_id": "0"
         },
         {
             "x": 4,
-            "y": 24,
+            "y": 11,
             "elevation": 0,
             "dest_map": "MAP_LITTLEROOT_TOWN_MME_CHEN_HOUSE",
             "dest_warp_id": "0"
         },
         {
-            "x": 10,
-            "y": 24,
+            "x": 12,
+            "y": 17,
             "elevation": 0,
             "dest_map": "MAP_LITTLEROOT_TOWN_VIEUX_DRESSEUR_HOUSE",
             "dest_warp_id": "0"
         },
         {
-            "x": 16,
-            "y": 24,
+            "x": 4,
+            "y": 17,
             "elevation": 0,
             "dest_map": "MAP_LITTLEROOT_TOWN_GARDIEN_ROUTE_HOUSE",
             "dest_warp_id": "0"
         },
         {
-            "x": 6,
-            "y": 31,
+            "x": 11,
+            "y": 11,
             "elevation": 0,
             "dest_map": "MAP_LITTLEROOT_TOWN_MAISON_VOLETS_FERMES",
             "dest_warp_id": "0"
         },
         {
-            "x": 15,
-            "y": 31,
+            "x": 19,
+            "y": 17,
             "elevation": 0,
             "dest_map": "MAP_LITTLEROOT_TOWN_DAME_BAIES_HOUSE",
             "dest_warp_id": "0"
@@ -165,48 +165,12 @@
     "coord_events": [
         {
             "type": "trigger",
-            "x": 8,
-            "y": 9,
-            "elevation": 3,
-            "var": "VAR_LITTLEROOT_TOWN_STATE",
-            "var_value": "3",
-            "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger4"
-        },
-        {
-            "type": "trigger",
-            "x": 9,
-            "y": 9,
-            "elevation": 3,
-            "var": "VAR_LITTLEROOT_TOWN_STATE",
-            "var_value": "3",
-            "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger5"
-        },
-        {
-            "type": "trigger",
-            "x": 10,
-            "y": 9,
-            "elevation": 3,
-            "var": "VAR_LITTLEROOT_TOWN_STATE",
-            "var_value": "3",
-            "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger2"
-        },
-        {
-            "type": "trigger",
-            "x": 11,
-            "y": 9,
-            "elevation": 3,
-            "var": "VAR_LITTLEROOT_TOWN_STATE",
-            "var_value": "3",
-            "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger3"
-        },
-        {
-            "type": "trigger",
             "x": 10,
             "y": 2,
             "elevation": 3,
             "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "3",
-            "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger0"
+            "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger"
         },
         {
             "type": "trigger",
@@ -215,38 +179,38 @@
             "elevation": 3,
             "var": "VAR_LITTLEROOT_TOWN_STATE",
             "var_value": "3",
-            "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger1"
+            "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger"
         }
     ],
     "bg_events": [
         {
             "type": "sign",
-            "x": 15,
-            "y": 13,
+            "x": 10,
+            "y": 3,
             "elevation": 0,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_TownSign"
         },
         {
             "type": "sign",
-            "x": 6,
-            "y": 17,
-            "elevation": 0,
+            "x": 22,
+            "y": 5,
+            "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_BirchsLabSign"
         },
         {
             "type": "sign",
-            "x": 7,
-            "y": 8,
+            "x": 6,
+            "y": 5,
             "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_BrendansHouseSign"
         },
         {
             "type": "sign",
-            "x": 12,
-            "y": 8,
+            "x": 20,
+            "y": 11,
             "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_MaysHouseSign"
@@ -254,39 +218,39 @@
         {
             "type": "sign",
             "x": 6,
-            "y": 24,
+            "y": 11,
             "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_MmeChenHouseSign"
         },
         {
             "type": "sign",
-            "x": 12,
-            "y": 24,
+            "x": 14,
+            "y": 17,
             "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_VieuxDresseurHouseSign"
         },
         {
             "type": "sign",
-            "x": 18,
-            "y": 24,
+            "x": 6,
+            "y": 17,
             "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_GardienRouteHouseSign"
         },
         {
             "type": "sign",
-            "x": 8,
-            "y": 31,
+            "x": 14,
+            "y": 11,
             "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_VoletsFermesHouseSign"
         },
         {
             "type": "sign",
-            "x": 17,
-            "y": 31,
+            "x": 21,
+            "y": 17,
             "elevation": 3,
             "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
             "script": "LittlerootTown_EventScript_DameBaiesHouseSign"
