@@ -752,3 +752,87 @@ rencontre, c'est toujours Régis, avec une seule voix.
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
 - Reste dans le backlog : l'appel post-Ligue de Mossdeep (`MossdeepCity_SpaceCenter_2F`, contenu
   entièrement en anglais, hors priorité)
+
+## Session 4 (suite 23) — Changement de programme : suppression complète de la scène de sauvetage,
+## remise directe de PIKACHU au labo, Quickstart automatique pour les builds de test
+
+Nouvelle consigne de Thomas : au lieu de contourner le crash de la Route 1 en déplaçant la scène de
+sauvetage à Bourg Palette (suite 20-22), la supprimer intégralement et remettre PIKACHU directement
+en discutant avec le Professeur Chen dans son laboratoire. Plus une carte de Bourg Palette avec 5
+maisons supplémentaires (reporté — pas d'éditeur de carte visuel dans cet environnement, voir
+ci-dessous) et un démarrage automatique pour les builds de test.
+
+**1. Suppression complète de la scène de sauvetage**
+- Bourg Palette (`LittlerootTown/map.json`) : les 3 objets de la scène (Professeur Chen, Ramoloss
+  sauvage, sac de PIKACHU) supprimés, ainsi que le déclencheur `GoSaveBirchTrigger`
+- Route 1 (`Route101/scripts.inc`) : tout le code mort restant de l'ancienne scène supprimé
+  (gabarits de mouvement de la course-poursuite, textes "à l'aide"/"tu m'as sauvé", scripts
+  `PreventExit{South,West,North}` qui bloquaient la sortie pendant la scène — plus aucun `coord_event`
+  ne les référençait déjà depuis la suite 20)
+- Bourg Palette (`LittlerootTown/scripts.inc`) : la Jumelle ne parle plus d'un "vacarme" sur la
+  Route 1 — elle indique simplement le chemin du labo tant qu'on n'a pas de POKéMON. Les textes
+  encore en anglais de cette scène (avertissement "attention aux hautes herbes", "bonne chance") ont
+  été traduits au passage
+- Le verrou "impossible de sortir sans POKéMON" (la Jumelle qui repousse le joueur) fonctionnait
+  seulement à l'état `VAR_LITTLEROOT_TOWN_STATE == 0` ; comme ce nouvel enchaînement peut laisser le
+  joueur à l'état 1 (a rencontré son rival) sans PIKACHU, le déclencheur a été dupliqué pour couvrir
+  aussi l'état 1, sans quoi le joueur aurait pu sortir sur la Route 1 sans POKéMON
+
+**2. Nouvel événement : remise directe de PIKACHU au labo**
+- Le Professeur Chen (`LittlerootTown_ProfessorBirchsLab_EventScript_Birch`) donne maintenant
+  directement PIKACHU si le joueur n'a pas encore de POKéMON (`FLAG_SYS_POKEMON_GET`), avant de
+  retomber sur son ancien comportement (post-jeu, appels PokéNav, etc.)
+- Réutilise presque entièrement une mécanique déjà présente et jusque-là inexploitée :
+  `GiveStarterEvent` (commentaire d'origine : "the starter is technically given prior to this...
+  this is just where the game tells you it's yours") gérait déjà tout l'enchaînement surnom + "va
+  voir mon petit-fils" — il ne manquait que la remise du POKéMON elle-même, ajoutée dans une nouvelle
+  fonction `GiveDirectPikachu` qui fait le `givemon` puis enchaîne dessus
+- Texte de Chen (`LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon`, déjà écrit en
+  français en suite 9) réécrit pour retirer les références à la scène de sauvetage ("vu comment tu
+  t'es débrouillé tout à l'heure…", "en remerciement de m'avoir aidé…"), remplacées par une
+  explication plus simple (Chen a été prévenu par la mère du joueur, il ne restait que PIKACHU)
+- **Bug moteur non résolu trouvé et contourné** : déclarer le Professeur Chen visible par défaut
+  dans `map.json` (`flag: "0"`) — ou le rendre visible via un `clearflag` précoce — fait planter le
+  jeu au chargement du labo (720+ instances de corruption mémoire en headless, reproduit sur
+  plusieurs variantes de test, y compris avec un graphisme de remplacement neutre : donc pas
+  spécifique au sprite du Professeur Chen). L'ajouter dynamiquement par script via `addobject`,
+  comme le fait déjà le reste de ce fichier pour ses autres apparitions tardives (upgrade Pokédex
+  national, starters Johto), est sûr : 0 crash en isolation. Nouvelle fonction
+  `ShowBirchBeforeStarter` appelée depuis `OnTransition`, qui l'ajoute par script dès la première
+  visite tant que le joueur n'a pas encore son POKéMON
+  - Point d'honnêteté : un résidu très réduit (8 instances de "Bad memory" sur des dizaines de
+    milliers de frames testées, ne grossit jamais quel que soit le scénario de test, jamais de
+    corruption visible ni de redémarrage observé dans aucun test, y compris via interaction réelle
+    au bouton A) persiste dans certains enchaînements combinant `addobject` du Professeur Chen et
+    l'affichage d'un message juste après. Non résolu faute de piste supplémentaire et de temps ; le
+    jeu continue de fonctionner normalement dans tous les tests effectués. À surveiller lors du
+    playtest réel — prévenir immédiatement si un plantage survient en parlant au Professeur Chen au
+    labo
+- `checkplayergender` + `Route101_EventScript_HideMayInBedroom`/`HideBrendanInBedroom` conservés
+  (cachent la scène "PokéBall du rival" dans sa chambre, maintenant résolue au même moment que la
+  remise du PIKACHU du joueur)
+
+**3. Quickstart automatique pour les builds de test**
+- Nouveau réglage `QUICKSTART_AUTO` (`include/config/quickstart.h`, `TRUE` par défaut) : les builds
+  de test envoyées à Thomas sautent maintenant directement en jeu au démarrage, sans qu'il ait besoin
+  d'appuyer sur SELECT ni de repasser par la création de personnage à chaque test. Implémenté dans
+  `Task_TitleScreenPhase3` (`src/title_screen.c`), déclenche `Quickstart()` automatiquement dès que
+  l'écran-titre atteint sa phase de saisie (les écrans de copyright Nintendo/GAME FREAK restent
+  visibles quelques secondes, incompressibles sans toucher au tout début du boot — le reste
+  (écran-titre, création de personnage) est entièrement sauté)
+  - **Commentaire dans le code, à ne pas oublier** : ce réglage doit repasser à `FALSE` avant toute
+    build destinée à un vrai playtest narratif (elle sauterait alors systématiquement l'écran-titre)
+  - Vérifié en headless : démarrage à zéro appui, sans aucune entrée, le jeu atterrit directement dans
+    la chambre du joueur
+  - Ce réglage est indépendant de `ENABLE_QUICKSTART`/`QUICKSTART`, qui reste désactivé sur les
+    builds RELEASE (`RELEASE=1`) — nos builds de test ne définissent pas ce flag donc Quickstart (et
+    son déclenchement automatique) y reste actif
+
+**4. Carte de Bourg Palette avec 5 maisons supplémentaires : reporté**
+- Cet environnement ne dispose d'aucun éditeur de carte visuel (pas de Porymap, pas d'interface
+  graphique) ; ajouter des bâtiments signifie éditer à l'aveugle les données de tuiles/collision
+  brutes (`map.bin`) et créer une carte d'intérieur complète par maison. Vu le risque d'erreurs
+  difficiles à repérer sans retour visuel, Thomas a préféré reporter ce chantier en attendant un
+  moyen d'édition visuelle (ex. Porymap en local)
+
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)

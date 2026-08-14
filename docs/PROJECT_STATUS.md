@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-13 (Session 4, suite 22)
+Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -504,14 +504,39 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 22)
   variantes May/Brendan sont maintenant identiques mot pour mot
 - [x] Build release validée, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 22)
-1. Playtest de la nouvelle scène de sauvetage du Professeur Chen (positions/choix de mise en scène
-   jamais vérifiés visuellement, seulement testés côté stabilité mémoire) — ajuster si le placement des
-   PNJ ou le tracé de la course-poursuite semble incohérent en jeu
-2. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
-   rencontre du rival à Bourg Palette (texte, mise en scène)
-3. Dernier reliquat du même audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
+## Mise à jour Session 4 (suite 23) — Changement de programme : suppression de la scène de sauvetage,
+## remise directe de PIKACHU au labo, Quickstart automatique pour les builds de test
+- [x] Toute la scène de sauvetage du Professeur Chen (Bourg Palette + reliquats sur Route 1) supprimée
+  intégralement, sur nouvelle consigne de Thomas
+- [x] Nouvel événement : le joueur reçoit PIKACHU directement en discutant avec le Professeur Chen
+  dans son laboratoire, dès sa première visite (avant, il fallait déjà avoir le POKéMON pour lui
+  parler normalement). Réutilise une mécanique existante (`GiveStarterEvent`) jusque-là jamais
+  déclenchée par ce chemin
+- [x] Bug moteur trouvé et contourné : rendre le Professeur Chen visible par défaut au labo (déclaré
+  visible dans map.json, ou `clearflag` précoce) fait planter le jeu au chargement — l'ajouter
+  dynamiquement par script (`addobject`, comme le fait déjà le reste du fichier pour ses autres
+  apparitions) est sûr. Un résidu très réduit et non reproduit comme plantage réel (8 lectures
+  mémoire suspectes sur des dizaines de milliers de frames testées, aucune corruption ni redémarrage
+  observés) reste non expliqué — à surveiller au playtest réel, cf. CHANGELOG suite 23 pour le détail
+- [x] Démarrage automatique (`QUICKSTART_AUTO`) pour les builds de test : elles sautent directement en
+  jeu sans appui sur SELECT ni création de personnage à chaque test — seuls les écrans de copyright
+  Nintendo/GAME FREAK restent visibles quelques secondes (incompressible sans toucher au tout début du
+  boot). À repasser à `FALSE` avant toute build de playtest narratif normal
+- [ ] Carte de Bourg Palette avec 5 maisons supplémentaires : reporté, pas d'éditeur de carte visuel
+  dans cet environnement (pas de Porymap/interface graphique) — en attente d'un moyen d'édition visuelle
+- [x] Build release validée, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 23)
+1. **Playtest réel prioritaire** : vérifier que parler au Professeur Chen au labo (première visite,
+   avant d'avoir de POKéMON) ne plante jamais — c'est le point non totalement résolu de cette suite
+   (résidu mémoire mineur observé en headless, jamais reproduit comme plantage réel, mais pas garanti
+   à 100 %). Prévenir immédiatement en cas de problème
+2. Reprendre la carte de Bourg Palette (5 maisons supplémentaires) dès qu'un moyen d'édition visuelle
+   est disponible (Porymap en local, par exemple)
+3. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
+   rencontre du rival à Bourg Palette 2F (texte, mise en scène) — toujours en attente de retour
+4. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
    non prioritaire, contenu post-Ligue)
-4. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement` déjà utilisés près
+5. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement` déjà utilisés près
    d'autres connexions de cartes du jeu (le bug de suite 20 n'est pas spécifique à Bourg Palette/Route 1)
-5. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
+6. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé

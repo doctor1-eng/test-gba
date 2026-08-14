@@ -6,7 +6,10 @@ LittlerootTown_MapScripts::
 
 	@ State descriptions for VAR_LITTLEROOT_TOWN_STATE
 	@ 1: Met Rival
-	@ 2: Saving Birch
+	@ 2: A reçu PIKACHU du Professeur Chen au labo (Kanto Saison 1 : plus de scène de sauvetage sur
+	@    la Route 1, cf. CHANGELOG — cette valeur servait avant à "Saving Birch", elle sert
+	@    maintenant seulement à lever le blocage de la Jumelle à la sortie nord tant qu'on n'a pas
+	@    de POKéMON)
 	@ 3: Received Pokedex
 	@ 4: Received Running Shoes
 
@@ -146,23 +149,14 @@ LittlerootTown_EventScript_Boy::
 	msgbox LittlerootTown_Text_BirchSpendsDaysInLab, MSGBOX_NPC
 	end
 
+@ Kanto Saison 1 : plus de scène de sauvetage du Professeur Chen (cf. CHANGELOG) — la Jumelle se
+@ contente maintenant d'indiquer le chemin du labo tant qu'on n'a pas encore de POKéMON.
 LittlerootTown_EventScript_Twin::
 	lock
 	faceplayer
 	goto_if_set FLAG_ADVENTURE_STARTED, LittlerootTown_EventScript_GoodLuck
 	goto_if_set FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_YouSavedBirch
-	goto_if_ne VAR_LITTLEROOT_TOWN_STATE, 0, LittlerootTown_EventScript_GoSaveBirch
 	msgbox LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut, MSGBOX_DEFAULT
-	release
-	end
-
-LittlerootTown_EventScript_GoSaveBirch::
-	special GetPlayerBigGuyGirlString
-	msgbox LittlerootTown_Text_CanYouGoSeeWhatsHappening, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_LITTLEROOT_TWIN, Common_Movement_FaceOriginalDirection
-	waitmovement 0
-	setvar VAR_LITTLEROOT_TOWN_STATE, 2
 	release
 	end
 
@@ -269,77 +263,12 @@ LittlerootTown_Movement_TwinReturnRight:
 	walk_in_place_faster_down
 	step_end
 
-LittlerootTown_EventScript_GoSaveBirchTrigger::
-	lockall
-	applymovement LOCALID_LITTLEROOT_TWIN, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	special GetPlayerBigGuyGirlString
-	msgbox LittlerootTown_Text_CanYouGoSeeWhatsHappening, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_LITTLEROOT_TWIN, Common_Movement_FaceOriginalDirection
-	waitmovement 0
-	setvar VAR_LITTLEROOT_TOWN_STATE, 2
-	goto LittlerootTown_EventScript_StartBirchRescue
-	end
-
-@ Kanto Saison 1 : la scène de sauvetage du Professeur Chen (et la remise du PIKACHU qui suit) a été
-@ déplacée de la Route 1 vers Bourg Palette suite à un crash matériel systématique et non résolu sur
-@ Route101 (cf. CHANGELOG suite 19). Diagnostic complémentaire (suite 20) : la vraie cause est un bug
-@ moteur dans ScrCmd_applymovement (event_object_movement.c), qui résout l'objet cible via
-@ GetObjectEventIdByLocalId() SANS filtrer par carte — contrairement à setobjectxy qui utilise la
-@ variante correcte TryGetObjectEventIdByLocalIdAndMap(). Près d'une connexion de cartes (ex. la
-@ bordure nord de Bourg Palette avec la Route 1), les objets des DEUX cartes partagent le même pool
-@ gObjectEvents[], et applymovement peut cibler l'objet de la MAUVAISE carte si les ID locaux se
-@ recoupent (ex. Route101 utilise déjà les ID locaux 1 à 6). D'où deux règles pour toute scène animée
-@ ici : (1) utiliser des ID locaux qui n'existent pas sur Route101 (donc > 6), et (2) dérouler
-@ l'animation loin de la bordure nord (dans la zone sud de la carte, jamais testée en défaut).
-LittlerootTown_EventScript_StartBirchRescue::
-	playbgm MUS_HELP, TRUE
-	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Route101_Movement_BirchRunAway1
-	applymovement LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE, Route101_Movement_ZigzagoonChase1
-	waitmovement 0
-	applymovement LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE, Route101_Movement_ZigzagoonChaseInCircles
-	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Route101_Movement_BirchRunInCircles
-	waitmovement 0
-	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	applymovement LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE, Route101_Movement_ZigzagoonFaceBirch
-	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Route101_Movement_BirchFaceZigzagoon
-	waitmovement 0
-	msgbox Route101_Text_PleaseHelp, MSGBOX_DEFAULT
-	closemessage
-	releaseall
-	end
-
-LittlerootTown_EventScript_BirchsBag::
-	lock
-	faceplayer
-	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_RESCUED_BIRCH
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_LITTLEROOT_ZIGZAGOON_RESCUE
-	givemon SPECIES_PIKACHU, 5, ITEM_NONE
-	setvar VAR_STARTER_MON, 1 @ Fixe la branche "Torchic" utilisée partout dans le jeu pour les scènes liées au starter (rival, dex, etc.) — notre starter unique étant Pikachu, ce choix est arbitraire mais doit rester constant
-	applymovement LOCALID_LITTLEROOT_CHEN_RESCUE, Route101_Movement_BirchApproachPlayer
-	waitmovement 0
-	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
-	special HealPlayerParty
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
-	setvar VAR_BIRCH_LAB_STATE, 2
-	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
-	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
-	waitstate
-	release
-	end
+@ Kanto Saison 1 : la scène de sauvetage du Professeur Chen sur la Route 1 (et la remise du PIKACHU
+@ qui suivait) a été entièrement supprimée sur consigne de Thomas — le joueur reçoit maintenant
+@ PIKACHU directement en discutant avec le Professeur Chen dans son laboratoire
+@ (LittlerootTown_ProfessorBirchsLab_EventScript_GiveDirectPikachu, cf. CHANGELOG). Cette scène avait
+@ été déplacée ici en suite 20 pour contourner un bug moteur dans applymovement (cf. commit précédent
+@ pour le détail), mais le nouveau design l'élimine complètement au lieu de le contourner.
 
 LittlerootTown_EventScript_TownSign::
 	msgbox LittlerootTown_Text_TownSign, MSGBOX_SIGN
@@ -907,30 +836,26 @@ LittlerootTown_Text_BirchSpendsDaysInLab:
 	.string "at home?$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
-	.string "Um, um, um!\p"
-	.string "If you go outside and go in the grass,\n"
-	.string "wild POKéMON will jump out!$"
+	.string "Eum, eum, eum !\p"
+	.string "Si tu sors et que tu marches dans\n"
+	.string "les hautes herbes, des POKéMON\l"
+	.string "sauvages vont surgir !\p"
+	.string "Tu devrais d'abord aller voir le\n"
+	.string "Professeur Chen à son labo, il\l"
+	.string "pourra sûrement t'aider.$"
 
 LittlerootTown_Text_DangerousIfYouDontHavePokemon:
-	.string "It's dangerous if you don't have\n"
-	.string "your own POKéMON.$"
-
-LittlerootTown_Text_CanYouGoSeeWhatsHappening:
-	.string "Um, hi!\p"
-	.string "There are scary POKéMON outside!\n"
-	.string "I can hear their cries!\p"
-	.string "I want to go see what's going on,\n"
-	.string "but I don't have any POKéMON…\p"
-	.string "Can you go see what's happening\n"
-	.string "for me?$"
+	.string "C'est dangereux si tu n'as pas\n"
+	.string "encore ton propre POKéMON.$"
 
 LittlerootTown_Text_YouSavedBirch:
-	.string "You saved PROF. BIRCH!\n"
-	.string "I'm so glad!$"
+	.string "Alors, PIKACHU te plaît ?\p"
+	.string "J'ai hâte de voir comment vous\n"
+	.string "vous entendez tous les deux !$"
 
 LittlerootTown_Text_GoodLuckCatchingPokemon:
-	.string "Are you going to catch POKéMON?\n"
-	.string "Good luck!$"
+	.string "Tu vas attraper des POKéMON ?\n"
+	.string "Bonne chance !$"
 
 LittlerootTown_Text_TownSign:
 	.string "LITTLEROOT TOWN\n"

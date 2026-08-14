@@ -22,10 +22,25 @@ LittlerootTown_ProfessorBirchsLab_MapScripts::
 LittlerootTown_ProfessorBirchsLab_OnTransition:
 	call Custom_EventScript_SetupRegisGfxId
 	call ProfBirch_EventScript_UpdateLocation
+	call LittlerootTown_ProfessorBirchsLab_EventScript_ShowBirchBeforeStarter
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterJohtoStarterLayout
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_SetJohtoStarterLayout
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForJohtoStarter
 	end
+
+@ Kanto Saison 1 : le Professeur Chen doit être visible dès la première visite (avant même que le
+@ joueur ait son PIKACHU), pour la nouvelle remise directe du starter au labo (cf. CHANGELOG). Un
+@ bug moteur non élucidé fait planter le jeu si cet objet est simplement déclaré visible par défaut
+@ dans map.json (`flag: "0"`) ou rendu visible via un clearflag précoce — mais l'ajouter dynamiquement
+@ via addobject, comme le fait déjà le reste de ce fichier pour ses autres apparitions tardives, est
+@ sûr (vérifié en headless, 0 crash contre 720+ avec l'approche flag). D'où ce détour.
+LittlerootTown_ProfessorBirchsLab_EventScript_ShowBirchBeforeStarter::
+	goto_if_set FLAG_SYS_POKEMON_GET, LittlerootTown_ProfessorBirchsLab_EventScript_Ret
+	addobject LOCALID_BIRCHS_LAB_BIRCH
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Ret::
+	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForJohtoStarter::
 	specialvar VAR_RESULT, HasAllHoennMons
@@ -461,12 +476,35 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedJohtoStarter::
 LittlerootTown_ProfessorBirchsLab_EventScript_Birch::
 	lock
 	faceplayer
+	goto_if_unset FLAG_SYS_POKEMON_GET, LittlerootTown_ProfessorBirchsLab_EventScript_GiveDirectPikachu
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_CanHaveAnyOneOfRarePokemon
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_GrassyPatchWaiting
 	goto_if_unset FLAG_HAS_MATCH_CALL, LittlerootTown_ProfessorBirchsLab_EventScript_TryRatePokedexOrRegister
 	goto_if_unset FLAG_ENABLE_PROF_BIRCH_MATCH_CALL, EventScript_RegisterProfBirch
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_TryRatePokedexOrRegister
 	end
+
+@ Kanto Saison 1 : plus de scène de sauvetage sur la Route 1 (cf. CHANGELOG). Le joueur reçoit
+@ PIKACHU directement en discutant avec le Professeur Chen dans son laboratoire. La suite (surnom,
+@ "va voir mon petit-fils") réutilise le flux existant GiveStarterEvent, prévu à l'origine pour ce
+@ moment (cf. son commentaire "the starter is technically given prior to this... this is just where
+@ the game tells you it's yours") : on lui fournit juste le POKéMON avant de l'enchaîner.
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveDirectPikachu::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WelcomeHereIsPikachu, MSGBOX_DEFAULT
+	closemessage
+	givemon SPECIES_PIKACHU, 5, ITEM_NONE
+	setvar VAR_STARTER_MON, 1
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_RESCUED_BIRCH
+	@ Fait sortir VAR_LITTLEROOT_TOWN_STATE de {0,1} : ce sont les deux valeurs qui font encore
+	@ bloquer le joueur par la Jumelle à la sortie nord de la ville tant qu'il n'a pas de POKéMON
+	@ (cf. LittlerootTown_EventScript_NeedPokemonTrigger{Left,Right}) — sans ce changement le
+	@ blocage continuerait de se déclencher après la remise du PIKACHU.
+	setvar VAR_LITTLEROOT_TOWN_STATE, 2
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
+	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent
 
 LittlerootTown_ProfessorBirchsLab_EventScript_CanHaveAnyOneOfRarePokemon::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CanHaveAnyOneOfRarePokemon, MSGBOX_DEFAULT
@@ -672,26 +710,27 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchEnjoysRivalsHelpToo:
 	.string "Il apprécie beaucoup l'aide de\n"
 	.string "{RIVAL}, aussi.$"
 
-LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
-	.string "PROFESSEUR CHEN : Alors, {PLAYER}{KUN}.\p"
+LittlerootTown_ProfessorBirchsLab_Text_WelcomeHereIsPikachu:
+	.string "PROFESSEUR CHEN : Ah, {PLAYER}{KUN},\n"
+	.string "te voilà !\p"
 	.string "Ta mère m'a prévenu que tu partais\n"
-	.string "aujourd'hui pour ton grand voyage.\p"
-	.string "Il paraît que tu n'as pas encore ton\n"
+	.string "aujourd'hui pour ton grand voyage,\l"
+	.string "et que tu n'avais pas encore ton\l"
 	.string "propre POKéMON.\p"
-	.string "Mais vu comment tu t'es débrouillé\n"
-	.string "tout à l'heure, je n'ai plus aucun\l"
-	.string "doute : tu as l'étoffe d'un vrai\l"
-	.string "dresseur.\p"
-	.string "En vérité, il ne me restait plus que\n"
-	.string "PIKACHU dans mon sac. Tous les\n"
-	.string "autres avaient déjà été confiés à\l"
-	.string "d'autres dresseurs ce matin.\p"
+	.string "Justement, j'ai quelque chose pour\n"
+	.string "toi.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
+	.string "PROFESSEUR CHEN : En vérité, il ne me\n"
+	.string "restait plus que PIKACHU dans mon\l"
+	.string "sac. Tous les autres avaient déjà\l"
+	.string "été confiés à d'autres dresseurs ce\l"
+	.string "matin.\p"
 	.string "Il est plutôt indépendant, et il n'a\n"
 	.string "pas l'air ravi à l'idée d'entrer dans\l"
 	.string "une POKé BALL… mais je crois que\l"
 	.string "vous êtes faits l'un pour l'autre.\p"
-	.string "En remerciement pour m'avoir aidé,\n"
-	.string "je te le confie.\p"
+	.string "Tiens, je te le confie !\p"
 	.string "{PLAYER} a reçu {STR_VAR_1} !$"
 
 LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon:
