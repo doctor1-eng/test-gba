@@ -1054,3 +1054,47 @@ une refonte complète et fidèle de la carte.
   fonctionnelle à la nouvelle position — **0 instance de "Bad memory"** sur l'ensemble des tests
 
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
+
+## Session 4 (suite 28) — Correction Jessie/James (Team Rocket) sur la Route 1
+
+Thomas a signalé qu'à la sortie de Bourg Palette, sur la Route 1, seul Miaouss était visible : Jessie
+était invisible et James inaccessible pour lancer le combat.
+
+**1. Diagnostic**
+- Reproduit en isolation en headless : les graphismes d'origine `OBJ_EVENT_GFX_ROCKET_F`/
+  `OBJ_EVENT_GFX_ROCKET_M` provoquent une corruption mémoire importante (des centaines d'instances de
+  "Bad memory"/"Bad BIOS Load" dans les logs) dès qu'ils sont affichés sur cette carte précise, que ce
+  soit par déclaration statique dans `map.json` ou via `addobject` — contrairement au cas du
+  Professeur Chen (suite 23/25) où `addobject` avait réglé un problème similaire, aucun des deux
+  mécanismes n'est fiable ici. Miaouss (graphisme d'espèce, mécanisme différent) n'a jamais posé de
+  problème
+- Cause profonde non identifiée avec certitude malgré une investigation poussée (ces mêmes graphismes
+  fonctionnent sans souci ailleurs dans ce hack, par exemple en forêt de Jade pour la scène Team
+  Rocket/Devon) — corrigé par un contournement pragmatique plutôt que de risquer une régression sur
+  un mécanisme mal compris
+- James se trouvait en plus sur une case décorative de buisson (différente de celle de Jessie et de
+  Miaouss), ce qui expliquait probablement en partie la difficulté à l'atteindre pour engager le
+  combat
+
+**2. Correctif appliqué (`data/maps/Route101/map.json` et `scripts.inc`)**
+- Jessie et James utilisent maintenant des graphismes PNJ génériques déjà utilisés sans problème
+  ailleurs dans le jeu (`OBJ_EVENT_GFX_WOMAN_2` et `OBJ_EVENT_GFX_MAN_3`), avec des emplacements de
+  palette différents de celui utilisé par le Pr. Chen sur cette même carte
+- James repositionné de (9,17) à (10,17), sur la même case dégagée (herbe, sans décor) que Jessie et
+  directement au-dessus de Miaouss (10,18), au lieu de la case de buisson décorative d'origine
+- Mécanisme de déclenchement (apparition conditionnée à `VAR_BIRCH_LAB_STATE` et à la défaite de
+  l'équipe) inchangé, revenu à sa version d'origine après l'abandon de la piste `addobject`
+
+**3. Vérification headless**
+- Testé en isolation (les trois PNJ toujours visibles, indépendamment de la progression) avec les
+  nouveaux graphismes et positions : **0 instance de "Bad memory"**, Jessie et James bien visibles et
+  distincts à l'écran
+- Combat de James déclenché avec succès par une interaction directe (case juste au-dessus, touche A) :
+  le texte de la devise de la Team Rocket s'affiche correctement ("Prépare-toi aux ennuis, et fais que
+  ce soit double !"), confirmant que James est bien accessible pour lancer le combat
+- Note méthodologique : un warp déclenché depuis le menu de débogage "Scripts" laisse le personnage
+  bloqué après le chargement de la carte (bug de l'outil de test, pas du jeu) — contourné en utilisant
+  l'utilitaire dédié "Warp to map warp…" du menu de débogage, qui restaure correctement le contrôle du
+  joueur
+
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)

@@ -602,17 +602,33 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   scène des Chaussures de Course fonctionnelle — 0 plantage sur l'ensemble des tests
 - [x] Build release validée, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 27)
-1. **Playtest réel prioritaire** : confirmer la nouvelle disposition de Bourg Palette dans son
-   ensemble (déplacements, tous les warps, scène des Chaussures de Course jusqu'au bout), le
-   Professeur Chen au labo, et l'absence de blocage de la Jumelle à la sortie nord
-2. Entrer dans les 5 nouvelles maisons à leurs nouvelles positions (Mme Chen, Vieux Dresseur, Gardien
+## Mise à jour Session 4 (suite 28) — Jessie/James (Team Rocket) corrigés sur la Route 1
+- [x] Diagnostiqué en isolation headless : les graphismes d'origine `OBJ_EVENT_GFX_ROCKET_F`/`_M`
+  provoquaient une corruption mémoire importante dès leur affichage sur la Route 1 (statique ou
+  `addobject`, aucun des deux fiable ici) — cause profonde non identifiée avec certitude, contourné
+  par un changement de graphismes plutôt que de risquer une régression
+- [x] Jessie et James utilisent maintenant `OBJ_EVENT_GFX_WOMAN_2`/`OBJ_EVENT_GFX_MAN_3` (graphismes
+  génériques déjà utilisés sans souci ailleurs, palette différente de celle du Pr. Chen sur cette
+  carte) ; James repositionné de (9,17) à (10,17), hors de la case de buisson décorative, aligné avec
+  Jessie et Miaouss
+- [x] Vérifié en headless : 0 plantage, les deux PNJ bien visibles et distincts, combat de James
+  déclenché avec succès par interaction directe (texte de devise Team Rocket affiché correctement)
+- [x] Build release validée, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 28)
+1. **Playtest réel prioritaire** : confirmer que Jessie/James/Miaouss s'affichent et s'enchaînent bien
+   en jeu réel sur la Route 1 (pas seulement en isolation headless), et que le combat de James se
+   lance normalement
+2. Confirmer la nouvelle disposition de Bourg Palette dans son ensemble (déplacements, tous les warps,
+   scène des Chaussures de Course jusqu'au bout), le Professeur Chen au labo, et l'absence de blocage
+   de la Jumelle à la sortie nord
+3. Entrer dans les 5 nouvelles maisons à leurs nouvelles positions (Mme Chen, Vieux Dresseur, Gardien
    de Route, volets fermés, Dame aux Baies) pour confirmer qu'aucune ne plante
-3. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
+4. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
    rencontre du rival à Bourg Palette 2F (texte, mise en scène) — toujours en attente de retour
-4. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
+5. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
    non prioritaire, contenu post-Ligue)
-5. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
-   utilisés près d'autres connexions de cartes ou d'autres PNJ du jeu (le bug de suite 20/23/25/26
-   n'est pas spécifique à Bourg Palette/Route 1/Chen — pourrait resurgir ailleurs)
-6. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
+6. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
+   utilisés près d'autres connexions de cartes ou d'autres PNJ du jeu (le bug de suite 20/23/25/26/28
+   n'est pas spécifique à Bourg Palette/Route 1/Chen/Rocket — pourrait resurgir ailleurs)
+7. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé

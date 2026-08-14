@@ -8,6 +8,20 @@ Route101_OnTransition:
 	call Route101_EventScript_UpdateTeamRocketVisibility
 	end
 
+@ Kanto Saison 1 (suite 28) : Jessie et James apparaissaient mal (Jessie invisible, James inaccessible,
+@ derrière un buisson décoratif) avec les graphismes d'origine OBJ_EVENT_GFX_ROCKET_F/M — testés en
+@ isolation en headless, ces deux graphismes provoquent une corruption mémoire importante sur cette
+@ carte dès qu'ils sont affichés, que ce soit par déclaration statique ou par `addobject` (les deux
+@ mécanismes testés, aucun des deux n'est fiable ici — contrairement au Professeur Chen en suite 23/25
+@ où `addobject` réglait le problème). Remplacés dans Route101/map.json par OBJ_EVENT_GFX_WOMAN_2
+@ (Jessie) et OBJ_EVENT_GFX_MAN_3 (James), deux graphismes génériques déjà utilisés sans souci
+@ ailleurs dans le jeu, avec des paletteSlot différents de celui du Professeur Chen (PALSLOT_NPC_4)
+@ présent sur cette même carte. James repositionné de (9,17) à (10,17) pour le sortir de la case
+@ décorative de buisson et l'aligner avec Miaouss (10,18) sur le chemin dégagé. Miaouss (sprite
+@ d'espèce, mécanisme différent) n'avait lui aucun problème et reste inchangé. Mécanisme de
+@ déclenchement revenu à la version d'origine (`clearflag` déclenché depuis OnTransition, comme
+@ PetalburgWoods qui utilisait les graphismes Rocket d'origine avec succès pour la scène Team
+@ Aqua/Devon).
 Route101_EventScript_UpdateTeamRocketVisibility::
 	goto_if_set FLAG_TEAM_ROCKET_ROUTE1_DEFEATED, Route101_EventScript_KeepTeamRocketHidden
 	goto_if_lt VAR_BIRCH_LAB_STATE, 3, Route101_EventScript_KeepTeamRocketHidden
