@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 
-Dernière mise à jour : 2026-08-13 (Session 4, suite 21)
+Dernière mise à jour : 2026-08-13 (Session 4, suite 22)
 
 ## TERMINÉ
 - [x] Phase 0 — Audit technique complet (voir PROJECT_ANALYSIS.md)
@@ -495,13 +495,23 @@ Dernière mise à jour : 2026-08-13 (Session 4, suite 21)
   LavaridgeTown) via une nouvelle fonction `Custom_EventScript_SetupRegisOnBikeGfxId`
 - [x] Build release validée, ROM 79,01 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 21)
+## Mise à jour Session 4 (suite 22) — Scène de rencontre du rival à Bourg Palette traduite
+- [x] Confirmé avant modification : le genre du joueur reste sélectionnable à la création de partie
+  (`src/oak_speech.c` intact) — la structure à 2 maisons miroir (May's/Brendan's House, qui détermine
+  laquelle est celle du rival selon le genre choisi) est donc légitime et volontairement conservée
+- [x] Les 8 textes du rival dans cette scène (accueil surprise, phrase courte, dialogue POKéDEX
+  post-Lilycove, "où aller ensuite") unifiés en une seule voix (Régis) et traduits en français ; les
+  variantes May/Brendan sont maintenant identiques mot pour mot
+- [x] Build release validée, ROM 79,01 %
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 22)
 1. Playtest de la nouvelle scène de sauvetage du Professeur Chen (positions/choix de mise en scène
    jamais vérifiés visuellement, seulement testés côté stabilité mémoire) — ajuster si le placement des
    PNJ ou le tracé de la course-poursuite semble incohérent en jeu
-2. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis)
-3. Reste du même audit May/Brendan : la scène de rencontre du rival à Bourg Palette (maison 2F, grosse
-   cutscene avec mouvements/PC) et l'appel post-Ligue de Mossdeep (encore en anglais, non prioritaire)
+2. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
+   rencontre du rival à Bourg Palette (texte, mise en scène)
+3. Dernier reliquat du même audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
+   non prioritaire, contenu post-Ligue)
 4. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement` déjà utilisés près
    d'autres connexions de cartes du jeu (le bug de suite 20 n'est pas spécifique à Bourg Palette/Route 1)
 5. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé

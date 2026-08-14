@@ -317,8 +317,8 @@ RivalsHouse_2F_Text_MayWhoAreYou:
 	.string "À plus, {PLAYER} !$"
 
 RivalsHouse_2F_Text_MayGettingReady:
-	.string "POKéMON fully restored!\n"
-	.string "Items ready, and…$"
+	.string "RÉGIS : Mes POKéMON sont en pleine\n"
+	.string "forme, j'ai tout ce qu'il faut, et…$"
 
 RivalsHouse_2F_Text_BrendanWhoAreYou:
 	.string "Hé ! C'est ma chambre, ça !\p"
@@ -331,41 +331,43 @@ RivalsHouse_2F_Text_BrendanWhoAreYou:
 	.string "À plus, {PLAYER} !$"
 
 RivalsHouse_2F_Text_BrendanGettingReady:
-	.string "POKéMON fully restored…\n"
-	.string "Items all packed, and…$"
+	.string "RÉGIS : Mes POKéMON sont en pleine\n"
+	.string "forme, j'ai tout ce qu'il faut, et…$"
 
 RivalsHouse_2F_Text_ItsRivalsPokeBall:
-	.string "It's {RIVAL}'s POKé BALL!\p"
-	.string "Better leave it right where it is.$"
+	.string "C'est la POKé BALL de {RIVAL} !\p"
+	.string "Mieux vaut la laisser où elle est.$"
 
 RivalsHouse_2F_Text_MayJustCheckingMyPokedex:
-	.string "MAY: {PLAYER}{KUN}!\p"
-	.string "I was just checking my POKéDEX.\p"
-	.string "There's still a lot of POKéMON that\n"
-	.string "I've seen but haven't caught.\p"
-	.string "And there are many others that\n"
-	.string "I think will evolve.\p"
-	.string "I wonder where I should go catch\n"
-	.string "some POKéMON next?$"
+	.string "RÉGIS : {PLAYER}{KUN} !\p"
+	.string "Je regardais mon POKéDEX.\p"
+	.string "Il me reste encore pas mal de\n"
+	.string "POKéMON aperçus mais pas attrapés.\p"
+	.string "Et j'en vois plusieurs qui vont\n"
+	.string "sûrement bientôt évoluer.\p"
+	.string "Je me demande où aller en chercher\n"
+	.string "la prochaine fois…$"
 
 RivalsHouse_2F_Text_MayWhereShouldIGoNext:
-	.string "MAY: I wonder where I should go catch\n"
-	.string "some POKéMON next?\p"
-	.string "Wouldn't it be funny if we ran into each\n"
-	.string "other, {PLAYER}{KUN}?$"
+	.string "RÉGIS : Je me demande où aller\n"
+	.string "chercher des POKéMON la prochaine\l"
+	.string "fois…\p"
+	.string "Ce serait marrant si on tombait\n"
+	.string "l'un sur l'autre, {PLAYER}{KUN} !$"
 
 RivalsHouse_2F_Text_BrendanJustCheckingMyPokedex:
-	.string "BRENDAN: Hey, it's {PLAYER}.\p"
-	.string "I was just checking out my POKéDEX.\p"
-	.string "There are still many POKéMON that\n"
-	.string "I need to catch, I know, but this\l"
-	.string "is looking pretty good.\p"
-	.string "Checking this POKéDEX out gives me\n"
-	.string "the urge to hit the road again.$"
+	.string "RÉGIS : {PLAYER}{KUN} !\p"
+	.string "Je regardais mon POKéDEX.\p"
+	.string "Il me reste encore pas mal de\n"
+	.string "POKéMON aperçus mais pas attrapés.\p"
+	.string "Et j'en vois plusieurs qui vont\n"
+	.string "sûrement bientôt évoluer.\p"
+	.string "Je me demande où aller en chercher\n"
+	.string "la prochaine fois…$"
 
 RivalsHouse_2F_Text_BrendanWhereShouldIGoNext:
-	.string "BRENDAN: I'm having a hard time deciding\n"
-	.string "where I should catch POKéMON next.\p"
-	.string "Hey, {PLAYER}, if I see you while I'm out\n"
-	.string "catching POKéMON, I can pitch you a\l"
-	.string "battle if you'd like.$"
+	.string "RÉGIS : Je me demande où aller\n"
+	.string "chercher des POKéMON la prochaine\l"
+	.string "fois…\p"
+	.string "Ce serait marrant si on tombait\n"
+	.string "l'un sur l'autre, {PLAYER}{KUN} !$"

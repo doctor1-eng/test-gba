@@ -730,3 +730,25 @@ donnée à la Route 119, sur consigne de Thomas, contenu actif tôt dans le jeu.
 - Reste dans le backlog (non traité cette suite) : la scène de rencontre du rival à Bourg Palette
   (maison 2F, cutscene complète avec mouvements et PC) et l'appel post-Ligue de Mossdeep (contenu
   encore en anglais)
+
+## Session 4 (suite 22) — Scène de rencontre du rival à Bourg Palette (maison 2F) traduite
+
+Deuxième gros morceau du même audit May/Brendan. Point important vérifié avant de toucher au code :
+le genre du joueur reste bien sélectionnable à la création de partie (`src/oak_speech.c`, écran de
+choix garçon/fille intact), donc la structure à deux maisons miroir (`LittlerootTown_MaysHouse_2F` /
+`LittlerootTown_BrendansHouse_2F`, qui détermine laquelle est "chez toi" et laquelle est "chez le
+rival" selon le genre choisi) reste un mécanisme légitime et n'a pas été touchée. Seul le contenu du
+PERSONNAGE rival (son texte, sa personnalité) a été unifié : quelle que soit la maison où on le
+rencontre, c'est toujours Régis, avec une seule voix.
+- Les 8 textes du rival (accueil surprise dans sa chambre, phrase courte en le recroisant, dialogue
+  post-Lilycove sur le POKéDEX, phrase de "où aller ensuite") vivaient tous dans un seul fichier
+  (`LittlerootTown_MaysHouse_2F/scripts.inc`, référencés depuis les deux maisons via labels `::`
+  globaux — convention déjà en place dans le fichier). Les variantes "May" et "Brendan" de chaque
+  texte sont maintenant identiques mot pour mot (voix de Régis, cf. Route 103/Route 119), les 5 qui
+  étaient encore en anglais ont été traduites
+- Aucune restructuration de script (pas de fusion des `EventScript_TryUpdateMayPos`/
+  `CheckSetReadyToMeetMay`/`CheckInitDecor`/`EventScript_PC` : ces fonctions décident laquelle des deux
+  maisons est celle du rival selon le genre du joueur, toujours nécessaire)
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,01 %)
+- Reste dans le backlog : l'appel post-Ligue de Mossdeep (`MossdeepCity_SpaceCenter_2F`, contenu
+  entièrement en anglais, hors priorité)
