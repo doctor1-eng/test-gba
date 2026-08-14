@@ -73,29 +73,13 @@ LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent::
 
 LittlerootTown_EventScript_SetTwinPos::
 	goto_if_eq VAR_LITTLEROOT_TOWN_STATE, 0, LittlerootTown_EventScript_SetTwinGuardingRoutePos
-	setobjectxyperm LOCALID_LITTLEROOT_TWIN, 10, 1
+	setobjectxyperm LOCALID_LITTLEROOT_TWIN, 18, 1
 	setobjectmovementtype LOCALID_LITTLEROOT_TWIN, MOVEMENT_TYPE_FACE_UP
 	return
 
 LittlerootTown_EventScript_SetTwinGuardingRoutePos::
-	setobjectxyperm LOCALID_LITTLEROOT_TWIN, 7, 2
+	setobjectxyperm LOCALID_LITTLEROOT_TWIN, 17, 2
 	setobjectmovementtype LOCALID_LITTLEROOT_TWIN, MOVEMENT_TYPE_FACE_DOWN
-	return
-
-LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos::
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
-	setobjectmovementtype LOCALID_LITTLEROOT_MOM, MOVEMENT_TYPE_FACE_DOWN
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetMomInFrontOfDoorMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_SetMomInFrontOfDoorFemale
-	return
-
-LittlerootTown_EventScript_SetMomInFrontOfDoorMale::
-	setobjectxyperm LOCALID_LITTLEROOT_MOM, 5, 9
-	return
-
-LittlerootTown_EventScript_SetMomInFrontOfDoorFemale::
-	setobjectxyperm LOCALID_LITTLEROOT_MOM, 14, 9
 	return
 
 LittlerootTown_OnFrame:
@@ -132,13 +116,13 @@ LittlerootTown_EventScript_SetRivalBirchPosForDexUpgrade::
 	end
 
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeMale::
-	setobjectxy LOCALID_LITTLEROOT_RIVAL, 6, 10
-	setobjectxy LOCALID_LITTLEROOT_BIRCH, 5, 10
+	setobjectxy LOCALID_LITTLEROOT_RIVAL, 10, 9
+	setobjectxy LOCALID_LITTLEROOT_BIRCH, 11, 9
 	end
 
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeFemale::
-	setobjectxy LOCALID_LITTLEROOT_RIVAL, 13, 10
-	setobjectxy LOCALID_LITTLEROOT_BIRCH, 14, 10
+	setobjectxy LOCALID_LITTLEROOT_RIVAL, 10, 9
+	setobjectxy LOCALID_LITTLEROOT_BIRCH, 11, 9
 	end
 
 LittlerootTown_EventScript_FatMan::
@@ -225,116 +209,111 @@ LittlerootTown_EventScript_PlayersHouseSignFemale::
 	msgbox LittlerootTown_Text_PlayersHouse, MSGBOX_DEFAULT
 	return
 
-@ Kanto Saison 1 (suite 27) : scène des Chaussures de Course réécrite pour être indépendante de la
-@ position exacte des maisons — l'ancienne version codait en dur une douzaine de trajets de marche
-@ (nombre de pas précis) calibrés sur les anciennes coordonnées de porte, ce qui l'aurait cassée dès
-@ qu'on déplace une maison. Maman apparaît maintenant directement à un point fixe du chemin d'entrée
-@ (indépendant de la position de sa maison), sans trajet de marche à recalculer.
-LittlerootTown_EventScript_GiveRunningShoesTrigger::
-	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetHomeDoorCoordsMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_SetHomeDoorCoordsFemale
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	setobjectxy LOCALID_LITTLEROOT_MOM, 9, 2
-	turnobject LOCALID_LITTLEROOT_MOM, DIR_EAST
-	msgbox LittlerootTown_Text_WaitPlayer, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_LITTLEROOT_MOM, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	call LittlerootTown_EventScript_GiveRunningShoes
-	removeobject LOCALID_LITTLEROOT_MOM
-	goto LittlerootTown_EventScript_SetReceivedRunningShoes
-	end
-
-LittlerootTown_EventScript_SetHomeDoorCoordsMale::
-	setvar VAR_0x8009, 4
-	setvar VAR_0x800A, 5
+@ Kanto Saison 1 (suite 30) : scène des cadeaux de Maman réécrite pour se dérouler devant le Labo,
+@ juste après la visite au Professeur Chen (VAR_LITTLEROOT_TOWN_STATE == 3, positionné dès l'entrée
+@ sur la carte via LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos, appelé depuis
+@ LittlerootTown_OnTransition). Maman se tient à droite de la porte du Labo et remet, en une seule
+@ visite, les Chaussures de Course, le Vélo et la Canne à Pêche.
+LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos::
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	setobjectmovementtype LOCALID_LITTLEROOT_MOM, MOVEMENT_TYPE_FACE_DOWN
+	setobjectxyperm LOCALID_LITTLEROOT_MOM, 26, 8
 	return
-
-LittlerootTown_EventScript_SetHomeDoorCoordsFemale::
-	setvar VAR_0x8009, 17
-	setvar VAR_0x800A, 11
-	return
-
-LittlerootTown_Movement_MomExitThroughDoor:
-	walk_up
-	step_end
 
 LittlerootTown_EventScript_Mom::
 	lock
 	faceplayer
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetHomeDoorCoordsMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_SetHomeDoorCoordsFemale
-	call LittlerootTown_EventScript_GiveRunningShoes
-	applymovement LOCALID_LITTLEROOT_MOM, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	opendoor VAR_0x8009, VAR_0x800A
-	waitdooranim
-	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomExitThroughDoor
-	waitmovement 0
-	hideobjectat LOCALID_LITTLEROOT_MOM, MAP_LITTLEROOT_TOWN
-	closedoor VAR_0x8009, VAR_0x800A
-	waitdooranim
-	goto LittlerootTown_EventScript_SetReceivedRunningShoes
+	goto_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_MomGiveGiftsOutsideLab
+	msgbox LittlerootTown_Text_MomGenericChat, MSGBOX_DEFAULT
+	release
 	end
 
-LittlerootTown_EventScript_SetReceivedRunningShoes::
-	removeobject LOCALID_LITTLEROOT_MOM
-	setflag FLAG_SYS_B_DASH
+LittlerootTown_EventScript_MomGiveGiftsOutsideLab::
+	msgbox LittlerootTown_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
+	call LittlerootTown_EventScript_GiveRunningShoes
+	call LittlerootTown_EventScript_GiveBicycle
+	call LittlerootTown_EventScript_GiveFishingRod
+	msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
 	release
 	end
 
 LittlerootTown_EventScript_GiveRunningShoes::
-	msgbox LittlerootTown_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	message LittlerootTown_Text_SwitchShoesWithRunningShoes
 	waitfanfare
 	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
 	msgbox LittlerootTown_Text_ExplainRunningShoes, MSGBOX_DEFAULT
-	msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
 	closemessage
-	delay 30
+	delay 20
 	return
 
-LittlerootTown_Text_WaitPlayer:
-	.string "MOM: Wait, {PLAYER}!$"
+LittlerootTown_EventScript_GiveBicycle::
+	giveitem_msg LittlerootTown_Text_ObtainedBicycle, ITEM_MACH_BIKE, 1, MUS_OBTAIN_ITEM
+	closemessage
+	delay 20
+	return
+
+LittlerootTown_EventScript_GiveFishingRod::
+	giveitem_msg LittlerootTown_Text_ObtainedFishingRod, ITEM_OLD_ROD, 1, MUS_OBTAIN_ITEM
+	setflag FLAG_RECEIVED_OLD_ROD
+	closemessage
+	delay 20
+	return
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
-	.string "introduce yourself to PROF. BIRCH?\p"
-	.string "Oh! What an adorable POKéMON!\n"
-	.string "You got it from PROF. BIRCH. How nice!\p"
-	.string "You're your father's child, all right.\n"
-	.string "You look good together with POKéMON!\p"
-	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+	.string "MAMAN : {PLAYER} ! {PLAYER} !\n"
+	.string "Tu t'es bien présenté(e) au\l"
+	.string "Professeur Chen ?\p"
+	.string "Oh ! Quel adorable POKéMON !\n"
+	.string "Tu l'as eu grâce au Professeur Chen.\l"
+	.string "Comme c'est gentil de sa part !\p"
+	.string "Tu es vraiment digne de ton père,\n"
+	.string "tu vas bien avec les POKéMON !\p"
+	.string "Tiens, mon cœur ! Puisque tu pars à\n"
+	.string "l'aventure, prends aussi tout ça.$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
-	.string "{PLAYER} switched shoes with the\n"
-	.string "RUNNING SHOES.$"
+	.string "{PLAYER} a échangé ses chaussures\n"
+	.string "contre les CHAUSSURES DE COURSE.$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "MOM: {PLAYER}, those shoes came with\n"
-	.string "instructions.\p"
-	.string "“Press the B Button while wearing these\n"
-	.string "RUNNING SHOES to run extra-fast!\p"
-	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
+	.string "MAMAN : {PLAYER}, ces chaussures\n"
+	.string "sont livrées avec un mode d'emploi.\p"
+	.string "“Maintiens le bouton B en portant ces\n"
+	.string "CHAUSSURES DE COURSE pour courir\l"
+	.string "bien plus vite !\p"
+	.string "Enfile ces CHAUSSURES DE COURSE\n"
+	.string "et fonce à travers la nature !”$"
+
+LittlerootTown_Text_ObtainedBicycle:
+	.string "MAMAN : Et prends aussi ce VÉLO !\p"
+	.string "Il ira parfaitement avec tes nouvelles\n"
+	.string "chaussures pour explorer plus vite.$"
+
+LittlerootTown_Text_ObtainedFishingRod:
+	.string "MAMAN : Et enfin, cette CANNE À\n"
+	.string "PÊCHE !\p"
+	.string "Ton père l'utilisait beaucoup, elle\n"
+	.string "pourrait bien te servir en chemin.$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
-	.string "To think that you have your very own\n"
-	.string "POKéMON now…\l"
-	.string "Your father will be overjoyed.\p"
-	.string "…But please be careful.\n"
-	.string "If anything happens, you can come home.\p"
-	.string "Go on, go get them, honey!$"
+	.string "Dire que tu as maintenant ton propre\n"
+	.string "POKéMON…\l"
+	.string "Ton père va être fou de joie.\p"
+	.string "…Mais fais bien attention.\n"
+	.string "S'il arrive quoi que ce soit, tu peux\l"
+	.string "toujours rentrer à la maison.\p"
+	.string "Allez, va les chercher, mon cœur !$"
+
+LittlerootTown_Text_MomGenericChat:
+	.string "MAMAN : Fais attention à toi, et\n"
+	.string "n'oublie pas d'appeler de temps en\l"
+	.string "temps !$"
 
 LittlerootTown_Text_CanUsePCToStoreItems:
 	.string "If you use a PC, you can store items\n"

@@ -1165,3 +1165,58 @@ cartes de zéro (plutôt que de réutiliser des cartes existantes) pour rester f
   dans des groupes autres que le groupe 0
 
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,03 %)
+
+## Session 4 (suite 30) — Bourg Palette refaite (village côtier), cadeaux de Maman, Multi-Exp, soin instantané
+
+Thomas a fourni un nouveau plan HTML plus abouti pour Bourg Palette (collines, ruisseau, côte rocheuse,
+plage, bâtiments mieux espacés) et demandé plusieurs changements de confort de jeu. Les 4 autres plans
+HTML fournis dans le même message (Route 1, Jadielle, Forêt de Jade, Argenta) sont volontairement
+laissés de côté pour des sessions dédiées — Thomas a confirmé vouloir se concentrer sur Bourg Palette
+cette fois-ci, chacune de ces cartes représentant un chantier de l'ampleur du Mont Sélénite à elle seule.
+
+**1. Bourg Palette entièrement refaite en 34×26 (village côtier)**
+- Régénérée en Python depuis l'algorithme du plan HTML (`carve`/`blob`/tracé de rivière réimplémentés),
+  avec une palette de tuiles vérifiées directement dans le jeu de base : herbe/chemin/collines/panneau
+  du tileset déjà utilisé par Bourg Palette (`General`+`Petalburg`), complétées par de vraies tuiles de
+  mer/plage puisées dans le tileset `General` primaire (partagé par toutes les cartes, y compris celles
+  qui n'utilisent pas de tileset secondaire côtier) — pas de nouveau tileset nécessaire
+- Collines à l'ouest, ruisseau du nord au sud, côte rocheuse et plage complète au sud (contrairement à
+  la mare simplifiée de suite 27, l'eau ici est une vraie mer avec son comportement de jeu standard :
+  infranchissable sans Surf, pas de mur artificiel nécessaire)
+- Les 8 bâtiments (Labo + 7 maisons, tous déjà existants depuis les suites 24/27) repositionnés selon
+  le nouveau plan, en réutilisant tels quels les blocs de tuiles bruts déjà éprouvés (aucune nouvelle
+  carte d'intérieur nécessaire — seules les coordonnées de porte côté Bourg Palette changent)
+- Connexion vers la Route 1 recalculée (nouvel `offset` sur les deux cartes) pour que le nouveau couloir
+  d'entrée (recentré) s'aligne avec le couloir existant sur la Route 1, inchangé
+- PNJ, panneaux et le point de garde de la Jumelle repositionnés en conséquence
+
+**2. Nouvelle scène : Maman remet Chaussures de Course + Vélo + Canne à Pêche**
+- Se déclenche désormais juste après la visite complète au Labo (`VAR_LITTLEROOT_TOWN_STATE == 3`,
+  déjà utilisé par le jeu de base à ce moment précis) plutôt qu'en sortant du village — Maman apparaît
+  directement à droite de la porte du Labo et remet les trois objets en une seule conversation
+  (`ITEM_MACH_BIKE`, `ITEM_OLD_ROD`, en plus des Chaussures de Course qui restent un déblocage de
+  capacité via `FLAG_SYS_B_DASH`, pas un objet d'inventaire)
+- Ancien mécanisme (déclenchement automatique en marchant vers la sortie nord, calibré sur des
+  positions de porte désormais obsolètes) entièrement retiré ; les textes de cette scène, restés en
+  anglais depuis l'origine du projet, traduits en français au passage
+
+**3. Autres corrections de confort**
+- Animation de soin au Centre Pokémon (Poké Balls clignotantes sur la machine) supprimée — le soin
+  reste complet et instantané, juste sans l'attente visuelle, dans `data/scripts/pkmn_center_nurse.inc`
+  (fichier partagé par tous les Centres Pokémon actifs du hack)
+- Multi-Exp activé en permanence dès une nouvelle partie (toute l'équipe gagne de l'XP même sans avoir
+  combattu, sans avoir besoin de l'objet) via `I_EXP_SHARE_FLAG` (mécanisme déjà prévu par
+  pokeemerald-expansion) pointé vers un nouveau flag toujours actif dès `new_game.inc`
+- Audit de traduction : le texte de revanche d'Ondine dans `RustboroCity_Gym/scripts.inc` (resté au nom
+  et aux répliques anglaises d'origine malgré la conversion Roxanne → Ondine de suite 32) corrigé.
+  **Audit non exhaustif** : une recherche large a fait remonter un volume important de dialogues encore
+  en anglais dans des PNJ secondaires à travers tout le jeu (Rustboro/Azuria, Petalburg/Argenta,
+  Route104, forêt de Jade, etc.) — un passage de traduction complet du jeu est un chantier à part
+  entière, largement hors de portée de cette seule suite, et non traité ici au-delà du cas Ondine
+
+**4. Vérification headless**
+- **0 instance de "Bad memory"** sur l'ensemble des tests (extérieur, côte/mer, entrée au labo,
+  scène complète des cadeaux de Maman avec dialogue en français confirmé à l'écran)
+- Compilation propre avec les 4 changements de confort (Multi-Exp, soin instantané, textes Ondine)
+
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,03 %)

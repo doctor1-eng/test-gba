@@ -633,23 +633,45 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   correctement, connexion Argenta ⇄ Mont Sélénite traversée dans les deux sens
 - [x] Build release validée, ROM 79,03 %
 
-## PROCHAINES ÉTAPES (mise à jour Session 4 suite 29)
-1. **Playtest réel prioritaire** : parcourir le Mont Sélénite en jeu réel de bout en bout (les 2
-   entrées, les 4 échelles inter-niveaux, les 2 fossiles, la zone secrète, la sortie vers la Route 4) —
-   seule une vérification headless partielle a été faite (navigation complète bloquée par les limites
-   du menu de débogage pour les cartes hors groupe 0)
-2. Confirmer que Jessie/James/Miaouss s'affichent et s'enchaînent bien en jeu réel sur la Route 1, et
+## Mise à jour Session 4 (suite 30) — Bourg Palette côtière, cadeaux de Maman, Multi-Exp, soin instantané
+- [x] Bourg Palette refaite en 34×26 depuis le nouveau plan HTML de Thomas (collines, ruisseau, côte
+  rocheuse, plage réelle avec comportement de mer standard, 8 bâtiments repositionnés) — les 4 autres
+  plans fournis (Route 1, Jadielle, Forêt de Jade, Argenta) volontairement remis à plus tard
+- [x] Nouvelle scène : Maman apparaît à droite de la porte du Labo juste après la visite complète au
+  Pr. Chen, remet Chaussures de Course + Vélo (`ITEM_MACH_BIKE`) + Canne à Pêche (`ITEM_OLD_ROD`) en
+  une seule conversation, entièrement traduite en français (l'ancien texte était resté en anglais)
+- [x] Animation de soin au Centre Pokémon supprimée (soin toujours complet, juste instantané)
+- [x] Multi-Exp activé en permanence dès une nouvelle partie (toute l'équipe gagne de l'XP sans avoir
+  combattu, sans objet à porter)
+- [x] Texte de revanche d'Ondine dans RustboroCity_Gym corrigé (était resté au nom "Roxanne" en anglais)
+- [x] Vérifié en headless : 0 plantage, côte/mer rendue correctement, entrée au labo fonctionnelle,
+  scène complète des cadeaux de Maman avec dialogue français confirmé à l'écran
+- [x] Build release validée, ROM 79,03 %
+- [ ] **Audit de traduction non exhaustif** : une recherche large a révélé un volume important de
+  dialogues encore en anglais chez des PNJ secondaires dans plusieurs zones déjà actives du hack
+  (Azuria/Rustboro, Argenta/Petalburg, Route104, forêt de Jade…) — seul le cas Ondine a été corrigé
+  cette suite ; un passage de traduction complet reste à planifier comme chantier dédié
+
+## PROCHAINES ÉTAPES (mise à jour Session 4 suite 30)
+1. **Playtest réel prioritaire** : parcourir la nouvelle Bourg Palette de bout en bout (tous les warps,
+   la scène complète des cadeaux de Maman, l'absence de blocage de la Jumelle, la côte/plage) — et
+   confirmer que le Multi-Exp et le soin instantané fonctionnent bien en jeu réel
+2. Planifier un chantier de traduction dédié : lister systématiquement les `.string` encore en anglais
+   dans les cartes déjà actives du hack (voir suite 30) avant de s'attaquer aux 4 autres régions
+3. Implémenter les 4 autres régions du plan de Thomas (Route 1/Grande Plaine, Jadielle, Forêt de Jade,
+   Argenta+Massif Rocheux) une par une, chacune de l'ampleur du Mont Sélénite
+4. Parcourir le Mont Sélénite en jeu réel de bout en bout (les 2 entrées, les 4 échelles inter-niveaux,
+   les 2 fossiles, la zone secrète, la sortie vers la Route 4) — seule une vérification headless
+   partielle a été faite jusqu'ici
+5. Confirmer que Jessie/James/Miaouss s'affichent et s'enchaînent bien en jeu réel sur la Route 1, et
    que le combat de James se lance normalement
-3. Confirmer la nouvelle disposition de Bourg Palette dans son ensemble (déplacements, tous les warps,
-   scène des Chaussures de Course jusqu'au bout), le Professeur Chen au labo, et l'absence de blocage
-   de la Jumelle à la sortie nord
-4. Entrer dans les 5 nouvelles maisons à leurs nouvelles positions (Mme Chen, Vieux Dresseur, Gardien
-   de Route, volets fermés, Dame aux Baies) pour confirmer qu'aucune ne plante
-5. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
+6. Entrer dans les 5 maisons de Bourg Palette à leurs nouvelles positions (Mme Chen, Vieux Dresseur,
+   Gardien de Route, volets fermés, Dame aux Baies) pour confirmer qu'aucune ne plante
+7. Playtest du nouveau combat de Route 119 (texte, équilibrage de l'équipe de Régis) et de la scène de
    rencontre du rival à Bourg Palette 2F (texte, mise en scène) — toujours en attente de retour
-6. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
+8. Dernier reliquat de l'audit May/Brendan : l'appel post-Ligue de Mossdeep (encore en anglais,
    non prioritaire, contenu post-Ligue)
-7. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
+9. Envisager, en tâche de fond non urgente, un audit plus large des `applymovement`/`addobject` déjà
    utilisés près d'autres connexions de cartes ou d'autres PNJ du jeu (le bug de suite 20/23/25/26/28
    n'est pas spécifique à Bourg Palette/Route 1/Chen/Rocket — pourrait resurgir ailleurs)
-8. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé
+10. Tout le reste de la liste ci-dessus (suite 18/19) reste valable et inchangé

@@ -57,7 +57,7 @@
 #define FLAG_ONDINE_ROUTE2_DEFEATED    0x23 // Custom : première rencontre Ondine résolue, rivale récurrente
 #define FLAG_MT_SELENITE_FOSSIL_TAKEN    0x24 // Custom : un fossile du Mont Sélénite a déjà été pris (les deux gisements partagent ce flag)
 #define FLAG_MT_SELENITE_RARE_MON_TAKEN    0x25 // Custom : le Pokémon rare de la zone secrète du Mont Sélénite a déjà été pris
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_SYS_MULTI_EXP_SHARE    0x26 // Custom : Multi-Exp actif en permanence (Kanto Saison 1)
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
