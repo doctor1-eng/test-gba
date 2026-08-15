@@ -1393,3 +1393,53 @@ utiliser les tuiles Kanto — la carte de test isolée de suite 32 reste en plac
 **5. Suite**
 - Retour de Thomas attendu avant d'enchaîner les 13 autres villes une par une (jamais toutes d'un
   coup, toujours un état compilable entre deux, comme convenu)
+
+## Session 5 (suite 34) — refonte du système de génération de cartes
+
+Suite au retour de Thomas sur le rendu de "suite 33" (comparaison avec une carte de référence de
+qualité professionnelle) : le problème n'était pas une carte à corriger, mais le générateur
+lui-même. Diagnostic et refonte complète, détaillés dans `TECHNICAL_ARCHITECTURE.md` §"Pipeline
+structuré de génération de cartes".
+
+**Diagnostic (causes racines identifiées)**
+- **Bug critique découvert** : aucune carte construite cette session (suite 32 et 33 comprises)
+  ne posait le bit de collision — seule l'élévation était écrite dans `map.bin`. Murs, toits,
+  arbres et collines du tileset Kanto portent le comportement `MB_FRLG_NORMAL` (pas de blocage
+  intrinsèque), donc **tout était traversable en jeu** malgré une apparence de mur solide en
+  preview PNG statique. Invisible sans test headless réel.
+- Composition des bâtiments ad hoc (tuile par tuile, à la main), sans garantie structurelle qu'un
+  toit corresponde au mur du dessous, qu'une porte existe et soit accessible, ou qu'aucun bâtiment
+  ne soit recouvert par la végétation posée après coup
+- Aucune vérification automatisée au-delà d'une relecture visuelle de la preview PNG
+
+**Système construit (`tools/kanto_tileset_port/`)**
+- `tile_catalog.py` : 4 archétypes de bâtiment réutilisables et vérifiés tuile par tuile
+  (PC_STYLE toit bleu, MART_STYLE toit rouge brique, GYM_STYLE brique claire, LAB_STYLE façade
+  bleue arquée), chacun avec ses rangées toit/mur/porte définies explicitement
+- `map_builder.py` (`MapGrid`) : grille de collision désormais **distincte** de la grille de
+  tuiles — corrige le bug critique ci-dessus. Chaque fonction `build_*_style()` peint le bâtiment
+  entier (murs/toit `IMPASSABLE`), calcule et repasse la porte `PASSABLE`, puis l'enregistre pour
+  le validateur. Tracé de ligne remplacé par un vrai Bresenham (`thin_line`, plus de chevauchement
+  de rectangles)
+- **Validateur automatisé** (`MapGrid.validate()`) : vérifie que chaque porte enregistrée est
+  desservie par un chemin adjacent ET marquée franchissable ; correction automatique
+  (`ensure_door_path`) si besoin ; le script de génération refuse d'écrire la carte
+  (`sys.exit(1)`) si des erreurs persistent après correction
+- Pipeline en ordre strict : relief → eau → routes (avant les bâtiments) → bâtiments → raccordement
+  porte↔route explicite par bâtiment → végétation groupée → validation → écriture
+
+**Bourg Palette régénérée avec ce pipeline**
+- Les 8 bâtiments (Labo + 7 maisons) reconstruits avec des archétypes visuellement distincts et
+  cohérents, tous validés (porte visible, accessible, connectée à la route principale)
+- Bug PNJ à position codée en dur découvert et corrigé : `LittlerootTown_EventScript_
+  SetTwinGuardingRoutePos` (scripts.inc) plaçait la Jumelle à (17,2), tombant dans l'empreinte
+  du premier placement du bâtiment "mystery" (gym-style) — corrigé en déplaçant le bâtiment
+  (x=10 au lieu de x=14) plutôt que le script de jeu lié à la progression
+- Warps et panneau de la maison aux volets fermés réajustés à la nouvelle position de porte (11,5)
+- Build propre (`make MODERN=1`, exit 0) ; test headless confirmant que la collision bloque
+  désormais réellement le joueur contre un mur de bâtiment (régression testée : 5 appuis HAUT
+  contre un mur → 0 déplacement, contre un passage libre avant le correctif)
+
+**Suite**
+- Preview PNG régénérée et ROM à livrer à Thomas pour validation avant d'enchaîner les 13 autres
+  villes avec ce même pipeline, une à la fois

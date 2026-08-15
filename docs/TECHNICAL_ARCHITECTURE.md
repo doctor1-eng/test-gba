@@ -223,3 +223,101 @@ chaque ID candidat un par un, avec le numéro incrusté sur l'image par le code 
 6. Composer la carte réelle metatile par metatile (§3e), rebuild, preview PNG de la carte complète,
    test headless (marche, collision eau, `grep -c "Bad memory"` = 0) avant de considérer la ville
    comme prête
+
+## Pipeline structuré de génération de cartes (suite 34)
+
+Refonte demandée après retour de Thomas sur le premier rendu de Bourg Palette (§ci-dessus, "suite 33") :
+le résultat ressemblait à des sprites posés au hasard plutôt qu'à une vraie carte Pokémon construite
+par un level designer. Cette section documente le diagnostic et le système qui remplace l'approche
+précédente — à réutiliser telle quelle pour les 13 autres villes.
+
+### Diagnostic : pourquoi l'ancienne approche produisait un résultat incohérent
+
+Trois causes racines identifiées dans le code de génération de "suite 33" :
+
+1. **Aucun bit de collision jamais posé.** Seule l'élévation (`3<<12`) était écrite dans `map.bin` ;
+   le bit de collision (`MAPGRID_COLLISION_MASK`, `0x0C00`) restait à 0 partout. Or les tuiles de
+   mur/toit/arbre/colline du tileset Kanto portent toutes le comportement `MB_FRLG_NORMAL` (aucun
+   blocage intrinsèque) — sans le bit de collision explicite, un joueur traversait murs, arbres et
+   collines sans obstacle. Ce bug était invisible en preview PNG statique (qui ne rend que les
+   tuiles, pas la collision) et ne se voyait qu'en jouant.
+2. **Pose de tuiles ad hoc, sans notion de "bâtiment".** Chaque maison était composée à la main,
+   ligne par ligne, sans structure réutilisable garantissant qu'un toit correspondait bien au mur
+   du dessous, qu'une porte existait et étai vraiment accessible, ou qu'aucune construction ne
+   débordait de la carte. Rien n'empêchait techniquement une porte "orpheline" (non desservie par un
+   chemin) ou un bâtiment partiellement recouvert par la végétation posée après coup.
+3. **Aucune vérification automatisée.** Le seul contrôle qualité était une relecture visuelle de la
+   preview PNG — suffisant pour repérer une tuile d'eau qui strie, pas pour garantir que les 7-8
+   bâtiments d'une ville sont tous accessibles et cohérents entre eux.
+
+### Architecture de correction (implémentée, `tools/kanto_tileset_port/`)
+
+Trois modules remplacent le script ad hoc unique de suite 33 :
+
+- **`tile_catalog.py`** — catalogue de metatiles vérifiés individuellement (jamais par comptage de
+  colonnes sur une planche, cf. §3e). Regroupe le terrain (`TERRAIN`), les portes walkable
+  confirmées (`DOORS`), et quatre **archétypes de bâtiment** prêts à l'emploi : `PC_STYLE` (toit
+  bleu + dortoir à emblème Poké Ball), `MART_STYLE` (toit rouge brique, porte à emblème rouge),
+  `GYM_STYLE` (brique claire, tuiles `337`/`320` explicitement exclues — texte "GYM" incrusté et
+  comportement de warp incrusté, inadaptés à un mur générique), `LAB_STYLE` (façade brique/fenêtres
+  bleues arquées, 7 cases de large). Chaque archétype définit ses rangées toit/mur/porte comme des
+  listes de tile IDs, avec `"DOOR"` comme placeholder résolu au moment de la construction.
+- **`map_builder.py`** — classe `MapGrid` qui remplace la simple grille de tuiles par **deux grilles
+  parallèles** (`self.tiles` et `self.collision`), corrigeant la cause racine n°1 : chaque primitive
+  de dessin (`rect`, `hline`, `vline`, `blob`, `thin_line`) accepte un paramètre `collision` optionnel,
+  et les fonctions `build_pc_style`/`build_mart_style`/`build_gym_style`/`build_lab` peignent le
+  bâtiment complet (toutes rangées toit+mur marquées `IMPASSABLE`), calculent la position de la
+  porte automatiquement, la remarquent explicitement `PASSABLE`, puis **enregistrent le bâtiment
+  dans `self.buildings`** pour le validateur. `thin_line()` utilise un vrai algorithme de Bresenham
+  (un seul tampon par point de ligne) — l'ancienne fonction de rivière empilait un rectangle à
+  chaque micro-pas d'interpolation, produisant une bande d'eau bien plus large que prévu.
+- **`MapGrid.validate()`** — le validateur automatisé demandé : pour chaque bâtiment enregistré,
+  vérifie qu'au moins une case adjacente à la porte est un chemin/sable (`errors.append(...)` sinon)
+  ET que la porte elle-même est bien marquée `PASSABLE`. `ensure_door_path()` fournit la correction
+  automatique (pose un chemin devant une porte isolée) si le premier passage échoue. Le script de
+  génération d'une ville (`build_littleroot.py`) refuse d'écrire `map.bin` (`sys.exit(1)`) si des
+  erreurs persistent après correction automatique — aucune carte avec porte orpheline ne peut être
+  livrée.
+
+### Ordre du pipeline (`build_littleroot.py`, à dupliquer par ville)
+
+Ordre strict, chaque étape ne redessinant jamais ce qu'une étape précédente a posé sans raison :
+1. Relief (collines) → 2. Eau (rivière + mer + berges) → 3. Routes principales (AVANT les bâtiments,
+qui viennent ensuite s'y raccorder, jamais l'inverse) → 4. Bâtiments (archétypes, empreinte + porte
+complètes) → 5. Segments de raccordement porte→route explicites (`connect_door_to_path`, un appel par
+bâtiment, pas de raccordement laissé au hasard) → 6. Végétation (groupée en amas via `tree_blob`/`blob`,
+jamais tuile-par-tuile aléatoire) → 7. Validation (§ci-dessus) → 8. Écriture `map.bin`/`border.bin`.
+
+**Piège découvert et corrigé pendant la construction de Bourg Palette** : la végétation posée à
+l'étape 6 peut recouvrir un bâtiment de l'étape 4 si les coordonnées ne sont pas vérifiées à la main
+(un amas de sapins centré près d'un mur de bâtiment corrompt visuellement sa façade). Le validateur
+actuel ne détecte QUE les portes orphelines, pas les collisions décor/bâtiment — en pratique, on
+vérifie ce cas à l'œil sur la preview PNG avant de considérer une carte prête, et on choisit les
+centres d'amas de végétation à distance de sécurité (rayon + 1) de toute empreinte de bâtiment.
+
+**Piège découvert et corrigé sur les PNJ à position codée en dur** : un `object_event` (PNJ) peut
+avoir sa position réécrite au runtime par un script (`setobjectxyperm` dans `scripts.inc`, indépendant
+de la position de départ dans `map.json`) — sur Bourg Palette, `LittlerootTown_EventScript_
+SetTwinGuardingRoutePos` plaçait la Jumelle à (17,2), qui tombait dans l'empreinte du premier
+emplacement du bâtiment "mystery" (gym-style, x14-17). Corrigé en déplaçant le bâtiment (x=10 au lieu
+de x=14) plutôt que le script de jeu — plus sûr que de toucher une position codée en dur liée à
+l'état de progression. **Avant de placer un bâtiment, grep `setobjectxyperm` dans le `scripts.inc` de
+la carte pour repérer toute position de PNJ non visible dans `map.json`.**
+
+### Reproduire pour une nouvelle ville
+
+1. Dupliquer `build_littleroot.py` en `build_<ville>.py`, ajuster `W`/`H` et les points de départ
+   (relief/rivière/routes) au plan de la ville.
+2. Choisir un archétype par bâtiment (varier PC/Mart/Gym/Lab pour éviter que toutes les maisons se
+   ressemblent) et ses coordonnées ; laisser `build_*_style()` calculer la porte.
+3. Grep `setobjectxyperm` dans `scripts.inc` de la carte cible AVANT de fixer les coordonnées des
+   bâtiments (cf. piège Twin ci-dessus).
+4. Appeler `connect_door_to_path()` une fois par bâtiment.
+5. Lancer le script : si `[!] erreur(s) de validation` persiste après correction automatique, le
+   script s'arrête (`exit(1)`) — ajuster les coordonnées plutôt que d'ignorer l'erreur.
+6. Mettre à jour `warp_events`/`bg_events` (signs) dans `map.json` avec les coordonnées de porte
+   réellement produites (imprimées par le script, aussi dumpées en JSON) — ne jamais deviner ces
+   coordonnées à l'avance.
+7. Rebuild, `tools/map_preview/map_preview.py` pour la preview PNG, vérifier à l'œil qu'aucun amas de
+   végétation ne recouvre une façade, test headless collision (marcher dans un mur ne doit pas
+   bouger le joueur) avant de livrer.

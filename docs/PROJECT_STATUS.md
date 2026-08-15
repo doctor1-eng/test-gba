@@ -715,10 +715,44 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   coordonnées qu'avant (25,7) — le positionnement codé en dur de Maman (suite 30) n'a pas eu besoin
   d'être modifié. Vérifié en jeu réel compilé (pas juste preview) : traversée à pied, façade du
   labo atteinte, joueur bloqué net à la lisière de l'eau, 0 "Bad memory"
-- [ ] Retour de Thomas attendu avant d'enchaîner les 13 autres villes une par une (jamais toutes
-  d'un coup, toujours un état compilable entre deux)
+- [x] Retour de Thomas : le rendu ressemblait à des sprites posés au hasard, pas à une vraie carte
+  Pokémon (comparaison avec une image de référence de qualité pro) → refonte demandée du
+  **générateur**, pas juste de la carte. Voir suite 34 ci-dessous.
 
-## PROCHAINES ÉTAPES (mise à jour Session 6 suite 33)
+## Mise à jour Session 6 (suite 34) — Refonte du système de génération de cartes
+
+- [x] **Diagnostic mené avant toute correction** (architecture actuelle du format de carte, de la
+  collision, de la génération) : trois causes racines identifiées et documentées dans
+  `docs/TECHNICAL_ARCHITECTURE.md` §"Pipeline structuré de génération de cartes" —
+  (1) **bug critique** : aucune carte construite jusqu'ici (suite 32 et 33 comprises) ne posait le
+  bit de collision, seule l'élévation était écrite → murs/toits/arbres/collines du tileset Kanto
+  étaient tous traversables en jeu malgré une apparence solide en preview PNG statique ;
+  (2) composition de bâtiment ad hoc sans garantie structurelle (toit/mur/porte cohérents,
+  accessibilité) ; (3) aucune vérification automatisée au-delà d'une relecture visuelle
+- [x] Système construit (`tools/kanto_tileset_port/tile_catalog.py` + `map_builder.py` +
+  `build_littleroot.py`) : catalogue de 4 archétypes de bâtiment vérifiés tuile par tuile
+  (PC/Mart/Gym/Lab-style), grille de collision désormais **distincte** de la grille de tuiles
+  (corrige le bug critique), fonctions `build_*_style()` qui peignent bâtiment + porte + collision
+  d'un bloc et enregistrent la porte pour le **validateur automatisé** (`MapGrid.validate()` :
+  chaque porte doit être desservie par un chemin adjacent ET franchissable, sinon le script refuse
+  d'écrire la carte)
+- [x] Bourg Palette régénérée avec ce pipeline (relief → eau → routes → bâtiments → raccordement
+  porte↔route → végétation groupée → validation → écriture, cf. doc technique pour l'ordre complet
+  et pourquoi). Les 8 bâtiments (Labo + 7 maisons) validés sans erreur au premier passage
+- [x] Bug PNJ à position codée en dur découvert et corrigé en cours de route : la Jumelle
+  (`setobjectxyperm` dans `scripts.inc`, indépendant de `map.json`) se retrouvait plantée dans le
+  toit du bâtiment "mystery" à sa position initiale — bâtiment déplacé plutôt que le script de jeu
+- [x] Build propre (`make MODERN=1`, exit 0) ; test headless confirmant que la collision bloque
+  désormais réellement le joueur (5 appuis contre un mur de bâtiment → 0 déplacement, régression
+  testée contre le comportement d'avant le correctif)
+- [x] Preview PNG régénérée (`tools/map_preview/out/LittlerootTown.png`) : bâtiments visuellement
+  distincts et cohérents (toit/mur/porte assortis), réseau de chemins connectant chaque porte à la
+  route principale, aucun chevauchement bâtiment/décor repéré à l'œil
+- [ ] Retour de Thomas attendu sur ce nouveau rendu avant d'enchaîner les 13 autres villes une par
+  une avec ce même pipeline (méthode reproductible documentée, §"Reproduire pour une nouvelle
+  ville" de `TECHNICAL_ARCHITECTURE.md`)
+
+## PROCHAINES ÉTAPES (mise à jour Session 6 suite 34)
 1. **Attendre le retour de Thomas sur Bourg Palette reconstruite**, puis enchaîner les 13 autres
    villes du plan Kanto une par une (voir méthode dans `docs/TECHNICAL_ARCHITECTURE.md`)
 2. **Playtest réel prioritaire** : parcourir la nouvelle Bourg Palette de bout en bout (tous les warps,
