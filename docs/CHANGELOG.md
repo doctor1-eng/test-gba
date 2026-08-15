@@ -1343,3 +1343,53 @@ cette fois-ci, chacune de ces cartes représentant un chantier de l'ampleur du M
   avec `pallet_town_frlg`, cette fois avec une composition tuile par tuile fidèle à sa conception
   actuelle (bâtiments, côte) plutôt que la composition de test simplifiée utilisée ici pour valider
   la méthode
+
+## Session 6 (suite 33) — Bourg Palette reconstruite pour de vrai avec les tuiles Kanto
+
+Sur la base du nouveau plan HTML de Thomas (collines à l'ouest, ruisseau central rejoignant une
+côte rocheuse et une plage au sud, 8 bâtiments) : `LittlerootTown` (34×26) bascule officiellement
+de `gTileset_General`/`gTileset_Petalburg` (Hoenn) vers `gTileset_GeneralFrlgKanto`/
+`gTileset_PalletTownKanto` (dupliqués en suite 32). C'est la première vraie carte active du hack à
+utiliser les tuiles Kanto — la carte de test isolée de suite 32 reste en place pour référence.
+
+**1. Piège supplémentaire trouvé et corrigé pendant la construction**
+- Le premier tileau d'eau utilisé (id 512 de `general_frlg`) intégrait en réalité une bordure de
+  sable dans sa propre texture — carrelé en rivière, il produisait des rayures sable/eau au lieu
+  d'un cours d'eau cohérent. Remplacé par l'id 522 (eau ouverte propre, même comportement
+  `MB_FRLG_OCEAN_WATER`), après une vérification systématique par carrelage 4×4/5×5 de chaque
+  tuile candidate avant de l'utiliser sur la vraie carte — méthode à réutiliser pour les 13 autres
+  tilesets (une tuile qui a l'air correcte isolée peut mal se comporter une fois répétée)
+- Le tracé de rivière du plan HTML (interpolation avec chevauchement de rectangles à chaque
+  micro-pas) produisait, une fois traduit tel quel, une large bande bien plus épaisse que prévu —
+  remplacé par un algorithme de ligne de Bresenham classique (un seul tampon par point de la
+  ligne, pas de cumul), donnant un tracé fidèle à l'intention du plan
+
+**2. Composition des bâtiments**
+- Laboratoire : façade brique/fenêtres bleues arrondies, motif reconnaissable et fidèle au
+  Laboratoire du Pr. Chen, tuiles propres à `pallet_town_frlg` (ids 704-717)
+  reprises telles quelles
+- 7 maisons : gabarit générique (toit plat + bande de transition + mur à fenêtres) décliné en 3
+  couleurs de toit disponibles dans `general_frlg` (orange, rouge-orangé, rouge foncé), cycliques
+  faute d'assez de motifs de bâtiments distincts dans les 89 metatiles de `pallet_town_frlg` —
+  limite assumée et documentée plutôt que cachée
+- **Limite connue non résolue** : pas de tuile de porte visuellement distincte identifiée dans le
+  tileset — la porte est fonctionnelle (warp) mais visuellement un simple pan de mur. Item de
+  polish pour une passe ultérieure, pas bloquant
+
+**3. Warps, PNJ et panneaux repositionnés**
+- Les 8 warps vers les intérieurs (labo, 7 maisons) déplacés aux nouvelles positions de porte du
+  plan — la porte du labo tombe exactement sur les mêmes coordonnées (25,7) qu'avant, donc
+  `LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos` (positionnement codé en dur de Maman
+  à côté de la porte, ajouté en suite 30) n'a pas eu besoin d'être modifié
+- PNJ (Jumelle, Gros Monsieur, Garçon, Rival, Pr. Chen) et panneaux repositionnés en cohérence avec
+  les nouvelles positions de bâtiments
+
+**4. Vérification headless (jeu réel compilé, pas juste la preview)**
+- Warp direct vers `LittlerootTown`, traversée à pied dans les 4 directions, façade du labo
+  atteinte et identifiée visuellement, joueur bloqué net à la lisière de l'eau (comportement
+  fonctionnel, pas juste visuel) — **0 instance de "Bad memory"** sur l'ensemble des tests
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,11 %)
+
+**5. Suite**
+- Retour de Thomas attendu avant d'enchaîner les 13 autres villes une par une (jamais toutes d'un
+  coup, toujours un état compilable entre deux, comme convenu)

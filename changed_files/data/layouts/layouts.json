@@ -105,11 +105,14 @@
       "name": "LittlerootTown_Layout",
       "width": 34,
       "height": 26,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralFrlgKanto",
+      "secondary_tileset": "gTileset_PalletTownKanto",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown/map.bin",
-      "layout_version": "emerald"
+      "layout_version": "emerald",
+      "metatile_format": "frlg"
     },
     {
       "id": "LAYOUT_OLDALE_TOWN",

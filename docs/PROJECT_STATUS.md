@@ -706,15 +706,21 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   au reste du monde, accessible via le menu debug uniquement) — **Bourg Palette réel non touché**,
   conformément à la demande de test isolé d'abord. Build release validée, 0 instance de
   "Bad memory" en headless
-- [ ] **Reste à faire** : reconstruire réellement Bourg Palette (`LittlerootTown`) avec
-  `pallet_town_frlg`, cette fois avec une composition tuile par tuile fidèle à sa conception
-  actuelle (bâtiments, côte) plutôt que la composition de test simplifiée utilisée pour valider la
-  méthode — puis, une fois ce premier vrai remplacement validé par Thomas, enchaîner les 13 autres
-  villes une par une (jamais toutes d'un coup), toujours avec un état compilable entre deux
+- [x] **Fait (suite 33)** : Bourg Palette (`LittlerootTown`) reconstruite pour de vrai avec
+  `gTileset_GeneralFrlgKanto`/`gTileset_PalletTownKanto`, à partir du nouveau plan HTML de Thomas
+  (collines, ruisseau, côte rocheuse, plage, 8 bâtiments). Labo à façade brique/fenêtres bleues
+  reconnaissable ; 7 maisons en gabarit générique décliné sur 3 couleurs de toit (limite assumée :
+  seulement 3 couleurs disponibles pour 7 maisons, pas de tuile de porte distincte identifiée).
+  8 warps + PNJ + panneaux repositionnés en cohérence. Porte du labo tombe exactement sur les mêmes
+  coordonnées qu'avant (25,7) — le positionnement codé en dur de Maman (suite 30) n'a pas eu besoin
+  d'être modifié. Vérifié en jeu réel compilé (pas juste preview) : traversée à pied, façade du
+  labo atteinte, joueur bloqué net à la lisière de l'eau, 0 "Bad memory"
+- [ ] Retour de Thomas attendu avant d'enchaîner les 13 autres villes une par une (jamais toutes
+  d'un coup, toujours un état compilable entre deux)
 
-## PROCHAINES ÉTAPES (mise à jour Session 6 suite 32)
-1. **Reconstruire Bourg Palette pour de vrai avec `pallet_town_frlg`** (voir ci-dessus) — attendre
-   le retour de Thomas sur le test isolé avant de toucher à la carte réelle
+## PROCHAINES ÉTAPES (mise à jour Session 6 suite 33)
+1. **Attendre le retour de Thomas sur Bourg Palette reconstruite**, puis enchaîner les 13 autres
+   villes du plan Kanto une par une (voir méthode dans `docs/TECHNICAL_ARCHITECTURE.md`)
 2. **Playtest réel prioritaire** : parcourir la nouvelle Bourg Palette de bout en bout (tous les warps,
    la scène complète des cadeaux de Maman, l'absence de blocage de la Jumelle, la côte/plage) — et
    confirmer que le Multi-Exp et le soin instantané fonctionnent bien en jeu réel
