@@ -1,0 +1,307 @@
+<style>
+  :root{
+    --paper:#d9cba8; --paper-dark:#c7b78e; --ink:#2f3b2a; --ink-soft:#5a6350;
+    --grass:#8fae62; --grass2:#9fbb72; --tallgrass:#6f9a4a; --tree:#3c5a34;
+    --path:#c9a86b; --stamp:#a6342c; --brass:#a9822f;
+    --water:#5f8fa0; --waterdeep:#3f6a7d; --sand:#d9c48a; --cliff:#8a7860; --cliffdark:#6e5f49;
+    --bridge:#a97a4a; --flower:#c96b8a; --rock:#8a8378; --sea:#3f7a94; --seadeep:#2a5a70; --rockcoast:#6e6255;
+    --wall1:#8a3b3b; --roof1:#c25b4a; --wall2:#3b5f8a; --roof2:#5c8ac2; --wall3:#6a4d8a; --roof3:#9a6fc2;
+    --wall4:#8a6b3b; --roof4:#c29a5c; --wall5:#3b8a6b; --roof5:#5cc29a; --wall6:#8a3b6b; --roof6:#c25c9a;
+    --wall7:#4a4a4a; --roof7:#6f6f6f; --wall8:#8a7a3b; --roof8:#c2ae5c;
+    --floor:#e8dcc0; --iwall:#4a4030; --door:#e0b84a;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background: radial-gradient(ellipse at 20% 10%, #23301f 0%, #141d12 55%, #0d130b 100%);
+    color:var(--ink); font-family: Georgia, serif; padding:48px 20px 100px; }
+  .wrap{max-width:1260px;margin:0 auto;}
+  header.hero{ text-align:center; margin-bottom:56px; color:#e9e2c9; }
+  .eyebrow{ font-family: ui-monospace, Menlo, Consolas, monospace; letter-spacing:.35em; font-size:11px; color:var(--brass); text-transform:uppercase; margin-bottom:14px; }
+  h1{ font-size:clamp(34px,5vw,58px); margin:0 0 10px; font-weight:400; }
+  h1 em{ font-style:normal; color:var(--stamp); }
+  .sub{ font-family: ui-monospace, Menlo, Consolas, monospace; font-size:13px; color:#b9c2a4; max-width:720px; margin:0 auto; line-height:1.7; }
+  .card{ background:var(--paper);
+    background-image: linear-gradient(var(--paper-dark) 1px, transparent 1px), linear-gradient(90deg, var(--paper-dark) 1px, transparent 1px);
+    background-size:26px 26px; border:1px solid #7a6a45; box-shadow: 0 18px 40px -18px rgba(0,0,0,.6), inset 0 0 0 6px rgba(255,255,255,.06);
+    border-radius:2px; padding:28px 28px 24px; margin-bottom:44px; position:relative; }
+  .card::before{ content:attr(data-tag); position:absolute; top:-13px; left:24px; background:var(--stamp); color:#f4ead0;
+    font-family: ui-monospace, Menlo, Consolas, monospace; font-size:11px; letter-spacing:.15em; padding:4px 10px; transform:rotate(-1.5deg); box-shadow:0 3px 8px rgba(0,0,0,.35); }
+  .card h2{ margin:6px 0 3px; font-size:26px; font-weight:400; }
+  .card .meta{ font-family: ui-monospace, Menlo, Consolas, monospace; font-size:11.5px; color:var(--ink-soft); margin-bottom:18px; }
+  .gridbox{ overflow-x:auto; padding-bottom:6px; }
+  .tilegrid{ display:grid; gap:1px; background:#5a6a4a; border:2px solid #35402a; width:max-content; }
+  .cell{ display:flex; align-items:center; justify-content:center; font-family: ui-monospace, Menlo, Consolas, monospace; font-size:7px; font-weight:700; color:rgba(0,0,0,.5); }
+  .t-grass{ background:var(--grass); } .t-grass2{ background:var(--grass2); }
+  .t-tall{ background:var(--tallgrass); color:#e8f0da;} .t-tree{ background:var(--tree); } .t-path{ background:var(--path); }
+  .t-water{ background:var(--water); } .t-waterdeep{ background:var(--waterdeep); }
+  .t-sand{ background:var(--sand); } .t-cliff{ background:var(--cliff); } .t-cliffdark{ background:var(--cliffdark); }
+  .t-bridge{ background:var(--bridge); color:#3a2a14; font-size:9px;} .t-flower{ background:var(--flower); } .t-rock{ background:var(--rock); color:#2f2a20; font-size:8px;}
+  .t-sea{ background:var(--sea); color:#dff2fa; font-size:8px;} .t-seadeep{ background:var(--seadeep); }
+  .t-rockcoast{ background:var(--rockcoast); color:#2a2418; font-size:8px;}
+  .t-sign{ background:var(--path); color:#3b2f14; font-size:12px;}
+  .t-floor{ background:var(--floor); } .t-iwall{ background:var(--iwall); } .t-door{ background:var(--door); color:#4a3410; font-size:12px;}
+  .t-furn{ background:#b7a480; color:#2f2412; font-size:8px; border-radius:2px;}
+  .legend{ display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:16px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size:11px; color:var(--ink-soft); }
+  .legend span.sw{ display:inline-block; width:11px; height:11px; margin-right:6px; vertical-align:-1px; border:1px solid rgba(0,0,0,.35); }
+  .buildings-index{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin:8px auto 60px; max-width:1260px; }
+  .bidx{ background:var(--paper); border:1px solid #7a6a45; padding:14px 16px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size:12px; color:var(--ink); display:flex; gap:10px; align-items:flex-start; }
+  .bidx .num{ font-family: Georgia, serif; font-size:20px; color:var(--stamp); line-height:1; }
+  .bidx .role{ color:var(--ink-soft); display:block; margin-top:3px; font-size:11px;}
+  .split{ display:flex; gap:26px; flex-wrap:wrap; }
+  .col h3{ font-family: ui-monospace, Menlo, Consolas, monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 8px; }
+  footer{ text-align:center; color:#8a9478; font-family: ui-monospace, Menlo, Consolas, monospace; font-size:11px; margin-top:20px; }
+</style>
+
+<title>Bourg Palette</title>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Kanto — Saison 1 · Région 01 · Dossier de level design — carte composite (v2)</div>
+    <h1>Bourg <em>Palette</em></h1>
+    <p class="sub">Village rural au bord de la mer — collines douces à l'ouest, ruisseau traversant les
+    jardins jusqu'à une côte rocheuse au sud, plage accessible. 7 maisons + le Laboratoire, espacés dans de
+    grands espaces verts, avec plusieurs poches sauvages périphériques à explorer.</p>
+  </header>
+
+  <div class="buildings-index" id="index"></div>
+
+  <section class="card" data-tag="Région composite · 34 × 26">
+    <h2>Vue d'ensemble — village, collines et côte</h2>
+    <div class="meta">Colline à l'ouest · ruisseau central · côte rocheuse et plage au sud · sortie nord vers Route 1</div>
+    <div class="gridbox"><div id="exterior" class="tilegrid"></div></div>
+    <div class="legend" id="legend-exterior"></div>
+  </section>
+
+  <section class="card" data-tag="Bâtiment 01">
+    <h2>Laboratoire du Professeur Chen</h2>
+    <div class="meta">Rez-de-chaussée · accueil, bureau du Professeur, réserve de Poké Balls, machine de stockage</div>
+    <div class="gridbox"><div id="lab" class="tilegrid"></div></div>
+  </section>
+
+  <section class="card" data-tag="Bâtiment 02">
+    <h2>Maison du joueur</h2>
+    <div class="meta">2 niveaux — rez-de-chaussée (salon, cuisine, PC) et chambre à l'étage</div>
+    <div class="split">
+      <div class="col"><h3>Rez-de-chaussée</h3><div class="gridbox"><div id="house-player-1f" class="tilegrid"></div></div></div>
+      <div class="col"><h3>Chambre (étage)</h3><div class="gridbox"><div id="house-player-2f" class="tilegrid"></div></div></div>
+    </div>
+  </section>
+
+  <section class="card" data-tag="Bâtiment 03">
+    <h2>Maison de Régis</h2>
+    <div class="meta">Petit-fils du Professeur Chen, rival du joueur — chambre encombrée de livres et de trophées</div>
+    <div class="gridbox"><div id="house-regis" class="tilegrid"></div></div>
+  </section>
+
+  <section class="card" data-tag="Bâtiment 04">
+    <h2>Maison de Mme Chen</h2>
+    <div class="meta">Voisine du joueur — PNJ de conseils généraux</div>
+    <div class="gridbox"><div id="house-neighbor" class="tilegrid"></div></div>
+  </section>
+
+  <section class="card" data-tag="Bâtiment 05">
+    <h2>Maison du Vieux Dresseur</h2>
+    <div class="meta">Ancien dresseur retraité — mur de trophées, conseils de combat</div>
+    <div class="gridbox"><div id="house-trainer" class="tilegrid"></div></div>
+  </section>
+
+  <section class="card" data-tag="Bâtiment 06">
+    <h2>Maison du Gardien de Route</h2>
+    <div class="meta">Responsable de l'entretien de la Route 1 — carte murale, radio, bureau</div>
+    <div class="gridbox"><div id="house-guardian" class="tilegrid"></div></div>
+  </section>
+
+  <section class="card" data-tag="Bâtiment 07">
+    <h2>Maison aux volets fermés</h2>
+    <div class="meta">Inhabitée en apparence — presque vide, accroche narrative pour un arc futur</div>
+    <div class="gridbox"><div id="house-mystery" class="tilegrid"></div></div>
+  </section>
+
+  <section class="card" data-tag="Bâtiment 08">
+    <h2>Maison de la Dame aux Baies</h2>
+    <div class="meta">Cultive et distribue des Baies aux jeunes dresseurs</div>
+    <div class="gridbox"><div id="house-berries" class="tilegrid"></div></div>
+  </section>
+
+  <footer>Bourg Palette · région composite v2 — topologie indicative, à sculpter finement dans Porymap</footer>
+</div>
+
+<script>
+function makeGrid(w,h,fill){ return Array.from({length:h},()=>Array.from({length:w},()=>fill)); }
+function rect(g,x,y,w,h,code){ for(let j=y;j<y+h;j++) for(let i=x;i<x+w;i++) if(g[j]&&g[j][i]!==undefined) g[j][i]=code; }
+function hline(g,x1,x2,y,code){ for(let i=Math.min(x1,x2);i<=Math.max(x1,x2);i++) g[y][i]=code; }
+function vline(g,y1,y2,x,code){ for(let j=Math.min(y1,y2);j<=Math.max(y1,y2);j++) g[j][x]=code; }
+function put(g,x,y,code){ if(g[y]&&g[y][x]!==undefined) g[y][x]=code; }
+function blob(g,cx,cy,r,code){
+  for(let j=-r;j<=r;j++) for(let i=-r;i<=r;i++){
+    if(i*i+j*j<=r*r+(Math.random()*r)) put(g,cx+i,cy+j,code);
+  }
+}
+function river(g,points,width,code){
+  for(let p=0;p<points.length-1;p++){
+    const [x1,y1]=points[p], [x2,y2]=points[p+1];
+    const steps=Math.max(Math.abs(x2-x1),Math.abs(y2-y1))*2;
+    for(let s=0;s<=steps;s++){
+      const t=s/steps;
+      const x=Math.round(x1+(x2-x1)*t), y=Math.round(y1+(y2-y1)*t);
+      const w = width + Math.round(Math.sin(t*7+p)*1.0);
+      rect(g,x-Math.floor(w/2),y-Math.floor(w/2),Math.max(1,w),Math.max(1,w),code);
+    }
+  }
+}
+function render(containerId,g,cellSize,map){
+  const el=document.getElementById(containerId); const h=g.length, w=g[0].length;
+  el.style.gridTemplateColumns = `repeat(${w}, ${cellSize}px)`; el.innerHTML='';
+  for(let j=0;j<h;j++) for(let i=0;i<w;i++){
+    const code=g[j][i]; const d=document.createElement('div');
+    d.className='cell'; d.style.width=cellSize+'px'; d.style.height=cellSize+'px';
+    if(typeof code==='string' && code.startsWith('wall')){
+      const n=code.replace('wall',''); d.style.background=`var(--wall${n})`; d.style.color='#f4ead0'; d.textContent=n;
+    } else if(typeof code==='string' && code.startsWith('roof')){
+      const n=code.replace('roof',''); d.style.background=`var(--roof${n})`;
+    } else if(typeof code==='string' && code.startsWith('furn:')){
+      d.classList.add('t-furn'); d.textContent=code.split(':')[1];
+    } else if(map && map[code]){ d.classList.add(map[code].cls); d.textContent=map[code].label||''; }
+    else { d.classList.add('t-grass'); }
+    el.appendChild(d);
+  }
+}
+const TILE = {
+  grass:{cls:'t-grass'}, grass2:{cls:'t-grass2'}, tall:{cls:'t-tall',label:'"'}, tree:{cls:'t-tree'}, path:{cls:'t-path'},
+  water:{cls:'t-water',label:'~'}, waterdeep:{cls:'t-waterdeep'}, sand:{cls:'t-sand'},
+  cliff:{cls:'t-cliff',label:'▲'}, cliffdark:{cls:'t-cliffdark',label:'▲'},
+  bridge:{cls:'t-bridge',label:'═'}, flower:{cls:'t-flower',label:'✿'}, rock:{cls:'t-rock',label:'●'},
+  sea:{cls:'t-sea',label:'≈'}, seadeep:{cls:'t-seadeep'}, rockcoast:{cls:'t-rockcoast',label:'▲'},
+  sign:{cls:'t-sign',label:'!'}, floor:{cls:'t-floor'}, iwall:{cls:'t-iwall'}, door:{cls:'t-door',label:'⌂'},
+};
+
+// =========================================================
+// EXTERIEUR COMPOSITE — 34 x 26
+// =========================================================
+(function(){
+  const W=34,H=26;
+  const g=makeGrid(W,H,'grass');
+  for(let k=0;k<55;k++) put(g,1+Math.floor(Math.random()*(W-2)),1+Math.floor(Math.random()*(H-2)),'grass2');
+
+  // collines douces à l'ouest (relief bas, pas des falaises abruptes)
+  for(let y=0;y<H;y++){
+    const depth = 1 + Math.round(Math.sin(y/4)*1.3+1.3);
+    rect(g,0,y,depth,1,'cliffdark');
+    put(g,depth,y,'cliff');
+  }
+  blob(g,3,5,3,'tree'); blob(g,2,11,3,'tree'); blob(g,4,17,3,'tree'); blob(g,3,22,2,'tree');
+
+  // ruisseau depuis la colline, traverse le village, rejoint la mer au sud
+  river(g,[[5,4],[9,7],[13,6],[16,10],[15,15],[18,19],[17,24]],2,'water');
+  river(g,[[5,4],[9,7],[13,6],[16,10],[15,15],[18,19],[17,24]],1,'waterdeep');
+  blob(g,10,8,2,'sand');
+  [[7,5],[14,9],[13,16]].forEach(([x,y])=>put(g,x,y,'rock'));
+
+  // côte rocheuse et plage au sud
+  rect(g,0,23,W,3,'sea'); rect(g,0,24,W,2,'seadeep');
+  blob(g,6,22,2,'rockcoast'); blob(g,26,22,2,'rockcoast'); blob(g,30,21,2,'rockcoast');
+  blob(g,20,22,4,'sand'); blob(g,12,22,3,'sand');
+
+  // bordure est/nord en bosquets irréguliers (pas un cadre plein)
+  blob(g,31,3,3,'tree'); blob(g,32,10,2,'tree'); blob(g,30,16,3,'tree');
+  blob(g,9,1,2,'tree'); blob(g,24,1,2,'tree');
+
+  // petites zones sauvages périphériques (poches d'herbes hautes à explorer, hors du strict nécessaire)
+  rect(g,26,6,3,2,'tall'); rect(g,7,13,3,2,'tall'); rect(g,22,17,3,2,'tall'); rect(g,4,20,2,2,'tall');
+  blob(g,28,8,1,'flower'); blob(g,9,15,1,'flower');
+
+  // --- réseau de chemins (dessiné AVANT les bâtiments, pour qu'aucune ligne ne les traverse) ---
+  hline(g,8,17,8,'path'); vline(g,8,4,17,'path');
+  hline(g,18,25,6,'path'); vline(g,6,10,26,'path');
+  hline(g,7,9,12,'path'); vline(g,12,16,13,'path');
+  hline(g,14,19,18,'path'); hline(g,24,28,19,'path');
+  hline(g,10,13,19,'path');
+
+  // --- bâtiments : espacés, pas collés les uns aux autres. Peints en dernier : ils recouvrent
+  //     proprement tout chemin/terrain sous-jacent, jamais l'inverse. ---
+  function building(x,y,w,h,n){
+    rect(g,x,y,w,1,'roof'+n); if(h>2) rect(g,x,y+1,w,h-2,'wall'+n); rect(g,x,y+h-1,w,1,'wall'+n);
+    const doorX=x+Math.floor(w/2); put(g,doorX,y+h-1,'door');
+    return {doorX, doorY:y+h-1};
+  }
+  building(22,3,7,5,1);   // labo
+  building(6,4,5,4,2);    // maison joueur
+  building(14,2,4,4,7);   // maison volets fermés
+  building(24,11,5,4,3);  // régis (près du labo)
+  building(5,10,5,4,4);   // mme chen
+  building(11,16,5,4,5);  // vieux dresseur
+  building(28,17,5,4,6);  // gardien de route (côté côte)
+  building(19,15,5,4,8);  // dame aux baies
+
+  render('exterior',g,20,TILE);
+  document.getElementById('legend-exterior').innerHTML = [
+    ['grass','var(--grass)','Herbe'], ['tall','var(--tallgrass)','Poche sauvage (herbes hautes)'],
+    ['tree','var(--tree)','Bosquet'], ['path','var(--path)','Chemin'], ['water','var(--water)','Ruisseau'],
+    ['sea','var(--sea)','Mer'], ['sand','var(--sand)','Plage'], ['rockcoast','var(--rockcoast)','Côte rocheuse'],
+    ['cliffdark','var(--cliffdark)','Colline'], ['flower','var(--flower)','Fleurs'],
+  ].map(([k,c,l])=>`<span><span class="sw" style="background:${c}"></span>${l}</span>`).join('')
+    + `<span><span class="sw" style="background:var(--wall1)"></span>1–8 = bâtiments (voir index)</span>`;
+
+  document.getElementById('index').innerHTML = [
+    ['01','Laboratoire du Pr. Chen','Point de départ narratif'],
+    ['02','Maison du joueur','2 étages'],
+    ['03','Maison de Régis','Rival, près du labo'],
+    ['04','Maison de Mme Chen','Voisine'],
+    ['05','Maison du Vieux Dresseur','Conseils de combat'],
+    ['06','Maison du Gardien de Route','Côté côte'],
+    ['07','Maison aux volets fermés','Mystère — arc futur'],
+    ['08','Maison de la Dame aux Baies','Distribution de Baies'],
+  ].map(([n,name,role])=>`<div class="bidx"><div class="num">${n}</div><div><div>${name}</div><span class="role">${role}</span></div></div>`).join('');
+})();
+
+// =========================================================
+// Intérieurs
+// =========================================================
+function interiorBase(w,h){
+  const g=makeGrid(w,h,'floor');
+  hline(g,0,w-1,0,'iwall'); vline(g,0,h-1,0,'iwall'); vline(g,0,h-1,w-1,'iwall'); hline(g,0,w-1,h-1,'iwall');
+  put(g,Math.floor(w/2),h-1,'door');
+  return g;
+}
+(function(){ const g=interiorBase(14,10);
+  put(g,2,1,'furn:CPT'); put(g,3,1,'furn:CPT');
+  put(g,6,1,'furn:BIB'); put(g,7,1,'furn:BIB'); put(g,8,1,'furn:BIB');
+  put(g,11,2,'furn:PC');
+  put(g,2,4,'furn:TAB'); put(g,3,4,'furn:EQ');
+  put(g,10,5,'furn:STK'); put(g,11,5,'furn:STK');
+  put(g,6,6,'furn:PIKA');
+  put(g,2,7,'furn:BUR');
+  render('lab',g,28,TILE); })();
+(function(){ const g=interiorBase(11,9);
+  put(g,2,1,'furn:TV'); put(g,2,2,'furn:CAN'); put(g,3,2,'furn:CAN');
+  put(g,7,1,'furn:PC'); put(g,7,2,'furn:BUR');
+  put(g,2,5,'furn:CUI'); put(g,3,5,'furn:CUI');
+  put(g,8,6,'furn:ESC');
+  render('house-player-1f',g,26,TILE); })();
+(function(){ const g=interiorBase(9,7);
+  put(g,2,1,'furn:LIT'); put(g,2,2,'furn:LIT'); put(g,6,1,'furn:BUR'); put(g,6,4,'furn:ESC');
+  render('house-player-2f',g,26,TILE); })();
+(function(){ const g=interiorBase(11,9);
+  put(g,2,1,'furn:LIT'); put(g,2,2,'furn:LIT');
+  put(g,6,1,'furn:BIB'); put(g,7,1,'furn:BIB');
+  put(g,7,4,'furn:COF'); put(g,3,5,'furn:BUR');
+  render('house-regis',g,26,TILE); })();
+(function(){ const g=interiorBase(11,9);
+  put(g,2,1,'furn:BIB'); put(g,3,1,'furn:BIB');
+  put(g,7,2,'furn:CAN'); put(g,8,2,'furn:CAN');
+  put(g,3,5,'furn:TAB');
+  render('house-neighbor',g,26,TILE); })();
+(function(){ const g=interiorBase(11,9);
+  put(g,2,1,'furn:COF'); put(g,3,1,'furn:COF'); put(g,4,1,'furn:COF');
+  put(g,7,3,'furn:TAB'); put(g,3,6,'furn:LIT');
+  render('house-trainer',g,26,TILE); })();
+(function(){ const g=interiorBase(11,9);
+  put(g,2,1,'furn:CARTE'); put(g,7,1,'furn:RAD');
+  put(g,3,4,'furn:BUR'); put(g,7,5,'furn:LIT');
+  render('house-guardian',g,26,TILE); })();
+(function(){ const g=interiorBase(11,9);
+  put(g,5,4,'furn:BOUG');
+  render('house-mystery',g,26,TILE); })();
+(function(){ const g=interiorBase(11,9);
+  put(g,2,1,'furn:ETB'); put(g,3,1,'furn:ETB'); put(g,4,1,'furn:ETB');
+  put(g,7,3,'furn:TAB'); put(g,3,6,'furn:CUI');
+  render('house-berries',g,26,TILE); })();
+</script>
