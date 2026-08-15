@@ -1220,3 +1220,31 @@ cette fois-ci, chacune de ces cartes représentant un chantier de l'ampleur du M
 - Compilation propre avec les 4 changements de confort (Multi-Exp, soin instantané, textes Ondine)
 
 - Build release validée (`make MODERN=1`, exit code 0, ROM 79,03 %)
+
+## Session 5 (suite 31) — Correctif retour de test : plantage à la 2e rencontre Team Rocket (forêt de Jade)
+
+**1. Diagnostic**
+- Retour de test : message d'erreur pendant/après le combat de la 2e rencontre Team Rocket (forêt de
+  Jade, `PetalburgWoods`), puis retour à l'écran-titre une fois le combat gagné, avec des graphismes
+  "Team Rocket" corrompus sur Jessie et James
+- Cause identifiée : `PetalburgWoods/map.json` utilisait encore `OBJ_EVENT_GFX_ROCKET_F`/
+  `OBJ_EVENT_GFX_ROCKET_M` pour Jessie/James — exactement les deux graphismes déjà identifiés en
+  suite 28 comme provoquant une corruption mémoire sur les cartes au format Emerald de ce hack. Le
+  correctif de suite 28 n'avait été appliqué qu'à Route 1 ; cette deuxième rencontre (ajoutée en
+  Session 3, avant la découverte du bug) n'avait jamais été mise à jour
+- Confirmé par relecture de code (assertion secondaire indépendante trouvée au passage dans
+  `SetTrainerFacingDirection`, bénigne/résumable en debug, silencieuse en release — non liée à la
+  cause principale) et par test headless : combat rejoué de bout en bout via le raccourci "Instant
+  Win" du menu de debug batailles (`SELECT` en combat), 0 instance de "Bad memory" sur l'ensemble de
+  la séquence
+
+**2. Correctif**
+- `PetalburgWoods/map.json` : `OBJ_EVENT_GFX_ROCKET_F` → `OBJ_EVENT_GFX_WOMAN_2` (Jessie),
+  `OBJ_EVENT_GFX_ROCKET_M` → `OBJ_EVENT_GFX_MAN_3` (James) — mêmes graphismes de remplacement que sur
+  Route 1, pour une apparence cohérente entre les deux rencontres. Aucun conflit de palette sur cette
+  carte (ces graphismes n'y étaient pas déjà utilisés ailleurs)
+
+**3. Vérification headless**
+- Warp direct vers `PetalburgWoods` (groupe 24, index 11) puis traversée complète de la carte à pied :
+  **0 instance de "Bad memory"**
+- Build release validée (`make MODERN=1`, exit code 0)

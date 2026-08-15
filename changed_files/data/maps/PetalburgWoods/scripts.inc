@@ -6,6 +6,13 @@ PetalburgWoods_MapScripts::
 @ l'encourage — inversion des rôles pour faire vivre le duo dans la durée (cf. CHANGELOG Session 4).
 @ Les local IDs GRUNT/DEVON_EMPLOYEE sont conservés tels quels (minimise le diff) mais représentent
 @ désormais Jessie et James.
+@
+@ Kanto Saison 1 (suite 31) : graphismes OBJ_EVENT_GFX_ROCKET_F/M remplacés par OBJ_EVENT_GFX_WOMAN_2/
+@ OBJ_EVENT_GFX_MAN_3 (retour de test : plantage pendant/après le combat, écran figé sur écran-titre).
+@ Même cause que le fix Route101 (suite 28) : ces deux graphismes provoquent une corruption mémoire
+@ sur les cartes au format Emerald de ce hack — voir le commentaire de Route101/scripts.inc pour le
+@ détail du diagnostic. Jessie/James utilisent donc désormais les mêmes graphismes génériques que sur
+@ Route 1, pour une apparence cohérente entre les deux rencontres.
 PetalburgWoods_EventScript_DevonResearcherLeft::
 	lockall
 	applymovement LOCALID_PETALBURG_WOODS_GRUNT, Common_Movement_ExclamationMark
