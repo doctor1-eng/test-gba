@@ -684,30 +684,37 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
   fichiers HTML de blueprint ne doivent plus être utilisés comme référence visuelle finale,
   seulement comme plan de structure (emplacement des bâtiments, taille de carte, relief)
 
-1. **Nouvelle directive prioritaire de Thomas — suite** : Porymap écarté (inutilisable, voir
-   ci-dessus), script de preview PNG livré et fonctionnel (`tools/map_preview/`).
-   **Point de vigilance confirmé (pas bon signe)** : vérifié dans le code que `IS_FRLG` vaut `0`
-   pour ce build Emerald (`include/constants/global.h:67-78`, aucun `FIRERED`/`LEAFGREEN` défini) —
-   or TOUS les tilesets `*_frlg` de villes listés par Thomas (`gTileset_PalletTown`,
-   `gTileset_ViridianCity`, `gTileset_PewterCity`, etc.) sont déclarés dans la branche
-   `#else` (IS_FRLG uniquement) du même garde `#if !IS_FRLG ... #else ... #endif` de
-   `src/data/tilesets/headers.h` qui avait bloqué `gTileset_Cave_Frlg`/`gTileset_General_Frlg`
-   en suite 29. Et le build (`map_data_rules.mk:37`, `$(MAPJSON) layouts $(MAP_VERSION) ...`)
-   filtre aussi `layouts.json` par `MAP_VERSION` (= `emerald` par défaut) : toute carte taguée
-   `"layout_version": "frlg"` — dont `PewterCity_Frlg` — est **exclue de la compilation**. Ce
-   n'est donc PAS une carte active du hack malgré son dossier présent dans `data/maps/` : c'est
-   une donnée source dormante, comme les autres `_Frlg`, jamais atteignable en jeu réel. Le script
-   de preview a pu la lire et la rendre correctement (256 metatiles Kanto conformes, testé) parce
-   qu'il lit les fichiers source directement, en contournant tout ce filtrage de build
-- **Conséquence concrète pour la suite** : utiliser un tileset `*_frlg` de ville dans une VRAIE
-  carte du hack (ex: Bourg Palette avec `pallet_town_frlg`) nécessite un vrai contournement
-  technique avant tout travail de cartographie, du même ordre que celui déjà fait pour Mont
-  Sélénite en suite 29 (abandon de `cave_frlg` au profit du `cave` standard) — soit dupliquer les
-  structs de tileset concernés hors du garde `#if !IS_FRLG` (nouveau nom de symbole, même
-  fichiers source .png/.bin/.pal, layout_version `"emerald"`), soit élargir le garde lui-même
-  (plus risqué, portée large sur tout le moteur). À trancher avec Thomas avant de se lancer dans
-  la reconstruction de Bourg Palette, plutôt que de découvrir un blocage de compilation en cours
-  de route
+## Mise à jour Session 6 (suite 32) — Test de duplication d'un tileset Kanto FRLG validé
+- [x] Point de vigilance de Thomas vérifié : les comportements de metatile (Behavior) d'un
+  tileset FRLG ne sont **pas** un simple copier-coller — numérotation `MB_FRLG_*` différente de la
+  numérotation unifiée `MB_*` de ce moteur. Table de correspondance officielle déjà présente dans
+  le dépôt (`engine/migration_scripts/frlg_metatile_behavior_converter.py`), réutilisée sans la
+  réinventer. Tous les comportements réellement utilisés par `pallet_town_frlg`/`general_frlg` ont
+  un équivalent fonctionnel direct (tall grass, eau…), **validé en jeu réel** (joueur bloqué net à
+  la lisière de l'eau en test headless, pas juste un rendu visuel correct)
+- [x] `pallet_town_frlg` (secondaire) + `general_frlg` (primaire, tileset compagnon) dupliqués hors
+  du garde `#if !IS_FRLG`, sous de nouveaux symboles compilés sans condition
+  (`gTileset_PalletTownKanto`/`gTileset_GeneralFrlgKanto`) — méthode complète documentée dans
+  `docs/TECHNICAL_ARCHITECTURE.md` pour être reproduite à l'identique sur les 13 autres villes
+- [x] Découverte nécessaire non anticipée en cours de route : un layout `"emerald"` (seul à survivre
+  au filtre `MAP_VERSION` du compilateur de maps) était jusque-là verrouillé sur `isFrlg=FALSE`,
+  ce qui aurait cassé soit la frontière tuiles/metatiles 640/640/7 propre à FRLG, soit la lecture
+  32 bits des attributs. Patch minimal et rétrocompatible de `tools/mapjson/mapjson.cpp` (nouveau
+  champ optionnel `"metatile_format": "frlg"`) pour découpler les deux — n'affecte aucun layout
+  existant qui n'ajoute pas ce champ
+- [x] Testé sur une carte isolée dédiée (`LittlerootTownKantoTest`, groupe 75 index 0, non connectée
+  au reste du monde, accessible via le menu debug uniquement) — **Bourg Palette réel non touché**,
+  conformément à la demande de test isolé d'abord. Build release validée, 0 instance de
+  "Bad memory" en headless
+- [ ] **Reste à faire** : reconstruire réellement Bourg Palette (`LittlerootTown`) avec
+  `pallet_town_frlg`, cette fois avec une composition tuile par tuile fidèle à sa conception
+  actuelle (bâtiments, côte) plutôt que la composition de test simplifiée utilisée pour valider la
+  méthode — puis, une fois ce premier vrai remplacement validé par Thomas, enchaîner les 13 autres
+  villes une par une (jamais toutes d'un coup), toujours avec un état compilable entre deux
+
+## PROCHAINES ÉTAPES (mise à jour Session 6 suite 32)
+1. **Reconstruire Bourg Palette pour de vrai avec `pallet_town_frlg`** (voir ci-dessus) — attendre
+   le retour de Thomas sur le test isolé avant de toucher à la carte réelle
 2. **Playtest réel prioritaire** : parcourir la nouvelle Bourg Palette de bout en bout (tous les warps,
    la scène complète des cadeaux de Maman, l'absence de blocage de la Jumelle, la côte/plage) — et
    confirmer que le Multi-Exp et le soin instantané fonctionnent bien en jeu réel

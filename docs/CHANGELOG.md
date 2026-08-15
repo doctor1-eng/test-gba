@@ -1284,3 +1284,62 @@ cette fois-ci, chacune de ces cartes représentant un chantier de l'ampleur du M
   nécessitera d'abord un contournement du garde `#if !IS_FRLG` (dupliquer le struct de tileset
   concerné sous un nouveau nom compilé pour Emerald, même fichiers source) — chantier séparé,
   non commencé, à trancher avec Thomas avant de s'y lancer
+
+## Session 6 (suite 32) — Test de duplication d'un tileset Kanto FRLG (`pallet_town_frlg`)
+
+**1. Vérification préalable demandée par Thomas : comportements de metatile (tall grass, eau…)**
+- Confirmé : ce n'est **pas** un simple copier-coller. Les octets bruts `metatile_attributes.bin`
+  d'un tileset FRLG encodent le champ Behavior selon la numérotation propre à FireRed/LeafGreen
+  (`MB_FRLG_*`, `include/constants/metatile_behaviors_frlg.h`), différente de la numérotation
+  unifiée `MB_*` de ce moteur. Piège concret rencontré en décodant `general_frlg`/`pallet_town_frlg`
+  avec la mauvaise table : l'octet `0x69` ressortait comme `MB_LAVARIDGE_GYM_1F_WARP` (référence
+  Hoenn incohérente) alors qu'il s'agit en réalité de `MB_FRLG_WARP_DOOR` (porte ordinaire)
+- Bonne nouvelle : tous les comportements réellement utilisés par ces deux tilesets ont un
+  équivalent fonctionnel direct (`MB_FRLG_TALL_GRASS→MB_TALL_GRASS`, `MB_FRLG_POND_WATER→
+  MB_POND_WATER`, `MB_FRLG_OCEAN_WATER→MB_OCEAN_WATER`, etc.), confirmé par la table officielle
+  déjà présente dans le dépôt (`engine/migration_scripts/frlg_metatile_behavior_converter.py`,
+  fournie par pokeemerald-expansion, pas réinventée) et **validé en jeu réel** : joueur bloqué net
+  à la lisière de l'eau en test headless, comportement identique à n'importe quelle eau Hoenn
+- Quelques octets bruts (`0x1D`, `0x1E`, `0x1F`, `0x2C`, `0x4F`) n'existent dans aucune table
+  documentée (trous de numérotation FRLG) — vérifiés visuellement (panneaux MART/CENTRE, jetées en
+  bois), aucun mécanisme critique, convertis en `MB_NORMAL` par choix sûr plutôt que valeur brute
+  arbitraire
+
+**2. Duplication technique (voir docs/TECHNICAL_ARCHITECTURE.md pour la méthode complète, à
+   reproduire à l'identique sur les 13 autres villes)**
+- `general_frlg` (primaire) et `pallet_town_frlg` (secondaire) dupliqués hors du garde
+  `#if !IS_FRLG` sous de nouveaux symboles compilés sans condition (`gTileset_GeneralFrlgKanto`/
+  `gTileset_PalletTownKanto`) — 3 nouveaux fichiers (`graphics_kanto.h`, `metatiles_kanto.h`,
+  `headers_kanto.h`), inclus depuis `src/tilesets.c`, pointant vers les mêmes fichiers source
+  (aucune donnée graphique dupliquée)
+- Nouveau script `tools/kanto_tileset_port/convert_frlg_behaviors.py` : réencode la valeur du
+  champ Behavior (`MB_FRLG_*` → `MB_*`) dans une copie du `metatile_attributes.bin`, en conservant
+  le format FRLG 32 bits/metatile (le fichier d'origine n'est jamais modifié)
+- **Découverte supplémentaire nécessaire non anticipée** : même avec le tileset dupliqué, un
+  layout `"layout_version": "emerald"` (seul moyen de survivre au filtre `MAP_VERSION` de
+  `tools/mapjson/mapjson.cpp`) est verrouillé sur `isFrlg=FALSE`, ce qui aurait cassé soit la
+  frontière tuiles/metatiles 640/640/7 propre à FRLG (repli sur 512/512/6 → perte des tuiles d'eau/
+  jetée situées entre les IDs 512-639 de `general_frlg`), soit la lecture des attributs 32 bits.
+  Patch minimal et rétrocompatible de `mapjson.cpp` : nouveau champ optionnel `"metatile_format":
+  "frlg"` qui fait émettre `isFrlg=TRUE` pour un layout qui reste par ailleurs `"emerald"` (donc
+  toujours compilé) — n'affecte aucun layout existant qui n'ajoute pas ce champ
+- Carte de test isolée `LittlerootTownKantoTest` créée (groupe 75, index 0 — nouveau groupe dédié
+  en fin de `map_groups.json`, aucun risque de décaler les constantes `MAP_*` existantes), non
+  connectée au reste du monde, accessible uniquement via le warp du menu debug — **Bourg Palette
+  réel (`LittlerootTown`) n'a pas été touché**, conformément à la demande de test isolé d'abord
+
+**3. Résultat**
+- Build release validée (`make MODERN=1`, exit code 0, ROM 79,11 %) — le seul point de friction
+  rencontré (`undefined reference` sur le `MapScripts` de la nouvelle carte) était un oubli
+  d'ajout dans la liste manuelle `data/event_scripts.s`, corrigé
+- Testé en headless : composition visuelle correcte (herbe, chemin, sable, eau, fleurs, panneau,
+  bordure d'arbres — vrais graphismes Kanto), **0 instance de "Bad memory"**, et surtout le joueur
+  reste bloqué à la lisière de l'eau malgré plusieurs tentatives d'avancer (comportement
+  MB_POND_WATER/MB_OCEAN_WATER fonctionnel, pas juste un rendu visuel correct)
+- Méthode documentée en détail dans `docs/TECHNICAL_ARCHITECTURE.md` (section "Tilesets Kanto FRLG
+  dans un hack Emerald") pour être appliquée telle quelle aux 13 autres tilesets de villes, une
+  ville à la fois, chaque étape restant dans un état compilable
+- **Prochaine étape (non commencée)** : reconstruire réellement Bourg Palette (`LittlerootTown`)
+  avec `pallet_town_frlg`, cette fois avec une composition tuile par tuile fidèle à sa conception
+  actuelle (bâtiments, côte) plutôt que la composition de test simplifiée utilisée ici pour valider
+  la méthode

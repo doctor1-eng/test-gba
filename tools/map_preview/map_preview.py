@@ -33,6 +33,7 @@ LAYOUTS_JSON = ENGINE_DIR / "data" / "layouts" / "layouts.json"
 TILESETS_GRAPHICS_SOURCES = [
     ENGINE_DIR / "src" / "data" / "tilesets" / "graphics.h",
     ENGINE_DIR / "src" / "graphics.c",
+    ENGINE_DIR / "src" / "data" / "tilesets" / "graphics_kanto.h",
 ]
 OUT_DIR = Path(__file__).resolve().parent / "out"
 
@@ -214,7 +215,10 @@ def render_map(map_name, renderer, layouts, metatile_cache):
     width, height = layout["width"], layout["height"]
     primary = renderer.get_tileset(layout["primary_tileset"])
     secondary = renderer.get_tileset(layout["secondary_tileset"])
-    split = SPLIT_CONSTANTS[layout.get("layout_version", "emerald")]
+    # "metatile_format": "frlg" (suite 32) fait passer isFrlg=TRUE cote moteur (mapjson.cpp) meme
+    # pour un layout_version "emerald" - donc la meme frontiere 640/640/7 doit etre utilisee ici.
+    split_key = layout.get("metatile_format") or layout.get("layout_version", "emerald")
+    split = SPLIT_CONSTANTS[split_key]
 
     blockdata_path = ENGINE_DIR / layout["blockdata_filepath"]
     raw = blockdata_path.read_bytes()
@@ -224,7 +228,7 @@ def render_map(map_name, renderer, layouts, metatile_cache):
 
     out_img = Image.new("RGBA", (width * METATILE_PX, height * METATILE_PX), (32, 32, 32, 255))
 
-    cache_key = (layout["primary_tileset"], layout["secondary_tileset"], layout.get("layout_version", "emerald"))
+    cache_key = (layout["primary_tileset"], layout["secondary_tileset"], split_key)
     local_cache = metatile_cache.setdefault(cache_key, {})
 
     for i in range(min(len(cells), width * height)):

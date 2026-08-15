@@ -9373,6 +9373,20 @@
       "border_filepath": "data/layouts/MtSelenite_B2F/border.bin",
       "blockdata_filepath": "data/layouts/MtSelenite_B2F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_KANTO_TEST",
+      "name": "LittlerootTownKantoTest_Layout",
+      "width": 20,
+      "height": 16,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralFrlgKanto",
+      "secondary_tileset": "gTileset_PalletTownKanto",
+      "border_filepath": "data/layouts/LittlerootTownKantoTest/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTownKantoTest/map.bin",
+      "layout_version": "emerald",
+      "metatile_format": "frlg"
     }
   ]
 }
