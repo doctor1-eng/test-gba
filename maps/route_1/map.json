@@ -7,7 +7,7 @@
     "progression": "early",
     "tileset": "overworld",
     "seed": 2428587606,
-    "generatedAt": "2026-08-15T15:17:18.333Z",
+    "generatedAt": "2026-08-15T15:55:38.177Z",
     "description": "Voyager d'un point A à un point B en rencontrant des Pokémon sauvages et un dresseur ou deux."
   },
   "dimensions": {
@@ -1394,59 +1394,36 @@
   "npcs": [
     {
       "id": "npc_1",
-      "archetype": "trainer",
-      "role": "trainer",
-      "name": "trainer_1",
-      "x": 6,
-      "y": 18,
-      "direction": "south",
-      "movement": {
-        "type": "patrol"
-      },
-      "dialogue": [
-        "Un dresseur ! Battons-nous !"
-      ]
-    },
-    {
-      "id": "npc_2",
-      "archetype": "trainer",
-      "role": "trainer",
-      "name": "trainer_2",
-      "x": 4,
-      "y": 10,
-      "direction": "east",
-      "movement": {
-        "type": "patrol"
-      },
-      "dialogue": [
-        "Je n'ai pas encore perdu aujourd'hui !",
-        "Un dresseur ! Battons-nous !"
-      ]
-    },
-    {
-      "id": "npc_3",
-      "archetype": "trainer",
-      "role": "trainer",
-      "name": "trainer_3",
-      "x": 3,
+      "archetype": "guide",
+      "role": "guide",
+      "name": "guide_1",
+      "x": 12,
       "y": 30,
-      "direction": "west",
+      "direction": "north",
       "movement": {
-        "type": "patrol"
+        "type": "static"
       },
       "dialogue": [
-        "Je n'ai pas encore perdu aujourd'hui !",
-        "Un dresseur ! Battons-nous !"
+        "Suis le chemin principal si tu ne veux pas te perdre.",
+        "Bienvenue ! Cette zone peut être dangereuse, sois prudent."
       ]
     }
   ],
   "objects": [
     {
       "id": "obj_1",
-      "x": 12,
-      "y": 14,
+      "x": 4,
+      "y": 11,
+      "type": "item_visible",
+      "itemId": "protection",
+      "label": "Objet posé au sol"
+    },
+    {
+      "id": "obj_2",
+      "x": 9,
+      "y": 21,
       "type": "item_hidden",
-      "itemId": "pierre-lune",
+      "itemId": "protection",
       "hidden": true,
       "label": "Objet caché (zone à l'écart du chemin)"
     }
@@ -1454,192 +1431,232 @@
   "buildings": [],
   "decorations": [
     {
-      "x": 9,
-      "y": 6,
+      "x": 6,
+      "y": 1,
       "type": "sign"
     },
     {
-      "x": 11,
-      "y": 6,
+      "x": 8,
+      "y": 1,
       "type": "rock_deco"
     },
     {
-      "x": 13,
-      "y": 6,
+      "x": 10,
+      "y": 1,
       "type": "flower"
     },
     {
-      "x": 7,
-      "y": 7,
-      "type": "fence"
-    },
-    {
-      "x": 2,
-      "y": 9,
-      "type": "fence"
-    },
-    {
-      "x": 4,
-      "y": 9,
-      "type": "sign"
-    },
-    {
-      "x": 6,
-      "y": 9,
-      "type": "sign"
-    },
-    {
-      "x": 7,
-      "y": 9,
+      "x": 13,
+      "y": 1,
       "type": "fence"
     },
     {
       "x": 10,
-      "y": 9,
-      "type": "rock_deco"
+      "y": 3,
+      "type": "fence"
     },
     {
       "x": 12,
-      "y": 9,
-      "type": "flower"
-    },
-    {
-      "x": 7,
-      "y": 10,
-      "type": "flower"
+      "y": 3,
+      "type": "sign"
     },
     {
       "x": 4,
-      "y": 13,
-      "type": "sign"
-    },
-    {
-      "x": 11,
-      "y": 14,
-      "type": "flower"
-    },
-    {
-      "x": 13,
-      "y": 16,
-      "type": "flower"
-    },
-    {
-      "x": 12,
-      "y": 18,
-      "type": "rock_deco"
-    },
-    {
-      "x": 9,
-      "y": 19,
-      "type": "flower"
-    },
-    {
-      "x": 11,
-      "y": 19,
-      "type": "flower"
-    },
-    {
-      "x": 11,
-      "y": 20,
-      "type": "sign"
-    },
-    {
-      "x": 6,
-      "y": 21,
-      "type": "fence"
-    },
-    {
-      "x": 11,
-      "y": 22,
-      "type": "fence"
-    },
-    {
-      "x": 12,
-      "y": 22,
-      "type": "rock_deco"
-    },
-    {
-      "x": 7,
-      "y": 23,
-      "type": "sign"
-    },
-    {
-      "x": 6,
-      "y": 25,
-      "type": "sign"
-    },
-    {
-      "x": 11,
-      "y": 25,
-      "type": "fence"
-    },
-    {
-      "x": 6,
-      "y": 26,
+      "y": 4,
       "type": "sign"
     },
     {
       "x": 5,
+      "y": 4,
+      "type": "fence"
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "type": "rock_deco"
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "type": "flower"
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "type": "flower"
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "type": "sign"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "type": "flower"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "type": "flower"
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "type": "rock_deco"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "type": "flower"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "type": "flower"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "type": "sign"
+    },
+    {
+      "x": 5,
+      "y": 15,
+      "type": "fence"
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "type": "fence"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "type": "rock_deco"
+    },
+    {
+      "x": 6,
+      "y": 17,
+      "type": "sign"
+    },
+    {
+      "x": 8,
+      "y": 19,
+      "type": "sign"
+    },
+    {
+      "x": 13,
+      "y": 19,
+      "type": "fence"
+    },
+    {
+      "x": 10,
+      "y": 20,
+      "type": "sign"
+    },
+    {
+      "x": 11,
+      "y": 22,
+      "type": "sign"
+    },
+    {
+      "x": 7,
+      "y": 24,
+      "type": "fence"
+    },
+    {
+      "x": 4,
+      "y": 25,
+      "type": "flower"
+    },
+    {
+      "x": 8,
+      "y": 25,
+      "type": "flower"
+    },
+    {
+      "x": 11,
+      "y": 25,
+      "type": "rock_deco"
+    },
+    {
+      "x": 5,
+      "y": 26,
+      "type": "flower"
+    },
+    {
+      "x": 7,
+      "y": 26,
+      "type": "sign"
+    },
+    {
+      "x": 9,
+      "y": 28,
+      "type": "sign"
+    },
+    {
+      "x": 13,
       "y": 28,
       "type": "sign"
     },
     {
       "x": 9,
       "y": 29,
-      "type": "fence"
+      "type": "rock_deco"
     },
     {
-      "x": 5,
-      "y": 30,
+      "x": 12,
+      "y": 29,
+      "type": "flower"
+    },
+    {
+      "x": 7,
+      "y": 31,
+      "type": "sign"
+    },
+    {
+      "x": 13,
+      "y": 32,
       "type": "flower"
     },
     {
       "x": 9,
-      "y": 30,
+      "y": 34,
+      "type": "fence"
+    },
+    {
+      "x": 11,
+      "y": 35,
       "type": "flower"
-    },
-    {
-      "x": 12,
-      "y": 30,
-      "type": "rock_deco"
-    },
-    {
-      "x": 5,
-      "y": 31,
-      "type": "flower"
-    },
-    {
-      "x": 7,
-      "y": 31,
-      "type": "sign"
     },
     {
       "x": 6,
-      "y": 33,
-      "type": "sign"
-    },
-    {
-      "x": 10,
-      "y": 33,
-      "type": "sign"
-    },
-    {
-      "x": 5,
-      "y": 34,
-      "type": "rock_deco"
-    },
-    {
-      "x": 8,
-      "y": 34,
-      "type": "flower"
-    },
-    {
-      "x": 7,
       "y": 36,
       "type": "sign"
     },
     {
-      "x": 5,
+      "x": 8,
+      "y": 36,
+      "type": "rock_deco"
+    },
+    {
+      "x": 10,
+      "y": 37,
+      "type": "fence"
+    },
+    {
+      "x": 13,
+      "y": 37,
+      "type": "rock_deco"
+    },
+    {
+      "x": 9,
+      "y": 38,
+      "type": "rock_deco"
+    },
+    {
+      "x": 11,
       "y": 38,
       "type": "flower"
     }
@@ -1659,21 +1676,21 @@
         "pokemon": "Zigzagoon",
         "rarity": "common",
         "weight": 30,
-        "levelMin": 1,
+        "levelMin": 2,
         "levelMax": 9
       },
       {
         "pokemon": "Sacha (Poochyena)",
         "rarity": "common",
         "weight": 25,
-        "levelMin": 3,
+        "levelMin": 1,
         "levelMax": 9
       },
       {
         "pokemon": "Taillow",
         "rarity": "uncommon",
         "weight": 20,
-        "levelMin": 1,
+        "levelMin": 3,
         "levelMax": 9
       },
       {
@@ -1687,7 +1704,7 @@
         "pokemon": "Ralts",
         "rarity": "rare",
         "weight": 5,
-        "levelMin": 2,
+        "levelMin": 1,
         "levelMax": 9
       }
     ]

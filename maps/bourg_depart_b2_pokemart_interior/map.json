@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "id": "bourg_depart_b2_house_interior",
-    "name": "Maison",
-    "kind": "house",
+    "id": "bourg_depart_b2_pokemart_interior",
+    "name": "Boutique",
+    "kind": "pokemart",
     "region": "Région Céladopolis",
     "progression": "early",
     "tileset": "interior",
-    "seed": 3469465589,
-    "generatedAt": "2026-08-15T15:17:18.328Z",
-    "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
+    "seed": 1448826215,
+    "generatedAt": "2026-08-15T15:55:38.165Z",
+    "description": "Acheter des objets utiles à l'exploration et au combat."
   },
   "dimensions": {
     "width": 8,
-    "height": 6
+    "height": 7
   },
   "terrain": [
     [
@@ -27,42 +27,52 @@
     ],
     [
       "wall",
-      "floor_wood",
-      "bed",
-      "floor_wood",
-      "table",
-      "floor_wood",
-      "floor_wood",
+      "floor_tile",
+      "counter",
+      "floor_tile",
+      "shelf",
+      "floor_tile",
+      "floor_tile",
       "wall"
     ],
     [
       "wall",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
       "wall"
     ],
     [
       "wall",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
       "wall"
     ],
     [
       "wall",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
-      "floor_wood",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
+      "floor_tile",
       "wall"
     ],
     [
@@ -129,6 +139,16 @@
     ],
     [
       true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
       true,
       true,
       true,
@@ -143,27 +163,43 @@
     {
       "id": "w_entry",
       "x": 4,
-      "y": 5,
+      "y": 6,
       "direction": "south",
       "destinationMap": "bourg_depart",
-      "destinationWarpId": "w_bourg_depart_b2_house"
+      "destinationWarpId": "w_bourg_depart_b2_pokemart"
     }
   ],
-  "npcs": [],
+  "npcs": [
+    {
+      "id": "npc_bourg_depart_b2_pokemart_interior_1",
+      "archetype": "clerk",
+      "role": "clerk",
+      "name": "clerk_1",
+      "x": 4,
+      "y": 2,
+      "direction": "south",
+      "movement": {
+        "type": "static"
+      },
+      "dialogue": [
+        "Puis-je vous aider ?"
+      ]
+    }
+  ],
   "objects": [
     {
-      "id": "furn_bourg_depart_b2_house_interior_1",
-      "type": "machine",
+      "id": "furn_bourg_depart_b2_pokemart_interior_1",
+      "type": "counter",
       "x": 2,
       "y": 1,
-      "label": "bed"
+      "label": "counter"
     },
     {
-      "id": "furn_bourg_depart_b2_house_interior_2",
+      "id": "furn_bourg_depart_b2_pokemart_interior_2",
       "type": "machine",
       "x": 4,
       "y": 1,
-      "label": "table"
+      "label": "shelf"
     }
   ],
   "buildings": [],

@@ -24,6 +24,7 @@ export function generateBeachTerrain(
   height: number,
   template: MapTemplate,
   connections: Direction[],
+  isSolid: (tile: string) => boolean,
 ): TerrainResult {
   const terrain = makeTerrain(width, height, "sand");
   const zones = makeZones(width, height, "sand");

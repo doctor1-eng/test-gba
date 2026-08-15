@@ -16,11 +16,11 @@
     "maxCount": 4
   },
   "decorations": {
-    "densityByZone": { "residential": 0.16, "path_edge": 0.14, "open": 0.12 },
+    "densityByZone": { "residential": 0.16, "path_edge": 0.14, "open": 0.12, "pond": 0.2 },
     "allowed": ["flower", "fence", "berry_tree_deco", "sign"]
   },
   "npcs": { "countMin": 2, "countMax": 4, "archetypePool": ["resident", "child", "tourist"] },
   "objects": { "hiddenItemChance": 0.2, "visibleItemChance": 0.25, "signChance": 0.4 },
-  "landmarks": { "minCount": 1, "maxCount": 1, "pool": ["old_tree", "well"] },
+  "landmarks": { "minCount": 1, "maxCount": 2, "pool": ["old_tree", "well", "pond"] },
   "encounters": { "enabled": false }
 }

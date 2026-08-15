@@ -3,7 +3,9 @@ import type { Direction } from "../../schema/types.js";
 import type { MapTemplate } from "../../schema/template.js";
 import { type Point } from "../grid.js";
 import {
+  addOrganicFringe,
   carveMainPath,
+  carveSafePond,
   edgePoint,
   frameBorder,
   inwardOf,
@@ -19,6 +21,7 @@ export function generateVillageTerrain(
   height: number,
   template: MapTemplate,
   connections: Direction[],
+  isSolid: (tile: string) => boolean,
 ): TerrainResult {
   const terrain = makeTerrain(width, height, "grass");
   const zones = makeZones(width, height, "open");
@@ -59,5 +62,18 @@ export function generateVillageTerrain(
   const landmarkSpot: Point = { x: Math.floor(width / 2), y: Math.floor(height / 2) };
   zones[landmarkSpot.y][landmarkSpot.x] = "open";
 
-  return { width, height, terrain, zones, mainPath, edgeAnchors, landmarkSpot };
+  // Étang optionnel — même logique que pour les villes, mais plus fréquent :
+  // un village "vit" davantage autour d'un point d'eau (puits, mare) que
+  // ne le suggérait la version précédente, entièrement plate. carveSafePond
+  // refuse toute pose qui cloisonnerait une partie du terrain praticable —
+  // crucial sur une carte de village, plus petite qu'une ville.
+  const extraLandmarkSpots: Array<{ point: Point; type: string }> = [];
+  if (rng.bool(0.6)) {
+    const pond = carveSafePond(rng, terrain, zones, width, height, mainPath, isSolid, "water", "pond", [5, 10]);
+    if (pond) extraLandmarkSpots.push(pond);
+  }
+
+  addOrganicFringe(rng, terrain, width, height, "tree", "grass", mainPath, isSolid, 3);
+
+  return { width, height, terrain, zones, mainPath, edgeAnchors, landmarkSpot, extraLandmarkSpots };
 }

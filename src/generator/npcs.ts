@@ -11,6 +11,7 @@ function candidateSpots(
   buildings: Array<{ x: number; y: number; width: number; height: number }>,
   isSolid: (tile: string) => boolean,
   occupied: Set<string>,
+  reachable: Set<string>,
 ): Point[] {
   const { width, height, terrain, mainPath, landmarkSpot, edgeAnchors } = terrainResult;
   const spots: Point[] = [];
@@ -19,6 +20,9 @@ function candidateSpots(
     if (x <= 0 || y <= 0 || x >= width - 1 || y >= height - 1) return;
     if (occupied.has(k) || mainPath.has(k)) return;
     if (isSolid(terrain[y][x])) return;
+    // Une case peut être libre sans être atteignable (poche cernée par une
+    // frange d'arbres, un étang, un bâtiment...) — jamais y poser de PNJ.
+    if (reachable.size > 0 && !reachable.has(k)) return;
     spots.push({ x, y });
   };
 
@@ -66,6 +70,7 @@ export function placeNpcs(
   buildings: Array<{ x: number; y: number; width: number; height: number }>,
   isSolid: (tile: string) => boolean,
   occupied: Set<string>,
+  reachable: Set<string>,
 ): Npc[] {
   const count = rng.int(template.npcs.countMin, template.npcs.countMax);
   const npcs: Npc[] = [];
@@ -76,7 +81,7 @@ export function placeNpcs(
   for (let i = 0; i < count; i++) {
     const archetypeName = rng.pick(pool);
     const archetype = archetypes[archetypeName];
-    const spots = candidateSpots(terrainResult, archetype.placement, buildings, isSolid, occupied);
+    const spots = candidateSpots(terrainResult, archetype.placement, buildings, isSolid, occupied, reachable);
     if (spots.length === 0) continue;
     const spot = rng.pick(spots);
     occupied.add(`${spot.x},${spot.y}`);

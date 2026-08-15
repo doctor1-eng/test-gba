@@ -16,6 +16,7 @@ import {
   tilesetLegend,
   isOverworldType,
 } from "../data/loader.js";
+import { computeReachableSet } from "./grid.js";
 import type { TerrainResult } from "./terrain/common.js";
 import { generateTownTerrain } from "./terrain/town.js";
 import { generateVillageTerrain } from "./terrain/village.js";
@@ -34,7 +35,7 @@ import { buildEncounterTable } from "./encounters.js";
 
 const TERRAIN_GENERATORS: Record<
   string,
-  (rng: Rng, w: number, h: number, t: MapTemplate, c: Direction[]) => TerrainResult
+  (rng: Rng, w: number, h: number, t: MapTemplate, c: Direction[], isSolid: (tile: string) => boolean) => TerrainResult
 > = {
   town: generateTownTerrain,
   village: generateVillageTerrain,
@@ -114,22 +115,25 @@ export function generateMap(opts: GenerateMapOptions): GenerateMapResult {
     opts.connections ?? DEFAULT_CONNECTIONS[opts.type].map((direction): ConnectionSpec => ({ direction }));
   const directions = connectionSpecs.map((c) => c.direction);
 
-  const terrainResult = generatorFn(rng, width, height, template, directions);
-
   const tileset = loadTileset(template.tileset);
   const legend = tilesetLegend(tileset);
   const isSolid = (tile: string) => legend.get(tile)?.solid ?? false;
 
+  const terrainResult = generatorFn(rng, width, height, template, directions, isSolid);
+
   const occupied = new Set<string>();
-  const landmarkSpotKey = `${terrainResult.landmarkSpot.x},${terrainResult.landmarkSpot.y}`;
-  // Le landmark principal réserve sa case AVANT le placement des bâtiments :
+  // Le(s) landmark(s) réservent leur case AVANT le placement des bâtiments :
   // sans ça, un bâtiment peut recouvrir la tuile choisie par le générateur
-  // de terrain pour le landmark (choisie sans connaître les bâtiments à
-  // venir), et le landmark finirait posé sur un mur — détecté par le
-  // validateur mais évitable dès la génération. La réservation est retirée
-  // juste après (elle a rempli son rôle : écarter les bâtiments) pour ne
-  // pas fausser la recherche de repli de placeLandmarks juste en dessous.
-  occupied.add(landmarkSpotKey);
+  // de terrain pour un landmark (choisie sans connaître les bâtiments à
+  // venir — ex: la berge d'un étang, restée non-solide exprès), et le
+  // landmark finirait posé sous un mur. Les réservations sont retirées
+  // juste après (leur rôle était d'écarter les bâtiments) pour ne pas
+  // fausser la recherche de repli de placeLandmarks juste en dessous.
+  const reservedLandmarkKeys = [
+    `${terrainResult.landmarkSpot.x},${terrainResult.landmarkSpot.y}`,
+    ...(terrainResult.extraLandmarkSpots ?? []).map((s) => `${s.point.x},${s.point.y}`),
+  ];
+  for (const k of reservedLandmarkKeys) occupied.add(k);
 
   // 1) Bâtiments : mutent le terrain (footprint + porte) avant tout le reste.
   const { buildings, interiorMaps, exteriorWarps } = placeBuildings(
@@ -140,23 +144,40 @@ export function generateMap(opts: GenerateMapOptions): GenerateMapResult {
     region,
     progression,
     occupied,
+    isSolid,
   );
-  occupied.delete(landmarkSpotKey);
+  for (const k of reservedLandmarkKeys) occupied.delete(k);
+
+  // Ensemble des tuiles réellement atteignables, calculé une seule fois
+  // après la pose des bâtiments (dernière étape qui ajoute des obstacles
+  // majeurs). Sert de garde-fou pour toutes les passes de placement
+  // suivantes : "non-solide" ne suffit pas, une case cernée par une frange
+  // d'arbres, un étang ou un bâtiment reste inutilisable même si elle n'est
+  // techniquement pas un mur. Calculé EXACTEMENT comme le validateur le
+  // recalculera (mêmes points d'entrée : les warps de bâtiment) — sans
+  // quoi une case jugée "sûre" ici pourrait être jugée injoignable
+  // ensuite, pour deux définitions différentes de la même notion.
+  const isSolidAt = (x: number, y: number) => isSolid(terrainResult.terrain[y]?.[x] ?? "");
+  const reachable = computeReachableSet(
+    terrainResult.width,
+    terrainResult.height,
+    isSolidAt,
+    exteriorWarps.map((w) => ({ x: w.x, y: w.y })),
+  );
 
   // 2) Landmarks : réservent leur case avant la passe décoration.
-  const isSolidAt = (x: number, y: number) => isSolid(terrainResult.terrain[y]?.[x] ?? "");
-  const landmarks = placeLandmarks(rng, terrainResult, template, isSolidAt, occupied);
+  const landmarks = placeLandmarks(rng, terrainResult, template, isSolidAt, occupied, reachable);
 
   // 3) Décorations : remplissent le reste selon les densités de zone.
   const decorations = placeDecorations(rng, terrainResult, template, isSolid, occupied);
 
   // 4) PNJ, positionnés par rôle/archétype.
   const archetypes = loadNpcArchetypes();
-  const npcs = placeNpcs(rng, terrainResult, template, archetypes, buildings, isSolid, occupied);
+  const npcs = placeNpcs(rng, terrainResult, template, archetypes, buildings, isSolid, occupied, reachable);
 
   // 5) Objets interactifs.
   const catalog = loadObjectsCatalog();
-  const objects = placeObjects(rng, terrainResult, template, catalog, isSolid, occupied);
+  const objects = placeObjects(rng, terrainResult, template, catalog, isSolid, occupied, reachable);
 
   // 6) Rencontres sauvages.
   const species = loadSpeciesEncounters();

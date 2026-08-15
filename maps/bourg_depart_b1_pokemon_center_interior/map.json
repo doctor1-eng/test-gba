@@ -6,8 +6,8 @@
     "region": "Région Céladopolis",
     "progression": "early",
     "tileset": "interior",
-    "seed": 304184420,
-    "generatedAt": "2026-08-15T15:17:18.327Z",
+    "seed": 3008021561,
+    "generatedAt": "2026-08-15T15:55:38.164Z",
     "description": "Soigner son équipe et accéder au PC de stockage."
   },
   "dimensions": {
@@ -234,7 +234,7 @@
         "type": "static"
       },
       "dialogue": [
-        "Voulez-vous soigner vos Pokémon ?"
+        "Vos Pokémon sont en pleine forme !"
       ]
     }
   ],

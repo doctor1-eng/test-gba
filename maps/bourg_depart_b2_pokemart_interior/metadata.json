@@ -1,0 +1,11 @@
+{
+  "id": "bourg_depart_b2_pokemart_interior",
+  "name": "Boutique",
+  "kind": "pokemart",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "interior",
+  "seed": 1448826215,
+  "generatedAt": "2026-08-15T15:55:38.165Z",
+  "description": "Acheter des objets utiles à l'exploration et au combat."
+}

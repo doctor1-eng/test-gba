@@ -25,6 +25,7 @@ export function generateMountainTerrain(
   height: number,
   template: MapTemplate,
   connections: Direction[],
+  isSolid: (tile: string) => boolean,
 ): TerrainResult {
   const terrain = makeTerrain(width, height, "grass");
   const zones = makeZones(width, height, "terrace");

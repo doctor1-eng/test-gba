@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "id": "bourg_depart_b3_house_interior",
+    "name": "Maison",
+    "kind": "house",
+    "region": "Région Céladopolis",
+    "progression": "early",
+    "tileset": "interior",
+    "seed": 2788397342,
+    "generatedAt": "2026-08-15T15:55:38.167Z",
+    "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
+  },
+  "dimensions": {
+    "width": 8,
+    "height": 6
+  },
+  "terrain": [
+    [
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "bed",
+      "floor_wood",
+      "table",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "exit_mat",
+      "wall",
+      "wall",
+      "wall"
+    ]
+  ],
+  "collision": [
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+    ]
+  ],
+  "connections": [],
+  "warps": [
+    {
+      "id": "w_entry",
+      "x": 4,
+      "y": 5,
+      "direction": "south",
+      "destinationMap": "bourg_depart",
+      "destinationWarpId": "w_bourg_depart_b3_house"
+    }
+  ],
+  "npcs": [],
+  "objects": [
+    {
+      "id": "furn_bourg_depart_b3_house_interior_1",
+      "type": "machine",
+      "x": 2,
+      "y": 1,
+      "label": "bed"
+    },
+    {
+      "id": "furn_bourg_depart_b3_house_interior_2",
+      "type": "machine",
+      "x": 4,
+      "y": 1,
+      "label": "table"
+    }
+  ],
+  "buildings": [],
+  "decorations": [],
+  "landmarks": [],
+  "encounters": {},
+  "events": []
+}

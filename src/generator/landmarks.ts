@@ -16,6 +16,7 @@ const LANDMARK_LABELS: Record<string, string> = {
   summit_view: "Point de vue du sommet",
   shipwreck: "Épave échouée",
   monument: "Monument",
+  pond: "Étang",
 };
 
 const LANDMARK_DESC: Record<string, string> = {
@@ -31,12 +32,16 @@ const LANDMARK_DESC: Record<string, string> = {
   summit_view: "Vue dégagée sur toute la région en contrebas.",
   shipwreck: "Vestige d'un naufrage ancien, échoué sur le sable.",
   monument: "Point central de la zone, chargé de sens narratif.",
+  pond: "Un petit point d'eau qui rompt la monotonie du terrain environnant.",
 };
 
 /**
- * Cherche la case non-solide, non occupée la plus proche par expansion en
- * anneaux — filet de sécurité si la case visée a été recouverte entre-temps
- * (ex: par un bâtiment placé après le choix du point de landmark).
+ * Cherche la case non-solide, non occupée ET atteignable la plus proche par
+ * expansion en anneaux — filet de sécurité si la case visée a été
+ * recouverte entre-temps (ex: par un bâtiment placé après le choix du
+ * point de landmark), ou si elle est techniquement praticable mais isolée
+ * du reste de la carte (une case "libre" ne suffit pas si le joueur ne
+ * peut jamais l'atteindre).
  */
 function nearestFreeSpot(
   start: { x: number; y: number },
@@ -44,8 +49,11 @@ function nearestFreeSpot(
   height: number,
   isSolid: (x: number, y: number) => boolean,
   occupied: Set<string>,
+  reachable: Set<string>,
 ): { x: number; y: number } {
-  if (!isSolid(start.x, start.y) && !occupied.has(`${start.x},${start.y}`)) return start;
+  const ok = (x: number, y: number) =>
+    !isSolid(x, y) && !occupied.has(`${x},${y}`) && (reachable.size === 0 || reachable.has(`${x},${y}`));
+  if (ok(start.x, start.y)) return start;
   for (let radius = 1; radius < Math.max(width, height); radius++) {
     for (let dy = -radius; dy <= radius; dy++) {
       for (let dx = -radius; dx <= radius; dx++) {
@@ -53,38 +61,60 @@ function nearestFreeSpot(
         const x = start.x + dx;
         const y = start.y + dy;
         if (x <= 0 || y <= 0 || x >= width - 1 || y >= height - 1) continue;
-        if (!isSolid(x, y) && !occupied.has(`${x},${y}`)) return { x, y };
+        if (ok(x, y)) return { x, y };
       }
     }
   }
   return start; // aucune case libre trouvée : le validateur le signalera explicitement
 }
 
-/** Pose un ou plusieurs landmarks mémorables, toujours en zone dégagée et non-solide. */
+/**
+ * Pose un ou plusieurs landmarks mémorables, toujours en zone dégagée et
+ * non-solide. Priorité aux landmarks suggérés par le générateur de terrain
+ * lui-même (`extraLandmarkSpots`, ex: un étang tout juste creusé) : ils
+ * correspondent à un vrai élément du terrain plutôt qu'à une case
+ * arbitraire, mais ne sont retenus que si leur type figure dans le pool du
+ * template (le template garde la main sur ce qui compte comme landmark).
+ */
 export function placeLandmarks(
   rng: Rng,
   terrainResult: TerrainResult,
   template: MapTemplate,
   isSolid: (x: number, y: number) => boolean,
   occupied: Set<string>,
+  reachable: Set<string>,
 ): Landmark[] {
   const count = Math.max(template.landmarks.minCount, rng.int(template.landmarks.minCount, template.landmarks.maxCount));
   const landmarks: Landmark[] = [];
-  const pool = rng.shuffle(template.landmarks.pool);
+  const usedTypes = new Set<string>();
 
-  for (let i = 0; i < count && i < pool.length; i++) {
-    const type = pool[i];
-    const intended =
-      i === 0 ? terrainResult.landmarkSpot : { x: terrainResult.landmarkSpot.x + i * 3, y: terrainResult.landmarkSpot.y };
-    const spot = nearestFreeSpot(intended, terrainResult.width, terrainResult.height, isSolid, occupied);
+  const placeAt = (type: string, intended: { x: number; y: number }) => {
+    const spot = nearestFreeSpot(intended, terrainResult.width, terrainResult.height, isSolid, occupied, reachable);
     occupied.add(`${spot.x},${spot.y}`);
+    usedTypes.add(type);
     landmarks.push({
-      id: `landmark_${i + 1}`,
+      id: `landmark_${landmarks.length + 1}`,
       label: LANDMARK_LABELS[type] ?? type,
       x: spot.x,
       y: spot.y,
       description: LANDMARK_DESC[type] ?? "Point de repère notable de la zone.",
     });
+  };
+
+  for (const extra of terrainResult.extraLandmarkSpots ?? []) {
+    if (landmarks.length >= count) break;
+    if (!template.landmarks.pool.includes(extra.type) || usedTypes.has(extra.type)) continue;
+    placeAt(extra.type, extra.point);
   }
+
+  const remainingPool = rng.shuffle(template.landmarks.pool.filter((t) => !usedTypes.has(t)));
+  for (let i = 0; landmarks.length < count && i < remainingPool.length; i++) {
+    const intended =
+      landmarks.length === 0
+        ? terrainResult.landmarkSpot
+        : { x: terrainResult.landmarkSpot.x + landmarks.length * 3, y: terrainResult.landmarkSpot.y };
+    placeAt(remainingPool[i], intended);
+  }
+
   return landmarks;
 }

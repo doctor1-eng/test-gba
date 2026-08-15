@@ -16,11 +16,11 @@
     "maxCount": 7
   },
   "decorations": {
-    "densityByZone": { "plaza": 0.06, "residential": 0.12, "path_edge": 0.15, "open": 0.08 },
+    "densityByZone": { "plaza": 0.06, "residential": 0.12, "path_edge": 0.15, "open": 0.08, "pond": 0.18 },
     "allowed": ["flower", "fence", "sign", "bridge"]
   },
   "npcs": { "countMin": 5, "countMax": 9, "archetypePool": ["resident", "child", "guide", "tourist"] },
   "objects": { "hiddenItemChance": 0.15, "visibleItemChance": 0.2, "signChance": 0.5 },
-  "landmarks": { "minCount": 1, "maxCount": 2, "pool": ["fountain", "statue", "clock_tower"] },
+  "landmarks": { "minCount": 1, "maxCount": 2, "pool": ["fountain", "statue", "clock_tower", "pond"] },
   "encounters": { "enabled": false }
 }

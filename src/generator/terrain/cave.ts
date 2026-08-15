@@ -25,6 +25,7 @@ export function generateCaveTerrain(
   height: number,
   template: MapTemplate,
   connections: Direction[],
+  isSolid: (tile: string) => boolean,
 ): TerrainResult {
   const terrain = makeTerrain(width, height, "cave_wall");
   const zones = makeZones(width, height, "corridor");

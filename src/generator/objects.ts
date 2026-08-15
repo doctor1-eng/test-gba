@@ -19,6 +19,7 @@ export function placeObjects(
   catalog: ObjectsCatalog,
   isSolid: (tile: string) => boolean,
   occupied: Set<string>,
+  reachable: Set<string>,
 ): MapObject[] {
   const { width, height, terrain, zones, mainPath } = terrainResult;
   const objects: MapObject[] = [];
@@ -30,6 +31,9 @@ export function placeObjects(
       const k = `${x},${y}`;
       if (occupied.has(k) || isSolid(terrain[y][x])) continue;
       if (mainPath.has(k)) continue;
+      // "À l'écart du chemin" ne veut pas dire "inaccessible" : un objet
+      // caché doit rester atteignable, seulement moins visible au premier coup d'œil.
+      if (reachable.size > 0 && !reachable.has(k)) continue;
       if (zones[y][x] === "path_edge") pathEdgeTiles.push({ x, y });
       else offPathTiles.push({ x, y });
     }

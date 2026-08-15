@@ -26,6 +26,7 @@ export function generateForestTerrain(
   height: number,
   template: MapTemplate,
   connections: Direction[],
+  isSolid: (tile: string) => boolean,
 ): TerrainResult {
   const terrain = makeTerrain(width, height, "dense_tree");
   const zones = makeZones(width, height, "canopy");

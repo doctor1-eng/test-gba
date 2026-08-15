@@ -15,6 +15,7 @@ export function generateSpecialTerrain(
   height: number,
   template: MapTemplate,
   connections: Direction[],
+  isSolid: (tile: string) => boolean,
 ): TerrainResult {
-  return generateVillageTerrain(rng, width, height, template, connections);
+  return generateVillageTerrain(rng, width, height, template, connections, isSolid);
 }

@@ -32,8 +32,16 @@
       "width": 10,
       "height": 8
     },
-    "bourg_depart_b2_house_interior": {
-      "id": "bourg_depart_b2_house_interior",
+    "bourg_depart_b2_pokemart_interior": {
+      "id": "bourg_depart_b2_pokemart_interior",
+      "name": "Boutique",
+      "kind": "pokemart",
+      "region": "Région Céladopolis",
+      "width": 8,
+      "height": 7
+    },
+    "bourg_depart_b3_house_interior": {
+      "id": "bourg_depart_b3_house_interior",
       "name": "Maison",
       "kind": "house",
       "region": "Région Céladopolis",

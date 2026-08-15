@@ -1,5 +1,5 @@
 import type { Rng } from "../rng.js";
-import { carvePath, inBounds, key, type Point } from "../grid.js";
+import { carvePath, floodFillReachable, inBounds, key, type Point } from "../grid.js";
 import type { Direction } from "../../schema/types.js";
 
 export interface TerrainResult {
@@ -14,6 +14,13 @@ export interface TerrainResult {
   edgeAnchors: Partial<Record<Direction, Point>>;
   /** Point suggéré pour le landmark central (zone dégagée, visible). */
   landmarkSpot: Point;
+  /**
+   * Landmarks additionnels suggérés par le générateur de terrain lui-même
+   * (ex: un étang qu'il vient de creuser) — préférés par placeLandmarks aux
+   * décalages génériques puisqu'ils correspondent à un vrai élément du
+   * terrain plutôt qu'à une case arbitraire.
+   */
+  extraLandmarkSpots?: Array<{ point: Point; type: string }>;
 }
 
 export function makeTerrain(width: number, height: number, ground: string): string[][] {
@@ -169,6 +176,129 @@ export function markPathEdgeRing(
       }
     }
   }
+}
+
+/**
+ * Ajoute une frange d'arbres à profondeur irrégulière juste à l'intérieur
+ * du cadre solide déjà posé par frameBorder (jamais retiré : la bordure
+ * réelle reste garantie scellée). Rompt la silhouette parfaitement
+ * rectangulaire d'une carte à cadre uniforme — section 4 de la mission :
+ * "évite absolument les cartes parfaitement symétriques ou artificielles".
+ * La profondeur varie par marche aléatoire bornée (jamais un bruit non
+ * contraint). Appelée après le tracé du chemin/de la place : ne repeint
+ * que les cases encore au sol de base (`groundTile`), donc ne touche
+ * jamais un chemin, une place ou toute autre feature déjà posée.
+ *
+ * Sur une petite carte (ex: un village à connexion unique, où l'essentiel
+ * de la zone n'est praticable que parce que c'est un grand champ ouvert
+ * sans obstacle), une frange trop profonde peut suffire à couper un pan
+ * entier du terrain du reste de la carte — et pas seulement engloutir sa
+ * propre surface : comparer la perte à la seule taille de la frange ne
+ * suffit pas (une frange qui mange presque tout l'intérieur "explique"
+ * mathématiquement sa propre perte sans qu'on détecte le problème). On
+ * exige donc qu'au moins la moitié de la surface intérieure (hors cadre)
+ * reste atteignable depuis une tuile de chemin connue ; sinon, on annule.
+ */
+export function addOrganicFringe(
+  rng: Rng,
+  terrain: string[][],
+  width: number,
+  height: number,
+  fringeTile: string,
+  groundTile: string,
+  mainPath: Set<string>,
+  isSolid: (tile: string) => boolean,
+  maxDepth = 3,
+) {
+  const referenceKey = mainPath.values().next().value as string | undefined;
+  if (!referenceKey) return;
+  const [refX, refY] = referenceKey.split(",").map(Number);
+  const solidAt = (x: number, y: number) => isSolid(terrain[y]?.[x] ?? "");
+  const interiorArea = (width - 2) * (height - 2);
+  const minAcceptable = Math.floor(interiorArea * 0.5);
+
+  const painted: Point[] = [];
+  const paintEdge = (getCell: (i: number, depth: number) => Point, length: number) => {
+    let depth = rng.int(1, maxDepth);
+    for (let i = 0; i < length; i++) {
+      depth = Math.min(maxDepth, Math.max(1, depth + rng.int(-1, 1)));
+      for (let d = 1; d <= depth; d++) {
+        const p = getCell(i, d);
+        if (!inBounds(width, height, p.x, p.y)) continue;
+        if (terrain[p.y][p.x] !== groundTile) continue;
+        terrain[p.y][p.x] = fringeTile;
+        painted.push(p);
+      }
+    }
+  };
+
+  paintEdge((i, d) => ({ x: i, y: d }), width); // nord
+  paintEdge((i, d) => ({ x: i, y: height - 1 - d }), width); // sud
+  paintEdge((i, d) => ({ x: d, y: i }), height); // ouest
+  paintEdge((i, d) => ({ x: width - 1 - d, y: i }), height); // est
+
+  const after = floodFillReachable(width, height, solidAt, { x: refX, y: refY }).size;
+  if (after < minAcceptable) {
+    for (const p of painted) terrain[p.y][p.x] = groundTile; // a mangé trop de l'intérieur praticable : annulé
+  }
+}
+
+/**
+ * Creuse un point d'eau (étang) uniquement si ça ne coupe le terrain
+ * praticable en deux : contrairement à une clairière ou une salle de
+ * grotte, un étang est délibérément à l'écart du chemin et fait de tuiles
+ * *solides* — sur une petite carte, une simple tache peut suffire à
+ * cloisonner une partie du terrain. On simule la pose, on compare la
+ * taille de la zone atteignable avant/après (en ne perdant jamais plus que
+ * la surface de l'étang lui-même), et on annule sinon plutôt que de
+ * produire une poche inaccessible.
+ */
+export function carveSafePond(
+  rng: Rng,
+  terrain: string[][],
+  zones: string[][],
+  width: number,
+  height: number,
+  mainPath: Set<string>,
+  isSolid: (tile: string) => boolean,
+  waterTile: string,
+  zoneName: string,
+  sizeRange: [number, number] = [6, 12],
+  attempts = 15,
+): { point: Point; type: string } | null {
+  const referenceKey = mainPath.values().next().value as string | undefined;
+  if (!referenceKey) return null;
+  const [refX, refY] = referenceKey.split(",").map(Number);
+  const solidAt = (x: number, y: number) => isSolid(terrain[y]?.[x] ?? "");
+
+  for (let attempt = 0; attempt < attempts; attempt++) {
+    const seed: Point = { x: rng.int(3, width - 4), y: rng.int(3, height - 4) };
+    const seedKey = key(seed.x, seed.y);
+    if (mainPath.has(seedKey) || zones[seed.y][seed.x] === "plaza") continue;
+
+    const blob = growBlob(rng, width, height, seed, rng.int(sizeRange[0], sizeRange[1]), mainPath);
+    const cells = [...blob]
+      .filter((k) => k !== seedKey && !mainPath.has(k))
+      .map((k) => {
+        const [x, y] = k.split(",").map(Number);
+        return { x, y };
+      })
+      .filter(({ x, y }) => zones[y][x] !== "plaza");
+    if (cells.length === 0) continue;
+
+    const before = floodFillReachable(width, height, solidAt, { x: refX, y: refY }).size;
+    const saved = cells.map(({ x, y }) => ({ x, y, tile: terrain[y][x] }));
+    for (const { x, y } of cells) terrain[y][x] = waterTile;
+    const after = floodFillReachable(width, height, solidAt, { x: refX, y: refY }).size;
+
+    if (before - after > cells.length + 2) {
+      for (const { x, y, tile } of saved) terrain[y][x] = tile; // revert : ça cloisonnait autre chose que l'étang lui-même
+      continue;
+    }
+    for (const { x, y } of cells) zones[y][x] = zoneName;
+    return { point: seed, type: "pond" };
+  }
+  return null;
 }
 
 export function carveMainPath(

@@ -1,11 +1,11 @@
 {
-  "id": "bourg_depart_b2_house_interior",
+  "id": "bourg_depart_b3_house_interior",
   "name": "Maison",
   "kind": "house",
   "region": "Région Céladopolis",
   "progression": "early",
   "tileset": "interior",
-  "seed": 3469465589,
-  "generatedAt": "2026-08-15T15:17:18.328Z",
+  "seed": 2788397342,
+  "generatedAt": "2026-08-15T15:55:38.167Z",
   "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
 }

@@ -1,5 +1,6 @@
 import type { GameMap } from "../../schema/types.js";
-import { loadTileset, tilesetLegend, isOverworldType } from "../../data/loader.js";
+import { loadTileset, tilesetLegend, loadTemplate, isOverworldType } from "../../data/loader.js";
+import type { MapTemplate } from "../../schema/template.js";
 
 export interface CheckResult {
   errors: string[];
@@ -74,6 +75,26 @@ export function checkTechnical(map: GameMap): CheckResult {
   }
   for (const l of map.landmarks) {
     if (!inBounds(l.x, l.y)) errors.push(`Landmark "${l.id}" hors limites (${l.x},${l.y}).`);
+  }
+
+  // Un bâtiment "required" au template (ex: Centre Pokémon dans toute
+  // ville) qui n'a pas réussi à se placer produit une carte incomplète au
+  // regard de son propre design intent — jamais silencieux, toujours une erreur.
+  if (isOverworldType(map.metadata.kind)) {
+    let template: MapTemplate | null = null;
+    try {
+      template = loadTemplate(map.metadata.kind) as MapTemplate;
+    } catch {
+      template = null;
+    }
+    if (template) {
+      const presentTypes = new Set<string>(map.buildings.map((b) => b.type));
+      for (const requiredType of template.buildings.required) {
+        if (!presentTypes.has(requiredType)) {
+          errors.push(`Bâtiment requis "${requiredType}" absent de la carte (n'a pas pu être placé pendant la génération).`);
+        }
+      }
+    }
   }
 
   return { errors, warnings };

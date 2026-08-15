@@ -3,7 +3,9 @@ import type { Direction } from "../../schema/types.js";
 import type { MapTemplate } from "../../schema/template.js";
 import { type Point } from "../grid.js";
 import {
+  addOrganicFringe,
   carveMainPath,
+  carveSafePond,
   edgePoint,
   frameBorder,
   inwardOf,
@@ -23,6 +25,7 @@ export function generateTownTerrain(
   height: number,
   template: MapTemplate,
   connections: Direction[],
+  isSolid: (tile: string) => boolean,
 ): TerrainResult {
   const terrain = makeTerrain(width, height, "grass");
   const zones = makeZones(width, height, "residential");
@@ -76,5 +79,19 @@ export function generateTownTerrain(
     }
   }
 
-  return { width, height, terrain, zones, mainPath, edgeAnchors, landmarkSpot: center };
+  // Étang optionnel : petite variation naturelle dans une ville par ailleurs
+  // uniforme (section 4 : "changements d'altitude, obstacles naturels...").
+  // carveSafePond refuse toute pose qui cloisonnerait une partie du terrain
+  // praticable — jamais de poche isolée derrière l'eau.
+  const extraLandmarkSpots: Array<{ point: Point; type: string }> = [];
+  if (rng.bool(0.5)) {
+    const pond = carveSafePond(rng, terrain, zones, width, height, mainPath, isSolid, "water", "pond", [6, 12]);
+    if (pond) extraLandmarkSpots.push(pond);
+  }
+
+  // Frange d'arbres irrégulière : appelée en dernier, ne repeint que les
+  // cases encore "grass" (ne touche jamais chemin, place ou étang).
+  addOrganicFringe(rng, terrain, width, height, "tree", "grass", mainPath, isSolid, 3);
+
+  return { width, height, terrain, zones, mainPath, edgeAnchors, landmarkSpot: center, extraLandmarkSpots };
 }

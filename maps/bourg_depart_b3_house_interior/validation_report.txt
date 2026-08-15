@@ -1,4 +1,4 @@
-MAP VALIDATION — Maison (bourg_depart_b2_house_interior)
+MAP VALIDATION — Maison (bourg_depart_b3_house_interior)
 ✓ Dimensions
 ✓ Tileset
 ✓ Collisions
