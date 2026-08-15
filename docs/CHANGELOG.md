@@ -1248,3 +1248,39 @@ cette fois-ci, chacune de ces cartes représentant un chantier de l'ampleur du M
 - Warp direct vers `PetalburgWoods` (groupe 24, index 11) puis traversée complète de la carte à pied :
   **0 instance de "Bad memory"**
 - Build release validée (`make MODERN=1`, exit code 0)
+
+**4. Investigation Porymap + script de preview PNG des maps**
+- Vérifié : Porymap (github.com/huderlem/porymap) est installable dans cet environnement
+  (Qt6 disponible via apt, Xvfb disponible pour un serveur X headless) mais **inutilisable en
+  pratique** — c'est un éditeur purement interactif, `main.cpp` ne fait que transmettre `argv` à
+  `QApplication` sans aucun traitement d'arguments (pas de mode CLI, pas de mode batch, pas
+  d'export scriptable). Le piloter à l'aveugle par captures d'écran/clics simulés serait
+  impraticable pour un vrai travail de cartographie sans un humain devant l'écran
+- Créé `tools/map_preview/map_preview.py` : lit directement `tiles.png` + `metatiles.bin` +
+  `palettes/*.pal` + `layouts.json` + `map.json` (les mêmes fichiers source que compile le
+  moteur GBA) et reproduit l'algorithme de composition des metatiles (`engine/src/fieldmap.c`,
+  `engine/include/global.fieldmap.h`) pour générer un PNG fidèle de n'importe quelle carte
+- Piège détecté et corrigé en cours de route : les layouts `"layout_version": "frlg"` utilisent
+  des constantes de répartition primaire/secondaire différentes des layouts `"emerald"` (640
+  tuiles/metatiles et 7 palettes en primaire contre 512/512/6) — `NUM_*_FRLG` dans
+  `engine/include/fieldmap.h`. Sans ça, les cartes FRLG (dont les futures cartes Kanto visées par
+  la directive de Thomas) s'affichaient avec des metatiles corrompus (damier magenta)
+- Mode supplémentaire `--tileset <primaire> <secondaire>` : affiche en planche toutes les
+  metatiles d'une paire de tilesets, y compris un tileset FRLG dormant qu'aucune carte n'utilise
+  encore (ex: `pallet_town_frlg`) — utile pour prévisualiser un tileset avant de bâtir une carte
+- Testé avec succès sur Bourg Palette (tileset actuel), Pewter City FRLG (validation du fix de
+  constantes sur un layout `frlg`), Mont Sélénite, et une planche du tileset `pallet_town_frlg`
+  (Poké Mart, Centre Pokémon, plage, jetée, eau — rendu fidèle)
+- **Point de vigilance confirmé** (celui qu'on soupçonnait déjà en suite 30) : `PewterCity_Frlg`,
+  malgré son dossier dans `data/maps/`, n'est PAS une carte active du hack — `IS_FRLG` vaut `0`
+  pour ce build Emerald (`include/constants/global.h`), et tous les tilesets `*_frlg` de villes
+  (dont `gTileset_PalletTown`) sont dans la branche `#else` (IS_FRLG uniquement) du même garde
+  `#if !IS_FRLG` de `headers.h` qui avait bloqué `Cave_Frlg`/`General_Frlg` en suite 29 ; leurs
+  layouts `"layout_version": "frlg"` sont en plus filtrés hors compilation par `MAP_VERSION`
+  (`map_data_rules.mk`). Le script de preview a pu quand même les lire et les rendre correctement
+  car il lit les fichiers source directement, sans passer par la chaîne de build
+- **Rappel de portée** : ce script ne fait que la preview (lecture seule). Reconstruire
+  effectivement une carte active (Bourg Palette en premier) avec un vrai tileset Kanto FRLG
+  nécessitera d'abord un contournement du garde `#if !IS_FRLG` (dupliquer le struct de tileset
+  concerné sous un nouveau nom compilé pour Emerald, même fichiers source) — chantier séparé,
+  non commencé, à trancher avec Thomas avant de s'y lancer

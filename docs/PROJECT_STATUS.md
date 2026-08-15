@@ -666,22 +666,48 @@ Dernière mise à jour : 2026-08-14 (Session 4, suite 23)
 - [x] Vérifié en headless : combat rejoué de bout en bout (raccourci "Instant Win" du menu debug),
   puis traversée complète de `PetalburgWoods` à pied — 0 instance de "Bad memory" dans les deux cas
 - [x] Build release validée
-- [ ] **Non encore commencé** : directive de Thomas (bascule des tilesets Hoenn actuels vers les
-  vrais tilesets Kanto `*_frlg` déjà présents dans `engine/data/tilesets/secondary/`, en commençant
-  par Bourg Palette) — voir tâche 1 ci-dessous. Les anciens fichiers HTML de blueprint ne doivent
-  plus être utilisés comme référence visuelle finale, seulement comme plan de structure.
+- [x] Directive de Thomas (bascule des tilesets Hoenn actuels vers les vrais tilesets Kanto
+  `*_frlg`) — **étape 1/2 faite** : Porymap vérifié installable dans cet environnement (Qt6 +
+  Xvfb disponibles) mais confirmé **inutilisable en pratique** : c'est un éditeur purement
+  interactif (`main.cpp` ne fait que transmettre `argv` à `QApplication`, aucun mode CLI/batch/
+  export scriptable) — impraticable à piloter à l'aveugle sans un humain devant l'écran
+- [x] **Étape 2/2 faite** : `tools/map_preview/map_preview.py` créé — lit directement les mêmes
+  fichiers source que compile le moteur (`tiles.png`, `metatiles.bin`, `palettes/*.pal`,
+  `layouts.json`, `map.json`) et génère un PNG fidèle de n'importe quelle carte, plus un mode
+  `--tileset` pour prévisualiser un tileset seul (y compris un tileset FRLG dormant comme
+  `pallet_town_frlg`) sans carte existante. Piège des constantes `NUM_*_FRLG` (640/640/7 au lieu
+  de 512/512/6) détecté et corrigé au passage. Testé avec succès sur Bourg Palette, Pewter City
+  FRLG, Mont Sélénite, et une planche complète de `pallet_town_frlg`
+- [ ] **Reste à faire (chantier séparé, pas commencé)** : reconstruire effectivement les cartes
+  actives (Bourg Palette en premier) avec les vrais tilesets Kanto FRLG à la place des tilesets
+  Hoenn actuels — le script de preview ne fait que la lecture, pas l'écriture. Les anciens
+  fichiers HTML de blueprint ne doivent plus être utilisés comme référence visuelle finale,
+  seulement comme plan de structure (emplacement des bâtiments, taille de carte, relief)
 
-## PROCHAINES ÉTAPES (mise à jour Session 5 suite 31)
-1. **Nouvelle directive prioritaire de Thomas** : vérifier si Porymap (github.com/huderlem/porymap,
-   nécessite Qt6) peut être installé/lancé dans cet environnement sandboxé (probablement sans
-   affichage graphique). Si oui, l'utiliser pour reconstruire les cartes avec les vrais tilesets Kanto
-   FRLG (`pallet_town_frlg`, `viridian_city_frlg`, etc.), carte par carte, en commençant par Bourg
-   Palette. Si non, écrire le script Python de preview PNG des maps (composer les vraies tuiles +
-   metatiles.bin + palettes de `data/tilesets/`) — tâche documentée depuis la Session 1, jamais faite.
-   **Point de vigilance à vérifier en premier** : les tilesets `*_frlg` secondaires pourraient être
-   soumis à la même exclusion `#if !IS_FRLG` (`src/data/tilesets/headers.h`) qui avait bloqué
-   `gTileset_Cave_Frlg`/`gTileset_General_Frlg` en suite 29 — si confirmé, le prévenir clairement
-   avant de proposer une solution de contournement
+1. **Nouvelle directive prioritaire de Thomas — suite** : Porymap écarté (inutilisable, voir
+   ci-dessus), script de preview PNG livré et fonctionnel (`tools/map_preview/`).
+   **Point de vigilance confirmé (pas bon signe)** : vérifié dans le code que `IS_FRLG` vaut `0`
+   pour ce build Emerald (`include/constants/global.h:67-78`, aucun `FIRERED`/`LEAFGREEN` défini) —
+   or TOUS les tilesets `*_frlg` de villes listés par Thomas (`gTileset_PalletTown`,
+   `gTileset_ViridianCity`, `gTileset_PewterCity`, etc.) sont déclarés dans la branche
+   `#else` (IS_FRLG uniquement) du même garde `#if !IS_FRLG ... #else ... #endif` de
+   `src/data/tilesets/headers.h` qui avait bloqué `gTileset_Cave_Frlg`/`gTileset_General_Frlg`
+   en suite 29. Et le build (`map_data_rules.mk:37`, `$(MAPJSON) layouts $(MAP_VERSION) ...`)
+   filtre aussi `layouts.json` par `MAP_VERSION` (= `emerald` par défaut) : toute carte taguée
+   `"layout_version": "frlg"` — dont `PewterCity_Frlg` — est **exclue de la compilation**. Ce
+   n'est donc PAS une carte active du hack malgré son dossier présent dans `data/maps/` : c'est
+   une donnée source dormante, comme les autres `_Frlg`, jamais atteignable en jeu réel. Le script
+   de preview a pu la lire et la rendre correctement (256 metatiles Kanto conformes, testé) parce
+   qu'il lit les fichiers source directement, en contournant tout ce filtrage de build
+- **Conséquence concrète pour la suite** : utiliser un tileset `*_frlg` de ville dans une VRAIE
+  carte du hack (ex: Bourg Palette avec `pallet_town_frlg`) nécessite un vrai contournement
+  technique avant tout travail de cartographie, du même ordre que celui déjà fait pour Mont
+  Sélénite en suite 29 (abandon de `cave_frlg` au profit du `cave` standard) — soit dupliquer les
+  structs de tileset concernés hors du garde `#if !IS_FRLG` (nouveau nom de symbole, même
+  fichiers source .png/.bin/.pal, layout_version `"emerald"`), soit élargir le garde lui-même
+  (plus risqué, portée large sur tout le moteur). À trancher avec Thomas avant de se lancer dans
+  la reconstruction de Bourg Palette, plutôt que de découvrir un blocage de compilation en cours
+  de route
 2. **Playtest réel prioritaire** : parcourir la nouvelle Bourg Palette de bout en bout (tous les warps,
    la scène complète des cadeaux de Maman, l'absence de blocage de la Jumelle, la côte/plage) — et
    confirmer que le Multi-Exp et le soin instantané fonctionnent bien en jeu réel
