@@ -1,0 +1,11 @@
+MAP VALIDATION — Forêt Émeraude (foret_emeraude)
+✓ Dimensions
+✓ Tileset
+✓ Collisions
+✓ Warps
+✓ NPCs
+✓ Objects
+✓ Encounters
+WARNINGS
+- Densité de décoration très faible sur la surface praticable (0.0% vs ~18.3% attendu) — la zone risque de paraître vide.
+RÉSULTAT: OK

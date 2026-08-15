@@ -1,0 +1,136 @@
+{
+  "_comment": "Sous-ensemble curé (non exhaustif) d'espèces par biome/palier de progression, utilisé pour construire des tables de rencontres cohérentes. Facilement extensible : ajouter une entrée suffit, le générateur ne code aucun nom en dur.",
+  "route": {
+    "early": {
+      "grass": [
+        { "pokemon": "Zigzagoon", "rarity": "common", "weight": 30 },
+        { "pokemon": "Sacha (Poochyena)", "rarity": "common", "weight": 25 },
+        { "pokemon": "Taillow", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Wurmple", "rarity": "uncommon", "weight": 15 },
+        { "pokemon": "Ralts", "rarity": "rare", "weight": 5 }
+      ]
+    },
+    "mid": {
+      "grass": [
+        { "pokemon": "Linoone", "rarity": "common", "weight": 25 },
+        { "pokemon": "Swellow", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Roselia", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Electrike", "rarity": "rare", "weight": 10 }
+      ]
+    },
+    "late": {
+      "grass": [
+        { "pokemon": "Manectric", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Absol", "rarity": "rare", "weight": 8 },
+        { "pokemon": "Linoone", "rarity": "common", "weight": 25 }
+      ]
+    }
+  },
+  "forest": {
+    "early": {
+      "grass": [
+        { "pokemon": "Shroomish", "rarity": "common", "weight": 30 },
+        { "pokemon": "Silcoon", "rarity": "common", "weight": 20 },
+        { "pokemon": "Cascoon", "rarity": "common", "weight": 20 },
+        { "pokemon": "Slakoth", "rarity": "uncommon", "weight": 15 },
+        { "pokemon": "Tropius", "rarity": "rare", "weight": 5 }
+      ]
+    },
+    "mid": {
+      "grass": [
+        { "pokemon": "Breloom", "rarity": "uncommon", "weight": 15 },
+        { "pokemon": "Beautifly", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Dustox", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Vigoroth", "rarity": "common", "weight": 25 }
+      ]
+    },
+    "late": {
+      "grass": [
+        { "pokemon": "Slaking", "rarity": "rare", "weight": 8 },
+        { "pokemon": "Breloom", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Tropius", "rarity": "uncommon", "weight": 15 }
+      ]
+    }
+  },
+  "cave": {
+    "early": {
+      "cave": [
+        { "pokemon": "Zubat", "rarity": "common", "weight": 35 },
+        { "pokemon": "Geodude", "rarity": "common", "weight": 30 },
+        { "pokemon": "Makuhita", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Aron", "rarity": "rare", "weight": 10 }
+      ]
+    },
+    "mid": {
+      "cave": [
+        { "pokemon": "Golbat", "rarity": "common", "weight": 25 },
+        { "pokemon": "Graveler", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Nosepass", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Lairon", "rarity": "rare", "weight": 10 }
+      ]
+    },
+    "late": {
+      "cave": [
+        { "pokemon": "Crobat", "rarity": "uncommon", "weight": 15 },
+        { "pokemon": "Onix", "rarity": "uncommon", "weight": 18 },
+        { "pokemon": "Aggron", "rarity": "rare", "weight": 6 }
+      ]
+    }
+  },
+  "beach": {
+    "early": {
+      "grass": [
+        { "pokemon": "Wingull", "rarity": "common", "weight": 35 },
+        { "pokemon": "Zigzagoon", "rarity": "common", "weight": 20 }
+      ],
+      "water": [
+        { "pokemon": "Tentacool", "rarity": "common", "weight": 30 },
+        { "pokemon": "Wingull", "rarity": "common", "weight": 25 },
+        { "pokemon": "Horsea", "rarity": "uncommon", "weight": 15 }
+      ],
+      "fishing": [
+        { "pokemon": "Magikarp", "rarity": "common", "weight": 40 },
+        { "pokemon": "Corphish", "rarity": "uncommon", "weight": 15 }
+      ]
+    },
+    "mid": {
+      "water": [
+        { "pokemon": "Pelipper", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Tentacruel", "rarity": "uncommon", "weight": 15 },
+        { "pokemon": "Seadra", "rarity": "rare", "weight": 8 }
+      ],
+      "fishing": [
+        { "pokemon": "Barboach", "rarity": "common", "weight": 25 },
+        { "pokemon": "Corphish", "rarity": "uncommon", "weight": 15 }
+      ]
+    },
+    "late": {
+      "water": [
+        { "pokemon": "Kingdra", "rarity": "rare", "weight": 5 },
+        { "pokemon": "Pelipper", "rarity": "uncommon", "weight": 20 }
+      ]
+    }
+  },
+  "mountain": {
+    "early": {
+      "cave": [
+        { "pokemon": "Machop", "rarity": "common", "weight": 30 },
+        { "pokemon": "Geodude", "rarity": "common", "weight": 30 },
+        { "pokemon": "Roggenrola", "rarity": "uncommon", "weight": 15 }
+      ]
+    },
+    "mid": {
+      "cave": [
+        { "pokemon": "Machoke", "rarity": "uncommon", "weight": 20 },
+        { "pokemon": "Graveler", "rarity": "common", "weight": 25 },
+        { "pokemon": "Skarmory", "rarity": "rare", "weight": 8 }
+      ]
+    },
+    "late": {
+      "cave": [
+        { "pokemon": "Machamp", "rarity": "rare", "weight": 8 },
+        { "pokemon": "Golem", "rarity": "uncommon", "weight": 15 }
+      ]
+    }
+  }
+}

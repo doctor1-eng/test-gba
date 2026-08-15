@@ -1,0 +1,9 @@
+MAP VALIDATION — Route 1 (route_1)
+✓ Dimensions
+✓ Tileset
+✓ Collisions
+✓ Warps
+✓ NPCs
+✓ Objects
+✓ Encounters
+RÉSULTAT: OK

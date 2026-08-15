@@ -1,0 +1,102 @@
+{
+  "resident": {
+    "role": "resident",
+    "spriteColor": "#c98a4b",
+    "movement": "wander",
+    "placement": "near_houses",
+    "dialoguePool": [
+      "Cette ville a beaucoup changé ces dernières années.",
+      "Tu devrais aller voir le Centre Pokémon si tes Pokémon sont fatigués.",
+      "Il paraît qu'il y a des Pokémon rares dans les environs."
+    ]
+  },
+  "merchant": {
+    "role": "merchant",
+    "spriteColor": "#4a90d9",
+    "movement": "static",
+    "placement": "at_pokemart_counter",
+    "dialoguePool": [
+      "Bienvenue ! Jetez un œil à mes articles.",
+      "Ces objets sont indispensables pour l'aventure."
+    ]
+  },
+  "clerk": {
+    "role": "clerk",
+    "spriteColor": "#4a90d9",
+    "movement": "static",
+    "placement": "at_counter",
+    "dialoguePool": ["Puis-je vous aider ?"]
+  },
+  "nurse": {
+    "role": "nurse",
+    "spriteColor": "#e05252",
+    "movement": "static",
+    "placement": "at_pokemon_center_counter",
+    "dialoguePool": [
+      "Voulez-vous soigner vos Pokémon ?",
+      "Vos Pokémon sont en pleine forme !"
+    ]
+  },
+  "trainer": {
+    "role": "trainer",
+    "spriteColor": "#d9534f",
+    "movement": "patrol",
+    "placement": "on_route",
+    "dialoguePool": [
+      "Un dresseur ! Battons-nous !",
+      "Je n'ai pas encore perdu aujourd'hui !"
+    ]
+  },
+  "gym_leader": {
+    "role": "gym_leader",
+    "spriteColor": "#9b3fd9",
+    "movement": "static",
+    "placement": "gym_back",
+    "dialoguePool": ["Prouve-moi ta force, si tu l'oses !"]
+  },
+  "guide": {
+    "role": "guide",
+    "spriteColor": "#5aa15c",
+    "movement": "static",
+    "placement": "near_entrance",
+    "dialoguePool": [
+      "Bienvenue ! Cette zone peut être dangereuse, sois prudent.",
+      "Suis le chemin principal si tu ne veux pas te perdre."
+    ]
+  },
+  "narrative": {
+    "role": "narrative",
+    "spriteColor": "#8a5aa1",
+    "movement": "static",
+    "placement": "landmark_adjacent",
+    "dialoguePool": ["..."]
+  },
+  "guardian": {
+    "role": "guardian",
+    "spriteColor": "#5c5c5c",
+    "movement": "static",
+    "placement": "blocking_path",
+    "dialoguePool": ["On ne passe pas par ici pour l'instant."]
+  },
+  "researcher": {
+    "role": "researcher",
+    "spriteColor": "#3fa1a1",
+    "movement": "static",
+    "placement": "at_lab",
+    "dialoguePool": ["Fascinant ! Ce Pokémon présente un comportement inhabituel."]
+  },
+  "child": {
+    "role": "child",
+    "spriteColor": "#e0c14b",
+    "movement": "wander",
+    "placement": "near_houses",
+    "dialoguePool": ["Un jour je serai Maître Pokémon !"]
+  },
+  "tourist": {
+    "role": "tourist",
+    "spriteColor": "#e08a4b",
+    "movement": "wander",
+    "placement": "near_landmark",
+    "dialoguePool": ["Quel beau panorama, ça valait le détour !"]
+  }
+}

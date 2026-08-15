@@ -1,0 +1,11 @@
+{
+  "id": "bourg_depart",
+  "name": "Bourg Départ",
+  "kind": "town",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "overworld",
+  "seed": 1771325603,
+  "generatedAt": "2026-08-15T15:17:18.331Z",
+  "description": "S'équiper, se soigner, parler aux habitants, accéder aux routes voisines."
+}

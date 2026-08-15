@@ -1,0 +1,21 @@
+{
+  "type": "cave",
+  "label": "Grotte",
+  "tileset": "cave",
+  "designIntent": {
+    "playerMotivation": "Traverser un espace obscur et minéral, souvent pour rejoindre l'autre côté d'une montagne, en évitant/affrontant des Pokémon souterrains.",
+    "attraction": "Formation de cristaux comme landmark, cavernes ouvertes reliées par des couloirs étroits, obstacles poussables/éboulis.",
+    "emotion": "Tension légère, sentiment de profondeur."
+  },
+  "dimensions": { "minWidth": 18, "maxWidth": 28, "minHeight": 18, "maxHeight": 28 },
+  "path": { "mainWidth": 3, "secondaryPathChance": 0.4, "windiness": 0.5 },
+  "buildings": { "required": [], "optionalPool": [], "minCount": 0, "maxCount": 0 },
+  "decorations": {
+    "densityByZone": { "cavern": 0.08, "corridor": 0.04 },
+    "allowed": ["crystal_deco", "rubble_deco", "ore_deco"]
+  },
+  "npcs": { "countMin": 0, "countMax": 2, "archetypePool": ["trainer", "guardian"] },
+  "objects": { "hiddenItemChance": 0.55, "visibleItemChance": 0.35, "signChance": 0.1 },
+  "landmarks": { "minCount": 1, "maxCount": 1, "pool": ["crystal_formation"] },
+  "encounters": { "enabled": true, "biomeKey": "cave", "methods": ["cave"] }
+}

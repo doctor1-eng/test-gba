@@ -1,0 +1,21 @@
+{
+  "type": "forest",
+  "label": "Forêt",
+  "tileset": "overworld",
+  "designIntent": {
+    "playerMotivation": "Explorer un espace plus fermé et labyrinthique, trouver des objets cachés dans des clairières à l'écart.",
+    "attraction": "Un grand arbre remarquable comme landmark central, un chemin principal qui serpente entre les arbres denses, des clairières optionnelles.",
+    "emotion": "Mystère, léger isolement, curiosité."
+  },
+  "dimensions": { "minWidth": 20, "maxWidth": 32, "minHeight": 20, "maxHeight": 32 },
+  "path": { "mainWidth": 2, "secondaryPathChance": 0.6, "windiness": 0.6 },
+  "buildings": { "required": [], "optionalPool": [], "minCount": 0, "maxCount": 0 },
+  "decorations": {
+    "densityByZone": { "canopy": 0.35, "clearing": 0.1, "path_edge": 0.1 },
+    "allowed": ["flower", "rock_deco", "mushroom", "berry_tree_deco"]
+  },
+  "npcs": { "countMin": 1, "countMax": 3, "archetypePool": ["researcher", "trainer", "guardian"] },
+  "objects": { "hiddenItemChance": 0.6, "visibleItemChance": 0.3, "signChance": 0.2 },
+  "landmarks": { "minCount": 1, "maxCount": 1, "pool": ["giant_tree"] },
+  "encounters": { "enabled": true, "biomeKey": "forest", "methods": ["grass"] }
+}

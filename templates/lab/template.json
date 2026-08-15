@@ -1,0 +1,14 @@
+{
+  "type": "lab",
+  "label": "Laboratoire",
+  "tileset": "interior",
+  "designIntent": {
+    "playerMotivation": "Recevoir son premier Pokémon ou un objet clé lié au Professeur.",
+    "attraction": "Machines et étagères techniques, chercheur présent.",
+    "emotion": "Début d'aventure, curiosité scientifique."
+  },
+  "dimensions": { "minWidth": 10, "maxWidth": 11, "minHeight": 8, "maxHeight": 9 },
+  "npcs": { "countMin": 1, "countMax": 2, "archetypePool": ["researcher"] },
+  "objects": { "hiddenItemChance": 0, "visibleItemChance": 0.2, "signChance": 0 },
+  "furniture": ["pc_console", "shelf", "table", "plant_indoor"]
+}

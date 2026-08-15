@@ -1,0 +1,14 @@
+{
+  "type": "gym",
+  "label": "Arène",
+  "tileset": "interior",
+  "designIntent": {
+    "playerMotivation": "Affronter le Champion d'arène pour obtenir un badge.",
+    "attraction": "Marquage au sol distinctif, leader positionné au fond de la salle.",
+    "emotion": "Défi, montée en tension."
+  },
+  "dimensions": { "minWidth": 12, "maxWidth": 12, "minHeight": 12, "maxHeight": 12 },
+  "npcs": { "countMin": 2, "countMax": 3, "archetypePool": ["gym_leader", "trainer"] },
+  "objects": { "hiddenItemChance": 0, "visibleItemChance": 0, "signChance": 0 },
+  "furniture": ["gym_stripe"]
+}

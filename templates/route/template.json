@@ -1,0 +1,21 @@
+{
+  "type": "route",
+  "label": "Route",
+  "tileset": "overworld",
+  "designIntent": {
+    "playerMotivation": "Voyager d'un point A à un point B en rencontrant des Pokémon sauvages et un dresseur ou deux.",
+    "attraction": "Un corridor jamais parfaitement droit, avec des poches d'herbes hautes, un petit détour optionnel et un landmark de repos.",
+    "emotion": "Aventure tranquille, sentiment de progression."
+  },
+  "dimensions": { "minWidth": 14, "maxWidth": 20, "minHeight": 30, "maxHeight": 50 },
+  "path": { "mainWidth": 2, "secondaryPathChance": 0.5, "windiness": 0.45 },
+  "buildings": { "required": [], "optionalPool": [], "minCount": 0, "maxCount": 0 },
+  "decorations": {
+    "densityByZone": { "grass_field": 0.1, "path_edge": 0.12, "open": 0.07 },
+    "allowed": ["flower", "rock_deco", "fence", "sign"]
+  },
+  "npcs": { "countMin": 1, "countMax": 3, "archetypePool": ["trainer", "guide"] },
+  "objects": { "hiddenItemChance": 0.5, "visibleItemChance": 0.4, "signChance": 0.3 },
+  "landmarks": { "minCount": 1, "maxCount": 1, "pool": ["rest_spot", "big_rock"] },
+  "encounters": { "enabled": true, "biomeKey": "route", "methods": ["grass"] }
+}

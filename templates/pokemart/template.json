@@ -1,0 +1,14 @@
+{
+  "type": "pokemart",
+  "label": "Boutique",
+  "tileset": "interior",
+  "designIntent": {
+    "playerMotivation": "Acheter des objets utiles à l'exploration et au combat.",
+    "attraction": "Étagères organisées, vendeur au comptoir.",
+    "emotion": "Praticité, préparation."
+  },
+  "dimensions": { "minWidth": 8, "maxWidth": 8, "minHeight": 7, "maxHeight": 7 },
+  "npcs": { "countMin": 1, "countMax": 1, "archetypePool": ["clerk"] },
+  "objects": { "hiddenItemChance": 0, "visibleItemChance": 0, "signChance": 0 },
+  "furniture": ["counter", "shelf", "shelf"]
+}

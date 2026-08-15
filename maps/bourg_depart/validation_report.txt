@@ -1,0 +1,9 @@
+MAP VALIDATION — Bourg Départ (bourg_depart)
+✓ Dimensions
+✓ Tileset
+✓ Collisions
+✓ Warps
+✓ NPCs
+✓ Objects
+✓ Encounters
+RÉSULTAT: OK

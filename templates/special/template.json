@@ -1,0 +1,21 @@
+{
+  "type": "special",
+  "label": "Zone spéciale / narrative",
+  "tileset": "overworld",
+  "designIntent": {
+    "playerMotivation": "Vivre un moment scénaristique fort, souvent lié à un événement ou une quête unique.",
+    "attraction": "Composition non générique, un seul landmark très marqué, densité de décoration volontairement plus travaillée.",
+    "emotion": "Variable selon la narration — à définir au cas par cas via `events`."
+  },
+  "dimensions": { "minWidth": 14, "maxWidth": 24, "minHeight": 14, "maxHeight": 24 },
+  "path": { "mainWidth": 2, "secondaryPathChance": 0.3, "windiness": 0.4 },
+  "buildings": { "required": [], "optionalPool": ["house"], "minCount": 0, "maxCount": 1 },
+  "decorations": {
+    "densityByZone": { "open": 0.14, "path_edge": 0.14 },
+    "allowed": ["flower", "rock_deco", "sign", "statue_deco"]
+  },
+  "npcs": { "countMin": 1, "countMax": 2, "archetypePool": ["narrative", "guardian"] },
+  "objects": { "hiddenItemChance": 0.3, "visibleItemChance": 0.2, "signChance": 0.3 },
+  "landmarks": { "minCount": 1, "maxCount": 1, "pool": ["monument"] },
+  "encounters": { "enabled": false }
+}

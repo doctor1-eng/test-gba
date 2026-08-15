@@ -1,0 +1,21 @@
+{
+  "type": "mountain",
+  "label": "Montagne",
+  "tileset": "overworld",
+  "designIntent": {
+    "playerMotivation": "Grimper vers un sommet, franchir des paliers d'altitude, atteindre un point de vue ou une zone spéciale.",
+    "attraction": "Chemin en lacets visible depuis le bas, vue dégagée au sommet servant de landmark, raretés en rencontres.",
+    "emotion": "Effort récompensé, grandeur, altitude."
+  },
+  "dimensions": { "minWidth": 18, "maxWidth": 26, "minHeight": 26, "maxHeight": 40 },
+  "path": { "mainWidth": 2, "secondaryPathChance": 0.35, "windiness": 0.55 },
+  "buildings": { "required": [], "optionalPool": [], "minCount": 0, "maxCount": 0 },
+  "decorations": {
+    "densityByZone": { "terrace": 0.1, "path_edge": 0.1, "summit": 0.05 },
+    "allowed": ["rock_deco", "flower", "snow_patch"]
+  },
+  "npcs": { "countMin": 1, "countMax": 2, "archetypePool": ["trainer", "tourist"] },
+  "objects": { "hiddenItemChance": 0.45, "visibleItemChance": 0.3, "signChance": 0.25 },
+  "landmarks": { "minCount": 1, "maxCount": 1, "pool": ["summit_view"] },
+  "encounters": { "enabled": true, "biomeKey": "mountain", "methods": ["cave"] }
+}

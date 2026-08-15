@@ -1,0 +1,41 @@
+{
+  "name": "test-gba",
+  "version": "1.0.0",
+  "description": "Pipeline de génération de cartes Pokémon (GBA-style) : générateur procédural contraint par règles de level design, validateur, previews.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "pokemap": "src/cli/index.ts"
+  },
+  "scripts": {
+    "generate-map": "tsx src/cli/index.ts generate-map",
+    "validate-map": "tsx src/cli/index.ts validate-map",
+    "preview-map": "tsx src/cli/index.ts preview-map",
+    "generate-world": "tsx src/cli/index.ts generate-world",
+    "list-templates": "tsx src/cli/index.ts list-templates",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doctor1-eng/test-gba.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doctor1-eng/test-gba/issues"
+  },
+  "homepage": "https://github.com/doctor1-eng/test-gba#readme",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.6",
+    "commander": "^15.0.0",
+    "zod": "^4.4.3"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "town",
+  "label": "Ville",
+  "tileset": "overworld",
+  "designIntent": {
+    "playerMotivation": "S'équiper, se soigner, parler aux habitants, accéder aux routes voisines.",
+    "attraction": "Une place centrale avec un landmark visible de loin, des bâtiments identifiables par silhouette (toit rouge = Centre Pokémon, enseigne = boutique).",
+    "emotion": "Sécurité, accueil, point de repère stable entre deux explorations."
+  },
+  "dimensions": { "minWidth": 24, "maxWidth": 36, "minHeight": 18, "maxHeight": 26 },
+  "path": { "mainWidth": 3, "secondaryPathChance": 0.6, "windiness": 0.15 },
+  "buildings": {
+    "required": ["pokemon_center"],
+    "optionalPool": ["pokemart", "house", "house", "house", "gym"],
+    "minCount": 4,
+    "maxCount": 7
+  },
+  "decorations": {
+    "densityByZone": { "plaza": 0.06, "residential": 0.12, "path_edge": 0.15, "open": 0.08 },
+    "allowed": ["flower", "fence", "sign", "bridge"]
+  },
+  "npcs": { "countMin": 5, "countMax": 9, "archetypePool": ["resident", "child", "guide", "tourist"] },
+  "objects": { "hiddenItemChance": 0.15, "visibleItemChance": 0.2, "signChance": 0.5 },
+  "landmarks": { "minCount": 1, "maxCount": 2, "pool": ["fountain", "statue", "clock_tower"] },
+  "encounters": { "enabled": false }
+}

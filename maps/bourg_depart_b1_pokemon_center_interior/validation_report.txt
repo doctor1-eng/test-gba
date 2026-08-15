@@ -1,0 +1,9 @@
+MAP VALIDATION — Centre Pokémon (bourg_depart_b1_pokemon_center_interior)
+✓ Dimensions
+✓ Tileset
+✓ Collisions
+✓ Warps
+✓ NPCs
+✓ Objects
+✓ Encounters
+RÉSULTAT: OK

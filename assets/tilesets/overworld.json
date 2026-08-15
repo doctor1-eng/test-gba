@@ -1,0 +1,29 @@
+{
+  "id": "overworld",
+  "label": "Overworld (placeholder)",
+  "description": "Tileset générique extérieur (villes, routes, forêts, montagnes, plages). Aplats de couleur en attente des vrais tiles 16x16 GBA — voir MAP_GENERATION_AUDIT.md section 3.",
+  "tiles": [
+    { "id": "grass", "category": "ground", "color": "#5aa15c", "solid": false, "label": "Herbe" },
+    { "id": "tall_grass", "category": "encounter", "color": "#3f8a45", "solid": false, "label": "Herbes hautes" },
+    { "id": "path", "category": "ground", "color": "#d8c48a", "solid": false, "label": "Chemin de terre" },
+    { "id": "plaza", "category": "ground", "color": "#c9c2a8", "solid": false, "label": "Pavés / place" },
+    { "id": "sand", "category": "ground", "color": "#e3d19c", "solid": false, "label": "Sable" },
+    { "id": "water", "category": "water", "color": "#3d78c2", "solid": true, "label": "Eau" },
+    { "id": "shallow_water", "category": "water", "color": "#6fa3de", "solid": false, "label": "Eau peu profonde" },
+    { "id": "tree", "category": "obstacle", "color": "#2e5b31", "solid": true, "label": "Arbre" },
+    { "id": "dense_tree", "category": "obstacle", "color": "#1f4322", "solid": true, "label": "Fourré dense" },
+    { "id": "rock", "category": "obstacle", "color": "#7c7568", "solid": true, "label": "Rocher" },
+    { "id": "cliff", "category": "obstacle", "color": "#8a7a5c", "solid": true, "label": "Falaise" },
+    { "id": "cliff_edge", "category": "obstacle", "color": "#9c8b6b", "solid": true, "label": "Bord de falaise" },
+    { "id": "flower", "category": "decoration", "color": "#e07fae", "solid": false, "label": "Fleurs" },
+    { "id": "fence", "category": "obstacle", "color": "#a97c50", "solid": true, "label": "Clôture" },
+    { "id": "building_wall", "category": "structure", "color": "#9b5b3f", "solid": true, "label": "Mur de bâtiment" },
+    { "id": "building_roof", "category": "structure", "color": "#7a3e2c", "solid": true, "label": "Toit de bâtiment" },
+    { "id": "door", "category": "structure", "color": "#5b3a29", "solid": false, "label": "Porte" },
+    { "id": "bridge", "category": "ground", "color": "#b98a52", "solid": false, "label": "Pont" },
+    { "id": "stairs", "category": "ground", "color": "#bfae86", "solid": false, "label": "Escalier / rampe" },
+    { "id": "cave_entrance", "category": "structure", "color": "#3a3630", "solid": false, "label": "Entrée de grotte" },
+    { "id": "snow", "category": "ground", "color": "#eef3f7", "solid": false, "label": "Neige" },
+    { "id": "mud", "category": "ground", "color": "#6f5a3d", "solid": false, "label": "Boue" }
+  ]
+}

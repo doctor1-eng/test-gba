@@ -1,0 +1,14 @@
+{
+  "type": "pokemon_center",
+  "label": "Centre Pokémon",
+  "tileset": "interior",
+  "designIntent": {
+    "playerMotivation": "Soigner son équipe et accéder au PC de stockage.",
+    "attraction": "Comptoir rouge immédiatement visible en entrant, infirmière statique.",
+    "emotion": "Répit, sécurité."
+  },
+  "dimensions": { "minWidth": 10, "maxWidth": 10, "minHeight": 8, "maxHeight": 8 },
+  "npcs": { "countMin": 1, "countMax": 1, "archetypePool": ["nurse"] },
+  "objects": { "hiddenItemChance": 0, "visibleItemChance": 0, "signChance": 0 },
+  "furniture": ["counter", "healing_machine", "pc_console", "plant_indoor"]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "house",
+  "label": "Maison (intérieur générique)",
+  "tileset": "interior",
+  "designIntent": {
+    "playerMotivation": "Rendre visite à un habitant, parfois obtenir un objet ou une information.",
+    "attraction": "Petit espace personnalisé (lit, table), habitant présent la plupart du temps.",
+    "emotion": "Intimité, quotidien."
+  },
+  "dimensions": { "minWidth": 8, "maxWidth": 9, "minHeight": 6, "maxHeight": 7 },
+  "npcs": { "countMin": 0, "countMax": 1, "archetypePool": ["resident", "child"] },
+  "objects": { "hiddenItemChance": 0.1, "visibleItemChance": 0.1, "signChance": 0 },
+  "furniture": ["bed", "table", "plant_indoor"]
+}

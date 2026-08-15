@@ -1,0 +1,9 @@
+MAP VALIDATION — Maison (bourg_depart_b2_house_interior)
+✓ Dimensions
+✓ Tileset
+✓ Collisions
+✓ Warps
+✓ NPCs
+✓ Objects
+✓ Encounters
+RÉSULTAT: OK

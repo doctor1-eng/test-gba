@@ -1,0 +1,26 @@
+{
+  "type": "village",
+  "label": "Village",
+  "tileset": "overworld",
+  "designIntent": {
+    "playerMotivation": "Faire une pause, glaner une information ou un objet, sentir un lieu plus intime qu'une grande ville.",
+    "attraction": "Peu de bâtiments mais chacun a une identité forte ; nature omniprésente entre les maisons.",
+    "emotion": "Calme, simplicité, vie rurale."
+  },
+  "dimensions": { "minWidth": 16, "maxWidth": 24, "minHeight": 14, "maxHeight": 20 },
+  "path": { "mainWidth": 2, "secondaryPathChance": 0.4, "windiness": 0.3 },
+  "buildings": {
+    "required": [],
+    "optionalPool": ["house", "house", "house", "pokemart"],
+    "minCount": 2,
+    "maxCount": 4
+  },
+  "decorations": {
+    "densityByZone": { "residential": 0.16, "path_edge": 0.14, "open": 0.12 },
+    "allowed": ["flower", "fence", "berry_tree_deco", "sign"]
+  },
+  "npcs": { "countMin": 2, "countMax": 4, "archetypePool": ["resident", "child", "tourist"] },
+  "objects": { "hiddenItemChance": 0.2, "visibleItemChance": 0.25, "signChance": 0.4 },
+  "landmarks": { "minCount": 1, "maxCount": 1, "pool": ["old_tree", "well"] },
+  "encounters": { "enabled": false }
+}

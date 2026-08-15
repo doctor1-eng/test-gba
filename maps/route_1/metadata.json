@@ -1,0 +1,11 @@
+{
+  "id": "route_1",
+  "name": "Route 1",
+  "kind": "route",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "overworld",
+  "seed": 2428587606,
+  "generatedAt": "2026-08-15T15:17:18.333Z",
+  "description": "Voyager d'un point A à un point B en rencontrant des Pokémon sauvages et un dresseur ou deux."
+}

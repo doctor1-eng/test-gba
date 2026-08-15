@@ -1,0 +1,13 @@
+{
+  "items": {
+    "common": ["potion", "poke-ball", "antidote", "parapluie-repousse"],
+    "uncommon": ["super-potion", "guerison", "protection"],
+    "rare": ["pierre-lune", "objet-tenu-rare"]
+  },
+  "signs": {
+    "route_marker": "Panneau indiquant la direction et le nom de la zone suivante.",
+    "warning": "Panneau d'avertissement (zone difficile / dresseurs à proximité).",
+    "info": "Panneau d'information sur la faune locale."
+  },
+  "berryTrees": ["arbre-a-baies-oran", "arbre-a-baies-sitrus"]
+}

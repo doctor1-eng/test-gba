@@ -1,0 +1,20 @@
+{
+  "id": "interior",
+  "label": "Interior (placeholder)",
+  "description": "Tileset générique pour intérieurs de bâtiments (centre Pokémon, boutique, arène, maison, labo).",
+  "tiles": [
+    { "id": "floor_wood", "category": "ground", "color": "#c79a63", "solid": false, "label": "Parquet" },
+    { "id": "floor_tile", "category": "ground", "color": "#d9d3c4", "solid": false, "label": "Carrelage" },
+    { "id": "carpet", "category": "ground", "color": "#a23b3b", "solid": false, "label": "Tapis" },
+    { "id": "wall", "category": "obstacle", "color": "#6b5642", "solid": true, "label": "Mur" },
+    { "id": "counter", "category": "structure", "color": "#8a5a3c", "solid": true, "label": "Comptoir" },
+    { "id": "shelf", "category": "structure", "color": "#5c4530", "solid": true, "label": "Étagère" },
+    { "id": "table", "category": "structure", "color": "#7a5a3a", "solid": true, "label": "Table" },
+    { "id": "bed", "category": "structure", "color": "#7e9bc9", "solid": true, "label": "Lit" },
+    { "id": "pc_console", "category": "structure", "color": "#4a90d9", "solid": true, "label": "PC / console" },
+    { "id": "healing_machine", "category": "structure", "color": "#e05252", "solid": true, "label": "Machine de soin" },
+    { "id": "exit_mat", "category": "structure", "color": "#c9c2a8", "solid": false, "label": "Tapis de sortie" },
+    { "id": "plant_indoor", "category": "decoration", "color": "#3f8a45", "solid": true, "label": "Plante d'intérieur" },
+    { "id": "gym_stripe", "category": "decoration", "color": "#d9b23c", "solid": false, "label": "Marquage au sol (arène)" }
+  ]
+}

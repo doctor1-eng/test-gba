@@ -1,0 +1,15 @@
+{
+  "id": "cave",
+  "label": "Cave (placeholder)",
+  "description": "Tileset générique intérieur de grotte/montagne souterraine.",
+  "tiles": [
+    { "id": "cave_floor", "category": "ground", "color": "#4a4438", "solid": false, "label": "Sol rocheux" },
+    { "id": "cave_wall", "category": "obstacle", "color": "#241f19", "solid": true, "label": "Paroi" },
+    { "id": "cave_rubble", "category": "obstacle", "color": "#3a342b", "solid": true, "label": "Éboulis" },
+    { "id": "crystal", "category": "decoration", "color": "#8fd6e8", "solid": true, "label": "Cristal" },
+    { "id": "ladder", "category": "structure", "color": "#b08a4a", "solid": false, "label": "Échelle" },
+    { "id": "cave_water", "category": "water", "color": "#26496b", "solid": true, "label": "Eau souterraine" },
+    { "id": "cave_exit", "category": "structure", "color": "#c9c2a8", "solid": false, "label": "Sortie" },
+    { "id": "ore_vein", "category": "decoration", "color": "#c9a227", "solid": true, "label": "Veine de minerai" }
+  ]
+}

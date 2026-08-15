@@ -1,0 +1,21 @@
+{
+  "type": "beach",
+  "label": "Plage",
+  "tileset": "overworld",
+  "designIntent": {
+    "playerMotivation": "Longer le littoral, pêcher, croiser des touristes, accéder à un port ou une zone insulaire.",
+    "attraction": "Dégradé sable → eau peu profonde → eau profonde, épave ou gros rocher comme landmark, chemin côtier.",
+    "emotion": "Détente, ouverture, horizon dégagé."
+  },
+  "dimensions": { "minWidth": 22, "maxWidth": 34, "minHeight": 16, "maxHeight": 24 },
+  "path": { "mainWidth": 2, "secondaryPathChance": 0.4, "windiness": 0.25 },
+  "buildings": { "required": [], "optionalPool": ["house"], "minCount": 0, "maxCount": 1 },
+  "decorations": {
+    "densityByZone": { "sand": 0.06, "shoreline": 0.08, "path_edge": 0.1 },
+    "allowed": ["driftwood", "shell_deco", "fence"]
+  },
+  "npcs": { "countMin": 1, "countMax": 3, "archetypePool": ["tourist", "trainer"] },
+  "objects": { "hiddenItemChance": 0.4, "visibleItemChance": 0.35, "signChance": 0.15 },
+  "landmarks": { "minCount": 1, "maxCount": 1, "pool": ["shipwreck", "big_rock"] },
+  "encounters": { "enabled": true, "biomeKey": "beach", "methods": ["grass", "water", "fishing"] }
+}

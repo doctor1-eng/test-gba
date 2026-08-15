@@ -1,0 +1,44 @@
+{
+  "maps": {
+    "bourg_depart": {
+      "id": "bourg_depart",
+      "name": "Bourg Départ",
+      "kind": "town",
+      "region": "Région Céladopolis",
+      "width": 34,
+      "height": 20
+    },
+    "route_1": {
+      "id": "route_1",
+      "name": "Route 1",
+      "kind": "route",
+      "region": "Région Céladopolis",
+      "width": 15,
+      "height": 40
+    },
+    "foret_emeraude": {
+      "id": "foret_emeraude",
+      "name": "Forêt Émeraude",
+      "kind": "forest",
+      "region": "Région Céladopolis",
+      "width": 21,
+      "height": 26
+    },
+    "bourg_depart_b1_pokemon_center_interior": {
+      "id": "bourg_depart_b1_pokemon_center_interior",
+      "name": "Centre Pokémon",
+      "kind": "pokemon_center",
+      "region": "Région Céladopolis",
+      "width": 10,
+      "height": 8
+    },
+    "bourg_depart_b2_house_interior": {
+      "id": "bourg_depart_b2_house_interior",
+      "name": "Maison",
+      "kind": "house",
+      "region": "Région Céladopolis",
+      "width": 8,
+      "height": 6
+    }
+  }
+}
