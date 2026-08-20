@@ -62,3 +62,15 @@ LAB_STYLE = {
     "wall": [712, 713, 714, 715, 716, 712, 713],
     "wall_door_row": [712, 713, 714, "DOOR", "DOOR", 715, 712],
 }
+
+# --- Decor secondaire viridian_city_frlg (suite 35, preview d'une grande ville) : offsets deja
+# ajoutes (640 + index local, frontiere secondaire du split "frlg"). Verifie par rendu direct
+# individuel (tools/map_preview, grille labelisee) - PAS de batiment reconstruit depuis ce
+# tileset pour l'instant, seulement du decor/relief pour habiller PC/MART/GYM_STYLE (qui restent
+# des tuiles general_frlg PRIMAIRES, donc valables quel que soit le tileset secondaire choisi). ---
+VIRIDIAN_DECOR = {
+    "tree_big": 640 + 5,       # grand arbre rond, plus dense que TERRAIN["tree_bush"]
+    "hedge_row": 640 + 8,      # haie/rangee de buisson taille, en bande
+    "rock_patch": 640 + 14,    # sol rocheux/terre (transition, pas relief pur)
+    "cliff_face": 640 + 22,    # paroi rocheuse, pour un fond de montagne
+}

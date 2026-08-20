@@ -14,3 +14,6 @@ const u16 gMetatileAttributes_GeneralFrlgKanto[] = INCBIN_U16("data/tilesets/pri
 
 const u16 gMetatiles_PalletTownKanto[] = INCBIN_U16("data/tilesets/secondary/pallet_town_frlg/metatiles.bin");
 const u16 gMetatileAttributes_PalletTownKanto[] = INCBIN_U16("data/tilesets/secondary/pallet_town_frlg/metatile_attributes_emerald_behaviors.bin");
+
+const u16 gMetatiles_ViridianCityKanto[] = INCBIN_U16("data/tilesets/secondary/viridian_city_frlg/metatiles.bin");
+const u16 gMetatileAttributes_ViridianCityKanto[] = INCBIN_U16("data/tilesets/secondary/viridian_city_frlg/metatile_attributes_emerald_behaviors.bin");

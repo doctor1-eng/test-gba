@@ -4,8 +4,9 @@
 // etc. (aucune copie de donnees graphiques, juste de nouveaux symboles C compiles sans condition).
 // Voir docs/TECHNICAL_ARCHITECTURE.md, section "Tilesets Kanto FRLG dans un hack Emerald".
 //
-// Un seul tileset teste pour l'instant (Bourg Palette / pallet_town_frlg) : ne pas ajouter les 13
-// autres villes ici avant validation complete de la methode sur ce premier cas.
+// Premier test (Bourg Palette / pallet_town_frlg) valide en suite 32-34. viridian_city_frlg ajoute
+// en suite 35 comme preview de la richesse d'une vraie grande ville avant de choisir laquelle des
+// 13 villes restantes traiter en premier (voir docs/TECHNICAL_ARCHITECTURE.md).
 
 const u32 gTilesetTiles_GeneralFrlgKanto[] = INCGFX_U32("data/tilesets/primary/general_frlg/tiles.png", ".4bpp.smol");
 
@@ -49,4 +50,26 @@ const u16 ALIGNED(4) gTilesetPalettes_PalletTownKanto[][16] =
     INCGFX_U16("data/tilesets/secondary/pallet_town_frlg/palettes/13.pal", ".gbapal"),
     INCGFX_U16("data/tilesets/secondary/pallet_town_frlg/palettes/14.pal", ".gbapal"),
     INCGFX_U16("data/tilesets/secondary/pallet_town_frlg/palettes/15.pal", ".gbapal"),
+};
+
+const u32 gTilesetTiles_ViridianCityKanto[] = INCGFX_U32("data/tilesets/secondary/viridian_city_frlg/tiles.png", ".4bpp.fastSmol");
+
+const u16 ALIGNED(4) gTilesetPalettes_ViridianCityKanto[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/viridian_city_frlg/palettes/15.pal", ".gbapal"),
 };

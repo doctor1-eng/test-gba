@@ -9390,6 +9390,20 @@
       "blockdata_filepath": "data/layouts/LittlerootTownKantoTest/map.bin",
       "layout_version": "emerald",
       "metatile_format": "frlg"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_KANTO_DEMO",
+      "name": "ViridianCityKantoDemo_Layout",
+      "width": 32,
+      "height": 28,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralFrlgKanto",
+      "secondary_tileset": "gTileset_ViridianCityKanto",
+      "border_filepath": "data/layouts/ViridianCityKantoDemo/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCityKantoDemo/map.bin",
+      "layout_version": "emerald",
+      "metatile_format": "frlg"
     }
   ]
 }
