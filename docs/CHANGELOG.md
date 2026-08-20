@@ -1443,3 +1443,29 @@ structuré de génération de cartes".
 **Suite**
 - Preview PNG régénérée et ROM à livrer à Thomas pour validation avant d'enchaîner les 13 autres
   villes avec ce même pipeline, une à la fois
+
+## Session 6 (suite 36) — Correction des archétypes PC_STYLE et GYM_STYLE (retour sur qualité)
+
+Après retour de Thomas avec des captures de référence détaillées (toit/mur/porte de vrais
+bâtiments Pokémon) : ré-audit tuile par tuile de `general_frlg` autour des IDs déjà utilisés,
+cette fois en composant et rendant des combinaisons candidates directement (pas en déduisant
+depuis une planche statique) pour repérer les pièces manquées la première fois.
+
+- **PC_STYLE** : l'ancien toit répétait la même tuile plate 4 fois (`41,41,41,41`), sans coin ni
+  gouttière. Le tileset a en réalité une séquence à 4 rangées : toit à coins arrondis
+  (`40,41,42,43`) → gouttière grise (`52-55`, rangée entièrement absente avant) → dortoir à
+  emblème Poké Ball (`56-59`) → mur+porte (`60-63`). Porte corrigée aussi : l'ancienne porte
+  (id 339, `MB_NORMAL`) est remplacée par l'id 61, qui porte le comportement
+  `MB_ANIMATED_DOOR` (vérifié en décodant `metatile_attributes_emerald_behaviors.bin`) — une
+  vraie porte animée, pas un pan de mur qui se contente d'être franchissable.
+- **GYM_STYLE** : l'ancien `wall_door_row` avait DEUX placeholders `"DOOR"` côte à côte, ce qui
+  affichait deux portes identiques l'une à côté de l'autre alors qu'une seule était vraiment
+  fonctionnelle — repéré en rendant la combinaison et en comparant au résultat attendu. Corrigé
+  à une seule porte franche, toit ajusté pour ne plus se répéter de façon asymétrique.
+- Les coordonnées de porte (donc les warps déjà câblés dans `map.json`) sont **inchangées** dans
+  les deux cas — seule l'apparence de la façade change, pas la position fonctionnelle.
+- Bourg Palette et la carte démo Viridian régénérées avec les archétypes corrigés, build propre,
+  preview PNG confirmant visuellement le résultat (coins de toit nets, gouttière visible, une
+  seule porte par bâtiment).
+- MART_STYLE et LAB_STYLE non retouchés cette fois (déjà jugés visuellement cohérents à l'audit) ;
+  à revalider si un nouveau retour les concerne spécifiquement.

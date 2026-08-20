@@ -22,19 +22,27 @@ TERRAIN = {
     "hedge": 250,       # haie ronde, pour bordures de jardin devant les maisons
 }
 
-# --- Portes verifiees walkable (MB_FRLG_NORMAL, pas de comportement special -
-#     une porte est un warp_event place sur ces coordonnees, pas un comportement de metatile) ---
+# --- Portes verifiees (comportement decode directement depuis metatile_attributes_emerald_
+#     behaviors.bin, pas suppose) - une porte est un warp_event place sur ces coordonnees, le
+#     comportement de metatile ne fait que jouer une animation/interaction, il ne warp pas lui-meme ---
 DOORS = {
-    "pokeball_door_grey": 339,   # porte a double battant, embleme Poke Ball gris/blanc
-    "pokeball_door_red": 90,     # porte a double battant, embleme Poke Ball rouge (style Mart)
+    "pokeball_door_grey": 339,   # porte a double battant, embleme Poke Ball gris/blanc, MB_NORMAL
+    "pokeball_door_red": 90,     # porte a double battant, embleme Poke Ball rouge (style Mart), MB_NORMAL
+    "pc_style_door": 61,         # porte bois du PC_STYLE, MB_ANIMATED_DOOR (verifiee suite 36)
 }
 
-# --- Archetype PC_STYLE (toit bleu, dortoir a embleme Poke Ball) : 4 cases de large ---
+# --- Archetype PC_STYLE (toit bleu, dortoir a embleme Poke Ball) : 4 cases de large.
+# Corrige en suite 36 (retour de Thomas sur des references de vraie qualite Pokemon) : la
+# version d'origine repetait la meme tuile de toit plate 4x (41,41,41,41), ce qui rendait un
+# toit plat sans coins ni gouttiere - au lieu de la vraie sequence a 4 rangees du tileset
+# (coins arrondis + gouttiere + dortoir), verifiee tuile par tuile par rendu direct. La porte
+# (id 61) porte le comportement MB_ANIMATED_DOOR (verifie via metatile_attributes_emerald_
+# behaviors.bin), pas juste MB_NORMAL - porte fonctionnelle authentique, pas un pan de mur. ---
 PC_STYLE = {
-    "roof_top": [41, 41, 41, 41],           # bande de toit plate, tuilable
-    "roof_dormer": [56, 57, 58, 59],        # dortoir avant avec embleme Poke Ball, coins arrondis
-    "wall": [32, 32, 32, 32],               # mur/fenetres
-    "wall_door_row": [32, "DOOR", "DOOR", 32],  # "DOOR" remplace par pokeball_door_grey au moment de la construction
+    "roof_top": [40, 41, 42, 43],            # coin arrondi gauche, plat x2, coin/encoche droite
+    "roof_gutter": [52, 53, 54, 55],         # gouttiere/bordure grise sous le toit (rangee manquante avant)
+    "roof_dormer": [56, 57, 58, 59],         # dortoir avant avec embleme Poke Ball, coins arrondis
+    "wall_door_row": [60, "DOOR", 62, 63],   # "DOOR" remplace par pokeball_door_grey (id 61, MB_ANIMATED_DOOR)
 }
 
 # --- Archetype MART_STYLE (toit rouge brique, porte a embleme rouge) : 4 cases de large ---
@@ -47,11 +55,14 @@ MART_STYLE = {
 # --- Archetype GYM_STYLE (brique claire + fenetres grises) : 4 cases de large.
 #     Tuile 337 (texte "GYM" incruste) et 320 (comportement EAST_ARROW_WARP special) EXCLUES
 #     volontairement : la premiere serait une incoherence de traduction, la seconde a un
-#     comportement de script qui n'a rien a faire sur un mur decoratif. ---
+#     comportement de script qui n'a rien a faire sur un mur decoratif.
+#     Corrige en suite 36 : l'ancien wall_door_row avait DEUX placeholders "DOOR" cote a cote,
+#     ce qui rendait deux portes identiques visibles l'une a cote de l'autre (une seule etait
+#     reellement fonctionnelle) - repere en comparant au rendu direct. Une seule porte, franche. ---
 GYM_STYLE = {
-    "roof_top": [321, 322, 323, 321],
+    "roof_top": [321, 322, 323, 323],
     "wall": [328, 329, 330, 331],
-    "wall_door_row": [329, "DOOR", "DOOR", 329],  # "DOOR" remplace par pokeball_door_grey
+    "wall_door_row": [328, "DOOR", 329, 331],  # "DOOR" remplace par pokeball_door_grey (id 339)
 }
 
 # --- Facade du Laboratoire (pallet_town_frlg, motif brique/fenetres bleues arrondies deja

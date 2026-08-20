@@ -87,11 +87,13 @@ class MapGrid:
         for i, t in enumerate(tiles):
             self.put(x + i, y, t, collision)
 
-    def build_pc_style(self, x, y, name, door_tile=DOORS["pokeball_door_grey"]):
-        w = len(PC_STYLE["roof_top"])
+    def build_pc_style(self, x, y, name, door_tile=DOORS["pc_style_door"]):
+        # 4 rangees : toit (coins arrondis) -> gouttiere -> dortoir a embleme -> mur+porte.
+        # Rangee gouttiere ajoutee en suite 36 : sans elle le toit "flotte" sans transition
+        # propre vers le dortoir (defaut releve sur retour de Thomas, cf. tile_catalog.py).
         self._paint_row(x, y, PC_STYLE["roof_top"], IMPASSABLE)
-        self._paint_row(x, y + 1, PC_STYLE["roof_dormer"], IMPASSABLE)
-        self._paint_row(x, y + 2, PC_STYLE["wall"], IMPASSABLE)
+        self._paint_row(x, y + 1, PC_STYLE["roof_gutter"], IMPASSABLE)
+        self._paint_row(x, y + 2, PC_STYLE["roof_dormer"], IMPASSABLE)
         row = [door_tile if t == "DOOR" else t for t in PC_STYLE["wall_door_row"]]
         self._paint_row(x, y + 3, row, IMPASSABLE)
         door_x = x + row.index(door_tile)
