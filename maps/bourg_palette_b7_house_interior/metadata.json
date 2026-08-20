@@ -1,0 +1,11 @@
+{
+  "id": "bourg_palette_b7_house_interior",
+  "name": "Maison aux volets fermés",
+  "kind": "house",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "interior",
+  "seed": 2623211283,
+  "generatedAt": "2026-08-20T18:54:40.694Z",
+  "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
+}

@@ -1,0 +1,18 @@
+{
+  "mapId": "bourg_palette",
+  "mapName": "Bourg Palette",
+  "mapType": "village",
+  "region": "Région Céladopolis",
+  "width": 44,
+  "height": 34,
+  "buildings": [
+    { "type": "lab", "label": "Laboratoire du Professeur Chen" },
+    { "type": "house", "label": "Maison du joueur" },
+    { "type": "house", "label": "Maison de Régis" },
+    { "type": "house", "label": "Maison de Mme Chen" },
+    { "type": "house", "label": "Maison du Vieux Dresseur" },
+    { "type": "house", "label": "Maison du Gardien de Route" },
+    { "type": "house", "label": "Maison aux volets fermés" },
+    { "type": "house", "label": "Maison de la Dame aux Baies" }
+  ]
+}

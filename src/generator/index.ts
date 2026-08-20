@@ -75,6 +75,8 @@ export interface GenerateMapOptions {
   connections?: ConnectionSpec[];
   width?: number;
   height?: number;
+  /** Bâtiments scriptés (nom + type fixes) pour une map narrative — voir buildings.ts. */
+  forcedBuildings?: Array<{ type: string; label: string }>;
 }
 
 export interface GenerateMapResult {
@@ -145,6 +147,7 @@ export function generateMap(opts: GenerateMapOptions): GenerateMapResult {
     progression,
     occupied,
     isSolid,
+    opts.forcedBuildings,
   );
   for (const k of reservedLandmarkKeys) occupied.delete(k);
 

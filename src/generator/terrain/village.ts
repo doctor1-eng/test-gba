@@ -31,10 +31,15 @@ export function generateVillageTerrain(
   const mainPath = new Set<string>();
   const edgeAnchors: Partial<Record<Direction, Point>> = {};
 
-  const hub: Point =
-    anchors.length > 0
-      ? anchors[0].point
-      : { x: Math.floor(width / 2), y: Math.floor(height / 2) };
+  // Point intérieur DISTINCT de toute ancre — jamais l'ancre elle-même : avec
+  // une seule connexion, "hub = anchors[0].point" faisait converger le
+  // chemin vers son propre point de départ (trajet quasi nul), laissant le
+  // village presque sans "path_edge" pour ancrer des bâtiments. Même souci
+  // que résolu par resolveEntryExit pour route/forest/cave/mountain/beach.
+  const hub: Point = {
+    x: Math.min(Math.max(Math.floor(width / 2) + rng.int(-4, 4), 3), width - 4),
+    y: Math.min(Math.max(Math.floor(height / 2) + rng.int(-4, 4), 3), height - 4),
+  };
 
   for (const { dir, point } of anchors) {
     edgeAnchors[dir] = point;
@@ -44,6 +49,28 @@ export function generateVillageTerrain(
     for (const t of carveMainPath(rng, width, height, approach, hub, template.path.mainWidth, template.path.windiness))
       mainPath.add(t);
   }
+
+  // Rues secondaires : un unique bras d'accès ne laisse qu'une poignée de
+  // tuiles "path_edge" pour ancrer les bâtiments, insuffisant dès qu'un
+  // village compte plusieurs maisons scriptées. `path.secondaryPathChance`
+  // du template était déclaré mais jamais consommé — utilisé ici pour de
+  // vraies allées. Chaque rue part d'un point du réseau déjà tracé (pas
+  // toujours du hub) : un maillage arborescent dispersé plutôt qu'une
+  // étoile dense autour d'un seul point, qui ferait se croiser toutes les
+  // rues au même endroit et empêcherait tout footprint de bâtiment de
+  // s'y ancrer sans chevaucher une autre rue.
+  const secondaryAttempts = Math.max(8, Math.round(Math.min(width, height) / 3));
+  const secondaryChance = Math.max(template.path.secondaryPathChance, 0.75);
+  for (let i = 0; i < secondaryAttempts; i++) {
+    if (!rng.bool(secondaryChance)) continue;
+    const originKey = rng.pick([...mainPath]);
+    const [ox, oy] = originKey.split(",").map(Number);
+    const target: Point = { x: rng.int(3, width - 4), y: rng.int(3, height - 4) };
+    for (const t of carveMainPath(rng, width, height, { x: ox, y: oy }, target, Math.max(1, template.path.mainWidth - 1), template.path.windiness)) {
+      mainPath.add(t);
+    }
+  }
+
   for (const k of mainPath) {
     const [x, y] = k.split(",").map(Number);
     terrain[y][x] = "path";

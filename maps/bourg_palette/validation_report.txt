@@ -1,0 +1,9 @@
+MAP VALIDATION — Bourg Palette (bourg_palette)
+✓ Dimensions
+✓ Tileset
+✓ Collisions
+✓ Warps
+✓ NPCs
+✓ Objects
+✓ Encounters
+RÉSULTAT: OK

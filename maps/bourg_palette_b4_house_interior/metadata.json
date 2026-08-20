@@ -1,0 +1,11 @@
+{
+  "id": "bourg_palette_b4_house_interior",
+  "name": "Maison de Mme Chen",
+  "kind": "house",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "interior",
+  "seed": 4173665638,
+  "generatedAt": "2026-08-20T18:54:40.688Z",
+  "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
+}

@@ -1,0 +1,11 @@
+{
+  "id": "bourg_palette_b5_house_interior",
+  "name": "Maison du Vieux Dresseur",
+  "kind": "house",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "interior",
+  "seed": 73740461,
+  "generatedAt": "2026-08-20T18:54:40.690Z",
+  "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
+}

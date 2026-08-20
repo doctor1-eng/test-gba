@@ -1,4 +1,4 @@
-MAP VALIDATION — Bourg Départ (bourg_depart)
+MAP VALIDATION — Maison du Vieux Dresseur (bourg_palette_b5_house_interior)
 ✓ Dimensions
 ✓ Tileset
 ✓ Collisions

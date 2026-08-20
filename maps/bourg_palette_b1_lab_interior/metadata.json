@@ -1,0 +1,11 @@
+{
+  "id": "bourg_palette_b1_lab_interior",
+  "name": "Laboratoire du Professeur Chen",
+  "kind": "lab",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "interior",
+  "seed": 3114761536,
+  "generatedAt": "2026-08-20T18:54:40.677Z",
+  "description": "Recevoir son premier Pokémon ou un objet clé lié au Professeur."
+}

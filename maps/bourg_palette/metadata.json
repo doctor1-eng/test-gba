@@ -1,0 +1,11 @@
+{
+  "id": "bourg_palette",
+  "name": "Bourg Palette",
+  "kind": "village",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "overworld",
+  "seed": 1170316964,
+  "generatedAt": "2026-08-20T18:54:40.706Z",
+  "description": "Faire une pause, glaner une information ou un objet, sentir un lieu plus intime qu'une grande ville."
+}

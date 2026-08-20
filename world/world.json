@@ -1,12 +1,12 @@
 {
   "maps": {
-    "bourg_depart": {
-      "id": "bourg_depart",
-      "name": "Bourg Départ",
-      "kind": "town",
+    "bourg_palette": {
+      "id": "bourg_palette",
+      "name": "Bourg Palette",
+      "kind": "village",
       "region": "Région Céladopolis",
-      "width": 34,
-      "height": 20
+      "width": 44,
+      "height": 34
     },
     "route_1": {
       "id": "route_1",
@@ -24,29 +24,69 @@
       "width": 21,
       "height": 26
     },
-    "bourg_depart_b1_pokemon_center_interior": {
-      "id": "bourg_depart_b1_pokemon_center_interior",
-      "name": "Centre Pokémon",
-      "kind": "pokemon_center",
+    "bourg_palette_b1_lab_interior": {
+      "id": "bourg_palette_b1_lab_interior",
+      "name": "Laboratoire du Professeur Chen",
+      "kind": "lab",
       "region": "Région Céladopolis",
-      "width": 10,
-      "height": 8
+      "width": 11,
+      "height": 9
     },
-    "bourg_depart_b2_pokemart_interior": {
-      "id": "bourg_depart_b2_pokemart_interior",
-      "name": "Boutique",
-      "kind": "pokemart",
+    "bourg_palette_b2_house_interior": {
+      "id": "bourg_palette_b2_house_interior",
+      "name": "Maison du joueur",
+      "kind": "house",
       "region": "Région Céladopolis",
-      "width": 8,
+      "width": 9,
+      "height": 6
+    },
+    "bourg_palette_b3_house_interior": {
+      "id": "bourg_palette_b3_house_interior",
+      "name": "Maison de Régis",
+      "kind": "house",
+      "region": "Région Céladopolis",
+      "width": 9,
+      "height": 6
+    },
+    "bourg_palette_b4_house_interior": {
+      "id": "bourg_palette_b4_house_interior",
+      "name": "Maison de Mme Chen",
+      "kind": "house",
+      "region": "Région Céladopolis",
+      "width": 9,
       "height": 7
     },
-    "bourg_depart_b3_house_interior": {
-      "id": "bourg_depart_b3_house_interior",
-      "name": "Maison",
+    "bourg_palette_b5_house_interior": {
+      "id": "bourg_palette_b5_house_interior",
+      "name": "Maison du Vieux Dresseur",
       "kind": "house",
       "region": "Région Céladopolis",
       "width": 8,
       "height": 6
+    },
+    "bourg_palette_b6_house_interior": {
+      "id": "bourg_palette_b6_house_interior",
+      "name": "Maison du Gardien de Route",
+      "kind": "house",
+      "region": "Région Céladopolis",
+      "width": 9,
+      "height": 6
+    },
+    "bourg_palette_b7_house_interior": {
+      "id": "bourg_palette_b7_house_interior",
+      "name": "Maison aux volets fermés",
+      "kind": "house",
+      "region": "Région Céladopolis",
+      "width": 9,
+      "height": 7
+    },
+    "bourg_palette_b8_house_interior": {
+      "id": "bourg_palette_b8_house_interior",
+      "name": "Maison de la Dame aux Baies",
+      "kind": "house",
+      "region": "Région Céladopolis",
+      "width": 8,
+      "height": 7
     }
   }
 }

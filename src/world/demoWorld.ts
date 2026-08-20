@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { generateMap } from "../generator/index.js";
+import bourgPalette from "../data/bourg-palette.json" with { type: "json" };
 import { saveMap, mapDir, savePreview } from "../mapIO.js";
 import { validateMap } from "../validator/index.js";
 import { formatReport } from "../validator/report.js";
@@ -15,21 +16,24 @@ import type { GameMap } from "../schema/types.js";
  * prévisualisée. Sert de preuve de bout en bout du pipeline (section 19).
  */
 export async function buildDemoWorld(rootSeed: number): Promise<void> {
-  const TOWN_ID = "bourg_depart";
+  const TOWN_ID = bourgPalette.mapId;
   const ROUTE_ID = "route_1";
   const FOREST_ID = "foret_emeraude";
-  const region = "Région Céladopolis";
+  const region = bourgPalette.region;
 
   console.log("=== GÉNÉRATION DU MONDE DE DÉMONSTRATION ===\n");
 
   const { map: town, interiorMaps: townInteriors } = generateMap({
-    type: "town",
-    name: "Bourg Départ",
+    type: bourgPalette.mapType,
+    name: bourgPalette.mapName,
     id: TOWN_ID,
     seed: deriveSeed(rootSeed, TOWN_ID),
     region,
     progression: "early",
     connections: [{ direction: "south", mapId: ROUTE_ID, offset: 0 }],
+    forcedBuildings: bourgPalette.buildings,
+    width: bourgPalette.width,
+    height: bourgPalette.height,
   });
 
   const { map: route, interiorMaps: routeInteriors } = generateMap({

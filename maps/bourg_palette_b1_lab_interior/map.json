@@ -1,0 +1,318 @@
+{
+  "metadata": {
+    "id": "bourg_palette_b1_lab_interior",
+    "name": "Laboratoire du Professeur Chen",
+    "kind": "lab",
+    "region": "Région Céladopolis",
+    "progression": "early",
+    "tileset": "interior",
+    "seed": 3114761536,
+    "generatedAt": "2026-08-20T18:54:40.677Z",
+    "description": "Recevoir son premier Pokémon ou un objet clé lié au Professeur."
+  },
+  "dimensions": {
+    "width": 11,
+    "height": 9
+  },
+  "terrain": [
+    [
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "pc_console",
+      "floor_wood",
+      "shelf",
+      "floor_wood",
+      "table",
+      "floor_wood",
+      "plant_indoor",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "exit_mat",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall"
+    ]
+  ],
+  "collision": [
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  ],
+  "connections": [],
+  "warps": [
+    {
+      "id": "w_entry",
+      "x": 5,
+      "y": 8,
+      "direction": "south",
+      "destinationMap": "bourg_palette",
+      "destinationWarpId": "w_bourg_palette_b1_lab"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "npc_bourg_palette_b1_lab_interior_1",
+      "archetype": "researcher",
+      "role": "researcher",
+      "name": "researcher_1",
+      "x": 5,
+      "y": 2,
+      "direction": "south",
+      "movement": {
+        "type": "static"
+      },
+      "dialogue": [
+        "Fascinant ! Ce Pokémon présente un comportement inhabituel."
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "furn_bourg_palette_b1_lab_interior_1",
+      "type": "pc",
+      "x": 2,
+      "y": 1,
+      "label": "pc_console"
+    },
+    {
+      "id": "furn_bourg_palette_b1_lab_interior_2",
+      "type": "machine",
+      "x": 4,
+      "y": 1,
+      "label": "shelf"
+    },
+    {
+      "id": "furn_bourg_palette_b1_lab_interior_3",
+      "type": "machine",
+      "x": 6,
+      "y": 1,
+      "label": "table"
+    },
+    {
+      "id": "furn_bourg_palette_b1_lab_interior_4",
+      "type": "machine",
+      "x": 8,
+      "y": 1,
+      "label": "plant_indoor"
+    }
+  ],
+  "buildings": [],
+  "decorations": [],
+  "landmarks": [],
+  "encounters": {},
+  "events": []
+}

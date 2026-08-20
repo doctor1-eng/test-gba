@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "id": "bourg_palette_b5_house_interior",
+    "name": "Maison du Vieux Dresseur",
+    "kind": "house",
+    "region": "Région Céladopolis",
+    "progression": "early",
+    "tileset": "interior",
+    "seed": 73740461,
+    "generatedAt": "2026-08-20T18:54:40.690Z",
+    "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
+  },
+  "dimensions": {
+    "width": 8,
+    "height": 6
+  },
+  "terrain": [
+    [
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "bed",
+      "floor_wood",
+      "table",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "floor_wood",
+      "wall"
+    ],
+    [
+      "wall",
+      "wall",
+      "wall",
+      "wall",
+      "exit_mat",
+      "wall",
+      "wall",
+      "wall"
+    ]
+  ],
+  "collision": [
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+    ]
+  ],
+  "connections": [],
+  "warps": [
+    {
+      "id": "w_entry",
+      "x": 4,
+      "y": 5,
+      "direction": "south",
+      "destinationMap": "bourg_palette",
+      "destinationWarpId": "w_bourg_palette_b5_house"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "npc_bourg_palette_b5_house_interior_1",
+      "archetype": "child",
+      "role": "child",
+      "name": "child_1",
+      "x": 4,
+      "y": 2,
+      "direction": "south",
+      "movement": {
+        "type": "wander"
+      },
+      "dialogue": [
+        "Un jour je serai Maître Pokémon !"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "furn_bourg_palette_b5_house_interior_1",
+      "type": "machine",
+      "x": 2,
+      "y": 1,
+      "label": "bed"
+    },
+    {
+      "id": "furn_bourg_palette_b5_house_interior_2",
+      "type": "machine",
+      "x": 4,
+      "y": 1,
+      "label": "table"
+    }
+  ],
+  "buildings": [],
+  "decorations": [],
+  "landmarks": [],
+  "encounters": {},
+  "events": []
+}

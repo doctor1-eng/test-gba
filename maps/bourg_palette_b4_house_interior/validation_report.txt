@@ -1,4 +1,4 @@
-MAP VALIDATION — Centre Pokémon (bourg_depart_b1_pokemon_center_interior)
+MAP VALIDATION — Maison de Mme Chen (bourg_palette_b4_house_interior)
 ✓ Dimensions
 ✓ Tileset
 ✓ Collisions

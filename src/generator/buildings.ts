@@ -69,22 +69,29 @@ export function placeBuildings(
   progression: GameMap["metadata"]["progression"],
   occupied: Set<string>,
   isSolid: (tile: string) => boolean,
+  // Liste scriptée (map narrative fixe, ex: village de départ) : remplace
+  // entièrement le tirage procédural required/optionalPool. Le label de
+  // chaque entrée prime sur le label générique du type (ex: "house" +
+  // "Maison de Régis" plutôt que "Maison").
+  forcedBuildings?: Array<{ type: string; label: string }>,
 ): BuildingsResult {
   const { width, height, terrain, zones, mainPath } = terrainResult;
   const buildings: Building[] = [];
   const interiorMaps: GameMap[] = [];
   const exteriorWarps: Warp[] = [];
 
-  const typeQueue = [...template.buildings.required];
-  const targetCount = rng.int(
-    Math.max(template.buildings.minCount, typeQueue.length),
-    Math.max(template.buildings.maxCount, typeQueue.length),
-  );
-  const pool = rng.shuffle(template.buildings.optionalPool);
-  let poolIdx = 0;
-  while (typeQueue.length < targetCount && poolIdx < pool.length) {
-    typeQueue.push(pool[poolIdx]);
-    poolIdx++;
+  const typeQueue = forcedBuildings ? forcedBuildings.map((b) => b.type) : [...template.buildings.required];
+  if (!forcedBuildings) {
+    const targetCount = rng.int(
+      Math.max(template.buildings.minCount, typeQueue.length),
+      Math.max(template.buildings.maxCount, typeQueue.length),
+    );
+    const pool = rng.shuffle(template.buildings.optionalPool);
+    let poolIdx = 0;
+    while (typeQueue.length < targetCount && poolIdx < pool.length) {
+      typeQueue.push(pool[poolIdx]);
+      poolIdx++;
+    }
   }
 
   // Ancrer uniquement sur les tuiles du chemin lui-même laisse trop peu de
@@ -120,9 +127,11 @@ export function placeBuildings(
     ? { x: Number(referenceKey.split(",")[0]), y: Number(referenceKey.split(",")[1]) }
     : null;
 
-  for (const type of typeQueue) {
+  for (let qi = 0; qi < typeQueue.length; qi++) {
+    const type = typeQueue[qi];
     const footprint = FOOTPRINT[type];
     if (!footprint) continue;
+    const label = forcedBuildings?.[qi]?.label ?? footprint.label;
 
     const spot = findFootprintSpot(
       pathTiles,
@@ -154,7 +163,7 @@ export function placeBuildings(
     const building: Building = {
       id: buildingId,
       type: type as Building["type"],
-      label: footprint.label,
+      label,
       x: spot.x,
       y: spot.y,
       width: footprint.w,
@@ -170,7 +179,7 @@ export function placeBuildings(
       mapId,
       exteriorWarpId,
       buildingId,
-      footprint.label,
+      label,
       region,
       progression,
     );

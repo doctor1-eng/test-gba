@@ -1,4 +1,4 @@
-MAP VALIDATION — Boutique (bourg_depart_b2_pokemart_interior)
+MAP VALIDATION — Laboratoire du Professeur Chen (bourg_palette_b1_lab_interior)
 ✓ Dimensions
 ✓ Tileset
 ✓ Collisions

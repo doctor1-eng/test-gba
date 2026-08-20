@@ -1,11 +1,11 @@
 {
-  "id": "bourg_depart_b3_house_interior",
-  "name": "Maison",
+  "id": "bourg_palette_b6_house_interior",
+  "name": "Maison du Gardien de Route",
   "kind": "house",
   "region": "Région Céladopolis",
   "progression": "early",
   "tileset": "interior",
-  "seed": 2788397342,
-  "generatedAt": "2026-08-20T10:25:48.530Z",
+  "seed": 4026684257,
+  "generatedAt": "2026-08-20T18:54:40.692Z",
   "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
 }

@@ -7,7 +7,7 @@
     "progression": "early",
     "tileset": "overworld",
     "seed": 2428587606,
-    "generatedAt": "2026-08-20T10:25:48.562Z",
+    "generatedAt": "2026-08-20T18:54:40.709Z",
     "description": "Voyager d'un point A à un point B en rencontrant des Pokémon sauvages et un dresseur ou deux."
   },
   "dimensions": {
@@ -1381,7 +1381,7 @@
   "connections": [
     {
       "direction": "north",
-      "mapId": "bourg_depart",
+      "mapId": "bourg_palette",
       "offset": 0
     },
     {

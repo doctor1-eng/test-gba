@@ -1,0 +1,11 @@
+{
+  "id": "bourg_palette_b3_house_interior",
+  "name": "Maison de Régis",
+  "kind": "house",
+  "region": "Région Céladopolis",
+  "progression": "early",
+  "tileset": "interior",
+  "seed": 2938787689,
+  "generatedAt": "2026-08-20T18:54:40.686Z",
+  "description": "Rendre visite à un habitant, parfois obtenir un objet ou une information."
+}
