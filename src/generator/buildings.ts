@@ -18,6 +18,37 @@ const FOOTPRINT: Record<string, { w: number; h: number; label: string }> = {
   lab: { w: 5, h: 4, label: "Laboratoire" },
 };
 
+/**
+ * Peint un vrai motif de composition (toit / corps / base), pas un
+ * remplissage uniforme — chaque rôle structurel a sa tuile sémantique
+ * dédiée. La porte n'est pas posée ici : l'appelant écrase ensuite UNE
+ * tuile wall_base_mid au centre de la ligne de base par "door".
+ */
+function paintBuildingTiles(terrain: string[][], x0: number, y0: number, w: number, h: number): void {
+  for (let dy = 0; dy < h; dy++) {
+    const y = y0 + dy;
+    const isRoof = dy === 0;
+    const isBase = dy === h - 1;
+    const isFirstCorpsRow = dy === 1;
+    for (let dx = 0; dx < w; dx++) {
+      const x = x0 + dx;
+      const isLeft = dx === 0;
+      const isRight = dx === w - 1;
+      let tile: string;
+      if (isRoof) {
+        tile = isLeft ? "roof_corner_left" : isRight ? "roof_corner_right" : "roof_top";
+      } else if (isBase) {
+        tile = isLeft ? "wall_base_left" : isRight ? "wall_base_right" : "wall_base_mid";
+      } else {
+        // Corps : bords toujours nets, mais la première ligne "fenêtre" et
+        // les suivantes "pleines" pour éviter un motif trop répétitif.
+        tile = isLeft ? "wall_edge_left" : isRight ? "wall_edge_right" : isFirstCorpsRow ? "wall_window" : "wall_plain";
+      }
+      terrain[y][x] = tile;
+    }
+  }
+}
+
 export interface BuildingsResult {
   buildings: Building[];
   interiorMaps: GameMap[];
@@ -111,12 +142,10 @@ export function placeBuildings(
     buildingIndex++;
     const buildingId = `${mapId}_b${buildingIndex}_${type}`;
 
+    paintBuildingTiles(terrain, spot.x, spot.y, footprint.w, footprint.h);
     for (let dy = 0; dy < footprint.h; dy++) {
       for (let dx = 0; dx < footprint.w; dx++) {
-        const x = spot.x + dx;
-        const y = spot.y + dy;
-        terrain[y][x] = dy === footprint.h - 1 ? "building_wall" : "building_roof";
-        occupied.add(`${x},${y}`);
+        occupied.add(`${spot.x + dx},${spot.y + dy}`);
       }
     }
     const entrance: Point = { x: spot.x + Math.floor(footprint.w / 2), y: spot.y + footprint.h - 1 };
