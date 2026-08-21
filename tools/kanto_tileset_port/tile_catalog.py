@@ -58,11 +58,14 @@ MART_STYLE = {
 #     comportement de script qui n'a rien a faire sur un mur decoratif.
 #     Corrige en suite 36 : l'ancien wall_door_row avait DEUX placeholders "DOOR" cote a cote,
 #     ce qui rendait deux portes identiques visibles l'une a cote de l'autre (une seule etait
-#     reellement fonctionnelle) - repere en comparant au rendu direct. Une seule porte, franche. ---
+#     reellement fonctionnelle) - repere en comparant au rendu direct. Une seule porte, franche.
+#     Re-corrige en suite 37 : la tuile 328 (fenetre + bac a fleurs) empilee 3x d'affilee sur la
+#     meme colonne produisait un motif de fenetres identiques repetees, incoherent pour une
+#     facade reelle - remplacee par 329/331 (poteaux d'angle) + 330 (brique pleine). ---
 GYM_STYLE = {
     "roof_top": [321, 322, 323, 323],
-    "wall": [328, 329, 330, 331],
-    "wall_door_row": [328, "DOOR", 329, 331],  # "DOOR" remplace par pokeball_door_grey (id 339)
+    "wall": [329, 330, 330, 331],             # 329/331 = poteaux d'angle, 330 = brique pleine
+    "wall_door_row": [329, "DOOR", 330, 331],  # "DOOR" remplace par pokeball_door_grey (id 339)
 }
 
 # --- Facade du Laboratoire (pallet_town_frlg, motif brique/fenetres bleues arrondies deja
