@@ -3,3 +3,4 @@
 # Il se reconstruit via `git clone` + copie de changed_files/ (voir INSTALL.md).
 engine/
 tools/qa_harness/qa_runner
+__pycache__/
