@@ -1469,3 +1469,31 @@ depuis une planche statique) pour repérer les pièces manquées la première fo
   seule porte par bâtiment).
 - MART_STYLE et LAB_STYLE non retouchés cette fois (déjà jugés visuellement cohérents à l'audit) ;
   à revalider si un nouveau retour les concerne spécifiquement.
+
+## Session 6 (suite 39) — Deux nouveaux archétypes de bâtiment + 2 props (validés par Thomas)
+
+Thomas a fourni une ROM externe (Pokémon FireRed Rocket Edition, hack basé sur BPRE) en demandant
+d'en réutiliser les bâtiments. Écrit un extracteur de graphismes GBA depuis zéro
+(`tools/rom_ripper/` : décompresseur LZ77 + scanner de ROM + recherche de palettes brutes) pour
+analyser le binaire directement. Résultat : le tileset primaire de cette ROM est **identique** à
+notre `general_frlg` déjà dans le moteur (mêmes formes exactes une fois décompressées et
+recolorées avec nos propres palettes) — ce hack ne redessine pas ses bâtiments de ville standard,
+il réutilise le FireRed d'origine qu'on a déjà.
+
+Conséquence pratique : plutôt que d'extraire depuis la ROM (imprécis sans la table
+tuile→palette par métatile, non retrouvée), les nouveaux archétypes ont été construits
+directement depuis nos propres tuiles `general_frlg`/`pallet_town_frlg`, avec la garantie que
+c'est exactement le même contenu visuel. 8 candidats proposés en planche numérotée, 4 validés :
+
+- **MODERN_STYLE** (`general_frlg`, 3×3) : façade grise à fenêtres bleues, porte vitrée
+  (id 401, `MB_NON_ANIMATED_DOOR` - vérifiée, pas juste un pan de mur franchissable)
+- **ORANGE_ROOF_STYLE** (`pallet_town_frlg`, 4×4, comme LAB_STYLE valable uniquement quand ce
+  tileset secondaire est utilisé) : toit orange à rainures, mur gris/fenêtres bleues, porte
+  animée (id 675, `MB_ANIMATED_DOOR`)
+- **PROPS** : `gym_console` (borne d'arcade "GYM") et `statue_sign` (panneau à visage sculpté),
+  objets décoratifs autonomes à poser via `MapGrid.put_prop()`, toujours `IMPASSABLE`
+
+4 autres candidats (pavillon serre sans porte vérifiée, arche de grotte, borne PC, caisse TNT)
+n'ont pas été retenus par Thomas. Ajoutés dans `tile_catalog.py`/`map_builder.py`, vérifiés par
+rendu direct (pixel-identiques aux visuels proposés), build propre. Pas encore utilisés dans une
+carte réelle - disponibles pour la prochaine ville industrialisée.

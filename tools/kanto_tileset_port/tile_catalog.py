@@ -29,6 +29,8 @@ DOORS = {
     "pokeball_door_grey": 339,   # porte a double battant, embleme Poke Ball gris/blanc, MB_NORMAL
     "pokeball_door_red": 90,     # porte a double battant, embleme Poke Ball rouge (style Mart), MB_NORMAL
     "pc_style_door": 61,         # porte bois du PC_STYLE, MB_ANIMATED_DOOR (verifiee suite 36)
+    "modern_style_door": 401,    # porte vitree du MODERN_STYLE, MB_NON_ANIMATED_DOOR (verifiee suite 39)
+    "orange_roof_door": 675,     # porte du ORANGE_ROOF_STYLE (pallet_town_frlg), MB_ANIMATED_DOOR (suite 39)
 }
 
 # --- Archetype PC_STYLE (toit bleu, dortoir a embleme Poke Ball) : 4 cases de large.
@@ -75,6 +77,39 @@ LAB_STYLE = {
     "top": [704, 705, 706, 707, 708, 709, 704],
     "wall": [712, 713, 714, 715, 716, 712, 713],
     "wall_door_row": [712, 713, 714, "DOOR", "DOOR", 715, 712],
+}
+
+# --- Archetype MODERN_STYLE (facade grise a fenetres bleues, style batiment urbain/magasin) :
+#     3 cases de large. Trouve en suite 39 en comparant le tileset general_frlg deja dans le
+#     moteur a une ROM FireRed externe (Pokemon FireRed Rocket Edition) fournie par Thomas - les
+#     deux se sont reveles identiques (meme tileset FRLG d'origine), donc cet archetype est
+#     construit directement depuis nos propres tuiles general_frlg, pas extrait de la ROM.
+#     Porte (id 401) verifiee MB_NON_ANIMATED_DOOR - fonctionnelle mais sans animation
+#     d'ouverture (contrairement a pc_style_door). Valide par Thomas (proposition #1). ---
+MODERN_STYLE = {
+    "wall_windows": [384, 385, 386],              # bande de 2 fenetres bleues
+    "wall_mid": [387, 388, 389],                  # mur gris plein
+    "wall_door_row": [400, "DOOR", 402],          # "DOOR" remplace par modern_style_door (id 401)
+}
+
+# --- Archetype ORANGE_ROOF_STYLE (toit orange a rainures + mur gris/fenetres bleues) :
+#     4 cases de large. Tuiles issues de pallet_town_frlg (secondaire, offsets 640+) - donc,
+#     comme LAB_STYLE, valable uniquement quand pallet_town_frlg est le tileset secondaire de
+#     la carte (pas universel comme PC/MART/GYM_STYLE qui sont sur general_frlg primaire).
+#     Trouve et valide en suite 39 (proposition #2), meme contexte que MODERN_STYLE ci-dessus. ---
+ORANGE_ROOF_STYLE = {
+    "roof_top": [649, 650, 650, 651],             # toit rainure, 3 tuiles reelles + 650 reprise en padding
+    "roof_eave": [657, 658, 658, 659],            # bordure de toit avec liseret rouge
+    "wall_windows": [665, 666, 667, 668],
+    "wall_door_row": [673, 674, "DOOR", 676],     # "DOOR" remplace par orange_roof_door (id 675)
+}
+
+# --- Objets decoratifs autonomes (1 case), general_frlg primaire - poser avec IMPASSABLE comme
+#     les autres decors, jamais PASSABLE (ce ne sont pas des portes). Valides par Thomas
+#     (propositions #5 et #8) en suite 39. ---
+PROPS = {
+    "gym_console": 360,     # borne d'arcade rouge/grise avec texte "GYM" incruste
+    "statue_sign": 3,       # petit panneau/totem a visage sculpte
 }
 
 # --- Decor secondaire viridian_city_frlg (suite 35, preview d'une grande ville) : offsets deja

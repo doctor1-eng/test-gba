@@ -10,7 +10,10 @@ import math
 import random
 import struct
 
-from tile_catalog import TERRAIN, DOORS, PC_STYLE, MART_STYLE, GYM_STYLE, LAB_STYLE
+from tile_catalog import (
+    TERRAIN, DOORS, PC_STYLE, MART_STYLE, GYM_STYLE, LAB_STYLE,
+    MODERN_STYLE, ORANGE_ROOF_STYLE, PROPS,
+)
 
 IMPASSABLE = 3
 PASSABLE = 0
@@ -140,6 +143,37 @@ class MapGrid:
         self.put(door_x, door_y, door_tile, PASSABLE)
         self.buildings.append((name, door_x, door_y))
         return door_x, door_y
+
+    def build_modern_style(self, x, y, name, door_tile=DOORS["modern_style_door"]):
+        # 3 rangees : fenetres, mur, mur+porte (niveau du sol).
+        self._paint_row(x, y, MODERN_STYLE["wall_windows"], IMPASSABLE)
+        self._paint_row(x, y + 1, MODERN_STYLE["wall_mid"], IMPASSABLE)
+        row = [door_tile if t == "DOOR" else t for t in MODERN_STYLE["wall_door_row"]]
+        self._paint_row(x, y + 2, row, IMPASSABLE)
+        door_x = x + row.index(door_tile)
+        door_y = y + 2
+        self.put(door_x, door_y, door_tile, PASSABLE)
+        self.buildings.append((name, door_x, door_y))
+        return door_x, door_y
+
+    def build_orange_roof_style(self, x, y, name, door_tile=DOORS["orange_roof_door"]):
+        # 4 rangees : toit, gouttiere, fenetres, mur+porte (niveau du sol). Necessite
+        # pallet_town_frlg comme tileset secondaire (tuiles 640+, voir tile_catalog.py).
+        self._paint_row(x, y, ORANGE_ROOF_STYLE["roof_top"], IMPASSABLE)
+        self._paint_row(x, y + 1, ORANGE_ROOF_STYLE["roof_eave"], IMPASSABLE)
+        self._paint_row(x, y + 2, ORANGE_ROOF_STYLE["wall_windows"], IMPASSABLE)
+        row = [door_tile if t == "DOOR" else t for t in ORANGE_ROOF_STYLE["wall_door_row"]]
+        self._paint_row(x, y + 3, row, IMPASSABLE)
+        door_x = x + row.index(door_tile)
+        door_y = y + 3
+        self.put(door_x, door_y, door_tile, PASSABLE)
+        self.buildings.append((name, door_x, door_y))
+        return door_x, door_y
+
+    def put_prop(self, x, y, prop_name):
+        """Pose un objet decoratif autonome (PROPS, 1 case) - toujours IMPASSABLE, ce n'est
+        jamais une porte meme si visuellement ca y ressemble (ex: gym_console)."""
+        self.put(x, y, PROPS[prop_name], IMPASSABLE)
 
     def add_tree(self, cx, cy, tile=TERRAIN["tree_bush"]):
         self.put(cx, cy, tile, IMPASSABLE)
