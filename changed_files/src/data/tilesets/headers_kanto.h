@@ -36,3 +36,14 @@ const struct Tileset gTileset_ViridianCityKanto =
     .metatileAttributes = gMetatileAttributes_ViridianCityKanto,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PewterCityKanto =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PewterCityKanto,
+    .palettes = gTilesetPalettes_PewterCityKanto,
+    .metatiles = gMetatiles_PewterCityKanto,
+    .metatileAttributes = gMetatileAttributes_PewterCityKanto,
+    .callback = NULL,
+};
