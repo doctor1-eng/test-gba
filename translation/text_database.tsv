@@ -4999,20 +4999,20 @@ ODYSSEY-TXT-004997	0x0778DB7	7	SpD <FD:02>	FD	4	1	0x0778D90	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004998	0x0778DBE	30	Capture for<FE>more information!	FE	28	2	0x0778D60	UNKNOWN	Capturez-le pour<FE>en savoir plus !	TRANSLATED
 ODYSSEY-TXT-004999	0x08005D4	12	Talrega  r 		11	1	0x0800088	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005000	0x080083E	25	Where do you wish to go?		24	1	0x01CC2B0,0x01CC2E0,0x01CC310,0x01CC340,0x01D0C90,0x1B08638,0x1B08668,0x1B08698,0x1B086C8	UNKNOWN	Où voulez-vous aller ?	TRANSLATED
-ODYSSEY-TXT-005001	0x080121F	45	y doubts, feel free<FE>to check in the library!	FE	43	2	0x12203D0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005001	0x080121F	45	y doubts, feel free<FE>to check in the library!	FE	43	2	0x12203D0	fragment, overlapping pointer	doute, n’hésitez pas<FE>à consulter la bibliothèque !	TRANSLATED
 ODYSSEY-TXT-005002	0x0801B7B	3	a.		2	1	0x0801B74	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005003	0x0802B77	19	Adventurers’ Guild		18	1	0x08008C4	UNKNOWN	Guilde des Aventuriers	TRANSLATED
 ODYSSEY-TXT-005004	0x0802CF0	11	this mode?		10	1	0x0802938	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005005	0x0803652	20	gonist<FE>of our tale.	FE	18	2	0x0802F00	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005005	0x0803652	20	gonist<FE>of our tale.	FE	18	2	0x0802F00	fragment, overlapping pointer	agoniste<FE>de notre histoire.	TRANSLATED
 ODYSSEY-TXT-005006	0x0803674	30	 Now... where did I put THAT?		29	1	0x0802ED8	UNKNOWN	Bon... où ai-je bien pu mettre ÇA ?	TRANSLATED
-ODYSSEY-TXT-005007	0x08036B8	43	worried too!<FB>Just let me grab what’s left.	FB	41	1	0x0802F4C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005007	0x08036B8	43	worried too!<FB>Just let me grab what’s left.	FB	41	1	0x0802F4C	fragment, overlapping pointer	inquiet aussi !<FB>Laisse-moi juste récupérer ce qu’il reste.	TRANSLATED
 ODYSSEY-TXT-005008	0x0803701	3	n!		2	1	0x0705C68	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005009	0x0803C7F	17	Nope. Nothing...		16	1	0x0803BDC	UNKNOWN	Non. Rien...	TRANSLATED
 ODYSSEY-TXT-005010	0x0804434	35	Credo fossero ancora terrorizzati.		34	1	0x08043DC,0x080446C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005011	0x080683A	12	Krabby Club		11	1	0x0803A6C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005012	0x0806BAA	30	Third Stratum:<FE>Magmatic Caves	FE	28	2	0x0803F64,0x0803F6C,0x0805944,0x080594C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005013	0x0807093	15	oor is locked.		14	1	0x0806F38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005014	0x08070EB	12	Brigit Farm		11	1	0x0807080	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005011	0x080683A	12	Krabby Club		11	1	0x0803A6C	UNKNOWN	Club Krabby	TRANSLATED
+ODYSSEY-TXT-005012	0x0806BAA	30	Third Stratum:<FE>Magmatic Caves	FE	28	2	0x0803F64,0x0803F6C,0x0805944,0x080594C	UNKNOWN	Troisième Strate :<FE>Grottes Magmatiques	TRANSLATED
+ODYSSEY-TXT-005013	0x0807093	15	oor is locked.		14	1	0x0806F38	fragment, overlapping pointer	porte est verrouillée.	TRANSLATED
+ODYSSEY-TXT-005014	0x08070EB	12	Brigit Farm		11	1	0x0807080	UNKNOWN	Ferme de Brigit	TRANSLATED
 ODYSSEY-TXT-005015	0x0807910	5	nto.		4	1	0x08075CC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005016	0x0807A48	24	 vai, razza<FE>di stupido!	FE	22	2	0x0119698,0x01197EC	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005017	0x0808D54	49	Fibernia, a small island<FE>in the sea of Galazeah.	FE	47	2	0x08005E4	UNKNOWN	Fibernia, une petite île<FE>dans la mer de Galazeah.	TRANSLATED
@@ -5024,16 +5024,16 @@ ODYSSEY-TXT-005022	0x080D8BE	27	<FE>di trovarne uno migliore?	FE	25	2	0x10B4140	
 ODYSSEY-TXT-005023	0x080DDC4	38	:sigh: I’m still not strong<FE>enough...	FE	36	2	0x1368A74	UNKNOWN	:soupir: Je ne suis toujours<FE>pas assez fort...	TRANSLATED
 ODYSSEY-TXT-005024	0x080E296	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x0809040	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
 ODYSSEY-TXT-005025	0x0810F6F	23	I can’t feel my hands.		22	1	0x0810F00	UNKNOWN	Je ne sens plus mes mains.	TRANSLATED
-ODYSSEY-TXT-005026	0x0811100	57	g here<FE>since I was young.<FB>I won’t stop now that I’m old!	FB;FE	54	2	0x0CB97E8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005026	0x0811100	57	g here<FE>since I was young.<FB>I won’t stop now that I’m old!	FB;FE	54	2	0x0CB97E8	fragment, overlapping pointer	je viens ici<FE>depuis que je suis jeune.<FB>Je n’arrêterai pas maintenant que je suis vieux !	TRANSLATED
 ODYSSEY-TXT-005027	0x081471F	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x080000C	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
 ODYSSEY-TXT-005028	0x0814FEF	27	I think I got sunstroke...		26	1	0x0814F94	UNKNOWN	Je crois que j’ai eu une insolation...	TRANSLATED
 ODYSSEY-TXT-005029	0x0815692	40	But I lost my girlfriend<FE>while writing.	FE	38	2	0x08151DC	UNKNOWN	Mais j’ai perdu ma petite amie<FE>en écrivant.	TRANSLATED
 ODYSSEY-TXT-005030	0x0816881	10	, opened.		9	1	0x0459C24	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005031	0x08171E2	12	So tired...		11	1	0x081719C	UNKNOWN	Si fatigué...	TRANSLATED
 ODYSSEY-TXT-005032	0x0817BFE	10	Vitamins.		9	1	0x0817BC4	UNKNOWN	Vitamines.	TRANSLATED
-ODYSSEY-TXT-005033	0x0817EC3	78	ut.<FB>If you want to try too<FE>you just have to dig<FA>where the green crystals are.	FA;FB;FE	74	2	0x061E094	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005034	0x0818008	16	e door is open.		15	1	0x0E3EE50,0x0E3EFEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005035	0x0818088	53	find the thief first.<FE>He should be hiding somewhere.	FE	51	2	0x0E4264C,0x0E42848,0x0E454A8,0x0E456A4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005033	0x0817EC3	78	ut.<FB>If you want to try too<FE>you just have to dig<FA>where the green crystals are.	FA;FB;FE	74	2	0x061E094	fragment, overlapping pointer	essayer aussi,<FB>il vous suffit de creuser<FE>là où se trouvent<FA>les cristaux verts.	TRANSLATED
+ODYSSEY-TXT-005034	0x0818008	16	e door is open.		15	1	0x0E3EE50,0x0E3EFEC	fragment, overlapping pointer	porte est ouverte.	TRANSLATED
+ODYSSEY-TXT-005035	0x0818088	53	find the thief first.<FE>He should be hiding somewhere.	FE	51	2	0x0E4264C,0x0E42848,0x0E454A8,0x0E456A4	fragment, overlapping pointer	dois d’abord trouver le voleur.<FE>Il doit se cacher quelque part.	TRANSLATED
 ODYSSEY-TXT-005036	0x0818B41	12	Whatever...		11	1	0x0817600	UNKNOWN	Peu importe...	TRANSLATED
 ODYSSEY-TXT-005037	0x0818DB8	30	Brody is going to be furious.		29	1	0x0818D28	UNKNOWN	Brody va être furieux.	TRANSLATED
 ODYSSEY-TXT-005038	0x08195DF	26	You’ve been digging hard.		25	1	0x0806FA0	UNKNOWN	Vous avez creusé dur.	TRANSLATED
@@ -5048,7 +5048,7 @@ ODYSSEY-TXT-005046	0x081F405	3	C.		2	1	0x081F3E8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005047	0x08201F2	48	- TM Dispenser -<FE>Select the TM you want to buy.	FE	46	2	0x0811A20	UNKNOWN	- Distributeur de CT -<FE>Choisissez la CT que vous voulez acheter.	TRANSLATED
 ODYSSEY-TXT-005048	0x082024E	26	You already have this TM.		25	1	0x0811AD8	UNKNOWN	Vous avez déjà cette CT.	TRANSLATED
 ODYSSEY-TXT-005049	0x0820259	15	 have this TM.		14	1	0x081FAD4	fragment, overlapping pointer	avez déjà cette CT.	TRANSLATED
-ODYSSEY-TXT-005050	0x0820B73	76	ent nickname.<FB>But, would you like me to give it<FE>a nicer name? How about it?	FB;FE	73	2	0x0705854	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005050	0x0820B73	76	ent nickname.<FB>But, would you like me to give it<FE>a nicer name? How about it?	FB;FE	73	2	0x0705854	fragment, overlapping pointer	surnom actuel.<FB>Mais, voulez-vous que je lui donne<FE>un nom plus joli ? Qu’en dites-vous ?	TRANSLATED
 ODYSSEY-TXT-005051	0x0820CBF	14	f the forest.		13	1	0x102DDFC	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005052	0x0821855	40	h wow! Thanks a bunch!<FE>As I promised...	FE	38	2	0x121EB2C	UNKNOWN	ah, waouh ! Merci beaucoup !<FE>Comme promis...	TRANSLATED
 ODYSSEY-TXT-005053	0x0821E17	50	rty<FE>is full.<FB>Come back when you have enough<FE>room!	FB;FE	46	3	0x1AFB4E8	fragment, overlapping pointer	équipe<FE>est complète.<FB>Revenez quand vous aurez assez<FE>de place !	TRANSLATED
@@ -5072,11 +5072,11 @@ ODYSSEY-TXT-005070	0x0828882	39	No powers awakened.<FE>Only a headache...	FE	37	
 ODYSSEY-TXT-005071	0x0828A39	25	I need that Burn Heal...		24	1	0x08289E8	UNKNOWN	J’ai besoin de cet Anti-Brûle...	TRANSLATED
 ODYSSEY-TXT-005072	0x08295BF	38	d,<FA>I managed to translate part of it.	FA	36	1	0x0829118	fragment, overlapping pointer	j’ai réussi à en<FA>traduire une partie.	TRANSLATED
 ODYSSEY-TXT-005073	0x08296B7	21	uls to... something.		20	1	0x0828FB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005074	0x08296FE	54	ms I can’t decipher,<FA>but it likely refers to a deity.	FA	52	1	0x08290A0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005074	0x08296FE	54	ms I can’t decipher,<FA>but it likely refers to a deity.	FA	52	1	0x08290A0	fragment, overlapping pointer	que je n’arrive pas à déchiffrer,<FA>mais cela fait sans doute référence à une divinité.	TRANSLATED
 ODYSSEY-TXT-005075	0x082985A	12	r research!		11	1	0x0828F60	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005076	0x082A665	16	u falling down!		15	1	0x0829D98	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005077	0x082A917	17	t,<FA>would it not?	FA	15	1	0x0829F5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005078	0x082A94C	38	’t matter.<FB>Do you remember your name?	FB	36	1	0x0829F14	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005078	0x082A94C	38	’t matter.<FB>Do you remember your name?	FB	36	1	0x0829F14	fragment, overlapping pointer	importe.<FB>Tu te souviens de ton nom ?	TRANSLATED
 ODYSSEY-TXT-005079	0x082AA47	32	Good morning.<FE>Had a good sleep?	FE	30	2	0x0829CBC	UNKNOWN	Bonjour.<FE>Bien dormi ?	TRANSLATED
 ODYSSEY-TXT-005080	0x082AC3D	9	hat the-		8	1	0x0829E5C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005081	0x082B5E6	25	Not bad, really not bad!		24	1	0x082B5CC,0x082B5DC,0x1ABABC8	UNKNOWN	Pas mal, vraiment pas mal !	TRANSLATED
@@ -5090,10 +5090,10 @@ ODYSSEY-TXT-005088	0x082FC7E	18	The gem vanished!		17	1	0x082EEA8	UNKNOWN	Le joy
 ODYSSEY-TXT-005089	0x083283E	34	A red gem appeared on the pillar!		33	1	0x082FC94	UNKNOWN	Un joyau rouge est apparu sur le pilier !	TRANSLATED
 ODYSSEY-TXT-005090	0x0832865	24	You pressed the button.		23	1	0x082BA1C	UNKNOWN	Vous avez appuyé sur le bouton.	TRANSLATED
 ODYSSEY-TXT-005091	0x0833001	13	Aqua Resort.		12	1	0x08280A4	UNKNOWN	Station Aqua.	TRANSLATED
-ODYSSEY-TXT-005092	0x083363A	22	na be a fast journey.		21	1	0x0833470	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005092	0x083363A	22	na be a fast journey.		21	1	0x0833470	fragment, overlapping pointer	va être un voyage rapide.	TRANSLATED
 ODYSSEY-TXT-005093	0x083445E	143	I have even<FE>more questions than before now.<FB>There was an entire world<FE>I didn’t know about.<FB>Gods, alien species... My head<FE>is about to explode.	FB;FE	137	4	0x0718BDC	UNKNOWN	J’ai encore plus de questions<FE>qu’avant, maintenant.<FB>Il y avait tout un monde<FE>que je ne connaissais pas.<FB>Des dieux, des espèces extraterrestres...<FE>J’ai la tête qui va exploser.	TRANSLATED
-ODYSSEY-TXT-005094	0x0835D60	44	come much stronger<FE>since our first meeting!	FE	42	2	0x08354D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005095	0x0835D6D	31	onger<FE>since our first meeting!	FE	29	2	0x08354C0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005094	0x0835D60	44	come much stronger<FE>since our first meeting!	FE	42	2	0x08354D4	fragment, overlapping pointer	devenu bien plus fort<FE>depuis notre première rencontre !	TRANSLATED
+ODYSSEY-TXT-005095	0x0835D6D	31	onger<FE>since our first meeting!	FE	29	2	0x08354C0	fragment, overlapping pointer	fort<FE>depuis notre première rencontre !	TRANSLATED
 ODYSSEY-TXT-005096	0x0836032	24	Runtime error detected-		23	1	0x0836020,0x083602C	UNKNOWN	Erreur d’exécution détectée-	TRANSLATED
 ODYSSEY-TXT-005097	0x0836321	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x082DDA8	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
 ODYSSEY-TXT-005098	0x0837325	47	The button is stuck, you can’t<FE>press it again.	FE	45	2	0x083731C	UNKNOWN	Le bouton est coincé, vous ne<FE>pouvez pas appuyer à nouveau.	TRANSLATED
@@ -5104,178 +5104,178 @@ ODYSSEY-TXT-005102	0x083A5A2	33	Wait wait wait!<FE>Lemme try again!	FE	31	2	0x08
 ODYSSEY-TXT-005103	0x083A82F	22	...Maybe I lost them.		21	1	0x083A7B8	UNKNOWN	...Je les ai peut-être perdus.	TRANSLATED
 ODYSSEY-TXT-005104	0x083AA8B	39	Oh yes, I just needed<FE>a good defeat...	FE	37	2	0x083AA28	UNKNOWN	Oh oui, j’avais juste besoin<FE>d’une bonne défaite...	TRANSLATED
 ODYSSEY-TXT-005105	0x083C229	66	Quest Log: open.<FB>Current objective:<FE>Reach the ceremonial chamber.	FB;FE	63	2	0x083C220	UNKNOWN	Journal de quête : ouvert.<FB>Objectif actuel :<FE>Atteindre la chambre cérémonielle.	TRANSLATED
-ODYSSEY-TXT-005106	0x083C239	50	<FB>Current objective:<FE>Reach the ceremonial chamber.	FB;FE	47	2	0x083C0B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005107	0x083C8A9	62	Quest Log: open.<FB>Current objective:<FE>Find the Thieves Hideout.	FB;FE	59	2	0x083C8A0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005106	0x083C239	50	<FB>Current objective:<FE>Reach the ceremonial chamber.	FB;FE	47	2	0x083C0B4	fragment, overlapping pointer	<FB>Objectif actuel :<FE>Atteindre la chambre cérémonielle.	TRANSLATED
+ODYSSEY-TXT-005107	0x083C8A9	62	Quest Log: open.<FB>Current objective:<FE>Find the Thieves Hideout.	FB;FE	59	2	0x083C8A0	UNKNOWN	Journal de quête : ouvert.<FB>Objectif actuel :<FE>Trouver la cachette des voleurs.	TRANSLATED
 ODYSSEY-TXT-005108	0x083F25D	7	h him.		6	1	0x083E57C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005109	0x083F2BE	12	d, but who?		11	1	0x083E514	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005110	0x083F429	16	 talking to me?		15	1	0x083E48C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005111	0x083F42C	13	lking to me?		12	1	0x083E46C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005112	0x083FD11	21	o made me do that...		20	1	0x083F750	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005113	0x083FD14	18	ade me do that...		17	1	0x083F704	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005114	0x0840D7E	27	body’s here, that’s weird.		26	1	0x0840960	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005114	0x0840D7E	27	body’s here, that’s weird.		26	1	0x0840960	fragment, overlapping pointer	personne ici, c’est bizarre.	TRANSLATED
 ODYSSEY-TXT-005115	0x084703F	11	all we do?		10	1	0x0844778,0x0844894	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005116	0x084740A	26	You’ve been digging hard.		25	1	0x0801B04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005117	0x08482BC	37	My power... Why can’t I<FE>control it!?	FE	35	2	0x08844B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005118	0x084CC55	139	repeat the riddle?<FB>No problem!<FB>”From the peak of the Sun<FE>to the splendor of the Moon,<FA>this seal will hide<FA>the true essence of this crypt.”	FA;FB;FE	133	2	0x0E73494	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005119	0x084D1DF	34	A red gem appeared on the pillar!		33	1	0x084D0B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005120	0x084D206	24	You pressed the button.		23	1	0x084D064	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005121	0x0853FDD	41	A secret passage opened<FE>in front of you!	FE	39	2	0x0853FD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005122	0x0854FE1	181	There’s a sheet attached<FE>to the stele:<FB>”Every first day of frost<FE>we offer as a gift to our Lord<FA>the soul of a chosen one,<FA>so that -------- can feed on it<FA>and recover its strength.”	FA;FB;FE	174	3	0x0D888C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005123	0x08551E2	222	There’s a sheet attached<FE>to the stele:<FB>”Among our kind, hierarchy<FE>is not inherited, but earned<FA>through strength alone.<FB>The four most valiant are bestowed<FE>the title of General, serving<FA>directly beneath the king’s command.”	FA;FB;FE	214	4	0x081CD38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005124	0x0855887	48	There are spare parts, scrap<FE>and various tools.	FE	46	2	0x084B74C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005116	0x084740A	26	You’ve been digging hard.		25	1	0x0801B04	UNKNOWN	Vous avez creusé dur.	TRANSLATED
+ODYSSEY-TXT-005117	0x08482BC	37	My power... Why can’t I<FE>control it!?	FE	35	2	0x08844B8	UNKNOWN	Mon pouvoir... Pourquoi je<FE>n’arrive pas à le contrôler ?!	TRANSLATED
+ODYSSEY-TXT-005118	0x084CC55	139	repeat the riddle?<FB>No problem!<FB>”From the peak of the Sun<FE>to the splendor of the Moon,<FA>this seal will hide<FA>the true essence of this crypt.”	FA;FB;FE	133	2	0x0E73494	UNKNOWN	Répéter l’énigme ?<FB>Aucun problème !<FB>“Du sommet du Soleil<FE>à la splendeur de la Lune,<FA>ce sceau dissimulera<FA>la véritable essence de cette crypte.”	TRANSLATED
+ODYSSEY-TXT-005119	0x084D1DF	34	A red gem appeared on the pillar!		33	1	0x084D0B0	UNKNOWN	Un joyau rouge est apparu sur le pilier !	TRANSLATED
+ODYSSEY-TXT-005120	0x084D206	24	You pressed the button.		23	1	0x084D064	UNKNOWN	Vous avez appuyé sur le bouton.	TRANSLATED
+ODYSSEY-TXT-005121	0x0853FDD	41	A secret passage opened<FE>in front of you!	FE	39	2	0x0853FD4	UNKNOWN	Un passage secret s’est ouvert<FE>devant vous !	TRANSLATED
+ODYSSEY-TXT-005122	0x0854FE1	181	There’s a sheet attached<FE>to the stele:<FB>”Every first day of frost<FE>we offer as a gift to our Lord<FA>the soul of a chosen one,<FA>so that -------- can feed on it<FA>and recover its strength.”	FA;FB;FE	174	3	0x0D888C8	UNKNOWN	Une feuille est attachée<FE>à la stèle :<FB>“Chaque premier jour de gel,<FE>nous offrons en cadeau à notre Seigneur<FA>l’âme d’un élu,<FA>afin que -------- puisse s’en nourrir<FA>et recouvrer ses forces.”	TRANSLATED
+ODYSSEY-TXT-005123	0x08551E2	222	There’s a sheet attached<FE>to the stele:<FB>”Among our kind, hierarchy<FE>is not inherited, but earned<FA>through strength alone.<FB>The four most valiant are bestowed<FE>the title of General, serving<FA>directly beneath the king’s command.”	FA;FB;FE	214	4	0x081CD38	UNKNOWN	Une feuille est attachée<FE>à la stèle :<FB>“Chez les nôtres, la hiérarchie<FE>ne s’hérite pas, elle se mérite<FA>par la seule force.<FB>Les quatre plus vaillants reçoivent<FE>le titre de Général, servant<FA>directement sous les ordres du roi.”	TRANSLATED
+ODYSSEY-TXT-005124	0x0855887	48	There are spare parts, scrap<FE>and various tools.	FE	46	2	0x084B74C	UNKNOWN	Il y a des pièces détachées, de la<FE>ferraille et divers outils.	TRANSLATED
 ODYSSEY-TXT-005125	0x0857D96	8	Yarr...		7	1	0x0857D7C,0x0857D8C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005126	0x085A0CB	62	This piece of furniture<FE>costs 6.000 $.<FB>Do you want to buy it?	FB;FE	59	2	0x085A068	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005127	0x085A34A	62	This piece of furniture<FE>costs 8.000 $.<FB>Do you want to buy it?	FB;FE	59	2	0x085A2A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005128	0x085A560	29	You don’t have enough money.		28	1	0x085A554	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005129	0x085B77F	51	There’s something at the bottom<FE>of the fountain...	FE	49	2	0x085B698,0x085B6EC,0x085B740	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005130	0x085BD70	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x085BC7C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005131	0x085C181	20	The lever is stuck.		19	1	0x085C178	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005132	0x085C5ED	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x085C4EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005133	0x085C7BD	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x085C6BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005134	0x085CA17	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x085C7F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005135	0x086000F	40	 Oh, I’m sorry<FE>your friends perished...	FE	38	2	0x0860648	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005136	0x08600D1	53	st...<FB>Mindless machines built<FE>to kill our enemies...	FB;FE	50	2	0x0C75CF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005137	0x0860F14	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x0860E2C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005138	0x0860F3A	20	The lever is stuck.		19	1	0x0860F0C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005139	0x0865258	41	It seems you’re still<FE>out of my reach...	FE	39	2	0x0864F10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005140	0x0865ED8	81	You can feel an ominous presence<FE>in the next room.<FB>Do you still want to proceed?	FB;FE	78	2	0x0865EAC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005141	0x0868608	56	There’s someone up ahead.<FB>Do you still want to proceed?	FB	54	1	0x08682DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005142	0x0868886	56	 Sorry, I must have<FE>heard you wrong.<FB>Who are you again?	FB;FE	53	2	0x0E37B90	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005143	0x0869BBB	44	Strange marks are engraved<FE>on this stele...	FE	42	2	0x0869ACC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005144	0x086A150	10	Holy Cow!		9	1	0x1FC4050	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005145	0x086A160	42	Trade Miltank to the boy<FE>in Talrega Farm.	FE	40	2	0x1FC4054	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005126	0x085A0CB	62	This piece of furniture<FE>costs 6.000 $.<FB>Do you want to buy it?	FB;FE	59	2	0x085A068	UNKNOWN	Ce meuble coûte<FE>6 000 $.<FB>Voulez-vous l’acheter ?	TRANSLATED
+ODYSSEY-TXT-005127	0x085A34A	62	This piece of furniture<FE>costs 8.000 $.<FB>Do you want to buy it?	FB;FE	59	2	0x085A2A8	UNKNOWN	Ce meuble coûte<FE>8 000 $.<FB>Voulez-vous l’acheter ?	TRANSLATED
+ODYSSEY-TXT-005128	0x085A560	29	You don’t have enough money.		28	1	0x085A554	UNKNOWN	Vous n’avez pas assez d’argent.	TRANSLATED
+ODYSSEY-TXT-005129	0x085B77F	51	There’s something at the bottom<FE>of the fountain...	FE	49	2	0x085B698,0x085B6EC,0x085B740	UNKNOWN	Il y a quelque chose au fond<FE>de la fontaine...	TRANSLATED
+ODYSSEY-TXT-005130	0x085BD70	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x085BC7C	UNKNOWN	C’est un levier.<FE>Voulez-vous le tirer ?	TRANSLATED
+ODYSSEY-TXT-005131	0x085C181	20	The lever is stuck.		19	1	0x085C178	UNKNOWN	Le levier est coincé.	TRANSLATED
+ODYSSEY-TXT-005132	0x085C5ED	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x085C4EC	UNKNOWN	C’est un levier.<FE>Voulez-vous le tirer ?	TRANSLATED
+ODYSSEY-TXT-005133	0x085C7BD	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x085C6BC	UNKNOWN	C’est un levier.<FE>Voulez-vous le tirer ?	TRANSLATED
+ODYSSEY-TXT-005134	0x085CA17	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x085C7F0	UNKNOWN	C’est un levier.<FE>Voulez-vous le tirer ?	TRANSLATED
+ODYSSEY-TXT-005135	0x086000F	40	 Oh, I’m sorry<FE>your friends perished...	FE	38	2	0x0860648	fragment, overlapping pointer	Oh, je suis désolé<FE>que vos amis aient péri...	TRANSLATED
+ODYSSEY-TXT-005136	0x08600D1	53	st...<FB>Mindless machines built<FE>to kill our enemies...	FB;FE	50	2	0x0C75CF4	fragment, overlapping pointer	eurs...<FB>Des machines sans esprit, conçues<FE>pour tuer nos ennemis...	TRANSLATED
+ODYSSEY-TXT-005137	0x0860F14	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x0860E2C	UNKNOWN	C’est un levier.<FE>Voulez-vous le tirer ?	TRANSLATED
+ODYSSEY-TXT-005138	0x0860F3A	20	The lever is stuck.		19	1	0x0860F0C	UNKNOWN	Le levier est coincé.	TRANSLATED
+ODYSSEY-TXT-005139	0x0865258	41	It seems you’re still<FE>out of my reach...	FE	39	2	0x0864F10	UNKNOWN	Il semble que vous soyez encore<FE>hors de ma portée...	TRANSLATED
+ODYSSEY-TXT-005140	0x0865ED8	81	You can feel an ominous presence<FE>in the next room.<FB>Do you still want to proceed?	FB;FE	78	2	0x0865EAC	UNKNOWN	Vous sentez une présence menaçante<FE>dans la pièce suivante.<FB>Voulez-vous quand même continuer ?	TRANSLATED
+ODYSSEY-TXT-005141	0x0868608	56	There’s someone up ahead.<FB>Do you still want to proceed?	FB	54	1	0x08682DC	UNKNOWN	Il y a quelqu’un plus loin.<FB>Voulez-vous quand même continuer ?	TRANSLATED
+ODYSSEY-TXT-005142	0x0868886	56	 Sorry, I must have<FE>heard you wrong.<FB>Who are you again?	FB;FE	53	2	0x0E37B90	fragment, overlapping pointer	Désolé, j’ai dû<FE>mal vous entendre.<FB>Qui êtes-vous déjà ?	TRANSLATED
+ODYSSEY-TXT-005143	0x0869BBB	44	Strange marks are engraved<FE>on this stele...	FE	42	2	0x0869ACC	UNKNOWN	D’étranges marques sont gravées<FE>sur cette stèle...	TRANSLATED
+ODYSSEY-TXT-005144	0x086A150	10	Holy Cow!		9	1	0x1FC4050	UNKNOWN	Sacrée vache !	TRANSLATED
+ODYSSEY-TXT-005145	0x086A160	42	Trade Miltank to the boy<FE>in Talrega Farm.	FE	40	2	0x1FC4054	UNKNOWN	Échangez une ÉCRÉMEUH avec le garçon<FE>de la Ferme de Talrega.	TRANSLATED
 ODYSSEY-TXT-005146	0x086D100	9	e...<FB>...	FB	7	1	0x106E934	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005147	0x086F281	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x086F26C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005148	0x0870177	86	here are some wooden planks<FE>on the ground.<FB>Do you want to use them<FE>to cover the hole?	FB;FE	82	3	0x0CE1F10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005149	0x087040D	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x087034C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005150	0x087055D	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x087049C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005151	0x08706FA	23	 guess you’re ready...		22	1	0x040ADE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005152	0x0870F80	18	From the Abyss...		17	1	0x1FC4060	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005153	0x0870FA0	63	Search for her boyfriend before<FE>the Sixth Stratum’s base camp.	FE	61	2	0x1FC4064	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005147	0x086F281	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x086F26C	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
+ODYSSEY-TXT-005148	0x0870177	86	here are some wooden planks<FE>on the ground.<FB>Do you want to use them<FE>to cover the hole?	FB;FE	82	3	0x0CE1F10	fragment, overlapping pointer	y a des planches de bois<FE>au sol.<FB>Voulez-vous les utiliser<FE>pour couvrir le trou ?	TRANSLATED
+ODYSSEY-TXT-005149	0x087040D	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x087034C	UNKNOWN	C’est un levier.<FE>Voulez-vous le tirer ?	TRANSLATED
+ODYSSEY-TXT-005150	0x087055D	38	It’s a lever.<FE>Do you want to pull it?	FE	36	2	0x087049C	UNKNOWN	C’est un levier.<FE>Voulez-vous le tirer ?	TRANSLATED
+ODYSSEY-TXT-005151	0x08706FA	23	 guess you’re ready...		22	1	0x040ADE0	fragment, overlapping pointer	Je suppose que vous êtes prêt...	TRANSLATED
+ODYSSEY-TXT-005152	0x0870F80	18	From the Abyss...		17	1	0x1FC4060	UNKNOWN	Depuis les Abysses...	TRANSLATED
+ODYSSEY-TXT-005153	0x0870FA0	63	Search for her boyfriend before<FE>the Sixth Stratum’s base camp.	FE	61	2	0x1FC4064	UNKNOWN	Cherchez son petit ami avant<FE>le camp de base de la Sixième Strate.	TRANSLATED
 ODYSSEY-TXT-005154	0x0873218	3	u?		2	1	0x0D23DB8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005155	0x0876607	49	 anyone asks for me,<FE>tell them I’ve been killed.	FE	47	2	0x0D10A94	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005155	0x0876607	49	 anyone asks for me,<FE>tell them I’ve been killed.	FE	47	2	0x0D10A94	fragment, overlapping pointer	Si quelqu’un demande après moi,<FE>dites-lui que j’ai été tué.	TRANSLATED
 ODYSSEY-TXT-005156	0x0876766	11	e right...		10	1	0x0E69680	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005157	0x0877840	26	You decided to step back.		25	1	0x0876D68,0x088A378	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005158	0x0877A50	44	et.<FB>The ones you should be<FE>aiming at are...	FB;FE	41	2	0x011AC04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005159	0x0878AA1	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x08777F4,0x088A3C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005160	0x087CFDB	56	There’s someone up ahead.<FE>Do you still want to proceed?	FE	54	2	0x087CA1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005161	0x087D178	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D154	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005162	0x087D218	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D1F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005163	0x087D2B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D294	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005164	0x087D358	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D334	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005165	0x087D3F8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D3D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005166	0x087D4CE	12	It’s empty.		11	1	0x087D4C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005167	0x087D52E	12	It’s empty.		11	1	0x087D524	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005168	0x087D5A8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D584	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005169	0x087D6E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D6C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005170	0x087D828	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D804	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005171	0x087D8C8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D8A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005172	0x087D968	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D944	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005173	0x087DA08	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D9E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005174	0x087DAA8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DA84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005175	0x087DB48	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DB24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005176	0x087DC1E	12	It’s empty.		11	1	0x087DC14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005177	0x087DC6E	12	It’s empty.		11	1	0x087DC64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005178	0x087DCE8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DCC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005179	0x087DE18	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DDF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005180	0x087DEB8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DE94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005181	0x087DF58	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DF34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005182	0x087DFCE	12	It’s empty.		11	1	0x087DFC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005183	0x087E01E	12	It’s empty.		11	1	0x087E014	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005184	0x087E075	17	Obtained 4.000$!		16	1	0x087E058	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005185	0x087E0E5	17	Obtained 6.000$!		16	1	0x087E0C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005186	0x087E1A8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E184	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005187	0x087E248	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E224	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005188	0x087E2E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E2C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005189	0x087E3E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E3C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005190	0x087E488	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E464	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005191	0x087E528	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E504	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005192	0x087E59E	12	It’s empty.		11	1	0x087E594	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005193	0x087E5EE	12	It’s empty.		11	1	0x087E5E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005194	0x087E668	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E644	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005195	0x087E725	17	Obtained 4.000$!		16	1	0x087E708	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005196	0x087E795	17	Obtained 5.000$!		16	1	0x087E778	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005197	0x087E805	17	Obtained 4.000$!		16	1	0x087E7E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005198	0x087E8B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E894	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005199	0x087E958	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E934	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005200	0x087EA58	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087EA34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005201	0x087EACE	12	It’s empty.		11	1	0x087EAC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005202	0x087EB48	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087EB24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005203	0x087EBE8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087EBC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005204	0x087EC88	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087EC64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005205	0x087F1DB	56	There’s someone up ahead.<FB>Do you still want<FE>to proceed?	FB;FE	53	2	0x131DACC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005206	0x087F34A	26	You decided to step back.		25	1	0x087F18C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005207	0x087F367	42	Do you want to skip<FE>the current cutscene?	FE	40	2	0x087F1A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005208	0x087F448	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F424	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005209	0x087F4E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F4C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005210	0x087F588	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F564	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005211	0x087F62E	12	It’s empty.		11	1	0x087F624	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005212	0x087F6A8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F684	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005213	0x087F71E	12	It’s empty.		11	1	0x087F714	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005214	0x087F7B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F794	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005215	0x087F888	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F864	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005216	0x087F8FE	12	It’s empty.		11	1	0x087F8F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005217	0x087F998	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F974	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005218	0x087FA0E	12	It’s empty.		11	1	0x087FA04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005219	0x087FAC8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FAA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005220	0x087FB68	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FB44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005221	0x087FC08	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FBE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005222	0x087FC9E	12	It’s empty.		11	1	0x087FC94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005223	0x087FD18	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FCF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005224	0x087FDC8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FDA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005225	0x087FE88	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FE64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005226	0x087FF38	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FF14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005227	0x0880048	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880024	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005228	0x08800CE	12	It’s empty.		11	1	0x08800C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005229	0x0880178	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880154	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005230	0x0880180	30	not enough space<FE>in your bag.	FE	28	2	0x0E29764	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005231	0x0880218	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08801F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005232	0x088028E	12	It’s empty.		11	1	0x0880284	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005233	0x0880318	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08802F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005234	0x08803C8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08803A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005235	0x0880478	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880454	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005236	0x088051E	12	It’s empty.		11	1	0x0880514	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005237	0x0880598	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880574	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005238	0x088060E	12	It’s empty.		11	1	0x0880604	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005239	0x0880698	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880674	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005240	0x0880748	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880724	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005241	0x0880805	17	Obtained 9.000$!		16	1	0x08807E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005242	0x0880898	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880874	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005243	0x0880938	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880914	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005244	0x08809AE	12	It’s empty.		11	1	0x08809A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005245	0x0880A0E	12	It’s empty.		11	1	0x0880A04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005246	0x0880A75	18	Obtained 10.000$!		17	1	0x0880A58	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005247	0x0880ED1	56	There’s someone<FE>up ahead.<FB>Do you still want<FE>to proceed?	FB;FE	52	3	0x0880EAC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005248	0x088209E	12	It’s empty.		11	1	0x0882094	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005249	0x0882118	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08820F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005250	0x08821B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882194	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005251	0x088224E	12	It’s empty.		11	1	0x0882244	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005252	0x08822E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08822C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005253	0x088238E	12	It’s empty.		11	1	0x0882384	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005254	0x08823DE	12	It’s empty.		11	1	0x08823D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005255	0x0882458	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882434	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005256	0x0882B88	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882B64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005257	0x0882C4E	12	It’s empty.		11	1	0x0882C44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005258	0x0882C9E	12	It’s empty.		11	1	0x0882C94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005259	0x0882D18	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882CF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005260	0x0882DBE	12	It’s empty.		11	1	0x0882DB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005261	0x0882E38	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882E14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005262	0x0882EB5	18	Obtained 10.000$!		17	1	0x0882E98	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005263	0x0882F68	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882F44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005264	0x0883038	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883014	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005265	0x0883118	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08830F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005266	0x08831B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883194	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005267	0x088322E	12	It’s empty.		11	1	0x0883224	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005268	0x08832A8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883284	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005269	0x0883378	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883354	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005270	0x0883418	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08833F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005271	0x088348E	12	It’s empty.		11	1	0x0883484	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005272	0x0883568	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883544	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005273	0x0883608	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08835E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005274	0x0883685	18	Obtained 13.000$!		17	1	0x0883668	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005275	0x08836F5	18	Obtained 12.000$!		17	1	0x08836D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005276	0x08844C9	42	Do you want to skip<FE>the current cutscene?	FE	40	2	0x088375C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005277	0x088464E	12	It’s empty.		11	1	0x0884644	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005157	0x0877840	26	You decided to step back.		25	1	0x0876D68,0x088A378	UNKNOWN	Vous avez décidé de reculer.	TRANSLATED
+ODYSSEY-TXT-005158	0x0877A50	44	et.<FB>The ones you should be<FE>aiming at are...	FB;FE	41	2	0x011AC04	fragment, overlapping pointer	ça.<FB>Ceux que vous devriez<FE>viser sont...	TRANSLATED
+ODYSSEY-TXT-005159	0x0878AA1	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x08777F4,0x088A3C8	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
+ODYSSEY-TXT-005160	0x087CFDB	56	There’s someone up ahead.<FE>Do you still want to proceed?	FE	54	2	0x087CA1C	UNKNOWN	Il y a quelqu’un plus loin.<FE>Voulez-vous quand même continuer ?	TRANSLATED
+ODYSSEY-TXT-005161	0x087D178	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D154	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005162	0x087D218	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D1F4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005163	0x087D2B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D294	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005164	0x087D358	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D334	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005165	0x087D3F8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D3D4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005166	0x087D4CE	12	It’s empty.		11	1	0x087D4C4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005167	0x087D52E	12	It’s empty.		11	1	0x087D524	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005168	0x087D5A8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D584	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005169	0x087D6E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D6C4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005170	0x087D828	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D804	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005171	0x087D8C8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D8A4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005172	0x087D968	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D944	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005173	0x087DA08	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087D9E4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005174	0x087DAA8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DA84	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005175	0x087DB48	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DB24	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005176	0x087DC1E	12	It’s empty.		11	1	0x087DC14	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005177	0x087DC6E	12	It’s empty.		11	1	0x087DC64	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005178	0x087DCE8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DCC4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005179	0x087DE18	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DDF4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005180	0x087DEB8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DE94	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005181	0x087DF58	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087DF34	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005182	0x087DFCE	12	It’s empty.		11	1	0x087DFC4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005183	0x087E01E	12	It’s empty.		11	1	0x087E014	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005184	0x087E075	17	Obtained 4.000$!		16	1	0x087E058	UNKNOWN	Vous avez obtenu 4.000 $ !	TRANSLATED
+ODYSSEY-TXT-005185	0x087E0E5	17	Obtained 6.000$!		16	1	0x087E0C8	UNKNOWN	Vous avez obtenu 6.000 $ !	TRANSLATED
+ODYSSEY-TXT-005186	0x087E1A8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E184	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005187	0x087E248	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E224	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005188	0x087E2E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E2C4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005189	0x087E3E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E3C4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005190	0x087E488	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E464	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005191	0x087E528	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E504	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005192	0x087E59E	12	It’s empty.		11	1	0x087E594	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005193	0x087E5EE	12	It’s empty.		11	1	0x087E5E4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005194	0x087E668	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E644	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005195	0x087E725	17	Obtained 4.000$!		16	1	0x087E708	UNKNOWN	Vous avez obtenu 4.000 $ !	TRANSLATED
+ODYSSEY-TXT-005196	0x087E795	17	Obtained 5.000$!		16	1	0x087E778	UNKNOWN	Vous avez obtenu 5.000 $ !	TRANSLATED
+ODYSSEY-TXT-005197	0x087E805	17	Obtained 4.000$!		16	1	0x087E7E8	UNKNOWN	Vous avez obtenu 4.000 $ !	TRANSLATED
+ODYSSEY-TXT-005198	0x087E8B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E894	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005199	0x087E958	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087E934	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005200	0x087EA58	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087EA34	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005201	0x087EACE	12	It’s empty.		11	1	0x087EAC4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005202	0x087EB48	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087EB24	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005203	0x087EBE8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087EBC4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005204	0x087EC88	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087EC64	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005205	0x087F1DB	56	There’s someone up ahead.<FB>Do you still want<FE>to proceed?	FB;FE	53	2	0x131DACC	UNKNOWN	Il y a quelqu’un plus loin.<FB>Voulez-vous quand même<FE>continuer ?	TRANSLATED
+ODYSSEY-TXT-005206	0x087F34A	26	You decided to step back.		25	1	0x087F18C	UNKNOWN	Vous avez décidé de reculer.	TRANSLATED
+ODYSSEY-TXT-005207	0x087F367	42	Do you want to skip<FE>the current cutscene?	FE	40	2	0x087F1A0	UNKNOWN	Voulez-vous passer<FE>la cinématique en cours ?	TRANSLATED
+ODYSSEY-TXT-005208	0x087F448	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F424	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005209	0x087F4E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F4C4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005210	0x087F588	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F564	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005211	0x087F62E	12	It’s empty.		11	1	0x087F624	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005212	0x087F6A8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F684	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005213	0x087F71E	12	It’s empty.		11	1	0x087F714	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005214	0x087F7B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F794	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005215	0x087F888	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F864	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005216	0x087F8FE	12	It’s empty.		11	1	0x087F8F4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005217	0x087F998	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087F974	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005218	0x087FA0E	12	It’s empty.		11	1	0x087FA04	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005219	0x087FAC8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FAA4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005220	0x087FB68	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FB44	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005221	0x087FC08	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FBE4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005222	0x087FC9E	12	It’s empty.		11	1	0x087FC94	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005223	0x087FD18	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FCF4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005224	0x087FDC8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FDA4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005225	0x087FE88	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FE64	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005226	0x087FF38	38	There’s not enough space<FE>in your bag.	FE	36	2	0x087FF14	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005227	0x0880048	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880024	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005228	0x08800CE	12	It’s empty.		11	1	0x08800C4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005229	0x0880178	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880154	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005230	0x0880180	30	not enough space<FE>in your bag.	FE	28	2	0x0E29764	UNKNOWN	pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005231	0x0880218	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08801F4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005232	0x088028E	12	It’s empty.		11	1	0x0880284	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005233	0x0880318	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08802F4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005234	0x08803C8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08803A4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005235	0x0880478	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880454	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005236	0x088051E	12	It’s empty.		11	1	0x0880514	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005237	0x0880598	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880574	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005238	0x088060E	12	It’s empty.		11	1	0x0880604	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005239	0x0880698	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880674	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005240	0x0880748	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880724	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005241	0x0880805	17	Obtained 9.000$!		16	1	0x08807E8	UNKNOWN	Vous avez obtenu 9.000 $ !	TRANSLATED
+ODYSSEY-TXT-005242	0x0880898	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880874	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005243	0x0880938	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0880914	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005244	0x08809AE	12	It’s empty.		11	1	0x08809A4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005245	0x0880A0E	12	It’s empty.		11	1	0x0880A04	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005246	0x0880A75	18	Obtained 10.000$!		17	1	0x0880A58	UNKNOWN	Vous avez obtenu 10.000 $ !	TRANSLATED
+ODYSSEY-TXT-005247	0x0880ED1	56	There’s someone<FE>up ahead.<FB>Do you still want<FE>to proceed?	FB;FE	52	3	0x0880EAC	UNKNOWN	Il y a quelqu’un<FE>plus loin.<FB>Voulez-vous quand même<FE>continuer ?	TRANSLATED
+ODYSSEY-TXT-005248	0x088209E	12	It’s empty.		11	1	0x0882094	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005249	0x0882118	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08820F4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005250	0x08821B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882194	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005251	0x088224E	12	It’s empty.		11	1	0x0882244	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005252	0x08822E8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08822C4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005253	0x088238E	12	It’s empty.		11	1	0x0882384	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005254	0x08823DE	12	It’s empty.		11	1	0x08823D4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005255	0x0882458	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882434	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005256	0x0882B88	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882B64	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005257	0x0882C4E	12	It’s empty.		11	1	0x0882C44	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005258	0x0882C9E	12	It’s empty.		11	1	0x0882C94	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005259	0x0882D18	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882CF4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005260	0x0882DBE	12	It’s empty.		11	1	0x0882DB4	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005261	0x0882E38	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882E14	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005262	0x0882EB5	18	Obtained 10.000$!		17	1	0x0882E98	UNKNOWN	Vous avez obtenu 10.000 $ !	TRANSLATED
+ODYSSEY-TXT-005263	0x0882F68	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0882F44	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005264	0x0883038	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883014	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005265	0x0883118	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08830F4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005266	0x08831B8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883194	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005267	0x088322E	12	It’s empty.		11	1	0x0883224	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005268	0x08832A8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883284	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005269	0x0883378	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883354	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005270	0x0883418	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08833F4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005271	0x088348E	12	It’s empty.		11	1	0x0883484	UNKNOWN	C’est vide.	TRANSLATED
+ODYSSEY-TXT-005272	0x0883568	38	There’s not enough space<FE>in your bag.	FE	36	2	0x0883544	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005273	0x0883608	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08835E4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
+ODYSSEY-TXT-005274	0x0883685	18	Obtained 13.000$!		17	1	0x0883668	UNKNOWN	Vous avez obtenu 13.000 $ !	TRANSLATED
+ODYSSEY-TXT-005275	0x08836F5	18	Obtained 12.000$!		17	1	0x08836D8	UNKNOWN	Vous avez obtenu 12.000 $ !	TRANSLATED
+ODYSSEY-TXT-005276	0x08844C9	42	Do you want to skip<FE>the current cutscene?	FE	40	2	0x088375C	UNKNOWN	Voulez-vous passer<FE>la cinématique en cours ?	TRANSLATED
+ODYSSEY-TXT-005277	0x088464E	12	It’s empty.		11	1	0x0884644	UNKNOWN	C’est vide.	TRANSLATED
 ODYSSEY-TXT-005278	0x08846DE	12	It’s empty.		11	1	0x08846D4	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005279	0x088472E	12	It’s empty.		11	1	0x0884724	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005280	0x088477E	12	It’s empty.		11	1	0x0884774	UNKNOWN		UNTRANSLATED
