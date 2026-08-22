@@ -3841,116 +3841,116 @@ ODYSSEY-TXT-003839	0x041DF92	7	COPPER		6	1	0x03C6ABC	medal label	CUIVRE	TRANSLAT
 ODYSSEY-TXT-003840	0x041DF99	7	SILVER		6	1	0x03C6AC0	medal label	ARGENT	TRANSLATED
 ODYSSEY-TXT-003841	0x041DFA0	5	GOLD		4	1	0x03C6AC4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003842	0x041DFA5	7	<F8> NEXT	F8	5	1	0x012BC7C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-003843	0x041DFE6	8	TRAINER		7	1	0x03EDF9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003844	0x041DFEE	7	STATUS		6	1	0x03EDFA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003845	0x041DFF5	7	BATTLE		6	1	0x03EDFA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003846	0x041DFFC	10	GREETINGS		9	1	0x03EDFA8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003847	0x041E006	7	PEOPLE		6	1	0x03EDFAC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003848	0x041E00D	7	VOICES		6	1	0x03EDFB0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003849	0x041E014	7	SPEECH		6	1	0x03EDFB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003850	0x041E01B	8	ENDINGS		7	1	0x03EDFB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003851	0x041E023	9	FEELINGS		8	1	0x03EDFBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003852	0x041E02C	11	CONDITIONS		10	1	0x03EDFC0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003853	0x041E037	8	ACTIONS		7	1	0x03EDFC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003854	0x041E03F	10	LIFESTYLE		9	1	0x03EDFC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003855	0x041E049	8	HOBBIES		7	1	0x03EDFCC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003843	0x041DFE6	8	TRAINER		7	1	0x03EDF9C	EasyChat category	DRESSEUR	TRANSLATED
+ODYSSEY-TXT-003844	0x041DFEE	7	STATUS		6	1	0x03EDFA0	EasyChat category	STATUT	TRANSLATED
+ODYSSEY-TXT-003845	0x041DFF5	7	BATTLE		6	1	0x03EDFA4	EasyChat category	COMBAT	TRANSLATED
+ODYSSEY-TXT-003846	0x041DFFC	10	GREETINGS		9	1	0x03EDFA8	EasyChat category	SALUTATIONS	TRANSLATED
+ODYSSEY-TXT-003847	0x041E006	7	PEOPLE		6	1	0x03EDFAC	EasyChat category	GENS	TRANSLATED
+ODYSSEY-TXT-003848	0x041E00D	7	VOICES		6	1	0x03EDFB0	EasyChat category	VOIX	TRANSLATED
+ODYSSEY-TXT-003849	0x041E014	7	SPEECH		6	1	0x03EDFB4	EasyChat category	DISCOURS	TRANSLATED
+ODYSSEY-TXT-003850	0x041E01B	8	ENDINGS		7	1	0x03EDFB8	EasyChat category	FINS	TRANSLATED
+ODYSSEY-TXT-003851	0x041E023	9	FEELINGS		8	1	0x03EDFBC	EasyChat category	SENTIMENTS	TRANSLATED
+ODYSSEY-TXT-003852	0x041E02C	11	CONDITIONS		10	1	0x03EDFC0	EasyChat category	CONDITIONS	TRANSLATED
+ODYSSEY-TXT-003853	0x041E037	8	ACTIONS		7	1	0x03EDFC4	EasyChat category	ACTIONS	TRANSLATED
+ODYSSEY-TXT-003854	0x041E03F	10	LIFESTYLE		9	1	0x03EDFC8	EasyChat category	MODE DE VIE	TRANSLATED
+ODYSSEY-TXT-003855	0x041E049	8	HOBBIES		7	1	0x03EDFCC	EasyChat category	PASSE-TEMPS	TRANSLATED
 ODYSSEY-TXT-003856	0x041E051	5	TIME		4	1	0x03EDFD0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003857	0x041E056	6	MISC.		5	1	0x03EDFD4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-003858	0x041E05C	11	ADJECTIVES		10	1	0x03EDFD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003859	0x041E067	7	EVENTS		6	1	0x03EDFDC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003858	0x041E05C	11	ADJECTIVES		10	1	0x03EDFD8	EasyChat category	ADJECTIFS	TRANSLATED
+ODYSSEY-TXT-003859	0x041E067	7	EVENTS		6	1	0x03EDFDC	EasyChat category	ÉVÉNEMENTS	TRANSLATED
 ODYSSEY-TXT-003860	0x041E06E	7	MOVE 1		6	1	0x03EDFE0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003861	0x041E075	7	MOVE 2		6	1	0x03EDFE4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-003862	0x041E07C	14	TRENDY SAYING		13	1	0x03EDFE8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003863	0x041E0B9	7	CANCEL		6	1	0x0261ECC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003864	0x041E0D2	8	SUMMARY		7	1	0x0261ED4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003865	0x041E0DA	6	TRADE		5	1	0x0261ED8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003866	0x041E0E0	14	Cancel trade?		13	1	0x0261EDC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003867	0x041E0EE	28	Press the B Button to exit.		27	1	0x0261EE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003868	0x041E10A	8	SUMMARY		7	1	0x0261EE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003869	0x041E112	6	TRADE		5	1	0x0261EEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003870	0x041E1E9	23	<FD:03> will be<FE>sent to <FD:02>.	FD;FE	17	2	0x00514B0,0x00528A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003871	0x041E200	13	Bye-bye, <FD:03>!	FD	10	1	0x0051528,0x0052918	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003872	0x041E20D	17	<FD:02> sent over <FD:04>.	FD	12	1	0x0052158,0x00535B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003873	0x041E21E	22	Take good care of <FD:04>!	FD	19	1	0x00521FC,0x0053658	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003862	0x041E07C	14	TRENDY SAYING		13	1	0x03EDFE8	EasyChat category	EXPRESSION TENDANCE	TRANSLATED
+ODYSSEY-TXT-003863	0x041E0B9	7	CANCEL		6	1	0x0261ECC	UI	ANNULER	TRANSLATED
+ODYSSEY-TXT-003864	0x041E0D2	8	SUMMARY		7	1	0x0261ED4	UI	RÉSUMÉ	TRANSLATED
+ODYSSEY-TXT-003865	0x041E0DA	6	TRADE		5	1	0x0261ED8	UI	ÉCHANGE	TRANSLATED
+ODYSSEY-TXT-003866	0x041E0E0	14	Cancel trade?		13	1	0x0261EDC	Trade UI	Annuler l’échange ?	TRANSLATED
+ODYSSEY-TXT-003867	0x041E0EE	28	Press the B Button to exit.		27	1	0x0261EE0	Trade UI	Appuie sur B pour quitter.	TRANSLATED
+ODYSSEY-TXT-003868	0x041E10A	8	SUMMARY		7	1	0x0261EE4	Trade UI	RÉSUMÉ	TRANSLATED
+ODYSSEY-TXT-003869	0x041E112	6	TRADE		5	1	0x0261EEC	Trade UI	ÉCHANGE	TRANSLATED
+ODYSSEY-TXT-003870	0x041E1E9	23	<FD:03> will be<FE>sent to <FD:02>.	FD;FE	17	2	0x00514B0,0x00528A0	Trade UI	<FD:03> sera<FE>envoyé à <FD:02>.	TRANSLATED
+ODYSSEY-TXT-003871	0x041E200	13	Bye-bye, <FD:03>!	FD	10	1	0x0051528,0x0052918	Trade UI	Au revoir, <FD:03> !	TRANSLATED
+ODYSSEY-TXT-003872	0x041E20D	17	<FD:02> sent over <FD:04>.	FD	12	1	0x0052158,0x00535B4	Trade UI	<FD:02> a envoyé <FD:04>.	TRANSLATED
+ODYSSEY-TXT-003873	0x041E21E	22	Take good care of <FD:04>!	FD	19	1	0x00521FC,0x0053658	Trade UI	Prends bien soin de <FD:04> !	TRANSLATED
 ODYSSEY-TXT-003874	0x041E234	6	From 		5	1	0x00BF1E4,0x00BF350	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-003875	0x041E245	30	Wireless Communication Status		29	1	0x046FAAC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003876	0x041E263	16	People trading:		15	1	0x046FAB0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003877	0x041E273	17	People battling:		16	1	0x046FAB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003878	0x041E284	26	People in the UNION ROOM:		25	1	0x046FAB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003879	0x041E29E	22	People communicating:		21	1	0x046FABC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003880	0x041E2B4	11	é  players		10	1	0x046FA9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003881	0x041E2BF	10	éÀ player		9	1	0x046FAA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003882	0x041E325	23	Communication standby…		22	1	0x0054064,0x00CF9C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003883	0x041E33C	37	The two seem to get along<FE>very well.	FE	35	2	0x025F82C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003884	0x041E361	27	The two seem to get along.		26	1	0x025F830	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003885	0x041E37C	44	The two don’t seem to like<FE>each other much.	FE	42	2	0x025F834	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003886	0x041E3E3	24	Teach which move to <FD:02>?	FD	21	1	0x00E4F50	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003887	0x041E405	15	<FD:02> learned<FE><FD:03>.	FD;FE	9	2	0x00E4AD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003888	0x041E414	109	<FD:02> is trying to learn<FE><FD:03>.<FB>But <FD:02> can’t learn more<FE>than four moves.<FB>Delete an older move to make<FE>room for <FD:03>?	FB;FD;FE	95	4	0x00E4B68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003889	0x041E481	18	Stop learning <FD:03>?	FD	15	1	0x00E4BEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003890	0x041E4C0	34	<FD:02> forgot <FD:04>.<FB>And…<FB><FD:02><FE>learned <FD:03>.	FB;FD;FE	22	2	0x00E4E88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003891	0x041E4E2	42	Give up trying to teach a new<FE>move to <FD:02>?	FD;FE	38	2	0x00E5280,0x00E52DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003892	0x041E50C	33	Which move should be forgotten?<FB>	FB	31	1	0x00E4BC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003893	0x041E538	58	Communication standby…<FE>Awaiting another player to choose.	FE	56	2	0x011C384	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003875	0x041E245	30	Wireless Communication Status		29	1	0x046FAAC	Wireless UI	État de la Communication Sans Fil	TRANSLATED
+ODYSSEY-TXT-003876	0x041E263	16	People trading:		15	1	0x046FAB0	Wireless UI	Personnes en échange :	TRANSLATED
+ODYSSEY-TXT-003877	0x041E273	17	People battling:		16	1	0x046FAB4	Wireless UI	Personnes en combat :	TRANSLATED
+ODYSSEY-TXT-003878	0x041E284	26	People in the UNION ROOM:		25	1	0x046FAB8	Wireless UI	Personnes dans la SALLE UNION :	TRANSLATED
+ODYSSEY-TXT-003879	0x041E29E	22	People communicating:		21	1	0x046FABC	Wireless UI	Personnes en communication :	TRANSLATED
+ODYSSEY-TXT-003880	0x041E2B4	11	é  players		10	1	0x046FA9C	Wireless UI	é  joueurs	TRANSLATED
+ODYSSEY-TXT-003881	0x041E2BF	10	éÀ player		9	1	0x046FAA0	Wireless UI	éÀ joueur	TRANSLATED
+ODYSSEY-TXT-003882	0x041E325	23	Communication standby…		22	1	0x0054064,0x00CF9C8	Wireless UI	Communication en attente…	TRANSLATED
+ODYSSEY-TXT-003883	0x041E33C	37	The two seem to get along<FE>very well.	FE	35	2	0x025F82C	Daycare compatibility	Les deux ont l’air de très bien<FE>s’entendre.	TRANSLATED
+ODYSSEY-TXT-003884	0x041E361	27	The two seem to get along.		26	1	0x025F830	Daycare compatibility	Les deux ont l’air de bien s’entendre.	TRANSLATED
+ODYSSEY-TXT-003885	0x041E37C	44	The two don’t seem to like<FE>each other much.	FE	42	2	0x025F834	Daycare compatibility	Les deux n’ont pas l’air de<FE>trop s’apprécier.	TRANSLATED
+ODYSSEY-TXT-003886	0x041E3E3	24	Teach which move to <FD:02>?	FD	21	1	0x00E4F50	SYSTEM move teach	Enseigner quelle capacité à <FD:02> ?	TRANSLATED
+ODYSSEY-TXT-003887	0x041E405	15	<FD:02> learned<FE><FD:03>.	FD;FE	9	2	0x00E4AD8	SYSTEM move teach	<FD:02> a appris<FE><FD:03>.	TRANSLATED
+ODYSSEY-TXT-003888	0x041E414	109	<FD:02> is trying to learn<FE><FD:03>.<FB>But <FD:02> can’t learn more<FE>than four moves.<FB>Delete an older move to make<FE>room for <FD:03>?	FB;FD;FE	95	4	0x00E4B68	SYSTEM move teach	<FD:02> essaie d’apprendre<FE><FD:03>.<FB>Mais <FD:02> ne peut pas connaître<FE>plus de quatre capacités.<FB>Supprimer une ancienne capacité<FE>pour faire de la place à <FD:03> ?	TRANSLATED
+ODYSSEY-TXT-003889	0x041E481	18	Stop learning <FD:03>?	FD	15	1	0x00E4BEC	SYSTEM move teach	Arrêter d’apprendre <FD:03> ?	TRANSLATED
+ODYSSEY-TXT-003890	0x041E4C0	34	<FD:02> forgot <FD:04>.<FB>And…<FB><FD:02><FE>learned <FD:03>.	FB;FD;FE	22	2	0x00E4E88	SYSTEM move teach	<FD:02> a oublié <FD:04>.<FB>Et…<FB><FD:02><FE>a appris <FD:03>.	TRANSLATED
+ODYSSEY-TXT-003891	0x041E4E2	42	Give up trying to teach a new<FE>move to <FD:02>?	FD;FE	38	2	0x00E5280,0x00E52DC	SYSTEM move teach	Abandonner l’apprentissage d’une<FE>nouvelle capacité pour <FD:02> ?	TRANSLATED
+ODYSSEY-TXT-003892	0x041E50C	33	Which move should be forgotten?<FB>	FB	31	1	0x00E4BC8	SYSTEM move teach	Quelle capacité doit être oubliée ?<FB>	TRANSLATED
+ODYSSEY-TXT-003893	0x041E538	58	Communication standby…<FE>Awaiting another player to choose.	FE	56	2	0x011C384	Wireless UI	Communication en attente…<FE>En attente qu’un autre joueur choisisse.	TRANSLATED
 ODYSSEY-TXT-003894	0x041E5E9	4	OAK		3	1	0x045F60C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003895	0x041E5ED	6	DAISY		5	1	0x045F610	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-003896	0x041E5F3	5	BILL		4	1	0x045F614	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003897	0x041E5F8	5	FUJI		4	1	0x045F618	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-003898	0x041E5FD	66	A variety of events will be imported<FE>over Wireless Communication.	FE	64	2	0x0466ED8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003899	0x041E63F	42	Read the WONDER CARDS in your<FE>possession.	FE	40	2	0x0466EDC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003900	0x041E669	28	Read the NEWS that arrived.		27	1	0x0466EE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003901	0x041E685	28	Return to the title screen.		27	1	0x0466EE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003902	0x041E6A1	59	You don’t have a WONDER CARD,<FE>so a new CARD will be input.	FE	57	2	0x0142FBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003903	0x041E6DC	59	You don’t have any WONDER NEWS,<FE>so new NEWS will be input.	FE	57	2	0x0142FE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003904	0x041E717	42	Where should the WONDER CARD<FE>be accessed?	FE	40	2	0x0142FF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003905	0x041E741	42	Where should the WONDER NEWS<FE>be accessed?	FE	40	2	0x0143004	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003906	0x041E794	15	Communicating…		14	1	0x01430F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003907	0x041E7A3	25	Communication completed.		24	1	0x0143258	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003898	0x041E5FD	66	A variety of events will be imported<FE>over Wireless Communication.	FE	64	2	0x0466ED8	Mystery Gift	Divers événements seront importés<FE>via la Communication Sans Fil.	TRANSLATED
+ODYSSEY-TXT-003899	0x041E63F	42	Read the WONDER CARDS in your<FE>possession.	FE	40	2	0x0466EDC	Mystery Gift	Lis les CARTES BONUS en ta<FE>possession.	TRANSLATED
+ODYSSEY-TXT-003900	0x041E669	28	Read the NEWS that arrived.		27	1	0x0466EE0	Mystery Gift	Lis les ACTUS reçues.	TRANSLATED
+ODYSSEY-TXT-003901	0x041E685	28	Return to the title screen.		27	1	0x0466EE4	Mystery Gift	Retourne à l’écran-titre.	TRANSLATED
+ODYSSEY-TXT-003902	0x041E6A1	59	You don’t have a WONDER CARD,<FE>so a new CARD will be input.	FE	57	2	0x0142FBC	Mystery Gift	Tu n’as pas de CARTE BONUS,<FE>une nouvelle CARTE sera donc saisie.	TRANSLATED
+ODYSSEY-TXT-003903	0x041E6DC	59	You don’t have any WONDER NEWS,<FE>so new NEWS will be input.	FE	57	2	0x0142FE0	Mystery Gift	Tu n’as pas d’ACTUS BONUS,<FE>de nouvelles ACTUS seront donc saisies.	TRANSLATED
+ODYSSEY-TXT-003904	0x041E717	42	Where should the WONDER CARD<FE>be accessed?	FE	40	2	0x0142FF4	Mystery Gift	Où la CARTE BONUS doit-elle<FE>être consultée ?	TRANSLATED
+ODYSSEY-TXT-003905	0x041E741	42	Where should the WONDER NEWS<FE>be accessed?	FE	40	2	0x0143004	Mystery Gift	Où les ACTUS BONUS doivent-elles<FE>être consultées ?	TRANSLATED
+ODYSSEY-TXT-003906	0x041E794	15	Communicating…		14	1	0x01430F8	Mystery Gift	Communication…	TRANSLATED
+ODYSSEY-TXT-003907	0x041E7A3	25	Communication completed.		24	1	0x0143258	Mystery Gift	Communication terminée.	TRANSLATED
 ODYSSEY-TXT-003908	0x041E7BC	21	Communication error.		20	1	0x0142CC8,0x0142D6C,0x01435A8	SYSTEM: comm error (short)	Erreur de communication.	TRANSLATED
-ODYSSEY-TXT-003909	0x041E7D1	33	Communication has been canceled.		32	1	0x0142CA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003910	0x041E7F2	49	Throw away the WONDER CARD<FE>and input a new CARD?	FE	47	2	0x01431D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003911	0x041E823	67	You haven’t received the CARD’s gift<FE>yet. Input a new CARD anyway?	FE	65	2	0x0143204	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003912	0x041E866	41	A WONDER CARD has been received<FE>from <FD:02>.	FD;FE	37	2	0x0142C40	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003913	0x041E88F	46	A WONDER NEWS item has been<FE>received from <FD:02>.	FD;FE	42	2	0x0142C58	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003914	0x041E8BD	37	A new WONDER CARD has been<FE>received.	FE	35	2	0x0142C44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003915	0x041E8E2	42	A new WONDER NEWS item has been<FE>received.	FE	40	2	0x0142C5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003916	0x041E90C	31	A new STAMP has been received.		30	1	0x0142C68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003917	0x041E92B	27	A new TRAINER has arrived.		26	1	0x0142CD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003918	0x041E946	34	You already had that<FE>WONDER CARD.	FE	32	2	0x0142C74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003919	0x041E968	39	You already had that<FE>WONDER NEWS item.	FE	37	2	0x0142C8C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003920	0x041E98F	28	You already had that<FE>STAMP.	FE	26	2	0x0142C80	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003921	0x041E9AB	40	There’s no more room for adding<FE>STAMPS.	FE	38	2	0x0142C98,0x0142DF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003922	0x041E9D3	58	Your record has been uploaded via<FE>WIRELESS COMMUNICATION.	FE	56	2	0x0142C2C,0x0142DBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003923	0x041EA0D	50	You can’t accept a WONDER CARD<FE>from this TRAINER.	FE	48	2	0x0142CBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003924	0x041EA3F	48	You can’t accept WONDER NEWS<FE>from this TRAINER.	FE	46	2	0x0142CB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003925	0x041EA6F	23	Nothing was sent over…		22	1	0x0142C20,0x0142DB4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003909	0x041E7D1	33	Communication has been canceled.		32	1	0x0142CA4	Mystery Gift	La communication a été annulée.	TRANSLATED
+ODYSSEY-TXT-003910	0x041E7F2	49	Throw away the WONDER CARD<FE>and input a new CARD?	FE	47	2	0x01431D8	Mystery Gift	Jeter la CARTE BONUS et en<FE>saisir une nouvelle ?	TRANSLATED
+ODYSSEY-TXT-003911	0x041E823	67	You haven’t received the CARD’s gift<FE>yet. Input a new CARD anyway?	FE	65	2	0x0143204	Mystery Gift	Tu n’as pas encore reçu le cadeau de la CARTE.<FE>La remplacer quand même ?	TRANSLATED
+ODYSSEY-TXT-003912	0x041E866	41	A WONDER CARD has been received<FE>from <FD:02>.	FD;FE	37	2	0x0142C40	Mystery Gift	Une CARTE BONUS a été reçue<FE>de <FD:02>.	TRANSLATED
+ODYSSEY-TXT-003913	0x041E88F	46	A WONDER NEWS item has been<FE>received from <FD:02>.	FD;FE	42	2	0x0142C58	Mystery Gift	Une ACTU BONUS a été reçue<FE>de <FD:02>.	TRANSLATED
+ODYSSEY-TXT-003914	0x041E8BD	37	A new WONDER CARD has been<FE>received.	FE	35	2	0x0142C44	Mystery Gift	Une nouvelle CARTE BONUS a été<FE>reçue.	TRANSLATED
+ODYSSEY-TXT-003915	0x041E8E2	42	A new WONDER NEWS item has been<FE>received.	FE	40	2	0x0142C5C	Mystery Gift	Une nouvelle ACTU BONUS a été<FE>reçue.	TRANSLATED
+ODYSSEY-TXT-003916	0x041E90C	31	A new STAMP has been received.		30	1	0x0142C68	Mystery Gift	Un nouveau TAMPON a été reçu.	TRANSLATED
+ODYSSEY-TXT-003917	0x041E92B	27	A new TRAINER has arrived.		26	1	0x0142CD4	Mystery Gift	Un nouveau DRESSEUR est arrivé.	TRANSLATED
+ODYSSEY-TXT-003918	0x041E946	34	You already had that<FE>WONDER CARD.	FE	32	2	0x0142C74	Mystery Gift	Tu avais déjà cette<FE>CARTE BONUS.	TRANSLATED
+ODYSSEY-TXT-003919	0x041E968	39	You already had that<FE>WONDER NEWS item.	FE	37	2	0x0142C8C	Mystery Gift	Tu avais déjà cette<FE>ACTU BONUS.	TRANSLATED
+ODYSSEY-TXT-003920	0x041E98F	28	You already had that<FE>STAMP.	FE	26	2	0x0142C80	Mystery Gift	Tu avais déjà ce<FE>TAMPON.	TRANSLATED
+ODYSSEY-TXT-003921	0x041E9AB	40	There’s no more room for adding<FE>STAMPS.	FE	38	2	0x0142C98,0x0142DF8	Mystery Gift	Il n’y a plus de place pour<FE>ajouter des TAMPONS.	TRANSLATED
+ODYSSEY-TXT-003922	0x041E9D3	58	Your record has been uploaded via<FE>WIRELESS COMMUNICATION.	FE	56	2	0x0142C2C,0x0142DBC	Mystery Gift	Ton record a été transmis via<FE>la COMMUNICATION SANS FIL.	TRANSLATED
+ODYSSEY-TXT-003923	0x041EA0D	50	You can’t accept a WONDER CARD<FE>from this TRAINER.	FE	48	2	0x0142CBC	Mystery Gift	Tu ne peux pas accepter de<FE>CARTE BONUS de ce DRESSEUR.	TRANSLATED
+ODYSSEY-TXT-003924	0x041EA3F	48	You can’t accept WONDER NEWS<FE>from this TRAINER.	FE	46	2	0x0142CB8	Mystery Gift	Tu ne peux pas accepter d’ACTUS<FE>BONUS de ce DRESSEUR.	TRANSLATED
+ODYSSEY-TXT-003925	0x041EA6F	23	Nothing was sent over…		22	1	0x0142C20,0x0142DB4	Mystery Gift	Rien n’a été envoyé…	TRANSLATED
 ODYSSEY-TXT-003926	0x041EA86	49	What would you like to do<FE>with the WONDER CARDS?	FE	47	2	0x0142928	SYSTEM: wonder cards menu	Que voulez-vous faire<FE>des CARTES BONUS ?	TRANSLATED
 ODYSSEY-TXT-003927	0x041EAB7	48	What would you like to do<FE>with the WONDER NEWS?	FE	46	2	0x0142988	SYSTEM: wonder news menu	Que voulez-vous faire<FE>des ACTUS BONUS ?	TRANSLATED
-ODYSSEY-TXT-003928	0x041EAE7	26	Sending your WONDER CARD…		25	1	0x01434FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003929	0x041EB01	31	Sending your WONDER NEWS item…		30	1	0x0143510	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003930	0x041EB20	38	Your WONDER CARD has been sent<FE>to <FD:02>.	FD;FE	34	2	0x0142DC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003931	0x041EB46	43	Your WONDER NEWS item has been<FE>sent to <FD:02>.	FD;FE	39	2	0x0142DD0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003932	0x041EB71	29	A STAMP has been sent to <FD:02>.	FD	26	1	0x0142DD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003933	0x041EB8E	28	A GIFT has been sent to <FD:02>.	FD	25	1	0x0142E0C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003934	0x041EBAA	52	The other TRAINER has the same<FE>WONDER CARD already.	FE	50	2	0x0142DE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003935	0x041EBDE	52	The other TRAINER has the same<FE>WONDER NEWS already.	FE	50	2	0x0142DF0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003936	0x041EC12	46	The other TRAINER has the same<FE>STAMP already.	FE	44	2	0x0142DE8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003937	0x041EC40	42	The other TRAINER canceled<FE>communication.	FE	40	2	0x0142E00	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003928	0x041EAE7	26	Sending your WONDER CARD…		25	1	0x01434FC	Mystery Gift	Envoi de ta CARTE BONUS…	TRANSLATED
+ODYSSEY-TXT-003929	0x041EB01	31	Sending your WONDER NEWS item…		30	1	0x0143510	Mystery Gift	Envoi de ton ACTU BONUS…	TRANSLATED
+ODYSSEY-TXT-003930	0x041EB20	38	Your WONDER CARD has been sent<FE>to <FD:02>.	FD;FE	34	2	0x0142DC4	Mystery Gift	Ta CARTE BONUS a été envoyée<FE>à <FD:02>.	TRANSLATED
+ODYSSEY-TXT-003931	0x041EB46	43	Your WONDER NEWS item has been<FE>sent to <FD:02>.	FD;FE	39	2	0x0142DD0	Mystery Gift	Ton ACTU BONUS a été envoyée<FE>à <FD:02>.	TRANSLATED
+ODYSSEY-TXT-003932	0x041EB71	29	A STAMP has been sent to <FD:02>.	FD	26	1	0x0142DD8	Mystery Gift	Un TAMPON a été envoyé à <FD:02>.	TRANSLATED
+ODYSSEY-TXT-003933	0x041EB8E	28	A GIFT has been sent to <FD:02>.	FD	25	1	0x0142E0C	Mystery Gift	Un CADEAU a été envoyé à <FD:02>.	TRANSLATED
+ODYSSEY-TXT-003934	0x041EBAA	52	The other TRAINER has the same<FE>WONDER CARD already.	FE	50	2	0x0142DE0	Mystery Gift	L’autre DRESSEUR a déjà la<FE>même CARTE BONUS.	TRANSLATED
+ODYSSEY-TXT-003935	0x041EBDE	52	The other TRAINER has the same<FE>WONDER NEWS already.	FE	50	2	0x0142DF0	Mystery Gift	L’autre DRESSEUR a déjà la<FE>même ACTU BONUS.	TRANSLATED
+ODYSSEY-TXT-003936	0x041EC12	46	The other TRAINER has the same<FE>STAMP already.	FE	44	2	0x0142DE8	Mystery Gift	L’autre DRESSEUR a déjà le<FE>même TAMPON.	TRANSLATED
+ODYSSEY-TXT-003937	0x041EC40	42	The other TRAINER canceled<FE>communication.	FE	40	2	0x0142E00	Mystery Gift	L’autre DRESSEUR a annulé<FE>la communication.	TRANSLATED
 ODYSSEY-TXT-003938	0x041EC6A	47	You can’t send a MYSTERY GIFT to<FE>this TRAINER.	FE	45	2	0x0142E1C	SYSTEM: mystery gift error	Vous ne pouvez pas envoyer de<FE>CADEAU MYSTÈRE à ce DRESSEUR.	TRANSLATED
-ODYSSEY-TXT-003939	0x041EC99	58	If you throw away the CARD,<FE>its event won’t happen. Okay?	FE	56	2	0x0142B1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003940	0x041ECD3	38	Is it okay to discard this<FE>NEWS item?	FE	36	2	0x0142B08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003941	0x041ECF9	54	You haven’t received the<FE>GIFT. Is it okay to discard?	FE	52	2	0x01433F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003942	0x041ED2F	33	Data will be saved.<FE>Please wait.	FE	31	2	0x0142B74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003943	0x041ED50	43	Save completed.<FE>Please press the A Button.	FE	41	2	0x0142B88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003944	0x041ED7B	33	The WONDER CARD was thrown away.		32	1	0x0142B3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003945	0x041ED9C	33	The WONDER NEWS was thrown away.		32	1	0x0142B2C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003939	0x041EC99	58	If you throw away the CARD,<FE>its event won’t happen. Okay?	FE	56	2	0x0142B1C	Mystery Gift	Si tu jettes la CARTE, son événement<FE>n’aura pas lieu. D’accord ?	TRANSLATED
+ODYSSEY-TXT-003940	0x041ECD3	38	Is it okay to discard this<FE>NEWS item?	FE	36	2	0x0142B08	Mystery Gift	C’est bon de jeter cette<FE>ACTU ?	TRANSLATED
+ODYSSEY-TXT-003941	0x041ECF9	54	You haven’t received the<FE>GIFT. Is it okay to discard?	FE	52	2	0x01433F8	Mystery Gift	Tu n’as pas reçu le<FE>CADEAU. C’est bon de le jeter ?	TRANSLATED
+ODYSSEY-TXT-003942	0x041ED2F	33	Data will be saved.<FE>Please wait.	FE	31	2	0x0142B74	SYSTEM save	Les données seront sauvegardées.<FE>Veuillez patienter.	TRANSLATED
+ODYSSEY-TXT-003943	0x041ED50	43	Save completed.<FE>Please press the A Button.	FE	41	2	0x0142B88	SYSTEM save	Sauvegarde terminée.<FE>Appuyez sur le bouton A.	TRANSLATED
+ODYSSEY-TXT-003944	0x041ED7B	33	The WONDER CARD was thrown away.		32	1	0x0142B3C	Mystery Gift	La CARTE BONUS a été jetée.	TRANSLATED
+ODYSSEY-TXT-003945	0x041ED9C	33	The WONDER NEWS was thrown away.		32	1	0x0142B2C	Mystery Gift	L’ACTU BONUS a été jetée.	TRANSLATED
 ODYSSEY-TXT-003946	0x041EDBD	13	MYSTERY GIFT		12	1	0x01423B0	SYSTEM: menu label	CADEAU MYSTÈRE	TRANSLATED
-ODYSSEY-TXT-003947	0x041EDDD	13	WONDER CARDS		12	1	0x0466DD0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003948	0x041EDEA	12	WONDER NEWS		11	1	0x0466DD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003949	0x041EDF6	23	WIRELESS COMMUNICATION		22	1	0x0466DE8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003950	0x041EE0D	7	FRIEND		6	1	0x0466DF0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003947	0x041EDDD	13	WONDER CARDS		12	1	0x0466DD0	Mystery Gift	CARTES BONUS	TRANSLATED
+ODYSSEY-TXT-003948	0x041EDEA	12	WONDER NEWS		11	1	0x0466DD8	Mystery Gift	ACTUS BONUS	TRANSLATED
+ODYSSEY-TXT-003949	0x041EDF6	23	WIRELESS COMMUNICATION		22	1	0x0466DE8	Mystery Gift	COMMUNICATION SANS FIL	TRANSLATED
+ODYSSEY-TXT-003950	0x041EE0D	7	FRIEND		6	1	0x0466DF0	UI label	AMI	TRANSLATED
 ODYSSEY-TXT-003951	0x041EE14	5	EXIT		4	1	0x0466DE0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-003952	0x041EE19	8	RECEIVE		7	1	0x0466E18,0x0466E38,0x0466E50,0x0466E68	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003952	0x041EE19	8	RECEIVE		7	1	0x0466E18,0x0466E38,0x0466E50,0x0466E68	UI label	RECEVOIR	TRANSLATED
 ODYSSEY-TXT-003953	0x041EE21	5	SEND		4	1	0x0466E20,0x0466E58	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003954	0x041EE26	5	TOSS		4	1	0x0466E28,0x0466E40	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003955	0x041F1C8	10	         		9	1	0x014FD68,0x014FEE8	UNKNOWN		SKIP_NOISE
@@ -3960,83 +3960,83 @@ ODYSSEY-TXT-003958	0x043F618	3	  		2	1	0x043F928	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003959	0x043F87C	3	  		2	1	0x0100D20	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003960	0x043F988	5	    		4	1	0x043F9A8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-003961	0x043FA68	5	    		4	1	0x043FA78	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-003962	0x0444D1C	111	There is a plant bulb on its back.<FE>When it absorbs nutrients, the bulb is said<FE>to blossom into a large flower.	FE	108	3	0x120C9D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003963	0x0444D8C	91	A bewitching aroma wafts from its flower.<FE>The fragrance becalms those engaged in<FE>a battle.	FE	88	3	0x120C9FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003964	0x0444DE8	112	From the time it is born, a flame burns<FE>at the tip of its tail. Its life would end<FE>if the flame were to go out.	FE	109	3	0x120CA20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003965	0x0444E59	108	It lashes about with its tail to knock<FE>down its foe. It then tears up the fallen<FE>opponent with sharp claws.	FE	105	3	0x120CA44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003966	0x0444F39	89	When it retracts its long neck into its<FE>shell, it squirts out water with vigorous<FE>force.	FE	86	3	0x120CA8C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003967	0x0444FEE	106	It crushes its foe under its heavy body<FE>to cause fainting. In a pinch, it will<FE>withdraw inside its shell.	FE	103	3	0x120CAD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003968	0x0445059	114	It is covered with a green skin. When it<FE>grows, it sheds the skin, covers itself<FE>with silk, and becomes a cocoon.	FE	111	3	0x120CAF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003969	0x04450CC	107	Even though it is encased in a sturdy<FE>shell, the body inside is tender.<FE>It can’t withstand a harsh attack.	FE	104	3	0x120CB1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003970	0x044519F	107	Often found in forests and grasslands.<FE>It has a sharp, toxic barb of around two<FE>inches on top of its head.	FE	104	3	0x120CB64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003971	0x044527B	107	May appear in a swarm. Flies at violent<FE>speeds, all the while stabbing with the<FE>toxic stinger on its rear.	FE	104	3	0x120CBAC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003972	0x04452E7	96	Does not like to fight. It hides in<FE>tall grass and so on, foraging for food<FE>such as small bugs.	FE	93	3	0x120CBD0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003973	0x0445348	113	The claws on its feet are well developed.<FE>It can carry prey such as an Exeggcute<FE>to its nest over 60 miles away.	FE	110	3	0x120CBF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003974	0x04453BA	104	It spreads its gorgeous wings widely to<FE>intimidate enemies. It races through the<FE>skies at Mach-2 speed.	FE	101	3	0x120CC18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003975	0x0445630	112	An enormous, terrifying serpent.<FE>Legends say it was the guardian deity<FE>of a forgotten kingdom called “Lemuria”.	FE	109	3	0x120CCF0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003976	0x04456A2	104	It has small electric sacs on both its<FE>cheeks. If threatened, it looses electric<FE>charges from the sacs.	FE	101	3	0x120CD14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003977	0x044570B	112	Its electric charges can reach even<FE>100,000 volts. Careless contact can cause<FE>even an Indian elephant to faint.	FE	109	3	0x120CD38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003978	0x0445846	115	Though small, it must be treated with<FE>caution because of its powerfully toxic<FE>barbs. The female has smaller horns.	FE	112	3	0x120CDA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003979	0x04458BA	101	The female has a gentle temperament.<FE>It emits ultrasonic cries that have the<FE>power to befuddle foes.	FE	98	3	0x120CDC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003980	0x0445920	104	The body is covered by stiff, needle-<FE>like scales. If it becomes excited,<FE>the needles bristle outwards.	FE	101	3	0x120CDEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003981	0x0445989	115	Its large ears are flapped like wings<FE>when it is listening to distant sounds.<FE>It extends toxic barbs when angered.	FE	112	3	0x120CE10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003982	0x04459FD	102	It is easily angered. By swinging its well-<FE>developed horn wildly, it can even punch<FE>through diamond.	FE	99	3	0x120CE34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003983	0x0445A64	109	It is recognized by its rock-hard hide<FE>and its extended horn. Be careful with<FE>the horn as it contains venom.	FE	106	3	0x120CE58	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003984	0x0445AD2	94	Its adorable appearance makes it popular<FE>as a pet. However, it is rare and<FE>difficult to find.	FE	91	3	0x120CE7C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003985	0x0445B31	98	It has an acute sense of hearing. It can<FE>easily hear a pin being dropped nearly<FE>1,100 yards away.	FE	95	3	0x120CEA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003986	0x0445D12	104	It has no eyes. Instead, it relies on<FE>its ultrasonic cries for echo location to<FE>flit about in darkness.	FE	101	3	0x120CF54	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003987	0x0445D7B	100	It clamps down on its prey with needle-<FE>sharp fangs and drains over 10 ounces of<FE>blood in one gulp.	FE	97	3	0x120CF78	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003988	0x0445DE0	107	Its scientific name is “Oddium Wanderus.”<FE>At night, it is said to walk nearly 1,000<FE>feet on its two roots.	FE	104	3	0x120CF9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003989	0x0445E4C	109	Its pistils exude an incredibly foul odor.<FE>The horrid stench can cause fainting at a<FE>distance of 1.25 miles.	FE	106	3	0x120CFC0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003990	0x0445EBA	104	Its petals are the largest in the world.<FE>It fiendishly scatters allergy-causing<FE>pollen from its petals.	FE	101	3	0x120CFE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003991	0x0445F23	100	Growing out of the bug’s back are<FE>mushrooms called tochukaso. The mushrooms<FE>grow with the bug host.	FE	97	3	0x120D008	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003992	0x0445F27	96	ing out of the bug’s back are<FE>mushrooms called tochukaso. The mushrooms<FE>grow with the bug host.	FE	93	3	0x1063868	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003993	0x0445F56	49	tochukaso. The mushrooms<FE>grow with the bug host.	FE	47	2	0x0E9513C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003994	0x0445F88	88	It scatters toxic spores from the<FE>mushroom cap. Its spores are<FE>used as herbal medicine.	FE	85	3	0x120D02C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003995	0x0445FEB	101	Its eyes act as radar, enabling it to be<FE>active in darkness. The eyes can also<FE>shoot powerful beams.	FE	98	3	0x120D050	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003996	0x0446007	73	ing it to be<FE>active in darkness. The eyes can also<FE>shoot powerful beams.	FE	70	3	0x07B5A24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003997	0x0446051	104	The wings are covered with dustlike<FE>scales. Every time it flaps its wings, it<FE>looses highly toxic dust.	FE	101	3	0x120D074	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003998	0x04460BA	110	It burrows through the ground at a<FE>shallow depth. It leaves raised earth in<FE>its wake, making it easy to spot.	FE	107	3	0x120D098	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-003999	0x0446129	101	In battle, it digs through the ground and<FE>strikes the unsuspecting foe from an<FE>unexpected direction.	FE	98	3	0x120D0BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004000	0x044618F	97	All it does is sleep during the daytime.<FE>At night, it patrols its territory with its<FE>eyes aglow.	FE	94	3	0x120D0E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004001	0x04461F1	121	Has a vicious temperament. Beware if it<FE>raises its tail straight up. It is a signal<FE>that it is about to pounce and bite.	FE	118	3	0x120D104	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004002	0x044626B	108	It is constantly wracked by a headache.<FE>When the headache turns intense, it begins<FE>using mysterious powers.	FE	105	3	0x120D128	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004003	0x04462D8	111	The forelegs are webbed, helping to make<FE>it an adept swimmer. It can be seen<FE>swimming elegantly in lakes, etc.	FE	108	3	0x120D14C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004004	0x0446348	113	Light and agile on its feet, and ferocious<FE>in temperament. When angered, it flies into<FE>an uncontrollable frenzy.	FE	110	3	0x120D170	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004005	0x0446357	98	 on its feet, and ferocious<FE>in temperament. When angered, it flies into<FE>an uncontrollable frenzy.	FE	95	3	0x0B01840	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004006	0x04463BA	110	It is always outrageously furious. If it<FE>gives chase, it will tenaciously track the<FE>target no matter how far.	FE	107	3	0x120D194	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004007	0x04463DE	74	f it<FE>gives chase, it will tenaciously track the<FE>target no matter how far.	FE	71	3	0x1A9B8DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004008	0x0446429	90	Very friendly and faithful to people.<FE>It will try to repel enemies by barking<FE>and biting.	FE	87	3	0x120D1B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004009	0x04464E2	119	Its slick black skin is thin and damp.<FE>A part of its internal organs can be seen<FE>through the skin as a spiral pattern.	FE	116	3	0x120D200	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004010	0x044655A	100	Its two legs are well developed.<FE>Even though it can live on the ground,<FE>it prefers living in water.	FE	97	3	0x120D224	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004011	0x04465BF	108	An adept swimmer, it knows the front<FE>crawl, butterfly, and more. It is faster<FE>than the best human swimmers.	FE	105	3	0x120D248	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004012	0x044662C	90	It sleeps for 18 hours a day. It uses a<FE>variety of extrasensory powers even<FE>while asleep.	FE	87	3	0x120D26C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004013	0x0446687	96	It happened one morning - a boy with<FE>extrasensory powers awoke in bed<FE>transformed into Kadabra.	FE	93	3	0x120D290	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004014	0x04466E8	108	It does not like physical attacks very <FE>much. Instead, it freely uses extra-<FE>sensory powers to defeat foes.	FE	105	3	0x120D2B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004015	0x0446755	94	Machop hones its body through<FE>hand-to-hand combat. Its fists strike<FE>with bone-crushing force.	FE	91	3	0x120D2D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004016	0x0446888	109	Its bud looks like a human face. Because<FE>of the bud, it is rumored to be a type of<FE>legendary mandrake plant.	FE	106	3	0x120D344	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004017	0x04468F6	94	The leafy parts act as cutters for<FE>slashing foes. It spits a fluid that<FE>dissolves everything.	FE	91	3	0x120D368	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004018	0x0446939	27	that<FE>dissolves everything.	FE	25	2	0x0705D28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004019	0x0446955	103	Lures prey into its mouth with a honeylike<FE>aroma. The helpless prey is melted with<FE>a dissolving fluid.	FE	100	3	0x120D38C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004020	0x04469BD	89	Its eyes are as transparent as crystals.<FE>From them, it shoots mysterious<FE>beams of light.	FE	86	3	0x120D3B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004021	0x0446A17	104	It has 80 tentacles that move about<FE>freely. They can sting, causing poisoning<FE>and sharp, stabbing pain.	FE	101	3	0x120D3D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004022	0x0446A80	111	Its round form makes it easy to pick up.<FE>Some people have used them to hurl<FE>at each other in a snowball fight.	FE	108	3	0x120D3F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004023	0x0446AAA	69	ome people have used them to hurl<FE>at each other in a snowball fight.	FE	67	2	0x125ADBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004024	0x0446AF0	101	Be careful while hiking on mountain trails.<FE>Graveler may come rolling down the path<FE>without slowing.	FE	98	3	0x120D41C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004025	0x0446B56	109	It is enclosed in a hard shell that is as<FE>rugged as slabs of rock. It sheds skin<FE>once a year to grow larger.	FE	106	3	0x120D440	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004026	0x0446C8C	120	It is always vacantly lost in thought, but<FE>no one knows what it is thinking about.<FE>It is good at fishing with its tail.	FE	117	3	0x120D4AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004027	0x0446D05	110	When a Slowpoke went hunting in the sea,<FE>its tail was bitten by a Shellder. That<FE>made it evolve into Slowbro.	FE	107	3	0x120D4D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004028	0x0446D74	102	It moves while constantly hovering.<FE>It discharges THUNDER WAVE and so on<FE>from the units at its sides.	FE	99	3	0x120D4F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004029	0x0446DDB	101	A linked cluster formed of several<FE>Magnemite. It discharges powerful<FE>magnetic waves at high voltage.	FE	98	3	0x120D518	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004030	0x0446F16	101	An odd species that is rarely found.<FE>The three heads respectively represent<FE>joy, sadness, and anger.	FE	98	3	0x120D584	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004031	0x0446F7C	118	Covered with light blue fur, its hide is<FE>thick and tough. It is active in bitter<FE>cold of minus 40 degrees Fahrenheit.	FE	115	3	0x120D5A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004032	0x0446FF3	95	Its body is covered with a pure white<FE>fur. The colder the weather, the more<FE>active it becomes.	FE	92	3	0x120D5CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004033	0x0447053	99	Sludge exposed to X rays from the moon<FE>transformed into Grimer. It loves feeding<FE>on filthy things.	FE	96	3	0x120D5F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004034	0x04470B7	107	It is usually undetectable because it<FE>blends in with the ground. Touching it can<FE>cause terrible poisoning.	FE	104	3	0x120D614	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004035	0x0447123	98	It is encased in a shell that is harder<FE>than diamond. Inside, however, it is<FE>surprisingly tender.	FE	95	3	0x120D638	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004036	0x0447186	114	Its shell is extremely hard. It cannot be<FE>shattered, even with a bomb. The shell<FE>opens only when it is attacking.	FE	111	3	0x120D65C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004037	0x04471F9	107	A being that exists as a thin gas. It can<FE>topple an Indian elephant by enveloping<FE>the prey in two seconds.	FE	104	3	0x120D680	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004038	0x0447265	93	If you get the feeling of being watched<FE>in darkness when nobody is around,<FE>HAUNTER is there.	FE	90	3	0x120D6A4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-003962	0x0444D1C	111	There is a plant bulb on its back.<FE>When it absorbs nutrients, the bulb is said<FE>to blossom into a large flower.	FE	108	3	0x120C9D8	Pokedex entry	Il y a un bulbe de plante sur son dos.<FE>Quand il absorbe des nutriments, on dit que<FE>le bulbe s’épanouit en une grande fleur.	TRANSLATED
+ODYSSEY-TXT-003963	0x0444D8C	91	A bewitching aroma wafts from its flower.<FE>The fragrance becalms those engaged in<FE>a battle.	FE	88	3	0x120C9FC	Pokedex entry	Un arôme envoûtant émane de sa fleur.<FE>Ce parfum apaise ceux engagés dans<FE>un combat.	TRANSLATED
+ODYSSEY-TXT-003964	0x0444DE8	112	From the time it is born, a flame burns<FE>at the tip of its tail. Its life would end<FE>if the flame were to go out.	FE	109	3	0x120CA20	Pokedex entry	Dès sa naissance, une flamme brûle au<FE>bout de sa queue. Sa vie prendrait fin<FE>si la flamme venait à s’éteindre.	TRANSLATED
+ODYSSEY-TXT-003965	0x0444E59	108	It lashes about with its tail to knock<FE>down its foe. It then tears up the fallen<FE>opponent with sharp claws.	FE	105	3	0x120CA44	Pokedex entry	Il fouette avec sa queue pour renverser<FE>son adversaire. Il déchire ensuite<FE>l’adversaire à terre avec ses griffes acérées.	TRANSLATED
+ODYSSEY-TXT-003966	0x0444F39	89	When it retracts its long neck into its<FE>shell, it squirts out water with vigorous<FE>force.	FE	86	3	0x120CA8C	Pokedex entry	Quand il rentre son long cou dans sa<FE>carapace, il projette de l’eau avec<FE>une force vigoureuse.	TRANSLATED
+ODYSSEY-TXT-003967	0x0444FEE	106	It crushes its foe under its heavy body<FE>to cause fainting. In a pinch, it will<FE>withdraw inside its shell.	FE	103	3	0x120CAD4	Pokedex entry	Il écrase son adversaire sous son corps<FE>lourd pour le mettre K.O. En cas de<FE>danger, il se retire dans sa carapace.	TRANSLATED
+ODYSSEY-TXT-003968	0x0445059	114	It is covered with a green skin. When it<FE>grows, it sheds the skin, covers itself<FE>with silk, and becomes a cocoon.	FE	111	3	0x120CAF8	Pokedex entry	Il est recouvert d’une peau verte.<FE>En grandissant, il mue, s’enveloppe<FE>de soie, et devient un cocon.	TRANSLATED
+ODYSSEY-TXT-003969	0x04450CC	107	Even though it is encased in a sturdy<FE>shell, the body inside is tender.<FE>It can’t withstand a harsh attack.	FE	104	3	0x120CB1C	Pokedex entry	Bien qu’enfermé dans une coque<FE>robuste, le corps à l’intérieur est<FE>tendre. Il ne résiste pas aux attaques.	TRANSLATED
+ODYSSEY-TXT-003970	0x044519F	107	Often found in forests and grasslands.<FE>It has a sharp, toxic barb of around two<FE>inches on top of its head.	FE	104	3	0x120CB64	Pokedex entry	Souvent trouvé dans les forêts et<FE>prairies. Il a un dard toxique acéré<FE>d’environ cinq centimètres sur la tête.	TRANSLATED
+ODYSSEY-TXT-003971	0x044527B	107	May appear in a swarm. Flies at violent<FE>speeds, all the while stabbing with the<FE>toxic stinger on its rear.	FE	104	3	0x120CBAC	Pokedex entry	Apparaît parfois en essaim. Vole à<FE>une vitesse fulgurante, tout en<FE>piquant avec le dard toxique de son arrière-train.	TRANSLATED
+ODYSSEY-TXT-003972	0x04452E7	96	Does not like to fight. It hides in<FE>tall grass and so on, foraging for food<FE>such as small bugs.	FE	93	3	0x120CBD0	Pokedex entry	N’aime pas se battre. Il se cache dans<FE>les hautes herbes, cherchant de la<FE>nourriture comme de petits insectes.	TRANSLATED
+ODYSSEY-TXT-003973	0x0445348	113	The claws on its feet are well developed.<FE>It can carry prey such as an Exeggcute<FE>to its nest over 60 miles away.	FE	110	3	0x120CBF4	Pokedex entry	Les griffes de ses pattes sont bien<FE>développées. Il peut transporter une<FE>proie comme un Noeunoeuf jusqu’à son nid, à plus de 100 km.	TRANSLATED
+ODYSSEY-TXT-003974	0x04453BA	104	It spreads its gorgeous wings widely to<FE>intimidate enemies. It races through the<FE>skies at Mach-2 speed.	FE	101	3	0x120CC18	Pokedex entry	Il déploie largement ses magnifiques<FE>ailes pour intimider ses ennemis. Il<FE>traverse le ciel à Mach 2.	TRANSLATED
+ODYSSEY-TXT-003975	0x0445630	112	An enormous, terrifying serpent.<FE>Legends say it was the guardian deity<FE>of a forgotten kingdom called “Lemuria”.	FE	109	3	0x120CCF0	Pokedex entry	Un serpent énorme et terrifiant.<FE>Les légendes disent qu’il était la<FE>divinité protectrice d’un royaume oublié appelé “Lémurie”.	TRANSLATED
+ODYSSEY-TXT-003976	0x04456A2	104	It has small electric sacs on both its<FE>cheeks. If threatened, it looses electric<FE>charges from the sacs.	FE	101	3	0x120CD14	Pokedex entry	Il a de petits sacs électriques sur<FE>ses deux joues. En cas de danger, il<FE>libère des décharges électriques.	TRANSLATED
+ODYSSEY-TXT-003977	0x044570B	112	Its electric charges can reach even<FE>100,000 volts. Careless contact can cause<FE>even an Indian elephant to faint.	FE	109	3	0x120CD38	Pokedex entry	Ses décharges électriques peuvent<FE>atteindre 100 000 volts. Un contact<FE>imprudent peut assommer un éléphant.	TRANSLATED
+ODYSSEY-TXT-003978	0x0445846	115	Though small, it must be treated with<FE>caution because of its powerfully toxic<FE>barbs. The female has smaller horns.	FE	112	3	0x120CDA4	Pokedex entry	Bien que petit, il faut le traiter<FE>avec prudence à cause de ses dards<FE>très toxiques. La femelle a des cornes plus petites.	TRANSLATED
+ODYSSEY-TXT-003979	0x04458BA	101	The female has a gentle temperament.<FE>It emits ultrasonic cries that have the<FE>power to befuddle foes.	FE	98	3	0x120CDC8	Pokedex entry	La femelle a un tempérament doux.<FE>Elle émet des cris ultrasoniques<FE>capables de désorienter ses ennemis.	TRANSLATED
+ODYSSEY-TXT-003980	0x0445920	104	The body is covered by stiff, needle-<FE>like scales. If it becomes excited,<FE>the needles bristle outwards.	FE	101	3	0x120CDEC	Pokedex entry	Le corps est couvert d’écailles<FE>rigides en forme d’aiguilles. S’il<FE>s’excite, les aiguilles se hérissent.	TRANSLATED
+ODYSSEY-TXT-003981	0x0445989	115	Its large ears are flapped like wings<FE>when it is listening to distant sounds.<FE>It extends toxic barbs when angered.	FE	112	3	0x120CE10	Pokedex entry	Ses grandes oreilles battent comme<FE>des ailes quand il écoute des sons<FE>lointains. Il sort des dards toxiques quand il est en colère.	TRANSLATED
+ODYSSEY-TXT-003982	0x04459FD	102	It is easily angered. By swinging its well-<FE>developed horn wildly, it can even punch<FE>through diamond.	FE	99	3	0x120CE34	Pokedex entry	Il se met facilement en colère. En<FE>balançant sa corne bien développée,<FE>il peut même transpercer du diamant.	TRANSLATED
+ODYSSEY-TXT-003983	0x0445A64	109	It is recognized by its rock-hard hide<FE>and its extended horn. Be careful with<FE>the horn as it contains venom.	FE	106	3	0x120CE58	Pokedex entry	On le reconnaît à sa peau dure comme<FE>la roche et sa longue corne. Attention,<FE>la corne contient du venin.	TRANSLATED
+ODYSSEY-TXT-003984	0x0445AD2	94	Its adorable appearance makes it popular<FE>as a pet. However, it is rare and<FE>difficult to find.	FE	91	3	0x120CE7C	Pokedex entry	Son apparence adorable en fait un<FE>animal de compagnie populaire.<FE>Cependant, il est rare et difficile à trouver.	TRANSLATED
+ODYSSEY-TXT-003985	0x0445B31	98	It has an acute sense of hearing. It can<FE>easily hear a pin being dropped nearly<FE>1,100 yards away.	FE	95	3	0x120CEA0	Pokedex entry	Il a une ouïe très fine. Il peut<FE>facilement entendre une épingle<FE>tomber à près d’un kilomètre.	TRANSLATED
+ODYSSEY-TXT-003986	0x0445D12	104	It has no eyes. Instead, it relies on<FE>its ultrasonic cries for echo location to<FE>flit about in darkness.	FE	101	3	0x120CF54	Pokedex entry	Il n’a pas d’yeux. Il se fie plutôt<FE>à ses cris ultrasoniques pour<FE>s’orienter par écholocation dans le noir.	TRANSLATED
+ODYSSEY-TXT-003987	0x0445D7B	100	It clamps down on its prey with needle-<FE>sharp fangs and drains over 10 ounces of<FE>blood in one gulp.	FE	97	3	0x120CF78	Pokedex entry	Il agrippe sa proie avec des crocs<FE>acérés comme des aiguilles et draine<FE>plus de 300 ml de sang d’une seule gorgée.	TRANSLATED
+ODYSSEY-TXT-003988	0x0445DE0	107	Its scientific name is “Oddium Wanderus.”<FE>At night, it is said to walk nearly 1,000<FE>feet on its two roots.	FE	104	3	0x120CF9C	Pokedex entry	Son nom scientifique est “Oddium<FE>Wanderus”. La nuit, on dit qu’il<FE>marche près de 300 mètres sur ses deux racines.	TRANSLATED
+ODYSSEY-TXT-003989	0x0445E4C	109	Its pistils exude an incredibly foul odor.<FE>The horrid stench can cause fainting at a<FE>distance of 1.25 miles.	FE	106	3	0x120CFC0	Pokedex entry	Ses pistils dégagent une odeur<FE>incroyablement infecte. Cette puanteur<FE>peut faire s’évanouir à 2 km de distance.	TRANSLATED
+ODYSSEY-TXT-003990	0x0445EBA	104	Its petals are the largest in the world.<FE>It fiendishly scatters allergy-causing<FE>pollen from its petals.	FE	101	3	0x120CFE4	Pokedex entry	Ses pétales sont les plus grands du<FE>monde. Il disperse malicieusement<FE>un pollen allergisant depuis ses pétales.	TRANSLATED
+ODYSSEY-TXT-003991	0x0445F23	100	Growing out of the bug’s back are<FE>mushrooms called tochukaso. The mushrooms<FE>grow with the bug host.	FE	97	3	0x120D008	Pokedex entry	Des champignons appelés tochukaso<FE>poussent sur le dos de l’insecte.<FE>Les champignons grandissent avec leur hôte.	TRANSLATED
+ODYSSEY-TXT-003992	0x0445F27	96	ing out of the bug’s back are<FE>mushrooms called tochukaso. The mushrooms<FE>grow with the bug host.	FE	93	3	0x1063868	Pokedex entry fragment	…poussent sur le dos de l’insecte<FE>des champignons appelés tochukaso.<FE>Les champignons grandissent avec leur hôte.	TRANSLATED
+ODYSSEY-TXT-003993	0x0445F56	49	tochukaso. The mushrooms<FE>grow with the bug host.	FE	47	2	0x0E9513C	Pokedex entry fragment	tochukaso.<FE>Les champignons grandissent avec leur hôte.	TRANSLATED
+ODYSSEY-TXT-003994	0x0445F88	88	It scatters toxic spores from the<FE>mushroom cap. Its spores are<FE>used as herbal medicine.	FE	85	3	0x120D02C	Pokedex entry	Il disperse des spores toxiques<FE>depuis son chapeau. Ses spores<FE>sont utilisées en phytothérapie.	TRANSLATED
+ODYSSEY-TXT-003995	0x0445FEB	101	Its eyes act as radar, enabling it to be<FE>active in darkness. The eyes can also<FE>shoot powerful beams.	FE	98	3	0x120D050	Pokedex entry	Ses yeux font office de radar,<FE>lui permettant d’être actif dans<FE>le noir. Ses yeux peuvent aussi tirer des rayons puissants.	TRANSLATED
+ODYSSEY-TXT-003996	0x0446007	73	ing it to be<FE>active in darkness. The eyes can also<FE>shoot powerful beams.	FE	70	3	0x07B5A24	Pokedex entry fragment	…lui permettant d’être<FE>actif dans le noir. Ses yeux peuvent<FE>aussi tirer des rayons puissants.	TRANSLATED
+ODYSSEY-TXT-003997	0x0446051	104	The wings are covered with dustlike<FE>scales. Every time it flaps its wings, it<FE>looses highly toxic dust.	FE	101	3	0x120D074	Pokedex entry	Les ailes sont couvertes d’écailles<FE>poudreuses. Chaque battement d’aile<FE>libère une poussière hautement toxique.	TRANSLATED
+ODYSSEY-TXT-003998	0x04460BA	110	It burrows through the ground at a<FE>shallow depth. It leaves raised earth in<FE>its wake, making it easy to spot.	FE	107	3	0x120D098	Pokedex entry	Il creuse près de la surface du sol.<FE>Il laisse un sillon de terre<FE>soulevée, facile à repérer.	TRANSLATED
+ODYSSEY-TXT-003999	0x0446129	101	In battle, it digs through the ground and<FE>strikes the unsuspecting foe from an<FE>unexpected direction.	FE	98	3	0x120D0BC	Pokedex entry	En combat, il creuse dans le sol et<FE>frappe l’adversaire sans méfiance<FE>d’une direction inattendue.	TRANSLATED
+ODYSSEY-TXT-004000	0x044618F	97	All it does is sleep during the daytime.<FE>At night, it patrols its territory with its<FE>eyes aglow.	FE	94	3	0x120D0E0	Pokedex entry	Il ne fait que dormir le jour.<FE>La nuit, il patrouille son territoire<FE>avec les yeux luisants.	TRANSLATED
+ODYSSEY-TXT-004001	0x04461F1	121	Has a vicious temperament. Beware if it<FE>raises its tail straight up. It is a signal<FE>that it is about to pounce and bite.	FE	118	3	0x120D104	Pokedex entry	Tempérament vicieux. Méfiez-vous s’il<FE>dresse sa queue tout droit. C’est le<FE>signe qu’il va bondir et mordre.	TRANSLATED
+ODYSSEY-TXT-004002	0x044626B	108	It is constantly wracked by a headache.<FE>When the headache turns intense, it begins<FE>using mysterious powers.	FE	105	3	0x120D128	Pokedex entry	Il est constamment tourmenté par<FE>un mal de tête. Quand la douleur<FE>s’intensifie, il utilise des pouvoirs mystérieux.	TRANSLATED
+ODYSSEY-TXT-004003	0x04462D8	111	The forelegs are webbed, helping to make<FE>it an adept swimmer. It can be seen<FE>swimming elegantly in lakes, etc.	FE	108	3	0x120D14C	Pokedex entry	Ses pattes avant sont palmées, ce<FE>qui en fait un excellent nageur.<FE>On peut le voir nager élégamment dans les lacs.	TRANSLATED
+ODYSSEY-TXT-004004	0x0446348	113	Light and agile on its feet, and ferocious<FE>in temperament. When angered, it flies into<FE>an uncontrollable frenzy.	FE	110	3	0x120D170	Pokedex entry	Léger et agile sur ses pattes, et<FE>féroce de nature. Quand il est en<FE>colère, il entre dans une fureur incontrôlable.	TRANSLATED
+ODYSSEY-TXT-004005	0x0446357	98	 on its feet, and ferocious<FE>in temperament. When angered, it flies into<FE>an uncontrollable frenzy.	FE	95	3	0x0B01840	Pokedex entry fragment	 sur ses pattes, et féroce<FE>de nature. Quand il est en colère,<FE>il entre dans une fureur incontrôlable.	TRANSLATED
+ODYSSEY-TXT-004006	0x04463BA	110	It is always outrageously furious. If it<FE>gives chase, it will tenaciously track the<FE>target no matter how far.	FE	107	3	0x120D194	Pokedex entry	Il est toujours d’une fureur<FE>extrême. S’il donne la chasse, il<FE>traquera sa cible sans relâche, peu importe la distance.	TRANSLATED
+ODYSSEY-TXT-004007	0x04463DE	74	f it<FE>gives chase, it will tenaciously track the<FE>target no matter how far.	FE	71	3	0x1A9B8DC	Pokedex entry fragment	…S’il<FE>donne la chasse, il traquera sa<FE>cible sans relâche, peu importe la distance.	TRANSLATED
+ODYSSEY-TXT-004008	0x0446429	90	Very friendly and faithful to people.<FE>It will try to repel enemies by barking<FE>and biting.	FE	87	3	0x120D1B8	Pokedex entry	Très amical et fidèle envers les<FE>humains. Il essaiera de repousser<FE>les ennemis en aboyant et mordant.	TRANSLATED
+ODYSSEY-TXT-004009	0x04464E2	119	Its slick black skin is thin and damp.<FE>A part of its internal organs can be seen<FE>through the skin as a spiral pattern.	FE	116	3	0x120D200	Pokedex entry	Sa peau noire et lisse est fine et<FE>humide. Une partie de ses organes<FE>internes est visible à travers la peau en motif spiralé.	TRANSLATED
+ODYSSEY-TXT-004010	0x044655A	100	Its two legs are well developed.<FE>Even though it can live on the ground,<FE>it prefers living in water.	FE	97	3	0x120D224	Pokedex entry	Ses deux pattes sont bien<FE>développées. Bien qu’il puisse vivre<FE>sur terre, il préfère vivre dans l’eau.	TRANSLATED
+ODYSSEY-TXT-004011	0x04465BF	108	An adept swimmer, it knows the front<FE>crawl, butterfly, and more. It is faster<FE>than the best human swimmers.	FE	105	3	0x120D248	Pokedex entry	Excellent nageur, il maîtrise le<FE>crawl, le papillon, et plus encore.<FE>Il est plus rapide que les meilleurs nageurs humains.	TRANSLATED
+ODYSSEY-TXT-004012	0x044662C	90	It sleeps for 18 hours a day. It uses a<FE>variety of extrasensory powers even<FE>while asleep.	FE	87	3	0x120D26C	Pokedex entry	Il dort 18 heures par jour. Il<FE>utilise divers pouvoirs extrasensoriels<FE>même en dormant.	TRANSLATED
+ODYSSEY-TXT-004013	0x0446687	96	It happened one morning - a boy with<FE>extrasensory powers awoke in bed<FE>transformed into Kadabra.	FE	93	3	0x120D290	Pokedex entry	C’est arrivé un matin - un garçon<FE>doté de pouvoirs extrasensoriels<FE>s’est réveillé dans son lit transformé en Kadabra.	TRANSLATED
+ODYSSEY-TXT-004014	0x04466E8	108	It does not like physical attacks very <FE>much. Instead, it freely uses extra-<FE>sensory powers to defeat foes.	FE	105	3	0x120D2B4	Pokedex entry	Il n’aime pas trop les attaques<FE>physiques. Il utilise plutôt<FE>librement ses pouvoirs extrasensoriels pour vaincre ses adversaires.	TRANSLATED
+ODYSSEY-TXT-004015	0x0446755	94	Machop hones its body through<FE>hand-to-hand combat. Its fists strike<FE>with bone-crushing force.	FE	91	3	0x120D2D8	Pokedex entry	Machoc affûte son corps par le<FE>combat au corps à corps. Ses<FE>poings frappent avec une force à briser les os.	TRANSLATED
+ODYSSEY-TXT-004016	0x0446888	109	Its bud looks like a human face. Because<FE>of the bud, it is rumored to be a type of<FE>legendary mandrake plant.	FE	106	3	0x120D344	Pokedex entry	Son bourgeon ressemble à un<FE>visage humain. À cause de cela, on<FE>raconte qu’il s’agit d’une mandragore légendaire.	TRANSLATED
+ODYSSEY-TXT-004017	0x04468F6	94	The leafy parts act as cutters for<FE>slashing foes. It spits a fluid that<FE>dissolves everything.	FE	91	3	0x120D368	Pokedex entry	Les parties feuillues servent de<FE>lames pour trancher les adversaires.<FE>Il crache un liquide qui dissout tout.	TRANSLATED
+ODYSSEY-TXT-004018	0x0446939	27	that<FE>dissolves everything.	FE	25	2	0x0705D28	Pokedex entry fragment	un liquide qui<FE>dissout tout.	TRANSLATED
+ODYSSEY-TXT-004019	0x0446955	103	Lures prey into its mouth with a honeylike<FE>aroma. The helpless prey is melted with<FE>a dissolving fluid.	FE	100	3	0x120D38C	Pokedex entry	Attire ses proies dans sa bouche<FE>avec un arôme mielleux. La proie<FE>impuissante est dissoute par un liquide.	TRANSLATED
+ODYSSEY-TXT-004020	0x04469BD	89	Its eyes are as transparent as crystals.<FE>From them, it shoots mysterious<FE>beams of light.	FE	86	3	0x120D3B0	Pokedex entry	Ses yeux sont transparents comme<FE>des cristaux. Il en tire de<FE>mystérieux rayons de lumière.	TRANSLATED
+ODYSSEY-TXT-004021	0x0446A17	104	It has 80 tentacles that move about<FE>freely. They can sting, causing poisoning<FE>and sharp, stabbing pain.	FE	101	3	0x120D3D4	Pokedex entry	Il a 80 tentacules qui bougent<FE>librement. Ils peuvent piquer,<FE>causant empoisonnement et douleur aiguë.	TRANSLATED
+ODYSSEY-TXT-004022	0x0446A80	111	Its round form makes it easy to pick up.<FE>Some people have used them to hurl<FE>at each other in a snowball fight.	FE	108	3	0x120D3F8	Pokedex entry	Sa forme ronde le rend facile à<FE>ramasser. Certains l’ont utilisé<FE>pour se le lancer en bataille de boules de neige.	TRANSLATED
+ODYSSEY-TXT-004023	0x0446AAA	69	ome people have used them to hurl<FE>at each other in a snowball fight.	FE	67	2	0x125ADBC	Pokedex entry fragment	…certaines personnes l’ont utilisé<FE>pour se le lancer en bataille de neige.	TRANSLATED
+ODYSSEY-TXT-004024	0x0446AF0	101	Be careful while hiking on mountain trails.<FE>Graveler may come rolling down the path<FE>without slowing.	FE	98	3	0x120D41C	Pokedex entry	Fais attention en randonnant sur<FE>les sentiers de montagne. Un<FE>Gravalanch peut dévaler le chemin sans ralentir.	TRANSLATED
+ODYSSEY-TXT-004025	0x0446B56	109	It is enclosed in a hard shell that is as<FE>rugged as slabs of rock. It sheds skin<FE>once a year to grow larger.	FE	106	3	0x120D440	Pokedex entry	Il est enfermé dans une coquille<FE>dure comme des dalles de roche.<FE>Il mue une fois par an pour grandir.	TRANSLATED
+ODYSSEY-TXT-004026	0x0446C8C	120	It is always vacantly lost in thought, but<FE>no one knows what it is thinking about.<FE>It is good at fishing with its tail.	FE	117	3	0x120D4AC	Pokedex entry	Il est toujours perdu dans ses<FE>pensées, mais personne ne sait à<FE>quoi il pense. Il est doué pour pêcher avec sa queue.	TRANSLATED
+ODYSSEY-TXT-004027	0x0446D05	110	When a Slowpoke went hunting in the sea,<FE>its tail was bitten by a Shellder. That<FE>made it evolve into Slowbro.	FE	107	3	0x120D4D0	Pokedex entry	Quand un Ramoloss est allé pêcher<FE>en mer, sa queue a été mordue par<FE>un Kokiyas. Cela l’a fait évoluer en Flagadoss.	TRANSLATED
+ODYSSEY-TXT-004028	0x0446D74	102	It moves while constantly hovering.<FE>It discharges THUNDER WAVE and so on<FE>from the units at its sides.	FE	99	3	0x120D4F4	Pokedex entry	Il se déplace en flottant constamment.<FE>Il décharge CAGE-ÉCLAIR et autres<FE>capacités depuis les unités sur ses côtés.	TRANSLATED
+ODYSSEY-TXT-004029	0x0446DDB	101	A linked cluster formed of several<FE>Magnemite. It discharges powerful<FE>magnetic waves at high voltage.	FE	98	3	0x120D518	Pokedex entry	Un amas relié formé de plusieurs<FE>Magnéti. Il émet de puissantes<FE>ondes magnétiques à haute tension.	TRANSLATED
+ODYSSEY-TXT-004030	0x0446F16	101	An odd species that is rarely found.<FE>The three heads respectively represent<FE>joy, sadness, and anger.	FE	98	3	0x120D584	Pokedex entry	Une espèce étrange rarement<FE>trouvée. Les trois têtes représentent<FE>respectivement la joie, la tristesse et la colère.	TRANSLATED
+ODYSSEY-TXT-004031	0x0446F7C	118	Covered with light blue fur, its hide is<FE>thick and tough. It is active in bitter<FE>cold of minus 40 degrees Fahrenheit.	FE	115	3	0x120D5A8	Pokedex entry	Couvert d’une fourrure bleu clair,<FE>sa peau est épaisse et robuste.<FE>Il est actif dans un froid glacial de -40 degrés.	TRANSLATED
+ODYSSEY-TXT-004032	0x0446FF3	95	Its body is covered with a pure white<FE>fur. The colder the weather, the more<FE>active it becomes.	FE	92	3	0x120D5CC	Pokedex entry	Son corps est couvert d’une<FE>fourrure d’un blanc pur. Plus il<FE>fait froid, plus il devient actif.	TRANSLATED
+ODYSSEY-TXT-004033	0x0447053	99	Sludge exposed to X rays from the moon<FE>transformed into Grimer. It loves feeding<FE>on filthy things.	FE	96	3	0x120D5F0	Pokedex entry	De la boue exposée aux rayons X<FE>de la lune s’est transformée en<FE>Tadmorv. Il adore se nourrir de choses répugnantes.	TRANSLATED
+ODYSSEY-TXT-004034	0x04470B7	107	It is usually undetectable because it<FE>blends in with the ground. Touching it can<FE>cause terrible poisoning.	FE	104	3	0x120D614	Pokedex entry	Il est généralement indétectable<FE>car il se fond dans le sol. Le<FE>toucher peut causer un empoisonnement terrible.	TRANSLATED
+ODYSSEY-TXT-004035	0x0447123	98	It is encased in a shell that is harder<FE>than diamond. Inside, however, it is<FE>surprisingly tender.	FE	95	3	0x120D638	Pokedex entry	Il est enfermé dans une coquille<FE>plus dure que du diamant.<FE>À l’intérieur, cependant, il est étonnamment tendre.	TRANSLATED
+ODYSSEY-TXT-004036	0x0447186	114	Its shell is extremely hard. It cannot be<FE>shattered, even with a bomb. The shell<FE>opens only when it is attacking.	FE	111	3	0x120D65C	Pokedex entry	Sa coquille est extrêmement dure.<FE>Elle ne peut pas être brisée,<FE>même avec une bombe. Elle ne s’ouvre que pour attaquer.	TRANSLATED
+ODYSSEY-TXT-004037	0x04471F9	107	A being that exists as a thin gas. It can<FE>topple an Indian elephant by enveloping<FE>the prey in two seconds.	FE	104	3	0x120D680	Pokedex entry	Un être qui existe sous forme de<FE>gaz ténu. Il peut terrasser un<FE>éléphant en l’enveloppant en deux secondes.	TRANSLATED
+ODYSSEY-TXT-004038	0x0447265	93	If you get the feeling of being watched<FE>in darkness when nobody is around,<FE>HAUNTER is there.	FE	90	3	0x120D6A4	Pokedex entry	Si tu as l’impression d’être<FE>observé dans le noir alors que<FE>personne n’est là, c’est que SPECTRUM est présent.	TRANSLATED
 ODYSSEY-TXT-004039	0x04472C3	93	It is said to emerge from darkness to<FE>steal the lives of those who become lost<FE>in mountains.	FE	90	3	0x120D6C8	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-004040	0x0447321	113	It usually lives underground. It searches<FE>for food while boring its way through the<FE>ground at 50 miles per hour.	FE	110	3	0x120D6EC	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-004041	0x0447344	78	arches<FE>for food while boring its way through the<FE>ground at 50 miles per hour.	FE	75	3	0x1AA7EE0	UNKNOWN		UNTRANSLATED
