@@ -2,11 +2,13 @@
 # Keep them local only (roms/, build/) and distribute translation
 # work as patches/tools, not as full ROM redistributions.
 *.gba
+*.gba.gz
 *.gbc
 *.gb
 !*.example.gba
 roms/
 build/*.gba
+build/*.gba.gz
 build/*.sha256
 
 # Python
