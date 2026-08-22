@@ -7413,95 +7413,95 @@ ODYSSEY-TXT-007411	0x01B9D04	193	You become the main character to<FE>explore the
 ODYSSEY-TXT-007412	0x01B9E75	148	Visit every city and town, travel every<FE>road, explore every cave, and face<FA>every challenge as you strive to<FA>become the greatest TRAINER of<FA>POKéMON!	FA;FE	143	2	0x045B530	UNKNOWN	Visitez chaque ville et village, parcourez chaque<FE>route, explorez chaque grotte, et affrontez<FA>chaque défi alors que vous cherchez à<FA>devenir le plus grand DRESSEUR de<FA>POKéMON !	TRANSLATED
 ODYSSEY-TXT-007413	0x01B9FCE	89	Some of the obstacles in your way can<FE>be removed once your POKéMON learn<FA>specific moves.	FA;FE	86	2	0x045B538	UNKNOWN	Certains obstacles sur votre chemin peuvent<FE>être supprimés une fois que vos POKéMON apprennent<FA>des capacités spécifiques.	TRANSLATED
 ODYSSEY-TXT-007414	0x01BA027	202	POKéMON are wondrous creatures that<FE>are shrouded in mystery. You may meet<FA>them all over the world…in tall<FA>grass, caves, the sea, and more.<FA>They appear to grow obedient to the<FA>TRAINERS that caught them.	FA;FE	196	2	0x045B53C	UNKNOWN	Les POKéMON sont des créatures merveilleuses qui<FE>sont enveloppées de mystère. Vous pouvez les rencontrer<FA>partout dans le monde…dans les hautes<FA>herbes, les grottes, la mer, et plus encore.<FA>Ils semblent devenir obéissants envers les<FA>DRESSEURS qui les ont attrapés.	TRANSLATED
-ODYSSEY-TXT-007415	0x01BA121	23	Own POKéMON type: DARK		22	1	0x045B54C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007416	0x01BA14C	23	Own POKéMON type: ROCK		22	1	0x045B554	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007417	0x01BA17A	26	Own POKéMON type: PSYCHIC		25	1	0x045B55C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007418	0x01BA1AC	27	Own POKéMON type: FIGHTING		26	1	0x045B564	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007419	0x01BA1DC	24	Own POKéMON type: GRASS		23	1	0x045B56C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007420	0x01BA209	24	Own POKéMON type: GHOST		23	1	0x045B574	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007421	0x01BA234	22	Own POKéMON type: ICE		21	1	0x045B57C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007422	0x01BA260	25	Own POKéMON type: GROUND		24	1	0x045B584	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007423	0x01BA291	27	Own POKéMON type: ELECTRIC		26	1	0x045B58C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007424	0x01BA2C2	25	Own POKéMON type: POISON		24	1	0x045B594	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007425	0x01BA2F1	25	Own POKéMON type: DRAGON		24	1	0x045B59C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007426	0x01BA320	25	Own POKéMON type: NORMAL		24	1	0x045B5A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007427	0x01BA34E	24	Own POKéMON type: STEEL		23	1	0x045B5AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007428	0x01BA37C	25	Own POKéMON type: FLYING		24	1	0x045B5B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007429	0x01BA3A9	23	Own POKéMON type: FIRE		22	1	0x045B5BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007430	0x01BA3D5	24	Own POKéMON type: WATER		23	1	0x045B5C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007431	0x01BA400	22	Own POKéMON type: BUG		21	1	0x045B5CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007432	0x01BC388	63	Trade POKéMON with another player<FE>using a GBA Game Link cable.	FE	61	2	0x03E072C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007433	0x01BC409	57	For a DOUBLE BATTLE, you must<FE>have at least two POKéMON.	FE	55	2	0x01BBD10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007434	0x01BC442	58	For trading, you must have at<FE>least two POKéMON with you.	FE	56	2	0x01BB7C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007435	0x01BCC00	58	No POKéMON holding the <FD:02><FE>BERRY may enter the UNION ROOM.	FD;FE	54	2	0x01BBB54	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007436	0x01BCE73	187	“DODRIO BERRY-PICKING”<FB>Command DODRIO’s three heads to<FE>catch falling BERRIES.<FB>Press right, up, or left on the<FE><F9>Ç Control Pad to move the heads.<FB>To play this game, you must have<FE>a DODRIO.	F9;FB;FE	179	4	0x01BC0BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007437	0x01BD0CF	124	It doesn’t look like you have any<FE>POKéMON that you can enter…<FB>Would you like me to explain what<FE>kinds of POKéMON can enter?	FB;FE	120	3	0x01BC2A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007438	0x01BD898	206	Hello!<FE>My name is TEALA.<FB>This must be your first time<FE>up here.<FB>I’ll show you how the Wireless<FE>Communication System works.<FB>First, I need to show you this<FE>floor of our POKéMON CENTER.<FB>Right this way, please.	FB;FE	197	5	0x01BB424	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007439	0x01BE42B	62	The sea is deep here. A POKéMON<FE>may be able to go underwater.	FE	60	2	0x01BE3CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007440	0x01BF7E4	85	I’m the DAY-CARE LADY.<FB>We can raise POKéMON for you.<FB>Would you like us to raise one?	FB	82	1	0x0171978	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007441	0x01BF8D8	30	ise one<FE>more POKéMON for you?	FE	28	2	0x1A5EC8C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007442	0x01BF988	68	Ah, it’s you!<FE>Good to see you.<FB>Your POKéMON can only be doing<FE>good!	FB;FE	64	3	0x0171A54,0x0171B88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007443	0x01BFA67	30	Perfect!<FE>Here’s your POKéMON.	FE	28	2	0x0171B1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007444	0x01BFAAD	59	Oh? But you have just one<FE>POKéMON.<FB>Come back another time.	FB;FE	56	2	0x0171A1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007445	0x01BFAE8	33	Will you take your POKéMON back?		32	1	0x0171BA4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-007415	0x01BA121	23	Own POKéMON type: DARK		22	1	0x045B54C	UNKNOWN	Type de POKéMON possédé : TÉNÈBRES	TRANSLATED
+ODYSSEY-TXT-007416	0x01BA14C	23	Own POKéMON type: ROCK		22	1	0x045B554	UNKNOWN	Type de POKéMON possédé : ROCHE	TRANSLATED
+ODYSSEY-TXT-007417	0x01BA17A	26	Own POKéMON type: PSYCHIC		25	1	0x045B55C	UNKNOWN	Type de POKéMON possédé : PSY	TRANSLATED
+ODYSSEY-TXT-007418	0x01BA1AC	27	Own POKéMON type: FIGHTING		26	1	0x045B564	UNKNOWN	Type de POKéMON possédé : COMBAT	TRANSLATED
+ODYSSEY-TXT-007419	0x01BA1DC	24	Own POKéMON type: GRASS		23	1	0x045B56C	UNKNOWN	Type de POKéMON possédé : PLANTE	TRANSLATED
+ODYSSEY-TXT-007420	0x01BA209	24	Own POKéMON type: GHOST		23	1	0x045B574	UNKNOWN	Type de POKéMON possédé : SPECTRE	TRANSLATED
+ODYSSEY-TXT-007421	0x01BA234	22	Own POKéMON type: ICE		21	1	0x045B57C	UNKNOWN	Type de POKéMON possédé : GLACE	TRANSLATED
+ODYSSEY-TXT-007422	0x01BA260	25	Own POKéMON type: GROUND		24	1	0x045B584	UNKNOWN	Type de POKéMON possédé : SOL	TRANSLATED
+ODYSSEY-TXT-007423	0x01BA291	27	Own POKéMON type: ELECTRIC		26	1	0x045B58C	UNKNOWN	Type de POKéMON possédé : ÉLECTRIK	TRANSLATED
+ODYSSEY-TXT-007424	0x01BA2C2	25	Own POKéMON type: POISON		24	1	0x045B594	UNKNOWN	Type de POKéMON possédé : POISON	TRANSLATED
+ODYSSEY-TXT-007425	0x01BA2F1	25	Own POKéMON type: DRAGON		24	1	0x045B59C	UNKNOWN	Type de POKéMON possédé : DRAGON	TRANSLATED
+ODYSSEY-TXT-007426	0x01BA320	25	Own POKéMON type: NORMAL		24	1	0x045B5A4	UNKNOWN	Type de POKéMON possédé : NORMAL	TRANSLATED
+ODYSSEY-TXT-007427	0x01BA34E	24	Own POKéMON type: STEEL		23	1	0x045B5AC	UNKNOWN	Type de POKéMON possédé : ACIER	TRANSLATED
+ODYSSEY-TXT-007428	0x01BA37C	25	Own POKéMON type: FLYING		24	1	0x045B5B4	UNKNOWN	Type de POKéMON possédé : VOL	TRANSLATED
+ODYSSEY-TXT-007429	0x01BA3A9	23	Own POKéMON type: FIRE		22	1	0x045B5BC	UNKNOWN	Type de POKéMON possédé : FEU	TRANSLATED
+ODYSSEY-TXT-007430	0x01BA3D5	24	Own POKéMON type: WATER		23	1	0x045B5C4	UNKNOWN	Type de POKéMON possédé : EAU	TRANSLATED
+ODYSSEY-TXT-007431	0x01BA400	22	Own POKéMON type: BUG		21	1	0x045B5CC	UNKNOWN	Type de POKéMON possédé : INSECTE	TRANSLATED
+ODYSSEY-TXT-007432	0x01BC388	63	Trade POKéMON with another player<FE>using a GBA Game Link cable.	FE	61	2	0x03E072C	UNKNOWN	Échangez des POKéMON avec un autre joueur<FE>en utilisant un câble Game Link GBA.	TRANSLATED
+ODYSSEY-TXT-007433	0x01BC409	57	For a DOUBLE BATTLE, you must<FE>have at least two POKéMON.	FE	55	2	0x01BBD10	UNKNOWN	Pour un COMBAT DOUBLE, vous devez<FE>avoir au moins deux POKéMON.	TRANSLATED
+ODYSSEY-TXT-007434	0x01BC442	58	For trading, you must have at<FE>least two POKéMON with you.	FE	56	2	0x01BB7C4	UNKNOWN	Pour échanger, vous devez avoir au<FE>moins deux POKéMON avec vous.	TRANSLATED
+ODYSSEY-TXT-007435	0x01BCC00	58	No POKéMON holding the <FD:02><FE>BERRY may enter the UNION ROOM.	FD;FE	54	2	0x01BBB54	UNKNOWN	Aucun POKéMON tenant la BAIE<FE><FD:02> ne peut entrer dans l’UNION ROOM.	TRANSLATED
+ODYSSEY-TXT-007436	0x01BCE73	187	“DODRIO BERRY-PICKING”<FB>Command DODRIO’s three heads to<FE>catch falling BERRIES.<FB>Press right, up, or left on the<FE><F9>Ç Control Pad to move the heads.<FB>To play this game, you must have<FE>a DODRIO.	F9;FB;FE	179	4	0x01BC0BC	UNKNOWN	“CUEILLETTE DE DODUO”<FB>Commandez aux trois têtes de DODUO pour<FE>attraper les BAIES qui tombent.<FB>Appuyez droite, haut, ou gauche sur la<FE><F9>Ç Croix Directionnelle pour bouger les têtes.<FB>Pour jouer à ce jeu, vous devez avoir<FE>un DODUO.	TRANSLATED
+ODYSSEY-TXT-007437	0x01BD0CF	124	It doesn’t look like you have any<FE>POKéMON that you can enter…<FB>Would you like me to explain what<FE>kinds of POKéMON can enter?	FB;FE	120	3	0x01BC2A8	UNKNOWN	Vous n’avez apparemment aucun<FE>POKéMON que vous pouvez inscrire…<FB>Voulez-vous que je vous explique quelles<FE>sortes de POKéMON peuvent s’inscrire ?	TRANSLATED
+ODYSSEY-TXT-007438	0x01BD898	206	Hello!<FE>My name is TEALA.<FB>This must be your first time<FE>up here.<FB>I’ll show you how the Wireless<FE>Communication System works.<FB>First, I need to show you this<FE>floor of our POKéMON CENTER.<FB>Right this way, please.	FB;FE	197	5	0x01BB424	UNKNOWN	Bonjour !<FE>Je m’appelle TEALA.<FB>Ce doit être votre première fois<FE>ici.<FB>Je vais vous montrer comment fonctionne le<FE>Système de Communication Sans Fil.<FB>D’abord, je dois vous montrer cet<FE>étage de notre POKéMON CENTER.<FB>Par ici, je vous prie.	TRANSLATED
+ODYSSEY-TXT-007439	0x01BE42B	62	The sea is deep here. A POKéMON<FE>may be able to go underwater.	FE	60	2	0x01BE3CC	UNKNOWN	La mer est profonde ici. Un POKéMON<FE>pourrait être capable d’aller sous l’eau.	TRANSLATED
+ODYSSEY-TXT-007440	0x01BF7E4	85	I’m the DAY-CARE LADY.<FB>We can raise POKéMON for you.<FB>Would you like us to raise one?	FB	82	1	0x0171978	UNKNOWN	Je suis la DAME DE LA GARDERIE.<FB>Nous pouvons élever des POKéMON pour vous.<FB>Voulez-vous qu’on en élève un ?	TRANSLATED
+ODYSSEY-TXT-007441	0x01BF8D8	30	ise one<FE>more POKéMON for you?	FE	28	2	0x1A5EC8C	fragment, overlapping pointer	élever un<FE>POKéMON de plus pour vous ?	TRANSLATED
+ODYSSEY-TXT-007442	0x01BF988	68	Ah, it’s you!<FE>Good to see you.<FB>Your POKéMON can only be doing<FE>good!	FB;FE	64	3	0x0171A54,0x0171B88	UNKNOWN	Ah, c’est vous !<FE>Ravi de vous revoir.<FB>Votre POKéMON ne peut être qu’en<FE>bonne forme !	TRANSLATED
+ODYSSEY-TXT-007443	0x01BFA67	30	Perfect!<FE>Here’s your POKéMON.	FE	28	2	0x0171B1C	UNKNOWN	Parfait !<FE>Voici votre POKéMON.	TRANSLATED
+ODYSSEY-TXT-007444	0x01BFAAD	59	Oh? But you have just one<FE>POKéMON.<FB>Come back another time.	FB;FE	56	2	0x0171A1C	UNKNOWN	Oh ? Mais vous n’avez qu’un seul<FE>POKéMON.<FB>Revenez une autre fois.	TRANSLATED
+ODYSSEY-TXT-007445	0x01BFAE8	33	Will you take your POKéMON back?		32	1	0x0171BA4	UNKNOWN	Voulez-vous reprendre votre POKéMON ?	TRANSLATED
 ODYSSEY-TXT-007446	0x01C0B08	3	â!		2	1	0x0B24E30	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-007447	0x01C0DB0	36	It’s crammed full of POKéMON<FE>books.	FE	34	2	0x01A7608	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007448	0x01C0ECB	44	All your item needs fulfilled!<FE>POKéMON MART	FE	42	2	0x01A76E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007449	0x01C0EF8	33	eal your Pokémon!<FE>Pokémon Center	FE	31	2	0x04F8380	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007450	0x01C101C	68	t’s a pretty picture of a POKéMON.<FE>It looks like it’s feeling good.	FE	66	2	0x0E0561C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007451	0x01C1300	56	There’s a POKéMON on TV!<FE>It looks like it’s having fun.	FE	54	2	0x01A7650	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007452	0x01C130A	46	POKéMON on TV!<FE>It looks like it’s having fun.	FE	44	2	0x0AF3340	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007453	0x01C1793	58	You are good at POKéMON, but how<FE>is your chemistry grade?	FE	56	2	0x01AA240	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007454	0x01C1873	55	School is fun, but I still think<FE>POKéMON are fun, too.	FE	53	2	0x01AA2BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007455	0x01C1BDC	30	Go win, my super BUG POKéMON!		29	1	0x01A9DE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007456	0x01C1BFA	85	Wow, you came here again?<FE>Maybe you’re a POKéMANIAC, too?<FA>Want to see my collection?	FA;FE	82	2	0x01AA050	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007457	0x01C1C9A	57	I went out to a POKéMON GYM again.<FB>…But I lost as usual.	FB	55	1	0x01A9FD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007458	0x01C1F40	93	I raised my POKéMON carefully.<FE>They should be ready by now.<FA>This time, they should win, too.	FA;FE	90	2	0x01A9BF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007459	0x01C203B	97	Electricity has always been my<FE>specialty.<FB>I don’t know a thing about POKéMON<FE>of the sea, though.	FB;FE	93	3	0x01AA5B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007460	0x01C23C1	46	I used TMs to teach good moves<FE>to my POKéMON.	FE	44	2	0x01AAA9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007461	0x01C2425	60	Are you using TMs on POKéMON?<FE>Just holding them is useless.	FE	58	2	0x01AAB18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007462	0x01C25D6	37	POKéMON battle, right?<FE>Cool! Rumble!	FE	35	2	0x01AA928	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007463	0x01C26D3	68	When I whistle, bird POKéMON<FE>gather around.<FB>They’re amazingly cute!	FB;FE	65	2	0x01AAD18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007464	0x01C2753	74	Oh, you’re a little cutie!<FE>So like a darling POKéMON!<FA>I remember you now!	FA;FE	71	2	0x01AAC9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007465	0x01C287D	36	Want to play with my POKéMON<FE>again?	FE	34	2	0x01AAD94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007466	0x01C2B5E	62	I leveled up my POKéMON, but it<FE>absolutely won’t evolve. Why?	FE	60	2	0x01AB28C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007467	0x01C2C2B	80	I’ve been checking every grassy<FE>area for new POKéMON.<FB>But it’s not always easy…	FB;FE	77	2	0x01AB384	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007468	0x01C2C2E	77	e been checking every grassy<FE>area for new POKéMON.<FB>But it’s not always easy…	FB;FE	74	2	0x0AC8F68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007469	0x01C2C32	73	en checking every grassy<FE>area for new POKéMON.<FB>But it’s not always easy…	FB;FE	70	2	0x0A898EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007470	0x01C2C44	55	grassy<FE>area for new POKéMON.<FB>But it’s not always easy…	FB;FE	52	2	0x0A07778	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007471	0x01C2E4A	83	You always get to ride your<FE>POKéMON…<FB>It looks so relaxing.<FE>Can I have it if I win?	FB;FE	79	3	0x01AB5F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007472	0x01C2FAE	69	LUC: My big sis taught me all<FE>about POKéMON.<FB>I wonder if I’m better?	FB;FE	66	2	0x01AB6F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007473	0x01C312C	29	I rode my bird POKéMON here.		28	1	0x01AB8E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007474	0x01C31C4	68	CINNABAR, in the west, has a LAB<FE>for POKéMON.<FB>My daddy works there.	FB;FE	65	2	0x01AB86C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007475	0x01C3298	59	I caught my POKéMON at sea.<FE>And that’s where I train them.	FE	57	2	0x01ABAD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007476	0x01C350A	49	My friend has many cute POKéMON.<FE>I’m so jealous!	FE	47	2	0x01A9890	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007477	0x01C357E	62	A POKéMANIAC lives on the cape.<FE>Have you seen his collection?	FE	60	2	0x01A990C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007478	0x01C3B1D	19	Yay, yay!<FE>POKéMON!	FE	17	2	0x01AC04C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007479	0x01C3CF1	86	They’re almost finished making the<FE>pool for my POKéMON.<FB>You must drop in for a visit.	FB;FE	83	2	0x01AC24C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007480	0x01C4166	48	MIA: Hello, POKéMON!<FE>It’s time to battle again!	FE	46	2	0x01AC6C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007481	0x01C42EE	57	Somewhere on this island, peculiar<FE>POKéMON are sleeping.	FE	55	2	0x01AC8B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007482	0x01C43EC	42	I don’t forgive people who abuse<FE>POKéMON!	FE	40	2	0x01ACA3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007483	0x01C44CB	131	It doesn’t matter if you happen to<FE>have the strongest POKéMON…<FB>It doesn’t mean a thing if you don’t<FE>know how to use them properly!	FB;FE	127	3	0x01ACAB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007484	0x01C470A	47	A mystic POKéMON is said to sleep<FE>inside here.	FE	45	2	0x01ACCB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007485	0x01C5C78	142	Hello, there!<FE>Glad to meet you!<FB>Welcome to the world of POKéMON!<FB>My name is OAK.<FB>People affectionately refer to me<FE>as the POKéMON PROFESSOR.<FB>	FB;FE	135	3	0x012F8F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007486	0x01C5D12	57	…is inhabited far and wide by<FE>creatures called POKéMON.<FB>	FB;FE	54	2	0x012FB08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007487	0x01C5D4B	114	For some people, POKéMON are pets.<FE>Others use them for battling.<FB>As for myself…<FB>I study POKéMON as a profession.<FB>	FB;FE	109	2	0x012FB9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007488	0x01C5EF4	117	<FD:01>!<FB>Your very own POKéMON legend is<FE>about to unfold!<FB>A world of dreams and adventures<FE>with POKéMON awaits! Let’s go!	FB;FD;FE	110	3	0x01308C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007489	0x01C5F69	62	POKé DUDE: The speedier of the<FE>battlers gets to attack first.	FE	60	2	0x04791A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007490	0x01C601C	222	My RATTATA reduced the foe’s HP<FE>to zero, so it wins!<FB>The POKéMON that took part in the<FE>battle get EXP. Points.<FB>When a POKéMON collects enough<FE>EXP. Points, it levels up.<FB>Leveling up makes your POKéMON<FE>stronger than before.	FB;FE	214	5	0x04791B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007491	0x01C60FA	96	POKé DUDE: Uh-oh…<FE>My RATTATA has been poisoned…<FB>If a POKéMON is poisoned, it loses<FE>HP steadily.	FB;FE	92	3	0x04791B8,0x04791BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007492	0x01C615A	60	If a POKéMON develops a status<FE>problem, heal it right away.	FE	58	2	0x04791C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007493	0x01C6196	84	Using an item on a POKéMON uses<FE>up one turn, though.<FB>Now, it’s the opponent’s turn!	FB;FE	81	2	0x04791C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007494	0x01C6202	255	POKé DUDE: The move BUBBLE is<FE>a WATER-type attack.<FB>The targeted ODDISH is a<FE>GRASS/POISON-type POKéMON.<FB>The WATER-type attack is absorbed<FE>by the GRASS-type POKéMON…<FB>As a result, the move becomes not<FE>very effective, and inflicts only<FA>half the usual damage.	FA;FB;FE	246	5	0x04791CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007495	0x01C6301	168	Uh-oh, this is not good!<FB>The ABSORB attack you just saw<FE>is a GRASS-type move.<FB>POLIWAG is a WATER-type POKéMON.<FB>So, ABSORB becomes super<FE>effective, doubling the damage.	FB;FE	162	3	0x04791D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007496	0x01C63A9	80	It’s not going to be easy to win<FE>with this matchup…<FB>Let’s try shifting POKéMON!	FB;FE	77	2	0x04791D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007497	0x01C63F9	77	Shifting POKéMON in and out uses<FE>up one turn.<FB>Now, it’s the opponent’s turn.	FB;FE	74	2	0x04791D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007498	0x01C6446	308	BUTTERFREE is a BUG/FLYING-type<FE>POKéMON.<FB>Against this POKéMON, a GRASS-<FE>type attack…<FB>…inflicts only half the usual<FE>damage on a BUG-type POKéMON…<FB>…And, it also causes only half the<FE>damage on a FLYING-type POKéMON.<FB>Therefore, BUTTERFREE, being a<FE>BUG/FLYING POKéMON, only takes<FA>one quarter of the usual damage.	FA;FB;FE	297	6	0x04791DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007499	0x01C657A	189	ODDISH is a GRASS/POISON-type<FE>POKéMON.<FB>A FLYING- or PSYCHIC-type attack<FE>is super effective against it.<FB>One of those types of attacks will<FE>inflict double the usual damage.<FB>Okay, here we go!	FB;FE	182	4	0x04791E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007500	0x01C6645	138	POKé DUDE: When you’re trying to<FE>catch a POKéMON, don’t throw any<FA>POKé BALLS right away.<FB>First, you need to weaken it by<FE>reducing its HP.	FA;FB;FE	133	3	0x04791E8,0x04791EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007501	0x01C6787	196	This will make the POKéMON a lot<FE>easier to catch!<FB>Oh, yes. If you paralyze a<FE>POKéMON, you can’t make it fall<FA>asleep on top of paralysis.<FB>In other words, you can’t double<FE>up status problems, okay?	FA;FB;FE	189	4	0x04791F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007502	0x01C684B	33	Okay!<FE>Let me throw my POKé BALL!	FE	31	2	0x04791F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007503	0x01C686C	126	Before you throw a POKé BALL,<FE>consider the condition and the<FA>type of POKéMON, and pick the kind<FA>of BALL that would work best.	FA;FE	122	2	0x04791FC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-007447	0x01C0DB0	36	It’s crammed full of POKéMON<FE>books.	FE	34	2	0x01A7608	UNKNOWN	C’est bourré de livres<FE>POKéMON.	TRANSLATED
+ODYSSEY-TXT-007448	0x01C0ECB	44	All your item needs fulfilled!<FE>POKéMON MART	FE	42	2	0x01A76E0	UNKNOWN	Tous vos besoins en objets comblés !<FE>POKéMON MART	TRANSLATED
+ODYSSEY-TXT-007449	0x01C0EF8	33	eal your Pokémon!<FE>Pokémon Center	FE	31	2	0x04F8380	fragment, overlapping pointer	soigne votre Pokémon !<FE>Pokémon Center	TRANSLATED
+ODYSSEY-TXT-007450	0x01C101C	68	t’s a pretty picture of a POKéMON.<FE>It looks like it’s feeling good.	FE	66	2	0x0E0561C	UNKNOWN	C’est une jolie photo d’un POKéMON.<FE>On dirait qu’il se sent bien.	TRANSLATED
+ODYSSEY-TXT-007451	0x01C1300	56	There’s a POKéMON on TV!<FE>It looks like it’s having fun.	FE	54	2	0x01A7650	UNKNOWN	Il y a un POKéMON à la télé !<FE>On dirait qu’il s’amuse.	TRANSLATED
+ODYSSEY-TXT-007452	0x01C130A	46	POKéMON on TV!<FE>It looks like it’s having fun.	FE	44	2	0x0AF3340	fragment, overlapping pointer	POKéMON à la télé !<FE>On dirait qu’il s’amuse.	TRANSLATED
+ODYSSEY-TXT-007453	0x01C1793	58	You are good at POKéMON, but how<FE>is your chemistry grade?	FE	56	2	0x01AA240	UNKNOWN	Vous êtes doué aux POKéMON, mais comment<FE>est votre note en chimie ?	TRANSLATED
+ODYSSEY-TXT-007454	0x01C1873	55	School is fun, but I still think<FE>POKéMON are fun, too.	FE	53	2	0x01AA2BC	UNKNOWN	L’école c’est amusant, mais je trouve quand même<FE>les POKéMON amusants, aussi.	TRANSLATED
+ODYSSEY-TXT-007455	0x01C1BDC	30	Go win, my super BUG POKéMON!		29	1	0x01A9DE4	UNKNOWN	Allez, gagne, mon super POKéMON INSECTE !	TRANSLATED
+ODYSSEY-TXT-007456	0x01C1BFA	85	Wow, you came here again?<FE>Maybe you’re a POKéMANIAC, too?<FA>Want to see my collection?	FA;FE	82	2	0x01AA050	UNKNOWN	Waouh, vous revenez encore ici ?<FE>Vous êtes peut-être un POKéMANIAQUE, vous aussi ?<FA>Vous voulez voir ma collection ?	TRANSLATED
+ODYSSEY-TXT-007457	0x01C1C9A	57	I went out to a POKéMON GYM again.<FB>…But I lost as usual.	FB	55	1	0x01A9FD4	UNKNOWN	Je suis retourné dans une ARÈNE POKéMON.<FB>…Mais j’ai encore perdu.	TRANSLATED
+ODYSSEY-TXT-007458	0x01C1F40	93	I raised my POKéMON carefully.<FE>They should be ready by now.<FA>This time, they should win, too.	FA;FE	90	2	0x01A9BF4	UNKNOWN	J’ai élevé mes POKéMON avec soin.<FE>Ils devraient être prêts maintenant.<FA>Cette fois, ils devraient gagner, aussi.	TRANSLATED
+ODYSSEY-TXT-007459	0x01C203B	97	Electricity has always been my<FE>specialty.<FB>I don’t know a thing about POKéMON<FE>of the sea, though.	FB;FE	93	3	0x01AA5B4	UNKNOWN	L’électricité a toujours été ma<FE>spécialité.<FB>Je ne connais rien aux POKéMON<FE>de la mer, par contre.	TRANSLATED
+ODYSSEY-TXT-007460	0x01C23C1	46	I used TMs to teach good moves<FE>to my POKéMON.	FE	44	2	0x01AAA9C	UNKNOWN	J’ai utilisé des CT pour enseigner de bonnes<FE>capacités à mes POKéMON.	TRANSLATED
+ODYSSEY-TXT-007461	0x01C2425	60	Are you using TMs on POKéMON?<FE>Just holding them is useless.	FE	58	2	0x01AAB18	UNKNOWN	Utilisez-vous des CT sur vos POKéMON ?<FE>Les garder juste dans le sac ne sert à rien.	TRANSLATED
+ODYSSEY-TXT-007462	0x01C25D6	37	POKéMON battle, right?<FE>Cool! Rumble!	FE	35	2	0x01AA928	UNKNOWN	Combat POKéMON, hein ?<FE>Cool ! Ça va bastonner !	TRANSLATED
+ODYSSEY-TXT-007463	0x01C26D3	68	When I whistle, bird POKéMON<FE>gather around.<FB>They’re amazingly cute!	FB;FE	65	2	0x01AAD18	UNKNOWN	Quand je siffle, des POKéMON oiseaux<FE>se rassemblent.<FB>Ils sont incroyablement mignons !	TRANSLATED
+ODYSSEY-TXT-007464	0x01C2753	74	Oh, you’re a little cutie!<FE>So like a darling POKéMON!<FA>I remember you now!	FA;FE	71	2	0x01AAC9C	UNKNOWN	Oh, vous êtes tout mignon !<FE>Comme un adorable POKéMON !<FA>Je me souviens de vous maintenant !	TRANSLATED
+ODYSSEY-TXT-007465	0x01C287D	36	Want to play with my POKéMON<FE>again?	FE	34	2	0x01AAD94	UNKNOWN	Vous voulez rejouer avec mon<FE>POKéMON ?	TRANSLATED
+ODYSSEY-TXT-007466	0x01C2B5E	62	I leveled up my POKéMON, but it<FE>absolutely won’t evolve. Why?	FE	60	2	0x01AB28C	UNKNOWN	J’ai fait monter le niveau de mon POKéMON, mais il<FE>refuse absolument d’évoluer. Pourquoi ?	TRANSLATED
+ODYSSEY-TXT-007467	0x01C2C2B	80	I’ve been checking every grassy<FE>area for new POKéMON.<FB>But it’s not always easy…	FB;FE	77	2	0x01AB384	UNKNOWN	Je vérifie chaque zone herbeuse<FE>pour de nouveaux POKéMON.<FB>Mais ce n’est pas toujours facile…	TRANSLATED
+ODYSSEY-TXT-007468	0x01C2C2E	77	e been checking every grassy<FE>area for new POKéMON.<FB>But it’s not always easy…	FB;FE	74	2	0x0AC8F68	fragment, overlapping pointer	je vérifie chaque zone herbeuse<FE>pour de nouveaux POKéMON.<FB>Mais ce n’est pas toujours facile…	TRANSLATED
+ODYSSEY-TXT-007469	0x01C2C32	73	en checking every grassy<FE>area for new POKéMON.<FB>But it’s not always easy…	FB;FE	70	2	0x0A898EC	fragment, overlapping pointer	vérifie chaque zone herbeuse<FE>pour de nouveaux POKéMON.<FB>Mais ce n’est pas toujours facile…	TRANSLATED
+ODYSSEY-TXT-007470	0x01C2C44	55	grassy<FE>area for new POKéMON.<FB>But it’s not always easy…	FB;FE	52	2	0x0A07778	fragment, overlapping pointer	zone herbeuse<FE>pour de nouveaux POKéMON.<FB>Mais ce n’est pas toujours facile…	TRANSLATED
+ODYSSEY-TXT-007471	0x01C2E4A	83	You always get to ride your<FE>POKéMON…<FB>It looks so relaxing.<FE>Can I have it if I win?	FB;FE	79	3	0x01AB5F0	UNKNOWN	Vous avez toujours la chance de chevaucher votre<FE>POKéMON…<FB>Ça a l’air si relaxant.<FE>Je peux l’avoir si je gagne ?	TRANSLATED
+ODYSSEY-TXT-007472	0x01C2FAE	69	LUC: My big sis taught me all<FE>about POKéMON.<FB>I wonder if I’m better?	FB;FE	66	2	0x01AB6F4	UNKNOWN	LUC : Ma grande sœur m’a tout appris<FE>sur les POKéMON.<FB>Je me demande si je suis meilleur ?	TRANSLATED
+ODYSSEY-TXT-007473	0x01C312C	29	I rode my bird POKéMON here.		28	1	0x01AB8E8	UNKNOWN	J’ai chevauché mon POKéMON oiseau jusqu’ici.	TRANSLATED
+ODYSSEY-TXT-007474	0x01C31C4	68	CINNABAR, in the west, has a LAB<FE>for POKéMON.<FB>My daddy works there.	FB;FE	65	2	0x01AB86C	UNKNOWN	L’ÎLE ROUGE, à l’ouest, a un LABO<FE>pour POKéMON.<FB>Mon papa y travaille.	TRANSLATED
+ODYSSEY-TXT-007475	0x01C3298	59	I caught my POKéMON at sea.<FE>And that’s where I train them.	FE	57	2	0x01ABAD8	UNKNOWN	J’ai attrapé mon POKéMON en mer.<FE>Et c’est là que je les entraîne.	TRANSLATED
+ODYSSEY-TXT-007476	0x01C350A	49	My friend has many cute POKéMON.<FE>I’m so jealous!	FE	47	2	0x01A9890	UNKNOWN	Mon ami a beaucoup de POKéMON mignons.<FE>Je suis tellement jalouse !	TRANSLATED
+ODYSSEY-TXT-007477	0x01C357E	62	A POKéMANIAC lives on the cape.<FE>Have you seen his collection?	FE	60	2	0x01A990C	UNKNOWN	Un POKéMANIAQUE vit sur le cap.<FE>Avez-vous vu sa collection ?	TRANSLATED
+ODYSSEY-TXT-007478	0x01C3B1D	19	Yay, yay!<FE>POKéMON!	FE	17	2	0x01AC04C	UNKNOWN	Yay, yay !<FE>POKéMON !	TRANSLATED
+ODYSSEY-TXT-007479	0x01C3CF1	86	They’re almost finished making the<FE>pool for my POKéMON.<FB>You must drop in for a visit.	FB;FE	83	2	0x01AC24C	UNKNOWN	Ils ont presque fini de construire la<FE>piscine pour mon POKéMON.<FB>Il faut absolument passer voir.	TRANSLATED
+ODYSSEY-TXT-007480	0x01C4166	48	MIA: Hello, POKéMON!<FE>It’s time to battle again!	FE	46	2	0x01AC6C4	UNKNOWN	MIA : Bonjour, POKéMON !<FE>C’est l’heure de combattre à nouveau !	TRANSLATED
+ODYSSEY-TXT-007481	0x01C42EE	57	Somewhere on this island, peculiar<FE>POKéMON are sleeping.	FE	55	2	0x01AC8B8	UNKNOWN	Quelque part sur cette île, des POKéMON<FE>étranges dorment.	TRANSLATED
+ODYSSEY-TXT-007482	0x01C43EC	42	I don’t forgive people who abuse<FE>POKéMON!	FE	40	2	0x01ACA3C	UNKNOWN	Je ne pardonne pas aux gens qui maltraitent<FE>les POKéMON !	TRANSLATED
+ODYSSEY-TXT-007483	0x01C44CB	131	It doesn’t matter if you happen to<FE>have the strongest POKéMON…<FB>It doesn’t mean a thing if you don’t<FE>know how to use them properly!	FB;FE	127	3	0x01ACAB8	UNKNOWN	Peu importe que vous ayez<FE>le POKéMON le plus fort…<FB>Ça ne veut rien dire si vous ne savez pas<FE>comment bien vous en servir !	TRANSLATED
+ODYSSEY-TXT-007484	0x01C470A	47	A mystic POKéMON is said to sleep<FE>inside here.	FE	45	2	0x01ACCB8	UNKNOWN	On dit qu’un POKéMON mystique dort<FE>ici à l’intérieur.	TRANSLATED
+ODYSSEY-TXT-007485	0x01C5C78	142	Hello, there!<FE>Glad to meet you!<FB>Welcome to the world of POKéMON!<FB>My name is OAK.<FB>People affectionately refer to me<FE>as the POKéMON PROFESSOR.<FB>	FB;FE	135	3	0x012F8F0	UNKNOWN	Bonjour !<FE>Ravi de vous rencontrer !<FB>Bienvenue dans le monde des POKéMON !<FB>Je m’appelle CHEN.<FB>Les gens m’appellent affectueusement<FE>le PROFESSEUR POKéMON.<FB>	TRANSLATED
+ODYSSEY-TXT-007486	0x01C5D12	57	…is inhabited far and wide by<FE>creatures called POKéMON.<FB>	FB;FE	54	2	0x012FB08	UNKNOWN	…est habité de tous côtés par des<FE>créatures appelées POKéMON.<FB>	TRANSLATED
+ODYSSEY-TXT-007487	0x01C5D4B	114	For some people, POKéMON are pets.<FE>Others use them for battling.<FB>As for myself…<FB>I study POKéMON as a profession.<FB>	FB;FE	109	2	0x012FB9C	UNKNOWN	Pour certaines personnes, les POKéMON sont des animaux de compagnie.<FE>D’autres les utilisent pour combattre.<FB>Quant à moi…<FB>J’étudie les POKéMON en tant que profession.<FB>	TRANSLATED
+ODYSSEY-TXT-007488	0x01C5EF4	117	<FD:01>!<FB>Your very own POKéMON legend is<FE>about to unfold!<FB>A world of dreams and adventures<FE>with POKéMON awaits! Let’s go!	FB;FD;FE	110	3	0x01308C4	UNKNOWN	<FD:01> !<FB>Votre toute propre légende POKéMON est<FE>sur le point de commencer !<FB>Un monde de rêves et d’aventures<FE>avec les POKéMON vous attend ! Allons-y !	TRANSLATED
+ODYSSEY-TXT-007489	0x01C5F69	62	POKé DUDE: The speedier of the<FE>battlers gets to attack first.	FE	60	2	0x04791A8	UNKNOWN	TYPE POKé : Le plus rapide des<FE>combattants attaque en premier.	TRANSLATED
+ODYSSEY-TXT-007490	0x01C601C	222	My RATTATA reduced the foe’s HP<FE>to zero, so it wins!<FB>The POKéMON that took part in the<FE>battle get EXP. Points.<FB>When a POKéMON collects enough<FE>EXP. Points, it levels up.<FB>Leveling up makes your POKéMON<FE>stronger than before.	FB;FE	214	5	0x04791B4	UNKNOWN	Mon RATTATA a réduit les PV de l’ennemi<FE>à zéro, donc il gagne !<FB>Les POKéMON qui ont pris part au<FE>combat reçoivent des Points d’Exp.<FB>Quand un POKéMON accumule assez de<FE>Points d’Exp., il monte de niveau.<FB>Monter de niveau rend votre POKéMON<FE>plus fort qu’avant.	TRANSLATED
+ODYSSEY-TXT-007491	0x01C60FA	96	POKé DUDE: Uh-oh…<FE>My RATTATA has been poisoned…<FB>If a POKéMON is poisoned, it loses<FE>HP steadily.	FB;FE	92	3	0x04791B8,0x04791BC	UNKNOWN	TYPE POKé : Oh-oh…<FE>Mon RATTATA a été empoisonné…<FB>Si un POKéMON est empoisonné, il perd<FE>des PV petit à petit.	TRANSLATED
+ODYSSEY-TXT-007492	0x01C615A	60	If a POKéMON develops a status<FE>problem, heal it right away.	FE	58	2	0x04791C0	UNKNOWN	Si un POKéMON développe un problème<FE>de statut, soignez-le tout de suite.	TRANSLATED
+ODYSSEY-TXT-007493	0x01C6196	84	Using an item on a POKéMON uses<FE>up one turn, though.<FB>Now, it’s the opponent’s turn!	FB;FE	81	2	0x04791C4	UNKNOWN	Utiliser un objet sur un POKéMON prend<FE>un tour, cependant.<FB>Maintenant, c’est au tour de l’adversaire !	TRANSLATED
+ODYSSEY-TXT-007494	0x01C6202	255	POKé DUDE: The move BUBBLE is<FE>a WATER-type attack.<FB>The targeted ODDISH is a<FE>GRASS/POISON-type POKéMON.<FB>The WATER-type attack is absorbed<FE>by the GRASS-type POKéMON…<FB>As a result, the move becomes not<FE>very effective, and inflicts only<FA>half the usual damage.	FA;FB;FE	246	5	0x04791CC	UNKNOWN	TYPE POKé : La capacité BULLE D’O est<FE>une attaque de type EAU.<FB>La cible, ORTIDE, est un POKéMON<FE>de type PLANTE/POISON.<FB>L’attaque de type EAU est absorbée<FE>par le POKéMON de type PLANTE…<FB>En conséquence, la capacité devient peu<FE>efficace, et n’inflige que la<FA>moitié des dégâts habituels.	TRANSLATED
+ODYSSEY-TXT-007495	0x01C6301	168	Uh-oh, this is not good!<FB>The ABSORB attack you just saw<FE>is a GRASS-type move.<FB>POLIWAG is a WATER-type POKéMON.<FB>So, ABSORB becomes super<FE>effective, doubling the damage.	FB;FE	162	3	0x04791D0	UNKNOWN	Oh-oh, ce n’est pas bon !<FB>L’attaque ABSORPTION que vous venez de voir<FE>est une capacité de type PLANTE.<FB>TÊTARENOIR est un POKéMON de type EAU.<FB>Donc, ABSORPTION devient super<FE>efficace, doublant les dégâts.	TRANSLATED
+ODYSSEY-TXT-007496	0x01C63A9	80	It’s not going to be easy to win<FE>with this matchup…<FB>Let’s try shifting POKéMON!	FB;FE	77	2	0x04791D4	UNKNOWN	Ça ne va pas être facile de gagner<FE>avec cette confrontation…<FB>Essayons de changer de POKéMON !	TRANSLATED
+ODYSSEY-TXT-007497	0x01C63F9	77	Shifting POKéMON in and out uses<FE>up one turn.<FB>Now, it’s the opponent’s turn.	FB;FE	74	2	0x04791D8	UNKNOWN	Changer de POKéMON en cours de combat prend<FE>un tour.<FB>Maintenant, c’est au tour de l’adversaire.	TRANSLATED
+ODYSSEY-TXT-007498	0x01C6446	308	BUTTERFREE is a BUG/FLYING-type<FE>POKéMON.<FB>Against this POKéMON, a GRASS-<FE>type attack…<FB>…inflicts only half the usual<FE>damage on a BUG-type POKéMON…<FB>…And, it also causes only half the<FE>damage on a FLYING-type POKéMON.<FB>Therefore, BUTTERFREE, being a<FE>BUG/FLYING POKéMON, only takes<FA>one quarter of the usual damage.	FA;FB;FE	297	6	0x04791DC	UNKNOWN	PAPILUSION est un POKéMON de type<FE>INSECTE/VOL.<FB>Contre ce POKéMON, une attaque de type<FE>PLANTE…<FB>…n’inflige que la moitié des<FE>dégâts habituels sur un POKéMON de type INSECTE…<FB>…Et cela cause aussi seulement la moitié des<FE>dégâts sur un POKéMON de type VOL.<FB>Donc, PAPILUSION, étant un POKéMON<FE>INSECTE/VOL, ne subit qu’un<FA>quart des dégâts habituels.	TRANSLATED
+ODYSSEY-TXT-007499	0x01C657A	189	ODDISH is a GRASS/POISON-type<FE>POKéMON.<FB>A FLYING- or PSYCHIC-type attack<FE>is super effective against it.<FB>One of those types of attacks will<FE>inflict double the usual damage.<FB>Okay, here we go!	FB;FE	182	4	0x04791E0	UNKNOWN	ORTIDE est un POKéMON de type<FE>PLANTE/POISON.<FB>Une attaque de type VOL ou PSY<FE>est super efficace contre lui.<FB>L’un de ces types d’attaques<FE>infligera le double des dégâts habituels.<FB>D’accord, c’est parti !	TRANSLATED
+ODYSSEY-TXT-007500	0x01C6645	138	POKé DUDE: When you’re trying to<FE>catch a POKéMON, don’t throw any<FA>POKé BALLS right away.<FB>First, you need to weaken it by<FE>reducing its HP.	FA;FB;FE	133	3	0x04791E8,0x04791EC	UNKNOWN	TYPE POKé : Quand vous essayez<FE>d’attraper un POKéMON, ne lancez pas<FA>de POKé BALLS tout de suite.<FB>D’abord, vous devez l’affaiblir en<FE>réduisant ses PV.	TRANSLATED
+ODYSSEY-TXT-007501	0x01C6787	196	This will make the POKéMON a lot<FE>easier to catch!<FB>Oh, yes. If you paralyze a<FE>POKéMON, you can’t make it fall<FA>asleep on top of paralysis.<FB>In other words, you can’t double<FE>up status problems, okay?	FA;FB;FE	189	4	0x04791F4	UNKNOWN	Cela rendra le POKéMON beaucoup plus<FE>facile à attraper !<FB>Oh, oui. Si vous paralysez un<FE>POKéMON, vous ne pouvez pas le faire<FA>tomber endormi en plus de la paralysie.<FB>En d’autres termes, vous ne pouvez pas<FE>cumuler les problèmes de statut, d’accord ?	TRANSLATED
+ODYSSEY-TXT-007502	0x01C684B	33	Okay!<FE>Let me throw my POKé BALL!	FE	31	2	0x04791F8	UNKNOWN	D’accord !<FE>Laissez-moi lancer ma POKé BALL !	TRANSLATED
+ODYSSEY-TXT-007503	0x01C686C	126	Before you throw a POKé BALL,<FE>consider the condition and the<FA>type of POKéMON, and pick the kind<FA>of BALL that would work best.	FA;FE	122	2	0x04791FC	UNKNOWN	Avant de lancer une POKé BALL,<FE>considérez l’état et le<FA>type du POKéMON, et choisissez le genre<FA>de BALL qui fonctionnerait le mieux.	TRANSLATED
 ODYSSEY-TXT-007504	0x01CF002	5	ËÂÇ<FB>	FB	3	1	0x0B2EB5C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-007505	0x01D8EA4	2	Ù		1	1	0x0017798	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-007506	0x01DB12E	2	Ç		1	1	0x01DB0A0,0x01DB0B4,0x01DB0F4	UNKNOWN		SKIP_NOISE
@@ -7530,8 +7530,8 @@ ODYSSEY-TXT-007528	0x023A4F0	25	  Î R     Î 6     Ï ôÀ  		24	1	0x023FA64	UN
 ODYSSEY-TXT-007529	0x024F010	22	 À F Ë   À F û    È <FE>	FE	20	2	0x025DF0C,0x025DF3C	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-007530	0x024F018	14	 À F û    È <FE>	FE	12	2	0x025DEF4,0x025DF24,0x025DF54,0x025DF6C,0x025DF84,0x025DF9C,0x025DFB4,0x025DFCC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-007531	0x024F020	6	  È <FE>	FE	4	2	0x024F028	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-007532	0x024F3D8	26	Helps repel wild Pokémon.		25	1	0x024FB0C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007533	0x024F795	26	Traps Steel-type Pokémon.		25	1	0x024FBB0,0x10B8BB8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-007532	0x024F3D8	26	Helps repel wild Pokémon.		25	1	0x024FB0C	Item description	Repousse les Pokémon sauvages.	TRANSLATED
+ODYSSEY-TXT-007533	0x024F795	26	Traps Steel-type Pokémon.		25	1	0x024FBB0,0x10B8BB8	Item description	Piège les Pokémon de type Acier.	TRANSLATED
 ODYSSEY-TXT-007534	0x025009C	4	âïû		3	1	0x001A56C,0x001B214,0x001C8C8,0x001CD70,0x02500D4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-007535	0x02509A4	13	  Ç Ç Ç Ë Ç 		12	1	0x02509E4	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-007536	0x02509D4	13	  J Ç J Ë J 		12	1	0x02509F0	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
@@ -7743,56 +7743,56 @@ ODYSSEY-TXT-007741	0x03D40A0	10	  ë   ë <FE>	FE	8	2	0x03D40BC	UNKNOWN		SKIP_NO
 ODYSSEY-TXT-007742	0x03D418C	9	  È F   		8	1	0x03D419C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-007743	0x03D41A4	9	 À À    		8	1	0x03D41DC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-007744	0x03D4224	5	Ç   		4	1	0x03D4238	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-007745	0x03D4ECC	90	The best Ball with the ultimate<FE>performance. It will catch any wild<FE>Pokémon without fail.	FE	87	3	0x03DB068	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007746	0x03D4F26	82	A very high-grade Ball that offers<FE>a higher Pokémon catch rate than<FE>a Great Ball.	FE	79	3	0x03DB094	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007747	0x03D4F78	88	A good, quality Ball that offers<FE>a higher Pokémon catch rate than<FE>a standard Poké Ball.	FE	85	3	0x03DB0C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007748	0x03D4FD0	74	A Ball thrown to catch a wild<FE>Pokémon. It is designed in a<FE>capsule style.	FE	71	3	0x03DB0EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007749	0x03D5077	85	A somewhat different Ball that<FE>works especially well on Water- and<FE>Bug-type Pokémon.	FE	82	3	0x03DB144	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007750	0x03D50CC	81	A somewhat different BALL that<FE>works especially well on POKéMON<FE>deep in the sea.	FE	78	3	0x03DB170	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007751	0x03D511D	72	A somewhat different Ball that<FE>works especially well on weaker<FE>Pokémon.	FE	69	3	0x03DB19C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007752	0x03D5165	79	A somewhat different Ball that<FE>works especially well on Pokémon<FE>caught before.	FE	76	3	0x03DB1C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007753	0x03D5216	77	A comfortable Ball that makes a<FE>captured wild Pokémon quickly grow<FE>friendly.	FE	74	3	0x03DB220	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007754	0x03D52FF	62	A spray-type medicine.<FE>It heals one Pokémon from a<FE>poisoning.	FE	59	3	0x03DB2A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007755	0x03D533D	55	A spray-type medicine.<FE>It heals one Pokémon of a burn.	FE	53	2	0x03DB2D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007756	0x03D53A9	54	A spray-type medicine.<FE>It awakens a sleeping Pokémon.	FE	52	2	0x03DB328	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007757	0x03D53DF	60	A spray-type medicine.<FE>It heals one Pokémon from<FE>paralysis.	FE	57	3	0x03DB354	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007758	0x03D55EC	63	Revival elixir made of honey.<FE>Fully revives a Pokémon.        	FE	61	2	0x03DB488	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007759	0x03D574F	79	A very bitter medicine powder.<FE>It restores the HP of one POKéMON<FE>by 50 points.	FE	76	3	0x03DB564	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007760	0x03D579E	69	A very bitter root.<FE>It restores the HP of one POKéMON<FE>by 200 points.	FE	66	3	0x03DB590	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007761	0x03D57E3	80	A very bitter medicine powder.<FE>It heals all the status problems of<FE>one POKéMON.	FE	77	3	0x03DB5BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007762	0x03D5833	80	A very bitter medicinal herb.<FE>It revives a fainted POKéMON,<FE>restoring HP fully.	FE	77	3	0x03DB5E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007763	0x03D5883	60	Restores a selected move’s PP by<FE>10 points for one Pokémon.	FE	58	2	0x03DB614	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007764	0x03D58BF	53	Fully restores a selected move’s PP<FE>for one Pokémon.	FE	51	2	0x03DB640	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007765	0x03D58F4	64	Restores the PP of all moves for<FE>one Pokémon by 10 points each.	FE	62	2	0x03DB66C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007766	0x03D5934	52	Fully restores the PP of all moves<FE>for one Pokémon.	FE	50	2	0x03DB698	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007767	0x03D5968	83	LAVARIDGE TOWN’s local specialty.<FE>It heals all the status problems of<FE>one POKéMON.	FE	80	3	0x03DB6C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007768	0x03D59BB	52	A blue glass flute that awakens<FE>a sleeping POKéMON.	FE	50	2	0x03DB6F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007769	0x03D59EF	62	A yellow glass flute that snaps one<FE>POKéMON out of confusion.	FE	60	2	0x03DB71C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007770	0x03D5A2D	61	A red glass flute that snaps one<FE>POKéMON out of infatuation.	FE	59	2	0x03DB748	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007771	0x03D5A6A	78	A black glass flute.<FE>When blown, it makes wild POKéMON<FE>less likely to appear.	FE	75	3	0x03DB774	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007772	0x03D5AB8	78	A white glass flute.<FE>When blown, it makes wild POKéMON<FE>more likely to appear.	FE	75	3	0x03DB7A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007773	0x03D5B49	49	Revives all fainted POKéMON,<FE>restoring HP fully.	FE	47	2	0x03DB7F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007774	0x03D5D50	76	A nutritious drink for Pokémon.<FE>It raises the base HP of one<FE>Pokémon by 20.	FE	73	3	0x03DBB10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007775	0x03D5F20	67	Slightly raises the maximum PP of<FE>a selected move for one Pokémon.	FE	65	2	0x03DBC18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007776	0x03D5FB3	71	Raises the PP of a selected move<FE>to its maximum level for one<FE>Pokémon.	FE	68	3	0x03DBC70	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007777	0x03D5FFA	83	An item that prevents stat reduction<FE>among party POKéMON for five turns<FE>after use.	FE	80	3	0x03DBCC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007778	0x03D604D	91	Raises the critical-hit ratio of<FE>POKéMON in battle. Wears off if the<FE>POKéMON is withdrawn.	FE	88	3	0x03DBCF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007779	0x03D60A8	84	Raises the ATTACK stat of POKéMON<FE>in battle. Wears off if the POKéMON<FE>is withdrawn.	FE	81	3	0x03DBD20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007780	0x03D60FC	85	Raises the DEFENSE stat of POKéMON<FE>in battle. Wears off if the POKéMON<FE>is withdrawn.	FE	82	3	0x03DBD4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007781	0x03D6151	83	Raises the SPEED stat of POKéMON<FE>in battle. Wears off if the POKéMON<FE>is withdrawn.	FE	80	3	0x03DBD78	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007782	0x03D61A4	86	Raises the accuracy stat of<FE>POKéMON in battle. Wears off if the<FE>POKéMON is withdrawn.	FE	83	3	0x03DBDA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007783	0x03D61FA	85	Raises the SP. ATK stat of<FE>POKéMON in battle. Wears off if the<FE>POKéMON is withdrawn.	FE	82	3	0x03DBDD0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007784	0x03D624F	72	An attractive doll.<FE>Use it to flee from any battle with<FE>a wild POKéMON.	FE	69	3	0x03DBDFC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007785	0x03D6297	72	An attractive item.<FE>Use it to flee from any battle with<FE>a wild POKéMON.	FE	69	3	0x03DBE28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007786	0x03D62DF	57	Prevents weak wild Pokémon from<FE>appearing for 200 steps.	FE	55	2	0x03DBE80	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007787	0x03D6318	57	Prevents weak wild Pokémon from<FE>appearing for 250 steps.	FE	55	2	0x03DBEAC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007788	0x03D639C	57	Prevents weak wild Pokémon from<FE>appearing for 100 steps.	FE	55	2	0x03DBF04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007789	0x03D63D5	88	A peculiar stone that makes certain<FE>species of Pokémon evolve.                         	FE	86	2	0x03DC038	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007790	0x03D642D	96	A peculiar stone that makes certain<FE>species of Pokémon evolve.                                 	FE	94	2	0x03DC064	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007791	0x03D648D	85	A peculiar stone that makes certain<FE>species of Pokémon evolve.                      	FE	83	2	0x03DC090	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007792	0x03D64E2	93	A peculiar stone that makes certain<FE>species of Pokémon evolve.                              	FE	91	2	0x03DC0BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007793	0x03D653F	89	A peculiar stone that makes certain<FE>species of Pokémon evolve.                          	FE	87	2	0x03DC0E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-007794	0x03D6598	86	A peculiar stone that makes certain<FE>species of Pokémon evolve.                       	FE	84	2	0x03DC114	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-007745	0x03D4ECC	90	The best Ball with the ultimate<FE>performance. It will catch any wild<FE>Pokémon without fail.	FE	87	3	0x03DB068	Item description	La meilleure Ball avec les meilleures<FE>performances. Elle attrapera n’importe quel<FE>Pokémon sauvage à coup sûr.	TRANSLATED
+ODYSSEY-TXT-007746	0x03D4F26	82	A very high-grade Ball that offers<FE>a higher Pokémon catch rate than<FE>a Great Ball.	FE	79	3	0x03DB094	Item description	Une Ball de très haute qualité qui offre<FE>un taux de capture plus élevé qu’une<FE>Super Ball.	TRANSLATED
+ODYSSEY-TXT-007747	0x03D4F78	88	A good, quality Ball that offers<FE>a higher Pokémon catch rate than<FE>a standard Poké Ball.	FE	85	3	0x03DB0C0	Item description	Une Ball de bonne qualité qui offre<FE>un taux de capture plus élevé qu’une<FE>Poké Ball standard.	TRANSLATED
+ODYSSEY-TXT-007748	0x03D4FD0	74	A Ball thrown to catch a wild<FE>Pokémon. It is designed in a<FE>capsule style.	FE	71	3	0x03DB0EC	Item description	Une Ball lancée pour attraper un<FE>Pokémon sauvage. Elle est conçue dans un<FE>style capsule.	TRANSLATED
+ODYSSEY-TXT-007749	0x03D5077	85	A somewhat different Ball that<FE>works especially well on Water- and<FE>Bug-type Pokémon.	FE	82	3	0x03DB144	Item description	Une Ball quelque peu différente qui<FE>fonctionne particulièrement bien sur les Pokémon<FE>de type Eau et Insecte.	TRANSLATED
+ODYSSEY-TXT-007750	0x03D50CC	81	A somewhat different BALL that<FE>works especially well on POKéMON<FE>deep in the sea.	FE	78	3	0x03DB170	Item description	Une BALL quelque peu différente qui<FE>fonctionne particulièrement bien sur les POKéMON<FE>des profondeurs marines.	TRANSLATED
+ODYSSEY-TXT-007751	0x03D511D	72	A somewhat different Ball that<FE>works especially well on weaker<FE>Pokémon.	FE	69	3	0x03DB19C	Item description	Une Ball quelque peu différente qui<FE>fonctionne particulièrement bien sur les Pokémon<FE>plus faibles.	TRANSLATED
+ODYSSEY-TXT-007752	0x03D5165	79	A somewhat different Ball that<FE>works especially well on Pokémon<FE>caught before.	FE	76	3	0x03DB1C8	Item description	Une Ball quelque peu différente qui<FE>fonctionne particulièrement bien sur les Pokémon<FE>déjà rencontrés.	TRANSLATED
+ODYSSEY-TXT-007753	0x03D5216	77	A comfortable Ball that makes a<FE>captured wild Pokémon quickly grow<FE>friendly.	FE	74	3	0x03DB220	Item description	Une Ball confortable qui rend<FE>un Pokémon sauvage capturé rapidement<FE>amical.	TRANSLATED
+ODYSSEY-TXT-007754	0x03D52FF	62	A spray-type medicine.<FE>It heals one Pokémon from a<FE>poisoning.	FE	59	3	0x03DB2A4	Item description	Un médicament de type spray.<FE>Il soigne un Pokémon d’un<FE>empoisonnement.	TRANSLATED
+ODYSSEY-TXT-007755	0x03D533D	55	A spray-type medicine.<FE>It heals one Pokémon of a burn.	FE	53	2	0x03DB2D0	Item description	Un médicament de type spray.<FE>Il soigne un Pokémon d’une brûlure.	TRANSLATED
+ODYSSEY-TXT-007756	0x03D53A9	54	A spray-type medicine.<FE>It awakens a sleeping Pokémon.	FE	52	2	0x03DB328	Item description	Un médicament de type spray.<FE>Il réveille un Pokémon endormi.	TRANSLATED
+ODYSSEY-TXT-007757	0x03D53DF	60	A spray-type medicine.<FE>It heals one Pokémon from<FE>paralysis.	FE	57	3	0x03DB354	Item description	Un médicament de type spray.<FE>Il soigne un Pokémon d’une<FE>paralysie.	TRANSLATED
+ODYSSEY-TXT-007758	0x03D55EC	63	Revival elixir made of honey.<FE>Fully revives a Pokémon.        	FE	61	2	0x03DB488	Item description	Élixir de résurrection fait de miel.<FE>Ranime entièrement un Pokémon.	TRANSLATED
+ODYSSEY-TXT-007759	0x03D574F	79	A very bitter medicine powder.<FE>It restores the HP of one POKéMON<FE>by 50 points.	FE	76	3	0x03DB564	Item description	Une poudre médicinale très amère.<FE>Elle restaure les PV d’un POKéMON<FE>de 50 points.	TRANSLATED
+ODYSSEY-TXT-007760	0x03D579E	69	A very bitter root.<FE>It restores the HP of one POKéMON<FE>by 200 points.	FE	66	3	0x03DB590	Item description	Une racine très amère.<FE>Elle restaure les PV d’un POKéMON<FE>de 200 points.	TRANSLATED
+ODYSSEY-TXT-007761	0x03D57E3	80	A very bitter medicine powder.<FE>It heals all the status problems of<FE>one POKéMON.	FE	77	3	0x03DB5BC	Item description	Une poudre médicinale très amère.<FE>Elle soigne tous les problèmes de statut d’un<FE>POKéMON.	TRANSLATED
+ODYSSEY-TXT-007762	0x03D5833	80	A very bitter medicinal herb.<FE>It revives a fainted POKéMON,<FE>restoring HP fully.	FE	77	3	0x03DB5E8	Item description	Une herbe médicinale très amère.<FE>Elle ranime un POKéMON évanoui,<FE>en restaurant entièrement ses PV.	TRANSLATED
+ODYSSEY-TXT-007763	0x03D5883	60	Restores a selected move’s PP by<FE>10 points for one Pokémon.	FE	58	2	0x03DB614	Item description	Restaure les PP d’une capacité<FE>sélectionnée de 10 points pour un Pokémon.	TRANSLATED
+ODYSSEY-TXT-007764	0x03D58BF	53	Fully restores a selected move’s PP<FE>for one Pokémon.	FE	51	2	0x03DB640	Item description	Restaure entièrement les PP d’une capacité<FE>sélectionnée pour un Pokémon.	TRANSLATED
+ODYSSEY-TXT-007765	0x03D58F4	64	Restores the PP of all moves for<FE>one Pokémon by 10 points each.	FE	62	2	0x03DB66C	Item description	Restaure les PP de toutes les capacités<FE>d’un Pokémon de 10 points chacune.	TRANSLATED
+ODYSSEY-TXT-007766	0x03D5934	52	Fully restores the PP of all moves<FE>for one Pokémon.	FE	50	2	0x03DB698	Item description	Restaure entièrement les PP de toutes les capacités<FE>d’un Pokémon.	TRANSLATED
+ODYSSEY-TXT-007767	0x03D5968	83	LAVARIDGE TOWN’s local specialty.<FE>It heals all the status problems of<FE>one POKéMON.	FE	80	3	0x03DB6C4	Item description	Spécialité locale de LAVACAILLE.<FE>Elle soigne tous les problèmes de statut d’un<FE>POKéMON.	TRANSLATED
+ODYSSEY-TXT-007768	0x03D59BB	52	A blue glass flute that awakens<FE>a sleeping POKéMON.	FE	50	2	0x03DB6F0	Item description	Une flûte de verre bleue qui réveille<FE>un POKéMON endormi.	TRANSLATED
+ODYSSEY-TXT-007769	0x03D59EF	62	A yellow glass flute that snaps one<FE>POKéMON out of confusion.	FE	60	2	0x03DB71C	Item description	Une flûte de verre jaune qui sort un<FE>POKéMON de la confusion.	TRANSLATED
+ODYSSEY-TXT-007770	0x03D5A2D	61	A red glass flute that snaps one<FE>POKéMON out of infatuation.	FE	59	2	0x03DB748	Item description	Une flûte de verre rouge qui sort un<FE>POKéMON de l’infatuation.	TRANSLATED
+ODYSSEY-TXT-007771	0x03D5A6A	78	A black glass flute.<FE>When blown, it makes wild POKéMON<FE>less likely to appear.	FE	75	3	0x03DB774	Item description	Une flûte de verre noire.<FE>Une fois soufflée, elle rend l’apparition de POKéMON<FE>sauvages moins probable.	TRANSLATED
+ODYSSEY-TXT-007772	0x03D5AB8	78	A white glass flute.<FE>When blown, it makes wild POKéMON<FE>more likely to appear.	FE	75	3	0x03DB7A0	Item description	Une flûte de verre blanche.<FE>Une fois soufflée, elle rend l’apparition de POKéMON<FE>sauvages plus probable.	TRANSLATED
+ODYSSEY-TXT-007773	0x03D5B49	49	Revives all fainted POKéMON,<FE>restoring HP fully.	FE	47	2	0x03DB7F8	Item description	Ranime tous les POKéMON évanouis,<FE>en restaurant entièrement leurs PV.	TRANSLATED
+ODYSSEY-TXT-007774	0x03D5D50	76	A nutritious drink for Pokémon.<FE>It raises the base HP of one<FE>Pokémon by 20.	FE	73	3	0x03DBB10	Item description	Une boisson nutritive pour Pokémon.<FE>Elle augmente les PV de base d’un<FE>Pokémon de 20.	TRANSLATED
+ODYSSEY-TXT-007775	0x03D5F20	67	Slightly raises the maximum PP of<FE>a selected move for one Pokémon.	FE	65	2	0x03DBC18	Item description	Augmente légèrement les PP maximum<FE>d’une capacité sélectionnée pour un Pokémon.	TRANSLATED
+ODYSSEY-TXT-007776	0x03D5FB3	71	Raises the PP of a selected move<FE>to its maximum level for one<FE>Pokémon.	FE	68	3	0x03DBC70	Item description	Augmente les PP d’une capacité sélectionnée<FE>jusqu’à son niveau maximum pour un<FE>Pokémon.	TRANSLATED
+ODYSSEY-TXT-007777	0x03D5FFA	83	An item that prevents stat reduction<FE>among party POKéMON for five turns<FE>after use.	FE	80	3	0x03DBCC8	Item description	Un objet qui empêche la baisse de stats<FE>chez les POKéMON de l’équipe pendant cinq tours<FE>après utilisation.	TRANSLATED
+ODYSSEY-TXT-007778	0x03D604D	91	Raises the critical-hit ratio of<FE>POKéMON in battle. Wears off if the<FE>POKéMON is withdrawn.	FE	88	3	0x03DBCF4	Item description	Augmente le taux de coups critiques des<FE>POKéMON en combat. L’effet disparaît si le<FE>POKéMON est retiré.	TRANSLATED
+ODYSSEY-TXT-007779	0x03D60A8	84	Raises the ATTACK stat of POKéMON<FE>in battle. Wears off if the POKéMON<FE>is withdrawn.	FE	81	3	0x03DBD20	Item description	Augmente la stat d’ATTAQUE des POKéMON<FE>en combat. L’effet disparaît si le POKéMON<FE>est retiré.	TRANSLATED
+ODYSSEY-TXT-007780	0x03D60FC	85	Raises the DEFENSE stat of POKéMON<FE>in battle. Wears off if the POKéMON<FE>is withdrawn.	FE	82	3	0x03DBD4C	Item description	Augmente la stat de DÉFENSE des POKéMON<FE>en combat. L’effet disparaît si le POKéMON<FE>est retiré.	TRANSLATED
+ODYSSEY-TXT-007781	0x03D6151	83	Raises the SPEED stat of POKéMON<FE>in battle. Wears off if the POKéMON<FE>is withdrawn.	FE	80	3	0x03DBD78	Item description	Augmente la stat de VITESSE des POKéMON<FE>en combat. L’effet disparaît si le POKéMON<FE>est retiré.	TRANSLATED
+ODYSSEY-TXT-007782	0x03D61A4	86	Raises the accuracy stat of<FE>POKéMON in battle. Wears off if the<FE>POKéMON is withdrawn.	FE	83	3	0x03DBDA4	Item description	Augmente la stat de précision des<FE>POKéMON en combat. L’effet disparaît si le<FE>POKéMON est retiré.	TRANSLATED
+ODYSSEY-TXT-007783	0x03D61FA	85	Raises the SP. ATK stat of<FE>POKéMON in battle. Wears off if the<FE>POKéMON is withdrawn.	FE	82	3	0x03DBDD0	Item description	Augmente la stat d’ATQ. SPÉ. des<FE>POKéMON en combat. L’effet disparaît si le<FE>POKéMON est retiré.	TRANSLATED
+ODYSSEY-TXT-007784	0x03D624F	72	An attractive doll.<FE>Use it to flee from any battle with<FE>a wild POKéMON.	FE	69	3	0x03DBDFC	Item description	Une poupée attirante.<FE>Utilisez-la pour fuir n’importe quel combat contre<FE>un POKéMON sauvage.	TRANSLATED
+ODYSSEY-TXT-007785	0x03D6297	72	An attractive item.<FE>Use it to flee from any battle with<FE>a wild POKéMON.	FE	69	3	0x03DBE28	Item description	Un objet attirant.<FE>Utilisez-le pour fuir n’importe quel combat contre<FE>un POKéMON sauvage.	TRANSLATED
+ODYSSEY-TXT-007786	0x03D62DF	57	Prevents weak wild Pokémon from<FE>appearing for 200 steps.	FE	55	2	0x03DBE80	Item description	Empêche l’apparition de Pokémon sauvages<FE>faibles pendant 200 pas.	TRANSLATED
+ODYSSEY-TXT-007787	0x03D6318	57	Prevents weak wild Pokémon from<FE>appearing for 250 steps.	FE	55	2	0x03DBEAC	Item description	Empêche l’apparition de Pokémon sauvages<FE>faibles pendant 250 pas.	TRANSLATED
+ODYSSEY-TXT-007788	0x03D639C	57	Prevents weak wild Pokémon from<FE>appearing for 100 steps.	FE	55	2	0x03DBF04	Item description	Empêche l’apparition de Pokémon sauvages<FE>faibles pendant 100 pas.	TRANSLATED
+ODYSSEY-TXT-007789	0x03D63D5	88	A peculiar stone that makes certain<FE>species of Pokémon evolve.                         	FE	86	2	0x03DC038	Item description	Une pierre singulière qui fait évoluer<FE>certaines espèces de Pokémon.	TRANSLATED
+ODYSSEY-TXT-007790	0x03D642D	96	A peculiar stone that makes certain<FE>species of Pokémon evolve.                                 	FE	94	2	0x03DC064	Item description	Une pierre singulière qui fait évoluer<FE>certaines espèces de Pokémon.	TRANSLATED
+ODYSSEY-TXT-007791	0x03D648D	85	A peculiar stone that makes certain<FE>species of Pokémon evolve.                      	FE	83	2	0x03DC090	Item description	Une pierre singulière qui fait évoluer<FE>certaines espèces de Pokémon.	TRANSLATED
+ODYSSEY-TXT-007792	0x03D64E2	93	A peculiar stone that makes certain<FE>species of Pokémon evolve.                              	FE	91	2	0x03DC0BC	Item description	Une pierre singulière qui fait évoluer<FE>certaines espèces de Pokémon.	TRANSLATED
+ODYSSEY-TXT-007793	0x03D653F	89	A peculiar stone that makes certain<FE>species of Pokémon evolve.                          	FE	87	2	0x03DC0E8	Item description	Une pierre singulière qui fait évoluer<FE>certaines espèces de Pokémon.	TRANSLATED
+ODYSSEY-TXT-007794	0x03D6598	86	A peculiar stone that makes certain<FE>species of Pokémon evolve.                       	FE	84	2	0x03DC114	Item description	Une pierre singulière qui fait évoluer<FE>certaines espèces de Pokémon.	TRANSLATED
 ODYSSEY-TXT-007795	0x03D6887	81	A piece of MAIL featuring a cute<FE>ZIGZAGOON print.<FE>It is to be held by a POKéMON.	FE	78	3	0x03DC508	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-007796	0x03D68D8	79	A piece of MAIL featuring a cute<FE>WINGULL print.<FE>It is to be held by a POKéMON.	FE	76	3	0x03DC534	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-007797	0x03D6927	79	A piece of MAIL featuring a cute<FE>PIKACHU print.<FE>It is to be held by a POKéMON.	FE	76	3	0x03DC560	UNKNOWN		UNTRANSLATED
