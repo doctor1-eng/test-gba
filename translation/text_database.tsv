@@ -1406,25 +1406,25 @@ ODYSSEY-TXT-001404	0x01C3C70	64	I haven’t made any progress…<FE>I still can�
 ODYSSEY-TXT-001405	0x01C3D73	47	I say, friend!<FE>Let us enjoy our time together!	FE	45	2	0x01AC2C8	DIALOGUE	Dis donc, l’ami !<FE>Profitons de notre temps ensemble !	TRANSLATED
 ODYSSEY-TXT-001406	0x01C3DA2	109	I’m the eldest of the BIRD<FE>BROTHERS. Remember me?<FB>That’s right, I’m the one who loves<FE>birds for their beaks!	FB;FE	105	3	0x01AC344	DIALOGUE	Je suis l’aîné des FRÈRES<FE>OISEAUX. Tu te souviens de moi ?<FB>C’est ça, je suis celui qui aime<FE>les oiseaux pour leur bec !	TRANSLATED
 ODYSSEY-TXT-001407	0x01C3E6A	102	I’m the youngest of the BIRD<FE>BROTHERS.<FB>I love birds for their down.<FE>I didn’t think I’d see you again!	FB;FE	98	3	0x01AC3C0	DIALOGUE	Je suis le cadet des FRÈRES<FE>OISEAUX.<FB>J’aime les oiseaux pour leur duvet.<FE>Je pensais pas te revoir !	TRANSLATED
-ODYSSEY-TXT-001408	0x01C3F11	64	Gasp… Gasp…<FB>I swam here from SIX ISLAND’s port<FE>in one go again.	FB;FE	61	2	0x01AC43C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001409	0x01C3F7B	56	AVA: Let’s have another<FE>two-on-two marine battle today!	FE	54	2	0x01AC4BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001410	0x01C3FE9	63	…Huh?<FB>I envision my house, but TELEPORT<FE>always brings me here!	FB;FE	60	2	0x01AC544	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001411	0x01C4057	40	Hehehe, I’m practicing in secret<FE>again.	FE	38	2	0x01AC5C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001412	0x01C405F	32	I’m practicing in secret<FE>again.	FE	30	2	0x0B0F520	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001413	0x01C40D9	33	Sigh…<FE>My boyfriend’s busy again…	FE	31	2	0x01AC63C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001414	0x01C4196	62	There appear to be many secrets<FE>still unsolved in this world.	FE	60	2	0x01AC744	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001415	0x01C4210	112	It’s been said that there are<FE>mysterious stones on this island.<FB>Have you discovered anything since<FE>we last met?	FB;FE	108	3	0x01AC7C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001416	0x01C42A0	54	I’m pretty familiar with the land<FE>around these parts.	FE	52	2	0x01AC83C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001417	0x01C4374	57	Howdy! You’re a member of my<FE>fan club, isn’t that right?	FE	55	2	0x01AC9C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001418	0x01C4416	54	EVE: I’ll team up with JON and<FE>battle together again.	FE	52	2	0x01AC938	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001419	0x01C458E	52	Every time we meet, you have those<FE>snazzy shoes on.	FE	50	2	0x01ACB34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001420	0x01C45FB	103	I was given the best possible<FE>education to become this strong.<FB>I won’t lose this time.<FE>Absolutely not!	FB;FE	99	3	0x01ACBB0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001421	0x01C4699	58	NYA: I won’t drag down my mentor<FE>LEX! We’re going to win!	FE	56	2	0x01ACC38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001422	0x01C476A	68	Today, in addition to our lesson,<FE>we came to see the chamber again.	FE	66	2	0x01ACD34	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001408	0x01C3F11	64	Gasp… Gasp…<FB>I swam here from SIX ISLAND’s port<FE>in one go again.	FB;FE	61	2	0x01AC43C	DIALOGUE	Halète… Halète…<FB>J’ai encore nagé d’une traite<FE>depuis le port d’ÎLE SIX.	TRANSLATED
+ODYSSEY-TXT-001409	0x01C3F7B	56	AVA: Let’s have another<FE>two-on-two marine battle today!	FE	54	2	0x01AC4BC	DIALOGUE	AVA : Refaisons un combat marin<FE>en deux contre deux aujourd’hui !	TRANSLATED
+ODYSSEY-TXT-001410	0x01C3FE9	63	…Huh?<FB>I envision my house, but TELEPORT<FE>always brings me here!	FB;FE	60	2	0x01AC544	DIALOGUE	…Hein ?<FB>Je vise ma maison, mais TÉLÉPORT<FE>m’amène toujours ici !	TRANSLATED
+ODYSSEY-TXT-001411	0x01C4057	40	Hehehe, I’m practicing in secret<FE>again.	FE	38	2	0x01AC5C0	DIALOGUE	Hihihi, je m’entraîne encore en<FE>secret.	TRANSLATED
+ODYSSEY-TXT-001412	0x01C405F	32	I’m practicing in secret<FE>again.	FE	30	2	0x0B0F520	DIALOGUE fragment	Je m’entraîne encore en<FE>secret.	TRANSLATED
+ODYSSEY-TXT-001413	0x01C40D9	33	Sigh…<FE>My boyfriend’s busy again…	FE	31	2	0x01AC63C	DIALOGUE	Soupir…<FE>Mon copain est encore occupé…	TRANSLATED
+ODYSSEY-TXT-001414	0x01C4196	62	There appear to be many secrets<FE>still unsolved in this world.	FE	60	2	0x01AC744	DIALOGUE	Il semble y avoir encore beaucoup de secrets<FE>non résolus dans ce monde.	TRANSLATED
+ODYSSEY-TXT-001415	0x01C4210	112	It’s been said that there are<FE>mysterious stones on this island.<FB>Have you discovered anything since<FE>we last met?	FB;FE	108	3	0x01AC7C0	DIALOGUE	On dit qu’il y a des pierres<FE>mystérieuses sur cette île.<FB>Tu as découvert quelque chose<FE>depuis notre dernière rencontre ?	TRANSLATED
+ODYSSEY-TXT-001416	0x01C42A0	54	I’m pretty familiar with the land<FE>around these parts.	FE	52	2	0x01AC83C	DIALOGUE	Je connais plutôt bien le terrain<FE>par ici.	TRANSLATED
+ODYSSEY-TXT-001417	0x01C4374	57	Howdy! You’re a member of my<FE>fan club, isn’t that right?	FE	55	2	0x01AC9C0	DIALOGUE	Salut ! T’es membre de mon<FE>fan club, pas vrai ?	TRANSLATED
+ODYSSEY-TXT-001418	0x01C4416	54	EVE: I’ll team up with JON and<FE>battle together again.	FE	52	2	0x01AC938	DIALOGUE	EVE : Je vais refaire équipe<FE>avec JON pour combattre.	TRANSLATED
+ODYSSEY-TXT-001419	0x01C458E	52	Every time we meet, you have those<FE>snazzy shoes on.	FE	50	2	0x01ACB34	DIALOGUE	Chaque fois qu’on se croise, tu<FE>as ces chaussures chic.	TRANSLATED
+ODYSSEY-TXT-001420	0x01C45FB	103	I was given the best possible<FE>education to become this strong.<FB>I won’t lose this time.<FE>Absolutely not!	FB;FE	99	3	0x01ACBB0	DIALOGUE	J’ai reçu la meilleure éducation<FE>possible pour devenir aussi fort.<FB>Je vais pas perdre cette fois.<FE>Absolument pas !	TRANSLATED
+ODYSSEY-TXT-001421	0x01C4699	58	NYA: I won’t drag down my mentor<FE>LEX! We’re going to win!	FE	56	2	0x01ACC38	DIALOGUE	NYA : Je vais pas décevoir mon<FE>mentor LEX ! On va gagner !	TRANSLATED
+ODYSSEY-TXT-001422	0x01C476A	68	Today, in addition to our lesson,<FE>we came to see the chamber again.	FE	66	2	0x01ACD34	DIALOGUE	Aujourd’hui, en plus de notre leçon,<FE>on est revenus voir la chambre.	TRANSLATED
 ODYSSEY-TXT-001423	0x01C55C9	33	Would you like to save the game?		32	1	0x006F7D4	SYSTEM: save prompt	Voulez-vous sauvegarder la partie ?	TRANSLATED
 ODYSSEY-TXT-001424	0x01C55EA	59	There is already a saved file.<FE>Is it okay to overwrite it?	FE	57	2	0x006F89C	SYSTEM: save overwrite	Une sauvegarde existe déjà.<FE>Voulez-vous l’écraser ?	TRANSLATED
-ODYSSEY-TXT-001425	0x01C5647	19	<FD:01> saved the game.	FD	16	1	0x006F994	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001426	0x01C574F	9	NEW NAME		8	1	0x01316E4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001425	0x01C5647	19	<FD:01> saved the game.	FD	16	1	0x006F994	SYSTEM	<FD:01> a sauvegardé la partie.	TRANSLATED
+ODYSSEY-TXT-001426	0x01C574F	9	NEW NAME		8	1	0x01316E4	SYSTEM naming	NOUVEAU NOM	TRANSLATED
 ODYSSEY-TXT-001427	0x01C5758	6	GREEN		5	1	0x0463124	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-001428	0x01C575E	4	RED		3	1	0x046308C,0x04630D8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001429	0x01C5767	5	FIRE		4	1	0x0463090,0x04630DC	UNKNOWN		SKIP_NOISE
@@ -1465,37 +1465,37 @@ ODYSSEY-TXT-001463	0x01C5819	6	NORIE		5	1	0x0463114	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-001464	0x01C581F	4	SAI		3	1	0x0463118	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001465	0x01C5823	5	MOMO		4	1	0x046311C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001466	0x01C5828	5	SUZI		4	1	0x0463120	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001467	0x01C582D	72	The various buttons will be explained in<FE>the order of their importance.	FE	70	2	0x012EF4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001468	0x01C5875	69	Moves the main character.<FE>Also used to choose various data<FE>headings.	FE	66	3	0x0463074	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001469	0x01C58BA	63	Used to confirm a choice, check<FE>things, chat, and scroll text.	FE	61	2	0x0463078	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001470	0x01C58F9	50	Used to exit, cancel a choice,<FE>and cancel a mode.	FE	48	2	0x046307C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001471	0x01C592B	36	Press this button to open the<FE>MENU.	FE	34	2	0x0463080	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001472	0x01C594F	50	Used to shift items and to use<FE>a registered item.	FE	48	2	0x0463084	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001473	0x01C5981	84	If you need help playing the<FE>game, or on how to do things,<FE>press the L or R Button.	FE	81	3	0x0463088	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001474	0x01C59D5	47	Now tell me. Are you a boy?<FE>Or are you a girl?	FE	45	2	0x012FE34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001475	0x01C5A04	231	In the world which you are about to<FE>enter, you will embark on a grand<FE>adventure with you as the hero.<FE><FE>Speak to people and check things<FE>wherever you go, be it towns, roads,<FE>or caves. Gather information and<FE>hints from every source.	FE	223	8	0x0462EF0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001476	0x01C5AEB	206	New paths will open to you by helping<FE>people in need, overcoming challenges,<FE>and solving mysteries.<FE><FE>At times, you will be challenged by<FE>others and attacked by wild creatures.<FE>Be brave and keep pushing on.	FE	199	7	0x0462EF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001477	0x01C5BB9	191	Through your adventure, we hope<FE>that you will interact with all sorts<FE>of people and achieve personal growth.<FE>That is our biggest objective.<FE><FE>Press the A Button, and let your<FE>adventure begin!	FE	184	7	0x0462EF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001478	0x01C5D06	12	This world…		11	1	0x012F994	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001479	0x01C5DBD	45	But first, tell me a little about<FE>yourself.<FB>	FB;FE	42	2	0x012FD24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001480	0x01C5DEA	41	Let’s begin with your name.<FE>What is it?<FB>	FB;FE	38	2	0x013010C,0x013027C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001481	0x01C5E13	27	Right…<FE>So your name is <FD:01>.	FD;FE	23	2	0x01304B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001482	0x01C5E2E	99	This is my grandson.<FB>He’s been your rival since you both<FE>were babies.<FB>…Erm, what was his name now?	FB;FE	95	2	0x0130774	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001483	0x01C5E91	36	Your rival’s name, what was it now?		35	1	0x01302DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001484	0x01C5EB5	16	…Er, was it <FD:06>?	FD	13	1	0x01304F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001485	0x01C5EC5	47	That’s right! I remember now!<FE>His name is <FD:06>!<FB>	FB;FD;FE	42	2	0x01305FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001486	0x01C5FA7	53	It looks like my RATTATA was<FE>faster than the PIDGEY.	FE	51	2	0x04791AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001487	0x01C5FDC	64	The battlers take turns attacking<FE>and reducing each other’s HP.	FE	62	2	0x04791B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001488	0x01C61EA	24	Yay!<FE>We managed to win!	FE	22	2	0x04791C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001489	0x01C6637	14	Yeah!<FE>We won!	FE	12	2	0x04791E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001490	0x01C66CF	184	Okay, that should be good enough.<FB>But, if it’s possible, it would be<FE>best if the target has a status<FA>problem.<FB>For instance, it would be easier<FE>to catch if it were asleep or<FA>paralyzed.	FA;FB;FE	177	3	0x04791F0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001467	0x01C582D	72	The various buttons will be explained in<FE>the order of their importance.	FE	70	2	0x012EF4C	Intro tutorial	Les différents boutons seront<FE>expliqués par ordre d’importance.	TRANSLATED
+ODYSSEY-TXT-001468	0x01C5875	69	Moves the main character.<FE>Also used to choose various data<FE>headings.	FE	66	3	0x0463074	Intro tutorial	Déplace le personnage principal.<FE>Sert aussi à choisir diverses<FE>rubriques.	TRANSLATED
+ODYSSEY-TXT-001469	0x01C58BA	63	Used to confirm a choice, check<FE>things, chat, and scroll text.	FE	61	2	0x0463078	Intro tutorial	Sert à confirmer un choix,<FE>examiner, discuter, et faire défiler le texte.	TRANSLATED
+ODYSSEY-TXT-001470	0x01C58F9	50	Used to exit, cancel a choice,<FE>and cancel a mode.	FE	48	2	0x046307C	Intro tutorial	Sert à sortir, annuler un choix,<FE>et annuler un mode.	TRANSLATED
+ODYSSEY-TXT-001471	0x01C592B	36	Press this button to open the<FE>MENU.	FE	34	2	0x0463080	Intro tutorial	Appuie sur ce bouton pour ouvrir<FE>le MENU.	TRANSLATED
+ODYSSEY-TXT-001472	0x01C594F	50	Used to shift items and to use<FE>a registered item.	FE	48	2	0x0463084	Intro tutorial	Sert à déplacer des objets et à<FE>utiliser un objet enregistré.	TRANSLATED
+ODYSSEY-TXT-001473	0x01C5981	84	If you need help playing the<FE>game, or on how to do things,<FE>press the L or R Button.	FE	81	3	0x0463088	Intro tutorial	Si tu as besoin d’aide pour jouer<FE>ou pour savoir comment faire,<FE>appuie sur L ou R.	TRANSLATED
+ODYSSEY-TXT-001474	0x01C59D5	47	Now tell me. Are you a boy?<FE>Or are you a girl?	FE	45	2	0x012FE34	Intro	Alors, dis-moi. Es-tu un garçon ?<FE>Ou une fille ?	TRANSLATED
+ODYSSEY-TXT-001475	0x01C5A04	231	In the world which you are about to<FE>enter, you will embark on a grand<FE>adventure with you as the hero.<FE><FE>Speak to people and check things<FE>wherever you go, be it towns, roads,<FE>or caves. Gather information and<FE>hints from every source.	FE	223	8	0x0462EF0	Intro	Dans le monde où tu vas entrer,<FE>tu vivras une grande aventure<FE>en tant que héros.<FE><FE>Parle aux gens et examine tout où<FE>que tu ailles, villes, routes,<FE>ou grottes. Récolte informations<FE>et indices partout.	TRANSLATED
+ODYSSEY-TXT-001476	0x01C5AEB	206	New paths will open to you by helping<FE>people in need, overcoming challenges,<FE>and solving mysteries.<FE><FE>At times, you will be challenged by<FE>others and attacked by wild creatures.<FE>Be brave and keep pushing on.	FE	199	7	0x0462EF4	Intro	De nouvelles voies s’ouvriront à toi<FE>en aidant ceux dans le besoin, en<FE>surmontant des épreuves et en résolvant des mystères.<FE><FE>Parfois, d’autres te défieront et<FE>des créatures sauvages t’attaqueront.<FE>Sois courageux et persévère.	TRANSLATED
+ODYSSEY-TXT-001477	0x01C5BB9	191	Through your adventure, we hope<FE>that you will interact with all sorts<FE>of people and achieve personal growth.<FE>That is our biggest objective.<FE><FE>Press the A Button, and let your<FE>adventure begin!	FE	184	7	0x0462EF8	Intro	À travers ton aventure, nous<FE>espérons que tu interagiras avec<FE>toutes sortes de gens et grandiras personnellement.<FE>C’est notre plus grand objectif.<FE><FE>Appuie sur le bouton A, et que<FE>ton aventure commence !	TRANSLATED
+ODYSSEY-TXT-001478	0x01C5D06	12	This world…		11	1	0x012F994	Intro	Ce monde…	TRANSLATED
+ODYSSEY-TXT-001479	0x01C5DBD	45	But first, tell me a little about<FE>yourself.<FB>	FB;FE	42	2	0x012FD24	Intro	Mais d’abord, parle-moi un peu<FE>de toi.<FB>	TRANSLATED
+ODYSSEY-TXT-001480	0x01C5DEA	41	Let’s begin with your name.<FE>What is it?<FB>	FB;FE	38	2	0x013010C,0x013027C	Intro	Commençons par ton nom.<FE>Quel est-il ?<FB>	TRANSLATED
+ODYSSEY-TXT-001481	0x01C5E13	27	Right…<FE>So your name is <FD:01>.	FD;FE	23	2	0x01304B0	Intro	Bien…<FE>Donc ton nom est <FD:01>.	TRANSLATED
+ODYSSEY-TXT-001482	0x01C5E2E	99	This is my grandson.<FB>He’s been your rival since you both<FE>were babies.<FB>…Erm, what was his name now?	FB;FE	95	2	0x0130774	Intro	Voici mon petit-fils.<FB>Il est ton rival depuis que vous<FE>êtes bébés.<FB>…Euh, c’était quoi son nom déjà ?	TRANSLATED
+ODYSSEY-TXT-001483	0x01C5E91	36	Your rival’s name, what was it now?		35	1	0x01302DC	Intro	Le nom de ton rival, c’était quoi déjà ?	TRANSLATED
+ODYSSEY-TXT-001484	0x01C5EB5	16	…Er, was it <FD:06>?	FD	13	1	0x01304F8	Intro	…Euh, c’était <FD:06> ?	TRANSLATED
+ODYSSEY-TXT-001485	0x01C5EC5	47	That’s right! I remember now!<FE>His name is <FD:06>!<FB>	FB;FD;FE	42	2	0x01305FC	Intro	C’est ça ! Je m’en souviens<FE>maintenant ! Son nom est <FD:06> !<FB>	TRANSLATED
+ODYSSEY-TXT-001486	0x01C5FA7	53	It looks like my RATTATA was<FE>faster than the PIDGEY.	FE	51	2	0x04791AC	Intro tutorial battle	On dirait que mon RATTATA était<FE>plus rapide que le ROUCOOL.	TRANSLATED
+ODYSSEY-TXT-001487	0x01C5FDC	64	The battlers take turns attacking<FE>and reducing each other’s HP.	FE	62	2	0x04791B0	Intro tutorial battle	Les combattants attaquent chacun leur<FE>tour et réduisent leurs PV mutuellement.	TRANSLATED
+ODYSSEY-TXT-001488	0x01C61EA	24	Yay!<FE>We managed to win!	FE	22	2	0x04791C8	Intro tutorial battle	Yay !<FE>On a réussi à gagner !	TRANSLATED
+ODYSSEY-TXT-001489	0x01C6637	14	Yeah!<FE>We won!	FE	12	2	0x04791E4	Intro tutorial battle	Ouais !<FE>On a gagné !	TRANSLATED
+ODYSSEY-TXT-001490	0x01C66CF	184	Okay, that should be good enough.<FB>But, if it’s possible, it would be<FE>best if the target has a status<FA>problem.<FB>For instance, it would be easier<FE>to catch if it were asleep or<FA>paralyzed.	FA;FB;FE	177	3	0x04791F0	Catching tutorial	D’accord, ça devrait suffire.<FB>Mais si possible, ce serait mieux<FE>si la cible avait un problème de<FA>statut.<FB>Par exemple, ce serait plus facile<FE>à attraper si elle dormait ou<FA>était paralysée.	TRANSLATED
 ODYSSEY-TXT-001491	0x01C92D9	2	 		1	1	0x1108530	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001492	0x01D00BB	2	Ä		1	1	0x0E175D8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001493	0x01D303A	2	ü		1	1	0x0A082FC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001494	0x01EAF00	4	  F		3	1	0x00064C4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001495	0x01EB249	3	üF		2	1	0x0B160FC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001496	0x01EB784	2	F		1	1	0x057A474	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001497	0x01F3345	37	a…r:ü:ü:ü:ü                :ü:ü…a…v:		36	1	0x0AA3250	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001497	0x01F3345	37	a…r:ü:ü:ü:ü                :ü:ü…a…v:		36	1	0x0AA3250	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001498	0x01F5297	11	         g		10	1	0x0611234	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001499	0x01F70FC	5	    		4	1	0x0719FA8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001500	0x01FFFFF	2	 		1	1	0x05B2F0C	UNKNOWN		SKIP_NOISE
@@ -1510,7 +1510,7 @@ ODYSSEY-TXT-001508	0x0212124	22	…ü:ü                :		21	1	0x0A54314	UNKNOW
 ODYSSEY-TXT-001509	0x0212A31	17	       …e…r:ü:<FA>:	FA	15	1	0x1A3AF14	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001510	0x02135F0	41	                                        		40	1	0x0EB9C10,0x0EBAE14,0x0EBB418,0x0EBC31C,0x0EBDB20,0x0EBE424,0x0EBF028,0x0EC042C,0x0EC1630,0x0EC2234,0x0EC2B38,0x0EC433C,0x0EC4C40,0x0EC5844,0x0EC6248,0x0EC6C4C,0x0EC70D0,0x0EC75D4,0x0EC7FD8,0x0EC89DC,0x0EC93E0,0x0EC9CE4,0x0ECA6E8,0x0ECB0EC,0x0ECBAF0,0x0ECC4F4,0x0ECCEF8,0x0ECD7FC,0x0ECE200,0x0ECEC04,0x0ECF608,0x0ECFF0C,0x0ED0910,0x0ED1314,0x0ED2518,0x0ED2E1C,0x0ED3320,0x0ED3824,0x0ED3D28,0x0ED472C,0x0ED5130,0x0ED5B34,0x0ED6538,0x0ED6F3C,0x0ED7940,0x0ED8344,0x0ED8D48,0x0ED964C,0x0ED9F50,0x0EDA854,0x0EDB158,0x0EDBA5C,0x0EDC460,0x0EDD864,0x0EDE268,0x0EDEC6C,0x0EDF670,0x0EE0074,0x0EE0A78,0x0EE137C,0x0EE1C80,0x0EE2684,0x0EE3088,0x0EE398C,0x0EE4390,0x0EE4C94,0x0EE5598,0x0EE5E9C,0x0EE67A0,0x0EE70A4,0x0EE79A8,0x0EE82AC,0x0EE8BB0,0x0EE94B4,0x0EE9DB8,0x0EEA6BC,0x0EEAFC0,0x0EEB8C4,0x0EEC1C8,0x0EECACC,0x0EED3D0,0x0EEDCD4,0x0EEE5D8,0x0EEEEDC,0x0EEF7E0,0x0EF00E4,0x0EF09E8,0x0EF12EC,0x0EF1BF0,0x0EF24F4,0x0EF36F8,0x0EF3FFC,0x0EF4080,0x0EF4184,0x0EF4208,0x0EF440C,0x0EF4610,0x0EF4694,0x0EF4718,0x0EF479C,0x0EF4820,0x0EF48A4,0x0EF49A8,0x0EF4A2C,0x0EF4AB0,0x0EF4B34,0x0EF4D38,0x0EF4F3C,0x0EF9740,0x0EFA944,0x0EFADC8,0x0EFB24C,0x0EFB6D0,0x0EFBB54,0x0EFBFD8,0x0EFC45C,0x0EFC8E0,0x0EFCD64,0x0EFD1E8,0x0EFD66C,0x0EFDAF0,0x0EFDF74,0x0EFE3F8,0x0EFE87C,0x0EFED00,0x0EFF184,0x0EFF608,0x0EFFA8C,0x0EFFF10,0x0F00F1C,0x0F013A0,0x0F01824,0x0F01CA8,0x0F0212C,0x0F025B0,0x0F02A34,0x0F03C38,0x0F04E3C,0x0F06040,0x0F064C4,0x0F06948,0x0F06DCC,0x0F07250,0x0F076D4,0x0F088D8,0x0F09ADC,0x0F09F60,0x0F0A3E4,0x0F0B5E8,0x0F0C7EC,0x0F0D9F0,0x0F169F4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001511	0x0217818	33	                                		32	1	0x0006884	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001512	0x02206D1	11	bFbFrFfFwF		10	1	0x04BDDD4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001512	0x02206D1	11	bFbFrFfFwF		10	1	0x04BDDD4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001513	0x0220F22	15	              		14	1	0x1AFA890	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001514	0x0221705	108	                                                                                                           		107	1	0x04CF98C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001515	0x022233E	28	…<FD:00>               …ü:ü:ü:<FA>:	FA;FD	24	1	0x0E045E0	UNKNOWN		SKIP_NOISE
@@ -1518,7 +1518,7 @@ ODYSSEY-TXT-001516	0x0222494	30	FbFv                        :		29	1	0x0E58EC0	UN
 ODYSSEY-TXT-001517	0x022260D	4	   		3	1	0x1A3B470	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001518	0x0222722	16	              F		15	1	0x037684C,0x0376C50,0x0376D50	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001519	0x0223332	2	F		1	1	0x037AB1C,0x037AF20,0x037B020	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001520	0x0223542	22	              FbFbFvF		21	1	0x04DF7A8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001520	0x0223542	22	              FbFbFvF		21	1	0x04DF7A8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001521	0x022382B	262	                                                                                                                                                                                                                                                                     		261	1	0x0B0DE0C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001522	0x0223A4B	10	     E<FD:BF><FE>	FD;FE	6	2	0x0AB0118	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001523	0x0223A4F	6	 E<FD:BF><FE>	FD;FE	2	2	0x04E5390	UNKNOWN		SKIP_NOISE
@@ -1541,82 +1541,82 @@ ODYSSEY-TXT-001539	0x0243B46	3	AF		2	1	0x04A7A24	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001540	0x0246200	2	l		1	1	0x12DB388,0x12DB708,0x12DBA88	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001541	0x024630E	3	no		2	1	0x11D10A4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001542	0x0246600	9	  Ledian		8	1	0x1A2D8F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001543	0x02484DC	26	Raises Speed in sunshine.		25	1	0x024FB90,0x10B8B98	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001544	0x02485F8	48	<FD:2C>’s party is no longer<FE>protected by Safeguard!	FD;FE	44	2	0x03FE050	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001543	0x02484DC	26	Raises Speed in sunshine.		25	1	0x024FB90,0x10B8B98	ability description	Augmente la Vitesse au soleil.	TRANSLATED
+ODYSSEY-TXT-001544	0x02485F8	48	<FD:2C>’s party is no longer<FE>protected by Safeguard!	FD;FE	44	2	0x03FE050	SYSTEM battle	L’équipe de <FD:2C> n’est plus<FE>protégée par Rune Protect !	TRANSLATED
 ODYSSEY-TXT-001545	0x024F048	9	l::ll   		8	1	0x0012394	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001546	0x024F1A0	7	Normal		6	1	0x00309C8,0x00D8510,0x011972C,0x011977C,0x0456E74,0x0779350	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001547	0x024F1A7	6	Fight		5	1	0x0456EC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001548	0x024F1AE	7	Flying		6	1	0x0456EB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001549	0x024F1B5	7	Poison		6	1	0x0456ECC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001550	0x024F1BC	7	Ground		6	1	0x0456EA4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001546	0x024F1A0	7	Normal		6	1	0x00309C8,0x00D8510,0x011972C,0x011977C,0x0456E74,0x0779350	type label	Normal	TRANSLATED
+ODYSSEY-TXT-001547	0x024F1A7	6	Fight		5	1	0x0456EC4	type label	Combat	TRANSLATED
+ODYSSEY-TXT-001548	0x024F1AE	7	Flying		6	1	0x0456EB4	type label	Vol	TRANSLATED
+ODYSSEY-TXT-001549	0x024F1B5	7	Poison		6	1	0x0456ECC	type label	Poison	TRANSLATED
+ODYSSEY-TXT-001550	0x024F1BC	7	Ground		6	1	0x0456EA4	type label	Sol	TRANSLATED
 ODYSSEY-TXT-001551	0x024F1C3	5	Rock		4	1	0x0456EAC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001552	0x024F1CA	4	Bug		3	1	0x0456ED4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001553	0x024F1D1	6	Ghost		5	1	0x0456EDC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001554	0x024F1D8	6	Steel		5	1	0x0456EEC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001553	0x024F1D1	6	Ghost		5	1	0x0456EDC	type label	Spectre	TRANSLATED
+ODYSSEY-TXT-001554	0x024F1D8	6	Steel		5	1	0x0456EEC	type label	Acier	TRANSLATED
 ODYSSEY-TXT-001555	0x024F1E6	5	Fire		4	1	0x0456E7C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001556	0x024F1ED	6	Water		5	1	0x0456E84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001557	0x024F1F4	6	Grass		5	1	0x0456E94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001558	0x024F1FB	7	Electr		6	1	0x0456E8C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001559	0x024F202	7	Psychc		6	1	0x0456EBC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001556	0x024F1ED	6	Water		5	1	0x0456E84	type label	Eau	TRANSLATED
+ODYSSEY-TXT-001557	0x024F1F4	6	Grass		5	1	0x0456E94	type label	Plante	TRANSLATED
+ODYSSEY-TXT-001558	0x024F1FB	7	Electr		6	1	0x0456E8C	type label	Élec	TRANSLATED
+ODYSSEY-TXT-001559	0x024F202	7	Psychc		6	1	0x0456EBC	type label	Psy	TRANSLATED
 ODYSSEY-TXT-001560	0x024F209	4	Ice		3	1	0x0456E9C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001561	0x024F210	7	Dragon		6	1	0x0456EE4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001561	0x024F210	7	Dragon		6	1	0x0456EE4	type label	Dragon	TRANSLATED
 ODYSSEY-TXT-001562	0x024F217	5	Dark		4	1	0x0456EF4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001563	0x024F3C4	15	No description		14	1	0x024FB08,0x10B8B10,0x10B8C48,0x10B8C4C,0x10B8C50,0x10B8C54,0x10B8C60,0x10B8C68,0x10B8C6C,0x10B8C70,0x10B8C74,0x10B8C78,0x10B8C7C,0x10B8C88,0x10B8C8C,0x10B8C90,0x10B8C94,0x10B8C9C,0x10B8CA4,0x10B8CAC,0x10B8CB0,0x10B8CB4,0x10B8CBC,0x10B8CC0,0x10B8CC4,0x10B8CD4,0x10B8CDC,0x10B8CE0,0x10B8CE8,0x10B8CEC,0x10B8CF0,0x10B8CF4,0x10B8CF8,0x10B8CFC,0x10B8D00,0x10B8D04,0x10B8D08,0x10B8D0C,0x10B8D10,0x10B8D18,0x10B8D1C,0x10B8D20,0x10B8D24,0x10B8D28,0x10B8D2C,0x10B8D30,0x10B8D40,0x10B8D44,0x10B8D48,0x10B8D4C,0x10B8D50,0x10B8D64,0x10B8D68,0x10B8D6C,0x10B8D70,0x10B8D74,0x10B8D7C,0x10B8D80,0x10B8D84,0x10B8D88,0x10B8D8C,0x10B8D90,0x10B8D94,0x10B8D98,0x10B8DA0,0x10B8DA4,0x10B8DA8,0x10B8DAC,0x10B8DB0,0x10B8DBC,0x10B8DC0,0x10B8DC8,0x10B8DCC,0x10B8DD0,0x10B8DD4,0x10B8DD8,0x10B8DDC,0x10B8DE0,0x10B8DE4,0x10B8DE8,0x10B8DEC,0x10B8DF0,0x10B8DF4,0x10B8DF8,0x10B8DFC,0x10B8E00,0x10B8E04,0x10B8E08,0x10B8E0C,0x10B8E10,0x10B8E14,0x10B8E18,0x10B8E1C,0x10B8E20,0x10B8E24,0x10B8E28,0x10B8E2C,0x10B8E30,0x10B8E34,0x10B8E38,0x10B8E3C,0x10B8E40,0x10B8E44,0x10B8E48,0x10B8E4C,0x10B8E50,0x10B8E54,0x10B8E58,0x10B8E5C,0x10B8E60,0x10B8E64,0x10B8E68,0x10B8E6C,0x10B8E70,0x10B8E74,0x10B8E78,0x10B8E7C,0x10B8E80,0x10B8E84,0x10B8E88,0x10B8E8C,0x10B8E90,0x10B8E94,0x10B8E98,0x10B8E9C,0x10B8EA0,0x10B8EA4,0x10B8EA8,0x10B8EAC,0x10B8EB0,0x10B8EB4,0x10B8EE0,0x10B8EE4,0x10B8F04,0x10B8F08,0x10B8F0C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001564	0x024F3F2	24	Summons rain in battle.		23	1	0x024FB10,0x10B8B18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001565	0x024F422	22	Blocks critical hits.		21	1	0x024FB18,0x10B8B20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001566	0x024F438	26	Negates 1-hit KO attacks.		25	1	0x024FB1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001567	0x024F452	27	Prevents self-destruction.		26	1	0x024FB20,0x10B8B28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001568	0x024F46D	20	Prevents paralysis.		19	1	0x024FB24,0x10B8B2C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001569	0x024F481	28	Ups evasion in a sandstorm.		27	1	0x024FB28,0x10B8B30	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001570	0x024F49D	22	Paralyzes on contact.		21	1	0x024FB2C,0x10B8B34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001571	0x024F4B3	27	Turns electricity into HP.		26	1	0x024FB30,0x10B8B38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001572	0x024F4CE	23	Changes water into HP.		22	1	0x024FB34,0x10B8B3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001573	0x024F4FA	25	Negates weather effects.		24	1	0x024FB3C,0x10B8B44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001574	0x024F534	28	Changes type to foe’s move.		27	1	0x024FB48,0x10B8B50	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001575	0x024F564	26	Powers up if hit by fire.		25	1	0x024FB50,0x10B8B58	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001576	0x024F5AA	25	Firmly anchors the body.		24	1	0x024FB5C,0x10B8B64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001577	0x024F5C3	25	Lowers the foe’s Attack.		24	1	0x024FB60,0x10B8B68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001578	0x024F5DC	27	Prevents the foe’s escape.		26	1	0x024FB64,0x10B8B6C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001579	0x024F607	24	“Super effective” hits.		23	1	0x024FB6C,0x10B8B74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001580	0x024F61F	27	Not hit by Ground attacks.		26	1	0x024FB70,0x10B8B78	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001581	0x024F63A	26	Leaves spores on contact.		25	1	0x024FB74,0x10B8B7C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001582	0x024F654	27	Passes on status problems.		26	1	0x024FB78,0x10B8B80	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001583	0x024F68B	26	Heals upon switching out.		25	1	0x024FB80,0x10B8B88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001584	0x024F6A5	24	Draws electrical moves.		23	1	0x024FB84,0x10B8B8C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001585	0x024F705	26	Encounter rate increases.		25	1	0x024FB94,0x10B8B9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001586	0x024F71F	24	Copies special ability.		23	1	0x024FB98,0x10B8BA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001587	0x024F737	15	Raises Attack.		14	1	0x024FB9C,0x10B8BA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001588	0x024F746	24	Poisons foe on contact.		23	1	0x024FBA0,0x10B8BA8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001589	0x024F7AF	26	Avoids sound-based moves.		25	1	0x024FBB4,0x10B8BBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001590	0x024F7C9	28	Slight HP recovery in rain.		27	1	0x024FBB8,0x10B8BC0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001591	0x024F7FA	23	Raises foe’s PP usage.		22	1	0x024FBC0,0x10B8BC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001592	0x024F82B	28	Awakens quickly from sleep.		27	1	0x024FBC8,0x10B8BD0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001593	0x024F847	26	Burns the foe on contact.		25	1	0x024FBCC,0x10B8BD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001594	0x024F861	23	Makes escaping easier.		22	1	0x024FBD0,0x10B8BD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001595	0x024F878	27	Prevents loss of accuracy.		26	1	0x024FBD4,0x10B8BDC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001596	0x024F893	27	Prevents Attack reduction.		26	1	0x024FBD8,0x10B8BE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001597	0x024F8AE	19	May pick up items.		18	1	0x024FBDC,0x10B8BE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001598	0x024F8C1	28	Moves only every two turns.		27	1	0x024FBE0,0x10B8BE8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001599	0x024F8DD	27	Trades accuracy for power.		26	1	0x024FBE4,0x10B8BEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001600	0x024F8F8	23	Infatuates on contact.		22	1	0x024FBE8,0x10B8BF0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001601	0x024F90F	22	Powers up with Minus.		21	1	0x024FBEC,0x10B8BF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001602	0x024F925	21	Powers up with Plus.		20	1	0x024FBF0,0x10B8BF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001603	0x024F93A	26	Changes with the weather.		25	1	0x024FBF4,0x10B8BFC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001604	0x024F954	21	Prevents item theft.		20	1	0x024FBF8,0x10B8C00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001605	0x024F969	28	Heals the body by shedding.		27	1	0x024FBFC,0x10B8C04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001606	0x024F9B8	24	Draining causes injury.		23	1	0x024FC08,0x10B8C10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001607	0x024F9D0	28	Ups Grass moves in a pinch.		27	1	0x024FC0C,0x10B8C14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001608	0x024F9E4	8	 pinch.		7	1	0x0B67D10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001609	0x024F9EC	27	Ups Fire moves in a pinch.		26	1	0x024FC10,0x10B8C18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001610	0x024FA07	28	Ups Water moves in a pinch.		27	1	0x024FC14,0x10B8C1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001611	0x024FA23	26	Ups Bug moves in a pinch.		25	1	0x024FC18,0x10B8C20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001612	0x024FA3D	24	Prevents recoil damage.		23	1	0x024FC1C,0x10B8C24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001613	0x024FA55	28	Summons sunlight in battle.		27	1	0x024FC20,0x10B8C28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001614	0x024FA93	26	Prevents stats reduction.		25	1	0x024FC2C,0x10B8C34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001615	0x024FAAF	15	Raises Attack.		14	1	0x024FC30,0x10B8C38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001616	0x024FABE	22	Blocks critical hits.		21	1	0x024FC34,0x10B8C3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001617	0x024FAEE	25	Negates weather effects.		24	1	0x024FC3C,0x10B8C44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001618	0x0250012	9	ll Armor		8	1	0x1AF64CC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001563	0x024F3C4	15	No description		14	1	0x024FB08,0x10B8B10,0x10B8C48,0x10B8C4C,0x10B8C50,0x10B8C54,0x10B8C60,0x10B8C68,0x10B8C6C,0x10B8C70,0x10B8C74,0x10B8C78,0x10B8C7C,0x10B8C88,0x10B8C8C,0x10B8C90,0x10B8C94,0x10B8C9C,0x10B8CA4,0x10B8CAC,0x10B8CB0,0x10B8CB4,0x10B8CBC,0x10B8CC0,0x10B8CC4,0x10B8CD4,0x10B8CDC,0x10B8CE0,0x10B8CE8,0x10B8CEC,0x10B8CF0,0x10B8CF4,0x10B8CF8,0x10B8CFC,0x10B8D00,0x10B8D04,0x10B8D08,0x10B8D0C,0x10B8D10,0x10B8D18,0x10B8D1C,0x10B8D20,0x10B8D24,0x10B8D28,0x10B8D2C,0x10B8D30,0x10B8D40,0x10B8D44,0x10B8D48,0x10B8D4C,0x10B8D50,0x10B8D64,0x10B8D68,0x10B8D6C,0x10B8D70,0x10B8D74,0x10B8D7C,0x10B8D80,0x10B8D84,0x10B8D88,0x10B8D8C,0x10B8D90,0x10B8D94,0x10B8D98,0x10B8DA0,0x10B8DA4,0x10B8DA8,0x10B8DAC,0x10B8DB0,0x10B8DBC,0x10B8DC0,0x10B8DC8,0x10B8DCC,0x10B8DD0,0x10B8DD4,0x10B8DD8,0x10B8DDC,0x10B8DE0,0x10B8DE4,0x10B8DE8,0x10B8DEC,0x10B8DF0,0x10B8DF4,0x10B8DF8,0x10B8DFC,0x10B8E00,0x10B8E04,0x10B8E08,0x10B8E0C,0x10B8E10,0x10B8E14,0x10B8E18,0x10B8E1C,0x10B8E20,0x10B8E24,0x10B8E28,0x10B8E2C,0x10B8E30,0x10B8E34,0x10B8E38,0x10B8E3C,0x10B8E40,0x10B8E44,0x10B8E48,0x10B8E4C,0x10B8E50,0x10B8E54,0x10B8E58,0x10B8E5C,0x10B8E60,0x10B8E64,0x10B8E68,0x10B8E6C,0x10B8E70,0x10B8E74,0x10B8E78,0x10B8E7C,0x10B8E80,0x10B8E84,0x10B8E88,0x10B8E8C,0x10B8E90,0x10B8E94,0x10B8E98,0x10B8E9C,0x10B8EA0,0x10B8EA4,0x10B8EA8,0x10B8EAC,0x10B8EB0,0x10B8EB4,0x10B8EE0,0x10B8EE4,0x10B8F04,0x10B8F08,0x10B8F0C	ability description	Pas de description	TRANSLATED
+ODYSSEY-TXT-001564	0x024F3F2	24	Summons rain in battle.		23	1	0x024FB10,0x10B8B18	ability description	Invoque la pluie en combat.	TRANSLATED
+ODYSSEY-TXT-001565	0x024F422	22	Blocks critical hits.		21	1	0x024FB18,0x10B8B20	ability description	Bloque les coups critiques.	TRANSLATED
+ODYSSEY-TXT-001566	0x024F438	26	Negates 1-hit KO attacks.		25	1	0x024FB1C	ability description	Annule les attaques K.O. directes.	TRANSLATED
+ODYSSEY-TXT-001567	0x024F452	27	Prevents self-destruction.		26	1	0x024FB20,0x10B8B28	ability description	Empêche l’autodestruction.	TRANSLATED
+ODYSSEY-TXT-001568	0x024F46D	20	Prevents paralysis.		19	1	0x024FB24,0x10B8B2C	ability description	Empêche la paralysie.	TRANSLATED
+ODYSSEY-TXT-001569	0x024F481	28	Ups evasion in a sandstorm.		27	1	0x024FB28,0x10B8B30	ability description	Augmente l’esquive en tempête de sable.	TRANSLATED
+ODYSSEY-TXT-001570	0x024F49D	22	Paralyzes on contact.		21	1	0x024FB2C,0x10B8B34	ability description	Paralyse au contact.	TRANSLATED
+ODYSSEY-TXT-001571	0x024F4B3	27	Turns electricity into HP.		26	1	0x024FB30,0x10B8B38	ability description	Transforme l’électricité en PV.	TRANSLATED
+ODYSSEY-TXT-001572	0x024F4CE	23	Changes water into HP.		22	1	0x024FB34,0x10B8B3C	ability description	Transforme l’eau en PV.	TRANSLATED
+ODYSSEY-TXT-001573	0x024F4FA	25	Negates weather effects.		24	1	0x024FB3C,0x10B8B44	ability description	Annule les effets météo.	TRANSLATED
+ODYSSEY-TXT-001574	0x024F534	28	Changes type to foe’s move.		27	1	0x024FB48,0x10B8B50	ability description	Change de type selon la capacité adverse.	TRANSLATED
+ODYSSEY-TXT-001575	0x024F564	26	Powers up if hit by fire.		25	1	0x024FB50,0x10B8B58	ability description	Se renforce si touché par le feu.	TRANSLATED
+ODYSSEY-TXT-001576	0x024F5AA	25	Firmly anchors the body.		24	1	0x024FB5C,0x10B8B64	ability description	Ancre fermement le corps.	TRANSLATED
+ODYSSEY-TXT-001577	0x024F5C3	25	Lowers the foe’s Attack.		24	1	0x024FB60,0x10B8B68	ability description	Baisse l’Attaque adverse.	TRANSLATED
+ODYSSEY-TXT-001578	0x024F5DC	27	Prevents the foe’s escape.		26	1	0x024FB64,0x10B8B6C	ability description	Empêche la fuite de l’adversaire.	TRANSLATED
+ODYSSEY-TXT-001579	0x024F607	24	“Super effective” hits.		23	1	0x024FB6C,0x10B8B74	ability description	Coups “super efficaces”.	TRANSLATED
+ODYSSEY-TXT-001580	0x024F61F	27	Not hit by Ground attacks.		26	1	0x024FB70,0x10B8B78	ability description	Insensible aux attaques Sol.	TRANSLATED
+ODYSSEY-TXT-001581	0x024F63A	26	Leaves spores on contact.		25	1	0x024FB74,0x10B8B7C	ability description	Laisse des spores au contact.	TRANSLATED
+ODYSSEY-TXT-001582	0x024F654	27	Passes on status problems.		26	1	0x024FB78,0x10B8B80	ability description	Transmet les problèmes de statut.	TRANSLATED
+ODYSSEY-TXT-001583	0x024F68B	26	Heals upon switching out.		25	1	0x024FB80,0x10B8B88	ability description	Soigne au changement.	TRANSLATED
+ODYSSEY-TXT-001584	0x024F6A5	24	Draws electrical moves.		23	1	0x024FB84,0x10B8B8C	ability description	Attire les capacités électriques.	TRANSLATED
+ODYSSEY-TXT-001585	0x024F705	26	Encounter rate increases.		25	1	0x024FB94,0x10B8B9C	ability description	Augmente le taux de rencontre.	TRANSLATED
+ODYSSEY-TXT-001586	0x024F71F	24	Copies special ability.		23	1	0x024FB98,0x10B8BA0	ability description	Copie le talent spécial.	TRANSLATED
+ODYSSEY-TXT-001587	0x024F737	15	Raises Attack.		14	1	0x024FB9C,0x10B8BA4	ability description	Augmente l’Attaque.	TRANSLATED
+ODYSSEY-TXT-001588	0x024F746	24	Poisons foe on contact.		23	1	0x024FBA0,0x10B8BA8	ability description	Empoisonne l’adversaire au contact.	TRANSLATED
+ODYSSEY-TXT-001589	0x024F7AF	26	Avoids sound-based moves.		25	1	0x024FBB4,0x10B8BBC	ability description	Évite les capacités sonores.	TRANSLATED
+ODYSSEY-TXT-001590	0x024F7C9	28	Slight HP recovery in rain.		27	1	0x024FBB8,0x10B8BC0	ability description	Légère récup de PV sous la pluie.	TRANSLATED
+ODYSSEY-TXT-001591	0x024F7FA	23	Raises foe’s PP usage.		22	1	0x024FBC0,0x10B8BC8	ability description	Augmente l’utilisation de PP adverse.	TRANSLATED
+ODYSSEY-TXT-001592	0x024F82B	28	Awakens quickly from sleep.		27	1	0x024FBC8,0x10B8BD0	ability description	Se réveille vite du sommeil.	TRANSLATED
+ODYSSEY-TXT-001593	0x024F847	26	Burns the foe on contact.		25	1	0x024FBCC,0x10B8BD4	ability description	Brûle l’adversaire au contact.	TRANSLATED
+ODYSSEY-TXT-001594	0x024F861	23	Makes escaping easier.		22	1	0x024FBD0,0x10B8BD8	ability description	Facilite la fuite.	TRANSLATED
+ODYSSEY-TXT-001595	0x024F878	27	Prevents loss of accuracy.		26	1	0x024FBD4,0x10B8BDC	ability description	Empêche la perte de précision.	TRANSLATED
+ODYSSEY-TXT-001596	0x024F893	27	Prevents Attack reduction.		26	1	0x024FBD8,0x10B8BE0	ability description	Empêche la baisse d’Attaque.	TRANSLATED
+ODYSSEY-TXT-001597	0x024F8AE	19	May pick up items.		18	1	0x024FBDC,0x10B8BE4	ability description	Peut ramasser des objets.	TRANSLATED
+ODYSSEY-TXT-001598	0x024F8C1	28	Moves only every two turns.		27	1	0x024FBE0,0x10B8BE8	ability description	N’agit qu’un tour sur deux.	TRANSLATED
+ODYSSEY-TXT-001599	0x024F8DD	27	Trades accuracy for power.		26	1	0x024FBE4,0x10B8BEC	ability description	Échange précision contre puissance.	TRANSLATED
+ODYSSEY-TXT-001600	0x024F8F8	23	Infatuates on contact.		22	1	0x024FBE8,0x10B8BF0	ability description	Rend amoureux au contact.	TRANSLATED
+ODYSSEY-TXT-001601	0x024F90F	22	Powers up with Minus.		21	1	0x024FBEC,0x10B8BF4	ability description	Se renforce avec Moins.	TRANSLATED
+ODYSSEY-TXT-001602	0x024F925	21	Powers up with Plus.		20	1	0x024FBF0,0x10B8BF8	ability description	Se renforce avec Plus.	TRANSLATED
+ODYSSEY-TXT-001603	0x024F93A	26	Changes with the weather.		25	1	0x024FBF4,0x10B8BFC	ability description	Change selon la météo.	TRANSLATED
+ODYSSEY-TXT-001604	0x024F954	21	Prevents item theft.		20	1	0x024FBF8,0x10B8C00	ability description	Empêche le vol d’objet.	TRANSLATED
+ODYSSEY-TXT-001605	0x024F969	28	Heals the body by shedding.		27	1	0x024FBFC,0x10B8C04	ability description	Soigne le corps en muant.	TRANSLATED
+ODYSSEY-TXT-001606	0x024F9B8	24	Draining causes injury.		23	1	0x024FC08,0x10B8C10	ability description	Le drain cause des blessures.	TRANSLATED
+ODYSSEY-TXT-001607	0x024F9D0	28	Ups Grass moves in a pinch.		27	1	0x024FC0C,0x10B8C14	ability description	Renforce les capacités Plante en difficulté.	TRANSLATED
+ODYSSEY-TXT-001608	0x024F9E4	8	 pinch.		7	1	0x0B67D10	ability description fragment	 difficulté.	TRANSLATED
+ODYSSEY-TXT-001609	0x024F9EC	27	Ups Fire moves in a pinch.		26	1	0x024FC10,0x10B8C18	ability description	Renforce les capacités Feu en difficulté.	TRANSLATED
+ODYSSEY-TXT-001610	0x024FA07	28	Ups Water moves in a pinch.		27	1	0x024FC14,0x10B8C1C	ability description	Renforce les capacités Eau en difficulté.	TRANSLATED
+ODYSSEY-TXT-001611	0x024FA23	26	Ups Bug moves in a pinch.		25	1	0x024FC18,0x10B8C20	ability description	Renforce les capacités Insecte en difficulté.	TRANSLATED
+ODYSSEY-TXT-001612	0x024FA3D	24	Prevents recoil damage.		23	1	0x024FC1C,0x10B8C24	ability description	Empêche les dégâts de contrecoup.	TRANSLATED
+ODYSSEY-TXT-001613	0x024FA55	28	Summons sunlight in battle.		27	1	0x024FC20,0x10B8C28	ability description	Invoque le soleil en combat.	TRANSLATED
+ODYSSEY-TXT-001614	0x024FA93	26	Prevents stats reduction.		25	1	0x024FC2C,0x10B8C34	ability description	Empêche la baisse de stats.	TRANSLATED
+ODYSSEY-TXT-001615	0x024FAAF	15	Raises Attack.		14	1	0x024FC30,0x10B8C38	ability description	Augmente l’Attaque.	TRANSLATED
+ODYSSEY-TXT-001616	0x024FABE	22	Blocks critical hits.		21	1	0x024FC34,0x10B8C3C	ability description	Bloque les coups critiques.	TRANSLATED
+ODYSSEY-TXT-001617	0x024FAEE	25	Negates weather effects.		24	1	0x024FC3C,0x10B8C44	ability description	Annule les effets météo.	TRANSLATED
+ODYSSEY-TXT-001618	0x0250012	9	ll Armor		8	1	0x1AF64CC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001619	0x025E054	9	   F    		8	1	0x025E060	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001620	0x026499C	3	  		2	1	0x026CE3C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001621	0x026BB5C	3	  		2	1	0x00545C8	UNKNOWN		SKIP_NOISE
@@ -1656,13 +1656,13 @@ ODYSSEY-TXT-001654	0x0398CA8	7	      		6	1	0x03A5594	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001655	0x0398D28	15	              		14	1	0x03A559C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001656	0x0398E28	8	       		7	1	0x03A55AC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001657	0x0398EA8	8	       		7	1	0x03A55B4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001658	0x0399788	10	iiiiiiiii		9	1	0x03A597C,0x03A59BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001659	0x0399908	6	iiiii		5	1	0x03A59D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001660	0x0399988	11	iiii<FD:FF>ii<FD:DD>	FD	6	1	0x03A59DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001661	0x0399A08	6	iiiii		5	1	0x03A59E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001662	0x0399A88	11	iiii<FD:FF>ii<FD:DD>	FD	6	1	0x03A59EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001663	0x0399B08	6	iiiii		5	1	0x03A59F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001664	0x0399B88	11	iiii<FD:FF>ii<FD:DD>	FD	6	1	0x03A59FC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001658	0x0399788	10	iiiiiiiii		9	1	0x03A597C,0x03A59BC	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001659	0x0399908	6	iiiii		5	1	0x03A59D4	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001660	0x0399988	11	iiii<FD:FF>ii<FD:DD>	FD	6	1	0x03A59DC	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001661	0x0399A08	6	iiiii		5	1	0x03A59E4	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001662	0x0399A88	11	iiii<FD:FF>ii<FD:DD>	FD	6	1	0x03A59EC	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001663	0x0399B08	6	iiiii		5	1	0x03A59F4	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001664	0x0399B88	11	iiii<FD:FF>ii<FD:DD>	FD	6	1	0x03A59FC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001665	0x039BF08	5	▲zzz		4	1	0x03A5D54	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001666	0x039C008	25	                    ▲zzz		24	1	0x03A5D5C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001667	0x039C108	77	                                                                        ▲zzz		76	1	0x03A5D64	UNKNOWN		SKIP_NOISE
@@ -1675,12 +1675,12 @@ ODYSSEY-TXT-001673	0x03A5C34	3	  		2	1	0x03A0064	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001674	0x03A72A0	2	s		1	1	0x006BDE8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001675	0x03A72A2	2	i		1	1	0x006BE30	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001676	0x03A8D62	3	ii		2	1	0x052FDE4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001677	0x03A9365	13	zzjiiiikii<FD:FC>	FD	10	1	0x0544030	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001678	0x03AA558	13	zzzzizzjiiii		12	1	0x054D268	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001679	0x03ABDC8	23	zzzzz▲zz▲zzziiC<FB>i<FD:FA>Ei.	FB;FD	19	1	0x03AC1E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001680	0x03ABEC8	19	zzzzzzzzzzzA<FD:DD>AEi9	FD	16	1	0x03AC1EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001681	0x03ABFC8	15	zzzzz▲D<FB>▲<FE><FA>Ei.	FA;FB;FE	11	2	0x03AC1F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001682	0x03AC0C8	19	zzzzzzzzzzzA<FD:DD>AEi9	FD	16	1	0x03AC1F4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001677	0x03A9365	13	zzjiiiikii<FD:FC>	FD	10	1	0x0544030	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001678	0x03AA558	13	zzzzizzjiiii		12	1	0x054D268	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001679	0x03ABDC8	23	zzzzz▲zz▲zzziiC<FB>i<FD:FA>Ei.	FB;FD	19	1	0x03AC1E8	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001680	0x03ABEC8	19	zzzzzzzzzzzA<FD:DD>AEi9	FD	16	1	0x03AC1EC	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001681	0x03ABFC8	15	zzzzz▲D<FB>▲<FE><FA>Ei.	FA;FB;FE	11	2	0x03AC1F0	UNKNOWN		SKIP_NOISE
+ODYSSEY-TXT-001682	0x03AC0C8	19	zzzzzzzzzzzA<FD:DD>AEi9	FD	16	1	0x03AC1F4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001683	0x03B4E50	21	                    		20	1	0x035061C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001684	0x03B5EB0	21	                    		20	1	0x0350750	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001685	0x03B8B24	81	                                                                                		80	1	0x0350B94	UNKNOWN		SKIP_NOISE
@@ -1694,66 +1694,66 @@ ODYSSEY-TXT-001692	0x03CB7F0	5	    		4	1	0x00861F8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001693	0x03CC270	5	    		4	1	0x03CC290	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001694	0x03CDA80	9	l l     		8	1	0x03CDA90	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001695	0x03CEA10	3	  		2	1	0x008F0B8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001696	0x03D2AD0	56	          Vy  y<FE> Vz<FE> yz<FE>Vzz<FE>yzz<FE>yzz<FE>lzz<FE> zz<FE> lz<FE>  z<FE>  :	FE	45	11	0x03D2B54	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001696	0x03D2AD0	56	          Vy  y<FE> Vz<FE> yz<FE>Vzz<FE>yzz<FE>yzz<FE>lzz<FE> zz<FE> lz<FE>  z<FE>  :	FE	45	11	0x03D2B54	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001697	0x03D421C	5	    		4	1	0x03D4234	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-001698	0x03D4270	5	    		4	1	0x03D4278	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-001699	0x03D501A	93	A special BALL that is used only in<FE>the SAFARI ZONE. It is finished in<FE>a camouflage pattern.	FE	90	3	0x03DB118	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001700	0x03D51B4	98	A somewhat different Ball that<FE>becomes progressively better the<FE>more turns there are in a battle.	FE	95	3	0x03DB1F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001701	0x03D5263	79	A rare Ball that has been<FE>specially made to commemorate an<FE>event of some sort.	FE	76	3	0x03DB24C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001702	0x03D52B2	77	Medicine made of boiled herbs<FE>that restores 50 HP.                          	FE	75	2	0x03DB278	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001703	0x03D541B	84	Medicine made of Yggdrasil’s<FE>honey that fully restores HP<FE>and removes status.      	FE	81	3	0x03DB380	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001704	0x03D546F	70	Medicine made of pulverized<FE>coral that fully restores HP.            	FE	68	2	0x03DB3AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001705	0x03D54B5	78	Medicine made of crushed<FE>nutshells that restores 120 HP.                     	FE	76	2	0x03DB3D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001706	0x03D5503	77	Medicine made of flower<FE>extract that restores 80 HP.                        	FE	75	2	0x03DB404	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001707	0x03D5550	72	Panacea made of boiled<FE>flower petals.<FE>Removes status conditions.       	FE	69	3	0x03DB430	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001708	0x03D562B	63	Water with a high mineral content.<FE>Restores 50 HP.            	FE	61	2	0x03DB4B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001709	0x03D567E	50	A fizzy soda drink.<FE>Restores 60 HP.              	FE	48	2	0x03DB4E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001710	0x03D56C2	46	A very sweet drink.<FE>Restores 80 HP.          	FE	44	2	0x03DB50C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001711	0x03D5706	56	Highly nutritious milk.<FE>Restores 100 HP.               	FE	54	2	0x03DB538	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001712	0x03D5B7A	75	Pure salt obtained from deep inside<FE>the SHOAL CAVE. It is extremely<FE>salty.	FE	72	3	0x03DB824	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001713	0x03D5BC5	85	A pretty seashell found deep inside<FE>the SHOAL CAVE. It is striped in<FE>blue and white.	FE	82	3	0x03DB850	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001714	0x03D5C1A	76	A small red shard.<FE>It appears to be from some sort of<FE>a tool made long ago.	FE	73	3	0x03DB87C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001715	0x03D5C66	77	A small blue shard.<FE>It appears to be from some sort of<FE>a tool made long ago.	FE	74	3	0x03DB8A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001716	0x03D5CB3	79	A small yellow shard.<FE>It appears to be from some sort of<FE>a tool made long ago.	FE	76	3	0x03DB8D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001717	0x03D5D02	78	A small green shard.<FE>It appears to be from some sort of<FE>a tool made long ago.	FE	75	3	0x03DB900	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001718	0x03D5ED3	77	Increases the current level<FE>even beyond the level cap.<FE>Nice cheat though.   	FE	74	3	0x03DBBEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001719	0x03D6351	75	A magical rope.<FE>Use it to return instantly<FE>to Talrega.                    	FE	72	3	0x03DBED8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001720	0x03D65EE	69	A small and rare mushroom.<FE>It is quite popular among certain<FE>people.	FE	66	3	0x03DC1F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001721	0x03D6633	68	A large and rare mushroom.<FE>It is very popular among certain<FE>people.	FE	65	3	0x03DC21C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001722	0x03D6677	89	A relatively small pearl that<FE>sparkles in a pretty silver color.<FE>It can be sold cheaply.	FE	86	3	0x03DC274	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001723	0x03D669E	50	in a pretty silver color.<FE>It can be sold cheaply.	FE	48	2	0x0557290	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001724	0x03D66D0	92	A quite-large pearl that sparkles<FE>in a pretty silver color.<FE>It can be sold at a high price.	FE	89	3	0x03DC2A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001725	0x03D672C	76	A pretty red sand with a loose,<FE>silky feel.<FE>It can be sold at a high price.	FE	73	3	0x03DC2CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001726	0x03D6778	86	A shard of a pretty gem that<FE>sparkles in a red color.<FE>It can be sold at a high price.	FE	83	3	0x03DC2F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001727	0x03D67CE	87	A nugget of pure gold that gives<FE>off a lustrous gleam.<FE>It can be sold at a high price.	FE	84	3	0x03DC324	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001728	0x03D6825	98	A pretty, heart-shaped scale that<FE>is extremely rare. It glows faintly<FE>in the colors of a rainbow.	FE	95	3	0x03DC350	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001729	0x03D6D30	53	When held, it will be<FE>used in battle to heal a burn.	FE	51	2	0x03DC79C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001730	0x03D6F0C	64	If held, restores HP but confuses<FE>if nature is -Atk.           	FE	62	2	0x03DC8D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001731	0x03D6F4C	64	If held, restores HP but confuses<FE>if nature is -Sp. Atk.       	FE	62	2	0x03DC8FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001732	0x03D6F8C	64	If held, restores HP but confuses<FE>if nature is -Speed.         	FE	62	2	0x03DC928	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001733	0x03D6FCC	64	If held, restores HP but confuses<FE>if nature is -Sp. Def.       	FE	62	2	0x03DC954	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001734	0x03D700C	64	If held, restores HP but confuses<FE>if nature is -Def.           	FE	62	2	0x03DC980	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001735	0x03D704C	62	A red flower that grows<FE>in the Yggdrasil Labyrinth.          	FE	60	2	0x03DC9AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001736	0x03D708A	62	A blue flower that grows<FE>in the Yggdrasil Labyrinth.         	FE	60	2	0x03DC9D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001737	0x03D70C8	62	A yellow flower that grows<FE>in the Yggdrasil Labyrinth.       	FE	60	2	0x03DCA04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001738	0x03D7106	62	A purple flower that grows<FE>in the Yggdrasil Labyrinth.       	FE	60	2	0x03DCA30	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001739	0x03D7144	62	A white flower that grows<FE>in the Yggdrasil Labyrinth.        	FE	60	2	0x03DCA5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001740	0x03D7182	62	A black flower that grows<FE>in the Yggdrasil Labyrinth.        	FE	60	2	0x03DCA88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001741	0x03D71C0	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCAB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001742	0x03D71C9	51	 that can be extracted<FE>from the Yggdrasil mines.  	FE	49	2	0x0613C24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001743	0x03D71FE	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCAE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001744	0x03D723C	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCB0C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001745	0x03D727A	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCB38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001746	0x03D7283	51	 that can be extracted<FE>from the Yggdrasil mines.  	FE	49	2	0x05CA7A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001747	0x03D72B8	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCB64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001748	0x03D72F6	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCB90	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001749	0x03D73B0	67	Can be ground up into a powder as<FE>an ingredient for medicine.     	FE	65	2	0x03DCC14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001750	0x03D746A	67	Can be ground up into a powder as<FE>an ingredient for medicine.     	FE	65	2	0x03DCC98	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001751	0x03D76E0	62	Can be ground up into a powder as<FE>an ingredient for medicine.	FE	60	2	0x03DCE50	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001752	0x03D779B	68	.<FE>It restores any lowered stat in<FE>battle. It can be used only once.	FE	65	3	0x0639000	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001753	0x03D77B7	40	at in<FE>battle. It can be used only once.	FE	38	2	0x063CB94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001754	0x03D7B93	82	An orb to be held by a LATIOS or<FE>LATIAS. It raises the SP. ATK<FE>and SP. DEF stats.	FE	79	3	0x03DD110	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-001755	0x03D7D78	57	older has full HP, it will<FE>endure a KO attack with 1 HP.	FE	55	2	0x0647630	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-001699	0x03D501A	93	A special BALL that is used only in<FE>the SAFARI ZONE. It is finished in<FE>a camouflage pattern.	FE	90	3	0x03DB118	item description	Une BALL spéciale utilisée<FE>uniquement dans le PARC SAFARI.<FE>Elle a un motif de camouflage.	TRANSLATED
+ODYSSEY-TXT-001700	0x03D51B4	98	A somewhat different Ball that<FE>becomes progressively better the<FE>more turns there are in a battle.	FE	95	3	0x03DB1F4	item description	Une Ball un peu différente qui<FE>devient progressivement meilleure<FE>plus le combat dure longtemps.	TRANSLATED
+ODYSSEY-TXT-001701	0x03D5263	79	A rare Ball that has been<FE>specially made to commemorate an<FE>event of some sort.	FE	76	3	0x03DB24C	item description	Une Ball rare spécialement<FE>fabriquée pour commémorer un<FE>événement particulier.	TRANSLATED
+ODYSSEY-TXT-001702	0x03D52B2	77	Medicine made of boiled herbs<FE>that restores 50 HP.                          	FE	75	2	0x03DB278	item description	Remède à base d’herbes bouillies<FE>qui restaure 50 PV.                          	TRANSLATED
+ODYSSEY-TXT-001703	0x03D541B	84	Medicine made of Yggdrasil’s<FE>honey that fully restores HP<FE>and removes status.      	FE	81	3	0x03DB380	item description	Remède au miel d’Yggdrasil qui<FE>restaure tous les PV et soigne<FE>les problèmes de statut.      	TRANSLATED
+ODYSSEY-TXT-001704	0x03D546F	70	Medicine made of pulverized<FE>coral that fully restores HP.            	FE	68	2	0x03DB3AC	item description	Remède au corail pulvérisé qui<FE>restaure tous les PV.            	TRANSLATED
+ODYSSEY-TXT-001705	0x03D54B5	78	Medicine made of crushed<FE>nutshells that restores 120 HP.                     	FE	76	2	0x03DB3D8	item description	Remède aux coquilles de noix<FE>broyées qui restaure 120 PV.                     	TRANSLATED
+ODYSSEY-TXT-001706	0x03D5503	77	Medicine made of flower<FE>extract that restores 80 HP.                        	FE	75	2	0x03DB404	item description	Remède à l’extrait de fleurs<FE>qui restaure 80 PV.                        	TRANSLATED
+ODYSSEY-TXT-001707	0x03D5550	72	Panacea made of boiled<FE>flower petals.<FE>Removes status conditions.       	FE	69	3	0x03DB430	item description	Panacée à base de pétales de<FE>fleurs bouillis.<FE>Soigne les problèmes de statut.       	TRANSLATED
+ODYSSEY-TXT-001708	0x03D562B	63	Water with a high mineral content.<FE>Restores 50 HP.            	FE	61	2	0x03DB4B4	item description	Eau à forte teneur minérale.<FE>Restaure 50 PV.            	TRANSLATED
+ODYSSEY-TXT-001709	0x03D567E	50	A fizzy soda drink.<FE>Restores 60 HP.              	FE	48	2	0x03DB4E0	item description	Une boisson gazeuse pétillante.<FE>Restaure 60 PV.              	TRANSLATED
+ODYSSEY-TXT-001710	0x03D56C2	46	A very sweet drink.<FE>Restores 80 HP.          	FE	44	2	0x03DB50C	item description	Une boisson très sucrée.<FE>Restaure 80 PV.          	TRANSLATED
+ODYSSEY-TXT-001711	0x03D5706	56	Highly nutritious milk.<FE>Restores 100 HP.               	FE	54	2	0x03DB538	item description	Lait hautement nutritif.<FE>Restaure 100 PV.               	TRANSLATED
+ODYSSEY-TXT-001712	0x03D5B7A	75	Pure salt obtained from deep inside<FE>the SHOAL CAVE. It is extremely<FE>salty.	FE	72	3	0x03DB824	item description	Sel pur obtenu au fond de la<FE>GROTTE DU BANC. Il est extrêmement<FE>salé.	TRANSLATED
+ODYSSEY-TXT-001713	0x03D5BC5	85	A pretty seashell found deep inside<FE>the SHOAL CAVE. It is striped in<FE>blue and white.	FE	82	3	0x03DB850	item description	Un joli coquillage trouvé au fond<FE>de la GROTTE DU BANC. Il est<FE>rayé de bleu et blanc.	TRANSLATED
+ODYSSEY-TXT-001714	0x03D5C1A	76	A small red shard.<FE>It appears to be from some sort of<FE>a tool made long ago.	FE	73	3	0x03DB87C	item description	Un petit éclat rouge.<FE>Il semble provenir d’un outil<FE>fabriqué il y a longtemps.	TRANSLATED
+ODYSSEY-TXT-001715	0x03D5C66	77	A small blue shard.<FE>It appears to be from some sort of<FE>a tool made long ago.	FE	74	3	0x03DB8A8	item description	Un petit éclat bleu.<FE>Il semble provenir d’un outil<FE>fabriqué il y a longtemps.	TRANSLATED
+ODYSSEY-TXT-001716	0x03D5CB3	79	A small yellow shard.<FE>It appears to be from some sort of<FE>a tool made long ago.	FE	76	3	0x03DB8D4	item description	Un petit éclat jaune.<FE>Il semble provenir d’un outil<FE>fabriqué il y a longtemps.	TRANSLATED
+ODYSSEY-TXT-001717	0x03D5D02	78	A small green shard.<FE>It appears to be from some sort of<FE>a tool made long ago.	FE	75	3	0x03DB900	item description	Un petit éclat vert.<FE>Il semble provenir d’un outil<FE>fabriqué il y a longtemps.	TRANSLATED
+ODYSSEY-TXT-001718	0x03D5ED3	77	Increases the current level<FE>even beyond the level cap.<FE>Nice cheat though.   	FE	74	3	0x03DBBEC	item description	Augmente le niveau actuel<FE>même au-delà de la limite.<FE>Une belle triche, cela dit.   	TRANSLATED
+ODYSSEY-TXT-001719	0x03D6351	75	A magical rope.<FE>Use it to return instantly<FE>to Talrega.                    	FE	72	3	0x03DBED8	item description	Une corde magique.<FE>Utilise-la pour retourner<FE>instantanément à Talrega.                    	TRANSLATED
+ODYSSEY-TXT-001720	0x03D65EE	69	A small and rare mushroom.<FE>It is quite popular among certain<FE>people.	FE	66	3	0x03DC1F0	item description	Un petit champignon rare.<FE>Il est plutôt populaire chez<FE>certaines personnes.	TRANSLATED
+ODYSSEY-TXT-001721	0x03D6633	68	A large and rare mushroom.<FE>It is very popular among certain<FE>people.	FE	65	3	0x03DC21C	item description	Un gros champignon rare.<FE>Il est très populaire chez<FE>certaines personnes.	TRANSLATED
+ODYSSEY-TXT-001722	0x03D6677	89	A relatively small pearl that<FE>sparkles in a pretty silver color.<FE>It can be sold cheaply.	FE	86	3	0x03DC274	item description	Une perle relativement petite<FE>qui scintille d’un joli argenté.<FE>Elle peut se vendre à bas prix.	TRANSLATED
+ODYSSEY-TXT-001723	0x03D669E	50	in a pretty silver color.<FE>It can be sold cheaply.	FE	48	2	0x0557290	item description fragment	d’un joli argenté.<FE>Elle peut se vendre à bas prix.	TRANSLATED
+ODYSSEY-TXT-001724	0x03D66D0	92	A quite-large pearl that sparkles<FE>in a pretty silver color.<FE>It can be sold at a high price.	FE	89	3	0x03DC2A0	item description	Une grande perle qui scintille<FE>d’un joli argenté.<FE>Elle peut se vendre cher.	TRANSLATED
+ODYSSEY-TXT-001725	0x03D672C	76	A pretty red sand with a loose,<FE>silky feel.<FE>It can be sold at a high price.	FE	73	3	0x03DC2CC	item description	Un joli sable rouge, doux et<FE>soyeux au toucher.<FE>Il peut se vendre cher.	TRANSLATED
+ODYSSEY-TXT-001726	0x03D6778	86	A shard of a pretty gem that<FE>sparkles in a red color.<FE>It can be sold at a high price.	FE	83	3	0x03DC2F8	item description	Un éclat d’une jolie gemme qui<FE>scintille en rouge.<FE>Il peut se vendre cher.	TRANSLATED
+ODYSSEY-TXT-001727	0x03D67CE	87	A nugget of pure gold that gives<FE>off a lustrous gleam.<FE>It can be sold at a high price.	FE	84	3	0x03DC324	item description	Une pépite d’or pur qui brille<FE>d’un éclat lustré.<FE>Elle peut se vendre cher.	TRANSLATED
+ODYSSEY-TXT-001728	0x03D6825	98	A pretty, heart-shaped scale that<FE>is extremely rare. It glows faintly<FE>in the colors of a rainbow.	FE	95	3	0x03DC350	item description	Une jolie écaille en forme de cœur,<FE>extrêmement rare. Elle brille faiblement<FE>des couleurs de l’arc-en-ciel.	TRANSLATED
+ODYSSEY-TXT-001729	0x03D6D30	53	When held, it will be<FE>used in battle to heal a burn.	FE	51	2	0x03DC79C	item description	Si tenu, il sera utilisé en<FE>combat pour soigner une brûlure.	TRANSLATED
+ODYSSEY-TXT-001730	0x03D6F0C	64	If held, restores HP but confuses<FE>if nature is -Atk.           	FE	62	2	0x03DC8D0	item description	Si tenue, restaure des PV mais<FE>confond si la nature est -Atq.           	TRANSLATED
+ODYSSEY-TXT-001731	0x03D6F4C	64	If held, restores HP but confuses<FE>if nature is -Sp. Atk.       	FE	62	2	0x03DC8FC	item description	Si tenue, restaure des PV mais<FE>confond si la nature est -Atq. Spé.       	TRANSLATED
+ODYSSEY-TXT-001732	0x03D6F8C	64	If held, restores HP but confuses<FE>if nature is -Speed.         	FE	62	2	0x03DC928	item description	Si tenue, restaure des PV mais<FE>confond si la nature est -Vitesse.         	TRANSLATED
+ODYSSEY-TXT-001733	0x03D6FCC	64	If held, restores HP but confuses<FE>if nature is -Sp. Def.       	FE	62	2	0x03DC954	item description	Si tenue, restaure des PV mais<FE>confond si la nature est -Déf. Spé.       	TRANSLATED
+ODYSSEY-TXT-001734	0x03D700C	64	If held, restores HP but confuses<FE>if nature is -Def.           	FE	62	2	0x03DC980	item description	Si tenue, restaure des PV mais<FE>confond si la nature est -Défense.           	TRANSLATED
+ODYSSEY-TXT-001735	0x03D704C	62	A red flower that grows<FE>in the Yggdrasil Labyrinth.          	FE	60	2	0x03DC9AC	item description	Une fleur rouge qui pousse<FE>dans le Labyrinthe d’Yggdrasil.          	TRANSLATED
+ODYSSEY-TXT-001736	0x03D708A	62	A blue flower that grows<FE>in the Yggdrasil Labyrinth.         	FE	60	2	0x03DC9D8	item description	Une fleur bleue qui pousse<FE>dans le Labyrinthe d’Yggdrasil.         	TRANSLATED
+ODYSSEY-TXT-001737	0x03D70C8	62	A yellow flower that grows<FE>in the Yggdrasil Labyrinth.       	FE	60	2	0x03DCA04	item description	Une fleur jaune qui pousse<FE>dans le Labyrinthe d’Yggdrasil.       	TRANSLATED
+ODYSSEY-TXT-001738	0x03D7106	62	A purple flower that grows<FE>in the Yggdrasil Labyrinth.       	FE	60	2	0x03DCA30	item description	Une fleur violette qui pousse<FE>dans le Labyrinthe d’Yggdrasil.       	TRANSLATED
+ODYSSEY-TXT-001739	0x03D7144	62	A white flower that grows<FE>in the Yggdrasil Labyrinth.        	FE	60	2	0x03DCA5C	item description	Une fleur blanche qui pousse<FE>dans le Labyrinthe d’Yggdrasil.        	TRANSLATED
+ODYSSEY-TXT-001740	0x03D7182	62	A black flower that grows<FE>in the Yggdrasil Labyrinth.        	FE	60	2	0x03DCA88	item description	Une fleur noire qui pousse<FE>dans le Labyrinthe d’Yggdrasil.        	TRANSLATED
+ODYSSEY-TXT-001741	0x03D71C0	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCAB4	item description	Un minerai extrait des<FE>mines d’Yggdrasil.  	TRANSLATED
+ODYSSEY-TXT-001742	0x03D71C9	51	 that can be extracted<FE>from the Yggdrasil mines.  	FE	49	2	0x0613C24	item description fragment	 extrait des<FE>mines d’Yggdrasil.  	TRANSLATED
+ODYSSEY-TXT-001743	0x03D71FE	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCAE0	item description	Un minerai extrait des<FE>mines d’Yggdrasil.  	TRANSLATED
+ODYSSEY-TXT-001744	0x03D723C	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCB0C	item description	Un minerai extrait des<FE>mines d’Yggdrasil.  	TRANSLATED
+ODYSSEY-TXT-001745	0x03D727A	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCB38	item description	Un minerai extrait des<FE>mines d’Yggdrasil.  	TRANSLATED
+ODYSSEY-TXT-001746	0x03D7283	51	 that can be extracted<FE>from the Yggdrasil mines.  	FE	49	2	0x05CA7A4	item description fragment	 extrait des<FE>mines d’Yggdrasil.  	TRANSLATED
+ODYSSEY-TXT-001747	0x03D72B8	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCB64	item description	Un minerai extrait des<FE>mines d’Yggdrasil.  	TRANSLATED
+ODYSSEY-TXT-001748	0x03D72F6	60	A mineral that can be extracted<FE>from the Yggdrasil mines.  	FE	58	2	0x03DCB90	item description	Un minerai extrait des<FE>mines d’Yggdrasil.  	TRANSLATED
+ODYSSEY-TXT-001749	0x03D73B0	67	Can be ground up into a powder as<FE>an ingredient for medicine.     	FE	65	2	0x03DCC14	item description	Peut être broyé en poudre comme<FE>ingrédient pour un remède.     	TRANSLATED
+ODYSSEY-TXT-001750	0x03D746A	67	Can be ground up into a powder as<FE>an ingredient for medicine.     	FE	65	2	0x03DCC98	item description	Peut être broyé en poudre comme<FE>ingrédient pour un remède.     	TRANSLATED
+ODYSSEY-TXT-001751	0x03D76E0	62	Can be ground up into a powder as<FE>an ingredient for medicine.	FE	60	2	0x03DCE50	item description	Peut être broyé en poudre comme<FE>ingrédient pour un remède.	TRANSLATED
+ODYSSEY-TXT-001752	0x03D779B	68	.<FE>It restores any lowered stat in<FE>battle. It can be used only once.	FE	65	3	0x0639000	item description fragment	.<FE>Il restaure toute stat baissée<FE>en combat. Utilisable une seule fois.	TRANSLATED
+ODYSSEY-TXT-001753	0x03D77B7	40	at in<FE>battle. It can be used only once.	FE	38	2	0x063CB94	item description fragment	…stat<FE>en combat. Utilisable une seule fois.	TRANSLATED
+ODYSSEY-TXT-001754	0x03D7B93	82	An orb to be held by a LATIOS or<FE>LATIAS. It raises the SP. ATK<FE>and SP. DEF stats.	FE	79	3	0x03DD110	item description	Un orbe à tenir par LATIOS ou<FE>LATIAS. Il augmente les stats<FE>ATQ. SPÉ et DÉF. SPÉ.	TRANSLATED
+ODYSSEY-TXT-001755	0x03D7D78	57	older has full HP, it will<FE>endure a KO attack with 1 HP.	FE	55	2	0x0647630	item description fragment	…le porteur a tous ses PV, il survivra<FE>à une attaque K.O. avec 1 PV.	TRANSLATED
 ODYSSEY-TXT-001756	0x03D7F79	92	An orb to be held by a Pikachu<FE>that raises the Sp. Atk stat.<FE>Touching it may cause a shock.	FE	89	3	0x03DD2F4	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-001757	0x03D856E	76	A transparent device filled with all<FE>sorts of data.<FE>It is made by Silph Co.	FE	73	3	0x03DC248,0x03DD5B4	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-001758	0x03D86C0	73	A glove to be held by a CHANSEY.<FE>It raises CHANSEY’s critical-hit<FE>ratio.	FE	70	3	0x03DD664	UNKNOWN		UNTRANSLATED
