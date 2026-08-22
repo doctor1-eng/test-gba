@@ -4871,63 +4871,63 @@ ODYSSEY-TXT-004869	0x0487932	68	The user lets loose<FE>a horribly loud<FE>shout 
 ODYSSEY-TXT-004870	0x0487976	70	The foe is bitten<FE>with toxic fangs.<FE>It may also badly<FE>poison the foe.	FE	66	4	0x129F7C0	Move description	La cible est mordue<FE>par des crocs<FE>toxiques. Peut aussi<FE>l’empoisonner gravement.	TRANSLATED
 ODYSSEY-TXT-004871	0x04879BC	75	The foe is attacked<FE>with sharp claws.<FE>It may also lower<FE>the foe’s Defense.	FE	71	4	0x129F7C4	Move description	La cible est<FE>attaquée par des<FE>griffes acérées.<FE>Peut aussi baisser sa Défense.	TRANSLATED
 ODYSSEY-TXT-004872	0x0487A07	76	The user attacks<FE>everything around it<FE>with a terrible<FE>explosive sound.     	FE	72	4	0x129F7C8	Move description	L’utilisateur<FE>attaque tout ce qui<FE>l’entoure avec un<FE>terrible son explosif.	TRANSLATED
-ODYSSEY-TXT-004873	0x0487A53	75	The target is<FE>infested and<FE>attacked for four<FE>to five turns.               	FE	71	4	0x129F7CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004874	0x0487A9E	77	The foe is hit with<FE>a hard, fast punch.<FE>It may also raise<FE>the user’s Attack.	FE	73	4	0x129F7D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004875	0x0487AEB	68	An attack using a<FE>startling shout.<FE>It also may make<FE>the foe flinch.	FE	64	4	0x129F7D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004876	0x0487B2F	66	An attack that<FE>varies in power and<FE>type depending on<FE>the weather.	FE	62	4	0x129F7D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004877	0x0487B71	78	A soothing scent is<FE>released to heal<FE>all status problems<FE>in the user’s party.	FE	74	4	0x129F7DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004878	0x0487BBF	64	The user feigns<FE>crying to sharply<FE>lower the foe’s<FE>Sp. Def stat.	FE	60	4	0x129F7E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004879	0x0487BFF	71	The foe is hit with<FE>razor-like wind.<FE>It has a high<FE>critical-hit ratio.	FE	67	4	0x129F7E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004880	0x0487C46	69	An intense attack<FE>that also sharply<FE>reduces the user’s<FE>Sp. Atk stat.	FE	65	4	0x03DEA54,0x129F7E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004881	0x0487C8B	71	A fist that raises<FE>the Attack stat<FE>of the user.                       	FE	68	3	0x129F7EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004882	0x0487CD2	75	Boulders are hurled<FE>at the foe. It also<FE>lowers the foe’s<FE>Speed if it hits.	FE	71	4	0x03DE870,0x129F7F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004883	0x0487D1D	75	The foe is attacked<FE>with a silver dust.<FE>It may raise all<FE>the user’s stats.	FE	71	4	0x129F7F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004884	0x0487D68	72	A horrible metallic<FE>screech is used to<FE>sharply lower the<FE>foe’s Sp. Def.	FE	68	4	0x129F7F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004885	0x0487DB0	63	Hazardous, full<FE>power headbutt that<FE>damages the user.         	FE	60	3	0x129F7FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004886	0x0487DEF	65	The foe is made to<FE>laugh, reducing its<FE>Attack and Defense<FE>stats.	FE	61	4	0x129F800	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004887	0x0487E30	66	The user absorbs a<FE>mystic power to<FE>raise its Defense<FE>and Sp. Def.	FE	62	4	0x129F804	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004888	0x0487E72	65	The higher the<FE>user’s HP, the more<FE>powerful this<FE>attack becomes.	FE	61	4	0x129F808	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004889	0x0487EB3	67	The foe is hit with<FE>a flashing beam<FE>that may also<FE>cause confusion.	FE	63	4	0x129F80C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004890	0x0487EF6	63	The user throws a<FE>punch from the<FE>shadows. It cannot<FE>be evaded.	FE	59	4	0x129F810	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004891	0x0487F35	65	The user attacks<FE>with an odd power<FE>that may make the<FE>foe flinch.	FE	61	4	0x129F814	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004892	0x0487F76	62	The user attacks<FE>with an uppercut<FE>thrown skywards<FE>with force.	FE	58	4	0x129F818	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004893	0x0487FB4	69	The foe is trapped<FE>inside a painful<FE>sandstorm for two<FE>to five turns.	FE	65	4	0x129F81C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004894	0x0487FF9	72	The user fiercely<FE>attacks the target<FE>using its entire<FE>body.            	FE	68	4	0x129F820	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004895	0x0488022	31	g its entire<FE>body.            	FE	29	2	0x102712C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004896	0x0488041	73	The user attacks<FE>with muddy water.<FE>It may also lower<FE>the foe’s accuracy.	FE	69	4	0x129F824	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004897	0x048808A	70	The user shoots<FE>seeds at the foe.<FE>Two to five seeds<FE>are shot at once.	FE	66	4	0x03DE348,0x129F828	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004898	0x04880D0	65	An extremely fast<FE>attack against one<FE>target. It can’t be<FE>evaded.	FE	61	4	0x03DE89C,0x129F82C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004899	0x0488111	66	Sharp icicles are<FE>fired at the foe.<FE>It strikes two to<FE>five times.	FE	62	4	0x129F830	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004900	0x0488153	71	The user hardens<FE>its body’s surface<FE>to sharply raise its<FE>Defense stat.	FE	67	4	0x129F834	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004901	0x048819A	71	The user polishes<FE>its body and sharply<FE>raises its Speed<FE>stat.         	FE	67	4	0x129F838	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004902	0x048821F	71	Sharp, huge claws<FE>hook and slash the<FE>foe quickly and<FE>with great power.	FE	67	4	0x03DE214,0x129F840	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004903	0x0488266	78	The user drops an<FE>icicle onto the<FE>target. May cause<FE>flinch.                  	FE	74	4	0x129F844	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004904	0x04882B4	71	The user bulks up<FE>its body to boost<FE>both its Attack and<FE>Defense stats.	FE	67	4	0x03DE31C,0x129F848	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004905	0x0488341	66	The user attacks by<FE>hurling mud.<FE>It also reduces the<FE>foe’s Speed.	FE	62	4	0x129F850	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004906	0x0488383	70	An attack with a<FE>high critical-hit<FE>ratio. It may also<FE>poison the foe.	FE	66	4	0x129F854	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004907	0x04883C9	63	A cutely executed<FE>attack that also<FE>steals the foe’s<FE>hold item.	FE	59	4	0x129F858	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004908	0x0488408	67	The user shrouds<FE>itself in<FE>electricity.<FE>Causes recoil.            	FE	63	4	0x129F85C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004909	0x048844B	63	The foe is attacked<FE>with a strange leaf<FE>that cannot be<FE>evaded.	FE	59	4	0x129F860	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004910	0x048848A	59	The user protects<FE>itself and sharply<FE>raises its Defense.  	FE	56	3	0x129F864	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004911	0x04884B1	20	ises its Defense.  		19	1	0x1237014	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004912	0x04884C5	66	The user focuses<FE>its mind to raise<FE>the Sp. Atk and<FE>Sp. Def stats.	FE	62	4	0x03DE26C,0x129F868	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004913	0x0488507	72	The foe is slashed<FE>with a sharp leaf.<FE>It has a high<FE>critical-hit ratio.	FE	68	4	0x129F86C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004914	0x048854F	72	A mystic, powerful<FE>dance that boosts<FE>the user’s Attack<FE>and Speed stats.	FE	68	4	0x129F870	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004915	0x0488597	60	The user hurls two<FE>to five hard rocks<FE>at the foe to<FE>attack.	FE	56	4	0x129F874	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004916	0x04885D3	65	A rapid jolt of<FE>electricity strikes<FE>the foe. It can’t<FE>be evaded.	FE	61	4	0x03DE794,0x129F878	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004917	0x0488614	70	An attack with a<FE>pulsing blast of<FE>water. It may also<FE>confuse the foe.	FE	66	4	0x03DE240,0x129F87C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004918	0x048865A	71	A move that attacks<FE>the foe with a<FE>blast of light two<FE>turns after use.	FE	67	4	0x129F880	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004919	0x0488C70	50	Obtained a <FD:03> BERRY!<FE>Dad has it at PETALBURG GYM.	FD;FE	46	2	0x00DAA20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004920	0x0488CA2	44	The <FD:02> BERRY transformed into<FE>one <FD:03> BERRY.	FD;FE	38	2	0x00DAA3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004921	0x0488CCE	40	The <FD:02> BERRY has already been<FE>obtained.	FD;FE	36	2	0x00DAA64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004922	0x0488D60	28	A rare word has been added.		27	1	0x00DAB68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004923	0x0488D7C	18	<FD:02> was sent over!	FD	15	1	0x00DAC88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004924	0x0488D8E	47	Your party is full.<FE><FD:02> could not be sent over.	FD;FE	43	2	0x00DAC00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004925	0x0488DBD	36	A new TRAINER has arrived in<FE>HOENN.	FE	34	2	0x00DACD0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004926	0x0488DFD	41	This data can’t be used in<FE>this version.	FE	39	2	0x00DA848	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004927	0x0489583	101	It appears to be for use at the<FE>VERMILION CITY port.<FB>Why not give it a try and see what<FE>it is about?	FB;FE	97	3	0x048950C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004928	0x04896FF	93	Thank you for using the MYSTERY<FE>GIFT System.<FB>You must be <FD:01>.<FE>There is a ticket here for you.	FB;FD;FE	87	3	0x04896BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004929	0x0489906	95	 ALTERING<FE>CAVE on OUTCAST ISLAND.<FB>Why not visit there and check if<FE>the rumors are indeed true?	FB;FE	91	3	0x003F2B0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004873	0x0487A53	75	The target is<FE>infested and<FE>attacked for four<FE>to five turns.               	FE	71	4	0x129F7CC	Move description	La cible est<FE>infestée et<FE>attaquée pendant<FE>quatre à cinq tours.	TRANSLATED
+ODYSSEY-TXT-004874	0x0487A9E	77	The foe is hit with<FE>a hard, fast punch.<FE>It may also raise<FE>the user’s Attack.	FE	73	4	0x129F7D0	Move description	La cible reçoit un<FE>coup de poing dur<FE>et rapide. Peut<FE>aussi augmenter l’Attaque de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004875	0x0487AEB	68	An attack using a<FE>startling shout.<FE>It also may make<FE>the foe flinch.	FE	64	4	0x129F7D4	Move description	Une attaque avec<FE>un cri saisissant.<FE>Peut aussi faire<FE>flancher la cible.	TRANSLATED
+ODYSSEY-TXT-004876	0x0487B2F	66	An attack that<FE>varies in power and<FE>type depending on<FE>the weather.	FE	62	4	0x129F7D8	Move description	Une attaque dont<FE>la puissance et le<FE>type varient selon<FE>la météo.	TRANSLATED
+ODYSSEY-TXT-004877	0x0487B71	78	A soothing scent is<FE>released to heal<FE>all status problems<FE>in the user’s party.	FE	74	4	0x129F7DC	Move description	Un parfum apaisant<FE>est libéré, soignant<FE>tous les problèmes<FE>de statut du camp de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004878	0x0487BBF	64	The user feigns<FE>crying to sharply<FE>lower the foe’s<FE>Sp. Def stat.	FE	60	4	0x129F7E0	Move description	L’utilisateur feint<FE>de pleurer pour<FE>réduire fortement la<FE>Défense Spéciale de la cible.	TRANSLATED
+ODYSSEY-TXT-004879	0x0487BFF	71	The foe is hit with<FE>razor-like wind.<FE>It has a high<FE>critical-hit ratio.	FE	67	4	0x129F7E4	Move description	La cible est<FE>frappée par un vent<FE>tranchant. Taux de<FE>coups critiques élevé.	TRANSLATED
+ODYSSEY-TXT-004880	0x0487C46	69	An intense attack<FE>that also sharply<FE>reduces the user’s<FE>Sp. Atk stat.	FE	65	4	0x03DEA54,0x129F7E8	Move description	Une attaque intense<FE>qui réduit aussi<FE>fortement l’Attaque<FE>Spéciale de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004881	0x0487C8B	71	A fist that raises<FE>the Attack stat<FE>of the user.                       	FE	68	3	0x129F7EC	Move description	Un poing qui<FE>augmente l’Attaque<FE>de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004882	0x0487CD2	75	Boulders are hurled<FE>at the foe. It also<FE>lowers the foe’s<FE>Speed if it hits.	FE	71	4	0x03DE870,0x129F7F0	Move description	Des rochers sont<FE>lancés sur la cible.<FE>Réduit aussi sa<FE>Vitesse s’il touche.	TRANSLATED
+ODYSSEY-TXT-004883	0x0487D1D	75	The foe is attacked<FE>with a silver dust.<FE>It may raise all<FE>the user’s stats.	FE	71	4	0x129F7F4	Move description	La cible est<FE>attaquée avec une<FE>poussière argentée.<FE>Peut augmenter toutes les stats de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004884	0x0487D68	72	A horrible metallic<FE>screech is used to<FE>sharply lower the<FE>foe’s Sp. Def.	FE	68	4	0x129F7F8	Move description	Un horrible cri<FE>métallique réduit<FE>fortement la Défense<FE>Spéciale de la cible.	TRANSLATED
+ODYSSEY-TXT-004885	0x0487DB0	63	Hazardous, full<FE>power headbutt that<FE>damages the user.         	FE	60	3	0x129F7FC	Move description	Un coup de tête<FE>dangereux et puissant<FE>qui blesse aussi l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004886	0x0487DEF	65	The foe is made to<FE>laugh, reducing its<FE>Attack and Defense<FE>stats.	FE	61	4	0x129F800	Move description	La cible est<FE>poussée à rire,<FE>réduisant son<FE>Attaque et sa Défense.	TRANSLATED
+ODYSSEY-TXT-004887	0x0487E30	66	The user absorbs a<FE>mystic power to<FE>raise its Defense<FE>and Sp. Def.	FE	62	4	0x129F804	Move description	L’utilisateur<FE>absorbe une puissance<FE>mystique pour<FE>augmenter sa Défense et sa Défense Spéciale.	TRANSLATED
+ODYSSEY-TXT-004888	0x0487E72	65	The higher the<FE>user’s HP, the more<FE>powerful this<FE>attack becomes.	FE	61	4	0x129F808	Move description	Plus les PV de<FE>l’utilisateur sont<FE>élevés, plus cette<FE>attaque devient puissante.	TRANSLATED
+ODYSSEY-TXT-004889	0x0487EB3	67	The foe is hit with<FE>a flashing beam<FE>that may also<FE>cause confusion.	FE	63	4	0x129F80C	Move description	La cible reçoit un<FE>rayon éblouissant<FE>qui peut aussi<FE>causer la confusion.	TRANSLATED
+ODYSSEY-TXT-004890	0x0487EF6	63	The user throws a<FE>punch from the<FE>shadows. It cannot<FE>be evaded.	FE	59	4	0x129F810	Move description	L’utilisateur lance<FE>un coup de poing<FE>depuis les ombres.<FE>Il ne peut pas être esquivé.	TRANSLATED
+ODYSSEY-TXT-004891	0x0487F35	65	The user attacks<FE>with an odd power<FE>that may make the<FE>foe flinch.	FE	61	4	0x129F814	Move description	L’utilisateur<FE>attaque avec une<FE>puissance étrange<FE>qui peut faire flancher la cible.	TRANSLATED
+ODYSSEY-TXT-004892	0x0487F76	62	The user attacks<FE>with an uppercut<FE>thrown skywards<FE>with force.	FE	58	4	0x129F818	Move description	L’utilisateur<FE>attaque avec un<FE>uppercut lancé vers<FE>le ciel avec force.	TRANSLATED
+ODYSSEY-TXT-004893	0x0487FB4	69	The foe is trapped<FE>inside a painful<FE>sandstorm for two<FE>to five turns.	FE	65	4	0x129F81C	Move description	La cible est piégée<FE>dans une tempête de<FE>sable douloureuse<FE>pendant deux à cinq tours.	TRANSLATED
+ODYSSEY-TXT-004894	0x0487FF9	72	The user fiercely<FE>attacks the target<FE>using its entire<FE>body.            	FE	68	4	0x129F820	Move description	L’utilisateur<FE>attaque férocement<FE>la cible en utilisant<FE>tout son corps.	TRANSLATED
+ODYSSEY-TXT-004895	0x0488022	31	g its entire<FE>body.            	FE	29	2	0x102712C	fragment, overlapping pointer	férocement la cible en<FE>utilisant tout son corps.	TRANSLATED
+ODYSSEY-TXT-004896	0x0488041	73	The user attacks<FE>with muddy water.<FE>It may also lower<FE>the foe’s accuracy.	FE	69	4	0x129F824	Move description	L’utilisateur<FE>attaque avec de l’eau<FE>boueuse. Peut aussi<FE>baisser la précision de la cible.	TRANSLATED
+ODYSSEY-TXT-004897	0x048808A	70	The user shoots<FE>seeds at the foe.<FE>Two to five seeds<FE>are shot at once.	FE	66	4	0x03DE348,0x129F828	Move description	L’utilisateur tire<FE>des graines sur la<FE>cible. Deux à cinq<FE>graines à la fois.	TRANSLATED
+ODYSSEY-TXT-004898	0x04880D0	65	An extremely fast<FE>attack against one<FE>target. It can’t be<FE>evaded.	FE	61	4	0x03DE89C,0x129F82C	Move description	Une attaque<FE>extrêmement rapide<FE>contre une cible.<FE>Elle ne peut pas être esquivée.	TRANSLATED
+ODYSSEY-TXT-004899	0x0488111	66	Sharp icicles are<FE>fired at the foe.<FE>It strikes two to<FE>five times.	FE	62	4	0x129F830	Move description	Des stalactites<FE>acérées sont tirées<FE>sur la cible. Elle<FE>touche deux à cinq fois.	TRANSLATED
+ODYSSEY-TXT-004900	0x0488153	71	The user hardens<FE>its body’s surface<FE>to sharply raise its<FE>Defense stat.	FE	67	4	0x129F834	Move description	L’utilisateur<FE>endurcit la surface<FE>de son corps pour<FE>augmenter fortement sa Défense.	TRANSLATED
+ODYSSEY-TXT-004901	0x048819A	71	The user polishes<FE>its body and sharply<FE>raises its Speed<FE>stat.         	FE	67	4	0x129F838	Move description	L’utilisateur polit<FE>son corps et<FE>augmente fortement<FE>sa Vitesse.	TRANSLATED
+ODYSSEY-TXT-004902	0x048821F	71	Sharp, huge claws<FE>hook and slash the<FE>foe quickly and<FE>with great power.	FE	67	4	0x03DE214,0x129F840	Move description	D’énormes griffes<FE>acérées accrochent<FE>et lacèrent la cible<FE>rapidement et avec une grande force.	TRANSLATED
+ODYSSEY-TXT-004903	0x0488266	78	The user drops an<FE>icicle onto the<FE>target. May cause<FE>flinch.                  	FE	74	4	0x129F844	Move description	L’utilisateur laisse<FE>tomber une stalactite<FE>sur la cible. Peut<FE>la faire flancher.	TRANSLATED
+ODYSSEY-TXT-004904	0x04882B4	71	The user bulks up<FE>its body to boost<FE>both its Attack and<FE>Defense stats.	FE	67	4	0x03DE31C,0x129F848	Move description	L’utilisateur<FE>renforce son corps<FE>pour augmenter à<FE>la fois son Attaque et sa Défense.	TRANSLATED
+ODYSSEY-TXT-004905	0x0488341	66	The user attacks by<FE>hurling mud.<FE>It also reduces the<FE>foe’s Speed.	FE	62	4	0x129F850	Move description	L’utilisateur<FE>attaque en lançant<FE>de la boue. Réduit<FE>aussi la Vitesse de la cible.	TRANSLATED
+ODYSSEY-TXT-004906	0x0488383	70	An attack with a<FE>high critical-hit<FE>ratio. It may also<FE>poison the foe.	FE	66	4	0x129F854	Move description	Une attaque avec<FE>un fort taux de<FE>coups critiques.<FE>Peut aussi empoisonner la cible.	TRANSLATED
+ODYSSEY-TXT-004907	0x04883C9	63	A cutely executed<FE>attack that also<FE>steals the foe’s<FE>hold item.	FE	59	4	0x129F858	Move description	Une attaque<FE>exécutée avec<FE>mignonnerie qui vole<FE>aussi l’objet tenu de la cible.	TRANSLATED
+ODYSSEY-TXT-004908	0x0488408	67	The user shrouds<FE>itself in<FE>electricity.<FE>Causes recoil.            	FE	63	4	0x129F85C	Move description	L’utilisateur<FE>s’enveloppe<FE>d’électricité.<FE>Provoque un contrecoup.	TRANSLATED
+ODYSSEY-TXT-004909	0x048844B	63	The foe is attacked<FE>with a strange leaf<FE>that cannot be<FE>evaded.	FE	59	4	0x129F860	Move description	La cible est<FE>attaquée par une<FE>feuille étrange qui<FE>ne peut pas être esquivée.	TRANSLATED
+ODYSSEY-TXT-004910	0x048848A	59	The user protects<FE>itself and sharply<FE>raises its Defense.  	FE	56	3	0x129F864	Move description	L’utilisateur se<FE>protège et augmente<FE>fortement sa Défense.	TRANSLATED
+ODYSSEY-TXT-004911	0x04884B1	20	ises its Defense.  		19	1	0x1237014	fragment, overlapping pointer	augmente fortement sa Défense.	TRANSLATED
+ODYSSEY-TXT-004912	0x04884C5	66	The user focuses<FE>its mind to raise<FE>the Sp. Atk and<FE>Sp. Def stats.	FE	62	4	0x03DE26C,0x129F868	Move description	L’utilisateur se<FE>concentre pour<FE>augmenter son Atq.<FE>Spéciale et sa Déf. Spéciale.	TRANSLATED
+ODYSSEY-TXT-004913	0x0488507	72	The foe is slashed<FE>with a sharp leaf.<FE>It has a high<FE>critical-hit ratio.	FE	68	4	0x129F86C	Move description	La cible est<FE>lacérée par une<FE>feuille tranchante.<FE>Taux de coups critiques élevé.	TRANSLATED
+ODYSSEY-TXT-004914	0x048854F	72	A mystic, powerful<FE>dance that boosts<FE>the user’s Attack<FE>and Speed stats.	FE	68	4	0x129F870	Move description	Une danse mystique<FE>et puissante qui<FE>augmente l’Attaque<FE>et la Vitesse de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004915	0x0488597	60	The user hurls two<FE>to five hard rocks<FE>at the foe to<FE>attack.	FE	56	4	0x129F874	Move description	L’utilisateur lance<FE>deux à cinq pierres<FE>dures sur la cible<FE>pour attaquer.	TRANSLATED
+ODYSSEY-TXT-004916	0x04885D3	65	A rapid jolt of<FE>electricity strikes<FE>the foe. It can’t<FE>be evaded.	FE	61	4	0x03DE794,0x129F878	Move description	Une décharge<FE>électrique rapide<FE>frappe la cible.<FE>Elle ne peut pas être esquivée.	TRANSLATED
+ODYSSEY-TXT-004917	0x0488614	70	An attack with a<FE>pulsing blast of<FE>water. It may also<FE>confuse the foe.	FE	66	4	0x03DE240,0x129F87C	Move description	Une attaque avec<FE>un jet d’eau<FE>pulsé. Peut aussi<FE>rendre la cible confuse.	TRANSLATED
+ODYSSEY-TXT-004918	0x048865A	71	A move that attacks<FE>the foe with a<FE>blast of light two<FE>turns after use.	FE	67	4	0x129F880	Move description	Une capacité qui<FE>attaque la cible avec<FE>un éclat de lumière<FE>deux tours après son emploi.	TRANSLATED
+ODYSSEY-TXT-004919	0x0488C70	50	Obtained a <FD:03> BERRY!<FE>Dad has it at PETALBURG GYM.	FD;FE	46	2	0x00DAA20	UNKNOWN	Vous avez obtenu une BAIE <FD:03> !<FE>Papa en a au STADE DE JOLIACITE.	TRANSLATED
+ODYSSEY-TXT-004920	0x0488CA2	44	The <FD:02> BERRY transformed into<FE>one <FD:03> BERRY.	FD;FE	38	2	0x00DAA3C	UNKNOWN	La BAIE <FD:02> s’est transformée<FE>en une BAIE <FD:03>.	TRANSLATED
+ODYSSEY-TXT-004921	0x0488CCE	40	The <FD:02> BERRY has already been<FE>obtained.	FD;FE	36	2	0x00DAA64	UNKNOWN	La BAIE <FD:02> a déjà été<FE>obtenue.	TRANSLATED
+ODYSSEY-TXT-004922	0x0488D60	28	A rare word has been added.		27	1	0x00DAB68	UNKNOWN	Un mot rare a été ajouté.	TRANSLATED
+ODYSSEY-TXT-004923	0x0488D7C	18	<FD:02> was sent over!	FD	15	1	0x00DAC88	UNKNOWN	<FD:02> a été envoyé !	TRANSLATED
+ODYSSEY-TXT-004924	0x0488D8E	47	Your party is full.<FE><FD:02> could not be sent over.	FD;FE	43	2	0x00DAC00	UNKNOWN	Votre équipe est complète.<FE><FD:02> n’a pas pu être envoyé.	TRANSLATED
+ODYSSEY-TXT-004925	0x0488DBD	36	A new TRAINER has arrived in<FE>HOENN.	FE	34	2	0x00DACD0	UNKNOWN	Un nouveau DRESSEUR est arrivé à<FE>HOENN.	TRANSLATED
+ODYSSEY-TXT-004926	0x0488DFD	41	This data can’t be used in<FE>this version.	FE	39	2	0x00DA848	UNKNOWN	Cette donnée ne peut pas être<FE>utilisée dans cette version.	TRANSLATED
+ODYSSEY-TXT-004927	0x0489583	101	It appears to be for use at the<FE>VERMILION CITY port.<FB>Why not give it a try and see what<FE>it is about?	FB;FE	97	3	0x048950C	UNKNOWN	Cela semble servir au port de<FE>CARMIN-SUR-MER.<FB>Pourquoi ne pas essayer pour voir<FE>de quoi il s’agit ?	TRANSLATED
+ODYSSEY-TXT-004928	0x04896FF	93	Thank you for using the MYSTERY<FE>GIFT System.<FB>You must be <FD:01>.<FE>There is a ticket here for you.	FB;FD;FE	87	3	0x04896BC	UNKNOWN	Merci d’avoir utilisé le SYSTÈME<FE>CADEAU MYSTÈRE.<FB>Vous devez être <FD:01>.<FE>Il y a un ticket ici pour vous.	TRANSLATED
+ODYSSEY-TXT-004929	0x0489906	95	 ALTERING<FE>CAVE on OUTCAST ISLAND.<FB>Why not visit there and check if<FE>the rumors are indeed true?	FB;FE	91	3	0x003F2B0	fragment, overlapping pointer	de la GROTTE MÉTAMORPHE sur l’ÎLE<FE>DES PARIAS.<FB>Pourquoi ne pas y aller pour voir<FE>si les rumeurs sont vraiment fondées ?	TRANSLATED
 ODYSSEY-TXT-004930	0x0490925	2	 		1	1	0x070B4E0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004931	0x04C4008	2	 		1	1	0x0070E00	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004932	0x04D578B	4	:Ä 		3	1	0x1031E50	UNKNOWN		SKIP_NOISE
@@ -4944,51 +4944,51 @@ ODYSSEY-TXT-004942	0x0585111	2	z		1	1	0x1A45A08	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004943	0x05D681C	2	z		1	1	0x0B2C6C8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004944	0x05E00EE	2	z		1	1	0x0C6D338	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004945	0x06B10F1	2	ö		1	1	0x0DD49F4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-004946	0x071A23C	10	Yggdrasil		9	1	0x03F1CE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004947	0x071A258	17	Des. of Golgonda		16	1	0x03F1D10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004948	0x071A27C	15	Fibernia Prom.		14	1	0x03F1CE8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004949	0x071A290	14	Abandoned Lab		13	1	0x03F1D84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004950	0x071A2A4	13	Coastal Road		12	1	0x03F1CE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004951	0x071A2FC	15	Seaside Grotto		14	1	0x03F1E28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004952	0x071A328	15	Auburn Thicket		14	1	0x03F1D1C,0x071C4F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004953	0x071A338	15	Waterfall Wood		14	1	0x03F1D20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004954	0x071A358	13	Maple Island		12	1	0x03F1D24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004955	0x071A374	15	Northern Atoll		14	1	0x03F1D28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004956	0x071A3EC	16	Etria Graveyard		15	1	0x03F1D34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004957	0x071A410	14	Pirate Island		13	1	0x03F1D2C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004958	0x071A420	16	Sea of Galazeah		15	1	0x03F1D30	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004946	0x071A23C	10	Yggdrasil		9	1	0x03F1CE4	UNKNOWN	Yggdrasil	TRANSLATED
+ODYSSEY-TXT-004947	0x071A258	17	Des. of Golgonda		16	1	0x03F1D10	UNKNOWN	Dés. de Golgonda	TRANSLATED
+ODYSSEY-TXT-004948	0x071A27C	15	Fibernia Prom.		14	1	0x03F1CE8	UNKNOWN	Prom. de Fibernia	TRANSLATED
+ODYSSEY-TXT-004949	0x071A290	14	Abandoned Lab		13	1	0x03F1D84	UNKNOWN	Labo Abandonné	TRANSLATED
+ODYSSEY-TXT-004950	0x071A2A4	13	Coastal Road		12	1	0x03F1CE0	UNKNOWN	Route Côtière	TRANSLATED
+ODYSSEY-TXT-004951	0x071A2FC	15	Seaside Grotto		14	1	0x03F1E28	UNKNOWN	Grotte Côtière	TRANSLATED
+ODYSSEY-TXT-004952	0x071A328	15	Auburn Thicket		14	1	0x03F1D1C,0x071C4F4	UNKNOWN	Fourré Auburn	TRANSLATED
+ODYSSEY-TXT-004953	0x071A338	15	Waterfall Wood		14	1	0x03F1D20	UNKNOWN	Bois de la Cascade	TRANSLATED
+ODYSSEY-TXT-004954	0x071A358	13	Maple Island		12	1	0x03F1D24	UNKNOWN	Île de l’Érable	TRANSLATED
+ODYSSEY-TXT-004955	0x071A374	15	Northern Atoll		14	1	0x03F1D28	UNKNOWN	Atoll du Nord	TRANSLATED
+ODYSSEY-TXT-004956	0x071A3EC	16	Etria Graveyard		15	1	0x03F1D34	UNKNOWN	Cimetière d’Etria	TRANSLATED
+ODYSSEY-TXT-004957	0x071A410	14	Pirate Island		13	1	0x03F1D2C	UNKNOWN	Île des Pirates	TRANSLATED
+ODYSSEY-TXT-004958	0x071A420	16	Sea of Galazeah		15	1	0x03F1D30	UNKNOWN	Mer de Galazeah	TRANSLATED
 ODYSSEY-TXT-004959	0x071A49C	2	 		1	1	0x0350738	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-004960	0x071A4B0	12	Aqua Resort		11	1	0x03F1CEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004961	0x071A4C4	16	Jagged Mountain		15	1	0x03F1D04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004962	0x071A4D8	13	Cave of Ages		12	1	0x03F1E24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004963	0x071A4FC	15	Eighth Stratum		14	1	0x03F1D3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004964	0x071A5B0	16	Gorge of Zanado		15	1	0x03F1CFC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004965	0x071A600	15	Second Stratum		14	1	0x03F1E38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004966	0x071A6A8	14	First Stratum		13	1	0x03F1D44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004967	0x071A6B8	16	Sea of Galazeah		15	1	0x03F1D4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004968	0x071A6CC	16	Sea of Galazeah		15	1	0x03F1CF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004969	0x071A79C	14	Third Stratum		13	1	0x03F1E08,0x071A7E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004970	0x071A930	12	Brigit Farm		11	1	0x03F1D00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004971	0x071A944	13	FIRST ISLAND		12	1	0x03F1D88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004972	0x071A954	13	Varley Woods		12	1	0x03F1D08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004973	0x071A968	15	Eighth Stratum		14	1	0x03F1D7C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004974	0x071A984	14	Arundel Woods		13	1	0x03F1D0C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004975	0x071A9DC	15	Cave of Athari		14	1	0x03F1E58	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004976	0x071AA04	17	3rd Stratum Base		16	1	0x03F1D14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004977	0x071AAF4	15	Fourth Stratum		14	1	0x03F1E1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004978	0x071ABB0	13	Underg. City		12	1	0x03F1CD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004979	0x071AD48	11	Sea Temple		10	1	0x03F1D38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004980	0x071AD54	12	Deep Shrine		11	1	0x03F1D48	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004981	0x071AD64	17	Abyssal Fortress		16	1	0x03F1D5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004982	0x071B444	16	Rade of Carcino		15	1	0x03F1D18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004983	0x071B5C0	13	Coastal Road		12	1	0x03F1CAC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004984	0x071B6B8	17	Acuity Lakefront		16	1	0x03F1DB0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004985	0x071B6F0	15	Fibernia Woods		14	1	0x03F1CF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004986	0x071B7F4	13	Talrega Farm		12	1	0x03F1D40	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004987	0x0770800	49	<FD:02> survived the poison.<FE>The poison disappeared!<FB>	FB;FD;FE	44	2	0x00A05E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004988	0x07726A0	22	<FD:13>’s <FD:1A><FE>made it hail!	FD;FE	16	2	0x0772678	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004989	0x0774D54	32	Its DEF Individual Value is <FD:02>.	FD	29	1	0x0774C68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004990	0x0774F48	28	Its DEF Effort Value is <FD:02>.	FD	25	1	0x0774E68	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004960	0x071A4B0	12	Aqua Resort		11	1	0x03F1CEC	UNKNOWN	Station Aqua	TRANSLATED
+ODYSSEY-TXT-004961	0x071A4C4	16	Jagged Mountain		15	1	0x03F1D04	UNKNOWN	Mont Déchiqueté	TRANSLATED
+ODYSSEY-TXT-004962	0x071A4D8	13	Cave of Ages		12	1	0x03F1E24	UNKNOWN	Grotte des Âges	TRANSLATED
+ODYSSEY-TXT-004963	0x071A4FC	15	Eighth Stratum		14	1	0x03F1D3C	UNKNOWN	Huitième Strate	TRANSLATED
+ODYSSEY-TXT-004964	0x071A5B0	16	Gorge of Zanado		15	1	0x03F1CFC	UNKNOWN	Gorges de Zanado	TRANSLATED
+ODYSSEY-TXT-004965	0x071A600	15	Second Stratum		14	1	0x03F1E38	UNKNOWN	Deuxième Strate	TRANSLATED
+ODYSSEY-TXT-004966	0x071A6A8	14	First Stratum		13	1	0x03F1D44	UNKNOWN	Première Strate	TRANSLATED
+ODYSSEY-TXT-004967	0x071A6B8	16	Sea of Galazeah		15	1	0x03F1D4C	UNKNOWN	Mer de Galazeah	TRANSLATED
+ODYSSEY-TXT-004968	0x071A6CC	16	Sea of Galazeah		15	1	0x03F1CF8	UNKNOWN	Mer de Galazeah	TRANSLATED
+ODYSSEY-TXT-004969	0x071A79C	14	Third Stratum		13	1	0x03F1E08,0x071A7E8	UNKNOWN	Troisième Strate	TRANSLATED
+ODYSSEY-TXT-004970	0x071A930	12	Brigit Farm		11	1	0x03F1D00	UNKNOWN	Ferme de Brigit	TRANSLATED
+ODYSSEY-TXT-004971	0x071A944	13	FIRST ISLAND		12	1	0x03F1D88	UNKNOWN	PREMIÈRE ÎLE	TRANSLATED
+ODYSSEY-TXT-004972	0x071A954	13	Varley Woods		12	1	0x03F1D08	UNKNOWN	Bois de Varley	TRANSLATED
+ODYSSEY-TXT-004973	0x071A968	15	Eighth Stratum		14	1	0x03F1D7C	UNKNOWN	Huitième Strate	TRANSLATED
+ODYSSEY-TXT-004974	0x071A984	14	Arundel Woods		13	1	0x03F1D0C	UNKNOWN	Bois d’Arundel	TRANSLATED
+ODYSSEY-TXT-004975	0x071A9DC	15	Cave of Athari		14	1	0x03F1E58	UNKNOWN	Grotte d’Athari	TRANSLATED
+ODYSSEY-TXT-004976	0x071AA04	17	3rd Stratum Base		16	1	0x03F1D14	UNKNOWN	Base Strate 3	TRANSLATED
+ODYSSEY-TXT-004977	0x071AAF4	15	Fourth Stratum		14	1	0x03F1E1C	UNKNOWN	Quatrième Strate	TRANSLATED
+ODYSSEY-TXT-004978	0x071ABB0	13	Underg. City		12	1	0x03F1CD4	UNKNOWN	Cité Souterr.	TRANSLATED
+ODYSSEY-TXT-004979	0x071AD48	11	Sea Temple		10	1	0x03F1D38	UNKNOWN	Temple des Mers	TRANSLATED
+ODYSSEY-TXT-004980	0x071AD54	12	Deep Shrine		11	1	0x03F1D48	UNKNOWN	Sanctuaire Profond	TRANSLATED
+ODYSSEY-TXT-004981	0x071AD64	17	Abyssal Fortress		16	1	0x03F1D5C	UNKNOWN	Forteresse Abyssale	TRANSLATED
+ODYSSEY-TXT-004982	0x071B444	16	Rade of Carcino		15	1	0x03F1D18	UNKNOWN	Rade de Carcino	TRANSLATED
+ODYSSEY-TXT-004983	0x071B5C0	13	Coastal Road		12	1	0x03F1CAC	UNKNOWN	Route Côtière	TRANSLATED
+ODYSSEY-TXT-004984	0x071B6B8	17	Acuity Lakefront		16	1	0x03F1DB0	UNKNOWN	Rive du Lac Acuity	TRANSLATED
+ODYSSEY-TXT-004985	0x071B6F0	15	Fibernia Woods		14	1	0x03F1CF4	UNKNOWN	Bois de Fibernia	TRANSLATED
+ODYSSEY-TXT-004986	0x071B7F4	13	Talrega Farm		12	1	0x03F1D40	UNKNOWN	Ferme de Talrega	TRANSLATED
+ODYSSEY-TXT-004987	0x0770800	49	<FD:02> survived the poison.<FE>The poison disappeared!<FB>	FB;FD;FE	44	2	0x00A05E4	UNKNOWN	<FD:02> a survécu au poison.<FE>Le poison a disparu !<FB>	TRANSLATED
+ODYSSEY-TXT-004988	0x07726A0	22	<FD:13>’s <FD:1A><FE>made it hail!	FD;FE	16	2	0x0772678	UNKNOWN	Le <FD:1A> de <FD:13><FE>a déclenché la grêle !	TRANSLATED
+ODYSSEY-TXT-004989	0x0774D54	32	Its DEF Individual Value is <FD:02>.	FD	29	1	0x0774C68	UNKNOWN	Sa Valeur Individuelle en DEF est <FD:02>.	TRANSLATED
+ODYSSEY-TXT-004990	0x0774F48	28	Its DEF Effort Value is <FD:02>.	FD	25	1	0x0774E68	UNKNOWN	Sa Valeur d’Effort en DEF est <FD:02>.	TRANSLATED
 ODYSSEY-TXT-004991	0x0778114	3	  		2	1	0x07777DC,0x0777A98	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004992	0x0778D94	7	HP  <FD:02>	FD	4	1	0x0778D7C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004993	0x0778D9B	7	Atk <FD:02>	FD	4	1	0x0778D80	UNKNOWN		SKIP_NOISE
@@ -4996,18 +4996,18 @@ ODYSSEY-TXT-004994	0x0778DA2	7	Def <FD:02>	FD	4	1	0x0778D84	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004995	0x0778DA9	7	Spe <FD:02>	FD	4	1	0x0778D88	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004996	0x0778DB0	7	SpA <FD:02>	FD	4	1	0x0778D8C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004997	0x0778DB7	7	SpD <FD:02>	FD	4	1	0x0778D90	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-004998	0x0778DBE	30	Capture for<FE>more information!	FE	28	2	0x0778D60	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004998	0x0778DBE	30	Capture for<FE>more information!	FE	28	2	0x0778D60	UNKNOWN	Capturez-le pour<FE>en savoir plus !	TRANSLATED
 ODYSSEY-TXT-004999	0x08005D4	12	Talrega  r 		11	1	0x0800088	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005000	0x080083E	25	Where do you wish to go?		24	1	0x01CC2B0,0x01CC2E0,0x01CC310,0x01CC340,0x01D0C90,0x1B08638,0x1B08668,0x1B08698,0x1B086C8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005000	0x080083E	25	Where do you wish to go?		24	1	0x01CC2B0,0x01CC2E0,0x01CC310,0x01CC340,0x01D0C90,0x1B08638,0x1B08668,0x1B08698,0x1B086C8	UNKNOWN	Où voulez-vous aller ?	TRANSLATED
 ODYSSEY-TXT-005001	0x080121F	45	y doubts, feel free<FE>to check in the library!	FE	43	2	0x12203D0	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005002	0x0801B7B	3	a.		2	1	0x0801B74	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005003	0x0802B77	19	Adventurers’ Guild		18	1	0x08008C4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005003	0x0802B77	19	Adventurers’ Guild		18	1	0x08008C4	UNKNOWN	Guilde des Aventuriers	TRANSLATED
 ODYSSEY-TXT-005004	0x0802CF0	11	this mode?		10	1	0x0802938	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005005	0x0803652	20	gonist<FE>of our tale.	FE	18	2	0x0802F00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005006	0x0803674	30	 Now... where did I put THAT?		29	1	0x0802ED8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005006	0x0803674	30	 Now... where did I put THAT?		29	1	0x0802ED8	UNKNOWN	Bon... où ai-je bien pu mettre ÇA ?	TRANSLATED
 ODYSSEY-TXT-005007	0x08036B8	43	worried too!<FB>Just let me grab what’s left.	FB	41	1	0x0802F4C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005008	0x0803701	3	n!		2	1	0x0705C68	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005009	0x0803C7F	17	Nope. Nothing...		16	1	0x0803BDC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005009	0x0803C7F	17	Nope. Nothing...		16	1	0x0803BDC	UNKNOWN	Non. Rien...	TRANSLATED
 ODYSSEY-TXT-005010	0x0804434	35	Credo fossero ancora terrorizzati.		34	1	0x08043DC,0x080446C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005011	0x080683A	12	Krabby Club		11	1	0x0803A6C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005012	0x0806BAA	30	Third Stratum:<FE>Magmatic Caves	FE	28	2	0x0803F64,0x0803F6C,0x0805944,0x080594C	UNKNOWN		UNTRANSLATED
@@ -5015,95 +5015,95 @@ ODYSSEY-TXT-005013	0x0807093	15	oor is locked.		14	1	0x0806F38	UNKNOWN		UNTRANSL
 ODYSSEY-TXT-005014	0x08070EB	12	Brigit Farm		11	1	0x0807080	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005015	0x0807910	5	nto.		4	1	0x08075CC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005016	0x0807A48	24	 vai, razza<FE>di stupido!	FE	22	2	0x0119698,0x01197EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005017	0x0808D54	49	Fibernia, a small island<FE>in the sea of Galazeah.	FE	47	2	0x08005E4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005017	0x0808D54	49	Fibernia, a small island<FE>in the sea of Galazeah.	FE	47	2	0x08005E4	UNKNOWN	Fibernia, une petite île<FE>dans la mer de Galazeah.	TRANSLATED
 ODYSSEY-TXT-005018	0x0808D80	5	eah.		4	1	0x002B624	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005019	0x080AEE8	16	Target spotted.		15	1	0x0DB81B8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005019	0x080AEE8	16	Target spotted.		15	1	0x0DB81B8	UNKNOWN	Cible repérée.	TRANSLATED
 ODYSSEY-TXT-005020	0x080BC21	8	r, and-		7	1	0x10FD488	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005021	0x080CBEB	17	NOOOO, CATERPIE!		16	1	0x080CB8C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005021	0x080CBEB	17	NOOOO, CATERPIE!		16	1	0x080CB8C	UNKNOWN	NOOON, CHENIPAN !	TRANSLATED
 ODYSSEY-TXT-005022	0x080D8BE	27	<FE>di trovarne uno migliore?	FE	25	2	0x10B4140	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005023	0x080DDC4	38	:sigh: I’m still not strong<FE>enough...	FE	36	2	0x1368A74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005024	0x080E296	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x0809040	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005025	0x0810F6F	23	I can’t feel my hands.		22	1	0x0810F00	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005023	0x080DDC4	38	:sigh: I’m still not strong<FE>enough...	FE	36	2	0x1368A74	UNKNOWN	:soupir: Je ne suis toujours<FE>pas assez fort...	TRANSLATED
+ODYSSEY-TXT-005024	0x080E296	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x0809040	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
+ODYSSEY-TXT-005025	0x0810F6F	23	I can’t feel my hands.		22	1	0x0810F00	UNKNOWN	Je ne sens plus mes mains.	TRANSLATED
 ODYSSEY-TXT-005026	0x0811100	57	g here<FE>since I was young.<FB>I won’t stop now that I’m old!	FB;FE	54	2	0x0CB97E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005027	0x081471F	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x080000C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005028	0x0814FEF	27	I think I got sunstroke...		26	1	0x0814F94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005029	0x0815692	40	But I lost my girlfriend<FE>while writing.	FE	38	2	0x08151DC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005027	0x081471F	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x080000C	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
+ODYSSEY-TXT-005028	0x0814FEF	27	I think I got sunstroke...		26	1	0x0814F94	UNKNOWN	Je crois que j’ai eu une insolation...	TRANSLATED
+ODYSSEY-TXT-005029	0x0815692	40	But I lost my girlfriend<FE>while writing.	FE	38	2	0x08151DC	UNKNOWN	Mais j’ai perdu ma petite amie<FE>en écrivant.	TRANSLATED
 ODYSSEY-TXT-005030	0x0816881	10	, opened.		9	1	0x0459C24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005031	0x08171E2	12	So tired...		11	1	0x081719C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005032	0x0817BFE	10	Vitamins.		9	1	0x0817BC4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005031	0x08171E2	12	So tired...		11	1	0x081719C	UNKNOWN	Si fatigué...	TRANSLATED
+ODYSSEY-TXT-005032	0x0817BFE	10	Vitamins.		9	1	0x0817BC4	UNKNOWN	Vitamines.	TRANSLATED
 ODYSSEY-TXT-005033	0x0817EC3	78	ut.<FB>If you want to try too<FE>you just have to dig<FA>where the green crystals are.	FA;FB;FE	74	2	0x061E094	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005034	0x0818008	16	e door is open.		15	1	0x0E3EE50,0x0E3EFEC	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005035	0x0818088	53	find the thief first.<FE>He should be hiding somewhere.	FE	51	2	0x0E4264C,0x0E42848,0x0E454A8,0x0E456A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005036	0x0818B41	12	Whatever...		11	1	0x0817600	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005037	0x0818DB8	30	Brody is going to be furious.		29	1	0x0818D28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005038	0x08195DF	26	You’ve been digging hard.		25	1	0x0806FA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005039	0x081A92A	40	Whoops, I tripped...<FE>LET’S FIGHT AGAIN!	FE	38	2	0x081A8C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005040	0x081C23E	22	KABOOOM! MAGNIFICENT!		21	1	0x081C22C,0x081C238	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005041	0x081CBF9	24	You pressed the button.		23	1	0x081CB78	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005042	0x081DDCA	35	At least it wasn’t<FE>a sad hangover.	FE	33	2	0x081D8C0,0x1ABB178	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005036	0x0818B41	12	Whatever...		11	1	0x0817600	UNKNOWN	Peu importe...	TRANSLATED
+ODYSSEY-TXT-005037	0x0818DB8	30	Brody is going to be furious.		29	1	0x0818D28	UNKNOWN	Brody va être furieux.	TRANSLATED
+ODYSSEY-TXT-005038	0x08195DF	26	You’ve been digging hard.		25	1	0x0806FA0	UNKNOWN	Vous avez creusé dur.	TRANSLATED
+ODYSSEY-TXT-005039	0x081A92A	40	Whoops, I tripped...<FE>LET’S FIGHT AGAIN!	FE	38	2	0x081A8C4	UNKNOWN	Oups, j’ai trébuché...<FE>ON SE REBAT !	TRANSLATED
+ODYSSEY-TXT-005040	0x081C23E	22	KABOOOM! MAGNIFICENT!		21	1	0x081C22C,0x081C238	UNKNOWN	BADABOUM ! MAGNIFIQUE !	TRANSLATED
+ODYSSEY-TXT-005041	0x081CBF9	24	You pressed the button.		23	1	0x081CB78	UNKNOWN	Vous avez appuyé sur le bouton.	TRANSLATED
+ODYSSEY-TXT-005042	0x081DDCA	35	At least it wasn’t<FE>a sad hangover.	FE	33	2	0x081D8C0,0x1ABB178	UNKNOWN	Au moins ce n’était pas<FE>une triste gueule de bois.	TRANSLATED
 ODYSSEY-TXT-005043	0x081F3B8	3	A.		2	1	0x081F390	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005044	0x081F3C2	3	C.		2	1	0x081F39C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005045	0x081F3FB	3	A.		2	1	0x081F3DC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005046	0x081F405	3	C.		2	1	0x081F3E8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005047	0x08201F2	48	- TM Dispenser -<FE>Select the TM you want to buy.	FE	46	2	0x0811A20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005048	0x082024E	26	You already have this TM.		25	1	0x0811AD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005049	0x0820259	15	 have this TM.		14	1	0x081FAD4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005047	0x08201F2	48	- TM Dispenser -<FE>Select the TM you want to buy.	FE	46	2	0x0811A20	UNKNOWN	- Distributeur de CT -<FE>Choisissez la CT que vous voulez acheter.	TRANSLATED
+ODYSSEY-TXT-005048	0x082024E	26	You already have this TM.		25	1	0x0811AD8	UNKNOWN	Vous avez déjà cette CT.	TRANSLATED
+ODYSSEY-TXT-005049	0x0820259	15	 have this TM.		14	1	0x081FAD4	fragment, overlapping pointer	avez déjà cette CT.	TRANSLATED
 ODYSSEY-TXT-005050	0x0820B73	76	ent nickname.<FB>But, would you like me to give it<FE>a nicer name? How about it?	FB;FE	73	2	0x0705854	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005051	0x0820CBF	14	f the forest.		13	1	0x102DDFC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005052	0x0821855	40	h wow! Thanks a bunch!<FE>As I promised...	FE	38	2	0x121EB2C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005053	0x0821E17	50	rty<FE>is full.<FB>Come back when you have enough<FE>room!	FB;FE	46	3	0x1AFB4E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005054	0x0822697	67	There seems to be a button<FE>on the pillar.<FB>Do you want to press it?	FB;FE	64	2	0x0808928	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005055	0x082328E	37	t’s the exact<FE>same name-<FB>Whatever...	FB;FE	34	2	0x0429114	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005056	0x0823FB3	21	You shook the plant.		20	1	0x0823EA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005057	0x0824867	32	Do you want to shake the plant?		31	1	0x08239D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005058	0x082498F	26	You decided to turn back.		25	1	0x0824978	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005059	0x0824E71	27	You prayed to the catfish.		26	1	0x0824C2C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005060	0x082511E	28	Aye, maybe it’s yers too...		27	1	0x08250C8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005052	0x0821855	40	h wow! Thanks a bunch!<FE>As I promised...	FE	38	2	0x121EB2C	UNKNOWN	ah, waouh ! Merci beaucoup !<FE>Comme promis...	TRANSLATED
+ODYSSEY-TXT-005053	0x0821E17	50	rty<FE>is full.<FB>Come back when you have enough<FE>room!	FB;FE	46	3	0x1AFB4E8	fragment, overlapping pointer	équipe<FE>est complète.<FB>Revenez quand vous aurez assez<FE>de place !	TRANSLATED
+ODYSSEY-TXT-005054	0x0822697	67	There seems to be a button<FE>on the pillar.<FB>Do you want to press it?	FB;FE	64	2	0x0808928	UNKNOWN	Il semble y avoir un bouton<FE>sur le pilier.<FB>Voulez-vous appuyer dessus ?	TRANSLATED
+ODYSSEY-TXT-005055	0x082328E	37	t’s the exact<FE>same name-<FB>Whatever...	FB;FE	34	2	0x0429114	fragment, overlapping pointer	c’est exactement<FE>le même nom-<FB>Peu importe...	TRANSLATED
+ODYSSEY-TXT-005056	0x0823FB3	21	You shook the plant.		20	1	0x0823EA4	UNKNOWN	Vous avez secoué la plante.	TRANSLATED
+ODYSSEY-TXT-005057	0x0824867	32	Do you want to shake the plant?		31	1	0x08239D8	UNKNOWN	Voulez-vous secouer la plante ?	TRANSLATED
+ODYSSEY-TXT-005058	0x082498F	26	You decided to turn back.		25	1	0x0824978	UNKNOWN	Vous avez décidé de faire demi-tour.	TRANSLATED
+ODYSSEY-TXT-005059	0x0824E71	27	You prayed to the catfish.		26	1	0x0824C2C	UNKNOWN	Vous avez prié le poisson-chat.	TRANSLATED
+ODYSSEY-TXT-005060	0x082511E	28	Aye, maybe it’s yers too...		27	1	0x08250C8	UNKNOWN	Ouais, p’t-être qu’il est à toi aussi...	TRANSLATED
 ODYSSEY-TXT-005061	0x0825567	3	A.		2	1	0x0825548	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005062	0x0825571	3	A.		2	1	0x0825554	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005063	0x08260DD	21	You shook the plant.		20	1	0x082600C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005064	0x08260F4	32	Do you want to shake the plant?		31	1	0x081DAF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005065	0x082764C	35	It definitely wasn’t a great idea.		34	1	0x08275D0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005063	0x08260DD	21	You shook the plant.		20	1	0x082600C	UNKNOWN	Vous avez secoué la plante.	TRANSLATED
+ODYSSEY-TXT-005064	0x08260F4	32	Do you want to shake the plant?		31	1	0x081DAF8	UNKNOWN	Voulez-vous secouer la plante ?	TRANSLATED
+ODYSSEY-TXT-005065	0x082764C	35	It definitely wasn’t a great idea.		34	1	0x08275D0	UNKNOWN	Ce n’était clairement pas une bonne idée.	TRANSLATED
 ODYSSEY-TXT-005066	0x08278E9	26	aren’t really<FE>worth it...	FE	24	2	0x0376B8C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005067	0x0827D01	20	Do you want to dig?		19	1	0x08052D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005068	0x0828313	67	There seems to be a button<FE>on the pillar.<FB>Do you want to press it?	FB;FE	64	2	0x080DFCC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005069	0x082879C	34	Or maybe I’m the one<FE>who sucks...	FE	32	2	0x0828728	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005070	0x0828882	39	No powers awakened.<FE>Only a headache...	FE	37	2	0x0828810	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005071	0x0828A39	25	I need that Burn Heal...		24	1	0x08289E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005072	0x08295BF	38	d,<FA>I managed to translate part of it.	FA	36	1	0x0829118	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005067	0x0827D01	20	Do you want to dig?		19	1	0x08052D0	UNKNOWN	Voulez-vous creuser ?	TRANSLATED
+ODYSSEY-TXT-005068	0x0828313	67	There seems to be a button<FE>on the pillar.<FB>Do you want to press it?	FB;FE	64	2	0x080DFCC	UNKNOWN	Il semble y avoir un bouton<FE>sur le pilier.<FB>Voulez-vous appuyer dessus ?	TRANSLATED
+ODYSSEY-TXT-005069	0x082879C	34	Or maybe I’m the one<FE>who sucks...	FE	32	2	0x0828728	UNKNOWN	Ou peut-être que c’est moi<FE>qui suis nul...	TRANSLATED
+ODYSSEY-TXT-005070	0x0828882	39	No powers awakened.<FE>Only a headache...	FE	37	2	0x0828810	UNKNOWN	Aucun pouvoir n’a été éveillé.<FE>Juste un mal de crâne...	TRANSLATED
+ODYSSEY-TXT-005071	0x0828A39	25	I need that Burn Heal...		24	1	0x08289E8	UNKNOWN	J’ai besoin de cet Anti-Brûle...	TRANSLATED
+ODYSSEY-TXT-005072	0x08295BF	38	d,<FA>I managed to translate part of it.	FA	36	1	0x0829118	fragment, overlapping pointer	j’ai réussi à en<FA>traduire une partie.	TRANSLATED
 ODYSSEY-TXT-005073	0x08296B7	21	uls to... something.		20	1	0x0828FB8	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005074	0x08296FE	54	ms I can’t decipher,<FA>but it likely refers to a deity.	FA	52	1	0x08290A0	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005075	0x082985A	12	r research!		11	1	0x0828F60	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005076	0x082A665	16	u falling down!		15	1	0x0829D98	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005077	0x082A917	17	t,<FA>would it not?	FA	15	1	0x0829F5C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005078	0x082A94C	38	’t matter.<FB>Do you remember your name?	FB	36	1	0x0829F14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005079	0x082AA47	32	Good morning.<FE>Had a good sleep?	FE	30	2	0x0829CBC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005079	0x082AA47	32	Good morning.<FE>Had a good sleep?	FE	30	2	0x0829CBC	UNKNOWN	Bonjour.<FE>Bien dormi ?	TRANSLATED
 ODYSSEY-TXT-005080	0x082AC3D	9	hat the-		8	1	0x0829E5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005081	0x082B5E6	25	Not bad, really not bad!		24	1	0x082B5CC,0x082B5DC,0x1ABABC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005082	0x082D6A4	99	: What do you want<FE>from me?<FB>You’re here for my fortune,<FE>aren’t you?<FB>Bah, just take this and leave!	FB;FE	94	3	0x082CF14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005083	0x082D6D6	49	tune,<FE>aren’t you?<FB>Bah, just take this and leave!	FB;FE	46	2	0x082C810,0x082C9CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005084	0x082D6DF	40	n’t you?<FB>Bah, just take this and leave!	FB	38	1	0x082CEB0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005085	0x082D6E3	36	you?<FB>Bah, just take this and leave!	FB	34	1	0x082CE9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005086	0x082D70C	25	o you want to disembark?		24	1	0x082C7E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005087	0x082F7F7	52	So much power in a mere human!?<FE>How is it possible?	FE	50	2	0x12600FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005088	0x082FC7E	18	The gem vanished!		17	1	0x082EEA8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005089	0x083283E	34	A red gem appeared on the pillar!		33	1	0x082FC94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005090	0x0832865	24	You pressed the button.		23	1	0x082BA1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005091	0x0833001	13	Aqua Resort.		12	1	0x08280A4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005081	0x082B5E6	25	Not bad, really not bad!		24	1	0x082B5CC,0x082B5DC,0x1ABABC8	UNKNOWN	Pas mal, vraiment pas mal !	TRANSLATED
+ODYSSEY-TXT-005082	0x082D6A4	99	: What do you want<FE>from me?<FB>You’re here for my fortune,<FE>aren’t you?<FB>Bah, just take this and leave!	FB;FE	94	3	0x082CF14	UNKNOWN	: Que voulez-vous<FE>de moi ?<FB>Vous êtes ici pour ma fortune,<FE>n’est-ce pas ?<FB>Bah, prenez donc ça et partez !	TRANSLATED
+ODYSSEY-TXT-005083	0x082D6D6	49	tune,<FE>aren’t you?<FB>Bah, just take this and leave!	FB;FE	46	2	0x082C810,0x082C9CC	fragment, overlapping pointer	fortune,<FE>n’est-ce pas ?<FB>Bah, prenez donc ça et partez !	TRANSLATED
+ODYSSEY-TXT-005084	0x082D6DF	40	n’t you?<FB>Bah, just take this and leave!	FB	38	1	0x082CEB0	fragment, overlapping pointer	n’est-ce pas ?<FB>Bah, prenez donc ça et partez !	TRANSLATED
+ODYSSEY-TXT-005085	0x082D6E3	36	you?<FB>Bah, just take this and leave!	FB	34	1	0x082CE9C	fragment, overlapping pointer	pas ?<FB>Bah, prenez donc ça et partez !	TRANSLATED
+ODYSSEY-TXT-005086	0x082D70C	25	o you want to disembark?		24	1	0x082C7E8	fragment, overlapping pointer	oulez-vous débarquer ?	TRANSLATED
+ODYSSEY-TXT-005087	0x082F7F7	52	So much power in a mere human!?<FE>How is it possible?	FE	50	2	0x12600FC	UNKNOWN	Autant de puissance chez un simple<FE>humain !? Comment est-ce possible ?	TRANSLATED
+ODYSSEY-TXT-005088	0x082FC7E	18	The gem vanished!		17	1	0x082EEA8	UNKNOWN	Le joyau a disparu !	TRANSLATED
+ODYSSEY-TXT-005089	0x083283E	34	A red gem appeared on the pillar!		33	1	0x082FC94	UNKNOWN	Un joyau rouge est apparu sur le pilier !	TRANSLATED
+ODYSSEY-TXT-005090	0x0832865	24	You pressed the button.		23	1	0x082BA1C	UNKNOWN	Vous avez appuyé sur le bouton.	TRANSLATED
+ODYSSEY-TXT-005091	0x0833001	13	Aqua Resort.		12	1	0x08280A4	UNKNOWN	Station Aqua.	TRANSLATED
 ODYSSEY-TXT-005092	0x083363A	22	na be a fast journey.		21	1	0x0833470	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005093	0x083445E	143	I have even<FE>more questions than before now.<FB>There was an entire world<FE>I didn’t know about.<FB>Gods, alien species... My head<FE>is about to explode.	FB;FE	137	4	0x0718BDC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005093	0x083445E	143	I have even<FE>more questions than before now.<FB>There was an entire world<FE>I didn’t know about.<FB>Gods, alien species... My head<FE>is about to explode.	FB;FE	137	4	0x0718BDC	UNKNOWN	J’ai encore plus de questions<FE>qu’avant, maintenant.<FB>Il y avait tout un monde<FE>que je ne connaissais pas.<FB>Des dieux, des espèces extraterrestres...<FE>J’ai la tête qui va exploser.	TRANSLATED
 ODYSSEY-TXT-005094	0x0835D60	44	come much stronger<FE>since our first meeting!	FE	42	2	0x08354D4	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005095	0x0835D6D	31	onger<FE>since our first meeting!	FE	29	2	0x08354C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005096	0x0836032	24	Runtime error detected-		23	1	0x0836020,0x083602C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005097	0x0836321	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x082DDA8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005098	0x0837325	47	The button is stuck, you can’t<FE>press it again.	FE	45	2	0x083731C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005099	0x0837547	58	There’s a weird button on the<FE>statue. Would you press it?	FE	56	2	0x08374AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005100	0x08375DD	47	The button is stuck, you can’t<FE>press it again.	FE	45	2	0x08375D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005101	0x0837AF3	26	You’ve been digging hard.		25	1	0x08379B0,0x08603A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005102	0x083A5A2	33	Wait wait wait!<FE>Lemme try again!	FE	31	2	0x083A550	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005103	0x083A82F	22	...Maybe I lost them.		21	1	0x083A7B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005104	0x083AA8B	39	Oh yes, I just needed<FE>a good defeat...	FE	37	2	0x083AA28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005105	0x083C229	66	Quest Log: open.<FB>Current objective:<FE>Reach the ceremonial chamber.	FB;FE	63	2	0x083C220	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005096	0x0836032	24	Runtime error detected-		23	1	0x0836020,0x083602C	UNKNOWN	Erreur d’exécution détectée-	TRANSLATED
+ODYSSEY-TXT-005097	0x0836321	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x082DDA8	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
+ODYSSEY-TXT-005098	0x0837325	47	The button is stuck, you can’t<FE>press it again.	FE	45	2	0x083731C	UNKNOWN	Le bouton est coincé, vous ne<FE>pouvez pas appuyer à nouveau.	TRANSLATED
+ODYSSEY-TXT-005099	0x0837547	58	There’s a weird button on the<FE>statue. Would you press it?	FE	56	2	0x08374AC	UNKNOWN	Il y a un bouton étrange sur la<FE>statue. Voulez-vous appuyer dessus ?	TRANSLATED
+ODYSSEY-TXT-005100	0x08375DD	47	The button is stuck, you can’t<FE>press it again.	FE	45	2	0x08375D4	UNKNOWN	Le bouton est coincé, vous ne<FE>pouvez pas appuyer à nouveau.	TRANSLATED
+ODYSSEY-TXT-005101	0x0837AF3	26	You’ve been digging hard.		25	1	0x08379B0,0x08603A8	UNKNOWN	Vous avez creusé dur.	TRANSLATED
+ODYSSEY-TXT-005102	0x083A5A2	33	Wait wait wait!<FE>Lemme try again!	FE	31	2	0x083A550	UNKNOWN	Attends, attends, attends !<FE>Laisse-moi réessayer !	TRANSLATED
+ODYSSEY-TXT-005103	0x083A82F	22	...Maybe I lost them.		21	1	0x083A7B8	UNKNOWN	...Je les ai peut-être perdus.	TRANSLATED
+ODYSSEY-TXT-005104	0x083AA8B	39	Oh yes, I just needed<FE>a good defeat...	FE	37	2	0x083AA28	UNKNOWN	Oh oui, j’avais juste besoin<FE>d’une bonne défaite...	TRANSLATED
+ODYSSEY-TXT-005105	0x083C229	66	Quest Log: open.<FB>Current objective:<FE>Reach the ceremonial chamber.	FB;FE	63	2	0x083C220	UNKNOWN	Journal de quête : ouvert.<FB>Objectif actuel :<FE>Atteindre la chambre cérémonielle.	TRANSLATED
 ODYSSEY-TXT-005106	0x083C239	50	<FB>Current objective:<FE>Reach the ceremonial chamber.	FB;FE	47	2	0x083C0B4	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005107	0x083C8A9	62	Quest Log: open.<FB>Current objective:<FE>Find the Thieves Hideout.	FB;FE	59	2	0x083C8A0	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005108	0x083F25D	7	h him.		6	1	0x083E57C	UNKNOWN		SKIP_NOISE
