@@ -93,6 +93,17 @@ Mr. Fuji	M. FUJI	character	non traduit
 KARATE KING / KARATE MASTER	MAÎTRE DE KARATÉ	character title	traduction cohérente
 GAME CORNER	CASINO	place	terme usuel FR pour ce lieu
 COPYCAT	SOSIE	character	officiel
+Lostelle	LOSTELLE	character	non traduit
+Lanette	LANETTE	character	non traduit
+Celio	CELIO	character	non traduit
+Bruno (Elite Four)	BRUNO	character	non traduit
+HERACROSS	SCARABRUTE	pokemon	officiel
+CHANSEY	LEUPHORIE	pokemon	officiel (déjà utilisé)
+PSYCHIC (move)	PSYKO	move	officiel
+FLY (HM)	VOL	move	officiel
+SURF (HM)	SURF	move	non traduit (déjà court)
+ITEMFINDER	DÉTECTOBJET	item	traduction cohérente, non officiellement confirmé
+guillemets	utiliser " " (0xB1/0xB2, confirmés) au lieu de « » (non confirmés)	NOTE	rappel technique pour éviter les erreurs d'encodage
 
 # --- Pokémon (noms officiels FR) ---
 ZUBAT	NOSFERAPTI	pokemon	officiel
