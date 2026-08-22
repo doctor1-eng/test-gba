@@ -553,211 +553,211 @@ ODYSSEY-TXT-000551	0x018B84D	30	GREEN PATH<FE>PATTERN BUSH AHEAD	FE	28	2	0x0168B
 ODYSSEY-TXT-000552	0x018B988	29	Nobody saw me losing, right?		28	1	0x01AC5C4	Trainer post-battle	Personne ne m’a vu perdre, hein ?	TRANSLATED
 ODYSSEY-TXT-000553	0x018BA57	47	I couldn’t lift the stigma of being<FE>a SWIMMER…	FE	45	2	0x01AC608	DIALOGUE	Je n’ai pas pu effacer la<FE>réputation d’être un NAGEUR…	TRANSLATED
 ODYSSEY-TXT-000554	0x018BAC0	32	Awww, I knew this would happen!		31	1	0x01AC640	Trainer post-battle	Awww, je savais que ça arriverait !	TRANSLATED
-ODYSSEY-TXT-000555	0x018BB8B	47	Aren’t there any mountains around<FE>these parts?	FE	45	2	0x01AC710	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000556	0x018BBF6	46	MIU: It makes me all sad inside<FE>when we lose…	FE	44	2	0x01AC68C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000557	0x018BC84	42	MIA: You’re mean!<FE>You’re bad for winning!	FE	40	2	0x01AC6C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000558	0x018BD27	32	WATER PATH<FE>Leads to RUIN VALLEY	FE	30	2	0x0168B4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000559	0x018BD47	51	I can’t figure out how I’m supposed<FE>to get inside.	FE	49	2	0x0168B70	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000560	0x018BDC0	57	The door doesn’t budge at all.<FE>Check it more thoroughly?	FE	55	2	0x0168BA0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-000555	0x018BB8B	47	Aren’t there any mountains around<FE>these parts?	FE	45	2	0x01AC710	DIALOGUE	Y a pas de montagnes par<FE>ici ?	TRANSLATED
+ODYSSEY-TXT-000556	0x018BBF6	46	MIU: It makes me all sad inside<FE>when we lose…	FE	44	2	0x01AC68C	DIALOGUE	MIU : Ça me rend toute triste<FE>quand on perd…	TRANSLATED
+ODYSSEY-TXT-000557	0x018BC84	42	MIA: You’re mean!<FE>You’re bad for winning!	FE	40	2	0x01AC6C8	DIALOGUE	MIA : T’es méchant !<FE>C’est mal d’avoir gagné !	TRANSLATED
+ODYSSEY-TXT-000558	0x018BD27	32	WATER PATH<FE>Leads to RUIN VALLEY	FE	30	2	0x0168B4C	sign	CHEMIN D’EAU<FE>Mène à la VALLÉE DES RUINES	TRANSLATED
+ODYSSEY-TXT-000559	0x018BD47	51	I can’t figure out how I’m supposed<FE>to get inside.	FE	49	2	0x0168B70	DIALOGUE	J’arrive pas à comprendre comment<FE>entrer.	TRANSLATED
+ODYSSEY-TXT-000560	0x018BDC0	57	The door doesn’t budge at all.<FE>Check it more thoroughly?	FE	55	2	0x0168BA0	DIALOGUE	La porte ne bouge pas du tout.<FE>L’examiner plus en détail ?	TRANSLATED
 ODYSSEY-TXT-000561	0x018BE9B	5	Hmm…		4	1	0x01AC748	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-000562	0x018BF6C	89	There are several ruins on the<FE>SEVII ISLANDS.<FB>The majority of them date back<FE>a long way.	FB;FE	85	3	0x01AC78C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000563	0x018C03B	17	Oh, interesting.		16	1	0x01AC7C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000564	0x018C0EA	32	Experience the joy of climbing!		31	1	0x01AC808	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000565	0x018C140	58	You don’t need to be so pushy.<FE>I’ll be happy to tell you.	FE	56	2	0x01AC840	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000566	0x018C14B	47	eed to be so pushy.<FE>I’ll be happy to tell you.	FE	45	2	0x0705108	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000567	0x018C20E	117	In your future, I sense that you<FE>will meet many others.<FB>I think you will be linked to each<FE>other by a strange power.	FB;FE	113	3	0x01AC884	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000568	0x018C2BC	25	What an amazing TRAINER!		24	1	0x01AC8BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000569	0x018C370	20	TRAINER TOWER AHEAD		19	1	0x0168BEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000570	0x018C3FF	76	What’s that?<FE>I don’t act the way I look?<FB>Heh, that’s a part of my strategy!	FB;FE	73	2	0x01AC900	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000571	0x018C473	71	Oh, so you’re not a fan…<FB>Well, I can change that.<FE>Let me sing for you!	FB;FE	68	2	0x01AC9C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000572	0x018C54B	95	TRAINERS like you from cities,<FE>they sure are tough.<FB>You’ll be headed for the TOWER,<FE>won’t you?	FB;FE	91	3	0x01ACA08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000573	0x018C5CD	40	You don’t seem to be a problem<FE>TRAINER.	FE	38	2	0x01ACA40	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000574	0x018C662	33	EVE: Me and JON, we lost.<FE>Ehehe.	FE	31	2	0x01AC93C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000575	0x018C773	74	JON: When I’m with EVE, I feel<FE>giddy whether I win or lose.<FB>It’s magical!	FB;FE	71	2	0x01AC98C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000576	0x018C8C2	59	The way I am now, I may have to<FE>hold off on TRAINER TOWER…	FE	57	2	0x01ACA84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000577	0x018C980	25	You’re a master at this.		24	1	0x01ACABC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000578	0x018CA9C	122	From far out among the stars, our<FE>planet is just a drop of water.<FB>But we want to protect that drop<FE>of water for everyone.	FB;FE	118	3	0x01ACB00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000579	0x018CB3E	46	You’re hot stuff in spite of your<FE>cute looks.	FE	44	2	0x01ACB38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000580	0x018CC09	70	The way you battle has given me<FE>a lot of useful data.<FB>Thanks so much!	FB;FE	67	2	0x01ACB7C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000581	0x018CCAE	60	Thank you. I feel like I’ve been<FE>set free by losing to you.	FE	58	2	0x01ACBB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000582	0x018CD9C	70	LEX: I think it was a good<FE>experience for NYA.<FB>You have my gratitude.	FB;FE	67	2	0x01ACC00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000583	0x018CE5A	30	NYA: Oh, no…<FE>I’m so sorry, I…	FE	28	2	0x01ACC3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000584	0x018CEF4	55	NYA: I’m sorry, but may we battle<FE>in two-on-two style?	FE	53	2	0x01ACC40	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000585	0x018CF2B	34	SEVAULT CANYON<FE>TANOBY RUINS AHEAD	FE	32	2	0x0168C00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000586	0x018D061	120	The TANOBY RUINS date back at<FE>least 1,500 years.<FB>But it’s a baffling mystery as to<FE>why it was built in the first place.	FB;FE	116	3	0x01ACC84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000587	0x018D108	29	I’m not much good in battle.		28	1	0x01ACCBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000588	0x018D1E3	76	I said that I wanted to paint an<FE>old building.<FB>So CLIFFORD brought me here.	FB;FE	73	2	0x01ACD00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000589	0x018D241	44	 to our lesson,<FE>we came to see the chamber.	FE	42	2	0x0B1A3B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000590	0x018D26D	23	My, how extraordinary.		22	1	0x01ACD38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000591	0x018D3D1	39	MOM: <FD:01>!<FE>You should take a quick rest.	FD;FE	35	2	0x0168C4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000592	0x018D492	103	There’s a movie on TV.<FE>A girl with her hair in pigtails is<FA>walking up a brick road.<FB>…I better go, too.	FA;FB;FE	99	2	0x0168C9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000593	0x018D4F9	18	Oops, wrong side…		17	1	0x0168C70	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000594	0x018D50B	48	<FD:01> played with the NES.<FB>…Okay!<FE>It’s time to go!	FB;FD;FE	43	2	0x0168CD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000595	0x018D58C	56	DAISY: Hi, <FD:01>!<FB>My brother, <FD:06>, is out at<FE>Grandpa’s LAB.	FB;FD;FE	49	2	0x0168D9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000596	0x018D60A	87	Grandpa asked you to run an<FE>errand?<FB>Gee, that’s lazy of him.<FE>Here, this will help you.	FB;FE	83	3	0x0168EF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000597	0x018D661	35	<FD:01> received a TOWN MAP<FE>from DAISY.	FD;FE	31	2	0x0168F38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000598	0x018D97B	42	Oh, sorry. I honestly can’t<FE>groom an EGG.	FE	40	2	0x0168E34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000599	0x018DABE	53	It’s quite friendly with you.<FE>Keep being good to it!	FE	51	2	0x0168ED0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000600	0x018DE99	47	<FD:06>: I almost forgot!<FE>What did you call me for?	FD;FE	43	2	0x0169680	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000601	0x018E30D	35	<FD:01> received the <FD:02><FE>from PROF. OAK!	FD;FE	29	2	0x0169CA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000602	0x018E4AF	27	<FD:01> delivered OAK’S PARCEL.	FD	24	1	0x016962C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000603	0x018E5C5	37	OAK: <FD:01> and <FD:06>.<FE>Take these with you.	FD;FE	31	2	0x0169710	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000604	0x018EA84	50	The SAVE option is on the MENU.<FE>Use it regularly.	FE	48	2	0x0169E88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000605	0x018F4A2	228	Having lost in this fashion, <FE>I can’t face my followers.<FA>I have betrayed their trust.<FB>As of today, TEAM ROCKET is<FE>finished forever!<FB>As for myself, I shall dedicate<FE>my life to training again.<FB>Let us meet again someday!<FE>Farewell!	FA;FB;FE	219	5	0x0169EF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000606	0x018F695	134	TM26 contains EARTHQUAKE.<FB>It is a powerful attack that causes<FE>a massive tremor.<FB>I made it when I ran the GYM here,<FE>far too long ago… 	FB;FE	129	3	0x0169F68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000607	0x018F6EB	48	 it when I ran the GYM here,<FE>far too long ago… 	FE	46	2	0x1A45E58	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000608	0x018F77B	50	You’ll need power to keep up with<FE>our GYM LEADER.	FE	48	2	0x016A014	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000609	0x018F7DD	22	I’m still not worthy!		21	1	0x0169FB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000610	0x018F824	28	You are in perfect harmony!		27	1	0x0169F84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000611	0x018F92C	46	I’m the KARATE KING!<FE>Your fate rests with me!	FE	44	2	0x0169FDC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-000562	0x018BF6C	89	There are several ruins on the<FE>SEVII ISLANDS.<FB>The majority of them date back<FE>a long way.	FB;FE	85	3	0x01AC78C	Sevii Islands	Il y a plusieurs ruines sur les<FE>ÎLES SEVII.<FB>La plupart d’entre elles remontent<FE>à très loin.	TRANSLATED
+ODYSSEY-TXT-000563	0x018C03B	17	Oh, interesting.		16	1	0x01AC7C4	DIALOGUE	Oh, intéressant.	TRANSLATED
+ODYSSEY-TXT-000564	0x018C0EA	32	Experience the joy of climbing!		31	1	0x01AC808	sign	Découvrez la joie de l’escalade !	TRANSLATED
+ODYSSEY-TXT-000565	0x018C140	58	You don’t need to be so pushy.<FE>I’ll be happy to tell you.	FE	56	2	0x01AC840	DIALOGUE	Pas besoin d’insister comme ça.<FE>Je vais te le dire avec plaisir.	TRANSLATED
+ODYSSEY-TXT-000566	0x018C14B	47	eed to be so pushy.<FE>I’ll be happy to tell you.	FE	45	2	0x0705108	DIALOGUE fragment	…besoin d’insister comme ça.<FE>Je vais te le dire avec plaisir.	TRANSLATED
+ODYSSEY-TXT-000567	0x018C20E	117	In your future, I sense that you<FE>will meet many others.<FB>I think you will be linked to each<FE>other by a strange power.	FB;FE	113	3	0x01AC884	DIALOGUE	Dans ton futur, je sens que tu<FE>rencontreras beaucoup d’autres personnes.<FB>Je pense que vous serez liés les<FE>uns aux autres par un pouvoir étrange.	TRANSLATED
+ODYSSEY-TXT-000568	0x018C2BC	25	What an amazing TRAINER!		24	1	0x01AC8BC	Trainer post-battle	Quel DRESSEUR incroyable !	TRANSLATED
+ODYSSEY-TXT-000569	0x018C370	20	TRAINER TOWER AHEAD		19	1	0x0168BEC	sign	TOUR DRESSEUR PLUS LOIN	TRANSLATED
+ODYSSEY-TXT-000570	0x018C3FF	76	What’s that?<FE>I don’t act the way I look?<FB>Heh, that’s a part of my strategy!	FB;FE	73	2	0x01AC900	DIALOGUE	Quoi ?<FE>Je n’agis pas comme j’en ai l’air ?<FB>Héhé, ça fait partie de ma stratégie !	TRANSLATED
+ODYSSEY-TXT-000571	0x018C473	71	Oh, so you’re not a fan…<FB>Well, I can change that.<FE>Let me sing for you!	FB;FE	68	2	0x01AC9C4	DIALOGUE	Oh, alors t’es pas fan…<FB>Bon, je peux changer ça.<FE>Laisse-moi chanter pour toi !	TRANSLATED
+ODYSSEY-TXT-000572	0x018C54B	95	TRAINERS like you from cities,<FE>they sure are tough.<FB>You’ll be headed for the TOWER,<FE>won’t you?	FB;FE	91	3	0x01ACA08	Trainer Tower	Les DRESSEURS des villes comme toi,<FE>ils sont vraiment forts.<FB>Tu te diriges vers la TOUR,<FE>pas vrai ?	TRANSLATED
+ODYSSEY-TXT-000573	0x018C5CD	40	You don’t seem to be a problem<FE>TRAINER.	FE	38	2	0x01ACA40	DIALOGUE	Tu n’as pas l’air d’être un<FE>DRESSEUR à problèmes.	TRANSLATED
+ODYSSEY-TXT-000574	0x018C662	33	EVE: Me and JON, we lost.<FE>Ehehe.	FE	31	2	0x01AC93C	DIALOGUE	EVE : JON et moi, on a perdu.<FE>Ehehe.	TRANSLATED
+ODYSSEY-TXT-000575	0x018C773	74	JON: When I’m with EVE, I feel<FE>giddy whether I win or lose.<FB>It’s magical!	FB;FE	71	2	0x01AC98C	DIALOGUE	JON : Quand je suis avec EVE, je<FE>me sens léger que je gagne ou perde.<FB>C’est magique !	TRANSLATED
+ODYSSEY-TXT-000576	0x018C8C2	59	The way I am now, I may have to<FE>hold off on TRAINER TOWER…	FE	57	2	0x01ACA84	Trainer Tower	Dans l’état où je suis, je devrai<FE>peut-être attendre pour la TOUR DRESSEUR…	TRANSLATED
+ODYSSEY-TXT-000577	0x018C980	25	You’re a master at this.		24	1	0x01ACABC	Trainer post-battle	T’es un maître en la matière.	TRANSLATED
+ODYSSEY-TXT-000578	0x018CA9C	122	From far out among the stars, our<FE>planet is just a drop of water.<FB>But we want to protect that drop<FE>of water for everyone.	FB;FE	118	3	0x01ACB00	DIALOGUE	Vue depuis les étoiles, notre<FE>planète n’est qu’une goutte d’eau.<FB>Mais nous voulons protéger cette<FE>goutte d’eau pour tout le monde.	TRANSLATED
+ODYSSEY-TXT-000579	0x018CB3E	46	You’re hot stuff in spite of your<FE>cute looks.	FE	44	2	0x01ACB38	Trainer post-battle	T’es redoutable malgré ton<FE>air mignon.	TRANSLATED
+ODYSSEY-TXT-000580	0x018CC09	70	The way you battle has given me<FE>a lot of useful data.<FB>Thanks so much!	FB;FE	67	2	0x01ACB7C	DIALOGUE	Ta façon de combattre m’a donné<FE>plein de données utiles.<FB>Merci beaucoup !	TRANSLATED
+ODYSSEY-TXT-000581	0x018CCAE	60	Thank you. I feel like I’ve been<FE>set free by losing to you.	FE	58	2	0x01ACBB4	Trainer post-battle	Merci. J’ai l’impression d’avoir<FE>été libéré en perdant contre toi.	TRANSLATED
+ODYSSEY-TXT-000582	0x018CD9C	70	LEX: I think it was a good<FE>experience for NYA.<FB>You have my gratitude.	FB;FE	67	2	0x01ACC00	DIALOGUE	LEX : Je pense que ça a été une<FE>bonne expérience pour NYA.<FB>Tu as ma gratitude.	TRANSLATED
+ODYSSEY-TXT-000583	0x018CE5A	30	NYA: Oh, no…<FE>I’m so sorry, I…	FE	28	2	0x01ACC3C	DIALOGUE	NYA : Oh, non…<FE>Je suis tellement désolée, je…	TRANSLATED
+ODYSSEY-TXT-000584	0x018CEF4	55	NYA: I’m sorry, but may we battle<FE>in two-on-two style?	FE	53	2	0x01ACC40	DIALOGUE	NYA : Désolée, mais on peut<FE>combattre en style deux contre deux ?	TRANSLATED
+ODYSSEY-TXT-000585	0x018CF2B	34	SEVAULT CANYON<FE>TANOBY RUINS AHEAD	FE	32	2	0x0168C00	sign	CANYON SEVAULT<FE>RUINES TANOBY PLUS LOIN	TRANSLATED
+ODYSSEY-TXT-000586	0x018D061	120	The TANOBY RUINS date back at<FE>least 1,500 years.<FB>But it’s a baffling mystery as to<FE>why it was built in the first place.	FB;FE	116	3	0x01ACC84	Tanoby Ruins	Les RUINES TANOBY remontent à au<FE>moins 1 500 ans.<FB>Mais c’est un mystère déconcertant<FE>de savoir pourquoi elles ont été construites.	TRANSLATED
+ODYSSEY-TXT-000587	0x018D108	29	I’m not much good in battle.		28	1	0x01ACCBC	Trainer post-battle	Je ne suis pas très doué au combat.	TRANSLATED
+ODYSSEY-TXT-000588	0x018D1E3	76	I said that I wanted to paint an<FE>old building.<FB>So CLIFFORD brought me here.	FB;FE	73	2	0x01ACD00	DIALOGUE	J’ai dit que je voulais peindre<FE>un vieux bâtiment.<FB>Alors CLIFFORD m’a amené ici.	TRANSLATED
+ODYSSEY-TXT-000589	0x018D241	44	 to our lesson,<FE>we came to see the chamber.	FE	42	2	0x0B1A3B8	DIALOGUE fragment	 à notre leçon,<FE>on est venus voir la chambre.	TRANSLATED
+ODYSSEY-TXT-000590	0x018D26D	23	My, how extraordinary.		22	1	0x01ACD38	DIALOGUE	Ma foi, quelle extraordinaire chose.	TRANSLATED
+ODYSSEY-TXT-000591	0x018D3D1	39	MOM: <FD:01>!<FE>You should take a quick rest.	FD;FE	35	2	0x0168C4C	Player's house	MAMAN : <FD:01> !<FE>Tu devrais faire une petite pause.	TRANSLATED
+ODYSSEY-TXT-000592	0x018D492	103	There’s a movie on TV.<FE>A girl with her hair in pigtails is<FA>walking up a brick road.<FB>…I better go, too.	FA;FB;FE	99	2	0x0168C9C	Player's house	Il y a un film à la télé.<FE>Une fille avec des couettes marche<FA>sur une route de briques.<FB>…Je ferais mieux d’y aller aussi.	TRANSLATED
+ODYSSEY-TXT-000593	0x018D4F9	18	Oops, wrong side…		17	1	0x0168C70	DIALOGUE	Oups, mauvais côté…	TRANSLATED
+ODYSSEY-TXT-000594	0x018D50B	48	<FD:01> played with the NES.<FB>…Okay!<FE>It’s time to go!	FB;FD;FE	43	2	0x0168CD4	Player's house	<FD:01> a joué avec la NES.<FB>…D’accord !<FE>Il est temps d’y aller !	TRANSLATED
+ODYSSEY-TXT-000595	0x018D58C	56	DAISY: Hi, <FD:01>!<FB>My brother, <FD:06>, is out at<FE>Grandpa’s LAB.	FB;FD;FE	49	2	0x0168D9C	Intro, Daisy Oak	DAISY : Salut, <FD:01> !<FB>Mon frère, <FD:06>, est au<FE>LABO de Papi.	TRANSLATED
+ODYSSEY-TXT-000596	0x018D60A	87	Grandpa asked you to run an<FE>errand?<FB>Gee, that’s lazy of him.<FE>Here, this will help you.	FB;FE	83	3	0x0168EF8	Intro, Daisy Oak	Papi t’a demandé de faire une<FE>course ?<FB>Waouh, c’est bien paresseux de sa<FE>part. Tiens, ça va t’aider.	TRANSLATED
+ODYSSEY-TXT-000597	0x018D661	35	<FD:01> received a TOWN MAP<FE>from DAISY.	FD;FE	31	2	0x0168F38	SYSTEM item	<FD:01> a reçu une CARTE DE LA<FE>RÉGION de DAISY.	TRANSLATED
+ODYSSEY-TXT-000598	0x018D97B	42	Oh, sorry. I honestly can’t<FE>groom an EGG.	FE	40	2	0x0168E34	DIALOGUE	Oh, désolée. Je ne peux<FE>honnêtement pas soigner un ŒUF.	TRANSLATED
+ODYSSEY-TXT-000599	0x018DABE	53	It’s quite friendly with you.<FE>Keep being good to it!	FE	51	2	0x0168ED0	DIALOGUE	Il est très amical avec toi.<FE>Continue à bien t’occuper de lui !	TRANSLATED
+ODYSSEY-TXT-000600	0x018DE99	47	<FD:06>: I almost forgot!<FE>What did you call me for?	FD;FE	43	2	0x0169680	Intro, rival	<FD:06> : J’ai failli oublier !<FE>Pourquoi tu m’as appelé ?	TRANSLATED
+ODYSSEY-TXT-000601	0x018E30D	35	<FD:01> received the <FD:02><FE>from PROF. OAK!	FD;FE	29	2	0x0169CA4	SYSTEM item	<FD:01> a reçu <FD:02> du<FE>PR CHEN !	TRANSLATED
+ODYSSEY-TXT-000602	0x018E4AF	27	<FD:01> delivered OAK’S PARCEL.	FD	24	1	0x016962C	Intro	<FD:01> a livré le COLIS DU PR CHEN.	TRANSLATED
+ODYSSEY-TXT-000603	0x018E5C5	37	OAK: <FD:01> and <FD:06>.<FE>Take these with you.	FD;FE	31	2	0x0169710	Intro, Prof Oak	PR CHEN : <FD:01> et <FD:06>.<FE>Prenez ceci avec vous.	TRANSLATED
+ODYSSEY-TXT-000604	0x018EA84	50	The SAVE option is on the MENU.<FE>Use it regularly.	FE	48	2	0x0169E88	Trainer tip	L’option SAUVEGARDER est dans le<FE>MENU. Utilise-la régulièrement.	TRANSLATED
+ODYSSEY-TXT-000605	0x018F4A2	228	Having lost in this fashion, <FE>I can’t face my followers.<FA>I have betrayed their trust.<FB>As of today, TEAM ROCKET is<FE>finished forever!<FB>As for myself, I shall dedicate<FE>my life to training again.<FB>Let us meet again someday!<FE>Farewell!	FA;FB;FE	219	5	0x0169EF4	Team Rocket boss final defeat	Ayant perdu de cette façon, <FE>je ne peux pas affronter mes hommes.<FA>J’ai trahi leur confiance.<FB>À partir d’aujourd’hui, la TEAM<FE>ROCKET est finie pour toujours !<FB>Quant à moi, je vais consacrer<FE>ma vie à l’entraînement à nouveau.<FB>Retrouvons-nous un jour !<FE>Adieu !	TRANSLATED
+ODYSSEY-TXT-000606	0x018F695	134	TM26 contains EARTHQUAKE.<FB>It is a powerful attack that causes<FE>a massive tremor.<FB>I made it when I ran the GYM here,<FE>far too long ago… 	FB;FE	129	3	0x0169F68	Gym Leader TM gift	La CT26 contient SÉISME.<FB>C’est une attaque puissante qui<FE>provoque un énorme tremblement.<FB>Je l’ai faite quand je dirigeais l’ARÈNE<FE>ici, il y a bien trop longtemps… 	TRANSLATED
+ODYSSEY-TXT-000607	0x018F6EB	48	 it when I ran the GYM here,<FE>far too long ago… 	FE	46	2	0x1A45E58	DIALOGUE fragment	 ça quand je dirigeais l’ARÈNE ici,<FE>il y a bien trop longtemps… 	TRANSLATED
+ODYSSEY-TXT-000608	0x018F77B	50	You’ll need power to keep up with<FE>our GYM LEADER.	FE	48	2	0x016A014	Gym	Il te faudra de la puissance pour<FE>suivre notre CHAMPION D’ARÈNE.	TRANSLATED
+ODYSSEY-TXT-000609	0x018F7DD	22	I’m still not worthy!		21	1	0x0169FB8	Trainer post-battle	Je ne suis toujours pas digne !	TRANSLATED
+ODYSSEY-TXT-000610	0x018F824	28	You are in perfect harmony!		27	1	0x0169F84	Trainer post-battle	Vous êtes en parfaite harmonie !	TRANSLATED
+ODYSSEY-TXT-000611	0x018F92C	46	I’m the KARATE KING!<FE>Your fate rests with me!	FE	44	2	0x0169FDC	DIALOGUE	Je suis le ROI DU KARATÉ !<FE>Ton destin repose entre mes mains !	TRANSLATED
 ODYSSEY-TXT-000612	0x018F95A	6	Ayah!		5	1	0x0169FE0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-000613	0x018FC2B	58	Okay!<FB>Be sure to read what’s on the<FE>blackboard carefully!	FB;FE	55	2	0x016A098	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000614	0x018FF19	15	Turn the page?		14	1	0x016A0EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000615	0x0190001	36	AWAKENING to awaken one<FE>from sleep.	FE	34	2	0x0C39910	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000616	0x0190008	29	NG to awaken one<FE>from sleep.	FE	27	2	0x0805110,0x0823B80,0x0824640,0x08246EC,0x083BC54,0x086A424,0x086A544,0x086A664,0x086A784,0x086A8A4,0x086A9C4,0x086AAE4,0x086AC04,0x086AD24,0x086AE44,0x086B0A4,0x086B1C4,0x086B2E4,0x086D574,0x086D694,0x086D7B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000617	0x01900D4	59	son lingers after battles.<FE>Use an ANTIDOTE to cure poison!	FE	57	2	0x016550C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000618	0x019021A	32	Hey!<FE>You came from PALLET TOWN?	FE	30	2	0x016A214	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000619	0x01902F5	55	This shop does good business in<FE>ANTIDOTES, I’ve heard.	FE	53	2	0x016A2B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000620	0x01904F9	12	Come again!		11	1	0x016A3EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000621	0x01904FA	11	ome again!		10	1	0x0B16D08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000622	0x019051C	29	You don’t have enough money.		28	1	0x016A478	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000623	0x0190539	23	Please enjoy yourself.		22	1	0x016A340	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-000613	0x018FC2B	58	Okay!<FB>Be sure to read what’s on the<FE>blackboard carefully!	FB;FE	55	2	0x016A098	DIALOGUE	D’accord !<FB>Assure-toi de bien lire ce qu’il<FE>y a sur le tableau noir !	TRANSLATED
+ODYSSEY-TXT-000614	0x018FF19	15	Turn the page?		14	1	0x016A0EC	SYSTEM	Tourner la page ?	TRANSLATED
+ODYSSEY-TXT-000615	0x0190001	36	AWAKENING to awaken one<FE>from sleep.	FE	34	2	0x0C39910	item description	ANTISOMMEIL pour réveiller<FE>quelqu’un du sommeil.	TRANSLATED
+ODYSSEY-TXT-000616	0x0190008	29	NG to awaken one<FE>from sleep.	FE	27	2	0x0805110,0x0823B80,0x0824640,0x08246EC,0x083BC54,0x086A424,0x086A544,0x086A664,0x086A784,0x086A8A4,0x086A9C4,0x086AAE4,0x086AC04,0x086AD24,0x086AE44,0x086B0A4,0x086B1C4,0x086B2E4,0x086D574,0x086D694,0x086D7B4	item description fragment	…IL pour réveiller quelqu’un<FE>du sommeil.	TRANSLATED
+ODYSSEY-TXT-000617	0x01900D4	59	son lingers after battles.<FE>Use an ANTIDOTE to cure poison!	FE	57	2	0x016550C	item description fragment	…poison persiste après les combats.<FE>Utilisez un ANTIDOTE pour le soigner !	TRANSLATED
+ODYSSEY-TXT-000618	0x019021A	32	Hey!<FE>You came from PALLET TOWN?	FE	30	2	0x016A214	DIALOGUE	Hé !<FE>Tu viens de BOURG PALETTE ?	TRANSLATED
+ODYSSEY-TXT-000619	0x01902F5	55	This shop does good business in<FE>ANTIDOTES, I’ve heard.	FE	53	2	0x016A2B0	DIALOGUE	Ce magasin fait de bonnes ventes<FE>d’ANTIDOTES, paraît-il.	TRANSLATED
+ODYSSEY-TXT-000620	0x01904F9	12	Come again!		11	1	0x016A3EC	Shop	Revenez bientôt !	TRANSLATED
+ODYSSEY-TXT-000621	0x01904FA	11	ome again!		10	1	0x0B16D08	Shop fragment	…revenez bientôt !	TRANSLATED
+ODYSSEY-TXT-000622	0x019051C	29	You don’t have enough money.		28	1	0x016A478	SYSTEM shop	Vous n’avez pas assez d’argent.	TRANSLATED
+ODYSSEY-TXT-000623	0x0190539	23	Please enjoy yourself.		22	1	0x016A340	Shop	Amusez-vous bien.	TRANSLATED
 ODYSSEY-TXT-000624	0x0190621	6	MBER.		5	1	0x1A7ABC8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-000625	0x0190AA9	44	Is that so?<FE>I’m sure you’ll be back for it.	FE	42	2	0x01C4C14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000626	0x0190BFB	35	th, we’re running a space<FE>exhibit.	FE	33	2	0x1A1F0DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000627	0x0190C05	25	running a space<FE>exhibit.	FE	23	2	0x0A5ED70	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000628	0x0190C1E	66	I want a PIKACHU!<FE>It’s so cute!<FB>I asked my daddy to catch me one!	FB;FE	63	2	0x016A570	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000629	0x01911EC	75	Stop right there, kid!<FB>You’re ten thousand light-years <FE>from facing BROCK!	FB;FE	72	2	0x016A644	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000630	0x019121F	24	ars <FE>from facing BROCK!	FE	22	2	0x0AAC518	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000631	0x0191237	52	Darn!<FB>Light-years isn’t time…<FE>It measures distance!	FB;FE	49	2	0x016A648	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000632	0x01912F0	76	no TRAINER, but I can advise<FE>you on how to win.<FB>Let me take you to the top!	FB;FE	73	2	0x1A5F254	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000633	0x019142C	16	 get happening!		15	1	0x046030C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000634	0x0191743	61	I really want a PIKACHU, so I’m<FE>trading my CLEFAIRY for one.	FE	59	2	0x016A7A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000635	0x0191813	45	some moves must be taught to<FE>them by people.	FE	43	2	0x0A7B494	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000636	0x0191917	80	.<FB>I see you have at least one.<FB>Those BADGES have amazing secrets,<FE>did you know?	FB;FE	76	2	0x0A9EA04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000637	0x0191C0C	42	 use the move<FE>STRENGTH outside of battle.	FE	40	2	0x0AB44D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000638	0x0191C1A	28	STRENGTH outside of battle.		27	1	0x0A66E9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000639	0x0191C21	21	H outside of battle.		20	1	0x0460244	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000640	0x0191D0B	109	higher levels will<FE>be unruly in battle, however.<FB>It also lets you use the move<FE>ROCK SMASH outside of battle.	FB;FE	105	3	0x0A54B4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000641	0x0191EF6	52	I decided to teach DIGLETT how to<FE>DIG without a TM.	FE	50	2	0x0B20C74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000642	0x0191F2D	55	M ROCKET must be trying to DIG<FE>their way into no good!	FE	53	2	0x050B874	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000643	0x0191F64	28	TEAM ROCKET left a way out!		27	1	0x016A9A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000644	0x01923F1	29	<FD:01> received TM03<FE>from MISTY.	FD;FE	25	2	0x016AB18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000645	0x019240E	31	You better make room for this!		30	1	0x016AB3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000646	0x0192412	27	better make room for this!		26	1	0x0A154A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000647	0x0192425	8	r this!		7	1	0x04FA980	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000648	0x019242D	84	Wow!<FE>You’re too much!<FB>All right!<FB>You can have the CASCADEBADGE to<FE>show you beat me.	FB;FE	79	3	0x016AAB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000649	0x01924E4	64	You have to face other TRAINERS<FE>to see how good you really are.	FE	62	2	0x016AB54	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000650	0x0192513	17	 you really are.		16	1	0x1A65808	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000651	0x0192556	86	MISTY is a TRAINER who’s going to<FE>keep improving.<FB>She won’t lose to someone like you!	FB;FE	83	2	0x016AB78	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000652	0x0192733	34	R: MISTY<FB>WINNING TRAINERS:<FE><FD:06>, <FD:01>	FB;FD;FE	27	2	0x06B1B98,0x0A62FF0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000653	0x01927B2	47	Oh, that’s…<FB>A BIKE VOUCHER!<FB>Okay!<FE>Here you go!	FB;FE	43	2	0x016AC24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000654	0x01927E1	45	<FD:01> exchanged the<FE>BIKE VOUCHER for a BICYCLE.	FD;FE	41	2	0x016AC2C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000655	0x019280E	37	Thank you!<FE>Come back again sometime!	FE	35	2	0x016AC50	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000656	0x019281D	22	 back again sometime!		21	1	0x03F53F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000657	0x019281F	20	ack again sometime!		19	1	0x0A44F84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000658	0x01928A8	39	You better make room for your<FE>BICYCLE!	FE	37	2	0x016AC64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000659	0x0192968	31	Wow.<FE>Your BIKE is really cool!	FE	29	2	0x016AC8C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000660	0x0192B5B	172	mm…<FB>I see!<FE>That was quite informative!<FB>I applaud you for taking interest<FE>in the news at your young age.<FB>As my thanks for sharing the news<FE>with me, I want you to have this.	FB;FE	165	4	0x0B47658	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000661	0x0192B94	115	taking interest<FE>in the news at your young age.<FB>As my thanks for sharing the news<FE>with me, I want you to have this.	FB;FE	111	3	0x1027FD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000662	0x0192C07	206	Oh, oh!<FE>Th-this news report!<FB>Hmm…<FB>Amazing!<FE>What an incredible piece of news!<FB>I haven’t seen a news story this<FE>incredible in too long a time!<FB>Thanks for sharing this fantastic<FE>news. Have a bunch of BERRIES!	FB;FE	197	5	0x016AD90	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000663	0x0192C32	163	What an incredible piece of news!<FB>I haven’t seen a news story this<FE>incredible in too long a time!<FB>Thanks for sharing this fantastic<FE>news. Have a bunch of BERRIES!	FB;FE	158	3	0x04D2E2C,0x1A5EBDC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000664	0x0192DE3	226	You’ve spread the news some more?<FE>Magnificent!<FB>That piece of news must be<FE>delighted to be passed around so.<FB>Yes, indeed!<FB>Consider this a show of<FE>appreciation from me and the news.<FB>I’ll give you more BERRIES than<FE>I usually do.	FB;FE	217	5	0x016ADF0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000665	0x0193223	59	st you lie to me?<FB>How many BERRIES do you have?<FE>Not a one!	FB;FE	56	2	0x04D5D10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000666	0x01932C5	47	Er-hem! Have you brought me some<FE>BERRY POWDER?	FE	45	2	0x016AEBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000667	0x01933FB	52	That’s fine, then.<FE>I’ll hope to see you back again.	FE	50	2	0x016B0B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000668	0x0193414	27	ope to see you back again.		26	1	0x03F41A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000669	0x019341F	16	you back again.		15	1	0x0B20208	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000670	0x01936EE	17	PSYDUCK: Gwappa!		16	1	0x016B208	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000671	0x0193841	26	t are<FE>sleeping obstacles.	FE	24	2	0x1A7EDEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000672	0x019396B	18	CUBONE: Kyarugoo!		17	1	0x016B25C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000673	0x019397D	123	Those horrible ROCKETS!<FE>They deserve no mercy!<FB>That poor CUBONE’s mother…<FB>It was killed trying to escape from<FE>TEAM ROCKET.	FB;FE	118	3	0x016B240	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000674	0x0193BD4	28	I see.<FE>Do come visit again.	FE	26	2	0x016B2AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000675	0x0193EC1	105	I’m the FISHING GURU!<FB>I simply looove fishing!<FE>I can’t bear to go without.<FB>Tell me, do you like to fish?	FB;FE	101	2	0x016B3B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000676	0x0193F2A	87	Grand! I like your style.<FE>I think we can be friends.<FB>Take this and fish, young friend!	FB;FE	84	2	0x016B3F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000677	0x0193F81	46	<FD:01> received an OLD ROD from<FE>the FISHING GURU.	FD;FE	42	2	0x016B3F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000678	0x019406F	64	Oh, no!<FB>I had a nice gift for you, but you<FE>have no room for it!	FB;FE	61	2	0x016B41C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000679	0x0194072	61	 no!<FB>I had a nice gift for you, but you<FE>have no room for it!	FB;FE	58	2	0x0706194	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000680	0x0194461	14	re on a road.		13	1	0x0A394D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000681	0x019446F	45	Won’t you admire my PIKACHU’s<FE>adorable tail?	FE	43	2	0x016B570	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000682	0x019449C	48	Humph!<FB>My PIKACHU is twice as cute as<FE>that one!	FB;FE	45	2	0x016B588	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000683	0x019455A	23	PIKACHU: Chu! Pikachu!		22	1	0x016B5A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000684	0x01948D2	20	Make room for this!		19	1	0x016B4F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000685	0x0194927	22	ly to other<FE>TRAINERS!	FE	20	2	0x1B1BCD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000686	0x0194F1F	80	I’m a lightweight, but I’m good<FE>with electricity!<FB>That’s why I joined this GYM.	FB;FE	77	2	0x016BA24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000687	0x0194F6F	7	Fried!		6	1	0x016BA28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000688	0x0194FBD	52	This is no place for kids!<FE>Not even if you’re good!	FE	50	2	0x016BA00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000689	0x0194FF1	19	Wow!<FE>Surprised me!	FE	17	2	0x016BA04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000690	0x01953AF	63	I’m getting my PIDGEY to fly a<FE>letter to SAFFRON in the north.	FE	61	2	0x016BAAC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000691	0x0195537	124	1F: SERVICE COUNTER<FB>2F: TRAINER’S MARKET<FB>3F: TV GAME SHOP<FB>4F: WISE MAN GIFTS<FB>5F: DRUGSTORE<FB>ROOFTOP SQUARE: VENDING MACHINES	FB	118	1	0x016BAE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000692	0x019560F	41	For long outings, you should buy<FE>REVIVE.	FE	39	2	0x016BB00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000693	0x019566B	126	We have a customer, LANCE, who<FE>occasionally comes.<FB>He always buys capes.<FB>I wonder… Does he have many<FE>identical capes at home?	FB;FE	121	3	0x01AD064	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000694	0x01958B8	32	A puzzle game!<FE>Looks addictive!	FE	30	2	0x016BBCC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000695	0x01959CC	60	You’re not interested? Come see<FE>me if you change your mind.	FE	58	2	0x01C4C7C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000696	0x0195D5F	22	Give her which drink?		21	1	0x016BD54	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000697	0x0195DAD	39	<FD:01> received a <FD:03><FE>from the little girl.	FD;FE	33	2	0x016BFA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000698	0x0195DE5	78	HT SCREEN.<FB>It’s a move that weakens the power<FE>of special attacks by your foe.	FB;FE	75	2	0x05D2770	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000699	0x0195E47	33	 you!<FE>You can have this from me!	FE	31	2	0x05D595C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000700	0x0195EBF	53	Yay!<FB>LEMONADE!<FB>Thank you!<FE>You can have this from me!	FB;FE	49	2	0x016BF70	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000701	0x0195F4F	31	You don’t have space for this!		30	1	0x016C004	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000702	0x0195F98	87	My sister is a TRAINER, believe it<FE>or not.<FB>But, she’s so immature, she drives<FE>me nuts!	FB;FE	83	3	0x016C024	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000703	0x0195FEF	40	I’m thirsty!<FE>I want something to drink!	FE	38	2	0x016C010	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000704	0x0196076	24	A can of <FD:02> popped out!	FD	21	1	0x016C114	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000705	0x01960BB	14	MEOWTH: Meow!		13	1	0x016C398	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000706	0x01960C9	64	You shouldn’t spend all your money<FE>on drinks.<FB>Try this instead.	FB;FE	61	2	0x016C340	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000707	0x019640C	63	It’s the game program! Messing with<FE>it could bug out the game!	FE	61	2	0x016C440	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000708	0x01964C4	19	I KNOW EVERYTHING!		18	1	0x016C45C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000709	0x01965F4	35	Which heading do you want to read?		34	1	0x016C52C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000710	0x0196913	45	If I had a BIKE, I would go to<FE>CYCLING ROAD!	FE	43	2	0x016C618	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000711	0x01969DC	31	No?<FE>Please come play sometime!	FE	29	2	0x016C784	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000712	0x0196A26	32	Whoops!<FE>Your COIN CASE is full.	FE	30	2	0x016C7A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000713	0x0196AF3	26	Kid, do you want to play?		25	1	0x016C7F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000714	0x0196B0D	35	<FD:01> received 10 COINS<FE>from the man.	FD;FE	31	2	0x016C818	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000715	0x0196D6F	24	You have lots of COINS!		23	1	0x016C8E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000716	0x0196E1B	37	You’ve got plenty of your own<FE>COINS!	FE	35	2	0x016C944	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000717	0x0196F64	29	OUT OF ORDER<FE>This is broken.	FE	27	2	0x016CB5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000718	0x0196FC1	62	I sure do fancy that PORYGON!<FE>But, it’s hard to win at slots!	FE	60	2	0x016CB78	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000719	0x019707A	28	Which prize would you like?		27	1	0x016CE48	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000720	0x019709D	21	So, you want the <FD:02>?	FD	18	1	0x016CF28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000721	0x0197260	88	Oh!<FE>I concede defeat.<FA>You are remarkably strong.<FB>I must confer on you the<FE>RAINBOWBADGE.	FA;FB;FE	83	3	0x016D078	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000722	0x01975D1	58	Oh, you were looking at ERIKA…<FE>You weren’t looking at me…	FE	56	2	0x016D15C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-000625	0x0190AA9	44	Is that so?<FE>I’m sure you’ll be back for it.	FE	42	2	0x01C4C14	Shop	Ah bon ?<FE>Je suis sûr que tu reviendras pour ça.	TRANSLATED
+ODYSSEY-TXT-000626	0x0190BFB	35	th, we’re running a space<FE>exhibit.	FE	33	2	0x1A1F0DC	DIALOGUE fragment	…, nous organisons une exposition<FE>sur l’espace.	TRANSLATED
+ODYSSEY-TXT-000627	0x0190C05	25	running a space<FE>exhibit.	FE	23	2	0x0A5ED70	DIALOGUE fragment	…organisons une exposition<FE>sur l’espace.	TRANSLATED
+ODYSSEY-TXT-000628	0x0190C1E	66	I want a PIKACHU!<FE>It’s so cute!<FB>I asked my daddy to catch me one!	FB;FE	63	2	0x016A570	DIALOGUE	Je veux un PIKACHU !<FE>Il est trop mignon !<FB>J’ai demandé à mon papa de m’en attraper un !	TRANSLATED
+ODYSSEY-TXT-000629	0x01911EC	75	Stop right there, kid!<FB>You’re ten thousand light-years <FE>from facing BROCK!	FB;FE	72	2	0x016A644	DIALOGUE	Arrête-toi là, gamin !<FB>Tu es à dix mille années-lumière<FE>d’affronter PIERRE !	TRANSLATED
+ODYSSEY-TXT-000630	0x019121F	24	ars <FE>from facing BROCK!	FE	22	2	0x0AAC518	DIALOGUE fragment	…-lumière<FE>d’affronter PIERRE !	TRANSLATED
+ODYSSEY-TXT-000631	0x0191237	52	Darn!<FB>Light-years isn’t time…<FE>It measures distance!	FB;FE	49	2	0x016A648	DIALOGUE	Zut !<FB>Une année-lumière c’est pas du<FE>temps… Ça mesure une distance !	TRANSLATED
+ODYSSEY-TXT-000632	0x01912F0	76	no TRAINER, but I can advise<FE>you on how to win.<FB>Let me take you to the top!	FB;FE	73	2	0x1A5F254	DIALOGUE fragment	…pas DRESSEUR, mais je peux te<FE>conseiller sur comment gagner.<FB>Laisse-moi t’emmener au sommet !	TRANSLATED
+ODYSSEY-TXT-000633	0x019142C	16	 get happening!		15	1	0x046030C	DIALOGUE fragment	 se passer !	TRANSLATED
+ODYSSEY-TXT-000634	0x0191743	61	I really want a PIKACHU, so I’m<FE>trading my CLEFAIRY for one.	FE	59	2	0x016A7A4	DIALOGUE	Je veux vraiment un PIKACHU, alors<FE>j’échange mon MÉLOFÉE contre un.	TRANSLATED
+ODYSSEY-TXT-000635	0x0191813	45	some moves must be taught to<FE>them by people.	FE	43	2	0x0A7B494	item description fragment	…certaines capacités doivent leur<FE>être enseignées par des humains.	TRANSLATED
+ODYSSEY-TXT-000636	0x0191917	80	.<FB>I see you have at least one.<FB>Those BADGES have amazing secrets,<FE>did you know?	FB;FE	76	2	0x0A9EA04	DIALOGUE fragment	.<FB>Je vois que t’en as au moins un.<FB>Ces BADGES ont des secrets incroyables,<FE>tu savais ?	TRANSLATED
+ODYSSEY-TXT-000637	0x0191C0C	42	 use the move<FE>STRENGTH outside of battle.	FE	40	2	0x0AB44D4	item description fragment	 utiliser la capacité<FE>FORCE hors combat.	TRANSLATED
+ODYSSEY-TXT-000638	0x0191C1A	28	STRENGTH outside of battle.		27	1	0x0A66E9C	item description fragment	FORCE hors combat.	TRANSLATED
+ODYSSEY-TXT-000639	0x0191C21	21	H outside of battle.		20	1	0x0460244	item description fragment	…CE hors combat.	TRANSLATED
+ODYSSEY-TXT-000640	0x0191D0B	109	higher levels will<FE>be unruly in battle, however.<FB>It also lets you use the move<FE>ROCK SMASH outside of battle.	FB;FE	105	3	0x0A54B4C	item description fragment	…à des niveaux élevés seront<FE>indisciplinés au combat, cependant.<FB>Ça permet aussi d’utiliser la<FE>capacité DÉFONCE hors combat.	TRANSLATED
+ODYSSEY-TXT-000641	0x0191EF6	52	I decided to teach DIGLETT how to<FE>DIG without a TM.	FE	50	2	0x0B20C74	DIALOGUE	J’ai décidé d’apprendre TUNNEL à<FE>mon TAUPIQUEUR sans CT.	TRANSLATED
+ODYSSEY-TXT-000642	0x0191F2D	55	M ROCKET must be trying to DIG<FE>their way into no good!	FE	53	2	0x050B874	DIALOGUE fragment	…LA TEAM ROCKET doit essayer de<FE>creuser pour faire des bêtises !	TRANSLATED
+ODYSSEY-TXT-000643	0x0191F64	28	TEAM ROCKET left a way out!		27	1	0x016A9A0	DIALOGUE	La TEAM ROCKET a laissé une sortie !	TRANSLATED
+ODYSSEY-TXT-000644	0x01923F1	29	<FD:01> received TM03<FE>from MISTY.	FD;FE	25	2	0x016AB18	SYSTEM item	<FD:01> a reçu la CT03<FE>d’ONDINE.	TRANSLATED
+ODYSSEY-TXT-000645	0x019240E	31	You better make room for this!		30	1	0x016AB3C	DIALOGUE	Tu ferais mieux de faire de la place pour ça !	TRANSLATED
+ODYSSEY-TXT-000646	0x0192412	27	better make room for this!		26	1	0x0A154A8	DIALOGUE fragment	…mieux de faire de la place pour ça !	TRANSLATED
+ODYSSEY-TXT-000647	0x0192425	8	r this!		7	1	0x04FA980	DIALOGUE fragment	…pour ça !	TRANSLATED
+ODYSSEY-TXT-000648	0x019242D	84	Wow!<FE>You’re too much!<FB>All right!<FB>You can have the CASCADEBADGE to<FE>show you beat me.	FB;FE	79	3	0x016AAB8	Gym Leader defeat, Misty	Wow !<FE>T’es trop fort !<FB>D’accord !<FB>Tu peux avoir le BADGE CASCADE<FE>pour prouver que tu m’as battue.	TRANSLATED
+ODYSSEY-TXT-000649	0x01924E4	64	You have to face other TRAINERS<FE>to see how good you really are.	FE	62	2	0x016AB54	DIALOGUE	Tu dois affronter d’autres<FE>DRESSEURS pour voir ta vraie valeur.	TRANSLATED
+ODYSSEY-TXT-000650	0x0192513	17	 you really are.		16	1	0x1A65808	DIALOGUE fragment	 ta vraie valeur.	TRANSLATED
+ODYSSEY-TXT-000651	0x0192556	86	MISTY is a TRAINER who’s going to<FE>keep improving.<FB>She won’t lose to someone like you!	FB;FE	83	2	0x016AB78	Gym	ONDINE est une DRESSEUSE qui va<FE>continuer à s’améliorer.<FB>Elle ne perdra pas contre quelqu’un comme toi !	TRANSLATED
+ODYSSEY-TXT-000652	0x0192733	34	R: MISTY<FB>WINNING TRAINERS:<FE><FD:06>, <FD:01>	FB;FD;FE	27	2	0x06B1B98,0x0A62FF0	Gym leaderboard fragment	…: ONDINE<FB>DRESSEURS VICTORIEUX :<FE><FD:06>, <FD:01>	TRANSLATED
+ODYSSEY-TXT-000653	0x01927B2	47	Oh, that’s…<FB>A BIKE VOUCHER!<FB>Okay!<FE>Here you go!	FB;FE	43	2	0x016AC24	DIALOGUE	Oh, c’est…<FB>Un BON POUR VÉLO !<FB>D’accord !<FE>Tiens, voilà !	TRANSLATED
+ODYSSEY-TXT-000654	0x01927E1	45	<FD:01> exchanged the<FE>BIKE VOUCHER for a BICYCLE.	FD;FE	41	2	0x016AC2C	SYSTEM item	<FD:01> a échangé le<FE>BON POUR VÉLO contre un VÉLO.	TRANSLATED
+ODYSSEY-TXT-000655	0x019280E	37	Thank you!<FE>Come back again sometime!	FE	35	2	0x016AC50	Bike shop	Merci !<FE>Reviens nous voir un de ces jours !	TRANSLATED
+ODYSSEY-TXT-000656	0x019281D	22	 back again sometime!		21	1	0x03F53F4	Bike shop fragment	 nous voir un de ces jours !	TRANSLATED
+ODYSSEY-TXT-000657	0x019281F	20	ack again sometime!		19	1	0x0A44F84	Bike shop fragment	…voir un de ces jours !	TRANSLATED
+ODYSSEY-TXT-000658	0x01928A8	39	You better make room for your<FE>BICYCLE!	FE	37	2	0x016AC64	DIALOGUE	Tu ferais mieux de faire de la<FE>place pour ton VÉLO !	TRANSLATED
+ODYSSEY-TXT-000659	0x0192968	31	Wow.<FE>Your BIKE is really cool!	FE	29	2	0x016AC8C	DIALOGUE	Wow.<FE>Ton VÉLO est trop cool !	TRANSLATED
+ODYSSEY-TXT-000660	0x0192B5B	172	mm…<FB>I see!<FE>That was quite informative!<FB>I applaud you for taking interest<FE>in the news at your young age.<FB>As my thanks for sharing the news<FE>with me, I want you to have this.	FB;FE	165	4	0x0B47658	Newspaper NPC	Mm…<FB>Je vois !<FE>C’était très instructif !<FB>Je te félicite de t’intéresser<FE>aux nouvelles à ton jeune âge.<FB>En remerciement d’avoir partagé<FE>cette nouvelle, je veux que tu aies ceci.	TRANSLATED
+ODYSSEY-TXT-000661	0x0192B94	115	taking interest<FE>in the news at your young age.<FB>As my thanks for sharing the news<FE>with me, I want you to have this.	FB;FE	111	3	0x1027FD8	Newspaper NPC fragment	…de t’intéresser<FE>aux nouvelles à ton jeune âge.<FB>En remerciement d’avoir partagé<FE>cette nouvelle, je veux que tu aies ceci.	TRANSLATED
+ODYSSEY-TXT-000662	0x0192C07	206	Oh, oh!<FE>Th-this news report!<FB>Hmm…<FB>Amazing!<FE>What an incredible piece of news!<FB>I haven’t seen a news story this<FE>incredible in too long a time!<FB>Thanks for sharing this fantastic<FE>news. Have a bunch of BERRIES!	FB;FE	197	5	0x016AD90	Newspaper NPC	Oh, oh !<FE>C-cette nouvelle !<FB>Hmm…<FB>Incroyable !<FE>Quelle nouvelle incroyable !<FB>Je n’ai pas vu une nouvelle aussi<FE>incroyable depuis trop longtemps !<FB>Merci d’avoir partagé cette<FE>fantastique nouvelle. Prends des BAIES !	TRANSLATED
+ODYSSEY-TXT-000663	0x0192C32	163	What an incredible piece of news!<FB>I haven’t seen a news story this<FE>incredible in too long a time!<FB>Thanks for sharing this fantastic<FE>news. Have a bunch of BERRIES!	FB;FE	158	3	0x04D2E2C,0x1A5EBDC	Newspaper NPC fragment	Quelle nouvelle incroyable !<FB>Je n’ai pas vu une nouvelle aussi<FE>incroyable depuis trop longtemps !<FB>Merci d’avoir partagé cette<FE>fantastique nouvelle. Prends des BAIES !	TRANSLATED
+ODYSSEY-TXT-000664	0x0192DE3	226	You’ve spread the news some more?<FE>Magnificent!<FB>That piece of news must be<FE>delighted to be passed around so.<FB>Yes, indeed!<FB>Consider this a show of<FE>appreciation from me and the news.<FB>I’ll give you more BERRIES than<FE>I usually do.	FB;FE	217	5	0x016ADF0	Newspaper NPC	Tu as encore répandu la nouvelle ?<FE>Magnifique !<FB>Cette nouvelle doit être ravie<FE>d’être ainsi partagée.<FB>Oui, en effet !<FB>Considère ceci comme une marque<FE>d’appréciation de ma part.<FB>Je vais te donner plus de BAIES<FE>que d’habitude.	TRANSLATED
+ODYSSEY-TXT-000665	0x0193223	59	st you lie to me?<FB>How many BERRIES do you have?<FE>Not a one!	FB;FE	56	2	0x04D5D10	Newspaper NPC fragment	…Dois-tu me mentir ?<FB>Combien de BAIES as-tu ?<FE>Pas une seule !	TRANSLATED
+ODYSSEY-TXT-000666	0x01932C5	47	Er-hem! Have you brought me some<FE>BERRY POWDER?	FE	45	2	0x016AEBC	DIALOGUE	Hum-hum ! M’as-tu apporté de la<FE>POUDRE DE BAIE ?	TRANSLATED
+ODYSSEY-TXT-000667	0x01933FB	52	That’s fine, then.<FE>I’ll hope to see you back again.	FE	50	2	0x016B0B4	DIALOGUE	Très bien, alors.<FE>J’espère te revoir bientôt.	TRANSLATED
+ODYSSEY-TXT-000668	0x0193414	27	ope to see you back again.		26	1	0x03F41A0	DIALOGUE fragment	…espère te revoir bientôt.	TRANSLATED
+ODYSSEY-TXT-000669	0x019341F	16	you back again.		15	1	0x0B20208	DIALOGUE fragment	…te revoir bientôt.	TRANSLATED
+ODYSSEY-TXT-000670	0x01936EE	17	PSYDUCK: Gwappa!		16	1	0x016B208	DIALOGUE	PSYKOKWAK : Gwappa !	TRANSLATED
+ODYSSEY-TXT-000671	0x0193841	26	t are<FE>sleeping obstacles.	FE	24	2	0x1A7EDEC	DIALOGUE fragment	…qui sont<FE>des obstacles endormis.	TRANSLATED
+ODYSSEY-TXT-000672	0x019396B	18	CUBONE: Kyarugoo!		17	1	0x016B25C	DIALOGUE	OSSELAIT : Kyarugoo !	TRANSLATED
+ODYSSEY-TXT-000673	0x019397D	123	Those horrible ROCKETS!<FE>They deserve no mercy!<FB>That poor CUBONE’s mother…<FB>It was killed trying to escape from<FE>TEAM ROCKET.	FB;FE	118	3	0x016B240	Lavender Tower area	Ces horribles ROCKETS !<FE>Ils ne méritent aucune pitié !<FB>La pauvre mère de cet OSSELAIT…<FB>Elle a été tuée en essayant<FE>d’échapper à la TEAM ROCKET.	TRANSLATED
+ODYSSEY-TXT-000674	0x0193BD4	28	I see.<FE>Do come visit again.	FE	26	2	0x016B2AC	DIALOGUE	Je vois.<FE>Reviens nous voir.	TRANSLATED
+ODYSSEY-TXT-000675	0x0193EC1	105	I’m the FISHING GURU!<FB>I simply looove fishing!<FE>I can’t bear to go without.<FB>Tell me, do you like to fish?	FB;FE	101	2	0x016B3B4	Fishing Guru	Je suis le GOUROU DE LA PÊCHE !<FB>J’adooore pêcher !<FE>Je ne peux pas m’en passer.<FB>Dis-moi, tu aimes pêcher ?	TRANSLATED
+ODYSSEY-TXT-000676	0x0193F2A	87	Grand! I like your style.<FE>I think we can be friends.<FB>Take this and fish, young friend!	FB;FE	84	2	0x016B3F0	Fishing Guru	Génial ! J’aime ton style.<FE>Je pense qu’on peut être amis.<FB>Prends ça et pêche, jeune ami !	TRANSLATED
+ODYSSEY-TXT-000677	0x0193F81	46	<FD:01> received an OLD ROD from<FE>the FISHING GURU.	FD;FE	42	2	0x016B3F8	SYSTEM item	<FD:01> a reçu une CANNE<FE>ROUILLÉE du GOUROU DE LA PÊCHE.	TRANSLATED
+ODYSSEY-TXT-000678	0x019406F	64	Oh, no!<FB>I had a nice gift for you, but you<FE>have no room for it!	FB;FE	61	2	0x016B41C	DIALOGUE	Oh, non !<FB>J’avais un beau cadeau pour toi,<FE>mais t’as pas de place pour ça !	TRANSLATED
+ODYSSEY-TXT-000679	0x0194072	61	 no!<FB>I had a nice gift for you, but you<FE>have no room for it!	FB;FE	58	2	0x0706194	DIALOGUE fragment	 non !<FB>J’avais un beau cadeau pour toi,<FE>mais t’as pas de place pour ça !	TRANSLATED
+ODYSSEY-TXT-000680	0x0194461	14	re on a road.		13	1	0x0A394D8	DIALOGUE fragment	…on est sur une route.	TRANSLATED
+ODYSSEY-TXT-000681	0x019446F	45	Won’t you admire my PIKACHU’s<FE>adorable tail?	FE	43	2	0x016B570	DIALOGUE	Tu veux pas admirer la queue<FE>adorable de mon PIKACHU ?	TRANSLATED
+ODYSSEY-TXT-000682	0x019449C	48	Humph!<FB>My PIKACHU is twice as cute as<FE>that one!	FB;FE	45	2	0x016B588	DIALOGUE	Humph !<FB>Mon PIKACHU est deux fois plus<FE>mignon que ça !	TRANSLATED
+ODYSSEY-TXT-000683	0x019455A	23	PIKACHU: Chu! Pikachu!		22	1	0x016B5A8	DIALOGUE	PIKACHU : Chu ! Pikachu !	TRANSLATED
+ODYSSEY-TXT-000684	0x01948D2	20	Make room for this!		19	1	0x016B4F4	DIALOGUE	Fais de la place pour ça !	TRANSLATED
+ODYSSEY-TXT-000685	0x0194927	22	ly to other<FE>TRAINERS!	FE	20	2	0x1B1BCD4	DIALOGUE fragment	…aux autres<FE>DRESSEURS !	TRANSLATED
+ODYSSEY-TXT-000686	0x0194F1F	80	I’m a lightweight, but I’m good<FE>with electricity!<FB>That’s why I joined this GYM.	FB;FE	77	2	0x016BA24	Gym trainer	Je suis léger, mais je suis doué<FE>avec l’électricité !<FB>C’est pour ça que j’ai rejoint cette ARÈNE.	TRANSLATED
+ODYSSEY-TXT-000687	0x0194F6F	7	Fried!		6	1	0x016BA28	Trainer post-battle	Grillé !	TRANSLATED
+ODYSSEY-TXT-000688	0x0194FBD	52	This is no place for kids!<FE>Not even if you’re good!	FE	50	2	0x016BA00	DIALOGUE	C’est pas un endroit pour les<FE>enfants ! Même si t’es doué !	TRANSLATED
+ODYSSEY-TXT-000689	0x0194FF1	19	Wow!<FE>Surprised me!	FE	17	2	0x016BA04	Trainer post-battle	Wow !<FE>Ça m’a surpris !	TRANSLATED
+ODYSSEY-TXT-000690	0x01953AF	63	I’m getting my PIDGEY to fly a<FE>letter to SAFFRON in the north.	FE	61	2	0x016BAAC	DIALOGUE	J’envoie mon ROUCOOL porter une<FE>lettre à SAFRANIA au nord.	TRANSLATED
+ODYSSEY-TXT-000691	0x0195537	124	1F: SERVICE COUNTER<FB>2F: TRAINER’S MARKET<FB>3F: TV GAME SHOP<FB>4F: WISE MAN GIFTS<FB>5F: DRUGSTORE<FB>ROOFTOP SQUARE: VENDING MACHINES	FB	118	1	0x016BAE4	Dept store directory	1F : ACCUEIL<FB>2F : MARCHÉ DU DRESSEUR<FB>3F : BOUTIQUE TV ET JEUX<FB>4F : CADEAUX DU SAGE<FB>5F : PHARMACIE<FB>TERRASSE : DISTRIBUTEURS	TRANSLATED
+ODYSSEY-TXT-000692	0x019560F	41	For long outings, you should buy<FE>REVIVE.	FE	39	2	0x016BB00	Shop	Pour les longues sorties, tu<FE>devrais acheter des RAPPELS.	TRANSLATED
+ODYSSEY-TXT-000693	0x019566B	126	We have a customer, LANCE, who<FE>occasionally comes.<FB>He always buys capes.<FB>I wonder… Does he have many<FE>identical capes at home?	FB;FE	121	3	0x01AD064	Dept store	On a un client, LANCE, qui<FE>vient de temps en temps.<FB>Il achète toujours des capes.<FB>Je me demande… A-t-il plein de<FE>capes identiques chez lui ?	TRANSLATED
+ODYSSEY-TXT-000694	0x01958B8	32	A puzzle game!<FE>Looks addictive!	FE	30	2	0x016BBCC	DIALOGUE	Un jeu de puzzle !<FE>Ça a l’air addictif !	TRANSLATED
+ODYSSEY-TXT-000695	0x01959CC	60	You’re not interested? Come see<FE>me if you change your mind.	FE	58	2	0x01C4C7C	DIALOGUE	Pas intéressé ? Reviens me voir<FE>si tu changes d’avis.	TRANSLATED
+ODYSSEY-TXT-000696	0x0195D5F	22	Give her which drink?		21	1	0x016BD54	SYSTEM	Lui donner quelle boisson ?	TRANSLATED
+ODYSSEY-TXT-000697	0x0195DAD	39	<FD:01> received a <FD:03><FE>from the little girl.	FD;FE	33	2	0x016BFA4	SYSTEM item	<FD:01> a reçu <FD:03> de<FE>la petite fille.	TRANSLATED
+ODYSSEY-TXT-000698	0x0195DE5	78	HT SCREEN.<FB>It’s a move that weakens the power<FE>of special attacks by your foe.	FB;FE	75	2	0x05D2770	item description fragment	…R LUMIÈRE.<FB>C’est une capacité qui affaiblit la puissance<FE>des attaques spéciales de l’adversaire.	TRANSLATED
+ODYSSEY-TXT-000699	0x0195E47	33	 you!<FE>You can have this from me!	FE	31	2	0x05D595C	DIALOGUE fragment	 toi !<FE>Tu peux avoir ça de ma part !	TRANSLATED
+ODYSSEY-TXT-000700	0x0195EBF	53	Yay!<FB>LEMONADE!<FB>Thank you!<FE>You can have this from me!	FB;FE	49	2	0x016BF70	DIALOGUE	Yay !<FB>LIMONADE !<FB>Merci !<FE>Tu peux avoir ça de ma part !	TRANSLATED
+ODYSSEY-TXT-000701	0x0195F4F	31	You don’t have space for this!		30	1	0x016C004	SYSTEM	Tu n’as pas de place pour ça !	TRANSLATED
+ODYSSEY-TXT-000702	0x0195F98	87	My sister is a TRAINER, believe it<FE>or not.<FB>But, she’s so immature, she drives<FE>me nuts!	FB;FE	83	3	0x016C024	DIALOGUE	Ma sœur est DRESSEUSE, tu me<FE>croiras ou pas.<FB>Mais elle est tellement immature,<FE>elle me rend fou !	TRANSLATED
+ODYSSEY-TXT-000703	0x0195FEF	40	I’m thirsty!<FE>I want something to drink!	FE	38	2	0x016C010	DIALOGUE	J’ai soif !<FE>Je veux boire quelque chose !	TRANSLATED
+ODYSSEY-TXT-000704	0x0196076	24	A can of <FD:02> popped out!	FD	21	1	0x016C114	SYSTEM	Une canette de <FD:02> est sortie !	TRANSLATED
+ODYSSEY-TXT-000705	0x01960BB	14	MEOWTH: Meow!		13	1	0x016C398	DIALOGUE	MIAOUSS : Miaou !	TRANSLATED
+ODYSSEY-TXT-000706	0x01960C9	64	You shouldn’t spend all your money<FE>on drinks.<FB>Try this instead.	FB;FE	61	2	0x016C340	DIALOGUE	Tu devrais pas dépenser tout ton<FE>argent en boissons.<FB>Essaie plutôt ça.	TRANSLATED
+ODYSSEY-TXT-000707	0x019640C	63	It’s the game program! Messing with<FE>it could bug out the game!	FE	61	2	0x016C440	DIALOGUE	C’est le programme du jeu !<FE>Y toucher pourrait planter le jeu !	TRANSLATED
+ODYSSEY-TXT-000708	0x01964C4	19	I KNOW EVERYTHING!		18	1	0x016C45C	DIALOGUE	JE SAIS TOUT !	TRANSLATED
+ODYSSEY-TXT-000709	0x01965F4	35	Which heading do you want to read?		34	1	0x016C52C	SYSTEM	Quelle rubrique veux-tu lire ?	TRANSLATED
+ODYSSEY-TXT-000710	0x0196913	45	If I had a BIKE, I would go to<FE>CYCLING ROAD!	FE	43	2	0x016C618	DIALOGUE	Si j’avais un VÉLO, j’irais sur<FE>la ROUTE CYCLABLE !	TRANSLATED
+ODYSSEY-TXT-000711	0x01969DC	31	No?<FE>Please come play sometime!	FE	29	2	0x016C784	DIALOGUE	Non ?<FE>Reviens jouer un de ces jours !	TRANSLATED
+ODYSSEY-TXT-000712	0x0196A26	32	Whoops!<FE>Your COIN CASE is full.	FE	30	2	0x016C7A0	Game Corner	Oups !<FE>Ta BOÎTE À JETONS est pleine.	TRANSLATED
+ODYSSEY-TXT-000713	0x0196AF3	26	Kid, do you want to play?		25	1	0x016C7F4	DIALOGUE	Gamin, tu veux jouer ?	TRANSLATED
+ODYSSEY-TXT-000714	0x0196B0D	35	<FD:01> received 10 COINS<FE>from the man.	FD;FE	31	2	0x016C818	SYSTEM item	<FD:01> a reçu 10 JETONS de<FE>l’homme.	TRANSLATED
+ODYSSEY-TXT-000715	0x0196D6F	24	You have lots of COINS!		23	1	0x016C8E4	DIALOGUE	T’as plein de JETONS !	TRANSLATED
+ODYSSEY-TXT-000716	0x0196E1B	37	You’ve got plenty of your own<FE>COINS!	FE	35	2	0x016C944	DIALOGUE	T’as déjà plein de JETONS à<FE>toi !	TRANSLATED
+ODYSSEY-TXT-000717	0x0196F64	29	OUT OF ORDER<FE>This is broken.	FE	27	2	0x016CB5C	sign	HORS SERVICE<FE>C’est cassé.	TRANSLATED
+ODYSSEY-TXT-000718	0x0196FC1	62	I sure do fancy that PORYGON!<FE>But, it’s hard to win at slots!	FE	60	2	0x016CB78	DIALOGUE	J’aime vraiment ce PORYGON !<FE>Mais c’est dur de gagner aux machines à sous !	TRANSLATED
+ODYSSEY-TXT-000719	0x019707A	28	Which prize would you like?		27	1	0x016CE48	Game Corner	Quel prix veux-tu ?	TRANSLATED
+ODYSSEY-TXT-000720	0x019709D	21	So, you want the <FD:02>?	FD	18	1	0x016CF28	Game Corner	Alors, tu veux <FD:02> ?	TRANSLATED
+ODYSSEY-TXT-000721	0x0197260	88	Oh!<FE>I concede defeat.<FA>You are remarkably strong.<FB>I must confer on you the<FE>RAINBOWBADGE.	FA;FB;FE	83	3	0x016D078	Gym Leader defeat, Erika	Oh !<FE>Je concède ma défaite.<FA>Tu es remarquablement fort.<FB>Je dois te remettre le<FE>BADGE ARC-EN-CIEL.	TRANSLATED
+ODYSSEY-TXT-000722	0x01975D1	58	Oh, you were looking at ERIKA…<FE>You weren’t looking at me…	FE	56	2	0x016D15C	DIALOGUE	Oh, tu regardais ÉRIKA…<FE>Tu ne me regardais pas moi…	TRANSLATED
 ODYSSEY-TXT-000723	0x0197660	4	No!		3	1	0x016D184	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-000724	0x019777A	14	Oh!<FE>Splendid!	FE	12	2	0x016D1A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000725	0x019798A	55	Munch…<FB>The man at that table lost it all<FE>at the slots.	FB;FE	52	2	0x016D260	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000726	0x0197B20	79	Don’t touch the poster at the GAME<FE>CORNER!<FB>There’s no secret switch behind it!	FB;FE	76	2	0x016D27C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000727	0x0197C0C	36	Why?<FE>Why did she bring her brother?	FE	34	2	0x016D298	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000728	0x0197D50	48	<FD:01> received 30 SAFARI BALLS<FE>from the attendant.	FD;FE	44	2	0x016D3F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000729	0x0197D80	105	We’ll call you on the PA when you<FE>run out of time or SAFARI BALLS.<FB>Well, I’ll wish you the best of<FE>luck!	FB;FE	101	3	0x016D404	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000730	0x01980BC	120	Don’t they have any pennants<FE>promoting the SAFARI ZONE?<FB>How about some paper lanterns?<FE>Aren’t there even any calendars?	FB;FE	116	3	0x016D4EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000731	0x01986B4	21	What?<FE>Extraordinary!	FE	19	2	0x016D664	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000732	0x01986FD	33	 remarkable for a child<FE>TRAINER.	FE	31	2	0x05CB1C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000733	0x0198787	97	Even though I’ve lost, I will keep<FE>training according to the teachings<FA>of KOGA, my ninja master.	FA;FE	94	2	0x016D63C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000734	0x0198800	18	ecial<FE>techniques!	FE	16	2	0x104C668	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000735	0x0198985	28	I still have much to learn.		27	1	0x016D618	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000736	0x0198BBB	100	The SAFARI ZONE’s WARDEN is old, <FE>but he’s still very much active.<FB>All his teeth are false, though.	FB;FE	97	2	0x016D6C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000737	0x0198C1F	92	Hmm?<FE>You’ve met BILL?<FB>He’s my grandson!<FB>He always liked collecting things,<FE>even as a child!	FB;FE	87	3	0x016D6E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000738	0x0198ECA	204	WARDEN: Thanks, son!<FE>You’re a real lifesaver!<FB>No one could understand a word<FE>that I said, not a one!<FB>I was too ashamed to show my face<FE>around the OFFICE, even.<FB>Let me give you something for your<FE>trouble.	FB;FE	196	5	0x016D7D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000739	0x019918E	121	I’m the FISHING GURU’s older<FE>brother.<FB>I simply looove fishing!<FE>I can’t bear to go without.<FB>Tell me, do you like to fish?	FB;FE	116	3	0x016D824	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000740	0x019925E	56	<FD:01> received a GOOD ROD from<FE>the FISHING GURU’s brother.	FD;FE	52	2	0x016D868	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000741	0x019937E	59	Oh, no!<FB>I had a gift for you, but you have<FE>no room for it!	FB;FE	56	2	0x016D88C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000742	0x01994FC	35	e are other<FE>moves to be forgotten.	FE	33	2	0x05E0844	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000743	0x019983F	49	I was a thief, but I went straight<FE>as a TRAINER.	FE	47	2	0x016DC94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000744	0x0199870	13	I surrender!		12	1	0x016DCA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000745	0x01998ED	36	Waah!<FE>My studies were insufficient!	FE	34	2	0x016DAA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000746	0x01999B7	36	I know why BLAINE became a<FE>TRAINER.	FE	34	2	0x016DAC8,0x016DF20	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-000724	0x019777A	14	Oh!<FE>Splendid!	FE	12	2	0x016D1A8	DIALOGUE	Oh !<FE>Splendide !	TRANSLATED
+ODYSSEY-TXT-000725	0x019798A	55	Munch…<FB>The man at that table lost it all<FE>at the slots.	FB;FE	52	2	0x016D260	DIALOGUE	Nom nom…<FB>L’homme à cette table a tout<FE>perdu aux machines à sous.	TRANSLATED
+ODYSSEY-TXT-000726	0x0197B20	79	Don’t touch the poster at the GAME<FE>CORNER!<FB>There’s no secret switch behind it!	FB;FE	76	2	0x016D27C	Game Corner	Ne touche pas au poster du<FE>CASINO !<FB>Il n’y a pas d’interrupteur secret derrière !	TRANSLATED
+ODYSSEY-TXT-000727	0x0197C0C	36	Why?<FE>Why did she bring her brother?	FE	34	2	0x016D298	DIALOGUE	Pourquoi ?<FE>Pourquoi elle a amené son frère ?	TRANSLATED
+ODYSSEY-TXT-000728	0x0197D50	48	<FD:01> received 30 SAFARI BALLS<FE>from the attendant.	FD;FE	44	2	0x016D3F8	SYSTEM item	<FD:01> a reçu 30 SAFARI BALLS<FE>de l’employé.	TRANSLATED
+ODYSSEY-TXT-000729	0x0197D80	105	We’ll call you on the PA when you<FE>run out of time or SAFARI BALLS.<FB>Well, I’ll wish you the best of<FE>luck!	FB;FE	101	3	0x016D404	Safari Zone	On t’appellera au haut-parleur<FE>quand ton temps ou tes SAFARI BALLS<FB>seront épuisés.<FE>Bon, je te souhaite bonne chance !	TRANSLATED
+ODYSSEY-TXT-000730	0x01980BC	120	Don’t they have any pennants<FE>promoting the SAFARI ZONE?<FB>How about some paper lanterns?<FE>Aren’t there even any calendars?	FB;FE	116	3	0x016D4EC	DIALOGUE	Ils n’ont pas de fanions<FE>pour promouvoir le PARC SAFARI ?<FB>Et des lanternes en papier ?<FE>Y a même pas de calendriers ?	TRANSLATED
+ODYSSEY-TXT-000731	0x01986B4	21	What?<FE>Extraordinary!	FE	19	2	0x016D664	Trainer post-battle	Quoi ?<FE>Extraordinaire !	TRANSLATED
+ODYSSEY-TXT-000732	0x01986FD	33	 remarkable for a child<FE>TRAINER.	FE	31	2	0x05CB1C0	DIALOGUE fragment	 remarquable pour un jeune<FE>DRESSEUR.	TRANSLATED
+ODYSSEY-TXT-000733	0x0198787	97	Even though I’ve lost, I will keep<FE>training according to the teachings<FA>of KOGA, my ninja master.	FA;FE	94	2	0x016D63C	Fuchsia Gym	Même si j’ai perdu, je vais continuer<FE>à m’entraîner selon les enseignements<FA>de KOGA, mon maître ninja.	TRANSLATED
+ODYSSEY-TXT-000734	0x0198800	18	ecial<FE>techniques!	FE	16	2	0x104C668	DIALOGUE fragment	…spé-<FE>ciales !	TRANSLATED
+ODYSSEY-TXT-000735	0x0198985	28	I still have much to learn.		27	1	0x016D618	Trainer post-battle	J’ai encore beaucoup à apprendre.	TRANSLATED
+ODYSSEY-TXT-000736	0x0198BBB	100	The SAFARI ZONE’s WARDEN is old, <FE>but he’s still very much active.<FB>All his teeth are false, though.	FB;FE	97	2	0x016D6C8	Safari Zone	Le GARDIEN du PARC SAFARI est vieux,<FE>mais encore très actif.<FB>Toutes ses dents sont fausses, cependant.	TRANSLATED
+ODYSSEY-TXT-000737	0x0198C1F	92	Hmm?<FE>You’ve met BILL?<FB>He’s my grandson!<FB>He always liked collecting things,<FE>even as a child!	FB;FE	87	3	0x016D6E0	Safari Zone, Bill's grandfather	Hmm ?<FE>Tu as rencontré BILL ?<FB>C’est mon petit-fils !<FB>Il a toujours aimé collectionner<FE>des choses, même enfant !	TRANSLATED
+ODYSSEY-TXT-000738	0x0198ECA	204	WARDEN: Thanks, son!<FE>You’re a real lifesaver!<FB>No one could understand a word<FE>that I said, not a one!<FB>I was too ashamed to show my face<FE>around the OFFICE, even.<FB>Let me give you something for your<FE>trouble.	FB;FE	196	5	0x016D7D8	Safari Zone Warden	GARDIEN : Merci, fiston !<FE>Tu m’as vraiment sauvé la vie !<FB>Personne ne comprenait un mot<FE>de ce que je disais, pas un seul !<FB>J’avais trop honte de me montrer<FE>au BUREAU, même.<FB>Laisse-moi te donner quelque<FE>chose pour ta peine.	TRANSLATED
+ODYSSEY-TXT-000739	0x019918E	121	I’m the FISHING GURU’s older<FE>brother.<FB>I simply looove fishing!<FE>I can’t bear to go without.<FB>Tell me, do you like to fish?	FB;FE	116	3	0x016D824	Fishing Guru's brother	Je suis le grand frère du<FE>GOUROU DE LA PÊCHE.<FB>J’adooore pêcher !<FE>Je ne peux pas m’en passer.<FB>Dis-moi, tu aimes pêcher ?	TRANSLATED
+ODYSSEY-TXT-000740	0x019925E	56	<FD:01> received a GOOD ROD from<FE>the FISHING GURU’s brother.	FD;FE	52	2	0x016D868	SYSTEM item	<FD:01> a reçu une CANNE SOLIDE<FE>du frère du GOUROU DE LA PÊCHE.	TRANSLATED
+ODYSSEY-TXT-000741	0x019937E	59	Oh, no!<FB>I had a gift for you, but you have<FE>no room for it!	FB;FE	56	2	0x016D88C	DIALOGUE	Oh, non !<FB>J’avais un cadeau pour toi, mais<FE>t’as pas de place pour ça !	TRANSLATED
+ODYSSEY-TXT-000742	0x01994FC	35	e are other<FE>moves to be forgotten.	FE	33	2	0x05E0844	item description fragment	…il y a d’autres<FE>capacités à oublier.	TRANSLATED
+ODYSSEY-TXT-000743	0x019983F	49	I was a thief, but I went straight<FE>as a TRAINER.	FE	47	2	0x016DC94	DIALOGUE	J’étais un voleur, mais je me suis<FE>rangé en devenant DRESSEUR.	TRANSLATED
+ODYSSEY-TXT-000744	0x0199870	13	I surrender!		12	1	0x016DCA0	DIALOGUE	Je me rends !	TRANSLATED
+ODYSSEY-TXT-000745	0x01998ED	36	Waah!<FE>My studies were insufficient!	FE	34	2	0x016DAA0	Trainer post-battle	Waah !<FE>Mes études étaient insuffisantes !	TRANSLATED
+ODYSSEY-TXT-000746	0x01999B7	36	I know why BLAINE became a<FE>TRAINER.	FE	34	2	0x016DAC8,0x016DF20	DIALOGUE	Je sais pourquoi AUGUSTIN est<FE>devenu DRESSEUR.	TRANSLATED
 ODYSSEY-TXT-000747	0x01999DB	4	Ow!		3	1	0x016DACC,0x016DF2C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-000748	0x0199E8A	91	It’s a photo of BLAINE and<FE>MR. FUJI.<FB>They’re standing shoulder to<FE>shoulder with big grins.	FB;FE	87	3	0x01ACF24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000749	0x019A1CB	31	I tell you, it’s a lot of fun!		30	1	0x01C4CE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000750	0x019A314	16	No!<FE>Is too bad!	FE	14	2	0x016E53C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000751	0x019A34F	79	You late.<FE>Where were you?<FB>Your fossil is back to life!<FE>It was <FD:02> like I think!	FB;FD;FE	73	3	0x016E7A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000752	0x019A4AB	54	I take a little time!<FE>You go for walk a little while!	FE	52	2	0x016E694,0x016E710	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000753	0x019A4E1	23	Aiyah!<FE>You come again!	FE	21	2	0x016E724	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000754	0x019AB16	133	Maybe becoming an ELITE FOUR<FE>member is in the blood.<FB>From what I’ve heard, LANCE has<FE>a cousin who’s a GYM LEADER<FA>somewhere far away.	FA;FB;FE	128	3	0x01AD098	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000755	0x019ADEE	46	I really love MIMIC!<FE>Who’s going to learn it?	FE	44	2	0x01C4D24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000756	0x019AE1C	116	<FD:01>: Hi!<FE>Thanks for earlier!<FB><FD:01>: Pardon?<FB><FD:01>: Is it that fun to mimic my<FE>every move?<FB>COPYCAT: You bet!<FE>It’s a scream!	FB;FD;FE	103	4	0x01C4D74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000757	0x019B0A0	48	A game with MARIO wearing a bucket<FE>on his head!	FE	46	2	0x016EBD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000758	0x019B12C	103	Grunt!<FB>I am the KARATE MASTER!<FE>I am the LEADER here!<FB>You wish to challenge us?<FE>Expect no mercy!<FB>Fwaaa!	FB;FE	97	3	0x016EDA8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-000759	0x019B193	20	Hwa!<FE>Arrgh! Beaten!	FE	18	2	0x016EDAC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-000748	0x0199E8A	91	It’s a photo of BLAINE and<FE>MR. FUJI.<FB>They’re standing shoulder to<FE>shoulder with big grins.	FB;FE	87	3	0x01ACF24	DIALOGUE	C’est une photo d’AUGUSTIN et<FE>M. FUJI.<FB>Ils se tiennent épaule contre<FE>épaule avec de grands sourires.	TRANSLATED
+ODYSSEY-TXT-000749	0x019A1CB	31	I tell you, it’s a lot of fun!		30	1	0x01C4CE4	DIALOGUE	Je te le dis, c’est trop amusant !	TRANSLATED
+ODYSSEY-TXT-000750	0x019A314	16	No!<FE>Is too bad!	FE	14	2	0x016E53C	Trainer post-battle	Non !<FE>C’est trop dommage !	TRANSLATED
+ODYSSEY-TXT-000751	0x019A34F	79	You late.<FE>Where were you?<FB>Your fossil is back to life!<FE>It was <FD:02> like I think!	FB;FD;FE	73	3	0x016E7A8	DIALOGUE (broken speech)	Toi en retard.<FE>Où toi étais ?<FB>Ton fossile est revenu à la vie !<FE>C’était <FD:02> comme je pensais !	TRANSLATED
+ODYSSEY-TXT-000752	0x019A4AB	54	I take a little time!<FE>You go for walk a little while!	FE	52	2	0x016E694,0x016E710	DIALOGUE (broken speech)	Moi prendre un peu de temps !<FE>Toi aller faire un tour un peu !	TRANSLATED
+ODYSSEY-TXT-000753	0x019A4E1	23	Aiyah!<FE>You come again!	FE	21	2	0x016E724	DIALOGUE (broken speech)	Aiyah !<FE>Toi revenu !	TRANSLATED
+ODYSSEY-TXT-000754	0x019AB16	133	Maybe becoming an ELITE FOUR<FE>member is in the blood.<FB>From what I’ve heard, LANCE has<FE>a cousin who’s a GYM LEADER<FA>somewhere far away.	FA;FB;FE	128	3	0x01AD098	DIALOGUE	Devenir membre du CONSEIL 4<FE>c’est peut-être dans le sang.<FB>D’après ce que j’ai entendu, LANCE<FE>a un cousin CHAMPION D’ARÈNE<FA>quelque part au loin.	TRANSLATED
+ODYSSEY-TXT-000755	0x019ADEE	46	I really love MIMIC!<FE>Who’s going to learn it?	FE	44	2	0x01C4D24	DIALOGUE	J’adore MIMIQUE !<FE>Qui va l’apprendre ?	TRANSLATED
+ODYSSEY-TXT-000756	0x019AE1C	116	<FD:01>: Hi!<FE>Thanks for earlier!<FB><FD:01>: Pardon?<FB><FD:01>: Is it that fun to mimic my<FE>every move?<FB>COPYCAT: You bet!<FE>It’s a scream!	FB;FD;FE	103	4	0x01C4D74	DIALOGUE, Copycat NPC	<FD:01> : Salut !<FE>Merci pour tout à l’heure !<FB><FD:01> : Pardon ?<FB><FD:01> : C’est si amusant de<FE>copier chacun de mes gestes ?<FB>SOSIE : Carrément !<FE>C’est trop drôle !	TRANSLATED
+ODYSSEY-TXT-000757	0x019B0A0	48	A game with MARIO wearing a bucket<FE>on his head!	FE	46	2	0x016EBD4	DIALOGUE	Un jeu où MARIO porte un seau<FE>sur la tête !	TRANSLATED
+ODYSSEY-TXT-000758	0x019B12C	103	Grunt!<FB>I am the KARATE MASTER!<FE>I am the LEADER here!<FB>You wish to challenge us?<FE>Expect no mercy!<FB>Fwaaa!	FB;FE	97	3	0x016EDA8	Fighting Dojo	Grogne !<FB>Je suis le MAÎTRE DE KARATÉ !<FE>Je suis le CHEF ici !<FB>Tu veux nous défier ?<FE>N’attends aucune pitié !<FB>Fwaaa !	TRANSLATED
+ODYSSEY-TXT-000759	0x019B193	20	Hwa!<FE>Arrgh! Beaten!	FE	18	2	0x016EDAC	Trainer post-battle	Hwa !<FE>Argh ! Vaincu !	TRANSLATED
 ODYSSEY-TXT-000760	0x019B24C	41	Grunt!<FE>Stay and train at karate with us!	FE	39	2	0x016EDC8	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-000761	0x019B3AC	51	The only thing that frightens us is<FE>psychic power!	FE	49	2	0x016ED84	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-000762	0x019B3DF	48	Hwaah!<FB>You’re trespassing in our<FE>FIGHTING DOJO!	FB;FE	45	2	0x016ED4C	UNKNOWN		UNTRANSLATED

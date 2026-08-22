@@ -66,6 +66,33 @@ PIDGEOTTO	ROUCOUPS	pokemon	officiel
 VOLTORB	VOLTORBE	pokemon	officiel
 CLOYSTER	CRUSTABRI	pokemon	officiel
 MAGIKARP	MAGICARPE	pokemon	officiel
+CLEFAIRY	MÉLOFÉE	pokemon	officiel
+DIGLETT	TAUPIQUEUR	pokemon	officiel
+PSYDUCK	PSYKOKWAK	pokemon	officiel
+CUBONE	OSSELAIT	pokemon	officiel
+MEOWTH	MIAOUSS	pokemon	officiel
+
+EARTHQUAKE	SÉISME	move	officiel
+STRENGTH	FORCE	move	officiel
+DIG	TUNNEL	move	officiel
+MIMIC	MIMIQUE	move	officiel
+LIGHT SCREEN	MUR LUMIÈRE	move	officiel
+AWAKENING (item)	ANTISOMMEIL	item	officiel
+REVIVE	RAPPEL	item	officiel
+OLD ROD	CANNE ROUILLÉE	item	officiel
+GOOD ROD	CANNE SOLIDE	item	officiel
+SUPER ROD	SUPER CANNE	item	REVIEW: pas encore rencontré, à confirmer si utilisé
+BIKE VOUCHER	BON POUR VÉLO	item	traduction cohérente, non officiellement confirmé
+COIN CASE	BOÎTE À JETONS	item	officiel
+CASCADEBADGE	BADGE CASCADE	item	officiel
+RAINBOWBADGE	BADGE ARC-EN-CIEL	item	officiel
+
+Erika	ÉRIKA	character	officiel (GYM LEADER Céladopole)
+Lance	LANCE	character	REVIEW: nom FR officiel incertain (peut-être "Peter"), conservé "LANCE" par prudence
+Mr. Fuji	M. FUJI	character	non traduit
+KARATE KING / KARATE MASTER	MAÎTRE DE KARATÉ	character title	traduction cohérente
+GAME CORNER	CASINO	place	terme usuel FR pour ce lieu
+COPYCAT	SOSIE	character	officiel
 
 # --- Pokémon (noms officiels FR) ---
 ZUBAT	NOSFERAPTI	pokemon	officiel
