@@ -136,3 +136,33 @@ MASTER BALL	MASTER BALL	item	non traduit
 TM	CT	item	Capsule Technique, officiel
 X ACCURACY	PRECISION PLUS	item	REVIEW: à confirmer — le caractère "+" n'est pas dans la table de caractères confirmée, "PLUS" écrit en toutes lettres à la place
 DIRE HIT	CIBLAGE PLUS	item	REVIEW: à confirmer — le caractère "+" n'est pas dans la table de caractères confirmée, "PLUS" écrit en toutes lettres à la place
+Farfetch'd	Canarticho	pokemon-name	nom officiel FR
+Mawile	Mysdibule	pokemon-name	nom officiel FR
+Jigglypuff	Rondoudou	pokemon-name	nom officiel FR
+Togepi	Togepi	pokemon-name	identique en FR
+Donphan	Donphan	pokemon-name	identique en FR
+Raikou	Raikou	pokemon-name	identique en FR
+Entei	Entei	pokemon-name	identique en FR
+Mantine	Demanta	pokemon-name	REVIEW: nom d'entrée (Mantine ref. dans texte anglais = Demanta FR probable, à confirmer)
+Octillery	Pieuvolt	pokemon-name	nom officiel FR
+Onix	Onix	pokemon-name	identique en FR
+Slowpoke	Ramoloss	pokemon-name	nom officiel FR
+Koffing	Tadmorv	pokemon-name	nom officiel FR
+Weezing	Tatoofate	pokemon-name	nom officiel FR
+Ariados	Cartok	pokemon-name	nom officiel FR
+Pidgey	Roucool	pokemon-name	nom officiel FR
+Dustox	Cavalcadyl	pokemon-name	REVIEW: nom non confirmé avec certitude
+Nuzleaf	Meustiquette	pokemon-name	REVIEW: nom non confirmé avec certitude
+Ludicolo	Lokoko	pokemon-name	nom officiel FR
+Clamperl	Coquiperl	pokemon-name	nom officiel FR
+Nosepass	Tarinor	pokemon-name	nom officiel FR
+Battle Bond	Lien Combat	ability-name	terme officiel FR (Grenille/Amphinobi)
+Galar region	région de Galar	place-name	terme officiel FR
+Abyssal God	Dieu Abyssal	lore-custom	terme custom Odyssey, invente pour la traduction
+Deep One	Être des Profondeurs	lore-custom	terme custom Odyssey, invente pour la traduction
+Abyssal Shard	Éclat Abyssal	lore-custom	terme custom Odyssey, invente pour la traduction
+banishment war	guerre du bannissement	lore-custom	terme custom Odyssey, invente pour la traduction
+Talregan archipelago	archipel de Talregan	place-name-custom	nom propre custom Odyssey, non traduit
+F.O.E.	F.O.E.	lore-custom	acronyme conserve tel quel (reference Etrian Odyssey)
+Yggdrasil	Yggdrasil	lore-custom	nom propre, non traduit
+Etheric energy	énergie éthérique	lore-custom	terme custom Odyssey
