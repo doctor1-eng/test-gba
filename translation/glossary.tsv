@@ -9,11 +9,59 @@ Bad EGG	MAUVAIS ŒUF	gameplay	REVIEW: variante possible « ŒUF corrompu »
 EGG	ŒUF	gameplay	terme officiel
 ROCK SMASH	DÉFONCE	move	nom officiel CT Gen3 FR
 DIVE	PLONGÉE	move	REVIEW: à confirmer (Plongée/Plongeon)
-SAFARI GAME / Safari Zone	PARC SAFARI	place	terme officiel Gen3 FR
+CUT	COUPE	move	terme officiel
+Safari Zone / SAFARI GAME	PARC SAFARI	place	terme officiel Gen3 FR
 Battle Mode	Mode de Combat	UI
 Options	Options	UI
 New Game	Nouvelle partie	UI
 Continue	Continuer	UI
 A Button	Bouton A	UI
 B Button	Bouton B	UI
-Union Room chat ("would you like to do something?")	Veux-tu faire quelque chose ?	UI	tutoiement utilisé pour ce contexte informel Union Room, à valider par lot narratif
+SILPH SCOPE	SILPHOSCOPE	item	terme officiel
+SILPH CO.	SILPHE SA	organization	REVIEW: à confirmer, forme usuelle "SILPHE SA"
+TEAM ROCKET	TEAM ROCKET	organization	non traduit officiellement
+Union Room chat ("would you like to do something?")	Veux-tu faire quelque chose ?	UI	tutoiement, contexte informel Union Room
+
+# --- Lieux de Kanto (noms officiels FR Rouge Feu / Vert Feuille) ---
+Pallet Town	BOURG PALETTE	place	officiel
+Viridian City	JADIELLE	place	officiel
+Pewter City	ARGENTA	place	officiel
+Cerulean City	AZURIA	place	officiel
+Vermilion City	CARMIN-SUR-MER	place	officiel — corrigé (was PARMANIE, erreur ID 000106)
+Lavender Town	LAVANVILLE	place	officiel
+Celadon City	CÉLADOPOLE	place	officiel — corrigé (was JADIELLE, erreur ID 000123)
+Fuchsia City	FUCHSIA	place	officiel
+Saffron City	SAFRANIA	place	officiel
+Cinnabar Island	ÎLE ROUGE	place	officiel
+Indigo Plateau	PLATEAU INDIGO	place	officiel
+Mt. Moon	MONT SÉLÉNITE	place	officiel
+Victory Road	ROUTE VICTOIRE	place	officiel
+Diglett's Cave	GROTTE TAUPIQUEUR	place	officiel
+Seafoam Islands	ÎLES ÉCUME	place	officiel
+Sevii Islands	ÎLES SEVII	place	FRLG, non renommé
+One/Two/Three/Four/Five/Six/Seven Island	ÎLE UN / ÎLE DEUX / ...	place	REVIEW: traduction littérale, nom officiel FR exact non confirmé
+
+# --- Personnages ---
+Brock	PIERRE	character	officiel (GYM LEADER Argenta)
+Blaine	AUGUSTIN	character	officiel (GYM LEADER Île Rouge) — REVIEW: à confirmer
+Koga	KOGA	character	officiel, non traduit
+Lorelei	LORELEI	character	officiel, non traduit
+Giovanni	GIOVANNI	character	officiel, non traduit
+Bill	BILL	character	officiel
+Prof. Oak	PR CHEN	character	officiel — REVIEW: utiliser seulement si le nom apparaît explicitement, ne pas remplacer "PROF. OAK" sans certitude contextuelle
+
+# --- Pokémon (noms officiels FR) ---
+ZUBAT	NOSFERAPTI	pokemon	officiel
+WIGGLYTUFF	GRODOUDOU	pokemon	officiel
+MACHOKE	MACKOGNEUR	pokemon	officiel
+SLOWBRO	FLAGADOSS	pokemon	officiel
+PIDGEOT	ROUCARNAGE	pokemon	officiel
+LAPRAS	LOKHLASS	pokemon	officiel
+CHANSEY	LEUPHORIE	pokemon	officiel
+
+# --- Objets ---
+NUGGET	PÉPITE	item	officiel
+MASTER BALL	MASTER BALL	item	non traduit
+TM	CT	item	Capsule Technique, officiel
+X ACCURACY	PRECISION PLUS	item	REVIEW: à confirmer — le caractère "+" n'est pas dans la table de caractères confirmée, "PLUS" écrit en toutes lettres à la place
+DIRE HIT	CIBLAGE PLUS	item	REVIEW: à confirmer — le caractère "+" n'est pas dans la table de caractères confirmée, "PLUS" écrit en toutes lettres à la place

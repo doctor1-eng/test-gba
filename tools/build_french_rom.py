@@ -59,6 +59,30 @@ class FreeSpaceAllocator:
         raise RuntimeError(f"out of free space allocating {size} bytes")
 
 
+def find_overlapping_ids(all_rows):
+    """Some extracted strings share physical ROM bytes: a second pointer
+    can reference a few bytes INTO another string's already-captured
+    span (a real, intentional Gen3-hack space-saving trick -- the tail
+    of one string doubles as a shorter standalone message elsewhere).
+    Writing such rows independently in place would let whichever is
+    processed last silently corrupt the other. Any row whose span
+    [target, target+orig_size) overlaps another row's span must always
+    be relocated (never written in place), so each ends up as its own
+    independent copy with no shared bytes."""
+    spans = sorted(
+        ((int(r["offset"], 16), int(r["orig_size_bytes"]), r["id"]) for r in all_rows),
+        key=lambda s: s[0],
+    )
+    overlapping = set()
+    for i in range(len(spans) - 1):
+        off_a, size_a, id_a = spans[i]
+        off_b, size_b, id_b = spans[i + 1]
+        if off_b < off_a + size_a:
+            overlapping.add(id_a)
+            overlapping.add(id_b)
+    return overlapping
+
+
 def main():
     with open(ROM_PATH, "rb") as f:
         original = f.read()
@@ -67,6 +91,10 @@ def main():
     rows = list(csv.DictReader(open(DB_PATH, encoding="utf-8"), delimiter="\t"))
     to_insert = [r for r in rows if r["status"] in INSERTABLE_STATUSES and r["french"].strip()]
     print(f"{len(to_insert)} / {len(rows)} rows queued for insertion")
+
+    overlapping_ids = find_overlapping_ids(rows)
+    if overlapping_ids:
+        print(f"{len(overlapping_ids)} rows share ROM bytes with a neighbor -- forcing relocation for those")
 
     allocator = FreeSpaceAllocator(rom)
     log_rows = []
@@ -85,8 +113,9 @@ def main():
             continue
 
         refs = [int(r, 16) for r in row["references"].split(",") if r]
+        must_relocate = row["id"] in overlapping_ids
 
-        if len(encoded) <= orig_size:
+        if len(encoded) <= orig_size and not must_relocate:
             rom[target:target + len(encoded)] = encoded
             n_inplace += 1
             log_rows.append({
