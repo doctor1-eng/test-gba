@@ -239,3 +239,15 @@ Safeguard	Rune Protect	move-name	terme officiel FR
 EXP. Points	Points d'Exp.	gameplay	terme officiel FR
 fainted	est K.O.	gameplay	terme officiel FR (battle message)
 Nyx (character)	Nyx	character	nom propre custom Odyssey, non traduit
+Encore	Encore	move-name	terme officiel FR (identique)
+Snatch	Detourne	move-name	terme officiel FR
+Trace (ability)	Copie	ability-name	terme officiel FR
+Uproar	Brouhaha	move-name	terme officiel FR
+Torment	Supplice	move-name	terme officiel FR
+Taunt	Provocation	move-name	terme officiel FR
+Magic Coat	Interference	move-name	terme officiel FR
+Nature Power	Force Nature	move-name	terme officiel FR
+Varley (region)	Varley	place-name-custom	nom propre custom Odyssey
+Charon (region)	Charon	place-name-custom	nom propre custom Odyssey
+Gorenil (region)	Gorenil	place-name-custom	nom propre custom Odyssey
+Naval Explorations	Explorations Navales	gameplay-custom	fonctionnalite custom Odyssey

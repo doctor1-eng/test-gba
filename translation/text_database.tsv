@@ -4931,10 +4931,10 @@ ODYSSEY-TXT-004929	0x0489906	95	 ALTERING<FE>CAVE on OUTCAST ISLAND.<FB>Why not 
 ODYSSEY-TXT-004930	0x0490925	2	 		1	1	0x070B4E0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004931	0x04C4008	2	 		1	1	0x0070E00	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004932	0x04D578B	4	:Ä 		3	1	0x1031E50	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-004933	0x04ED1EA	25	WMKQYhorsuyÄéäztwÜ<FB>  <FD:FA><FA>	FA;FB;FD	20	1	0x070C674	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004933	0x04ED1EA	25	WMKQYhorsuyÄéäztwÜ<FB>  <FD:FA><FA>	FA;FB;FD	20	1	0x070C674	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-004934	0x0500566	3	  		2	1	0x0CD26C0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004935	0x0501551	9	▲RaM:<FE><FC:FC>	FC;FE	5	2	0x0404720	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-004936	0x0530904	7	jjzzz<FE>	FE	5	2	0x1061C48	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004936	0x0530904	7	jjzzz<FE>	FE	5	2	0x1061C48	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-004937	0x053D23F	6	yzz▲<FE>	FE	4	2	0x068053C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004938	0x0566665	5	yzz<FE>	FE	3	2	0x0CA5BDC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004939	0x0566666	4	zz<FE>	FE	2	2	0x0CD2A68	UNKNOWN		SKIP_NOISE
@@ -4997,7 +4997,7 @@ ODYSSEY-TXT-004995	0x0778DA9	7	Spe <FD:02>	FD	4	1	0x0778D88	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004996	0x0778DB0	7	SpA <FD:02>	FD	4	1	0x0778D8C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004997	0x0778DB7	7	SpD <FD:02>	FD	4	1	0x0778D90	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-004998	0x0778DBE	30	Capture for<FE>more information!	FE	28	2	0x0778D60	UNKNOWN	Capturez-le pour<FE>en savoir plus !	TRANSLATED
-ODYSSEY-TXT-004999	0x08005D4	12	Talrega  r 		11	1	0x0800088	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004999	0x08005D4	12	Talrega  r 		11	1	0x0800088	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005000	0x080083E	25	Where do you wish to go?		24	1	0x01CC2B0,0x01CC2E0,0x01CC310,0x01CC340,0x01D0C90,0x1B08638,0x1B08668,0x1B08698,0x1B086C8	UNKNOWN	Où voulez-vous aller ?	TRANSLATED
 ODYSSEY-TXT-005001	0x080121F	45	y doubts, feel free<FE>to check in the library!	FE	43	2	0x12203D0	fragment, overlapping pointer	doute, n’hésitez pas<FE>à consulter la bibliothèque !	TRANSLATED
 ODYSSEY-TXT-005002	0x0801B7B	3	a.		2	1	0x0801B74	UNKNOWN		SKIP_NOISE
@@ -5008,19 +5008,19 @@ ODYSSEY-TXT-005006	0x0803674	30	 Now... where did I put THAT?		29	1	0x0802ED8	UN
 ODYSSEY-TXT-005007	0x08036B8	43	worried too!<FB>Just let me grab what’s left.	FB	41	1	0x0802F4C	fragment, overlapping pointer	inquiet aussi !<FB>Laisse-moi juste récupérer ce qu’il reste.	TRANSLATED
 ODYSSEY-TXT-005008	0x0803701	3	n!		2	1	0x0705C68	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005009	0x0803C7F	17	Nope. Nothing...		16	1	0x0803BDC	UNKNOWN	Non. Rien...	TRANSLATED
-ODYSSEY-TXT-005010	0x0804434	35	Credo fossero ancora terrorizzati.		34	1	0x08043DC,0x080446C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005010	0x0804434	35	Credo fossero ancora terrorizzati.		34	1	0x08043DC,0x080446C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005011	0x080683A	12	Krabby Club		11	1	0x0803A6C	UNKNOWN	Club Krabby	TRANSLATED
 ODYSSEY-TXT-005012	0x0806BAA	30	Third Stratum:<FE>Magmatic Caves	FE	28	2	0x0803F64,0x0803F6C,0x0805944,0x080594C	UNKNOWN	Troisième Strate :<FE>Grottes Magmatiques	TRANSLATED
 ODYSSEY-TXT-005013	0x0807093	15	oor is locked.		14	1	0x0806F38	fragment, overlapping pointer	porte est verrouillée.	TRANSLATED
 ODYSSEY-TXT-005014	0x08070EB	12	Brigit Farm		11	1	0x0807080	UNKNOWN	Ferme de Brigit	TRANSLATED
 ODYSSEY-TXT-005015	0x0807910	5	nto.		4	1	0x08075CC	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005016	0x0807A48	24	 vai, razza<FE>di stupido!	FE	22	2	0x0119698,0x01197EC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005016	0x0807A48	24	 vai, razza<FE>di stupido!	FE	22	2	0x0119698,0x01197EC	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005017	0x0808D54	49	Fibernia, a small island<FE>in the sea of Galazeah.	FE	47	2	0x08005E4	UNKNOWN	Fibernia, une petite île<FE>dans la mer de Galazeah.	TRANSLATED
 ODYSSEY-TXT-005018	0x0808D80	5	eah.		4	1	0x002B624	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005019	0x080AEE8	16	Target spotted.		15	1	0x0DB81B8	UNKNOWN	Cible repérée.	TRANSLATED
 ODYSSEY-TXT-005020	0x080BC21	8	r, and-		7	1	0x10FD488	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005021	0x080CBEB	17	NOOOO, CATERPIE!		16	1	0x080CB8C	UNKNOWN	NOOON, CHENIPAN !	TRANSLATED
-ODYSSEY-TXT-005022	0x080D8BE	27	<FE>di trovarne uno migliore?	FE	25	2	0x10B4140	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005022	0x080D8BE	27	<FE>di trovarne uno migliore?	FE	25	2	0x10B4140	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005023	0x080DDC4	38	:sigh: I’m still not strong<FE>enough...	FE	36	2	0x1368A74	UNKNOWN	:soupir: Je ne suis toujours<FE>pas assez fort...	TRANSLATED
 ODYSSEY-TXT-005024	0x080E296	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x0809040	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
 ODYSSEY-TXT-005025	0x0810F6F	23	I can’t feel my hands.		22	1	0x0810F00	UNKNOWN	Je ne sens plus mes mains.	TRANSLATED
@@ -5028,7 +5028,7 @@ ODYSSEY-TXT-005026	0x0811100	57	g here<FE>since I was young.<FB>I won’t stop n
 ODYSSEY-TXT-005027	0x081471F	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x080000C	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
 ODYSSEY-TXT-005028	0x0814FEF	27	I think I got sunstroke...		26	1	0x0814F94	UNKNOWN	Je crois que j’ai eu une insolation...	TRANSLATED
 ODYSSEY-TXT-005029	0x0815692	40	But I lost my girlfriend<FE>while writing.	FE	38	2	0x08151DC	UNKNOWN	Mais j’ai perdu ma petite amie<FE>en écrivant.	TRANSLATED
-ODYSSEY-TXT-005030	0x0816881	10	, opened.		9	1	0x0459C24	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005030	0x0816881	10	, opened.		9	1	0x0459C24	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005031	0x08171E2	12	So tired...		11	1	0x081719C	UNKNOWN	Si fatigué...	TRANSLATED
 ODYSSEY-TXT-005032	0x0817BFE	10	Vitamins.		9	1	0x0817BC4	UNKNOWN	Vitamines.	TRANSLATED
 ODYSSEY-TXT-005033	0x0817EC3	78	ut.<FB>If you want to try too<FE>you just have to dig<FA>where the green crystals are.	FA;FB;FE	74	2	0x061E094	fragment, overlapping pointer	essayer aussi,<FB>il vous suffit de creuser<FE>là où se trouvent<FA>les cristaux verts.	TRANSLATED
@@ -5049,7 +5049,7 @@ ODYSSEY-TXT-005047	0x08201F2	48	- TM Dispenser -<FE>Select the TM you want to bu
 ODYSSEY-TXT-005048	0x082024E	26	You already have this TM.		25	1	0x0811AD8	UNKNOWN	Vous avez déjà cette CT.	TRANSLATED
 ODYSSEY-TXT-005049	0x0820259	15	 have this TM.		14	1	0x081FAD4	fragment, overlapping pointer	avez déjà cette CT.	TRANSLATED
 ODYSSEY-TXT-005050	0x0820B73	76	ent nickname.<FB>But, would you like me to give it<FE>a nicer name? How about it?	FB;FE	73	2	0x0705854	fragment, overlapping pointer	surnom actuel.<FB>Mais, voulez-vous que je lui donne<FE>un nom plus joli ? Qu’en dites-vous ?	TRANSLATED
-ODYSSEY-TXT-005051	0x0820CBF	14	f the forest.		13	1	0x102DDFC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005051	0x0820CBF	14	f the forest.		13	1	0x102DDFC	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005052	0x0821855	40	h wow! Thanks a bunch!<FE>As I promised...	FE	38	2	0x121EB2C	UNKNOWN	ah, waouh ! Merci beaucoup !<FE>Comme promis...	TRANSLATED
 ODYSSEY-TXT-005053	0x0821E17	50	rty<FE>is full.<FB>Come back when you have enough<FE>room!	FB;FE	46	3	0x1AFB4E8	fragment, overlapping pointer	équipe<FE>est complète.<FB>Revenez quand vous aurez assez<FE>de place !	TRANSLATED
 ODYSSEY-TXT-005054	0x0822697	67	There seems to be a button<FE>on the pillar.<FB>Do you want to press it?	FB;FE	64	2	0x0808928	UNKNOWN	Il semble y avoir un bouton<FE>sur le pilier.<FB>Voulez-vous appuyer dessus ?	TRANSLATED
@@ -5064,21 +5064,21 @@ ODYSSEY-TXT-005062	0x0825571	3	A.		2	1	0x0825554	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005063	0x08260DD	21	You shook the plant.		20	1	0x082600C	UNKNOWN	Vous avez secoué la plante.	TRANSLATED
 ODYSSEY-TXT-005064	0x08260F4	32	Do you want to shake the plant?		31	1	0x081DAF8	UNKNOWN	Voulez-vous secouer la plante ?	TRANSLATED
 ODYSSEY-TXT-005065	0x082764C	35	It definitely wasn’t a great idea.		34	1	0x08275D0	UNKNOWN	Ce n’était clairement pas une bonne idée.	TRANSLATED
-ODYSSEY-TXT-005066	0x08278E9	26	aren’t really<FE>worth it...	FE	24	2	0x0376B8C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005066	0x08278E9	26	aren’t really<FE>worth it...	FE	24	2	0x0376B8C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005067	0x0827D01	20	Do you want to dig?		19	1	0x08052D0	UNKNOWN	Voulez-vous creuser ?	TRANSLATED
 ODYSSEY-TXT-005068	0x0828313	67	There seems to be a button<FE>on the pillar.<FB>Do you want to press it?	FB;FE	64	2	0x080DFCC	UNKNOWN	Il semble y avoir un bouton<FE>sur le pilier.<FB>Voulez-vous appuyer dessus ?	TRANSLATED
 ODYSSEY-TXT-005069	0x082879C	34	Or maybe I’m the one<FE>who sucks...	FE	32	2	0x0828728	UNKNOWN	Ou peut-être que c’est moi<FE>qui suis nul...	TRANSLATED
 ODYSSEY-TXT-005070	0x0828882	39	No powers awakened.<FE>Only a headache...	FE	37	2	0x0828810	UNKNOWN	Aucun pouvoir n’a été éveillé.<FE>Juste un mal de crâne...	TRANSLATED
 ODYSSEY-TXT-005071	0x0828A39	25	I need that Burn Heal...		24	1	0x08289E8	UNKNOWN	J’ai besoin de cet Anti-Brûle...	TRANSLATED
 ODYSSEY-TXT-005072	0x08295BF	38	d,<FA>I managed to translate part of it.	FA	36	1	0x0829118	fragment, overlapping pointer	j’ai réussi à en<FA>traduire une partie.	TRANSLATED
-ODYSSEY-TXT-005073	0x08296B7	21	uls to... something.		20	1	0x0828FB8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005073	0x08296B7	21	uls to... something.		20	1	0x0828FB8	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005074	0x08296FE	54	ms I can’t decipher,<FA>but it likely refers to a deity.	FA	52	1	0x08290A0	fragment, overlapping pointer	que je n’arrive pas à déchiffrer,<FA>mais cela fait sans doute référence à une divinité.	TRANSLATED
-ODYSSEY-TXT-005075	0x082985A	12	r research!		11	1	0x0828F60	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005076	0x082A665	16	u falling down!		15	1	0x0829D98	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005077	0x082A917	17	t,<FA>would it not?	FA	15	1	0x0829F5C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005075	0x082985A	12	r research!		11	1	0x0828F60	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005076	0x082A665	16	u falling down!		15	1	0x0829D98	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005077	0x082A917	17	t,<FA>would it not?	FA	15	1	0x0829F5C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005078	0x082A94C	38	’t matter.<FB>Do you remember your name?	FB	36	1	0x0829F14	fragment, overlapping pointer	importe.<FB>Tu te souviens de ton nom ?	TRANSLATED
 ODYSSEY-TXT-005079	0x082AA47	32	Good morning.<FE>Had a good sleep?	FE	30	2	0x0829CBC	UNKNOWN	Bonjour.<FE>Bien dormi ?	TRANSLATED
-ODYSSEY-TXT-005080	0x082AC3D	9	hat the-		8	1	0x0829E5C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005080	0x082AC3D	9	hat the-		8	1	0x0829E5C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005081	0x082B5E6	25	Not bad, really not bad!		24	1	0x082B5CC,0x082B5DC,0x1ABABC8	UNKNOWN	Pas mal, vraiment pas mal !	TRANSLATED
 ODYSSEY-TXT-005082	0x082D6A4	99	: What do you want<FE>from me?<FB>You’re here for my fortune,<FE>aren’t you?<FB>Bah, just take this and leave!	FB;FE	94	3	0x082CF14	UNKNOWN	: Que voulez-vous<FE>de moi ?<FB>Vous êtes ici pour ma fortune,<FE>n’est-ce pas ?<FB>Bah, prenez donc ça et partez !	TRANSLATED
 ODYSSEY-TXT-005083	0x082D6D6	49	tune,<FE>aren’t you?<FB>Bah, just take this and leave!	FB;FE	46	2	0x082C810,0x082C9CC	fragment, overlapping pointer	fortune,<FE>n’est-ce pas ?<FB>Bah, prenez donc ça et partez !	TRANSLATED
@@ -5107,13 +5107,13 @@ ODYSSEY-TXT-005105	0x083C229	66	Quest Log: open.<FB>Current objective:<FE>Reach 
 ODYSSEY-TXT-005106	0x083C239	50	<FB>Current objective:<FE>Reach the ceremonial chamber.	FB;FE	47	2	0x083C0B4	fragment, overlapping pointer	<FB>Objectif actuel :<FE>Atteindre la chambre cérémonielle.	TRANSLATED
 ODYSSEY-TXT-005107	0x083C8A9	62	Quest Log: open.<FB>Current objective:<FE>Find the Thieves Hideout.	FB;FE	59	2	0x083C8A0	UNKNOWN	Journal de quête : ouvert.<FB>Objectif actuel :<FE>Trouver la cachette des voleurs.	TRANSLATED
 ODYSSEY-TXT-005108	0x083F25D	7	h him.		6	1	0x083E57C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005109	0x083F2BE	12	d, but who?		11	1	0x083E514	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005110	0x083F429	16	 talking to me?		15	1	0x083E48C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005111	0x083F42C	13	lking to me?		12	1	0x083E46C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005112	0x083FD11	21	o made me do that...		20	1	0x083F750	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005113	0x083FD14	18	ade me do that...		17	1	0x083F704	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005109	0x083F2BE	12	d, but who?		11	1	0x083E514	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005110	0x083F429	16	 talking to me?		15	1	0x083E48C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005111	0x083F42C	13	lking to me?		12	1	0x083E46C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005112	0x083FD11	21	o made me do that...		20	1	0x083F750	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005113	0x083FD14	18	ade me do that...		17	1	0x083F704	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005114	0x0840D7E	27	body’s here, that’s weird.		26	1	0x0840960	fragment, overlapping pointer	personne ici, c’est bizarre.	TRANSLATED
-ODYSSEY-TXT-005115	0x084703F	11	all we do?		10	1	0x0844778,0x0844894	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005115	0x084703F	11	all we do?		10	1	0x0844778,0x0844894	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005116	0x084740A	26	You’ve been digging hard.		25	1	0x0801B04	UNKNOWN	Vous avez creusé dur.	TRANSLATED
 ODYSSEY-TXT-005117	0x08482BC	37	My power... Why can’t I<FE>control it!?	FE	35	2	0x08844B8	UNKNOWN	Mon pouvoir... Pourquoi je<FE>n’arrive pas à le contrôler ?!	TRANSLATED
 ODYSSEY-TXT-005118	0x084CC55	139	repeat the riddle?<FB>No problem!<FB>”From the peak of the Sun<FE>to the splendor of the Moon,<FA>this seal will hide<FA>the true essence of this crypt.”	FA;FB;FE	133	2	0x0E73494	UNKNOWN	Répéter l’énigme ?<FB>Aucun problème !<FB>“Du sommet du Soleil<FE>à la splendeur de la Lune,<FA>ce sceau dissimulera<FA>la véritable essence de cette crypte.”	TRANSLATED
@@ -5154,7 +5154,7 @@ ODYSSEY-TXT-005152	0x0870F80	18	From the Abyss...		17	1	0x1FC4060	UNKNOWN	Depuis
 ODYSSEY-TXT-005153	0x0870FA0	63	Search for her boyfriend before<FE>the Sixth Stratum’s base camp.	FE	61	2	0x1FC4064	UNKNOWN	Cherchez son petit ami avant<FE>le camp de base de la Sixième Strate.	TRANSLATED
 ODYSSEY-TXT-005154	0x0873218	3	u?		2	1	0x0D23DB8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005155	0x0876607	49	 anyone asks for me,<FE>tell them I’ve been killed.	FE	47	2	0x0D10A94	fragment, overlapping pointer	Si quelqu’un demande après moi,<FE>dites-lui que j’ai été tué.	TRANSLATED
-ODYSSEY-TXT-005156	0x0876766	11	e right...		10	1	0x0E69680	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005156	0x0876766	11	e right...		10	1	0x0E69680	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005157	0x0877840	26	You decided to step back.		25	1	0x0876D68,0x088A378	UNKNOWN	Vous avez décidé de reculer.	TRANSLATED
 ODYSSEY-TXT-005158	0x0877A50	44	et.<FB>The ones you should be<FE>aiming at are...	FB;FE	41	2	0x011AC04	fragment, overlapping pointer	ça.<FB>Ceux que vous devriez<FE>viser sont...	TRANSLATED
 ODYSSEY-TXT-005159	0x0878AA1	52	No, not this way.<FE>There’s something else I must do.	FE	50	2	0x08777F4,0x088A3C8	UNKNOWN	Non, pas comme ça.<FE>J’ai autre chose à faire.	TRANSLATED
@@ -5295,7 +5295,7 @@ ODYSSEY-TXT-005293	0x08887AA	16	rrent cutscene?		15	1	0x1F8FE64	fragment, overla
 ODYSSEY-TXT-005294	0x0888800	118	 war, we saved humanity!<FB>And yet, I lost most of my<FE>friends in the process.<FB>...<FB>Is it really a victory<FE>at this point?	FB;FE	112	3	0x0C19AA8,0x0E75940,0x104C664,0x1350B14	fragment, overlapping pointer	guerre, nous avons sauvé l’humanité !<FB>Et pourtant, j’ai perdu la plupart de mes<FE>amis dans le processus.<FB>...<FB>Est-ce vraiment une victoire<FE>à ce stade ?	TRANSLATED
 ODYSSEY-TXT-005295	0x0888857	31	eally a victory<FE>at this point?	FE	29	2	0x121E180	fragment, overlapping pointer	ment une victoire<FE>à ce stade ?	TRANSLATED
 ODYSSEY-TXT-005296	0x0888863	19	ory<FE>at this point?	FE	17	2	0x12124E8	fragment, overlapping pointer	oire<FE>à ce stade ?	TRANSLATED
-ODYSSEY-TXT-005297	0x0888888	9	s there?		8	1	0x03605FC,0x0EAEBC4,0x0EAF27C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005297	0x0888888	9	s there?		8	1	0x03605FC,0x0EAEBC4,0x0EAF27C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005298	0x08888AA	94	 didn’t mean<FE>to bother you.<FB>I’m kind of lost right now...<FB>Do you happen to know<FE>where we are?	FB;FE	89	3	0x0CA9464	fragment, overlapping pointer	voulais pas<FE>vous déranger.<FB>Je suis un peu perdu là...<FB>Sauriez-vous par hasard<FE>où nous sommes ?	TRANSLATED
 ODYSSEY-TXT-005299	0x0888990	10	u are...?		9	1	0x027D600	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005300	0x0888A00	30	you wrong.<FB>Who are you again?	FB	28	1	0x0756B24	fragment, overlapping pointer	mal entendu.<FB>Qui êtes-vous déjà ?	TRANSLATED
@@ -5341,7 +5341,7 @@ ODYSSEY-TXT-005339	0x088EDA8	38	There’s not enough space<FE>in your bag.	FE	36
 ODYSSEY-TXT-005340	0x088EE48	38	There’s not enough space<FE>in your bag.	FE	36	2	0x088EE24	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
 ODYSSEY-TXT-005341	0x0894351	310	y<FE>poor region where people<FA>starve to death.<FB>The harsh climate makes it<FE>impossible for us to grow<FA>enough food to survive.<FB>I chose to brave the labyrinth<FE>because it’s the only place<FA>on this planet where I can test<FA>the crop’s resilience across<FA>different climates.<FB>So don’t you dare underestimate<FE>my goal, got it?	FA;FB;FE	297	5	0x1AE0E18	fragment, overlapping pointer	une<FE>région pauvre où les gens<FA>meurent de faim.<FB>Le climat rude nous rend<FE>impossible de cultiver<FA>assez de nourriture pour survivre.<FB>J’ai choisi d’affronter le labyrinthe<FE>car c’est le seul endroit<FA>sur cette planète où je peux tester<FA>la résilience des cultures face à<FA>différents climats.<FB>Alors n’osez surtout pas sous-estimer<FE>mon objectif, c’est compris ?	TRANSLATED
 ODYSSEY-TXT-005342	0x0899666	42	uly captivating,<FE>you should check it out.	FE	40	2	0x0D614BC	fragment, overlapping pointer	ment captivant,<FE>vous devriez y jeter un œil.	TRANSLATED
-ODYSSEY-TXT-005343	0x0899800	15	f these words.		14	1	0x0D7A880,0x0D7B43C,0x0D7B558	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005343	0x0899800	15	f these words.		14	1	0x0D7A880,0x0D7B43C,0x0D7B558	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005344	0x0899E93	77	ted.<FB>Request:<FB>Provide equipment to optimize<FE>efficiency in their eradication.	FB;FE	73	2	0x1020BF4	fragment, overlapping pointer	ecté.<FB>Requête :<FB>Fournir un équipement pour optimiser<FE>l’efficacité de leur éradication.	TRANSLATED
 ODYSSEY-TXT-005345	0x089ABA5	108	en focusing on maximizing<FE>my speed.<FB>Just in case I need to rush in and<FE>help one of you when the time comes!	FB;FE	104	3	0x0CE50F8	fragment, overlapping pointer	été concentré sur la maximisation<FE>de ma vitesse.<FB>Au cas où je devrais me précipiter et<FE>aider l’un de vous le moment venu !	TRANSLATED
 ODYSSEY-TXT-005346	0x089B29E	12	It’s empty.		11	1	0x089B294	UNKNOWN	C’est vide.	TRANSLATED
@@ -5397,25 +5397,25 @@ ODYSSEY-TXT-005395	0x08D13BC	63	me<FA>I got a scar on my-<FB>AHEM! Never mind th
 ODYSSEY-TXT-005396	0x08D18E4	164	den skin and horns, as<FA>if embodying the World Tree itself.<FB>I believe he, or his people, may<FE>hold the key to understanding<FA>mana’s true potential.<FB>Perhaps even more.	FA;FB;FE	158	2	0x1027A4C	fragment, overlapping pointer	la peau et des cornes, comme<FA>s’il incarnait l’Arbre-Monde lui-même.<FB>Je crois que lui, ou son peuple, pourrait<FE>détenir la clé pour comprendre<FA>le véritable potentiel du mana.<FB>Peut-être même davantage.	TRANSLATED
 ODYSSEY-TXT-005397	0x08D1C38	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08D1C14	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
 ODYSSEY-TXT-005398	0x08D1FC8	38	There’s not enough space<FE>in your bag.	FE	36	2	0x08D1FA4	UNKNOWN	Il n’y a pas assez de<FE>place dans votre sac.	TRANSLATED
-ODYSSEY-TXT-005399	0x0A6EF0C	10	JSZflrxÜ<FA>	FA	8	1	0x1A3542C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005399	0x0A6EF0C	10	JSZflrxÜ<FA>	FA	8	1	0x1A3542C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005400	0x0A77776	28	<FD:FD><FD:FD><FD:FD><FD:FD><FD:FD><FD:FD><FD:FD><FD:FD><FD:FD><FD:FD><FD:FD><FD:FD><FE><FE><FE>	FD;FE	0	4	0x10F73C4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005401	0x0A77A12	6	     		5	1	0x121F090	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005402	0x0A7A8CC	8	<FC:FC><FC:FC><FC:FD><FE>	FC;FE	0	2	0x1059834	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005403	0x0A81F01	4	<FB><FC:FD>	FB;FC	0	1	0x10279B4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005404	0x0A9192E	13	RQlfmx:<FC:FA>é<FB>À	FB;FC	9	1	0x0460EE4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005405	0x0AA1CB1	23	wrlfaTKIIG♀‘JWTOYbbmäÀ		22	1	0x109489C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005404	0x0A9192E	13	RQlfmx:<FC:FA>é<FB>À	FB;FC	9	1	0x0460EE4	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005405	0x0AA1CB1	23	wrlfaTKIIG♀‘JWTOYbbmäÀ		22	1	0x109489C	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005406	0x0AA9A09	2	 		1	1	0x0E93D40	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005407	0x0AAAAAA	8	ÖÄÖÜö<F8><FB>	F8;FB	5	1	0x11AA2B8,0x11AA7B8,0x11AA8F8,0x121E1B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005408	0x0ABE0EE	61	SVXaceghjklmnopqqrrrssstttuuuvvvwwxxyyz▲▲:ÄÄÖÜääöüé<F8><F9><F9><FA><FB><FC:FD><FD:FE>	F8;F9;FA;FB;FC;FD	51	1	0x12323D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005409	0x0AC0086	54	üäÜÄ:zyxvutsrqpponnnmmmmmmnnnoopqrstuvwxyz:ÄÖäöé<F8><F9><FB><FC:FE>	F8;F9;FB;FC	48	1	0x043EA78	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005410	0x0B04E06	11	bfkotx:ä<F8><FB>	F8;FB	8	1	0x0E81100	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005407	0x0AAAAAA	8	ÖÄÖÜö<F8><FB>	F8;FB	5	1	0x11AA2B8,0x11AA7B8,0x11AA8F8,0x121E1B8	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005408	0x0ABE0EE	61	SVXaceghjklmnopqqrrrssstttuuuvvvwwxxyyz▲▲:ÄÄÖÜääöüé<F8><F9><F9><FA><FB><FC:FD><FD:FE>	F8;F9;FA;FB;FC;FD	51	1	0x12323D0	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005409	0x0AC0086	54	üäÜÄ:zyxvutsrqpponnnmmmmmmnnnoopqrstuvwxyz:ÄÖäöé<F8><F9><FB><FC:FE>	F8;F9;FB;FC	48	1	0x043EA78	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005410	0x0B04E06	11	bfkotx:ä<F8><FB>	F8;FB	8	1	0x0E81100	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005411	0x0B15521	5	<FA>yqx	FA	3	1	0x027ACA8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005412	0x0B2BBBB	4	<FE>  	FE	2	2	0x0C7F980	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005413	0x0B3D0FF	4	XmÜ		3	1	0x01624B8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005414	0x0B420C9	13	      <FA>     	FA	11	1	0x0B67168	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005415	0x0C07668	7	Option		6	1	0x0C06C1C	UNKNOWN	Option	TRANSLATED
 ODYSSEY-TXT-005416	0x0C0DFE6	2	 		1	1	0x1A683F4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005417	0x0C518F9	13	Oh, va bene.		12	1	0x0C517D4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005417	0x0C518F9	13	Oh, va bene.		12	1	0x0C517D4	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005418	0x0D11B84	3	  		2	1	0x0260260,0x026047C,0x0260484	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005419	0x0D3018C	188	                                                                                                                                                                                           		187	1	0x03D37A4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005420	0x0D37D74	58	                                                         		57	1	0x03D37D0	UNKNOWN		SKIP_NOISE
@@ -5488,7 +5488,7 @@ ODYSSEY-TXT-005486	0x0DB9206	62	                                                
 ODYSSEY-TXT-005487	0x0DBD2D9	63	                                                              		62	1	0x04F45D0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005488	0x0DBDFCC	24	                       		23	1	0x03D3AE0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005489	0x0DBEA38	170	                                                                                                                                                   :   ▲  :D  :D        :		169	1	0x03D3AE4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005490	0x0DBF558	161	                                                                                                                                   :   U   U  :R  :R   U   :   :		160	1	0x03D3AE8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005490	0x0DBF558	161	                                                                                                                                   :   U   U  :R  :R   U   :   :		160	1	0x03D3AE8	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005491	0x0DBFF68	59	                                                          		58	1	0x03D3AEC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005492	0x0DC825C	210	                                                                                                                                                                                                                 		209	1	0x03D3B1C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005493	0x0DCDB68	184	                                                                                                                                                                                       		183	1	0x03D3B3C	UNKNOWN		SKIP_NOISE
@@ -5577,9 +5577,9 @@ ODYSSEY-TXT-005575	0x0EDD1C1	2	R		1	1	0x0A5D1A4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005576	0x0EDED70	74	                                                                         		73	1	0x0EB49B0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005577	0x0EDF170	78	                                                                             		77	1	0x0EB49D0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005578	0x0EDF270	78	                                                                             		77	1	0x0EB49D8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005579	0x0EE96B8	94	                                                                              Vi VCAVCAACAAB:		93	1	0x0EB4EF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005580	0x0EE9BB8	94	                                                                              Vi VCAVCAACAAB:		93	1	0x0EB4F20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005581	0x0EE9CB8	94	                                                                              Vi VCAVCAACAAB:		93	1	0x0EB4F28	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005579	0x0EE96B8	94	                                                                              Vi VCAVCAACAAB:		93	1	0x0EB4EF8	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005580	0x0EE9BB8	94	                                                                              Vi VCAVCAACAAB:		93	1	0x0EB4F20	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
+ODYSSEY-TXT-005581	0x0EE9CB8	94	                                                                              Vi VCAVCAACAAB:		93	1	0x0EB4F28	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005582	0x0EEE5DC	79	                                                                              		78	1	0x0EB5170	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005583	0x0EEE5E1	74	                                                                         		73	1	0x0B45ED8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005584	0x0EEE6DC	79	                                                                              		78	1	0x0EB5178	UNKNOWN		SKIP_NOISE
@@ -5638,7 +5638,7 @@ ODYSSEY-TXT-005636	0x0EFD670	10	         		9	1	0x0EB5850	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005637	0x0EFD7F0	10	         		9	1	0x0EB5868	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005638	0x0EFD870	10	         		9	1	0x0EB5870	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005639	0x0F0E5E0	22	                    U		21	1	0x0509098	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005640	0x0F11175	28	99/RRRBRRRBRRRBAAAAzzzzRRRR		27	1	0x0E80274	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005640	0x0F11175	28	99/RRRBRRRBRRRBAAAAzzzzRRRR		27	1	0x0E80274	UNKNOWN | font-test/garbage decode artifact or Italian-language leftover data, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-005641	0x100140F	3	nx		2	1	0x1A612B8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005642	0x10016FF	3	ng		2	1	0x0703EF0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005643	0x100C59B	2	é		1	1	0x0E0C964	UNKNOWN		SKIP_NOISE
@@ -5691,183 +5691,183 @@ ODYSSEY-TXT-005689	0x101369C	21	<FD:0F> took<FE>in sunlight!	FD;FE	17	2	0x03FE06
 ODYSSEY-TXT-005690	0x10137AC	15	<FD:0F> is glowing!	FD	12	1	0x03FE068	Battle engine message	<FD:0F> se met à briller !	TRANSLATED
 ODYSSEY-TXT-005691	0x10138BC	15	<FD:0F> dug a hole!	FD	12	1	0x03FE070	Battle engine message	<FD:0F> a creusé un trou !	TRANSLATED
 ODYSSEY-TXT-005692	0x10139CC	30	<FD:10> was squeezed by<FE><FD:0F>’s Bind!	FD;FE	24	2	0x03FE074	Battle engine message	<FD:10> a été compressé par<FE>le Ligotage de <FD:0F> !	TRANSLATED
-ODYSSEY-TXT-005693	0x1013AF0	30	<FD:10> was trapped<FE>in the vortex!	FD;FE	26	2	0x03FE078	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005694	0x1013C10	18	<FD:0F> is hurt<FE>by <FD:00>!	FD;FE	12	2	0x03FE084	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005695	0x1013D28	27	<FD:0F> kept going<FE>and crashed!	FD;FE	23	2	0x03FE08C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005696	0x1013E38	28	<FD:2A> became<FE>shrouded in Mist!	FD;FE	24	2	0x0042E94,0x03FE090	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005697	0x1013F50	22	<FD:0F> is getting<FE>pumped!	FD;FE	18	2	0x03FE098	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005698	0x1013F54	18	s getting<FE>pumped!	FE	16	2	0x0E5DF7C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005699	0x1014060	23	<FD:0F> is hit<FE>with recoil!	FD;FE	19	2	0x03FE09C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005700	0x1014180	22	<FD:0F> is pelted<FE>by Hail!	FD;FE	18	2	0x03FE0A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005701	0x101429C	15	<FD:10> was seeded!	FD	12	1	0x03FE0AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005702	0x10143B0	12	<FD:0F> woke up!	FD	9	1	0x03FE0BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005703	0x10144BC	31	But <FD:13>’s Uproar<FE>kept it awake!	FD;FE	27	2	0x03FE0C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005704	0x10145E0	26	<FD:0F> woke up<FE>in the Uproar!	FD;FE	22	2	0x03FE0C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005705	0x10146FC	21	<FD:0F> caused<FE>an Uproar!	FD;FE	17	2	0x03FE0C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005706	0x1014810	24	<FD:0F> is making<FE>an Uproar!	FD;FE	20	2	0x03FE0CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005707	0x101492C	33	But <FD:10> can’t<FE>sleep in an Uproar!	FD;FE	29	2	0x03FE0D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005708	0x1014A50	18	<FD:0F> Stockpiled<FE><FD:00>!	FD;FE	12	2	0x03FE0D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005709	0x1014B68	29	<FD:0F> can’t<FE>Stockpile any more!	FD;FE	25	2	0x03FE0DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005710	0x1014C84	33	But <FD:10> can’t<FE>sleep in an Uproar!	FD;FE	29	2	0x03FE0E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005711	0x1014DA8	30	But the Uproar kept<FE><FD:10> awake!	FD;FE	26	2	0x03FE0E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005712	0x1014EC8	30	<FD:10> stayed awake<FE>using its <FD:19>!	FD;FE	24	2	0x03FE0E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005713	0x1014FE4	21	<FD:0F> unleashed<FE>energy!	FD;FE	17	2	0x03FE0F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005714	0x10150F8	35	<FD:0F> became<FE>confused due to fatigue!	FD;FE	31	2	0x03FE0F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005715	0x1015218	24	<FD:0F> transformed<FE>into <FD:00>!	FD;FE	18	2	0x03FE100	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005716	0x101532C	36	The Substitute took damage<FE>for <FD:10>!<FB>	FB;FD;FE	31	2	0x03FE10C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005717	0x1015454	24	<FD:10>’s<FE>Substitute faded!<FB>	FB;FD;FE	19	2	0x03FE110	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005718	0x1015570	18	<FD:0F> must<FE>recharge!	FD;FE	14	2	0x03FE114	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005719	0x1015684	23	<FD:10>’s Rage<FE>is building!	FD;FE	19	2	0x03FE118	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005720	0x1015798	22	<FD:10>’s <FD:00><FE>was disabled!	FD;FE	16	2	0x03FE11C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005721	0x10158B0	23	The move<FE>is disabled!<FB>	FB;FE	20	2	0x03FE120	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005722	0x1015D54	18	<FD:0F> got<FE>an Encore!	FD;FE	14	2	0x03FE128	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005723	0x1015E74	19	<FD:0F>’s Encore<FE>ended!	FD;FE	15	2	0x03FE12C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005724	0x1015F94	19	<FD:0F> took aim<FE>at <FD:10>!	FD;FE	13	2	0x03FE130	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005725	0x10160AC	38	<FD:0F> is trying<FE>to take its foe with it!	FD;FE	34	2	0x03FE138	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005726	0x10161D4	20	<FD:10> took<FE><FD:0F> with it!	FD;FE	14	2	0x03FE13C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005727	0x10162E8	23	Reduced <FD:10>’s<FE><FD:00> by <FD:01>!	FD;FE	15	2	0x03FE140	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005728	0x1016400	21	<FD:10> can’t<FE>escape now!	FD;FE	17	2	0x03FE148	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005729	0x1016514	26	<FD:10> fell into<FE>a Nightmare!	FD;FE	22	2	0x03FE14C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005730	0x101662C	42	<FD:0F> cut its own HP and<FE>laid a Curse on <FD:10>!	FD;FE	36	2	0x03FE154	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005731	0x1016760	30	<FD:0F> is afflicted<FE>by the Curse!	FD;FE	26	2	0x03FE158	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005732	0x1016880	54	Spikes were scattered all around<FE>the opponent’s side!	FE	52	2	0x03FE15C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005733	0x1016881	53	pikes were scattered all around<FE>the opponent’s side!	FE	51	2	0x0459CA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005734	0x10169B8	22	<FD:13> is hurt<FE>by Spikes!	FD;FE	18	2	0x03FE160	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005735	0x1016AD0	20	<FD:10> Endured<FE>the hit!	FD;FE	16	2	0x03FE170	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005736	0x1016BE4	29	<FD:0F> copied<FE><FD:10>’s stat changes!	FD;FE	23	2	0x03FE17C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005737	0x1016D00	24	<FD:0F> got free of<FE><FD:10>’s <FD:00>!	FD;FE	16	2	0x03FE180	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005738	0x1016E18	20	<FD:0F> shed<FE>Leech Seed!	FD;FE	16	2	0x03FE184	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005739	0x1016F2C	22	<FD:0F> foresaw<FE>an attack!	FD;FE	18	2	0x03FE190	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005740	0x1017040	35	<FD:0F> became the<FE>center of attention!	FD;FE	31	2	0x03FE19C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005693	0x1013AF0	30	<FD:10> was trapped<FE>in the vortex!	FD;FE	26	2	0x03FE078	Battle engine message	<FD:10> a été piégé<FE>dans le vortex !	TRANSLATED
+ODYSSEY-TXT-005694	0x1013C10	18	<FD:0F> is hurt<FE>by <FD:00>!	FD;FE	12	2	0x03FE084	Battle engine message	<FD:0F> est blessé<FE>par <FD:00> !	TRANSLATED
+ODYSSEY-TXT-005695	0x1013D28	27	<FD:0F> kept going<FE>and crashed!	FD;FE	23	2	0x03FE08C	Battle engine message	<FD:0F> a continué<FE>et s’est écrasé !	TRANSLATED
+ODYSSEY-TXT-005696	0x1013E38	28	<FD:2A> became<FE>shrouded in Mist!	FD;FE	24	2	0x0042E94,0x03FE090	Battle engine message	<FD:2A> a été enveloppé<FE>par la Brume !	TRANSLATED
+ODYSSEY-TXT-005697	0x1013F50	22	<FD:0F> is getting<FE>pumped!	FD;FE	18	2	0x03FE098	Battle engine message	<FD:0F> se prépare<FE>à agir !	TRANSLATED
+ODYSSEY-TXT-005698	0x1013F54	18	s getting<FE>pumped!	FE	16	2	0x0E5DF7C	fragment, overlapping pointer	se prépare<FE>à agir !	TRANSLATED
+ODYSSEY-TXT-005699	0x1014060	23	<FD:0F> is hit<FE>with recoil!	FD;FE	19	2	0x03FE09C	Battle engine message	<FD:0F> subit<FE>le contrecoup !	TRANSLATED
+ODYSSEY-TXT-005700	0x1014180	22	<FD:0F> is pelted<FE>by Hail!	FD;FE	18	2	0x03FE0A8	Battle engine message	<FD:0F> est frappé<FE>par la Grêle !	TRANSLATED
+ODYSSEY-TXT-005701	0x101429C	15	<FD:10> was seeded!	FD	12	1	0x03FE0AC	Battle engine message	<FD:10> a reçu une graine !	TRANSLATED
+ODYSSEY-TXT-005702	0x10143B0	12	<FD:0F> woke up!	FD	9	1	0x03FE0BC	Battle engine message	<FD:0F> s’est réveillé !	TRANSLATED
+ODYSSEY-TXT-005703	0x10144BC	31	But <FD:13>’s Uproar<FE>kept it awake!	FD;FE	27	2	0x03FE0C0	Battle engine message	Mais le Brouhaha de <FD:13><FE>l’a maintenu éveillé !	TRANSLATED
+ODYSSEY-TXT-005704	0x10145E0	26	<FD:0F> woke up<FE>in the Uproar!	FD;FE	22	2	0x03FE0C4	Battle engine message	<FD:0F> s’est réveillé<FE>à cause du Brouhaha !	TRANSLATED
+ODYSSEY-TXT-005705	0x10146FC	21	<FD:0F> caused<FE>an Uproar!	FD;FE	17	2	0x03FE0C8	Battle engine message	<FD:0F> a déclenché<FE>un Brouhaha !	TRANSLATED
+ODYSSEY-TXT-005706	0x1014810	24	<FD:0F> is making<FE>an Uproar!	FD;FE	20	2	0x03FE0CC	Battle engine message	<FD:0F> continue<FE>son Brouhaha !	TRANSLATED
+ODYSSEY-TXT-005707	0x101492C	33	But <FD:10> can’t<FE>sleep in an Uproar!	FD;FE	29	2	0x03FE0D4	Battle engine message	Mais <FD:10> ne peut pas<FE>dormir pendant un Brouhaha !	TRANSLATED
+ODYSSEY-TXT-005708	0x1014A50	18	<FD:0F> Stockpiled<FE><FD:00>!	FD;FE	12	2	0x03FE0D8	Battle engine message	<FD:0F> a stocké<FE><FD:00> !	TRANSLATED
+ODYSSEY-TXT-005709	0x1014B68	29	<FD:0F> can’t<FE>Stockpile any more!	FD;FE	25	2	0x03FE0DC	Battle engine message	<FD:0F> ne peut plus<FE>stocker !	TRANSLATED
+ODYSSEY-TXT-005710	0x1014C84	33	But <FD:10> can’t<FE>sleep in an Uproar!	FD;FE	29	2	0x03FE0E0	Battle engine message	Mais <FD:10> ne peut pas<FE>dormir pendant un Brouhaha !	TRANSLATED
+ODYSSEY-TXT-005711	0x1014DA8	30	But the Uproar kept<FE><FD:10> awake!	FD;FE	26	2	0x03FE0E4	Battle engine message	Mais le Brouhaha a maintenu<FE><FD:10> éveillé !	TRANSLATED
+ODYSSEY-TXT-005712	0x1014EC8	30	<FD:10> stayed awake<FE>using its <FD:19>!	FD;FE	24	2	0x03FE0E8	Battle engine message	<FD:10> est resté éveillé<FE>grâce à son <FD:19> !	TRANSLATED
+ODYSSEY-TXT-005713	0x1014FE4	21	<FD:0F> unleashed<FE>energy!	FD;FE	17	2	0x03FE0F0	Battle engine message	<FD:0F> a libéré<FE>son énergie !	TRANSLATED
+ODYSSEY-TXT-005714	0x10150F8	35	<FD:0F> became<FE>confused due to fatigue!	FD;FE	31	2	0x03FE0F4	Battle engine message	<FD:0F> est devenu<FE>confus à cause de la fatigue !	TRANSLATED
+ODYSSEY-TXT-005715	0x1015218	24	<FD:0F> transformed<FE>into <FD:00>!	FD;FE	18	2	0x03FE100	Battle engine message	<FD:0F> s’est transformé<FE>en <FD:00> !	TRANSLATED
+ODYSSEY-TXT-005716	0x101532C	36	The Substitute took damage<FE>for <FD:10>!<FB>	FB;FD;FE	31	2	0x03FE10C	Battle engine message	Le Substitut a encaissé les dégâts<FE>à la place de <FD:10> !<FB>	TRANSLATED
+ODYSSEY-TXT-005717	0x1015454	24	<FD:10>’s<FE>Substitute faded!<FB>	FB;FD;FE	19	2	0x03FE110	Battle engine message	Le Substitut de<FE><FD:10> a disparu !<FB>	TRANSLATED
+ODYSSEY-TXT-005718	0x1015570	18	<FD:0F> must<FE>recharge!	FD;FE	14	2	0x03FE114	Battle engine message	<FD:0F> doit<FE>récupérer !	TRANSLATED
+ODYSSEY-TXT-005719	0x1015684	23	<FD:10>’s Rage<FE>is building!	FD;FE	19	2	0x03FE118	Battle engine message	La Rage de <FD:10><FE>monte !	TRANSLATED
+ODYSSEY-TXT-005720	0x1015798	22	<FD:10>’s <FD:00><FE>was disabled!	FD;FE	16	2	0x03FE11C	Battle engine message	<FD:00> de <FD:10><FE>a été désactivé !	TRANSLATED
+ODYSSEY-TXT-005721	0x10158B0	23	The move<FE>is disabled!<FB>	FB;FE	20	2	0x03FE120	Battle engine message	La capacité<FE>est désactivée !<FB>	TRANSLATED
+ODYSSEY-TXT-005722	0x1015D54	18	<FD:0F> got<FE>an Encore!	FD;FE	14	2	0x03FE128	Battle engine message	<FD:0F> a reçu<FE>un Encore !	TRANSLATED
+ODYSSEY-TXT-005723	0x1015E74	19	<FD:0F>’s Encore<FE>ended!	FD;FE	15	2	0x03FE12C	Battle engine message	L’Encore de <FD:0F><FE>a pris fin !	TRANSLATED
+ODYSSEY-TXT-005724	0x1015F94	19	<FD:0F> took aim<FE>at <FD:10>!	FD;FE	13	2	0x03FE130	Battle engine message	<FD:0F> a visé<FE><FD:10> !	TRANSLATED
+ODYSSEY-TXT-005725	0x10160AC	38	<FD:0F> is trying<FE>to take its foe with it!	FD;FE	34	2	0x03FE138	Battle engine message	<FD:0F> essaie<FE>d’entraîner son adversaire avec lui !	TRANSLATED
+ODYSSEY-TXT-005726	0x10161D4	20	<FD:10> took<FE><FD:0F> with it!	FD;FE	14	2	0x03FE13C	Battle engine message	<FD:10> a entraîné<FE><FD:0F> avec lui !	TRANSLATED
+ODYSSEY-TXT-005727	0x10162E8	23	Reduced <FD:10>’s<FE><FD:00> by <FD:01>!	FD;FE	15	2	0x03FE140	Battle engine message	<FD:00> de <FD:10><FE>a été réduit de <FD:01> !	TRANSLATED
+ODYSSEY-TXT-005728	0x1016400	21	<FD:10> can’t<FE>escape now!	FD;FE	17	2	0x03FE148	Battle engine message	<FD:10> ne peut plus<FE>s’échapper maintenant !	TRANSLATED
+ODYSSEY-TXT-005729	0x1016514	26	<FD:10> fell into<FE>a Nightmare!	FD;FE	22	2	0x03FE14C	Battle engine message	<FD:10> est tombé dans<FE>un Cauchemar !	TRANSLATED
+ODYSSEY-TXT-005730	0x101662C	42	<FD:0F> cut its own HP and<FE>laid a Curse on <FD:10>!	FD;FE	36	2	0x03FE154	Battle engine message	<FD:0F> a réduit ses propres PV et<FE>a jeté une Malédiction sur <FD:10> !	TRANSLATED
+ODYSSEY-TXT-005731	0x1016760	30	<FD:0F> is afflicted<FE>by the Curse!	FD;FE	26	2	0x03FE158	Battle engine message	<FD:0F> est affligé<FE>par la Malédiction !	TRANSLATED
+ODYSSEY-TXT-005732	0x1016880	54	Spikes were scattered all around<FE>the opponent’s side!	FE	52	2	0x03FE15C	Battle engine message	Des Piquants ont été éparpillés<FE>du côté de l’adversaire !	TRANSLATED
+ODYSSEY-TXT-005733	0x1016881	53	pikes were scattered all around<FE>the opponent’s side!	FE	51	2	0x0459CA0	fragment, overlapping pointer	iquants ont été éparpillés<FE>du côté de l’adversaire !	TRANSLATED
+ODYSSEY-TXT-005734	0x10169B8	22	<FD:13> is hurt<FE>by Spikes!	FD;FE	18	2	0x03FE160	Battle engine message	<FD:13> est blessé<FE>par les Piquants !	TRANSLATED
+ODYSSEY-TXT-005735	0x1016AD0	20	<FD:10> Endured<FE>the hit!	FD;FE	16	2	0x03FE170	Battle engine message	<FD:10> a Enduré<FE>le coup !	TRANSLATED
+ODYSSEY-TXT-005736	0x1016BE4	29	<FD:0F> copied<FE><FD:10>’s stat changes!	FD;FE	23	2	0x03FE17C	Battle engine message	<FD:0F> a copié<FE>les changements de stats de <FD:10> !	TRANSLATED
+ODYSSEY-TXT-005737	0x1016D00	24	<FD:0F> got free of<FE><FD:10>’s <FD:00>!	FD;FE	16	2	0x03FE180	Battle engine message	<FD:0F> s’est libéré<FE>de <FD:00> de <FD:10> !	TRANSLATED
+ODYSSEY-TXT-005738	0x1016E18	20	<FD:0F> shed<FE>Leech Seed!	FD;FE	16	2	0x03FE184	Battle engine message	<FD:0F> s’est débarrassé<FE>de Vampigraine !	TRANSLATED
+ODYSSEY-TXT-005739	0x1016F2C	22	<FD:0F> foresaw<FE>an attack!	FD;FE	18	2	0x03FE190	Battle engine message	<FD:0F> a prévu<FE>une attaque !	TRANSLATED
+ODYSSEY-TXT-005740	0x1017040	35	<FD:0F> became the<FE>center of attention!	FD;FE	31	2	0x03FE19C	Battle engine message	<FD:0F> est devenu<FE>le centre de l’attention !	TRANSLATED
 ODYSSEY-TXT-005741	0x101705E	5	ion!		4	1	0x0D8BE60	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005742	0x1017160	25	<FD:0F> began<FE>charging power!	FD;FE	21	2	0x03FE1A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005743	0x1017278	29	Nature Power turned into<FE><FD:14>!	FD;FE	25	2	0x03FE1A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005744	0x1017394	32	<FD:0F>’s status<FE>returned to normal!	FD;FE	28	2	0x03FE1A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005745	0x10174B0	29	<FD:10> was subjected<FE>to Torment!	FD;FE	25	2	0x03FE1B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005746	0x10175D4	57	<FD:12> can’t use the same<FE>move in a row due to the Torment!<FB>	FB;FD;FE	52	2	0x03FE1B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005747	0x1017710	28	<FD:0F> is tightening<FE>its focus!	FD;FE	24	2	0x03FE1B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005748	0x101782C	40	<FD:12> can’t use<FE>that move after the Taunt!	FD;FE	36	2	0x03FE1C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005749	0x1017954	24	<FD:0F> is ready to<FE>help <FD:10>!	FD;FE	18	2	0x03FE1C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005750	0x1017A6C	37	<FD:0F> switched<FE>items with its opponent!	FD;FE	33	2	0x03FE1C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005751	0x1017B94	16	<FD:0F> made a Wish!	FD	13	1	0x03FE1D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005752	0x1017CAC	21	<FD:00>’s Wish<FE>came true!	FD;FE	17	2	0x03FE1D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005753	0x1017DC8	19	<FD:0F> made<FE><FD:10> drowsy!	FD;FE	13	2	0x03FE1E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005754	0x1017ED8	40	<FD:0F>’s <FD:14><FE>was bounced back by Magic Coat!	FD;FE	34	2	0x03FE204	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005755	0x1017FFC	37	<FD:0F> waits for its foe<FE>to make a move!	FD;FE	33	2	0x03FE208	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005756	0x1018001	32	its for its foe<FE>to make a move!	FE	30	2	0x0408DD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005757	0x101812C	23	<FD:10> Snatched<FE><FD:13>’s move!	FD;FE	17	2	0x03FE20C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005758	0x1018244	22	<FD:13>’s <FD:1A><FE>made it rain!	FD;FE	16	2	0x03FE210	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005759	0x101835C	26	<FD:13>’s <FD:1A><FE>raised its Speed!	FD;FE	20	2	0x03FE214	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005760	0x1018474	35	<FD:10>’s <FD:19><FE>prevents <FD:0F><FA>from using <FD:14>!	FA;FD;FE	24	2	0x03FE21C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005761	0x1018598	28	<FD:11>’s <FD:19><FE>prevents paralysis!	FD;FE	22	2	0x03FE228	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005762	0x10186B4	26	<FD:10>’s <FD:19><FE>prevents romance!	FD;FE	20	2	0x03FE22C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005763	0x10187D4	28	<FD:11>’s <FD:19><FE>prevents poisoning!	FD;FE	22	2	0x03FE230	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005764	0x10188F4	28	<FD:10>’s <FD:19><FE>prevents confusion!	FD;FE	22	2	0x03FE234	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005765	0x1018A14	31	<FD:10>’s <FD:19><FE>raised its Fire power!	FD;FE	25	2	0x03FE238	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005766	0x1018B38	26	<FD:13>’s <FD:1A><FE>cuts <FD:10>’s Attack!	FD;FE	18	2	0x03FE240	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005767	0x1018C54	28	<FD:13>’s <FD:1A><FE>prevents stat loss!	FD;FE	22	2	0x03FE244	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005768	0x1018D74	17	<FD:10>’s <FD:19><FE>hurt <FD:0F>!	FD;FE	9	2	0x03FE248	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005769	0x1018E88	19	<FD:13> Traced<FE><FD:00>’s <FD:01>!	FD;FE	11	2	0x03FE24C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005770	0x10191CC	47	No! There’s no running<FE>from a TRAINER battle!<FB>	FB;FE	44	2	0x03FE290	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005771	0x10192F8	15	Can’t escape!<FB>	FB	13	1	0x03FE294	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005772	0x1019408	33	It hurt itself in its<FE>confusion!	FE	31	2	0x03FE2A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005773	0x101952C	18	The rain stopped.		17	1	0x03FE2BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005774	0x1019640	20	A sandstorm brewed!		19	1	0x03FE2C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005775	0x1019760	21	The sandstorm rages.		20	1	0x03FE2C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005776	0x1019880	24	The sandstorm subsided.		23	1	0x03FE2C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005777	0x101999C	25	The sunlight got bright!		24	1	0x03FE2CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005778	0x1019AB4	24	The sunlight is strong.		23	1	0x03FE2D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005779	0x1019BCC	20	The sunlight faded.		19	1	0x03FE2D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005780	0x1019CE8	20	It started to hail!		19	1	0x03FE2D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005781	0x1019DFC	18	The hail stopped.		17	1	0x03FE2E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005782	0x1019F0C	34	All stat changes were<FE>eliminated!	FE	32	2	0x03FE2F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005783	0x101A02C	38	It was too weak to make<FE>a Substitute!	FE	36	2	0x03FE2F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005784	0x101A045	13	 Substitute!		12	1	0x0DC0AA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005785	0x101A154	32	The battlers shared<FE>their pain!	FE	30	2	0x03FE2FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005786	0x101A274	15	A bell chimed!		14	1	0x03FE300	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005787	0x101A384	35	There’s no PP left for<FE>this move!<FB>	FB;FE	32	2	0x03FE308	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005788	0x101A4A8	39	But there was no PP left<FE>for the move!	FE	37	2	0x03FE30C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005789	0x101A5D0	29	Shoot!<FE>It was so close, too!	FE	27	2	0x03FE334	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005790	0x101A6E8	36	Give a nickname to the<FE>captured <FD:06>?	FD;FE	32	2	0x03FE340	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005791	0x101A804	22	<FD:06> was sent to<FE><FD:27> PC.	FD;FE	16	2	0x03FE344	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005792	0x101A91C	23	A sandstorm is raging.		22	1	0x03FE350	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005793	0x101AA3C	15	Can’t escape!<FB>	FB	13	1	0x03FE354	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005794	0x101AC84	25	<FD:13>’s <FD:16><FE>cured paralysis!	FD;FE	19	2	0x03FE398	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005795	0x101AD9C	22	<FD:13>’s <FD:16><FE>cured poison!	FD;FE	16	2	0x03FE39C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005796	0x101AEB8	25	<FD:13>’s <FD:16><FE>healed its burn!	FD;FE	19	2	0x03FE3A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005797	0x101AFD4	22	<FD:13>’s <FD:16><FE>defrosted it!	FD;FE	16	2	0x03FE3A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005798	0x101B0E8	32	<FD:13>’s <FD:16><FE>woke it from its sleep!	FD;FE	26	2	0x03FE3A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005799	0x101B1FC	37	<FD:13>’s <FD:16><FE>snapped it out of confusion!	FD;FE	31	2	0x03FE3AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005800	0x101B324	30	<FD:13>’s <FD:16><FE>cured its <FD:00> problem!	FD;FE	22	2	0x03FE3B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005801	0x101B434	25	<FD:13>’s <FD:16><FE>restored health!	FD;FE	19	2	0x03FE3B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005802	0x101B554	26	<FD:13>’s <FD:16><FE>restored <FD:00>’s PP!	FD;FE	18	2	0x03FE3B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005803	0x101B66C	29	<FD:13>’s <FD:16><FE>restored its status!	FD;FE	23	2	0x03FE3BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005804	0x101B77C	34	<FD:13>’s <FD:16><FE>restored its HP a little!	FD;FE	28	2	0x03FE3C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005805	0x101B78B	19	d its HP a little!		18	1	0x0D7AC4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005806	0x101B8A0	44	<FD:16>’s effect allows only<FE>a move to be used!<FE>	FD;FE	39	3	0x03FE3C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005807	0x101B9C8	24	<FD:11>’s <FD:1B><FE>prevents burns!	FD;FE	18	2	0x03FE3D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005808	0x101BAE8	27	<FD:10>’s <FD:19><FE>blocks the attack!	FD;FE	21	2	0x03FE3D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005809	0x101BBFC	34	<FD:0F>’s <FD:18><FE>restored its HP a little!	FD;FE	28	2	0x03FE3D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005810	0x101BD20	32	<FD:13>’s <FD:1A><FE>whipped up a sandstorm!	FD;FE	26	2	0x03FE3DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005811	0x101BE44	23	<FD:10>’s <FD:19><FE>infatuated <FD:0F>!	FD;FE	15	2	0x03FE3E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005812	0x101BF5C	35	<FD:10>’s <FD:19><FE>made the move ineffective!	FD;FE	29	2	0x03FE3E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005813	0x101C074	30	<FD:13>’s <FD:1A><FE>cured its <FD:00> problem!	FD;FE	22	2	0x03FE3EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005814	0x101C07F	19	ed its <FD:00> problem!	FD	16	1	0x0465138	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005815	0x101C184	16	<FD:13> transformed!	FD	13	1	0x03FE3F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005816	0x101C3B4	36	<FD:13>’s <FD:1A><FE>intensified the sun’s rays!	FD;FE	30	2	0x03FE438	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005817	0x101C4D8	37	<FD:0F> lost its<FE>focus and couldn’t move!	FD;FE	33	2	0x03FE44C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005818	0x101C600	25	<FD:10>’s <FD:19><FE>took the attack!	FD;FE	19	2	0x03FE444	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005819	0x101C718	28	<FD:0F> chose<FE><FD:14> as its destiny!	FD;FE	22	2	0x03FE448	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005820	0x101C950	40	<FD:10>’s <FD:19><FE>prevented <FD:13>’s<FA><FD:00> from working!	FA;FD;FE	29	2	0x03FE460	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005821	0x101CA7C	28	<FD:11>’s <FD:1B><FE>prevents flinching!	FD;FE	22	2	0x03FE478	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005822	0x101CBA0	31	<FD:10>’s stats won’t<FE>go any lower!	FD;FE	27	2	0x03FE480	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005823	0x101CCC8	20	The wall shattered!		19	1	0x03FE494	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005824	0x101CDDC	16	<FD:0F> obtained<FE><FD:00>.	FD;FE	10	2	0x03FE4A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005825	0x101CEEC	29	<FD:13>’s <FD:1A><FE>had no effect on <FD:11>!	FD;FE	21	2	0x03FE4B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005826	0x101D008	13	Battle Style		12	1	0x03CC31C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005827	0x101D114	6	Frame		5	1	0x03CC328	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005742	0x1017160	25	<FD:0F> began<FE>charging power!	FD;FE	21	2	0x03FE1A0	Battle engine message	<FD:0F> commence<FE>à accumuler de la puissance !	TRANSLATED
+ODYSSEY-TXT-005743	0x1017278	29	Nature Power turned into<FE><FD:14>!	FD;FE	25	2	0x03FE1A4	Battle engine message	Force Nature s’est transformée<FE>en <FD:14> !	TRANSLATED
+ODYSSEY-TXT-005744	0x1017394	32	<FD:0F>’s status<FE>returned to normal!	FD;FE	28	2	0x03FE1A8	Battle engine message	Le statut de <FD:0F><FE>est redevenu normal !	TRANSLATED
+ODYSSEY-TXT-005745	0x10174B0	29	<FD:10> was subjected<FE>to Torment!	FD;FE	25	2	0x03FE1B0	Battle engine message	<FD:10> a été soumis<FE>au Supplice !	TRANSLATED
+ODYSSEY-TXT-005746	0x10175D4	57	<FD:12> can’t use the same<FE>move in a row due to the Torment!<FB>	FB;FD;FE	52	2	0x03FE1B4	Battle engine message	<FD:12> ne peut pas utiliser deux fois<FE>de suite la même capacité à cause du Supplice !<FB>	TRANSLATED
+ODYSSEY-TXT-005747	0x1017710	28	<FD:0F> is tightening<FE>its focus!	FD;FE	24	2	0x03FE1B8	Battle engine message	<FD:0F> aiguise<FE>sa concentration !	TRANSLATED
+ODYSSEY-TXT-005748	0x101782C	40	<FD:12> can’t use<FE>that move after the Taunt!	FD;FE	36	2	0x03FE1C0	Battle engine message	<FD:12> ne peut pas utiliser<FE>cette capacité après la Provocation !	TRANSLATED
+ODYSSEY-TXT-005749	0x1017954	24	<FD:0F> is ready to<FE>help <FD:10>!	FD;FE	18	2	0x03FE1C4	Battle engine message	<FD:0F> est prêt à<FE>aider <FD:10> !	TRANSLATED
+ODYSSEY-TXT-005750	0x1017A6C	37	<FD:0F> switched<FE>items with its opponent!	FD;FE	33	2	0x03FE1C8	Battle engine message	<FD:0F> a échangé<FE>son objet avec son adversaire !	TRANSLATED
+ODYSSEY-TXT-005751	0x1017B94	16	<FD:0F> made a Wish!	FD	13	1	0x03FE1D0	Battle engine message	<FD:0F> a formulé un Vœu !	TRANSLATED
+ODYSSEY-TXT-005752	0x1017CAC	21	<FD:00>’s Wish<FE>came true!	FD;FE	17	2	0x03FE1D4	Battle engine message	Le Vœu de <FD:00><FE>s’est réalisé !	TRANSLATED
+ODYSSEY-TXT-005753	0x1017DC8	19	<FD:0F> made<FE><FD:10> drowsy!	FD;FE	13	2	0x03FE1E4	Battle engine message	<FD:0F> a rendu<FE><FD:10> somnolent !	TRANSLATED
+ODYSSEY-TXT-005754	0x1017ED8	40	<FD:0F>’s <FD:14><FE>was bounced back by Magic Coat!	FD;FE	34	2	0x03FE204	Battle engine message	<FD:14> de <FD:0F><FE>a été renvoyée par Interférence !	TRANSLATED
+ODYSSEY-TXT-005755	0x1017FFC	37	<FD:0F> waits for its foe<FE>to make a move!	FD;FE	33	2	0x03FE208	Battle engine message	<FD:0F> attend que son adversaire<FE>fasse un geste !	TRANSLATED
+ODYSSEY-TXT-005756	0x1018001	32	its for its foe<FE>to make a move!	FE	30	2	0x0408DD4	fragment, overlapping pointer	attend que son adversaire<FE>fasse un geste !	TRANSLATED
+ODYSSEY-TXT-005757	0x101812C	23	<FD:10> Snatched<FE><FD:13>’s move!	FD;FE	17	2	0x03FE20C	Battle engine message	<FD:10> a Détourné<FE>la capacité de <FD:13> !	TRANSLATED
+ODYSSEY-TXT-005758	0x1018244	22	<FD:13>’s <FD:1A><FE>made it rain!	FD;FE	16	2	0x03FE210	Battle engine message	<FD:1A> de <FD:13><FE>a déclenché la pluie !	TRANSLATED
+ODYSSEY-TXT-005759	0x101835C	26	<FD:13>’s <FD:1A><FE>raised its Speed!	FD;FE	20	2	0x03FE214	Battle engine message	<FD:1A> de <FD:13><FE>a augmenté sa Vitesse !	TRANSLATED
+ODYSSEY-TXT-005760	0x1018474	35	<FD:10>’s <FD:19><FE>prevents <FD:0F><FA>from using <FD:14>!	FA;FD;FE	24	2	0x03FE21C	Battle engine message	<FD:19> de <FD:10><FE>empêche <FD:0F><FA>d’utiliser <FD:14> !	TRANSLATED
+ODYSSEY-TXT-005761	0x1018598	28	<FD:11>’s <FD:19><FE>prevents paralysis!	FD;FE	22	2	0x03FE228	Battle engine message	<FD:19> de <FD:11><FE>empêche la paralysie !	TRANSLATED
+ODYSSEY-TXT-005762	0x10186B4	26	<FD:10>’s <FD:19><FE>prevents romance!	FD;FE	20	2	0x03FE22C	Battle engine message	<FD:19> de <FD:10><FE>empêche l’amour !	TRANSLATED
+ODYSSEY-TXT-005763	0x10187D4	28	<FD:11>’s <FD:19><FE>prevents poisoning!	FD;FE	22	2	0x03FE230	Battle engine message	<FD:19> de <FD:11><FE>empêche l’empoisonnement !	TRANSLATED
+ODYSSEY-TXT-005764	0x10188F4	28	<FD:10>’s <FD:19><FE>prevents confusion!	FD;FE	22	2	0x03FE234	Battle engine message	<FD:19> de <FD:10><FE>empêche la confusion !	TRANSLATED
+ODYSSEY-TXT-005765	0x1018A14	31	<FD:10>’s <FD:19><FE>raised its Fire power!	FD;FE	25	2	0x03FE238	Battle engine message	<FD:19> de <FD:10><FE>a augmenté sa puissance Feu !	TRANSLATED
+ODYSSEY-TXT-005766	0x1018B38	26	<FD:13>’s <FD:1A><FE>cuts <FD:10>’s Attack!	FD;FE	18	2	0x03FE240	Battle engine message	<FD:1A> de <FD:13><FE>réduit l’Attaque de <FD:10> !	TRANSLATED
+ODYSSEY-TXT-005767	0x1018C54	28	<FD:13>’s <FD:1A><FE>prevents stat loss!	FD;FE	22	2	0x03FE244	Battle engine message	<FD:1A> de <FD:13><FE>empêche la baisse de stats !	TRANSLATED
+ODYSSEY-TXT-005768	0x1018D74	17	<FD:10>’s <FD:19><FE>hurt <FD:0F>!	FD;FE	9	2	0x03FE248	Battle engine message	<FD:19> de <FD:10><FE>a blessé <FD:0F> !	TRANSLATED
+ODYSSEY-TXT-005769	0x1018E88	19	<FD:13> Traced<FE><FD:00>’s <FD:01>!	FD;FE	11	2	0x03FE24C	Battle engine message	<FD:13> a Copié<FE><FD:01> de <FD:00> !	TRANSLATED
+ODYSSEY-TXT-005770	0x10191CC	47	No! There’s no running<FE>from a TRAINER battle!<FB>	FB;FE	44	2	0x03FE290	Battle engine message	Non ! Impossible de fuir<FE>un combat de DRESSEUR !<FB>	TRANSLATED
+ODYSSEY-TXT-005771	0x10192F8	15	Can’t escape!<FB>	FB	13	1	0x03FE294	Battle engine message	Fuite impossible !<FB>	TRANSLATED
+ODYSSEY-TXT-005772	0x1019408	33	It hurt itself in its<FE>confusion!	FE	31	2	0x03FE2A4	Battle engine message	Il s’est blessé dans<FE>sa confusion !	TRANSLATED
+ODYSSEY-TXT-005773	0x101952C	18	The rain stopped.		17	1	0x03FE2BC	Battle engine message	La pluie s’est arrêtée.	TRANSLATED
+ODYSSEY-TXT-005774	0x1019640	20	A sandstorm brewed!		19	1	0x03FE2C0	Battle engine message	Une tempête de sable s’est levée !	TRANSLATED
+ODYSSEY-TXT-005775	0x1019760	21	The sandstorm rages.		20	1	0x03FE2C4	Battle engine message	La tempête de sable fait rage.	TRANSLATED
+ODYSSEY-TXT-005776	0x1019880	24	The sandstorm subsided.		23	1	0x03FE2C8	Battle engine message	La tempête de sable s’est calmée.	TRANSLATED
+ODYSSEY-TXT-005777	0x101999C	25	The sunlight got bright!		24	1	0x03FE2CC	Battle engine message	La lumière du soleil s’est intensifiée !	TRANSLATED
+ODYSSEY-TXT-005778	0x1019AB4	24	The sunlight is strong.		23	1	0x03FE2D0	Battle engine message	La lumière du soleil est intense.	TRANSLATED
+ODYSSEY-TXT-005779	0x1019BCC	20	The sunlight faded.		19	1	0x03FE2D4	Battle engine message	La lumière du soleil s’est atténuée.	TRANSLATED
+ODYSSEY-TXT-005780	0x1019CE8	20	It started to hail!		19	1	0x03FE2D8	Battle engine message	Il s’est mis à grêler !	TRANSLATED
+ODYSSEY-TXT-005781	0x1019DFC	18	The hail stopped.		17	1	0x03FE2E0	Battle engine message	La grêle s’est arrêtée.	TRANSLATED
+ODYSSEY-TXT-005782	0x1019F0C	34	All stat changes were<FE>eliminated!	FE	32	2	0x03FE2F0	Battle engine message	Tous les changements de stats<FE>ont été annulés !	TRANSLATED
+ODYSSEY-TXT-005783	0x101A02C	38	It was too weak to make<FE>a Substitute!	FE	36	2	0x03FE2F8	Battle engine message	Trop faible pour créer<FE>un Substitut !	TRANSLATED
+ODYSSEY-TXT-005784	0x101A045	13	 Substitute!		12	1	0x0DC0AA4	fragment, overlapping pointer	un Substitut !	TRANSLATED
+ODYSSEY-TXT-005785	0x101A154	32	The battlers shared<FE>their pain!	FE	30	2	0x03FE2FC	Battle engine message	Les combattants ont partagé<FE>leur douleur !	TRANSLATED
+ODYSSEY-TXT-005786	0x101A274	15	A bell chimed!		14	1	0x03FE300	Battle engine message	Une clochette a retenti !	TRANSLATED
+ODYSSEY-TXT-005787	0x101A384	35	There’s no PP left for<FE>this move!<FB>	FB;FE	32	2	0x03FE308	Battle engine message	Il n’y a plus de PP pour<FE>cette capacité !<FB>	TRANSLATED
+ODYSSEY-TXT-005788	0x101A4A8	39	But there was no PP left<FE>for the move!	FE	37	2	0x03FE30C	Battle engine message	Mais il n’y avait plus de PP<FE>pour cette capacité !	TRANSLATED
+ODYSSEY-TXT-005789	0x101A5D0	29	Shoot!<FE>It was so close, too!	FE	27	2	0x03FE334	Battle engine message	Zut !<FE>C’était pourtant si près !	TRANSLATED
+ODYSSEY-TXT-005790	0x101A6E8	36	Give a nickname to the<FE>captured <FD:06>?	FD;FE	32	2	0x03FE340	Battle engine message	Donner un surnom au<FE><FD:06> capturé ?	TRANSLATED
+ODYSSEY-TXT-005791	0x101A804	22	<FD:06> was sent to<FE><FD:27> PC.	FD;FE	16	2	0x03FE344	Battle engine message	<FD:06> a été envoyé au<FE>PC de <FD:27>.	TRANSLATED
+ODYSSEY-TXT-005792	0x101A91C	23	A sandstorm is raging.		22	1	0x03FE350	Battle engine message	Une tempête de sable fait rage.	TRANSLATED
+ODYSSEY-TXT-005793	0x101AA3C	15	Can’t escape!<FB>	FB	13	1	0x03FE354	Battle engine message	Fuite impossible !<FB>	TRANSLATED
+ODYSSEY-TXT-005794	0x101AC84	25	<FD:13>’s <FD:16><FE>cured paralysis!	FD;FE	19	2	0x03FE398	Battle engine message	<FD:16> de <FD:13><FE>a guéri la paralysie !	TRANSLATED
+ODYSSEY-TXT-005795	0x101AD9C	22	<FD:13>’s <FD:16><FE>cured poison!	FD;FE	16	2	0x03FE39C	Battle engine message	<FD:16> de <FD:13><FE>a guéri le poison !	TRANSLATED
+ODYSSEY-TXT-005796	0x101AEB8	25	<FD:13>’s <FD:16><FE>healed its burn!	FD;FE	19	2	0x03FE3A0	Battle engine message	<FD:16> de <FD:13><FE>a soigné sa brûlure !	TRANSLATED
+ODYSSEY-TXT-005797	0x101AFD4	22	<FD:13>’s <FD:16><FE>defrosted it!	FD;FE	16	2	0x03FE3A4	Battle engine message	<FD:16> de <FD:13><FE>l’a dégelé !	TRANSLATED
+ODYSSEY-TXT-005798	0x101B0E8	32	<FD:13>’s <FD:16><FE>woke it from its sleep!	FD;FE	26	2	0x03FE3A8	Battle engine message	<FD:16> de <FD:13><FE>l’a réveillé !	TRANSLATED
+ODYSSEY-TXT-005799	0x101B1FC	37	<FD:13>’s <FD:16><FE>snapped it out of confusion!	FD;FE	31	2	0x03FE3AC	Battle engine message	<FD:16> de <FD:13><FE>l’a sorti de sa confusion !	TRANSLATED
+ODYSSEY-TXT-005800	0x101B324	30	<FD:13>’s <FD:16><FE>cured its <FD:00> problem!	FD;FE	22	2	0x03FE3B0	Battle engine message	<FD:16> de <FD:13><FE>a guéri son problème de <FD:00> !	TRANSLATED
+ODYSSEY-TXT-005801	0x101B434	25	<FD:13>’s <FD:16><FE>restored health!	FD;FE	19	2	0x03FE3B4	Battle engine message	<FD:16> de <FD:13><FE>a restauré sa santé !	TRANSLATED
+ODYSSEY-TXT-005802	0x101B554	26	<FD:13>’s <FD:16><FE>restored <FD:00>’s PP!	FD;FE	18	2	0x03FE3B8	Battle engine message	<FD:16> de <FD:13><FE>a restauré les PP de <FD:00> !	TRANSLATED
+ODYSSEY-TXT-005803	0x101B66C	29	<FD:13>’s <FD:16><FE>restored its status!	FD;FE	23	2	0x03FE3BC	Battle engine message	<FD:16> de <FD:13><FE>a restauré son statut !	TRANSLATED
+ODYSSEY-TXT-005804	0x101B77C	34	<FD:13>’s <FD:16><FE>restored its HP a little!	FD;FE	28	2	0x03FE3C0	Battle engine message	<FD:16> de <FD:13><FE>a restauré un peu de ses PV !	TRANSLATED
+ODYSSEY-TXT-005805	0x101B78B	19	d its HP a little!		18	1	0x0D7AC4C	fragment, overlapping pointer	estauré un peu de ses PV !	TRANSLATED
+ODYSSEY-TXT-005806	0x101B8A0	44	<FD:16>’s effect allows only<FE>a move to be used!<FE>	FD;FE	39	3	0x03FE3C4	Battle engine message	L’effet de <FD:16> ne permet<FE>d’utiliser qu’une seule capacité !<FE>	TRANSLATED
+ODYSSEY-TXT-005807	0x101B9C8	24	<FD:11>’s <FD:1B><FE>prevents burns!	FD;FE	18	2	0x03FE3D0	Battle engine message	<FD:1B> de <FD:11><FE>empêche les brûlures !	TRANSLATED
+ODYSSEY-TXT-005808	0x101BAE8	27	<FD:10>’s <FD:19><FE>blocks the attack!	FD;FE	21	2	0x03FE3D4	Battle engine message	<FD:19> de <FD:10><FE>bloque l’attaque !	TRANSLATED
+ODYSSEY-TXT-005809	0x101BBFC	34	<FD:0F>’s <FD:18><FE>restored its HP a little!	FD;FE	28	2	0x03FE3D8	Battle engine message	<FD:18> de <FD:0F><FE>a restauré un peu de ses PV !	TRANSLATED
+ODYSSEY-TXT-005810	0x101BD20	32	<FD:13>’s <FD:1A><FE>whipped up a sandstorm!	FD;FE	26	2	0x03FE3DC	Battle engine message	<FD:1A> de <FD:13><FE>a déclenché une tempête de sable !	TRANSLATED
+ODYSSEY-TXT-005811	0x101BE44	23	<FD:10>’s <FD:19><FE>infatuated <FD:0F>!	FD;FE	15	2	0x03FE3E4	Battle engine message	<FD:19> de <FD:10><FE>a rendu <FD:0F> amoureux !	TRANSLATED
+ODYSSEY-TXT-005812	0x101BF5C	35	<FD:10>’s <FD:19><FE>made the move ineffective!	FD;FE	29	2	0x03FE3E8	Battle engine message	<FD:19> de <FD:10><FE>a rendu la capacité inefficace !	TRANSLATED
+ODYSSEY-TXT-005813	0x101C074	30	<FD:13>’s <FD:1A><FE>cured its <FD:00> problem!	FD;FE	22	2	0x03FE3EC	Battle engine message	<FD:1A> de <FD:13><FE>a guéri son problème de <FD:00> !	TRANSLATED
+ODYSSEY-TXT-005814	0x101C07F	19	ed its <FD:00> problem!	FD	16	1	0x0465138	fragment, overlapping pointer	guéri son problème de <FD:00> !	TRANSLATED
+ODYSSEY-TXT-005815	0x101C184	16	<FD:13> transformed!	FD	13	1	0x03FE3F4	Battle engine message	<FD:13> s’est transformé !	TRANSLATED
+ODYSSEY-TXT-005816	0x101C3B4	36	<FD:13>’s <FD:1A><FE>intensified the sun’s rays!	FD;FE	30	2	0x03FE438	Battle engine message	<FD:1A> de <FD:13><FE>a intensifié les rayons du soleil !	TRANSLATED
+ODYSSEY-TXT-005817	0x101C4D8	37	<FD:0F> lost its<FE>focus and couldn’t move!	FD;FE	33	2	0x03FE44C	Battle engine message	<FD:0F> a perdu<FE>sa concentration et n’a pas pu bouger !	TRANSLATED
+ODYSSEY-TXT-005818	0x101C600	25	<FD:10>’s <FD:19><FE>took the attack!	FD;FE	19	2	0x03FE444	Battle engine message	<FD:19> de <FD:10><FE>a encaissé l’attaque !	TRANSLATED
+ODYSSEY-TXT-005819	0x101C718	28	<FD:0F> chose<FE><FD:14> as its destiny!	FD;FE	22	2	0x03FE448	Battle engine message	<FD:0F> a choisi<FE><FD:14> comme destin !	TRANSLATED
+ODYSSEY-TXT-005820	0x101C950	40	<FD:10>’s <FD:19><FE>prevented <FD:13>’s<FA><FD:00> from working!	FA;FD;FE	29	2	0x03FE460	Battle engine message	<FD:19> de <FD:10><FE>a empêché <FD:00> de<FA><FD:13> de fonctionner !	TRANSLATED
+ODYSSEY-TXT-005821	0x101CA7C	28	<FD:11>’s <FD:1B><FE>prevents flinching!	FD;FE	22	2	0x03FE478	Battle engine message	<FD:1B> de <FD:11><FE>empêche le flanchement !	TRANSLATED
+ODYSSEY-TXT-005822	0x101CBA0	31	<FD:10>’s stats won’t<FE>go any lower!	FD;FE	27	2	0x03FE480	Battle engine message	Les stats de <FD:10> ne<FE>peuvent plus baisser !	TRANSLATED
+ODYSSEY-TXT-005823	0x101CCC8	20	The wall shattered!		19	1	0x03FE494	Battle engine message	Le mur a volé en éclats !	TRANSLATED
+ODYSSEY-TXT-005824	0x101CDDC	16	<FD:0F> obtained<FE><FD:00>.	FD;FE	10	2	0x03FE4A4	Battle engine message	<FD:0F> a obtenu<FE><FD:00>.	TRANSLATED
+ODYSSEY-TXT-005825	0x101CEEC	29	<FD:13>’s <FD:1A><FE>had no effect on <FD:11>!	FD;FE	21	2	0x03FE4B4	Battle engine message	<FD:1A> de <FD:13><FE>n’a eu aucun effet sur <FD:11> !	TRANSLATED
+ODYSSEY-TXT-005826	0x101D008	13	Battle Style		12	1	0x03CC31C	UNKNOWN	Style de Combat	TRANSLATED
+ODYSSEY-TXT-005827	0x101D114	6	Frame		5	1	0x03CC328	UNKNOWN	Cadre	TRANSLATED
 ODYSSEY-TXT-005828	0x101D21C	4	Mid		3	1	0x03CC334	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005829	0x101D320	5	Fast		4	1	0x03CC338	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005830	0x101D644	15	Not enough HP…		14	1	0x045A328	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005831	0x101D754	20	Restore which move?		19	1	0x045A344	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005832	0x101D868	19	Boost PP of which?		18	1	0x045A348	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005833	0x101D97C	8	Summary		7	1	0x045A618	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005830	0x101D644	15	Not enough HP…		14	1	0x045A328	UNKNOWN	PV insuffisants…	TRANSLATED
+ODYSSEY-TXT-005831	0x101D754	20	Restore which move?		19	1	0x045A344	UNKNOWN	Restaurer quelle capacité ?	TRANSLATED
+ODYSSEY-TXT-005832	0x101D868	19	Boost PP of which?		18	1	0x045A348	UNKNOWN	Augmenter les PP de laquelle ?	TRANSLATED
+ODYSSEY-TXT-005833	0x101D97C	8	Summary		7	1	0x045A618	UNKNOWN	Résumé	TRANSLATED
 ODYSSEY-TXT-005834	0x101DA84	5	Item		4	1	0x045A630	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005835	0x101DB88	5	Take		4	1	0x045A640	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005836	0x101DC8C	5	Take		4	1	0x045A650	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005837	0x101DD90	4	Bag		3	1	0x03A7354	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005838	0x101DE94	5	Save		4	1	0x03A7364	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005839	0x101DF98	8	Options		7	1	0x03A736C	SYSTEM: menu label	Options	TRANSLATED
-ODYSSEY-TXT-005840	0x101E0A0	19	Wild <FD:06> appeared!<FB>	FB;FD	15	1	0x00D7420	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005840	0x101E0A0	19	Wild <FD:06> appeared!<FB>	FB;FD	15	1	0x00D7420	Battle engine message	Un <FD:06> sauvage apparaît !<FB>	TRANSLATED
 ODYSSEY-TXT-005841	0x101E1B4	8	Go! <FD:05>!	FD	5	1	0x00D7464	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005842	0x101E2BC	15	Go! <FD:05><FE>and <FD:07>!	FD;FE	9	2	0x00D7458	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005842	0x101E2BC	15	Go! <FD:05><FE>and <FD:07>!	FD;FE	9	2	0x00D7458	Battle engine message	Vas-y ! <FD:05><FE>et <FD:07> !	TRANSLATED
 ODYSSEY-TXT-005843	0x101E3CC	8	Go! <FD:00>!	FD	5	1	0x00D758C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005844	0x101E4D4	19	What should<FE><FD:12> do?	FD;FE	15	2	0x0032C40,0x00EA76C,0x0158BD4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005844	0x101E4D4	19	What should<FE><FD:12> do?	FD;FE	15	2	0x0032C40,0x00EA76C,0x0158BD4	Battle engine message	Que doit faire<FE><FD:12> ?	TRANSLATED
 ODYSSEY-TXT-005845	0x1020A17	2	z		1	1	0x0B3D44C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005846	0x1029FA0	6	Shift		5	1	0x045A668	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005847	0x102A0A4	7	Switch		6	1	0x03CC344	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005846	0x1029FA0	6	Shift		5	1	0x045A668	UNKNOWN	Changer	TRANSLATED
+ODYSSEY-TXT-005847	0x102A0A4	7	Switch		6	1	0x03CC344	UNKNOWN	Échanger	TRANSLATED
 ODYSSEY-TXT-005848	0x102A1A8	4	Set		3	1	0x03CC348	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005849	0x102A2AC	5	Help		4	1	0x03CC354	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005850	0x102A3B0	8	Options		7	1	0x0088C08	SYSTEM: menu label	Options	TRANSLATED
-ODYSSEY-TXT-005851	0x102A4B8	9	Accuracy		8	1	0x03FD5E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005852	0x102A5C0	6	Speed		5	1	0x03FD5DC,0x03FE808	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005851	0x102A4B8	9	Accuracy		8	1	0x03FD5E8	UNKNOWN	Précision	TRANSLATED
+ODYSSEY-TXT-005852	0x102A5C0	6	Speed		5	1	0x03FD5DC,0x03FE808	UNKNOWN	Vitesse	TRANSLATED
 ODYSSEY-TXT-005853	0x102A6C8	4	Buy		3	1	0x03DF09C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005854	0x102A7CC	5	Sell		4	1	0x03DF0A4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005855	0x102A8D0	32	<FD:02>? Oh, no.<FE>I can’t buy that.<FC:09>	FC;FD;FE	26	2	0x010A5F0,0x0132960,0x013E480	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005856	0x102A9F0	6	Items		5	1	0x0452CFC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005857	0x102AAF8	10	Key Items		9	1	0x0452D00	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005855	0x102A8D0	32	<FD:02>? Oh, no.<FE>I can’t buy that.<FC:09>	FC;FD;FE	26	2	0x010A5F0,0x0132960,0x013E480	UNKNOWN	<FD:02> ? Oh, non.<FE>Je ne peux pas acheter ça.<FC:09>	TRANSLATED
+ODYSSEY-TXT-005856	0x102A9F0	6	Items		5	1	0x0452CFC	UNKNOWN	Objets	TRANSLATED
+ODYSSEY-TXT-005857	0x102AAF8	10	Key Items		9	1	0x0452D00	UNKNOWN	Objets Importants	TRANSLATED
 ODYSSEY-TXT-005858	0x102AC04	5	Time		4	1	0x006FE80	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005859	0x102AD08	5	Toss		4	1	0x0452EC0,0x0464384	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005860	0x102AE0C	22	What?<FE><FD:02> is evolving!	FD;FE	18	2	0x00CEAC8,0x00CF644	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005861	0x102AF24	45	Congratulations! Your <FD:02><FE>evolved into <FD:03>!<FC:0A><FB>	FB;FC;FD;FE	36	2	0x00CEDAC,0x00CF918	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005862	0x102B050	27	Huh? <FD:02><FE>stopped evolving!<FB>	FB;FD;FE	22	2	0x00CEF94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005863	0x102B170	51	But the effect of a Repel<FE>lingered from earlier.<FC:09>	FC;FE	47	2	0x00A19E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005864	0x102B37C	6	Enemy		5	1	0x00D8338	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005865	0x102B480	6	Enemy		5	1	0x00D83D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005866	0x102B584	7	Attack		6	1	0x03FD5D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005867	0x102B790	19	<FD:1C> <FD:1D> sent out<FE><FD:00>!	FD;FE	11	2	0x00D75EC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005860	0x102AE0C	22	What?<FE><FD:02> is evolving!	FD;FE	18	2	0x00CEAC8,0x00CF644	Battle engine message	Quoi ?<FE><FD:02> est en train d’évoluer !	TRANSLATED
+ODYSSEY-TXT-005861	0x102AF24	45	Congratulations! Your <FD:02><FE>evolved into <FD:03>!<FC:0A><FB>	FB;FC;FD;FE	36	2	0x00CEDAC,0x00CF918	Battle engine message	Félicitations ! Votre <FD:02><FE>a évolué en <FD:03> !<FC:0A><FB>	TRANSLATED
+ODYSSEY-TXT-005862	0x102B050	27	Huh? <FD:02><FE>stopped evolving!<FB>	FB;FD;FE	22	2	0x00CEF94	Battle engine message	Hein ? <FD:02><FE>a arrêté d’évoluer !<FB>	TRANSLATED
+ODYSSEY-TXT-005863	0x102B170	51	But the effect of a Repel<FE>lingered from earlier.<FC:09>	FC;FE	47	2	0x00A19E0	Battle engine message	Mais l’effet d’un Répulsif<FE>persistait depuis tout à l’heure.<FC:09>	TRANSLATED
+ODYSSEY-TXT-005864	0x102B37C	6	Enemy		5	1	0x00D8338	UNKNOWN	Ennemi	TRANSLATED
+ODYSSEY-TXT-005865	0x102B480	6	Enemy		5	1	0x00D83D8	UNKNOWN	Ennemi	TRANSLATED
+ODYSSEY-TXT-005866	0x102B584	7	Attack		6	1	0x03FD5D4	UNKNOWN	Attaque	TRANSLATED
+ODYSSEY-TXT-005867	0x102B790	19	<FD:1C> <FD:1D> sent out<FE><FD:00>!	FD;FE	11	2	0x00D75EC	Battle engine message	<FD:1C> <FD:1D> envoie<FE><FD:00> !	TRANSLATED
 ODYSSEY-TXT-005868	0x102B8A0	6	rose!		5	1	0x03FE254	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005869	0x102B9A8	9	harshly 		8	1	0x03FE258	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005869	0x102B9A8	9	harshly 		8	1	0x03FE258	UNKNOWN	durement 	TRANSLATED
 ODYSSEY-TXT-005870	0x102F004	41	                                        		40	1	0x0B56FBC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005871	0x102FFFC	49	                                                		48	1	0x0B47D48	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005872	0x102FFFF	46	                                             		45	1	0x0AD2D2C	UNKNOWN		SKIP_NOISE
@@ -5880,14 +5880,14 @@ ODYSSEY-TXT-005878	0x1035BA0	5	Next		4	1	0x1034D8C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005879	0x1035DB0	5	Next		4	1	0x1034EB4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005880	0x103662C	5	Next		4	1	0x1034FDC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-005881	0x1036B64	5	Next		4	1	0x1035104	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005882	0x1036DA4	8	Stratum		7	1	0x006FE70	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005883	0x1036FC0	59	Find a new sea route to Varley<FE>through Naval Explorations.	FE	57	2	0x1FC3E44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005884	0x10370F8	60	Find a new sea route to Arundel<FE>through Naval Explorations.	FE	58	2	0x1FC3E54	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005885	0x1037230	59	Find a new sea route to Charon<FE>through Naval Explorations.	FE	57	2	0x1FC3E64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005886	0x1037368	60	Find a new sea route to Gorenil<FE>through Naval Explorations.	FE	58	2	0x1FC3E74	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005882	0x1036DA4	8	Stratum		7	1	0x006FE70	UNKNOWN	Strate	TRANSLATED
+ODYSSEY-TXT-005883	0x1036FC0	59	Find a new sea route to Varley<FE>through Naval Explorations.	FE	57	2	0x1FC3E44	UNKNOWN	Trouvez une nouvelle route maritime<FE>vers Varley grâce aux Explorations Navales.	TRANSLATED
+ODYSSEY-TXT-005884	0x10370F8	60	Find a new sea route to Arundel<FE>through Naval Explorations.	FE	58	2	0x1FC3E54	UNKNOWN	Trouvez une nouvelle route maritime<FE>vers Arundel grâce aux Explorations Navales.	TRANSLATED
+ODYSSEY-TXT-005885	0x1037230	59	Find a new sea route to Charon<FE>through Naval Explorations.	FE	57	2	0x1FC3E64	UNKNOWN	Trouvez une nouvelle route maritime<FE>vers Charon grâce aux Explorations Navales.	TRANSLATED
+ODYSSEY-TXT-005886	0x1037368	60	Find a new sea route to Gorenil<FE>through Naval Explorations.	FE	58	2	0x1FC3E74	UNKNOWN	Trouvez une nouvelle route maritime<FE>vers Gorenil grâce aux Explorations Navales.	TRANSLATED
 ODYSSEY-TXT-005887	0x10394CC	5	Exit		4	1	0x03E01F0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-005888	0x10395D0	10	Teach <FD:03>?	FD	7	1	0x00E526C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-005889	0x10396DC	53	<FD:02> and <FD:03><FE>are not compatible.<FB><FD:03> can’t be<FE>learned.<FC:09>	FB;FC;FD;FE	41	3	0x0125BF8,0x0126E70	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-005888	0x10395D0	10	Teach <FD:03>?	FD	7	1	0x00E526C	Battle engine message	Enseigner <FD:03> ?	TRANSLATED
+ODYSSEY-TXT-005889	0x10396DC	53	<FD:02> and <FD:03><FE>are not compatible.<FB><FD:03> can’t be<FE>learned.<FC:09>	FB;FC;FD;FE	41	3	0x0125BF8,0x0126E70	Battle engine message	<FD:02> et <FD:03><FE>ne sont pas compatibles.<FB><FD:03> ne peut pas<FE>être appris.<FC:09>	TRANSLATED
 ODYSSEY-TXT-005890	0x1039818	24	Gradually boosts Speed.		23	1	0x024FB14,0x10B8B1C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005891	0x1039930	21	Prevents attraction.		20	1	0x024FB38,0x10B8B40	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-005892	0x1039A44	17	Raises accuracy.		16	1	0x024FB40,0x10B8B48	UNKNOWN		UNTRANSLATED
