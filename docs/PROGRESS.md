@@ -1,20 +1,20 @@
 # Suivi de progression — traduction française Pokémon Odyssey
 
-Dernière mise à jour : 2026-08-22
+Dernière mise à jour : 2026-08-22 (en cours, traduction complète en cours d'exécution lot par lot)
 
 ## État réel (pas une estimation arrondie)
 
 | Métrique | Valeur |
 |---|---|
-| Chaînes extraites (texte pointé, base) | **6 830** |
-| … dont bruit de décodage (espaces/fragments non exploitables) | 521 (marquées `SKIP_NOISE`, conservées, jamais supprimées) |
-| Chaînes de texte réel restant à traiter | 6 246 |
-| Traduites (`TRANSLATED`) | **63** (LOT 1 — interface/système) |
-| Validées structurellement (contrôle des codes, encodage) | 63 / 63, 0 erreur |
-| Réinsérées dans un build ROM | 63 / 63 (`build/Pokemon_Odyssey_FR.gba`) |
-| Testées en jeu (affichage réel vérifié) | **0** — aucun test visuel possible dans cet environnement (pas d'émulateur avec affichage) |
+| Chaînes extraites (texte pointé, base) | **9 051** (mis à jour après correction de la table de caractères — voir historique dans `docs/TECHNICAL_AUDIT.md`) |
+| … dont bruit de décodage (fragments non exploitables) | 2 314 (marquées `SKIP_NOISE`, conservées, jamais supprimées) |
+| Chaînes de texte réel restant à traiter | 5 414 |
+| Traduites (`TRANSLATED`) | **1 323** |
+| Validées structurellement (contrôle des codes, encodage) | 1323 / 1323, 0 erreur |
+| Réinsérées dans un build ROM | 1323 / 1323 (`build/Pokemon_Odyssey_FR.gba`) |
+| Testées en jeu (affichage réel vérifié) | Caractères accentués confirmés (voir `TESTING.md`). Le reste du texte n'a pas encore été rejoué en jeu. |
 
-**Pourcentage global de traduction : ~1 % (63 / 6 309 chaînes réelles utiles).** Ne pas arrondir vers le haut.
+**Pourcentage de traduction du texte réel : ~20 % (1323 / 6737 chaînes réelles utiles).** Ne pas arrondir vers le haut. Couvre à ce stade : intro, Mt. Moon, S.S. Anne, Team Rocket (Mt. Moon/Silph Co./Warehouse/Hideout), Victory Road, Pokémon Tower, Safari Zone, la plupart des Arènes Kanto (Cerulean/Vermilion/Celadon/Fuchsia/Saffron/Cinnabar), Îles Sevii (One-Seven Island, Bill/Celio, ruines Tanoby), Système d'AIDE complet, Game Corner, panneaux de lieux, PNJ dresseurs de routes (4, 14, 16, 19, Nugget Bridge, Rock Tunnel, Seafoam).
 
 ## Ce qui est fait et vérifié
 
