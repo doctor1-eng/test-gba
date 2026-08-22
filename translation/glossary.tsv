@@ -207,7 +207,7 @@ Docile (nature)	Docile	nature-name	terme officiel FR
 Relaxed (nature)	Relax	nature-name	terme officiel FR
 Hasty (nature)	Pressé	nature-name	terme officiel FR
 Serious (nature)	Sérieux	nature-name	terme officiel FR
-Bashful (nature)	Timide	nature-name	terme officiel FR
+Bashful (nature)	Farceur	nature-name	REVIEW: corrige (etait Timide par erreur, confondu avec Timid ID 004536) - "Farceur" est ma meilleure estimation, a verifier
 Careful (nature)	Prudent	nature-name	terme officiel FR
 Quirky (nature)	Bizarre	nature-name	terme officiel FR
 TRAINER CARD	CARTE DE DRESSEUR	gameplay	terme officiel FR
@@ -251,3 +251,25 @@ Varley (region)	Varley	place-name-custom	nom propre custom Odyssey
 Charon (region)	Charon	place-name-custom	nom propre custom Odyssey
 Gorenil (region)	Gorenil	place-name-custom	nom propre custom Odyssey
 Naval Explorations	Explorations Navales	gameplay-custom	fonctionnalite custom Odyssey
+Hardy (nature)	Hardi	nature-name	terme officiel FR
+Brave (nature)	Brave	nature-name	terme officiel FR
+Impish (nature)	Malicieux	nature-name	terme officiel FR
+Timid (nature)	Timide	nature-name	terme officiel FR
+Jolly (nature)	Jovial	nature-name	terme officiel FR
+Naive (nature)	Naif	nature-name	terme officiel FR
+Modest (nature)	Modeste	nature-name	terme officiel FR
+Quiet (nature)	Discret	nature-name	terme officiel FR
+Gentle (nature)	Gentil	nature-name	terme officiel FR
+Sassy (nature)	Malpoli	nature-name	terme officiel FR
+Nest Ball	Balle Bebe	item-name	terme officiel FR
+Net Ball	Balle Filet	item-name	terme officiel FR
+Luxury Ball	Luxe Ball	item-name	terme officiel FR
+Timer Ball	Chrono Ball	item-name	terme officiel FR
+Choice Band	Bandeau Choix	item-name	terme officiel FR
+Choice Specs	Lunettes Choix	item-name	terme officiel FR
+Choice Scarf	Echarpe Choix	item-name	terme officiel FR
+Life Orb	(objet, augmente puissance/coute PV)	item-name	REVIEW: nom officiel FR "Orbe Vie" non confirme avec certitude, description traduite sans nom exact
+Rocky Helmet	(objet, blesse au contact)	item-name	REVIEW: nom officiel FR "Casque Brut" non confirme avec certitude, description traduite sans nom exact
+Yggdras (faction)	Yggdras	faction-custom	demonyme custom Odyssey pour les partisans d'Yggdrasil
+Abyssals (faction)	Abyssaux	faction-custom	demonyme custom Odyssey pour la faction adverse
+TM prefix	CT	gameplay	Capsule Technique, convention officielle FR pour "TM"
