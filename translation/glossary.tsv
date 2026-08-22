@@ -111,6 +111,16 @@ CRUSHER (trainer class)	CATCHEUR	trainer class	REVIEW: traduction approximative
 RESORT GORGEOUS	RESORT GORGEOUS	place	non traduit (nom propre Sevii)
 ROCKET HIDEOUT	REPAIRE ROCKET	place	traduction cohérente
 
+# --- Talents (Abilities) Gen3 ---
+# NOTE GÉNÉRALE : les noms de talents marqués "ability name REVIEW" dans
+# translation/text_database.tsv sont des traductions descriptives
+# raisonnables, PAS garanties identiques au terme officiel Nintendo
+# exact (risque de confusion avéré sur ce lexique de ~100 entrées
+# traduites de mémoire). Les descriptions longues des talents (colonne
+# "ability description" dans le TSV) sont fiables (traduction directe
+# du sens). À vérifier contre une liste officielle avant sortie finale
+# si la précision terminologique exacte est importante.
+
 # --- Pokémon (noms officiels FR) ---
 ZUBAT	NOSFERAPTI	pokemon	officiel
 WIGGLYTUFF	GRODOUDOU	pokemon	officiel
