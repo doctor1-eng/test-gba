@@ -1,0 +1,15 @@
+# Copyrighted game ROMs are never committed to the repository.
+# Keep them local only (roms/, build/) and distribute translation
+# work as patches/tools, not as full ROM redistributions.
+*.gba
+*.gbc
+*.gb
+!*.example.gba
+roms/
+build/*.gba
+build/*.sha256
+
+# Python
+__pycache__/
+*.pyc
+.venv/
