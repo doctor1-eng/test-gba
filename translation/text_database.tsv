@@ -4670,207 +4670,207 @@ ODYSSEY-TXT-004668	0x0484098	71	A strong telekinetic<FE>attack. It may also<FE>l
 ODYSSEY-TXT-004669	0x04840DF	68	Hypnotic suggestion<FE>is used to make the<FE>foe fall into a<FE>deep sleep.	FE	64	4	0x129F478	Move description	Une suggestion<FE>hypnotique plonge<FE>la cible dans un<FE>sommeil profond.	TRANSLATED
 ODYSSEY-TXT-004670	0x0484123	66	The user meditates<FE>to awaken its power<FE>and raise its<FE>Attack stat.	FE	62	4	0x129F47C	Move description	L’utilisateur médite<FE>pour éveiller sa<FE>force et augmenter<FE>son Attaque.	TRANSLATED
 ODYSSEY-TXT-004671	0x0484165	67	The user relaxes<FE>and lightens its<FE>body to sharply<FE>boost its Speed.	FE	63	4	0x129F480	Move description	L’utilisateur se<FE>détend et allège<FE>son corps pour<FE>augmenter fortement sa Vitesse.	TRANSLATED
-ODYSSEY-TXT-004672	0x04841A8	65	An almost invisibly<FE>fast attack that<FE>is certain to strike<FE>first.	FE	61	4	0x129F484	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004673	0x04841E9	69	An attack that<FE>becomes stronger<FE>each time the user<FE>is hit in battle.	FE	65	4	0x129F488	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004674	0x0484278	72	An attack with a<FE>mirage that inflicts<FE>damage matching<FE>the user’s level.	FE	68	4	0x129F490	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004675	0x04842C0	74	The user copies the<FE>move last used by<FE>the foe for the<FE>rest of the battle.	FE	70	4	0x129F494	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004676	0x048430A	73	An ear-splitting<FE>screech is emitted<FE>to sharply reduce<FE>the foe’s Defense.	FE	69	4	0x129F498	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004677	0x0484353	69	The user creates<FE>illusory copies of<FE>itself to raise its<FE>evasiveness.	FE	65	4	0x03DE73C,0x129F49C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004678	0x0484398	77	A self-healing move<FE>that restores HP by<FE>up to half of the<FE>user’s maximum HP.	FE	73	4	0x129F4A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004679	0x04843E5	73	The user stiffens<FE>all the muscles in<FE>its body to raise<FE>its Defense stat.	FE	69	4	0x129F4A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004680	0x0484406	40	 in<FE>its body to raise<FE>its Defense stat.	FE	37	3	0x0427260	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004681	0x048442E	72	The user compresses<FE>all the cells in its<FE>body to raise its<FE>evasiveness.	FE	68	4	0x129F4A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004682	0x0484444	50	l the cells in its<FE>body to raise its<FE>evasiveness.	FE	47	3	0x0E75BB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004683	0x0484476	63	An obscuring cloud<FE>of smoke or ink<FE>reduces the foe’s<FE>accuracy.	FE	59	4	0x129F4AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004684	0x04844B5	62	The foe is exposed<FE>to a sinister ray<FE>that triggers<FE>confusion.	FE	58	4	0x129F4B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004685	0x04844F3	73	The user withdraws<FE>its body in its hard<FE>shell, raising its<FE>Defense stat.	FE	69	4	0x129F4B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004686	0x048453C	68	The user curls up<FE>to conceal weak<FE>spots and raise its<FE>Defense stat.	FE	64	4	0x129F4B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004687	0x0484580	69	The user creates a<FE>sturdy wall that<FE>sharply raises its<FE>Defense stat.	FE	65	4	0x129F4BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004688	0x04845C5	65	A wall of light<FE>cuts damage from<FE>Sp. Atk attacks<FE>for five turns.	FE	61	4	0x03DE47C,0x129F4C0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004672	0x04841A8	65	An almost invisibly<FE>fast attack that<FE>is certain to strike<FE>first.	FE	61	4	0x129F484	Move description	Une attaque presque<FE>invisible tant elle<FE>est rapide. Elle<FE>touche toujours en premier.	TRANSLATED
+ODYSSEY-TXT-004673	0x04841E9	69	An attack that<FE>becomes stronger<FE>each time the user<FE>is hit in battle.	FE	65	4	0x129F488	Move description	Une attaque qui<FE>devient plus forte<FE>chaque fois que<FE>l’utilisateur est touché.	TRANSLATED
+ODYSSEY-TXT-004674	0x0484278	72	An attack with a<FE>mirage that inflicts<FE>damage matching<FE>the user’s level.	FE	68	4	0x129F490	Move description	Une attaque en<FE>mirage qui inflige<FE>des dégâts selon<FE>le niveau de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004675	0x04842C0	74	The user copies the<FE>move last used by<FE>the foe for the<FE>rest of the battle.	FE	70	4	0x129F494	Move description	L’utilisateur copie<FE>la dernière capacité<FE>employée par la<FE>cible pour le reste du combat.	TRANSLATED
+ODYSSEY-TXT-004676	0x048430A	73	An ear-splitting<FE>screech is emitted<FE>to sharply reduce<FE>the foe’s Defense.	FE	69	4	0x129F498	Move description	Un cri strident est<FE>émis, réduisant<FE>fortement la<FE>Défense de la cible.	TRANSLATED
+ODYSSEY-TXT-004677	0x0484353	69	The user creates<FE>illusory copies of<FE>itself to raise its<FE>evasiveness.	FE	65	4	0x03DE73C,0x129F49C	Move description	L’utilisateur crée<FE>des copies illusoires<FE>de lui-même pour<FE>augmenter son esquive.	TRANSLATED
+ODYSSEY-TXT-004678	0x0484398	77	A self-healing move<FE>that restores HP by<FE>up to half of the<FE>user’s maximum HP.	FE	73	4	0x129F4A0	Move description	Une capacité<FE>d’auto-guérison qui<FE>restaure jusqu’à la<FE>moitié des PV max. de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004679	0x04843E5	73	The user stiffens<FE>all the muscles in<FE>its body to raise<FE>its Defense stat.	FE	69	4	0x129F4A4	Move description	L’utilisateur raidit<FE>tous les muscles de<FE>son corps pour<FE>augmenter sa Défense.	TRANSLATED
+ODYSSEY-TXT-004680	0x0484406	40	 in<FE>its body to raise<FE>its Defense stat.	FE	37	3	0x0427260	fragment, overlapping pointer	tous les muscles de<FE>son corps pour<FE>augmenter sa Défense.	TRANSLATED
+ODYSSEY-TXT-004681	0x048442E	72	The user compresses<FE>all the cells in its<FE>body to raise its<FE>evasiveness.	FE	68	4	0x129F4A8	Move description	L’utilisateur<FE>compresse toutes les<FE>cellules de son<FE>corps pour augmenter son esquive.	TRANSLATED
+ODYSSEY-TXT-004682	0x0484444	50	l the cells in its<FE>body to raise its<FE>evasiveness.	FE	47	3	0x0E75BB4	fragment, overlapping pointer	toutes les cellules<FE>de son corps pour<FE>augmenter son esquive.	TRANSLATED
+ODYSSEY-TXT-004683	0x0484476	63	An obscuring cloud<FE>of smoke or ink<FE>reduces the foe’s<FE>accuracy.	FE	59	4	0x129F4AC	Move description	Un nuage de fumée<FE>ou d’encre masque<FE>la cible, réduisant<FE>sa précision.	TRANSLATED
+ODYSSEY-TXT-004684	0x04844B5	62	The foe is exposed<FE>to a sinister ray<FE>that triggers<FE>confusion.	FE	58	4	0x129F4B0	Move description	La cible est exposée<FE>à un rayon sinistre<FE>qui déclenche<FE>la confusion.	TRANSLATED
+ODYSSEY-TXT-004685	0x04844F3	73	The user withdraws<FE>its body in its hard<FE>shell, raising its<FE>Defense stat.	FE	69	4	0x129F4B4	Move description	L’utilisateur<FE>rentre son corps dans<FE>sa coquille dure,<FE>augmentant sa Défense.	TRANSLATED
+ODYSSEY-TXT-004686	0x048453C	68	The user curls up<FE>to conceal weak<FE>spots and raise its<FE>Defense stat.	FE	64	4	0x129F4B8	Move description	L’utilisateur<FE>s’enroule pour<FE>cacher ses points<FE>faibles et augmenter sa Défense.	TRANSLATED
+ODYSSEY-TXT-004687	0x0484580	69	The user creates a<FE>sturdy wall that<FE>sharply raises its<FE>Defense stat.	FE	65	4	0x129F4BC	Move description	L’utilisateur crée<FE>un mur robuste qui<FE>augmente fortement<FE>sa Défense.	TRANSLATED
+ODYSSEY-TXT-004688	0x04845C5	65	A wall of light<FE>cuts damage from<FE>Sp. Atk attacks<FE>for five turns.	FE	61	4	0x03DE47C,0x129F4C0	Move description	Un mur de lumière<FE>réduit les dégâts<FE>des attaques<FE>spéciales pendant cinq tours.	TRANSLATED
 ODYSSEY-TXT-004689	0x0484641	6	ttle.		5	1	0x00C557C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-004690	0x0484647	66	A wall of light<FE>cuts damage from<FE>physical attacks<FE>for five turns.	FE	62	4	0x03DE768,0x129F4C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004691	0x0484689	74	The user takes a<FE>deep breath and<FE>focuses to raise its<FE>critical-hit ratio.	FE	70	4	0x129F4CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004692	0x04846D3	66	The user endures<FE>attacks for two<FE>turns, then strikes<FE>back double.	FE	62	4	0x129F4D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004693	0x0484715	73	Waggles a finger<FE>and stimulates the<FE>brain into using any<FE>move at random.	FE	69	4	0x129F4D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004694	0x048475E	68	The user counters<FE>the move last used<FE>by the foe with the<FE>same move.	FE	64	4	0x129F4D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004695	0x04847A2	70	The user blows up<FE>to inflict severe<FE>damage, even<FE>making itself faint.	FE	66	4	0x129F4DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004696	0x04847E8	69	A large egg is<FE>hurled with great<FE>force at the foe to<FE>inflict damage.	FE	65	4	0x129F4E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004697	0x048482D	68	The foe is licked<FE>and hit with a long<FE>tongue. It may<FE>also paralyze.	FE	64	4	0x129F4E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004698	0x0484871	68	The foe is attacked<FE>with exhaust gases.<FE>It may also poison<FE>the foe.	FE	64	4	0x129F4E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004699	0x04848B5	61	Toxic sludge is<FE>hurled at the foe.<FE>It may poison the<FE>target.	FE	57	4	0x129F4EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004700	0x04848F2	73	The foe is clubbed<FE>with a bone held in<FE>hand. It may make<FE>the foe flinch.	FE	69	4	0x129F4F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004701	0x048493B	75	The foe is hit with<FE>an intense flame.<FE>It may leave the<FE>target with a burn.	FE	71	4	0x03DE844,0x129F4F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004702	0x0484986	54	A powerful charge<FE>attack.<FE>It may make the<FE>foe flinch.	FE	50	4	0x03DEB88,0x129F4F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004703	0x04849CA	75	The foe is clamped<FE>and squeezed by<FE>the user’s shell for<FE>two to five turns.	FE	71	4	0x129F4FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004704	0x0484A15	66	Star-shaped rays<FE>that never miss are<FE>fired at all foes in<FE>battle.	FE	62	4	0x129F500	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004705	0x0484A57	75	The user rams at<FE>the foe. It may<FE>also make the<FE>target flinch.             	FE	71	4	0x129F504	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004706	0x0484AA2	63	A flare of<FE>electricity<FE>that may burn<FE>the opponent.            	FE	59	4	0x129F508	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004707	0x0484AE1	70	The foe is attacked<FE>with long tentacles<FE>or vines. It may<FE>lower Speed.	FE	66	4	0x129F50C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004708	0x0484B27	52	Forgets about<FE>something and<FE>sharply raises<FE>Sp. Def.	FE	48	4	0x129F510	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004709	0x0484B5B	70	The user looses<FE>a blast of aura<FE>power that can’t<FE>miss its opponent.  	FE	66	4	0x129F514	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004710	0x0484BA1	42	Heals the user by<FE>up to half its<FE>full HP.	FE	39	3	0x129F518	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004711	0x0484BEB	60	A strong jumping<FE>knee kick. If it<FE>misses, the user is<FE>hurt.	FE	56	4	0x129F51C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004712	0x0484C27	78	The user intimidates<FE>the foe with the<FE>design on its belly<FE>to cause paralysis.	FE	74	4	0x129F520	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004713	0x0484C75	70	Absorbs half the<FE>damage it inflicted<FE>on a sleeping foe<FE>to restore HP.	FE	66	4	0x129F524	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004714	0x0484CBB	70	The foe is sprayed<FE>with a cloud of<FE>toxic gas that may<FE>poison the foe.	FE	66	4	0x129F528	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004715	0x0484D01	65	A damaging sound<FE>wave that may<FE>lower the target’s<FE>Sp. Def stat. 	FE	61	4	0x129F52C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004716	0x0484D42	67	An attack that<FE>absorbs half the<FE>damage it inflicted<FE>to restore HP.	FE	63	4	0x129F530	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004717	0x0484D85	72	The user forces a<FE>kiss on the foe<FE>with a scary face<FE>that induces sleep.	FE	68	4	0x129F534	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004718	0x0484DCD	75	The user tucks in<FE>its wings and<FE>charges the enemy.<FE>Also causes recoil.    	FE	71	4	0x129F538	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004719	0x0484E18	71	A wave of miasma<FE>hits the opponent.<FE>May also lower<FE>the target Sp. Def.	FE	67	4	0x129F53C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004720	0x0484E60	68	The user lunges<FE>at the target.<FE>Always goes first.                  	FE	65	3	0x129F540	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004721	0x0484EA4	65	The foe is hit with<FE>a rhythmic punch<FE>that may leave it<FE>confused.	FE	61	4	0x129F544	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004722	0x0484EE5	59	The user scatters<FE>bursts of fine<FE>spores that induce<FE>sleep.	FE	55	4	0x129F548	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004723	0x0484F20	74	Attack with a thick<FE>leek that makes the<FE>user rest during<FE>its next turn.  	FE	70	4	0x03DEB30,0x129F54C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004724	0x0484F6A	75	The user releases<FE>a horrible aura.<FE>May also make<FE>the target flinch.       	FE	71	4	0x03DE9A4,0x129F550	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004725	0x0484FB5	67	The user just flops<FE>and splashes around<FE>without having any<FE>effect.	FE	63	4	0x129F554	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004726	0x0484FF8	71	The user alters its<FE>cells to liquefy<FE>itself and sharply<FE>raise Defense.	FE	67	4	0x129F558	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004727	0x048503F	76	A large pincer is<FE>used to hammer the<FE>foe. It has a high<FE>critical-hit ratio.	FE	72	4	0x129F55C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004728	0x048508B	73	The user explodes<FE>to inflict terrible<FE>damage even while<FE>fainting itself.	FE	69	4	0x129F560	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004729	0x04850D4	64	The foe is raked<FE>with sharp claws or<FE>scythes two to five<FE>times.	FE	60	4	0x129F564	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004730	0x0485114	74	The user throws a<FE>bone that hits the<FE>foe once, then once<FE>again on return.	FE	70	4	0x129F568	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004731	0x0485139	37	foe once, then once<FE>again on return.	FE	35	2	0x1AFC5FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004732	0x048515E	79	The user sleeps for<FE>two turns to fully<FE>restore HP and heal<FE>any status problem.	FE	75	4	0x03DE94C,0x129F56C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004733	0x04851AD	66	Large boulders are<FE>hurled at the foe.<FE>It may make the<FE>foe flinch.	FE	62	4	0x129F570	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004734	0x04851EF	66	The foe is attacked<FE>with sharp fangs.<FE>It may make the<FE>foe flinch.	FE	62	4	0x129F574	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004735	0x0485231	70	Light energy is<FE>released at once.<FE>May also lower<FE>the target Sp. Def. 	FE	66	4	0x03DE374,0x129F578	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004736	0x04852B8	73	A simultaneous<FE>3-beam attack that<FE>may paralyze, burn,<FE>or freeze the foe.	FE	69	4	0x129F580	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004737	0x0485301	59	The user attacks<FE>with sharp fangs<FE>and halves the<FE>foe’s HP.	FE	55	4	0x129F584	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004738	0x048533C	70	The foe is slashed<FE>with claws, etc.<FE>It has a high<FE>critical-hit ratio.	FE	66	4	0x129F588	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004739	0x0485382	60	The user creates a<FE>decoy using one-<FE>quarter of its full<FE>HP.	FE	56	4	0x129F58C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004740	0x04853BE	71	An attack that is<FE>used only if there<FE>is no PP. It also<FE>hurts the user.	FE	67	4	0x129F590	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004741	0x0485446	69	A 3-kick attack<FE>that becomes more<FE>powerful with each<FE>successive hit.	FE	65	4	0x129F598	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004742	0x048548B	75	An attack that may<FE>take the foe’s held<FE>item if the user<FE>isn’t holding one.	FE	71	4	0x129F59C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004743	0x04854D6	71	The user attacks<FE>with an electric<FE>net. Also lowers<FE>the Speed stat.    	FE	67	4	0x129F5A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004744	0x048551D	67	The user predicts<FE>the foe’s action to<FE>ensure its next<FE>attack hits.	FE	63	4	0x129F5A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004745	0x0485560	74	A sleeping foe is<FE>shown a nightmare<FE>that inflicts some<FE>damage every turn.	FE	70	4	0x129F5A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004746	0x04855AA	63	The user makes a<FE>fiery charge at the<FE>foe. It may cause<FE>a burn.	FE	59	4	0x129F5AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004747	0x04855E9	70	An attack that can<FE>be used only while<FE>asleep. It may<FE>cause flinching.	FE	66	4	0x129F5B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004748	0x048562F	74	A move that works<FE>differently for the<FE>Ghost-type and all<FE>the other types.	FE	70	4	0x129F5B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004749	0x0485679	72	A desperate attack<FE>that becomes more<FE>powerful the less<FE>HP the user has.	FE	68	4	0x129F5B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004750	0x04856C1	75	The user changes<FE>type to make itself<FE>resistant to the<FE>last attack it took.	FE	71	4	0x129F5BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004751	0x048570C	70	A vortex of air is<FE>shot at the foe.<FE>It has a high<FE>critical-hit ratio.	FE	66	4	0x129F5C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004752	0x0485752	70	Cotton-like spores<FE>cling to the foe,<FE>sharply reducing<FE>its Speed stat.	FE	66	4	0x129F5C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004753	0x0485798	71	An all-out attack<FE>that becomes more<FE>powerful the less<FE>HP the user has.	FE	67	4	0x129F5C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004754	0x04857DF	92	An attack that does<FE>double damage to a<FE>target affected by<FE>a status problem.                	FE	88	4	0x129F5CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004755	0x0485857	74	Enables the user to<FE>evade all attacks.<FE>It may fail if used<FE>in succession.	FE	70	4	0x03DE4A8,0x129F5D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004756	0x04858A1	65	A punch thrown at<FE>blinding speed.<FE>It is certain to<FE>strike first.	FE	61	4	0x129F5D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004757	0x04858E2	65	Frightens the foe<FE>with a scary face<FE>to sharply reduce<FE>its Speed.	FE	61	4	0x129F5DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004758	0x0485923	72	The user draws up<FE>close to the foe<FE>disarmingly, then<FE>hits without fail.	FE	68	4	0x129F5E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004759	0x048596B	67	The user kisses<FE>the foe with sweet<FE>cuteness that<FE>causes confusion.	FE	63	4	0x129F5E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004760	0x04859AE	68	The user maximizes<FE>its Attack stat at<FE>the cost of half<FE>its full HP.	FE	64	4	0x129F5E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004761	0x04859F2	62	Filthy sludge is<FE>hurled at the foe.<FE>It may poison the<FE>target.	FE	58	4	0x03DE7EC,0x129F5EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004762	0x0485A30	74	Mud is hurled in<FE>the foe’s face to<FE>inflict damage and<FE>lower its accuracy.	FE	70	4	0x129F5F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004763	0x0485AC1	75	A trap of spikes is<FE>laid around the<FE>foe’s party to hurt<FE>foes switching in.	FE	71	4	0x129F5F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004764	0x0485B0C	73	An electric blast is<FE>fired like a cannon<FE>to inflict damage<FE>and paralyze.	FE	69	4	0x129F5FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004765	0x0485B55	71	The user hurls<FE>chunks of ice<FE>at the target.<FE>Always goes first.        	FE	67	4	0x129F600	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004766	0x0485B9C	66	The user extends<FE>its shadow and<FE>attacks.<FE>Always goes first.      	FE	62	4	0x129F604	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004767	0x0485BDE	70	The foe is attacked<FE>with a shock wave.                               	FE	68	2	0x03DE920	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004768	0x0485C24	66	A chilling wind is<FE>used to attack.<FE>It also lowers the<FE>Speed stat.	FE	62	4	0x129F60C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004769	0x0485C66	74	Enables the user to<FE>evade all attacks.<FE>It may fail if used<FE>in succession.	FE	70	4	0x129F610	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004770	0x0485CB0	64	The user strikes<FE>the foe with a bone<FE>in hand two to five<FE>times.	FE	60	4	0x129F614	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004771	0x0485CF0	64	The user locks on<FE>to the foe, making<FE>the next move sure<FE>to hit.	FE	60	4	0x129F618	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004772	0x0485D30	71	The user thrashes<FE>about for two to<FE>three turns, then<FE>becomes confused.	FE	67	4	0x129F61C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004773	0x0485D77	74	A 5-turn sandstorm<FE>that damages all<FE>types except Rock,<FE>Ground, and Steel.	FE	70	4	0x03DE818,0x129F620	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004774	0x0485DC1	72	A harsh attack that<FE>absorbs half the<FE>damage it inflicted<FE>to restore HP.	FE	68	4	0x03DE500,0x129F624	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004775	0x0485E09	76	The user endures<FE>any hit with 1 HP<FE>left. It may fail if<FE>used in succession.	FE	72	4	0x129F628	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004776	0x0485E55	75	The foe is charmed<FE>by the user’s cute<FE>appeals, sharply<FE>cutting its Attack.	FE	71	4	0x129F62C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004777	0x0485EA0	65	A 5-turn rolling<FE>attack that becomes<FE>stronger each time<FE>it hits.	FE	61	4	0x129F630	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004778	0x0485EE1	67	A restrained attack<FE>that always leaves<FE>the foe with at<FE>least 1 HP.	FE	63	4	0x129F634	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004779	0x0485F24	72	A move that makes<FE>the foe confused,<FE>but also sharply<FE>raises its Attack.	FE	68	4	0x129F638	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004780	0x0485F6C	74	Heals the user by<FE>up to half its full<FE>HP. It can be used<FE>to heal an ally.	FE	70	4	0x129F63C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004781	0x0485FB6	63	An electrically<FE>charged tackle that<FE>may also paralyze<FE>the foe.	FE	59	4	0x129F640	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004782	0x0485FF5	54	An attack that<FE>grows stronger on<FE>each successive<FE>hit.	FE	50	4	0x129F644	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004783	0x048602B	74	The foe is hit with<FE>wings of steel.<FE>It may also raise<FE>the user’s Defense.	FE	70	4	0x03DE9D0,0x129F648	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004784	0x0486075	66	The user attacks<FE>with a draining<FE>punch, restoring<FE>its HP.        	FE	62	4	0x03DE1E8,0x129F64C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004785	0x048607A	61	ser attacks<FE>with a draining<FE>punch, restoring<FE>its HP.        	FE	57	4	0x0000D90	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004786	0x04860B7	78	If it is the other<FE>gender, the foe is<FE>made infatuated and<FE>unlikely to attack.	FE	74	4	0x03DE978,0x129F650	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004787	0x0486105	64	While asleep, the<FE>user randomly uses<FE>one of the moves it<FE>knows.	FE	60	4	0x129F654	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004788	0x0486145	66	A soothing bell<FE>chimes to heal the<FE>status problems of<FE>all allies.	FE	62	4	0x129F658	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004789	0x0486187	74	This attack move<FE>grows more powerful<FE>the more the user<FE>likes its Trainer.	FE	70	4	0x03DE660,0x129F65C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004790	0x04861D1	74	The user stomps<FE>down on the ground<FE>lowering the Speed<FE>stat of those hit. 	FE	70	4	0x129F660	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004791	0x048621B	74	This attack move<FE>grows more powerful<FE>the less the user<FE>likes its Trainer.	FE	70	4	0x03DE558,0x129F664	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004792	0x0486265	70	It protects the<FE>user’s party from<FE>all status problems<FE>for five turns.	FE	66	4	0x03DE52C,0x129F668	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004793	0x04862AB	72	The user adds its<FE>HP to the foe’s HP,<FE>then equally shares<FE>the total HP.	FE	68	4	0x129F66C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004794	0x04862F3	61	A mystical and<FE>powerful fire<FE>attack that may<FE>inflict a burn.	FE	57	4	0x129F670	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004795	0x0486378	79	The foe is punched<FE>with the user’s full<FE>power. It confuses<FE>the foe if it hits.	FE	75	4	0x129F678	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004796	0x04863C7	68	A brutal ramming<FE>attack delivered<FE>with a tough and<FE>impressive horn.	FE	64	4	0x129F67C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004797	0x048640B	74	The foe is hit with<FE>an incredible blast<FE>of breath that may<FE>also paralyze.	FE	70	4	0x129F680	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004798	0x0486455	74	The user switches<FE>out, passing along<FE>any stat changes<FE>to the new battler.	FE	70	4	0x129F684	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004799	0x048649F	73	Makes the foe use<FE>the move it last<FE>used repeatedly for<FE>two to six turns.	FE	69	4	0x129F688	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004800	0x04864E8	74	An attack move that<FE>works especially<FE>well on a foe that<FE>is switching out.	FE	70	4	0x129F68C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004801	0x0486532	71	An attack that<FE>frees the user from<FE>Bind, Wrap, Leech<FE>Seed, and Spikes.	FE	67	4	0x129F690	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004802	0x04865BF	71	An attack with a<FE>steel-hard tail.<FE>It may lower the<FE>foe’s Defense stat.	FE	67	4	0x03DE5B0,0x129F698	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004803	0x0486606	75	The foe is attacked<FE>with steel claws.<FE>It may also raise<FE>the user’s Attack.	FE	71	4	0x129F69C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004804	0x0486651	66	Makes the user<FE>attack after the<FE>foe. In return,<FE>it will not miss.	FE	62	4	0x129F6A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004805	0x0486693	75	Restores the user’s<FE>HP. The amount of<FE>HP regained varies<FE>with the weather.	FE	71	4	0x129F6A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004806	0x04866DE	75	Restores the user’s<FE>HP. The amount of<FE>HP regained varies<FE>with the weather.	FE	71	4	0x129F6A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004807	0x0486729	75	Restores the user’s<FE>HP. The amount of<FE>HP regained varies<FE>with the weather.	FE	71	4	0x129F6AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004808	0x0486774	67	The user hits<FE>the enemy while<FE>surfing on a wave.                  	FE	64	3	0x129F6B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004809	0x04867B7	68	The foe is hit with<FE>double chops.<FE>It has a high<FE>critical-hit ratio.	FE	64	4	0x129F6B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004810	0x04867FB	63	A vicious twister<FE>attacks the foe.<FE>It may make the<FE>foe flinch.	FE	59	4	0x129F6B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004811	0x048683A	66	A heavy rain falls<FE>for five turns,<FE>powering up Water-<FE>type moves.	FE	62	4	0x03DE4D4,0x129F6BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004812	0x048687C	60	The sun blazes for<FE>five turns, powering<FE>up Fire-type<FE>moves.	FE	56	4	0x03DE3A0,0x129F6C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004813	0x04868B8	66	The foe is crunched<FE>with sharp fangs.<FE>It may lower the<FE>foe’s Def.	FE	62	4	0x129F6C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004814	0x04868FE	67	A retaliation move<FE>that pays back the<FE>foe’s special attack<FE>double.	FE	63	4	0x129F6C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004815	0x0486941	73	The user hypnotizes<FE>itself into copying<FE>any stat change<FE>made by the foe.	FE	69	4	0x129F6CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004816	0x048698A	69	A blindingly speedy<FE>charge attack that<FE>always goes before<FE>any other.	FE	65	4	0x129F6D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004817	0x04869CF	76	An ancient power is<FE>used to attack. It<FE>may also raise all<FE>the user’s stats.	FE	72	4	0x129F6D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004818	0x0486A1B	71	A shadowy blob is<FE>hurled at the foe.<FE>May also lower the<FE>foe’s Sp. Def.	FE	67	4	0x03DE6E4,0x129F6D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004819	0x0486A62	68	Attacks with a<FE>storm of leaves.<FE>Harshly reduces<FE>the user’s Sp. Atk.	FE	64	4	0x129F6DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004820	0x0486AA6	73	An attack that may<FE>also cut Defense.<FE>It can also smash<FE>cracked boulders.	FE	69	4	0x03DEB5C,0x129F6E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004821	0x0486AEF	71	The foe is trapped<FE>in a fast, vicious<FE>whirlpool for two<FE>to five turns.	FE	67	4	0x129F6E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004822	0x0486B7E	73	An attack that hits<FE>first and causes<FE>flinching. Usable<FE>only on 1st turn.	FE	69	4	0x129F6EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004823	0x0486BC7	73	The user attacks in<FE>an uproar that<FE>prevents sleep for<FE>two to five turns.	FE	69	4	0x129F6F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004824	0x0486C10	69	The user charges<FE>up power for use<FE>later. It can be<FE>used three times.	FE	65	4	0x129F6F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004825	0x0486C55	64	The energy it built<FE>using Stockpile is<FE>absorbed to restore<FE>HP. 	FE	60	4	0x129F6FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004826	0x0486C95	63	The power built<FE>using Stockpile is<FE>released at once<FE>for attack	FE	59	4	0x129F6F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004827	0x0486CD4	72	The user exhales a<FE>heated breath to<FE>attack. It may also<FE>inflict a burn.	FE	68	4	0x129F700	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004828	0x0486D64	77	It enrages the foe,<FE>making it incapable<FE>of using the same<FE>move successively.	FE	73	4	0x03DE8C8,0x129F708	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004829	0x0486DB1	65	Flattery is used to<FE>confuse the foe,<FE>but its Sp. Atk<FE>also rises.	FE	61	4	0x129F70C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004830	0x0486DF2	69	A sinister, bluish<FE>white flame is shot<FE>at the foe to<FE>inflict a burn.	FE	65	4	0x129F710	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004831	0x0486E37	66	Boiling hot water<FE>is shot at the<FE>enemy. May burn<FE>the target.     	FE	62	4	0x03DEA28,0x129F714	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004832	0x0486E79	69	An attack that is<FE>boosted if user is<FE>burned, poisoned,<FE>or paralyzed.	FE	65	4	0x03DE8F4,0x129F718	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004833	0x0486EBE	70	An attack that is<FE>executed last.<FE>The user flinches<FE>if hit beforehand.	FE	66	4	0x129F71C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004834	0x0486F04	76	The user slams<FE>the target with its<FE>head. May also make<FE>the target flinch.  	FE	72	4	0x129F720	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004835	0x0486F50	70	The user draws<FE>attention to itself,<FE>making foes attack<FE>only the user.	FE	66	4	0x129F724	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004836	0x0486F96	62	An attack that<FE>changes type<FE>depending on the<FE>user’s location.	FE	58	4	0x129F728	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004837	0x0486FD4	64	The user charges<FE>power to boost the<FE>Electric move it<FE>uses next.	FE	60	4	0x129F72C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004838	0x0487014	72	The foe is taunted<FE>into a rage that<FE>allows it to use<FE>only attack moves.	FE	68	4	0x03DE3CC,0x129F730	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004839	0x048705C	63	A move that boosts<FE>the power of the<FE>ally’s attack in a<FE>battle.	FE	59	4	0x129F734	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004840	0x048709B	66	A move that tricks<FE>the foe into<FE>trading held items<FE>with the user.	FE	62	4	0x129F738	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004841	0x04870DD	65	Launches a steel<FE>bomb that sticks<FE>to the target.<FE>Never misses.  	FE	61	4	0x129F73C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004842	0x048711E	69	A self-healing move<FE>that restores half<FE>the full HP on the<FE>next turn.	FE	65	4	0x129F740	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004843	0x0487163	62	Launches a mud ball.<FE>May also lower the<FE>target’s accuracy.   	FE	59	3	0x129F744	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004844	0x04871A1	72	The user lays roots<FE>that restore HP on<FE>every turn.<FE>It can’t switch out.	FE	68	4	0x129F748	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004845	0x04871E9	75	A powerful attack,<FE>but it also lowers<FE>the user’s Attack<FE>and Defense stats.	FE	71	4	0x129F74C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004846	0x0487234	66	The user slashes at<FE>the foe by crossing<FE>scythes or claws.        	FE	63	3	0x129F750	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004847	0x0487276	52	Instant slash with<FE>a high critical<FE>hit ratio.      	FE	49	3	0x129F754	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004848	0x04872AA	72	An attack move that<FE>gains in intensity if<FE>the target has hurt<FE>the user.	FE	68	4	0x129F758	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004849	0x04872F2	70	An attack that also<FE>breaks any barrier<FE>like Light Screen<FE>and Reflect.	FE	66	4	0x03DE710,0x129F75C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004850	0x0487338	64	A huge yawn lulls<FE>the foe into falling<FE>asleep on the next<FE>turn.	FE	60	4	0x129F760	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004851	0x0487378	70	Knocks down the<FE>foe’s held item to<FE>prevent its use<FE>during the battle.	FE	66	4	0x129F764	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004852	0x04873BE	61	Gains power the<FE>fewer HP the user<FE>has compared with<FE>the foe.	FE	57	4	0x129F768	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004853	0x04873FB	65	The higher the<FE>user’s HP, the more<FE>powerful this<FE>attack becomes.	FE	61	4	0x129F76C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004854	0x0487409	51	<FE>user’s HP, the more<FE>powerful this<FE>attack becomes.	FE	47	4	0x0706C60	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004855	0x048743C	67	The user employs<FE>its psychic power<FE>to swap abilities<FE>with the foe.	FE	63	4	0x03DE9FC,0x129F770	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004856	0x04874C1	76	A self-healing move<FE>that cures the user<FE>of a poisoning,<FE>burn, or paralysis.	FE	72	4	0x129F778	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004857	0x048750D	75	Attacks by breathing<FE>a hot fire. May also<FE>lower the target’s<FE>Sp. Atk.     	FE	71	4	0x129F77C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004858	0x0487558	66	Steals the effects<FE>of the foe’s<FE>healing or status-<FE>changing move.	FE	62	4	0x129F780	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004859	0x048759A	75	A stab attack that<FE>may also poison<FE>the target.                            	FE	72	3	0x129F784	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004860	0x04875E5	67	The user dives<FE>underwater on the<FE>first turn and<FE>strikes next turn.	FE	63	4	0x03DEBB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004861	0x0487628	67	A quick flurry of<FE>straight-arm<FE>punches that hit<FE>two to five times.	FE	63	4	0x129F78C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004862	0x048766B	60	The user slams a<FE>barrage of seed on<FE>the foe from above.    	FE	57	3	0x129F790	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004863	0x04876A7	63	The user flashes a<FE>light that sharply<FE>raises its Sp. Atk<FE>stat.	FE	59	4	0x129F794	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004864	0x0487771	74	The user lands and<FE>rest its body.<FE>It restores half<FE>the user’s HP.        	FE	70	4	0x129F7A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004865	0x04877F3	71	A fiery kick with a<FE>high critical-hit<FE>ratio. It may also<FE>burn the foe.	FE	67	4	0x129F7A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004866	0x048783A	64	The user scatters<FE>powder to draw<FE>attention to itself.          	FE	61	3	0x129F7AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004867	0x048787A	62	The user swings<FE>its stone axe<FE>at the target.<FE>High Crit ratio.	FE	58	4	0x129F7B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004868	0x04878F5	61	The user slacks off<FE>and restores its HP<FE>by half its full<FE>HP.	FE	57	4	0x129F7B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004869	0x0487932	68	The user lets loose<FE>a horribly loud<FE>shout with the<FE>power to damage.	FE	64	4	0x129F7BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004870	0x0487976	70	The foe is bitten<FE>with toxic fangs.<FE>It may also badly<FE>poison the foe.	FE	66	4	0x129F7C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004871	0x04879BC	75	The foe is attacked<FE>with sharp claws.<FE>It may also lower<FE>the foe’s Defense.	FE	71	4	0x129F7C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-004872	0x0487A07	76	The user attacks<FE>everything around it<FE>with a terrible<FE>explosive sound.     	FE	72	4	0x129F7C8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-004690	0x0484647	66	A wall of light<FE>cuts damage from<FE>physical attacks<FE>for five turns.	FE	62	4	0x03DE768,0x129F4C8	Move description	Un mur de lumière<FE>réduit les dégâts<FE>des attaques<FE>physiques pendant cinq tours.	TRANSLATED
+ODYSSEY-TXT-004691	0x0484689	74	The user takes a<FE>deep breath and<FE>focuses to raise its<FE>critical-hit ratio.	FE	70	4	0x129F4CC	Move description	L’utilisateur prend<FE>une grande inspiration<FE>et se concentre pour<FE>augmenter son taux de coups critiques.	TRANSLATED
+ODYSSEY-TXT-004692	0x04846D3	66	The user endures<FE>attacks for two<FE>turns, then strikes<FE>back double.	FE	62	4	0x129F4D0	Move description	L’utilisateur endure<FE>les attaques pendant<FE>deux tours, puis<FE>riposte en double.	TRANSLATED
+ODYSSEY-TXT-004693	0x0484715	73	Waggles a finger<FE>and stimulates the<FE>brain into using any<FE>move at random.	FE	69	4	0x129F4D4	Move description	Agite un doigt et<FE>stimule le cerveau<FE>pour utiliser une<FE>capacité au hasard.	TRANSLATED
+ODYSSEY-TXT-004694	0x048475E	68	The user counters<FE>the move last used<FE>by the foe with the<FE>same move.	FE	64	4	0x129F4D8	Move description	L’utilisateur contre<FE>la dernière capacité<FE>utilisée par la cible<FE>avec la même capacité.	TRANSLATED
+ODYSSEY-TXT-004695	0x04847A2	70	The user blows up<FE>to inflict severe<FE>damage, even<FE>making itself faint.	FE	66	4	0x129F4DC	Move description	L’utilisateur<FE>explose pour infliger<FE>des dégâts sévères,<FE>quitte à s’évanouir.	TRANSLATED
+ODYSSEY-TXT-004696	0x04847E8	69	A large egg is<FE>hurled with great<FE>force at the foe to<FE>inflict damage.	FE	65	4	0x129F4E0	Move description	Un gros œuf est<FE>lancé avec force sur<FE>la cible pour lui<FE>infliger des dégâts.	TRANSLATED
+ODYSSEY-TXT-004697	0x048482D	68	The foe is licked<FE>and hit with a long<FE>tongue. It may<FE>also paralyze.	FE	64	4	0x129F4E4	Move description	La cible est léchée<FE>par une longue<FE>langue. Peut aussi<FE>la paralyser.	TRANSLATED
+ODYSSEY-TXT-004698	0x0484871	68	The foe is attacked<FE>with exhaust gases.<FE>It may also poison<FE>the foe.	FE	64	4	0x129F4E8	Move description	La cible est<FE>attaquée avec des gaz<FE>d’échappement. Peut<FE>aussi l’empoisonner.	TRANSLATED
+ODYSSEY-TXT-004699	0x04848B5	61	Toxic sludge is<FE>hurled at the foe.<FE>It may poison the<FE>target.	FE	57	4	0x129F4EC	Move description	Une boue toxique<FE>est lancée sur la<FE>cible. Peut<FE>l’empoisonner.	TRANSLATED
+ODYSSEY-TXT-004700	0x04848F2	73	The foe is clubbed<FE>with a bone held in<FE>hand. It may make<FE>the foe flinch.	FE	69	4	0x129F4F0	Move description	La cible reçoit un<FE>coup d’os tenu en<FE>main. Peut la faire<FE>flancher.	TRANSLATED
+ODYSSEY-TXT-004701	0x048493B	75	The foe is hit with<FE>an intense flame.<FE>It may leave the<FE>target with a burn.	FE	71	4	0x03DE844,0x129F4F4	Move description	La cible reçoit une<FE>flamme intense.<FE>Peut lui infliger<FE>une brûlure.	TRANSLATED
+ODYSSEY-TXT-004702	0x0484986	54	A powerful charge<FE>attack.<FE>It may make the<FE>foe flinch.	FE	50	4	0x03DEB88,0x129F4F8	Move description	Une charge<FE>puissante.<FE>Peut faire<FE>flancher la cible.	TRANSLATED
+ODYSSEY-TXT-004703	0x04849CA	75	The foe is clamped<FE>and squeezed by<FE>the user’s shell for<FE>two to five turns.	FE	71	4	0x129F4FC	Move description	La cible est<FE>enserrée et<FE>compressée par la<FE>coquille de l’utilisateur, deux à cinq tours.	TRANSLATED
+ODYSSEY-TXT-004704	0x0484A15	66	Star-shaped rays<FE>that never miss are<FE>fired at all foes in<FE>battle.	FE	62	4	0x129F500	Move description	Des rayons en forme<FE>d’étoile, qui ne<FE>ratent jamais, sont<FE>tirés sur tous les adversaires.	TRANSLATED
+ODYSSEY-TXT-004705	0x0484A57	75	The user rams at<FE>the foe. It may<FE>also make the<FE>target flinch.             	FE	71	4	0x129F504	Move description	L’utilisateur<FE>fonce sur la cible.<FE>Peut aussi la faire<FE>flancher.	TRANSLATED
+ODYSSEY-TXT-004706	0x0484AA2	63	A flare of<FE>electricity<FE>that may burn<FE>the opponent.            	FE	59	4	0x129F508	Move description	Un éclair<FE>d’électricité<FE>qui peut brûler<FE>l’adversaire.	TRANSLATED
+ODYSSEY-TXT-004707	0x0484AE1	70	The foe is attacked<FE>with long tentacles<FE>or vines. It may<FE>lower Speed.	FE	66	4	0x129F50C	Move description	La cible est<FE>attaquée par de longs<FE>tentacules ou lianes.<FE>Peut baisser sa Vitesse.	TRANSLATED
+ODYSSEY-TXT-004708	0x0484B27	52	Forgets about<FE>something and<FE>sharply raises<FE>Sp. Def.	FE	48	4	0x129F510	Move description	Oublie quelque<FE>chose et augmente<FE>fortement la<FE>Défense Spéciale.	TRANSLATED
+ODYSSEY-TXT-004709	0x0484B5B	70	The user looses<FE>a blast of aura<FE>power that can’t<FE>miss its opponent.  	FE	66	4	0x129F514	Move description	L’utilisateur libère<FE>une salve d’aura qui<FE>ne peut pas rater<FE>son adversaire.	TRANSLATED
+ODYSSEY-TXT-004710	0x0484BA1	42	Heals the user by<FE>up to half its<FE>full HP.	FE	39	3	0x129F518	Move description	Soigne l’utilisateur<FE>jusqu’à la moitié de<FE>ses PV max.	TRANSLATED
+ODYSSEY-TXT-004711	0x0484BEB	60	A strong jumping<FE>knee kick. If it<FE>misses, the user is<FE>hurt.	FE	56	4	0x129F51C	Move description	Un puissant coup de<FE>genou sauté. En cas<FE>d’échec, l’utilisateur<FE>se blesse.	TRANSLATED
+ODYSSEY-TXT-004712	0x0484C27	78	The user intimidates<FE>the foe with the<FE>design on its belly<FE>to cause paralysis.	FE	74	4	0x129F520	Move description	L’utilisateur<FE>intimide la cible<FE>avec le motif de son<FE>ventre pour la paralyser.	TRANSLATED
+ODYSSEY-TXT-004713	0x0484C75	70	Absorbs half the<FE>damage it inflicted<FE>on a sleeping foe<FE>to restore HP.	FE	66	4	0x129F524	Move description	Absorbe la moitié<FE>des dégâts infligés<FE>à une cible endormie<FE>pour restaurer des PV.	TRANSLATED
+ODYSSEY-TXT-004714	0x0484CBB	70	The foe is sprayed<FE>with a cloud of<FE>toxic gas that may<FE>poison the foe.	FE	66	4	0x129F528	Move description	La cible est<FE>aspergée d’un nuage<FE>de gaz toxique qui<FE>peut l’empoisonner.	TRANSLATED
+ODYSSEY-TXT-004715	0x0484D01	65	A damaging sound<FE>wave that may<FE>lower the target’s<FE>Sp. Def stat. 	FE	61	4	0x129F52C	Move description	Une onde sonore<FE>dévastatrice qui<FE>peut faire baisser<FE>la Défense Spéciale de la cible.	TRANSLATED
+ODYSSEY-TXT-004716	0x0484D42	67	An attack that<FE>absorbs half the<FE>damage it inflicted<FE>to restore HP.	FE	63	4	0x129F530	Move description	Une attaque qui<FE>absorbe la moitié<FE>des dégâts infligés<FE>pour restaurer des PV.	TRANSLATED
+ODYSSEY-TXT-004717	0x0484D85	72	The user forces a<FE>kiss on the foe<FE>with a scary face<FE>that induces sleep.	FE	68	4	0x129F534	Move description	L’utilisateur force<FE>un baiser sur la<FE>cible avec une mine<FE>effrayante qui provoque le sommeil.	TRANSLATED
+ODYSSEY-TXT-004718	0x0484DCD	75	The user tucks in<FE>its wings and<FE>charges the enemy.<FE>Also causes recoil.    	FE	71	4	0x129F538	Move description	L’utilisateur<FE>replie ses ailes et<FE>charge l’ennemi.<FE>Provoque aussi un contrecoup.	TRANSLATED
+ODYSSEY-TXT-004719	0x0484E18	71	A wave of miasma<FE>hits the opponent.<FE>May also lower<FE>the target Sp. Def.	FE	67	4	0x129F53C	Move description	Une vague de miasme<FE>frappe l’adversaire.<FE>Peut aussi faire<FE>baisser sa Défense Spéciale.	TRANSLATED
+ODYSSEY-TXT-004720	0x0484E60	68	The user lunges<FE>at the target.<FE>Always goes first.                  	FE	65	3	0x129F540	Move description	L’utilisateur se<FE>rue sur la cible.<FE>Touche toujours en premier.	TRANSLATED
+ODYSSEY-TXT-004721	0x0484EA4	65	The foe is hit with<FE>a rhythmic punch<FE>that may leave it<FE>confused.	FE	61	4	0x129F544	Move description	La cible reçoit un<FE>coup de poing<FE>rythmé qui peut la<FE>rendre confuse.	TRANSLATED
+ODYSSEY-TXT-004722	0x0484EE5	59	The user scatters<FE>bursts of fine<FE>spores that induce<FE>sleep.	FE	55	4	0x129F548	Move description	L’utilisateur<FE>disperse des rafales<FE>de fines spores qui<FE>provoquent le sommeil.	TRANSLATED
+ODYSSEY-TXT-004723	0x0484F20	74	Attack with a thick<FE>leek that makes the<FE>user rest during<FE>its next turn.  	FE	70	4	0x03DEB30,0x129F54C	Move description	Une attaque avec un<FE>gros poireau, qui<FE>oblige l’utilisateur<FE>à se reposer au tour suivant.	TRANSLATED
+ODYSSEY-TXT-004724	0x0484F6A	75	The user releases<FE>a horrible aura.<FE>May also make<FE>the target flinch.       	FE	71	4	0x03DE9A4,0x129F550	Move description	L’utilisateur<FE>libère une aura<FE>horrible. Peut<FE>aussi faire flancher la cible.	TRANSLATED
+ODYSSEY-TXT-004725	0x0484FB5	67	The user just flops<FE>and splashes around<FE>without having any<FE>effect.	FE	63	4	0x129F554	Move description	L’utilisateur se<FE>contente de<FE>s’ébrouer sans<FE>aucun effet.	TRANSLATED
+ODYSSEY-TXT-004726	0x0484FF8	71	The user alters its<FE>cells to liquefy<FE>itself and sharply<FE>raise Defense.	FE	67	4	0x129F558	Move description	L’utilisateur<FE>modifie ses cellules<FE>pour se liquéfier et<FE>augmenter fortement sa Défense.	TRANSLATED
+ODYSSEY-TXT-004727	0x048503F	76	A large pincer is<FE>used to hammer the<FE>foe. It has a high<FE>critical-hit ratio.	FE	72	4	0x129F55C	Move description	Une grande pince<FE>sert à marteler<FE>la cible. Taux de<FE>coups critiques élevé.	TRANSLATED
+ODYSSEY-TXT-004728	0x048508B	73	The user explodes<FE>to inflict terrible<FE>damage even while<FE>fainting itself.	FE	69	4	0x129F560	Move description	L’utilisateur<FE>explose pour infliger<FE>des dégâts terribles,<FE>quitte à s’évanouir.	TRANSLATED
+ODYSSEY-TXT-004729	0x04850D4	64	The foe is raked<FE>with sharp claws or<FE>scythes two to five<FE>times.	FE	60	4	0x129F564	Move description	La cible est lacérée<FE>par des griffes ou<FE>des faux, deux à<FE>cinq fois de suite.	TRANSLATED
+ODYSSEY-TXT-004730	0x0485114	74	The user throws a<FE>bone that hits the<FE>foe once, then once<FE>again on return.	FE	70	4	0x129F568	Move description	L’utilisateur lance<FE>un os qui touche la<FE>cible une fois, puis<FE>encore une fois au retour.	TRANSLATED
+ODYSSEY-TXT-004731	0x0485139	37	foe once, then once<FE>again on return.	FE	35	2	0x1AFC5FC	fragment, overlapping pointer	la cible une fois,<FE>puis encore une fois au retour.	TRANSLATED
+ODYSSEY-TXT-004732	0x048515E	79	The user sleeps for<FE>two turns to fully<FE>restore HP and heal<FE>any status problem.	FE	75	4	0x03DE94C,0x129F56C	Move description	L’utilisateur dort<FE>pendant deux tours<FE>pour restaurer tous<FE>ses PV et soigner tout problème de statut.	TRANSLATED
+ODYSSEY-TXT-004733	0x04851AD	66	Large boulders are<FE>hurled at the foe.<FE>It may make the<FE>foe flinch.	FE	62	4	0x129F570	Move description	De gros rochers<FE>sont lancés sur la<FE>cible. Peuvent la<FE>faire flancher.	TRANSLATED
+ODYSSEY-TXT-004734	0x04851EF	66	The foe is attacked<FE>with sharp fangs.<FE>It may make the<FE>foe flinch.	FE	62	4	0x129F574	Move description	La cible est<FE>attaquée par des<FE>crocs acérés. Peut<FE>la faire flancher.	TRANSLATED
+ODYSSEY-TXT-004735	0x0485231	70	Light energy is<FE>released at once.<FE>May also lower<FE>the target Sp. Def. 	FE	66	4	0x03DE374,0x129F578	Move description	De l’énergie<FE>lumineuse est<FE>libérée d’un coup.<FE>Peut baisser la Défense Spéciale de la cible.	TRANSLATED
+ODYSSEY-TXT-004736	0x04852B8	73	A simultaneous<FE>3-beam attack that<FE>may paralyze, burn,<FE>or freeze the foe.	FE	69	4	0x129F580	Move description	Une attaque<FE>simultanée à 3<FE>rayons qui peut<FE>paralyser, brûler ou geler la cible.	TRANSLATED
+ODYSSEY-TXT-004737	0x0485301	59	The user attacks<FE>with sharp fangs<FE>and halves the<FE>foe’s HP.	FE	55	4	0x129F584	Move description	L’utilisateur<FE>attaque avec des<FE>crocs acérés et<FE>divise par deux les PV de la cible.	TRANSLATED
+ODYSSEY-TXT-004738	0x048533C	70	The foe is slashed<FE>with claws, etc.<FE>It has a high<FE>critical-hit ratio.	FE	66	4	0x129F588	Move description	La cible est<FE>lacérée par des<FE>griffes, etc. Taux<FE>de coups critiques élevé.	TRANSLATED
+ODYSSEY-TXT-004739	0x0485382	60	The user creates a<FE>decoy using one-<FE>quarter of its full<FE>HP.	FE	56	4	0x129F58C	Move description	L’utilisateur crée<FE>un leurre en<FE>utilisant un quart<FE>de ses PV max.	TRANSLATED
+ODYSSEY-TXT-004740	0x04853BE	71	An attack that is<FE>used only if there<FE>is no PP. It also<FE>hurts the user.	FE	67	4	0x129F590	Move description	Une attaque utilisée<FE>seulement s’il ne<FE>reste plus de PP.<FE>Elle blesse aussi l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004741	0x0485446	69	A 3-kick attack<FE>that becomes more<FE>powerful with each<FE>successive hit.	FE	65	4	0x129F598	Move description	Une attaque en<FE>3 coups de pied,<FE>de plus en plus<FE>puissants à chaque coup.	TRANSLATED
+ODYSSEY-TXT-004742	0x048548B	75	An attack that may<FE>take the foe’s held<FE>item if the user<FE>isn’t holding one.	FE	71	4	0x129F59C	Move description	Une attaque qui<FE>peut voler l’objet<FE>tenu de la cible si<FE>l’utilisateur n’en tient pas.	TRANSLATED
+ODYSSEY-TXT-004743	0x04854D6	71	The user attacks<FE>with an electric<FE>net. Also lowers<FE>the Speed stat.    	FE	67	4	0x129F5A0	Move description	L’utilisateur<FE>attaque avec un<FE>filet électrique.<FE>Baisse aussi la Vitesse.	TRANSLATED
+ODYSSEY-TXT-004744	0x048551D	67	The user predicts<FE>the foe’s action to<FE>ensure its next<FE>attack hits.	FE	63	4	0x129F5A4	Move description	L’utilisateur prédit<FE>l’action de la cible<FE>pour garantir que<FE>sa prochaine attaque touche.	TRANSLATED
+ODYSSEY-TXT-004745	0x0485560	74	A sleeping foe is<FE>shown a nightmare<FE>that inflicts some<FE>damage every turn.	FE	70	4	0x129F5A8	Move description	Un cauchemar est<FE>montré à une cible<FE>endormie, infligeant<FE>des dégâts chaque tour.	TRANSLATED
+ODYSSEY-TXT-004746	0x04855AA	63	The user makes a<FE>fiery charge at the<FE>foe. It may cause<FE>a burn.	FE	59	4	0x129F5AC	Move description	L’utilisateur<FE>effectue une charge<FE>enflammée. Peut<FE>causer une brûlure.	TRANSLATED
+ODYSSEY-TXT-004747	0x04855E9	70	An attack that can<FE>be used only while<FE>asleep. It may<FE>cause flinching.	FE	66	4	0x129F5B0	Move description	Une attaque utilisable<FE>uniquement en<FE>dormant. Peut<FE>provoquer un flanchement.	TRANSLATED
+ODYSSEY-TXT-004748	0x048562F	74	A move that works<FE>differently for the<FE>Ghost-type and all<FE>the other types.	FE	70	4	0x129F5B4	Move description	Une capacité qui agit<FE>différemment sur le<FE>type Spectre et sur<FE>tous les autres types.	TRANSLATED
+ODYSSEY-TXT-004749	0x0485679	72	A desperate attack<FE>that becomes more<FE>powerful the less<FE>HP the user has.	FE	68	4	0x129F5B8	Move description	Une attaque désespérée<FE>qui devient plus<FE>puissante quand les<FE>PV de l’utilisateur baissent.	TRANSLATED
+ODYSSEY-TXT-004750	0x04856C1	75	The user changes<FE>type to make itself<FE>resistant to the<FE>last attack it took.	FE	71	4	0x129F5BC	Move description	L’utilisateur change<FE>de type pour devenir<FE>résistant à la<FE>dernière attaque subie.	TRANSLATED
+ODYSSEY-TXT-004751	0x048570C	70	A vortex of air is<FE>shot at the foe.<FE>It has a high<FE>critical-hit ratio.	FE	66	4	0x129F5C0	Move description	Un tourbillon d’air<FE>est tiré sur la<FE>cible. Taux de<FE>coups critiques élevé.	TRANSLATED
+ODYSSEY-TXT-004752	0x0485752	70	Cotton-like spores<FE>cling to the foe,<FE>sharply reducing<FE>its Speed stat.	FE	66	4	0x129F5C4	Move description	Des spores<FE>cotonneuses<FE>s’accrochent à la<FE>cible, réduisant fortement sa Vitesse.	TRANSLATED
+ODYSSEY-TXT-004753	0x0485798	71	An all-out attack<FE>that becomes more<FE>powerful the less<FE>HP the user has.	FE	67	4	0x129F5C8	Move description	Une attaque totale<FE>qui devient plus<FE>puissante quand les<FE>PV de l’utilisateur baissent.	TRANSLATED
+ODYSSEY-TXT-004754	0x04857DF	92	An attack that does<FE>double damage to a<FE>target affected by<FE>a status problem.                	FE	88	4	0x129F5CC	Move description	Une attaque qui<FE>inflige le double<FE>des dégâts à une<FE>cible affectée par un problème de statut.	TRANSLATED
+ODYSSEY-TXT-004755	0x0485857	74	Enables the user to<FE>evade all attacks.<FE>It may fail if used<FE>in succession.	FE	70	4	0x03DE4A8,0x129F5D4	Move description	Permet à<FE>l’utilisateur<FE>d’esquiver toute<FE>attaque. Peut échouer si utilisée à la suite.	TRANSLATED
+ODYSSEY-TXT-004756	0x04858A1	65	A punch thrown at<FE>blinding speed.<FE>It is certain to<FE>strike first.	FE	61	4	0x129F5D8	Move description	Un coup de poing<FE>lancé à une vitesse<FE>aveuglante. Il<FE>touche toujours en premier.	TRANSLATED
+ODYSSEY-TXT-004757	0x04858E2	65	Frightens the foe<FE>with a scary face<FE>to sharply reduce<FE>its Speed.	FE	61	4	0x129F5DC	Move description	Effraie la cible<FE>avec une mine<FE>terrifiante,<FE>réduisant fortement sa Vitesse.	TRANSLATED
+ODYSSEY-TXT-004758	0x0485923	72	The user draws up<FE>close to the foe<FE>disarmingly, then<FE>hits without fail.	FE	68	4	0x129F5E0	Move description	L’utilisateur<FE>s’approche de la<FE>cible avec charme,<FE>puis frappe sans jamais rater.	TRANSLATED
+ODYSSEY-TXT-004759	0x048596B	67	The user kisses<FE>the foe with sweet<FE>cuteness that<FE>causes confusion.	FE	63	4	0x129F5E4	Move description	L’utilisateur<FE>embrasse la cible<FE>avec une douceur<FE>mignonne qui provoque la confusion.	TRANSLATED
+ODYSSEY-TXT-004760	0x04859AE	68	The user maximizes<FE>its Attack stat at<FE>the cost of half<FE>its full HP.	FE	64	4	0x129F5E8	Move description	L’utilisateur<FE>maximise son Attaque<FE>au prix de la moitié<FE>de ses PV max.	TRANSLATED
+ODYSSEY-TXT-004761	0x04859F2	62	Filthy sludge is<FE>hurled at the foe.<FE>It may poison the<FE>target.	FE	58	4	0x03DE7EC,0x129F5EC	Move description	De la boue infecte<FE>est lancée sur la<FE>cible. Peut<FE>l’empoisonner.	TRANSLATED
+ODYSSEY-TXT-004762	0x0485A30	74	Mud is hurled in<FE>the foe’s face to<FE>inflict damage and<FE>lower its accuracy.	FE	70	4	0x129F5F0	Move description	De la boue est<FE>lancée au visage de<FE>la cible, infligeant<FE>des dégâts et réduisant sa précision.	TRANSLATED
+ODYSSEY-TXT-004763	0x0485AC1	75	A trap of spikes is<FE>laid around the<FE>foe’s party to hurt<FE>foes switching in.	FE	71	4	0x129F5F8	Move description	Un piège de piquants<FE>est posé autour du<FE>camp adverse pour<FE>blesser les Pokémon envoyés au combat.	TRANSLATED
+ODYSSEY-TXT-004764	0x0485B0C	73	An electric blast is<FE>fired like a cannon<FE>to inflict damage<FE>and paralyze.	FE	69	4	0x129F5FC	Move description	Une décharge<FE>électrique est tirée<FE>comme un boulet de<FE>canon, infligeant des dégâts et paralysant.	TRANSLATED
+ODYSSEY-TXT-004765	0x0485B55	71	The user hurls<FE>chunks of ice<FE>at the target.<FE>Always goes first.        	FE	67	4	0x129F600	Move description	L’utilisateur<FE>projette des<FE>fragments de glace<FE>sur la cible. Touche toujours en premier.	TRANSLATED
+ODYSSEY-TXT-004766	0x0485B9C	66	The user extends<FE>its shadow and<FE>attacks.<FE>Always goes first.      	FE	62	4	0x129F604	Move description	L’utilisateur<FE>étend son ombre et<FE>attaque. Touche<FE>toujours en premier.	TRANSLATED
+ODYSSEY-TXT-004767	0x0485BDE	70	The foe is attacked<FE>with a shock wave.                               	FE	68	2	0x03DE920	Move description	La cible est attaquée<FE>par une onde de choc.	TRANSLATED
+ODYSSEY-TXT-004768	0x0485C24	66	A chilling wind is<FE>used to attack.<FE>It also lowers the<FE>Speed stat.	FE	62	4	0x129F60C	Move description	Un vent glacial est<FE>utilisé pour attaquer.<FE>Il réduit aussi la<FE>Vitesse.	TRANSLATED
+ODYSSEY-TXT-004769	0x0485C66	74	Enables the user to<FE>evade all attacks.<FE>It may fail if used<FE>in succession.	FE	70	4	0x129F610	Move description	Permet à<FE>l’utilisateur<FE>d’esquiver toute<FE>attaque. Peut échouer si utilisée à la suite.	TRANSLATED
+ODYSSEY-TXT-004770	0x0485CB0	64	The user strikes<FE>the foe with a bone<FE>in hand two to five<FE>times.	FE	60	4	0x129F614	Move description	L’utilisateur<FE>frappe la cible avec<FE>un os tenu en main,<FE>deux à cinq fois.	TRANSLATED
+ODYSSEY-TXT-004771	0x0485CF0	64	The user locks on<FE>to the foe, making<FE>the next move sure<FE>to hit.	FE	60	4	0x129F618	Move description	L’utilisateur<FE>verrouille sa cible,<FE>rendant sa prochaine<FE>attaque certaine de toucher.	TRANSLATED
+ODYSSEY-TXT-004772	0x0485D30	71	The user thrashes<FE>about for two to<FE>three turns, then<FE>becomes confused.	FE	67	4	0x129F61C	Move description	L’utilisateur se<FE>déchaîne pendant<FE>deux à trois tours,<FE>puis devient confus.	TRANSLATED
+ODYSSEY-TXT-004773	0x0485D77	74	A 5-turn sandstorm<FE>that damages all<FE>types except Rock,<FE>Ground, and Steel.	FE	70	4	0x03DE818,0x129F620	Move description	Une tempête de<FE>sable de 5 tours<FE>qui endommage tous<FE>les types sauf Roche, Sol et Acier.	TRANSLATED
+ODYSSEY-TXT-004774	0x0485DC1	72	A harsh attack that<FE>absorbs half the<FE>damage it inflicted<FE>to restore HP.	FE	68	4	0x03DE500,0x129F624	Move description	Une attaque<FE>brutale qui absorbe<FE>la moitié des<FE>dégâts infligés pour restaurer des PV.	TRANSLATED
+ODYSSEY-TXT-004775	0x0485E09	76	The user endures<FE>any hit with 1 HP<FE>left. It may fail if<FE>used in succession.	FE	72	4	0x129F628	Move description	L’utilisateur<FE>encaisse toute<FE>attaque en gardant<FE>1 PV. Peut échouer si utilisée à la suite.	TRANSLATED
+ODYSSEY-TXT-004776	0x0485E55	75	The foe is charmed<FE>by the user’s cute<FE>appeals, sharply<FE>cutting its Attack.	FE	71	4	0x129F62C	Move description	La cible est<FE>charmée par les<FE>mimiques mignonnes<FE>de l’utilisateur, ce qui réduit fortement son Attaque.	TRANSLATED
+ODYSSEY-TXT-004777	0x0485EA0	65	A 5-turn rolling<FE>attack that becomes<FE>stronger each time<FE>it hits.	FE	61	4	0x129F630	Move description	Une attaque roulante<FE>de 5 tours qui<FE>devient plus forte<FE>à chaque coup.	TRANSLATED
+ODYSSEY-TXT-004778	0x0485EE1	67	A restrained attack<FE>that always leaves<FE>the foe with at<FE>least 1 HP.	FE	63	4	0x129F634	Move description	Une attaque<FE>contenue qui laisse<FE>toujours au moins<FE>1 PV à la cible.	TRANSLATED
+ODYSSEY-TXT-004779	0x0485F24	72	A move that makes<FE>the foe confused,<FE>but also sharply<FE>raises its Attack.	FE	68	4	0x129F638	Move description	Une capacité qui<FE>rend la cible<FE>confuse, mais<FE>augmente aussi fortement son Attaque.	TRANSLATED
+ODYSSEY-TXT-004780	0x0485F6C	74	Heals the user by<FE>up to half its full<FE>HP. It can be used<FE>to heal an ally.	FE	70	4	0x129F63C	Move description	Soigne l’utilisateur<FE>jusqu’à la moitié<FE>de ses PV max. Peut<FE>aussi soigner un allié.	TRANSLATED
+ODYSSEY-TXT-004781	0x0485FB6	63	An electrically<FE>charged tackle that<FE>may also paralyze<FE>the foe.	FE	59	4	0x129F640	Move description	Un plaquage chargé<FE>d’électricité qui<FE>peut aussi paralyser<FE>la cible.	TRANSLATED
+ODYSSEY-TXT-004782	0x0485FF5	54	An attack that<FE>grows stronger on<FE>each successive<FE>hit.	FE	50	4	0x129F644	Move description	Une attaque qui<FE>devient plus forte<FE>à chaque coup<FE>consécutif.	TRANSLATED
+ODYSSEY-TXT-004783	0x048602B	74	The foe is hit with<FE>wings of steel.<FE>It may also raise<FE>the user’s Defense.	FE	70	4	0x03DE9D0,0x129F648	Move description	La cible reçoit des<FE>ailes d’acier.<FE>Peut aussi augmenter<FE>la Défense de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004784	0x0486075	66	The user attacks<FE>with a draining<FE>punch, restoring<FE>its HP.        	FE	62	4	0x03DE1E8,0x129F64C	Move description	L’utilisateur<FE>attaque avec un<FE>poing drainant,<FE>restaurant ses PV.	TRANSLATED
+ODYSSEY-TXT-004785	0x048607A	61	ser attacks<FE>with a draining<FE>punch, restoring<FE>its HP.        	FE	57	4	0x0000D90	fragment, overlapping pointer	attaque<FE>avec un poing<FE>drainant,<FE>restaurant ses PV.	TRANSLATED
+ODYSSEY-TXT-004786	0x04860B7	78	If it is the other<FE>gender, the foe is<FE>made infatuated and<FE>unlikely to attack.	FE	74	4	0x03DE978,0x129F650	Move description	Si elle est de<FE>l’autre sexe, la<FE>cible tombe amoureuse<FE>et peine à attaquer.	TRANSLATED
+ODYSSEY-TXT-004787	0x0486105	64	While asleep, the<FE>user randomly uses<FE>one of the moves it<FE>knows.	FE	60	4	0x129F654	Move description	Pendant son sommeil,<FE>l’utilisateur emploie<FE>au hasard l’une des<FE>capacités qu’il connaît.	TRANSLATED
+ODYSSEY-TXT-004788	0x0486145	66	A soothing bell<FE>chimes to heal the<FE>status problems of<FE>all allies.	FE	62	4	0x129F658	Move description	Une clochette<FE>apaisante retentit,<FE>soignant les<FE>problèmes de statut de tous les alliés.	TRANSLATED
+ODYSSEY-TXT-004789	0x0486187	74	This attack move<FE>grows more powerful<FE>the more the user<FE>likes its Trainer.	FE	70	4	0x03DE660,0x129F65C	Move description	Cette capacité<FE>d’attaque devient<FE>plus puissante selon<FE>l’affection de l’utilisateur pour son Dresseur.	TRANSLATED
+ODYSSEY-TXT-004790	0x04861D1	74	The user stomps<FE>down on the ground<FE>lowering the Speed<FE>stat of those hit. 	FE	70	4	0x129F660	Move description	L’utilisateur<FE>frappe le sol du<FE>pied, réduisant la<FE>Vitesse des cibles touchées.	TRANSLATED
+ODYSSEY-TXT-004791	0x048621B	74	This attack move<FE>grows more powerful<FE>the less the user<FE>likes its Trainer.	FE	70	4	0x03DE558,0x129F664	Move description	Cette capacité<FE>d’attaque devient<FE>plus puissante selon<FE>le désamour de l’utilisateur pour son Dresseur.	TRANSLATED
+ODYSSEY-TXT-004792	0x0486265	70	It protects the<FE>user’s party from<FE>all status problems<FE>for five turns.	FE	66	4	0x03DE52C,0x129F668	Move description	Protège le camp de<FE>l’utilisateur de<FE>tout problème de<FE>statut pendant cinq tours.	TRANSLATED
+ODYSSEY-TXT-004793	0x04862AB	72	The user adds its<FE>HP to the foe’s HP,<FE>then equally shares<FE>the total HP.	FE	68	4	0x129F66C	Move description	L’utilisateur ajoute<FE>ses PV à ceux de<FE>la cible, puis<FE>partage le total à parts égales.	TRANSLATED
+ODYSSEY-TXT-004794	0x04862F3	61	A mystical and<FE>powerful fire<FE>attack that may<FE>inflict a burn.	FE	57	4	0x129F670	Move description	Une attaque de feu<FE>mystique et<FE>puissante qui peut<FE>infliger une brûlure.	TRANSLATED
+ODYSSEY-TXT-004795	0x0486378	79	The foe is punched<FE>with the user’s full<FE>power. It confuses<FE>the foe if it hits.	FE	75	4	0x129F678	Move description	La cible reçoit un<FE>coup de poing de<FE>pleine puissance.<FE>Elle devient confuse s’il touche.	TRANSLATED
+ODYSSEY-TXT-004796	0x04863C7	68	A brutal ramming<FE>attack delivered<FE>with a tough and<FE>impressive horn.	FE	64	4	0x129F67C	Move description	Une attaque brutale<FE>portée avec une<FE>corne robuste et<FE>impressionnante.	TRANSLATED
+ODYSSEY-TXT-004797	0x048640B	74	The foe is hit with<FE>an incredible blast<FE>of breath that may<FE>also paralyze.	FE	70	4	0x129F680	Move description	La cible reçoit un<FE>souffle incroyable<FE>qui peut aussi la<FE>paralyser.	TRANSLATED
+ODYSSEY-TXT-004798	0x0486455	74	The user switches<FE>out, passing along<FE>any stat changes<FE>to the new battler.	FE	70	4	0x129F684	Move description	L’utilisateur<FE>change de place,<FE>transmettant ses<FE>changements de stats au nouveau combattant.	TRANSLATED
+ODYSSEY-TXT-004799	0x048649F	73	Makes the foe use<FE>the move it last<FE>used repeatedly for<FE>two to six turns.	FE	69	4	0x129F688	Move description	Force la cible à<FE>répéter sans arrêt<FE>sa dernière capacité<FE>pendant deux à six tours.	TRANSLATED
+ODYSSEY-TXT-004800	0x04864E8	74	An attack move that<FE>works especially<FE>well on a foe that<FE>is switching out.	FE	70	4	0x129F68C	Move description	Une capacité<FE>d’attaque qui<FE>fonctionne<FE>particulièrement bien contre une cible qui change.	TRANSLATED
+ODYSSEY-TXT-004801	0x0486532	71	An attack that<FE>frees the user from<FE>Bind, Wrap, Leech<FE>Seed, and Spikes.	FE	67	4	0x129F690	Move description	Une attaque qui<FE>libère l’utilisateur<FE>de Ligotage,<FE>Ficelage, Vampigraine et Piquants.	TRANSLATED
+ODYSSEY-TXT-004802	0x04865BF	71	An attack with a<FE>steel-hard tail.<FE>It may lower the<FE>foe’s Defense stat.	FE	67	4	0x03DE5B0,0x129F698	Move description	Une attaque avec<FE>une queue dure comme<FE>l’acier. Peut baisser<FE>la Défense de la cible.	TRANSLATED
+ODYSSEY-TXT-004803	0x0486606	75	The foe is attacked<FE>with steel claws.<FE>It may also raise<FE>the user’s Attack.	FE	71	4	0x129F69C	Move description	La cible est<FE>attaquée avec des<FE>griffes d’acier.<FE>Peut aussi augmenter l’Attaque de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004804	0x0486651	66	Makes the user<FE>attack after the<FE>foe. In return,<FE>it will not miss.	FE	62	4	0x129F6A0	Move description	Force l’utilisateur<FE>à attaquer après la<FE>cible. En échange,<FE>il ne ratera jamais.	TRANSLATED
+ODYSSEY-TXT-004805	0x0486693	75	Restores the user’s<FE>HP. The amount of<FE>HP regained varies<FE>with the weather.	FE	71	4	0x129F6A4	Move description	Restaure les PV de<FE>l’utilisateur. La<FE>quantité varie<FE>selon la météo.	TRANSLATED
+ODYSSEY-TXT-004806	0x04866DE	75	Restores the user’s<FE>HP. The amount of<FE>HP regained varies<FE>with the weather.	FE	71	4	0x129F6A8	Move description	Restaure les PV de<FE>l’utilisateur. La<FE>quantité varie<FE>selon la météo.	TRANSLATED
+ODYSSEY-TXT-004807	0x0486729	75	Restores the user’s<FE>HP. The amount of<FE>HP regained varies<FE>with the weather.	FE	71	4	0x129F6AC	Move description	Restaure les PV de<FE>l’utilisateur. La<FE>quantité varie<FE>selon la météo.	TRANSLATED
+ODYSSEY-TXT-004808	0x0486774	67	The user hits<FE>the enemy while<FE>surfing on a wave.                  	FE	64	3	0x129F6B0	Move description	L’utilisateur frappe<FE>l’ennemi en<FE>surfant sur une vague.	TRANSLATED
+ODYSSEY-TXT-004809	0x04867B7	68	The foe is hit with<FE>double chops.<FE>It has a high<FE>critical-hit ratio.	FE	64	4	0x129F6B4	Move description	La cible reçoit<FE>deux coups tranchants.<FE>Taux de coups<FE>critiques élevé.	TRANSLATED
+ODYSSEY-TXT-004810	0x04867FB	63	A vicious twister<FE>attacks the foe.<FE>It may make the<FE>foe flinch.	FE	59	4	0x129F6B8	Move description	Une tornade vicieuse<FE>attaque la cible.<FE>Peut la faire<FE>flancher.	TRANSLATED
+ODYSSEY-TXT-004811	0x048683A	66	A heavy rain falls<FE>for five turns,<FE>powering up Water-<FE>type moves.	FE	62	4	0x03DE4D4,0x129F6BC	Move description	Une pluie battante<FE>tombe pendant cinq<FE>tours, renforçant<FE>les capacités de type Eau.	TRANSLATED
+ODYSSEY-TXT-004812	0x048687C	60	The sun blazes for<FE>five turns, powering<FE>up Fire-type<FE>moves.	FE	56	4	0x03DE3A0,0x129F6C0	Move description	Le soleil brille<FE>pendant cinq tours,<FE>renforçant les<FE>capacités de type Feu.	TRANSLATED
+ODYSSEY-TXT-004813	0x04868B8	66	The foe is crunched<FE>with sharp fangs.<FE>It may lower the<FE>foe’s Def.	FE	62	4	0x129F6C4	Move description	La cible est<FE>croquée par des<FE>crocs acérés.<FE>Peut baisser sa Défense.	TRANSLATED
+ODYSSEY-TXT-004814	0x04868FE	67	A retaliation move<FE>that pays back the<FE>foe’s special attack<FE>double.	FE	63	4	0x129F6C8	Move description	Une capacité de<FE>représailles qui<FE>rend le double des<FE>dégâts d’une attaque spéciale de la cible.	TRANSLATED
+ODYSSEY-TXT-004815	0x0486941	73	The user hypnotizes<FE>itself into copying<FE>any stat change<FE>made by the foe.	FE	69	4	0x129F6CC	Move description	L’utilisateur<FE>s’hypnotise pour<FE>copier tout<FE>changement de stat effectué par la cible.	TRANSLATED
+ODYSSEY-TXT-004816	0x048698A	69	A blindingly speedy<FE>charge attack that<FE>always goes before<FE>any other.	FE	65	4	0x129F6D0	Move description	Une charge<FE>aveuglante de<FE>rapidité qui touche<FE>toujours avant les autres.	TRANSLATED
+ODYSSEY-TXT-004817	0x04869CF	76	An ancient power is<FE>used to attack. It<FE>may also raise all<FE>the user’s stats.	FE	72	4	0x129F6D4	Move description	Une puissance<FE>ancestrale est<FE>utilisée pour<FE>attaquer. Peut aussi augmenter toutes les stats de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004818	0x0486A1B	71	A shadowy blob is<FE>hurled at the foe.<FE>May also lower the<FE>foe’s Sp. Def.	FE	67	4	0x03DE6E4,0x129F6D8	Move description	Une masse d’ombre<FE>est lancée sur la<FE>cible. Peut aussi<FE>baisser sa Défense Spéciale.	TRANSLATED
+ODYSSEY-TXT-004819	0x0486A62	68	Attacks with a<FE>storm of leaves.<FE>Harshly reduces<FE>the user’s Sp. Atk.	FE	64	4	0x129F6DC	Move description	Attaque avec une<FE>tempête de feuilles.<FE>Réduit fortement<FE>l’Attaque Spéciale de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004820	0x0486AA6	73	An attack that may<FE>also cut Defense.<FE>It can also smash<FE>cracked boulders.	FE	69	4	0x03DEB5C,0x129F6E0	Move description	Une attaque qui<FE>peut aussi réduire<FE>la Défense. Elle<FE>peut aussi briser les rochers fissurés.	TRANSLATED
+ODYSSEY-TXT-004821	0x0486AEF	71	The foe is trapped<FE>in a fast, vicious<FE>whirlpool for two<FE>to five turns.	FE	67	4	0x129F6E4	Move description	La cible est piégée<FE>dans un tourbillon<FE>rapide et violent<FE>pendant deux à cinq tours.	TRANSLATED
+ODYSSEY-TXT-004822	0x0486B7E	73	An attack that hits<FE>first and causes<FE>flinching. Usable<FE>only on 1st turn.	FE	69	4	0x129F6EC	Move description	Une attaque qui<FE>touche en premier<FE>et fait flancher.<FE>Utilisable seulement au 1er tour.	TRANSLATED
+ODYSSEY-TXT-004823	0x0486BC7	73	The user attacks in<FE>an uproar that<FE>prevents sleep for<FE>two to five turns.	FE	69	4	0x129F6F0	Move description	L’utilisateur<FE>attaque dans un<FE>vacarme qui empêche<FE>de dormir pendant deux à cinq tours.	TRANSLATED
+ODYSSEY-TXT-004824	0x0486C10	69	The user charges<FE>up power for use<FE>later. It can be<FE>used three times.	FE	65	4	0x129F6F4	Move description	L’utilisateur<FE>accumule de la<FE>puissance pour plus<FE>tard. Utilisable trois fois.	TRANSLATED
+ODYSSEY-TXT-004825	0x0486C55	64	The energy it built<FE>using Stockpile is<FE>absorbed to restore<FE>HP. 	FE	60	4	0x129F6FC	Move description	L’énergie accumulée<FE>grâce à Stockage est<FE>absorbée pour<FE>restaurer des PV.	TRANSLATED
+ODYSSEY-TXT-004826	0x0486C95	63	The power built<FE>using Stockpile is<FE>released at once<FE>for attack	FE	59	4	0x129F6F8	Move description	La puissance<FE>accumulée grâce à<FE>Stockage est<FE>libérée d’un coup pour attaquer.	TRANSLATED
+ODYSSEY-TXT-004827	0x0486CD4	72	The user exhales a<FE>heated breath to<FE>attack. It may also<FE>inflict a burn.	FE	68	4	0x129F700	Move description	L’utilisateur<FE>expire un souffle<FE>brûlant. Peut aussi<FE>infliger une brûlure.	TRANSLATED
+ODYSSEY-TXT-004828	0x0486D64	77	It enrages the foe,<FE>making it incapable<FE>of using the same<FE>move successively.	FE	73	4	0x03DE8C8,0x129F708	Move description	Rend la cible<FE>furieuse, l’empêchant<FE>d’utiliser deux fois<FE>de suite la même capacité.	TRANSLATED
+ODYSSEY-TXT-004829	0x0486DB1	65	Flattery is used to<FE>confuse the foe,<FE>but its Sp. Atk<FE>also rises.	FE	61	4	0x129F70C	Move description	La flatterie sert à<FE>rendre la cible<FE>confuse, mais<FE>augmente aussi son Attaque Spéciale.	TRANSLATED
+ODYSSEY-TXT-004830	0x0486DF2	69	A sinister, bluish<FE>white flame is shot<FE>at the foe to<FE>inflict a burn.	FE	65	4	0x129F710	Move description	Une flamme sinistre<FE>bleu-blanc est tirée<FE>sur la cible pour<FE>lui infliger une brûlure.	TRANSLATED
+ODYSSEY-TXT-004831	0x0486E37	66	Boiling hot water<FE>is shot at the<FE>enemy. May burn<FE>the target.     	FE	62	4	0x03DEA28,0x129F714	Move description	De l’eau bouillante<FE>est projetée sur<FE>l’ennemi. Peut<FE>brûler la cible.	TRANSLATED
+ODYSSEY-TXT-004832	0x0486E79	69	An attack that is<FE>boosted if user is<FE>burned, poisoned,<FE>or paralyzed.	FE	65	4	0x03DE8F4,0x129F718	Move description	Une attaque<FE>renforcée si<FE>l’utilisateur est<FE>brûlé, empoisonné ou paralysé.	TRANSLATED
+ODYSSEY-TXT-004833	0x0486EBE	70	An attack that is<FE>executed last.<FE>The user flinches<FE>if hit beforehand.	FE	66	4	0x129F71C	Move description	Une attaque<FE>exécutée en<FE>dernier. L’utilisateur<FE>flanche s’il est touché avant.	TRANSLATED
+ODYSSEY-TXT-004834	0x0486F04	76	The user slams<FE>the target with its<FE>head. May also make<FE>the target flinch.  	FE	72	4	0x129F720	Move description	L’utilisateur<FE>percute la cible avec<FE>sa tête. Peut aussi<FE>la faire flancher.	TRANSLATED
+ODYSSEY-TXT-004835	0x0486F50	70	The user draws<FE>attention to itself,<FE>making foes attack<FE>only the user.	FE	66	4	0x129F724	Move description	L’utilisateur attire<FE>l’attention sur lui,<FE>forçant les cibles à<FE>l’attaquer uniquement lui.	TRANSLATED
+ODYSSEY-TXT-004836	0x0486F96	62	An attack that<FE>changes type<FE>depending on the<FE>user’s location.	FE	58	4	0x129F728	Move description	Une attaque qui<FE>change de type<FE>selon l’endroit où<FE>se trouve l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004837	0x0486FD4	64	The user charges<FE>power to boost the<FE>Electric move it<FE>uses next.	FE	60	4	0x129F72C	Move description	L’utilisateur<FE>accumule de la<FE>puissance pour<FE>renforcer sa prochaine capacité de type Électrik.	TRANSLATED
+ODYSSEY-TXT-004838	0x0487014	72	The foe is taunted<FE>into a rage that<FE>allows it to use<FE>only attack moves.	FE	68	4	0x03DE3CC,0x129F730	Move description	La cible est<FE>provoquée dans une<FE>rage qui ne lui<FE>permet d’utiliser que des capacités offensives.	TRANSLATED
+ODYSSEY-TXT-004839	0x048705C	63	A move that boosts<FE>the power of the<FE>ally’s attack in a<FE>battle.	FE	59	4	0x129F734	Move description	Une capacité qui<FE>augmente la<FE>puissance de<FE>l’attaque d’un allié en combat.	TRANSLATED
+ODYSSEY-TXT-004840	0x048709B	66	A move that tricks<FE>the foe into<FE>trading held items<FE>with the user.	FE	62	4	0x129F738	Move description	Une capacité qui<FE>piège la cible dans<FE>un échange d’objets<FE>tenus avec l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004841	0x04870DD	65	Launches a steel<FE>bomb that sticks<FE>to the target.<FE>Never misses.  	FE	61	4	0x129F73C	Move description	Lance une bombe<FE>d’acier qui se colle<FE>à la cible. Ne<FE>rate jamais.	TRANSLATED
+ODYSSEY-TXT-004842	0x048711E	69	A self-healing move<FE>that restores half<FE>the full HP on the<FE>next turn.	FE	65	4	0x129F740	Move description	Une capacité<FE>d’auto-guérison qui<FE>restaure la moitié<FE>des PV max. au tour suivant.	TRANSLATED
+ODYSSEY-TXT-004843	0x0487163	62	Launches a mud ball.<FE>May also lower the<FE>target’s accuracy.   	FE	59	3	0x129F744	Move description	Lance une boule de<FE>boue. Peut aussi baisser<FE>la précision de la cible.	TRANSLATED
+ODYSSEY-TXT-004844	0x04871A1	72	The user lays roots<FE>that restore HP on<FE>every turn.<FE>It can’t switch out.	FE	68	4	0x129F748	Move description	L’utilisateur pose<FE>des racines qui<FE>restaurent des PV<FE>chaque tour. Il ne peut pas changer de place.	TRANSLATED
+ODYSSEY-TXT-004845	0x04871E9	75	A powerful attack,<FE>but it also lowers<FE>the user’s Attack<FE>and Defense stats.	FE	71	4	0x129F74C	Move description	Une attaque<FE>puissante, mais qui<FE>baisse aussi<FE>l’Attaque et la Défense de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004846	0x0487234	66	The user slashes at<FE>the foe by crossing<FE>scythes or claws.        	FE	63	3	0x129F750	Move description	L’utilisateur lacère<FE>la cible en croisant<FE>des faux ou des griffes.	TRANSLATED
+ODYSSEY-TXT-004847	0x0487276	52	Instant slash with<FE>a high critical<FE>hit ratio.      	FE	49	3	0x129F754	Move description	Une taillade<FE>instantanée avec un<FE>fort taux de coups critiques.	TRANSLATED
+ODYSSEY-TXT-004848	0x04872AA	72	An attack move that<FE>gains in intensity if<FE>the target has hurt<FE>the user.	FE	68	4	0x129F758	Move description	Une capacité<FE>d’attaque qui gagne<FE>en intensité si la<FE>cible a blessé l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-004849	0x04872F2	70	An attack that also<FE>breaks any barrier<FE>like Light Screen<FE>and Reflect.	FE	66	4	0x03DE710,0x129F75C	Move description	Une attaque qui<FE>brise aussi toute<FE>barrière comme<FE>Mur Lumière et Protection.	TRANSLATED
+ODYSSEY-TXT-004850	0x0487338	64	A huge yawn lulls<FE>the foe into falling<FE>asleep on the next<FE>turn.	FE	60	4	0x129F760	Move description	Un grand bâillement<FE>plonge la cible dans<FE>le sommeil au<FE>tour suivant.	TRANSLATED
+ODYSSEY-TXT-004851	0x0487378	70	Knocks down the<FE>foe’s held item to<FE>prevent its use<FE>during the battle.	FE	66	4	0x129F764	Move description	Fait tomber l’objet<FE>tenu par la cible<FE>pour empêcher son<FE>usage pendant le combat.	TRANSLATED
+ODYSSEY-TXT-004852	0x04873BE	61	Gains power the<FE>fewer HP the user<FE>has compared with<FE>the foe.	FE	57	4	0x129F768	Move description	Gagne en puissance<FE>quand l’utilisateur<FE>a moins de PV que<FE>la cible.	TRANSLATED
+ODYSSEY-TXT-004853	0x04873FB	65	The higher the<FE>user’s HP, the more<FE>powerful this<FE>attack becomes.	FE	61	4	0x129F76C	Move description	Plus les PV de<FE>l’utilisateur sont<FE>élevés, plus cette<FE>attaque devient puissante.	TRANSLATED
+ODYSSEY-TXT-004854	0x0487409	51	<FE>user’s HP, the more<FE>powerful this<FE>attack becomes.	FE	47	4	0x0706C60	fragment, overlapping pointer	les PV de<FE>l’utilisateur sont<FE>élevés, plus cette<FE>attaque devient puissante.	TRANSLATED
+ODYSSEY-TXT-004855	0x048743C	67	The user employs<FE>its psychic power<FE>to swap abilities<FE>with the foe.	FE	63	4	0x03DE9FC,0x129F770	Move description	L’utilisateur<FE>emploie son pouvoir<FE>psychique pour<FE>échanger son talent avec la cible.	TRANSLATED
+ODYSSEY-TXT-004856	0x04874C1	76	A self-healing move<FE>that cures the user<FE>of a poisoning,<FE>burn, or paralysis.	FE	72	4	0x129F778	Move description	Une capacité<FE>d’auto-guérison qui<FE>soigne l’utilisateur<FE>d’un empoisonnement, d’une brûlure ou d’une paralysie.	TRANSLATED
+ODYSSEY-TXT-004857	0x048750D	75	Attacks by breathing<FE>a hot fire. May also<FE>lower the target’s<FE>Sp. Atk.     	FE	71	4	0x129F77C	Move description	Attaque en soufflant<FE>un feu brûlant.<FE>Peut aussi baisser<FE>l’Attaque Spéciale de la cible.	TRANSLATED
+ODYSSEY-TXT-004858	0x0487558	66	Steals the effects<FE>of the foe’s<FE>healing or status-<FE>changing move.	FE	62	4	0x129F780	Move description	Vole les effets de<FE>la capacité de soin<FE>ou de changement<FE>de statut de la cible.	TRANSLATED
+ODYSSEY-TXT-004859	0x048759A	75	A stab attack that<FE>may also poison<FE>the target.                            	FE	72	3	0x129F784	Move description	Une attaque perforante<FE>qui peut aussi<FE>empoisonner la cible.	TRANSLATED
+ODYSSEY-TXT-004860	0x04875E5	67	The user dives<FE>underwater on the<FE>first turn and<FE>strikes next turn.	FE	63	4	0x03DEBB4	Move description	L’utilisateur plonge<FE>sous l’eau au<FE>premier tour et<FE>frappe au tour suivant.	TRANSLATED
+ODYSSEY-TXT-004861	0x0487628	67	A quick flurry of<FE>straight-arm<FE>punches that hit<FE>two to five times.	FE	63	4	0x129F78C	Move description	Une rafale rapide<FE>de coups de poing<FE>directs qui touchent<FE>deux à cinq fois.	TRANSLATED
+ODYSSEY-TXT-004862	0x048766B	60	The user slams a<FE>barrage of seed on<FE>the foe from above.    	FE	57	3	0x129F790	Move description	L’utilisateur déverse<FE>une volée de graines<FE>sur la cible depuis le ciel.	TRANSLATED
+ODYSSEY-TXT-004863	0x04876A7	63	The user flashes a<FE>light that sharply<FE>raises its Sp. Atk<FE>stat.	FE	59	4	0x129F794	Move description	L’utilisateur émet<FE>un éclair qui<FE>augmente fortement<FE>son Attaque Spéciale.	TRANSLATED
+ODYSSEY-TXT-004864	0x0487771	74	The user lands and<FE>rest its body.<FE>It restores half<FE>the user’s HP.        	FE	70	4	0x129F7A0	Move description	L’utilisateur<FE>atterrit et repose<FE>son corps. Restaure<FE>la moitié de ses PV.	TRANSLATED
+ODYSSEY-TXT-004865	0x04877F3	71	A fiery kick with a<FE>high critical-hit<FE>ratio. It may also<FE>burn the foe.	FE	67	4	0x129F7A8	Move description	Un coup de pied<FE>enflammé avec un<FE>fort taux de coups<FE>critiques. Peut aussi brûler la cible.	TRANSLATED
+ODYSSEY-TXT-004866	0x048783A	64	The user scatters<FE>powder to draw<FE>attention to itself.          	FE	61	3	0x129F7AC	Move description	L’utilisateur<FE>disperse de la poudre<FE>pour attirer l’attention sur lui.	TRANSLATED
+ODYSSEY-TXT-004867	0x048787A	62	The user swings<FE>its stone axe<FE>at the target.<FE>High Crit ratio.	FE	58	4	0x129F7B0	Move description	L’utilisateur<FE>abat sa hache de<FE>pierre sur la cible.<FE>Taux de coups critiques élevé.	TRANSLATED
+ODYSSEY-TXT-004868	0x04878F5	61	The user slacks off<FE>and restores its HP<FE>by half its full<FE>HP.	FE	57	4	0x129F7B8	Move description	L’utilisateur se<FE>relâche et restaure<FE>la moitié de ses<FE>PV max.	TRANSLATED
+ODYSSEY-TXT-004869	0x0487932	68	The user lets loose<FE>a horribly loud<FE>shout with the<FE>power to damage.	FE	64	4	0x129F7BC	Move description	L’utilisateur pousse<FE>un cri horriblement<FE>fort capable<FE>d’infliger des dégâts.	TRANSLATED
+ODYSSEY-TXT-004870	0x0487976	70	The foe is bitten<FE>with toxic fangs.<FE>It may also badly<FE>poison the foe.	FE	66	4	0x129F7C0	Move description	La cible est mordue<FE>par des crocs<FE>toxiques. Peut aussi<FE>l’empoisonner gravement.	TRANSLATED
+ODYSSEY-TXT-004871	0x04879BC	75	The foe is attacked<FE>with sharp claws.<FE>It may also lower<FE>the foe’s Defense.	FE	71	4	0x129F7C4	Move description	La cible est<FE>attaquée par des<FE>griffes acérées.<FE>Peut aussi baisser sa Défense.	TRANSLATED
+ODYSSEY-TXT-004872	0x0487A07	76	The user attacks<FE>everything around it<FE>with a terrible<FE>explosive sound.     	FE	72	4	0x129F7C8	Move description	L’utilisateur<FE>attaque tout ce qui<FE>l’entoure avec un<FE>terrible son explosif.	TRANSLATED
 ODYSSEY-TXT-004873	0x0487A53	75	The target is<FE>infested and<FE>attacked for four<FE>to five turns.               	FE	71	4	0x129F7CC	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-004874	0x0487A9E	77	The foe is hit with<FE>a hard, fast punch.<FE>It may also raise<FE>the user’s Attack.	FE	73	4	0x129F7D0	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-004875	0x0487AEB	68	An attack using a<FE>startling shout.<FE>It also may make<FE>the foe flinch.	FE	64	4	0x129F7D4	UNKNOWN		UNTRANSLATED
