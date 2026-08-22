@@ -225,3 +225,17 @@ Stratum (Nth)	Nieme Strate	place-name-custom	terme recurrent des zones "donjon" 
 PETALBURG GYM	STADE DE JOLIACITE	place	terme officiel FR (Petalburg City = Joliacite, jeux Hoenn)
 VERMILION CITY port	port de CARMIN-SUR-MER	place	coherent avec CARMIN-SUR-MER deja etabli
 Miltank	Écrémeuh	pokemon-name	nom officiel FR
+Oran Berry	Baie Ora	item-name	terme officiel FR
+Leppa Berry	Baie Sinelle	item-name	terme officiel FR
+Pecha Berry	Baie Rozbouif	item-name	REVIEW: nom officiel FR probable, a verifier
+Cheri Berry	Baie Fraise	item-name	REVIEW: nom officiel FR probable, a verifier
+Chesto Berry	Baie Boronde	item-name	REVIEW: nom officiel FR probable, a verifier
+Thunderstone	Pierre Tonnerre	item-name	terme officiel FR
+Dawn Stone	Pierre Aube	item-name	terme officiel FR
+Shiny Stone	Pierre Lustree	item-name	terme officiel FR
+Red Shard	Eclat Rouge	item-name	terme officiel FR
+Sun Stone	Pierre Soleil	item-name	terme officiel FR
+Safeguard	Rune Protect	move-name	terme officiel FR
+EXP. Points	Points d'Exp.	gameplay	terme officiel FR
+fainted	est K.O.	gameplay	terme officiel FR (battle message)
+Nyx (character)	Nyx	character	nom propre custom Odyssey, non traduit
