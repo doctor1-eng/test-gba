@@ -49,6 +49,23 @@ Lorelei	LORELEI	character	officiel, non traduit
 Giovanni	GIOVANNI	character	officiel, non traduit
 Bill	BILL	character	officiel
 Prof. Oak	PR CHEN	character	officiel — REVIEW: utiliser seulement si le nom apparaît explicitement, ne pas remplacer "PROF. OAK" sans certitude contextuelle
+Misty	ONDINE	character	officiel (GYM LEADER Azuria)
+
+# --- Attaques / lieux additionnels ---
+MEGA PUNCH	MÉGAPOING	move	officiel
+MEGA KICK	MÉGA-PIED	move	REVIEW: à confirmer (traduction approximative)
+SUBSTITUTE	CLONAGE	move	officiel
+THUNDER WAVE	CAGE-ÉCLAIR	move	officiel
+Viridian Forest	FORÊT DE JADE	place	officiel
+Power Plant	CENTRALE	place	REVIEW: nom complet officiel non confirmé (ex. "Centrale électrique")
+Pattern Bush	BUISSON MOTIF	place	REVIEW: traduction littérale, non confirmé
+
+# --- Pokémon additionnels ---
+GRIMER	TADMORV	pokemon	officiel
+PIDGEOTTO	ROUCOUPS	pokemon	officiel
+VOLTORB	VOLTORBE	pokemon	officiel
+CLOYSTER	CRUSTABRI	pokemon	officiel
+MAGIKARP	MAGICARPE	pokemon	officiel
 
 # --- Pokémon (noms officiels FR) ---
 ZUBAT	NOSFERAPTI	pokemon	officiel
