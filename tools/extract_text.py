@@ -76,30 +76,69 @@ def analyze(entry):
     return codes, n_lines, n_chars
 
 
+def load_existing():
+    """Load the current TSV (if any) so re-extraction never renumbers or
+    loses translation work already done: existing offset -> row is kept
+    as-is (id, french, context, status untouched), only its english/
+    control_codes/etc. get refreshed from a fresh decode. Brand-new
+    offsets get the next free ID."""
+    import os
+    if not os.path.exists(OUT_PATH):
+        return {}, 0
+    rows = list(csv.DictReader(open(OUT_PATH, encoding="utf-8"), delimiter="\t"))
+    by_offset = {r["offset"]: r for r in rows}
+    max_idx = max((int(r["id"].rsplit("-", 1)[1]) for r in rows), default=0)
+    return by_offset, max_idx
+
+
 def main():
     with open(ROM_PATH, "rb") as f:
         data = f.read()
     found = scan_pointers(data)
     print(f"{len(found)} unique text strings found via {sum(len(v['refs']) for v in found.values())} valid pointers")
 
+    existing_by_offset, max_idx = load_existing()
+    next_idx = max_idx + 1
+
     rows = []
-    for idx, (target, entry) in enumerate(sorted(found.items()), start=1):
+    n_new = 0
+    n_refreshed = 0
+    for target, entry in sorted(found.items()):
+        offset_str = f"0x{target:07X}"
         codes, n_lines, n_chars = analyze(entry)
-        text_id = f"ODYSSEY-TXT-{idx:06d}"
         refs = ",".join(f"0x{r:07X}" for r in sorted(entry["refs"]))
+
+        prior = existing_by_offset.get(offset_str)
+        if prior is not None:
+            text_id = prior["id"]
+            context = prior["context"]
+            french = prior["french"]
+            status = prior["status"]
+            if prior["english"] != entry["text"]:
+                n_refreshed += 1
+        else:
+            text_id = f"ODYSSEY-TXT-{next_idx:06d}"
+            next_idx += 1
+            context = "UNKNOWN"
+            french = ""
+            status = "UNTRANSLATED"
+            n_new += 1
+
         rows.append({
             "id": text_id,
-            "offset": f"0x{target:07X}",
+            "offset": offset_str,
             "orig_size_bytes": entry["length"],
             "english": entry["text"],
             "control_codes": ";".join(codes),
             "n_chars": n_chars,
             "n_lines": n_lines,
             "references": refs,
-            "context": "UNKNOWN",
-            "french": "",
-            "status": "UNTRANSLATED",
+            "context": context,
+            "french": french,
+            "status": status,
         })
+
+    rows.sort(key=lambda r: int(r["id"].rsplit("-", 1)[1]))
 
     with open(OUT_PATH, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=[
@@ -109,7 +148,7 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
 
-    print(f"wrote {len(rows)} rows to {OUT_PATH}")
+    print(f"wrote {len(rows)} rows to {OUT_PATH} ({n_new} new, {n_refreshed} re-decoded differently, {len(rows)-n_new-n_refreshed} unchanged)")
 
 
 if __name__ == "__main__":

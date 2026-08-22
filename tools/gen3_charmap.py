@@ -21,8 +21,13 @@ Control codes (subset relevant to dialogue text):
   0xF8 xx     unknown/rare
   0x00-0xFF   see CHARMAP for printable glyphs
   0xFF        string terminator (end of text)
-  0x01        line break (new line within the same box)
-  0x02..0x0F  unused / structural in this engine (rare)
+
+NOTE: an earlier draft of this module guessed 0x01 was a "line break"
+control code. That was never empirically confirmed, and it collided
+with 0x01='À' once the French accent range was confirmed by a real
+emulator test (see TESTING.md) -- the accent mapping wins, since it's
+the one actually verified against rendered output. 0x01 is NOT in
+CONTROL_CODES below.
 """
 
 CHARMAP = {
@@ -57,9 +62,19 @@ CHARMAP = {
     0xF1: 'Ä', 0xF2: 'Ö', 0xF3: 'Ü',
     0xF4: 'ä', 0xF5: 'ö', 0xF6: 'ü',
     0xF7: 'é',  # é  (used in e.g. "Pokémon")
+
+    # CONFIRMED 2026-08-22 by real emulator test (build/Pokemon_Odyssey_CHARTEST.gba,
+    # see TESTING.md) -- promoted from HYPOTHESIS_LOWRANGE in
+    # tools/build_charset_test.py after visual confirmation.
+    0x01: 'À', 0x03: 'Â', 0x04: 'Ç', 0x05: 'È', 0x06: 'É', 0x07: 'Ê',
+    0x08: 'Ë', 0x0B: 'Î', 0x0C: 'Ï', 0x0F: 'Ô', 0x10: 'Œ', 0x11: 'Ù',
+    0x13: 'Û',
+    0x16: 'à', 0x18: 'â', 0x19: 'ç', 0x1A: 'è', 0x1B: 'é', 0x1C: 'ê',
+    0x1D: 'ë', 0x20: 'î', 0x21: 'ï', 0x24: 'ô', 0x25: 'œ', 0x26: 'ù',
+    0x28: 'û',
 }
 
-CONTROL_CODES = {0xFA, 0xFB, 0xFC, 0xFD, 0xFE, 0xF9, 0xF8, 0x01}
+CONTROL_CODES = {0xFA, 0xFB, 0xFC, 0xFD, 0xFE, 0xF9, 0xF8}
 TERMINATOR = 0xFF
 
 REVERSE_CHARMAP = {v: k for k, v in CHARMAP.items()}
@@ -67,33 +82,20 @@ REVERSE_CHARMAP = {v: k for k, v in CHARMAP.items()}
 # ---------------------------------------------------------------------------
 # French accent handling
 #
-# Only 'é' (0xF7) is EMPIRICALLY CONFIRMED against this ROM (see
-# docs/TECHNICAL_AUDIT.md section 3). Every other French accented
-# character (à â ç è ê ë î ï ô ù û ü œ and uppercase forms) has NO
-# confirmed byte in this ROM: the low range 0x01-0xA0 that would carry
-# them in the standard Gen3 international charmap could not be
-# verified in this environment (no display available to render text
-# in an emulator). Guessing wrong byte values here risks either
-# silently corrupting scripts (if a "free" code is actually used for
-# something else) or producing garbage/blank glyphs in game.
+# All accented characters needed for French (à â ç è ê ë î ï ô ù û œ
+# and uppercase forms) are now EMPIRICALLY CONFIRMED against this ROM
+# (see docs/TECHNICAL_AUDIT.md section 3 and TESTING.md -- confirmed
+# 2026-08-22 via build/Pokemon_Odyssey_CHARTEST.gba on a real
+# emulator). They're included directly in CHARMAP above.
 #
-# Safe policy until verified: encode with the accent DROPPED (ASCII
-# fallback) for any character without a confirmed byte, and report it
-# as a warning so translators/reviewers know exactly which strings are
-# running in degraded mode. Once a real screenshot test confirms the
-# true bytes (see TESTING.md), fill them in here and re-run
-# tools/build_french_rom.py -- no other change needed.
+# ASCII_FALLBACK below is now a pure safety net for characters that
+# are NOT part of French (accented letters from other languages,
+# stray Unicode) so a build never hard-fails on an odd character --
+# it degrades gracefully and still gets reported as a review flag.
 # ---------------------------------------------------------------------------
 
 ASCII_FALLBACK = {
-    'à': 'a', 'â': 'a', 'ä': 'a', 'À': 'A', 'Â': 'A',
-    'ç': 'c', 'Ç': 'C',
-    'è': 'e', 'ê': 'e', 'ë': 'e', 'È': 'E', 'Ê': 'E', 'Ë': 'E',
-    'î': 'i', 'ï': 'i', 'Î': 'I', 'Ï': 'I',
-    'ô': 'o', 'Ô': 'O',
-    'ù': 'u', 'û': 'u', 'ü': 'u', 'Ù': 'U', 'Û': 'U', 'Ü': 'U',
-    'œ': 'oe', 'Œ': 'OE',
-    'É': 'E',  # uppercase E-acute: also unconfirmed (only lowercase 'é' verified)
+    'ä': 'a',
 }
 
 
