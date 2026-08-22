@@ -273,3 +273,31 @@ Rocky Helmet	(objet, blesse au contact)	item-name	REVIEW: nom officiel FR "Casqu
 Yggdras (faction)	Yggdras	faction-custom	demonyme custom Odyssey pour les partisans d'Yggdrasil
 Abyssals (faction)	Abyssaux	faction-custom	demonyme custom Odyssey pour la faction adverse
 TM prefix	CT	gameplay	Capsule Technique, convention officielle FR pour "TM"
+Deep Maiden (boss)	Vierge des Profondeurs	character-custom	nom de boss custom Odyssey, traduit
+Avid Dragon (boss)	Dragon Avide	character-custom	nom de boss custom Odyssey, traduit
+Narmer (boss)	Narmer	character-custom	nom propre custom Odyssey, non traduit
+Tlachtga (boss)	Tlachtga	character-custom	nom propre (mythologie irlandaise), non traduit
+Dinogator (creature)	Dinogator	character-custom	nom propre custom Odyssey, non traduit
+Manfroy (character)	Manfroy	character-custom	nom propre custom Odyssey, non traduit
+Napier (character)	Napier	character-custom	nom propre custom Odyssey, non traduit
+Jenetta (character)	Jenetta	character-custom	nom propre custom Odyssey, non traduit
+Driftveil City	Volucite	place	terme officiel FR (Pokemon Noir/Blanc)
+Dragon Roost Island	Ile du Nid-du-Dragon	place	reference Zelda Wind Waker, terme officiel FR du jeu source
+Plusle	Posipi	pokemon-name	nom officiel FR
+Minun	Negapi	pokemon-name	nom officiel FR
+Murkrow	Cornebre	pokemon-name	nom officiel FR
+Geodude	Racaillou	pokemon-name	nom officiel FR
+Froslass	Momartik	pokemon-name	nom officiel FR
+Beldum	Beldum	pokemon-name	identique en FR
+Memento (move)	Adieu	move-name	terme officiel FR
+Rage Fist	Poing Furax	move-name	REVIEW: nom officiel FR non confirme avec certitude
+Teleport	Teleport	move-name	terme officiel FR
+Waterfall (move)	Cascade	move-name	terme officiel FR
+Softboiled	Ramollisse	move-name	terme officiel FR
+Meteor Assault	Astero-Frac.	move-name	REVIEW: abrege depuis "Astero-Fracas", nom officiel non confirme avec certitude
+Milk Drink	Lait Miel	move-name	REVIEW: nom officiel FR non confirme avec certitude
+Sweet Scent	Odeur Suave	move-name	REVIEW: nom officiel FR probable
+Boomburst	Boum Sonique	move-name	terme officiel FR probable
+Icicle Crash	Chute Glace	move-name	terme officiel FR probable
+Aether (type/energy)	Ether	lore-custom	type/energie custom Odyssey (distinct de "energie etherique")
+Etheric energy	energie etherique	lore-custom	deja etabli, distinct du type "Ether"

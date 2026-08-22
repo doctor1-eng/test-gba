@@ -6162,8 +6162,8 @@ ODYSSEY-TXT-006160	0x109D700	25	Reduces status accuracy.		24	1	0x10B8D60	Ability
 ODYSSEY-TXT-006161	0x109E7F4	13	            		12	1	0x1A792F4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006162	0x109FDFA	7	      		6	1	0x04F7F04	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006163	0x109FDFD	4	   		3	1	0x0B188D0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006164	0x10A7580	65	The user stimulates<FE>its brain to sharply<FE>raise its Sp. Atk<FE>stat.	FE	61	4	0x129F884	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006165	0x10A7980	71	Becomes stronger<FE>each time the user<FE>is hit in battle<FE>after being used.	FE	67	4	0x129F414	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006164	0x10A7580	65	The user stimulates<FE>its brain to sharply<FE>raise its Sp. Atk<FE>stat.	FE	61	4	0x129F884	Move description	L’utilisateur stimule<FE>son cerveau pour augmenter<FE>fortement son Attaque<FE>Spéciale.	TRANSLATED
+ODYSSEY-TXT-006165	0x10A7980	71	Becomes stronger<FE>each time the user<FE>is hit in battle<FE>after being used.	FE	67	4	0x129F414	Move description	Devient plus puissante<FE>à chaque fois que<FE>l’utilisateur est touché<FE>après son utilisation.	TRANSLATED
 ODYSSEY-TXT-006166	0x10AF9FD	4	   		3	1	0x04C8D28	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006167	0x10AFAD2	367	                                                                                                                                                                                                                                                                                                                                                                              		366	1	0x0AF50FC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006168	0x10AFB12	303	                                                                                                                                                                                                                                                                                                              		302	1	0x1A5A09C	UNKNOWN		SKIP_NOISE
@@ -6200,32 +6200,32 @@ ODYSSEY-TXT-006198	0x10B0906	187	                                               
 ODYSSEY-TXT-006199	0x10B0907	186	                                                                                                                                                                                         		185	1	0x0A6AEB0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006200	0x10B090A	183	                                                                                                                                                                                      		182	1	0x07192A8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006201	0x10B0BFC	5	    		4	1	0x0AD6BD4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006202	0x10B0D80	54	A special whisker dropped<FE>by Narmer after its defeat.	FE	52	2	0x03DB92C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006203	0x10B0E00	57	A strange scale dropped<FE>by Deep Maiden<FE>after its defeat.	FE	54	3	0x03DB958	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006204	0x10B0E09	48	 scale dropped<FE>by Deep Maiden<FE>after its defeat.	FE	45	3	0x0B15F90	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006205	0x10B0E0E	43	e dropped<FE>by Deep Maiden<FE>after its defeat.	FE	40	3	0x0A7D4E8,0x0ADD74C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006206	0x10B0E0F	42	 dropped<FE>by Deep Maiden<FE>after its defeat.	FE	39	3	0x0A019D4,0x0B49860,0x0B49B00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006207	0x10B0E10	41	dropped<FE>by Deep Maiden<FE>after its defeat.	FE	38	3	0x04CDFF4,0x0AA7554,0x0AA75FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006208	0x10B0E11	40	ropped<FE>by Deep Maiden<FE>after its defeat.	FE	37	3	0x0A633E4,0x0A63854,0x0AF9530	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006209	0x10B0E12	39	opped<FE>by Deep Maiden<FE>after its defeat.	FE	36	3	0x050FA88,0x0A40CA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006210	0x10B0E13	38	pped<FE>by Deep Maiden<FE>after its defeat.	FE	35	3	0x0AFE7C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006211	0x10B0E14	37	ped<FE>by Deep Maiden<FE>after its defeat.	FE	34	3	0x0A8D7D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006212	0x10B1100	55	A piece of skin dropped<FE>by Dinogator after<FE>its defeat.	FE	52	3	0x03DB984	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006213	0x10B1111	38	ropped<FE>by Dinogator after<FE>its defeat.	FE	35	3	0x04CC00C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006214	0x10B1119	30	y Dinogator after<FE>its defeat.	FE	28	2	0x04BB080	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006215	0x10B111D	26	nogator after<FE>its defeat.	FE	24	2	0x0A23CFC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006216	0x10B1240	56	A strange fang dropped<FE>by Avid Dragon<FE>after its defeat.	FE	53	3	0x03DB9B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006217	0x10B1480	55	A peculiar chain dropped<FE>by Tlachtga after<FE>its defeat.	FE	52	3	0x03DB9DC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006202	0x10B0D80	54	A special whisker dropped<FE>by Narmer after its defeat.	FE	52	2	0x03DB92C	UNKNOWN	Une moustache spéciale tombée<FE>de Narmer après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006203	0x10B0E00	57	A strange scale dropped<FE>by Deep Maiden<FE>after its defeat.	FE	54	3	0x03DB958	UNKNOWN	Une écaille étrange tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006204	0x10B0E09	48	 scale dropped<FE>by Deep Maiden<FE>after its defeat.	FE	45	3	0x0B15F90	fragment, overlapping pointer	tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006205	0x10B0E0E	43	e dropped<FE>by Deep Maiden<FE>after its defeat.	FE	40	3	0x0A7D4E8,0x0ADD74C	fragment, overlapping pointer	tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006206	0x10B0E0F	42	 dropped<FE>by Deep Maiden<FE>after its defeat.	FE	39	3	0x0A019D4,0x0B49860,0x0B49B00	fragment, overlapping pointer	tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006207	0x10B0E10	41	dropped<FE>by Deep Maiden<FE>after its defeat.	FE	38	3	0x04CDFF4,0x0AA7554,0x0AA75FC	fragment, overlapping pointer	tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006208	0x10B0E11	40	ropped<FE>by Deep Maiden<FE>after its defeat.	FE	37	3	0x0A633E4,0x0A63854,0x0AF9530	fragment, overlapping pointer	tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006209	0x10B0E12	39	opped<FE>by Deep Maiden<FE>after its defeat.	FE	36	3	0x050FA88,0x0A40CA0	fragment, overlapping pointer	tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006210	0x10B0E13	38	pped<FE>by Deep Maiden<FE>after its defeat.	FE	35	3	0x0AFE7C0	fragment, overlapping pointer	tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006211	0x10B0E14	37	ped<FE>by Deep Maiden<FE>after its defeat.	FE	34	3	0x0A8D7D4	fragment, overlapping pointer	tombée<FE>de la Vierge des Profondeurs<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006212	0x10B1100	55	A piece of skin dropped<FE>by Dinogator after<FE>its defeat.	FE	52	3	0x03DB984	UNKNOWN	Un morceau de peau tombé<FE>de Dinogator après<FE>sa défaite.	TRANSLATED
+ODYSSEY-TXT-006213	0x10B1111	38	ropped<FE>by Dinogator after<FE>its defeat.	FE	35	3	0x04CC00C	fragment, overlapping pointer	tombé<FE>de Dinogator après<FE>sa défaite.	TRANSLATED
+ODYSSEY-TXT-006214	0x10B1119	30	y Dinogator after<FE>its defeat.	FE	28	2	0x04BB080	fragment, overlapping pointer	de Dinogator après<FE>sa défaite.	TRANSLATED
+ODYSSEY-TXT-006215	0x10B111D	26	nogator after<FE>its defeat.	FE	24	2	0x0A23CFC	fragment, overlapping pointer	de Dinogator après<FE>sa défaite.	TRANSLATED
+ODYSSEY-TXT-006216	0x10B1240	56	A strange fang dropped<FE>by Avid Dragon<FE>after its defeat.	FE	53	3	0x03DB9B0	UNKNOWN	Un croc étrange tombé<FE>du Dragon Avide<FE>après sa défaite.	TRANSLATED
+ODYSSEY-TXT-006217	0x10B1480	55	A peculiar chain dropped<FE>by Tlachtga after<FE>its defeat.	FE	52	3	0x03DB9DC	UNKNOWN	Une chaîne singulière tombée<FE>de Tlachtga après<FE>sa défaite.	TRANSLATED
 ODYSSEY-TXT-006218	0x10B44FF	55	                                                      		54	1	0x1A6C078	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006219	0x10B748B	182	                                                                                                                                                                                     		181	1	0x054E084	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006220	0x10B9370	31	<FD:10>’s <FD:19> sharply<FE>raised its <FD:00>!	FD;FE	23	2	0x10B940C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006220	0x10B9370	31	<FD:10>’s <FD:19> sharply<FE>raised its <FD:00>!	FD;FE	23	2	0x10B940C	UNKNOWN	<FD:19> de <FD:10><FE>a fortement augmenté son <FD:00> !	TRANSLATED
 ODYSSEY-TXT-006221	0x10BB390	241	                                                                                                                                                                                                                                                		240	1	0x06F0938	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006222	0x10BC8BC	261	                                                                                                                                                                                                                                                                    		260	1	0x0B2E87C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006223	0x10BE740	13	The Renegade		12	1	0x1FC4010	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006224	0x10BE7C0	37	Help Manfroy at the Jagged<FE>Mountain.	FE	35	2	0x1FC4014	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006225	0x10BEA40	81	A translation of the words<FE>written on the stele in the<FE>crypt of Jagged Mountain.	FE	78	3	0x03DBA08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006226	0x10BED40	69	A silver coin used by an ancient<FE>civilization about 3.000 years ago.	FE	67	2	0x03DCCC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006227	0x10BEE00	67	A gold coin used by an ancient<FE>civilization about 3.000 years ago.	FE	65	2	0x03DCCF0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006223	0x10BE740	13	The Renegade		12	1	0x1FC4010	UNKNOWN	Le Renégat	TRANSLATED
+ODYSSEY-TXT-006224	0x10BE7C0	37	Help Manfroy at the Jagged<FE>Mountain.	FE	35	2	0x1FC4014	UNKNOWN	Aidez Manfroy au Mont<FE>Déchiqueté.	TRANSLATED
+ODYSSEY-TXT-006225	0x10BEA40	81	A translation of the words<FE>written on the stele in the<FE>crypt of Jagged Mountain.	FE	78	3	0x03DBA08	UNKNOWN	Une traduction des mots<FE>inscrits sur la stèle dans la<FE>crypte du Mont Déchiqueté.	TRANSLATED
+ODYSSEY-TXT-006226	0x10BED40	69	A silver coin used by an ancient<FE>civilization about 3.000 years ago.	FE	67	2	0x03DCCC4	UNKNOWN	Une pièce d’argent utilisée par une<FE>civilisation antique il y a environ 3 000 ans.	TRANSLATED
+ODYSSEY-TXT-006227	0x10BEE00	67	A gold coin used by an ancient<FE>civilization about 3.000 years ago.	FE	65	2	0x03DCCF0	UNKNOWN	Une pièce d’or utilisée par une<FE>civilisation antique il y a environ 3 000 ans.	TRANSLATED
 ODYSSEY-TXT-006228	0x10BF101	64	                                                               		63	1	0x04C76AC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006229	0x10BF307	122	                                                                                                                         		121	1	0x1A3E5F0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006230	0x10BF4FC	197	                                                                                                                                                                                                    		196	1	0x0504B9C	UNKNOWN		SKIP_NOISE
@@ -6235,101 +6235,101 @@ ODYSSEY-TXT-006233	0x10C00FC	5	    		4	1	0x06B37D0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006234	0x10C01F9	328	                                                                                                                                                                                                                                                                                                                                       		327	1	0x1A7C268	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006235	0x10C020C	309	                                                                                                                                                                                                                                                                                                                    		308	1	0x0A47F70	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006236	0x10C0305	60	                                                           		59	1	0x0B24C4C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006237	0x10C08F1	34	ration at being kept<FE>in the dark.	FE	32	2	0x0B4A67C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006238	0x10C0900	19	 kept<FE>in the dark.	FE	17	2	0x0AB5804	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006239	0x10C0901	18	kept<FE>in the dark.	FE	16	2	0x04DA628	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006240	0x10C0904	15	t<FE>in the dark.	FE	13	2	0x04B16A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006241	0x10C0906	13	in the dark.		12	1	0x0AA3428,0x1A49898	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006242	0x10C0908	11	 the dark.		10	1	0x04DA62C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006243	0x10C0A08	55	mpany you then!<FB>Exploring on your own<FE>is SOOOO boring!	FB;FE	52	2	0x0A09DC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006244	0x10C0B09	24	: And that would be...?		23	1	0x0A53708	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006245	0x10C0B0A	23	 And that would be...?		22	1	0x04D9968,0x0B59E00,0x0B5CD60,0x0B5E460	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006246	0x10C0B0C	21	nd that would be...?		20	1	0x0A5A958	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006247	0x10C0B0D	20	d that would be...?		19	1	0x0B24FEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006248	0x10C0C0B	19	Whenever you want!		18	1	0x0A03C4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006249	0x10C0C0C	18	henever you want!		17	1	0x1A4776C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006250	0x10C0C0E	16	never you want!		15	1	0x0B4C034	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006237	0x10C08F1	34	ration at being kept<FE>in the dark.	FE	32	2	0x0B4A67C	fragment, overlapping pointer	frustration à être tenu<FE>dans l’ignorance.	TRANSLATED
+ODYSSEY-TXT-006238	0x10C0900	19	 kept<FE>in the dark.	FE	17	2	0x0AB5804	fragment, overlapping pointer	tenu<FE>dans l’ignorance.	TRANSLATED
+ODYSSEY-TXT-006239	0x10C0901	18	kept<FE>in the dark.	FE	16	2	0x04DA628	fragment, overlapping pointer	tenu<FE>dans l’ignorance.	TRANSLATED
+ODYSSEY-TXT-006240	0x10C0904	15	t<FE>in the dark.	FE	13	2	0x04B16A0	fragment, overlapping pointer	tenu<FE>dans l’ignorance.	TRANSLATED
+ODYSSEY-TXT-006241	0x10C0906	13	in the dark.		12	1	0x0AA3428,0x1A49898	fragment, overlapping pointer	dans l’ignorance.	TRANSLATED
+ODYSSEY-TXT-006242	0x10C0908	11	 the dark.		10	1	0x04DA62C	fragment, overlapping pointer	l’ignorance.	TRANSLATED
+ODYSSEY-TXT-006243	0x10C0A08	55	mpany you then!<FB>Exploring on your own<FE>is SOOOO boring!	FB;FE	52	2	0x0A09DC8	fragment, overlapping pointer	accompagne alors !<FB>Explorer tout seul,<FE>c’est TELLEMENT ennuyeux !	TRANSLATED
+ODYSSEY-TXT-006244	0x10C0B09	24	: And that would be...?		23	1	0x0A53708	UNKNOWN	Et ce serait...?	TRANSLATED
+ODYSSEY-TXT-006245	0x10C0B0A	23	 And that would be...?		22	1	0x04D9968,0x0B59E00,0x0B5CD60,0x0B5E460	UNKNOWN	Et ce serait...?	TRANSLATED
+ODYSSEY-TXT-006246	0x10C0B0C	21	nd that would be...?		20	1	0x0A5A958	UNKNOWN	Et ce serait...?	TRANSLATED
+ODYSSEY-TXT-006247	0x10C0B0D	20	d that would be...?		19	1	0x0B24FEC	UNKNOWN	Et ce serait...?	TRANSLATED
+ODYSSEY-TXT-006248	0x10C0C0B	19	Whenever you want!		18	1	0x0A03C4C	UNKNOWN	Quand vous voulez !	TRANSLATED
+ODYSSEY-TXT-006249	0x10C0C0C	18	henever you want!		17	1	0x1A4776C	UNKNOWN	Quand vous voulez !	TRANSLATED
+ODYSSEY-TXT-006250	0x10C0C0E	16	never you want!		15	1	0x0B4C034	UNKNOWN	Quand vous voulez !	TRANSLATED
 ODYSSEY-TXT-006251	0x10C16EE	3	 U		2	1	0x050DAE8,0x06A53BC	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006252	0x10C1B00	18	Napier’s Requests		17	1	0x1FC4020	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006253	0x10C1B80	44	Help Jenetta and Napier<FE>at the Aqua Resort.	FE	42	2	0x1FC4024	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006254	0x10C1C00	12	First Group		11	1	0x03E02D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006255	0x10C1C80	13	Second Group		12	1	0x03E02D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006256	0x10C1D80	17	Table and chairs		16	1	0x10C1D10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006257	0x10C1E00	7	Carpet		6	1	0x10C1D18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006258	0x10C1E80	7	Poster		6	1	0x03E0060,0x03E02E8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006252	0x10C1B00	18	Napier’s Requests		17	1	0x1FC4020	UNKNOWN	Requêtes de Napier	TRANSLATED
+ODYSSEY-TXT-006253	0x10C1B80	44	Help Jenetta and Napier<FE>at the Aqua Resort.	FE	42	2	0x1FC4024	UNKNOWN	Aidez Jenetta et Napier<FE>à la Station Aqua.	TRANSLATED
+ODYSSEY-TXT-006254	0x10C1C00	12	First Group		11	1	0x03E02D0	UNKNOWN	Premier Groupe	TRANSLATED
+ODYSSEY-TXT-006255	0x10C1C80	13	Second Group		12	1	0x03E02D8	UNKNOWN	Deuxième Groupe	TRANSLATED
+ODYSSEY-TXT-006256	0x10C1D80	17	Table and chairs		16	1	0x10C1D10	UNKNOWN	Table et chaises	TRANSLATED
+ODYSSEY-TXT-006257	0x10C1E00	7	Carpet		6	1	0x10C1D18	UNKNOWN	Tapis	TRANSLATED
+ODYSSEY-TXT-006258	0x10C1E80	7	Poster		6	1	0x03E0060,0x03E02E8	UNKNOWN	Affiche	TRANSLATED
 ODYSSEY-TXT-006259	0x10C1F00	3	TV		2	1	0x03E0068,0x03E02F0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006260	0x10C1F80	7	Stereo		6	1	0x03E0070,0x03E02F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006261	0x10C2000	16	Nintendo Switch		15	1	0x03E0078,0x03E0300	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006262	0x10C2080	29	The Fragrance of Dark Coffee		28	1	0x03DFD60	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006263	0x10C2100	20	Dragon Roost Island		19	1	0x03DFD68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006264	0x10C2180	15	Driftveil City		14	1	0x03DFD70	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006265	0x10C2200	19	A Fanatic’s Demand		18	1	0x1FC4030	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006266	0x10C2280	44	Trade Beldum to the boy<FE>at the Aqua Resort.	FE	42	2	0x1FC4034	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006267	0x10C2300	19	The Wounded Lapras		18	1	0x1FC4040	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006260	0x10C1F80	7	Stereo		6	1	0x03E0070,0x03E02F8	UNKNOWN	Chaîne Stéréo	TRANSLATED
+ODYSSEY-TXT-006261	0x10C2000	16	Nintendo Switch		15	1	0x03E0078,0x03E0300	UNKNOWN	Nintendo Switch	TRANSLATED
+ODYSSEY-TXT-006262	0x10C2080	29	The Fragrance of Dark Coffee		28	1	0x03DFD60	UNKNOWN	Le Parfum du Café Noir	TRANSLATED
+ODYSSEY-TXT-006263	0x10C2100	20	Dragon Roost Island		19	1	0x03DFD68	UNKNOWN	Île du Nid-du-Dragon	TRANSLATED
+ODYSSEY-TXT-006264	0x10C2180	15	Driftveil City		14	1	0x03DFD70	UNKNOWN	Volucité	TRANSLATED
+ODYSSEY-TXT-006265	0x10C2200	19	A Fanatic’s Demand		18	1	0x1FC4030	UNKNOWN	L’Exigence d’un Fanatique	TRANSLATED
+ODYSSEY-TXT-006266	0x10C2280	44	Trade Beldum to the boy<FE>at the Aqua Resort.	FE	42	2	0x1FC4034	UNKNOWN	Échangez un BELDUM avec le garçon<FE>de la Station Aqua.	TRANSLATED
+ODYSSEY-TXT-006267	0x10C2300	19	The Wounded Lapras		18	1	0x1FC4040	UNKNOWN	Le Lokhlass Blessé	TRANSLATED
 ODYSSEY-TXT-006268	0x10C2310	3	as		2	1	0x04D845C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006269	0x10C2380	56	Help Lapras recover from its<FE>wounds at the Aqua Resort.	FE	54	2	0x1FC4044	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006270	0x10C2480	74	The foe is stabbed<FE>by sharpened stones.<FE>It has a high<FE>critical-hit ratio.	FE	70	4	0x129F798	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006271	0x10C2540	29	Multi-hit moves hit 5 times.		28	1	0x10B8C84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006272	0x10C2640	71	Raises the user’s<FE>offensive stats,<FE>at the cost of its<FE>defensive stats.	FE	67	4	0x129F79C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006269	0x10C2380	56	Help Lapras recover from its<FE>wounds at the Aqua Resort.	FE	54	2	0x1FC4044	UNKNOWN	Aidez Lokhlass à se remettre<FE>de ses blessures à la Station Aqua.	TRANSLATED
+ODYSSEY-TXT-006270	0x10C2480	74	The foe is stabbed<FE>by sharpened stones.<FE>It has a high<FE>critical-hit ratio.	FE	70	4	0x129F798	Move description	La cible est transpercée<FE>par des pierres aiguisées.<FE>Taux de coups<FE>critiques élevé.	TRANSLATED
+ODYSSEY-TXT-006271	0x10C2540	29	Multi-hit moves hit 5 times.		28	1	0x10B8C84	Ability description	Les capacités à coups multiples touchent 5 fois.	TRANSLATED
+ODYSSEY-TXT-006272	0x10C2640	71	Raises the user’s<FE>offensive stats,<FE>at the cost of its<FE>defensive stats.	FE	67	4	0x129F79C	Ability description	Augmente les stats<FE>offensives de<FE>l’utilisateur, au prix<FE>de ses stats défensives.	TRANSLATED
 ODYSSEY-TXT-006273	0x10C2B00	16	Continue v4.1.1		15	1	0x000C8E4,0x000C9B4,0x0C06C2C	SYSTEM: title menu	Continuer v4.1.1	TRANSLATED
 ODYSSEY-TXT-006274	0x10C6DDC	8	------<FE>	FE	6	2	0x10C73B4,0x10C73B8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006275	0x10C6E90	12	Side Quests		11	1	0x10C6098	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006276	0x10E1620	29	é4é$éOég                    		28	1	0x0A4E120	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006275	0x10C6E90	12	Side Quests		11	1	0x10C6098	UNKNOWN	Quêtes Annexes	TRANSLATED
+ODYSSEY-TXT-006276	0x10E1620	29	é4é$éOég                    		28	1	0x0A4E120	UNKNOWN | font-test/garbage decode artifact, deliberately not translated		SKIP_NOISE
 ODYSSEY-TXT-006277	0x10F1414	2	o		1	1	0x04CD5F0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006278	0x10F8E40	65	A retaliation move<FE>that counters any<FE>hit with double<FE>the damage.	FE	61	4	0x129F594	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006279	0x10F8F80	30	KOing a foe ups highest stat.		29	1	0x10B8EB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006280	0x10FAEC0	58	An attack imbued<FE>with sacred power.<FE>Always strikes first.	FE	55	3	0x129F95C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006281	0x10FB980	67	An attack imbued<FE>with sacred power.<FE>Heals by half<FE>the damage done.	FE	63	4	0x129F84C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006278	0x10F8E40	65	A retaliation move<FE>that counters any<FE>hit with double<FE>the damage.	FE	61	4	0x129F594	Move description	Une capacité de représailles<FE>qui contre n’importe quel<FE>coup en doublant<FE>les dégâts.	TRANSLATED
+ODYSSEY-TXT-006279	0x10F8F80	30	KOing a foe ups highest stat.		29	1	0x10B8EB8	Ability description	Mettre un ennemi K.O. augmente la plus haute stat.	TRANSLATED
+ODYSSEY-TXT-006280	0x10FAEC0	58	An attack imbued<FE>with sacred power.<FE>Always strikes first.	FE	55	3	0x129F95C	Move description	Une attaque imprégnée<FE>d’un pouvoir sacré.<FE>Touche toujours en premier.	TRANSLATED
+ODYSSEY-TXT-006281	0x10FB980	67	An attack imbued<FE>with sacred power.<FE>Heals by half<FE>the damage done.	FE	63	4	0x129F84C	Move description	Une attaque imprégnée<FE>d’un pouvoir sacré.<FE>Soigne la moitié<FE>des dégâts infligés.	TRANSLATED
 ODYSSEY-TXT-006282	0x10FC878	8	sister!		7	1	0x0257380	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006283	0x10FDA40	29	<FD:0F> is affected<FE>by frostbite!	FD;FE	25	2	0x03FDFD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006284	0x10FFCE8	17	!<FE>’ow dare he...	FE	15	2	0x0B5501C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006285	0x10FFE2F	45	l get<FE>back to me matters.<FB>Take care, buckos!	FB;FE	42	2	0x052916C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006286	0x1109BC3	8	Memento		7	1	0x045A6B0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006283	0x10FDA40	29	<FD:0F> is affected<FE>by frostbite!	FD;FE	25	2	0x03FDFD8	UNKNOWN	<FD:0F> est touché<FE>par des engelures !	TRANSLATED
+ODYSSEY-TXT-006284	0x10FFCE8	17	!<FE>’ow dare he...	FE	15	2	0x0B5501C	fragment, overlapping pointer	!<FE>Comment ose-t-il...	TRANSLATED
+ODYSSEY-TXT-006285	0x10FFE2F	45	l get<FE>back to me matters.<FB>Take care, buckos!	FB;FE	42	2	0x052916C	fragment, overlapping pointer	revenons-en à mes<FE>affaires.<FB>Prenez soin de vous, les gars !	TRANSLATED
+ODYSSEY-TXT-006286	0x1109BC3	8	Memento		7	1	0x045A6B0	UNKNOWN	Adieu	TRANSLATED
 ODYSSEY-TXT-006287	0x1109BF7	4	Fly		3	1	0x045A6B8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006288	0x1109DE5	5	Surf		4	1	0x045A6C8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006289	0x1109E8E	10	Rage Fist		9	1	0x045A6C0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006289	0x1109E8E	10	Rage Fist		9	1	0x045A6C0	UNKNOWN	Poing Furax	TRANSLATED
 ODYSSEY-TXT-006290	0x1109F9F	4	Dig		3	1	0x045A6E8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006291	0x110A014	9	Teleport		8	1	0x045A6E0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006291	0x110A014	9	Teleport		8	1	0x045A6E0	UNKNOWN	Téléport	TRANSLATED
 ODYSSEY-TXT-006292	0x110A110	7	r Move		6	1	0x102DF84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006293	0x110A173	10	Waterfall		9	1	0x045A6D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006294	0x110A1DB	11	Softboiled		10	1	0x045A6F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006295	0x110A284	13	Met. Assault		12	1	0x045A6A8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006293	0x110A173	10	Waterfall		9	1	0x045A6D8	UNKNOWN	Cascade	TRANSLATED
+ODYSSEY-TXT-006294	0x110A1DB	11	Softboiled		10	1	0x045A6F8	UNKNOWN	Ramollisse	TRANSLATED
+ODYSSEY-TXT-006295	0x110A284	13	Met. Assault		12	1	0x045A6A8	UNKNOWN	Astéro-Frac.	TRANSLATED
 ODYSSEY-TXT-006296	0x110A401	6	blast		5	1	0x04335F0	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-006297	0x110A588	3	er		2	1	0x0CE9DDC	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006298	0x110A590	11	Milk Drink		10	1	0x045A6F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006299	0x110A6AE	12	Sweet Scent		11	1	0x045A700	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006300	0x110A7A5	11	Rock Smash		10	1	0x045A6D0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006298	0x110A590	11	Milk Drink		10	1	0x045A6F0	UNKNOWN	Lait Miel	TRANSLATED
+ODYSSEY-TXT-006299	0x110A6AE	12	Sweet Scent		11	1	0x045A700	UNKNOWN	Odeur Suave	TRANSLATED
+ODYSSEY-TXT-006300	0x110A7A5	11	Rock Smash		10	1	0x045A6D0	UNKNOWN	Défonce	TRANSLATED
 ODYSSEY-TXT-006301	0x110A888	4	 Me		3	1	0x0D4D3B8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006302	0x110AA97	10	Boomburst		9	1	0x00CCC50	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006303	0x110AAA4	12	Infestation		11	1	0x00CCC84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006304	0x110AC2A	13	Icicle Crash		12	1	0x00CCC28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006305	0x110C340	51	The enemy is hit<FE>by a weak shot<FE>of etheric energy.	FE	48	3	0x129F888	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006306	0x110C3C0	56	The user emits<FE>etheric energy<FE>that hits both<FE>opponents.	FE	52	4	0x129F88C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006307	0x110C440	57	A huge sphere of<FE>mana that may lower<FE>the target’s Speed.	FE	54	3	0x129F890	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006308	0x110C500	65	A mana meteor<FE>that also sharply<FE>reduces the user’s<FE>Sp. Atk stat.	FE	61	4	0x129F894	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006309	0x110C5C0	74	The user charges up<FE>with etheric energy.<FE>Raises its Atk<FE>and Sp. Atk stat.	FE	70	4	0x129F898	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006310	0x11A0180	50	An etheric wind that<FE>resets stat changes<FE>to zero.	FE	47	3	0x129F89C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006311	0x11A0240	70	The user risks all,<FE>dealing damage<FE>equal to its HP<FE>and then fainting.	FE	66	4	0x129F8A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006312	0x11A0300	70	An etheric attack<FE>in which the user<FE>charges, full body,<FE>into the foe.	FE	66	4	0x129F8A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006313	0x11A03C0	66	The user imbues its<FE>swords with etheric<FE>energy.<FE>Multi-hit attack.	FE	62	4	0x129F8B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006314	0x11A0480	70	The user draws<FE>attention to itself<FE>and boosts its<FE>Attack and Defense.	FE	66	4	0x129F8B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006315	0x11A0540	66	An attack performed<FE>by edges or claws<FE>imbued with etheric<FE>energy.	FE	62	4	0x129F8A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006316	0x11A0600	67	A reckless, etheric<FE>tackle that may<FE>lower the opponent’s<FE>Def stat.	FE	63	4	0x129F8AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006317	0x11A3B80	67	A soothing bell that<FE>sharply raises<FE>user and partner’s<FE>Speed stat.	FE	63	4	0x129F8B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006318	0x11A3CC0	78	The user drains the<FE>target’s energy and<FE>restores HP equal<FE>to half the damage.	FE	74	4	0x129F8BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006319	0x11A3E00	56	Earth-shattering<FE>tail slap.<FE>It may make the<FE>foe flinch.	FE	52	4	0x129F8C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006320	0x11A3F00	57	Aether-charged ice<FE>particles that may<FE>inflict frostbite.	FE	54	3	0x129F8C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006321	0x11A3F09	48	arged ice<FE>particles that may<FE>inflict frostbite.	FE	45	3	0x1A842D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006322	0x11A3F80	77	This move allows<FE>the user to strike<FE>first, if the foe is<FE>readying an attack.	FE	73	4	0x129F8C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006323	0x11A9040	77	The user emits an<FE>immense amount of<FE>etheric energy that<FE>halves the foe’s HP.	FE	73	4	0x129F8CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006324	0x11A9100	70	The foe is fought<FE>up close. This cuts<FE>the user’s Defense<FE>and Sp. Def.	FE	66	4	0x129F8D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006325	0x11A9740	70	The foe is sliced<FE>by a blade of air.<FE>It may also make<FE>the foe flinch.	FE	66	4	0x129F8D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006326	0x11A9D8E	6	Suuus		5	1	0x11A9D88	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006302	0x110AA97	10	Boomburst		9	1	0x00CCC50	UNKNOWN	Boum Sonique	TRANSLATED
+ODYSSEY-TXT-006303	0x110AAA4	12	Infestation		11	1	0x00CCC84	UNKNOWN	Infestation	TRANSLATED
+ODYSSEY-TXT-006304	0x110AC2A	13	Icicle Crash		12	1	0x00CCC28	UNKNOWN	Chute Glace	TRANSLATED
+ODYSSEY-TXT-006305	0x110C340	51	The enemy is hit<FE>by a weak shot<FE>of etheric energy.	FE	48	3	0x129F888	Move description	L’ennemi reçoit<FE>un faible tir<FE>d’énergie éthérique.	TRANSLATED
+ODYSSEY-TXT-006306	0x110C3C0	56	The user emits<FE>etheric energy<FE>that hits both<FE>opponents.	FE	52	4	0x129F88C	Move description	L’utilisateur émet<FE>de l’énergie éthérique<FE>qui touche les deux<FE>adversaires.	TRANSLATED
+ODYSSEY-TXT-006307	0x110C440	57	A huge sphere of<FE>mana that may lower<FE>the target’s Speed.	FE	54	3	0x129F890	Move description	Une immense sphère<FE>de mana qui peut baisser<FE>la Vitesse de la cible.	TRANSLATED
+ODYSSEY-TXT-006308	0x110C500	65	A mana meteor<FE>that also sharply<FE>reduces the user’s<FE>Sp. Atk stat.	FE	61	4	0x129F894	Move description	Un météore de mana<FE>qui réduit aussi<FE>fortement l’Attaque<FE>Spéciale de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-006309	0x110C5C0	74	The user charges up<FE>with etheric energy.<FE>Raises its Atk<FE>and Sp. Atk stat.	FE	70	4	0x129F898	Move description	L’utilisateur se charge<FE>d’énergie éthérique.<FE>Augmente son Attaque<FE>et son Atq. Spéciale.	TRANSLATED
+ODYSSEY-TXT-006310	0x11A0180	50	An etheric wind that<FE>resets stat changes<FE>to zero.	FE	47	3	0x129F89C	Move description	Un vent éthérique qui<FE>ramène les changements<FE>de stats à zéro.	TRANSLATED
+ODYSSEY-TXT-006311	0x11A0240	70	The user risks all,<FE>dealing damage<FE>equal to its HP<FE>and then fainting.	FE	66	4	0x129F8A0	Move description	L’utilisateur risque tout,<FE>infligeant des dégâts<FE>égaux à ses PV<FE>puis s’évanouit.	TRANSLATED
+ODYSSEY-TXT-006312	0x11A0300	70	An etheric attack<FE>in which the user<FE>charges, full body,<FE>into the foe.	FE	66	4	0x129F8A4	Move description	Une attaque éthérique<FE>où l’utilisateur<FE>charge la cible de<FE>tout son corps.	TRANSLATED
+ODYSSEY-TXT-006313	0x11A03C0	66	The user imbues its<FE>swords with etheric<FE>energy.<FE>Multi-hit attack.	FE	62	4	0x129F8B0	Move description	L’utilisateur imprègne<FE>ses lames d’énergie<FE>éthérique.<FE>Attaque à coups multiples.	TRANSLATED
+ODYSSEY-TXT-006314	0x11A0480	70	The user draws<FE>attention to itself<FE>and boosts its<FE>Attack and Defense.	FE	66	4	0x129F8B4	Move description	L’utilisateur attire<FE>l’attention sur lui<FE>et augmente son<FE>Attaque et sa Défense.	TRANSLATED
+ODYSSEY-TXT-006315	0x11A0540	66	An attack performed<FE>by edges or claws<FE>imbued with etheric<FE>energy.	FE	62	4	0x129F8A8	Move description	Une attaque portée<FE>par des lames ou griffes<FE>imprégnées d’énergie<FE>éthérique.	TRANSLATED
+ODYSSEY-TXT-006316	0x11A0600	67	A reckless, etheric<FE>tackle that may<FE>lower the opponent’s<FE>Def stat.	FE	63	4	0x129F8AC	Move description	Un plaquage éthérique<FE>téméraire qui peut<FE>baisser la Défense<FE>de l’adversaire.	TRANSLATED
+ODYSSEY-TXT-006317	0x11A3B80	67	A soothing bell that<FE>sharply raises<FE>user and partner’s<FE>Speed stat.	FE	63	4	0x129F8B8	Move description	Une clochette apaisante<FE>qui augmente fortement<FE>la Vitesse de<FE>l’utilisateur et de son partenaire.	TRANSLATED
+ODYSSEY-TXT-006318	0x11A3CC0	78	The user drains the<FE>target’s energy and<FE>restores HP equal<FE>to half the damage.	FE	74	4	0x129F8BC	Move description	L’utilisateur draine<FE>l’énergie de la cible<FE>et restaure des PV<FE>égaux à la moitié des dégâts.	TRANSLATED
+ODYSSEY-TXT-006319	0x11A3E00	56	Earth-shattering<FE>tail slap.<FE>It may make the<FE>foe flinch.	FE	52	4	0x129F8C0	Move description	Une claque de queue<FE>qui fait trembler la terre.<FE>Peut faire flancher<FE>la cible.	TRANSLATED
+ODYSSEY-TXT-006320	0x11A3F00	57	Aether-charged ice<FE>particles that may<FE>inflict frostbite.	FE	54	3	0x129F8C4	Move description	Des particules de glace<FE>chargées d’Éther qui peuvent<FE>causer des engelures.	TRANSLATED
+ODYSSEY-TXT-006321	0x11A3F09	48	arged ice<FE>particles that may<FE>inflict frostbite.	FE	45	3	0x1A842D8	fragment, overlapping pointer	de glace<FE>chargées d’Éther qui peuvent<FE>causer des engelures.	TRANSLATED
+ODYSSEY-TXT-006322	0x11A3F80	77	This move allows<FE>the user to strike<FE>first, if the foe is<FE>readying an attack.	FE	73	4	0x129F8C8	Move description	Cette capacité permet<FE>à l’utilisateur de frapper<FE>en premier, si la cible<FE>prépare une attaque.	TRANSLATED
+ODYSSEY-TXT-006323	0x11A9040	77	The user emits an<FE>immense amount of<FE>etheric energy that<FE>halves the foe’s HP.	FE	73	4	0x129F8CC	Move description	L’utilisateur émet une<FE>immense quantité<FE>d’énergie éthérique qui<FE>divise par deux les PV de la cible.	TRANSLATED
+ODYSSEY-TXT-006324	0x11A9100	70	The foe is fought<FE>up close. This cuts<FE>the user’s Defense<FE>and Sp. Def.	FE	66	4	0x129F8D0	Move description	Le combat se fait<FE>au corps à corps. Cela réduit<FE>la Défense et la Défense<FE>Spéciale de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-006325	0x11A9740	70	The foe is sliced<FE>by a blade of air.<FE>It may also make<FE>the foe flinch.	FE	66	4	0x129F8D4	Move description	La cible est tranchée<FE>par une lame d’air.<FE>Peut aussi faire<FE>flancher la cible.	TRANSLATED
+ODYSSEY-TXT-006326	0x11A9D8E	6	Suuus		5	1	0x11A9D88	UNKNOWN	Fiouu	TRANSLATED
 ODYSSEY-TXT-006327	0x11AAD80	69	A 3-kick attack<FE>that becomes more<FE>powerful with each<FE>successive hit.	FE	65	4	0x129F8D8	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-006328	0x11AFF00	2	F		1	1	0x11AFE9C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006329	0x11B1080	16	The Three Bells		15	1	0x1FC4070	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006330	0x11B10A0	54	Collect the three bells<FE>and return to the Sea Temple.	FE	52	2	0x1FC4074	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006331	0x11B10E0	56	”The three bells will open<FE>the way to another reality.”	FE	54	2	0x11B0F7C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006329	0x11B1080	16	The Three Bells		15	1	0x1FC4070	UNKNOWN	Les Trois Cloches	TRANSLATED
+ODYSSEY-TXT-006330	0x11B10A0	54	Collect the three bells<FE>and return to the Sea Temple.	FE	52	2	0x1FC4074	UNKNOWN	Récupérez les trois cloches<FE>et retournez au Temple des Mers.	TRANSLATED
+ODYSSEY-TXT-006331	0x11B10E0	56	”The three bells will open<FE>the way to another reality.”	FE	54	2	0x11B0F7C	UNKNOWN	“Les trois cloches ouvriront<FE>la voie vers une autre réalité.”	TRANSLATED
 ODYSSEY-TXT-006332	0x11B30C0	80	                                                                               		79	1	0x11B3000	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006333	0x11B3200	80	                                                                               		79	1	0x11B3008	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006334	0x11B3340	80	                                                                               		79	1	0x11B3010	UNKNOWN		SKIP_NOISE
@@ -6344,103 +6344,103 @@ ODYSSEY-TXT-006342	0x11BFE03	4	   		3	1	0x08B9D78	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006343	0x11C2040	257	                                                                                                                                                                                                                                                                		256	1	0x03A0A68	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006344	0x11C211B	38	                                     		37	1	0x1A427C0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006345	0x11C2912	8	inated.		7	1	0x0B547B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006346	0x11C2B36	28	w it more than anyone else.		27	1	0x0AD7C30	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006347	0x11C2C38	72	ST LIKE YOU DID WITH US!<FB>MORE FRIENDS, MORE PUNCHES<FE>TO THE EYEBALL GUY!	FB;FE	69	2	0x0A27ED0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006348	0x11C2C39	71	T LIKE YOU DID WITH US!<FB>MORE FRIENDS, MORE PUNCHES<FE>TO THE EYEBALL GUY!	FB;FE	68	2	0x06B1ACC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006349	0x11C3840	61	A legendary, wish-granting<FE>shard imbued with Abyssal<FE>energy.	FE	58	3	0x03DF058	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006350	0x11C8840	15	Sealed Chamber		14	1	0x03F1BD0,0x03F1E0C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006351	0x11E52C0	16	Seventh Stratum		15	1	0x03F1D60	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006352	0x11E60C0	17	6th Stratum Base		16	1	0x03F1E04	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006346	0x11C2B36	28	w it more than anyone else.		27	1	0x0AD7C30	fragment, overlapping pointer	le sait mieux que quiconque.	TRANSLATED
+ODYSSEY-TXT-006347	0x11C2C38	72	ST LIKE YOU DID WITH US!<FB>MORE FRIENDS, MORE PUNCHES<FE>TO THE EYEBALL GUY!	FB;FE	69	2	0x0A27ED0	fragment, overlapping pointer	COMME TU L’AS FAIT AVEC NOUS !<FB>PLUS D’AMIS, PLUS DE COUPS<FE>DANS LA GUEULE DU TYPE À L’ŒIL !	TRANSLATED
+ODYSSEY-TXT-006348	0x11C2C39	71	T LIKE YOU DID WITH US!<FB>MORE FRIENDS, MORE PUNCHES<FE>TO THE EYEBALL GUY!	FB;FE	68	2	0x06B1ACC	fragment, overlapping pointer	COMME TU L’AS FAIT AVEC NOUS !<FB>PLUS D’AMIS, PLUS DE COUPS<FE>DANS LA GUEULE DU TYPE À L’ŒIL !	TRANSLATED
+ODYSSEY-TXT-006349	0x11C3840	61	A legendary, wish-granting<FE>shard imbued with Abyssal<FE>energy.	FE	58	3	0x03DF058	UNKNOWN	Un éclat légendaire, exauçant<FE>les vœux, imprégné d’énergie<FE>Abyssale.	TRANSLATED
+ODYSSEY-TXT-006350	0x11C8840	15	Sealed Chamber		14	1	0x03F1BD0,0x03F1E0C	UNKNOWN	Chambre Scellée	TRANSLATED
+ODYSSEY-TXT-006351	0x11E52C0	16	Seventh Stratum		15	1	0x03F1D60	UNKNOWN	Septième Strate	TRANSLATED
+ODYSSEY-TXT-006352	0x11E60C0	17	6th Stratum Base		16	1	0x03F1E04	UNKNOWN	Base Strate 6	TRANSLATED
 ODYSSEY-TXT-006353	0x11F14FE	6	 you.		5	1	0x1A6DBC0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006354	0x11F15FC	84	ou come back alive after failing,<FE>you already know what will happen<FA>to your family!	FA;FE	81	2	0x0B131A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006355	0x11F17D8	17	y<FE>or mine...<FB>...	FB;FE	14	2	0x0B69F14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006356	0x11F635B	19	der to restore it.		18	1	0x1A1EAB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006357	0x11F7040	77	The user bites the<FE>foe. It may also<FE>make the foe flinch,<FE>or leave it burned.	FE	73	4	0x129F8DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006358	0x11F7100	79	The user bites the<FE>foe. It may also<FE>make the foe flinch,<FE>or inflict frostbite.	FE	75	4	0x129F8E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006359	0x11F71C0	74	The user bites the<FE>foe. It may also<FE>make the foe flinch,<FE>or paralyze it. 	FE	70	4	0x129F8E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006360	0x11FFDEE	57	 have you been?<FB>I’ve been looking for you<FE>for hours and-	FB;FE	54	2	0x1A1A038	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006361	0x12000CA	82	at something happened<FE>to him.<FB>Something so important that<FE>she had to speak of it.	FB;FE	78	3	0x0C087EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006362	0x1200100	28	hat<FE>she had to speak of it.	FE	26	2	0x070B174	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006363	0x1200400	27	May make the enemy flinch.		26	1	0x10B8B14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006364	0x1200480	8	Balance		7	1	0x008A07C,0x008A0DC,0x009FF9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006365	0x1200BC0	76	The user hits the<FE>target with its tail.<FE>It hits two to five<FE>times in a row.	FE	72	4	0x129F8E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006366	0x1201300	62	The foe is blasted<FE>with a blizzard.<FE>It may inflict<FE>frostbite.	FE	58	4	0x129F3E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006367	0x1201E02	46	aves.<FB>Let’s follow him, he can’t be<FE>far away.	FB;FE	43	2	0x1A6DA3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006368	0x1201E10	32	llow him, he can’t be<FE>far away.	FE	30	2	0x0A9E8D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006369	0x1201E40	76	The foe is attacked<FE>with a shock wave<FE>generated by the<FE>user’s gaping mouth.	FE	72	4	0x129F608	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006370	0x1201E62	42	ave<FE>generated by the<FE>user’s gaping mouth.	FE	39	3	0x1AFC22C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006371	0x1201F00	72	The user attacks<FE>with a ray of light<FE>that may rise the<FE>user’s Def by 1.	FE	68	4	0x129F774	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006372	0x1202136	14	hat a fool...		13	1	0x03C0FD4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006373	0x1202380	24	Winds Across the Plains		23	1	0x03DFD78	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006354	0x11F15FC	84	ou come back alive after failing,<FE>you already know what will happen<FA>to your family!	FA;FE	81	2	0x0B131A0	fragment, overlapping pointer	si vous revenez en vie après un échec,<FE>vous savez déjà ce qui arrivera<FA>à votre famille !	TRANSLATED
+ODYSSEY-TXT-006355	0x11F17D8	17	y<FE>or mine...<FB>...	FB;FE	14	2	0x0B69F14	fragment, overlapping pointer	à toi<FE>ou à moi...<FB>...	TRANSLATED
+ODYSSEY-TXT-006356	0x11F635B	19	der to restore it.		18	1	0x1A1EAB8	fragment, overlapping pointer	afin de le restaurer.	TRANSLATED
+ODYSSEY-TXT-006357	0x11F7040	77	The user bites the<FE>foe. It may also<FE>make the foe flinch,<FE>or leave it burned.	FE	73	4	0x129F8DC	Move description	L’utilisateur mord<FE>la cible. Peut aussi<FE>la faire flancher,<FE>ou la brûler.	TRANSLATED
+ODYSSEY-TXT-006358	0x11F7100	79	The user bites the<FE>foe. It may also<FE>make the foe flinch,<FE>or inflict frostbite.	FE	75	4	0x129F8E0	Move description	L’utilisateur mord<FE>la cible. Peut aussi<FE>la faire flancher,<FE>ou lui causer des engelures.	TRANSLATED
+ODYSSEY-TXT-006359	0x11F71C0	74	The user bites the<FE>foe. It may also<FE>make the foe flinch,<FE>or paralyze it. 	FE	70	4	0x129F8E4	Move description	L’utilisateur mord<FE>la cible. Peut aussi<FE>la faire flancher,<FE>ou la paralyser.	TRANSLATED
+ODYSSEY-TXT-006360	0x11FFDEE	57	 have you been?<FB>I’ve been looking for you<FE>for hours and-	FB;FE	54	2	0x1A1A038	fragment, overlapping pointer	Où étais-tu passé ?<FB>Je te cherche depuis<FE>des heures et-	TRANSLATED
+ODYSSEY-TXT-006361	0x12000CA	82	at something happened<FE>to him.<FB>Something so important that<FE>she had to speak of it.	FB;FE	78	3	0x0C087EC	fragment, overlapping pointer	que quelque chose lui<FE>était arrivé.<FB>Quelque chose de si important<FE>qu’elle devait en parler.	TRANSLATED
+ODYSSEY-TXT-006362	0x1200100	28	hat<FE>she had to speak of it.	FE	26	2	0x070B174	fragment, overlapping pointer	qu’elle<FE>devait en parler.	TRANSLATED
+ODYSSEY-TXT-006363	0x1200400	27	May make the enemy flinch.		26	1	0x10B8B14	Ability description	Peut faire flancher l’ennemi.	TRANSLATED
+ODYSSEY-TXT-006364	0x1200480	8	Balance		7	1	0x008A07C,0x008A0DC,0x009FF9C	UNKNOWN	Équilibre	TRANSLATED
+ODYSSEY-TXT-006365	0x1200BC0	76	The user hits the<FE>target with its tail.<FE>It hits two to five<FE>times in a row.	FE	72	4	0x129F8E8	Move description	L’utilisateur frappe<FE>la cible avec sa queue.<FE>Touche deux à cinq<FE>fois de suite.	TRANSLATED
+ODYSSEY-TXT-006366	0x1201300	62	The foe is blasted<FE>with a blizzard.<FE>It may inflict<FE>frostbite.	FE	58	4	0x129F3E8	Move description	La cible est frappée<FE>par un blizzard.<FE>Peut causer<FE>des engelures.	TRANSLATED
+ODYSSEY-TXT-006367	0x1201E02	46	aves.<FB>Let’s follow him, he can’t be<FE>far away.	FB;FE	43	2	0x1A6DA3C	fragment, overlapping pointer	parti.<FB>Suivons-le, il ne doit pas être<FE>bien loin.	TRANSLATED
+ODYSSEY-TXT-006368	0x1201E10	32	llow him, he can’t be<FE>far away.	FE	30	2	0x0A9E8D8	fragment, overlapping pointer	pas être<FE>bien loin.	TRANSLATED
+ODYSSEY-TXT-006369	0x1201E40	76	The foe is attacked<FE>with a shock wave<FE>generated by the<FE>user’s gaping mouth.	FE	72	4	0x129F608	Move description	La cible est attaquée<FE>par une onde de choc<FE>générée par la gueule<FE>grande ouverte de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-006370	0x1201E62	42	ave<FE>generated by the<FE>user’s gaping mouth.	FE	39	3	0x1AFC22C	fragment, overlapping pointer	onde<FE>générée par la gueule<FE>grande ouverte de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-006371	0x1201F00	72	The user attacks<FE>with a ray of light<FE>that may rise the<FE>user’s Def by 1.	FE	68	4	0x129F774	Move description	L’utilisateur attaque<FE>avec un rayon de lumière<FE>qui peut augmenter<FE>sa Défense de 1.	TRANSLATED
+ODYSSEY-TXT-006372	0x1202136	14	hat a fool...		13	1	0x03C0FD4	fragment, overlapping pointer	Quel idiot...	TRANSLATED
+ODYSSEY-TXT-006373	0x1202380	24	Winds Across the Plains		23	1	0x03DFD78	UNKNOWN	Vents à Travers les Plaines	TRANSLATED
 ODYSSEY-TXT-006374	0x1202700	5	Next		4	1	0x12024A0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006375	0x12035C0	34	<FD:0F> transformed<FE>into the <FD:00> type!<FB>	FB;FD;FE	27	2	0x03FE030	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006376	0x1204380	21	EV-Friendship Viewer		20	1	0x03E0020	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006377	0x1204400	24	Numerical Mode: Talrega		23	1	0x0452024	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006378	0x1204480	8	Talrega		7	1	0x0102DBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006379	0x1204500	111	A Magician who can manipulate the Etheric<FE>energy of the stars. It has complete<FE>control over multiple elements.	FE	108	3	0x120E298	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006375	0x12035C0	34	<FD:0F> transformed<FE>into the <FD:00> type!<FB>	FB;FD;FE	27	2	0x03FE030	UNKNOWN	<FD:0F> s’est transformé<FE>en type <FD:00> !<FB>	TRANSLATED
+ODYSSEY-TXT-006376	0x1204380	21	EV-Friendship Viewer		20	1	0x03E0020	UNKNOWN	Visionneuse EV-Amitié	TRANSLATED
+ODYSSEY-TXT-006377	0x1204400	24	Numerical Mode: Talrega		23	1	0x0452024	UNKNOWN	Mode Numérique : Talrega	TRANSLATED
+ODYSSEY-TXT-006378	0x1204480	8	Talrega		7	1	0x0102DBC	UNKNOWN	Talrega	TRANSLATED
+ODYSSEY-TXT-006379	0x1204500	111	A Magician who can manipulate the Etheric<FE>energy of the stars. It has complete<FE>control over multiple elements.	FE	108	3	0x120E298	Pokedex entry	Un Magicien capable de manipuler l’énergie<FE>Éthérique des étoiles. Il maîtrise<FE>parfaitement de multiples éléments.	TRANSLATED
 ODYSSEY-TXT-006380	0x1204B80	31	Compendium   Table of Contents		30	1	0x0102EB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006381	0x120C440	116	A gargantuan bird that has control over<FE>lightning. It’s said it was the guardian<FE>deity of a forgotten forest tribe.	FE	113	3	0x120CCA8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006382	0x120C500	110	It busily flits around here and there.<FE>Even if it is frail, it can be a tough<FE>foe that uses electric attacks.	FE	107	3	0x120CC84	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006383	0x120C5C0	110	It was discovered in an aquatic ruin<FE>off the shores of Talrega. It can<FE>breathe etheric energy in lieu of air.	FE	107	3	0x120CCCC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006384	0x120C680	108	An icy, six-legged horse with flames<FE>on its back. It usually creates its<FE>nest on mountains or snowy places.	FE	105	3	0x120D464	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006385	0x120C740	101	An enormous, otherworldly,<FE>eight-legged stallion. Legends say<FE>it came from a place called “Lagaard”.	FE	98	3	0x120D488	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006386	0x120C800	109	Plusle’s Battle Bond form achieved<FE>through the power of the Abyssal Shard.<FE>Its defense is matched by no one.	FE	106	3	0x120EC94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006387	0x120C8C0	108	Minun’s Battle Bond form achieved<FE>through the power of the Abyssal Shard.<FE>Its offense is matched by no one.	FE	105	3	0x120ECB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006388	0x120C980	8	UNKNOWN		7	1	0x0088E34,0x0088E5C,0x0088E70,0x0105860,0x01059F0,0x0105BEC,0x0105D44,0x01066C8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006381	0x120C440	116	A gargantuan bird that has control over<FE>lightning. It’s said it was the guardian<FE>deity of a forgotten forest tribe.	FE	113	3	0x120CCA8	Pokedex entry	Un oiseau gigantesque qui maîtrise<FE>la foudre. On dit qu’il était la divinité<FE>protectrice d’une tribu forestière oubliée.	TRANSLATED
+ODYSSEY-TXT-006382	0x120C500	110	It busily flits around here and there.<FE>Even if it is frail, it can be a tough<FE>foe that uses electric attacks.	FE	107	3	0x120CC84	Pokedex entry	Il voltige sans cesse ici et là.<FE>Bien que fragile, il peut être un<FE>adversaire coriace grâce à ses attaques électriques.	TRANSLATED
+ODYSSEY-TXT-006383	0x120C5C0	110	It was discovered in an aquatic ruin<FE>off the shores of Talrega. It can<FE>breathe etheric energy in lieu of air.	FE	107	3	0x120CCCC	Pokedex entry	Il a été découvert dans des ruines aquatiques<FE>au large de Talrega. Il peut<FE>respirer de l’énergie éthérique au lieu de l’air.	TRANSLATED
+ODYSSEY-TXT-006384	0x120C680	108	An icy, six-legged horse with flames<FE>on its back. It usually creates its<FE>nest on mountains or snowy places.	FE	105	3	0x120D464	Pokedex entry	Un cheval glacé à six pattes, dont le dos<FE>est couvert de flammes. Il fait<FE>généralement son nid en montagne ou dans des lieux enneigés.	TRANSLATED
+ODYSSEY-TXT-006385	0x120C740	101	An enormous, otherworldly,<FE>eight-legged stallion. Legends say<FE>it came from a place called “Lagaard”.	FE	98	3	0x120D488	Pokedex entry	Un immense étalon à huit pattes,<FE>venu d’un autre monde. Les légendes disent<FE>qu’il vient d’un lieu appelé “Lagaard”.	TRANSLATED
+ODYSSEY-TXT-006386	0x120C800	109	Plusle’s Battle Bond form achieved<FE>through the power of the Abyssal Shard.<FE>Its defense is matched by no one.	FE	106	3	0x120EC94	Pokedex entry	Forme Lien Combat de Posipi,<FE>obtenue grâce à la puissance de l’Éclat<FE>Abyssal. Sa défense est inégalée.	TRANSLATED
+ODYSSEY-TXT-006387	0x120C8C0	108	Minun’s Battle Bond form achieved<FE>through the power of the Abyssal Shard.<FE>Its offense is matched by no one.	FE	105	3	0x120ECB8	Pokedex entry	Forme Lien Combat de Négapi,<FE>obtenue grâce à la puissance de l’Éclat<FE>Abyssal. Son attaque est inégalée.	TRANSLATED
+ODYSSEY-TXT-006388	0x120C980	8	UNKNOWN		7	1	0x0088E34,0x0088E5C,0x0088E70,0x0105860,0x01059F0,0x0105BEC,0x0105D44,0x01066C8	UNKNOWN	INCONNU	TRANSLATED
 ODYSSEY-TXT-006389	0x120DBEE	8	ansport		7	1	0x0D61868	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-006390	0x1210011	9	ong Tail		8	1	0x0DDED5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006391	0x1210390	72	It is very difficult to dodge the<FE>consecutive strikes of its two tails.	FE	70	2	0x1210020	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006392	0x12103F8	98	A vengeful caster of mind-controlling<FE>and debilitating hexes that slowly<FE>deteriorate its enemies.	FE	95	3	0x1210044	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006393	0x1210460	77	Becoming active at night, it is known<FE>to swarm with numerous Murkrow in tow.	FE	75	2	0x1210068	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006394	0x12104C8	104	It hides in shadows and uses the art<FE>of ninpo to catch its prey by either<FE>poisoning or paralyzing them.	FE	101	3	0x121008C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006395	0x1210509	39	y either<FE>poisoning or paralyzing them.	FE	37	2	0x1AF9CA4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006396	0x1210530	86	It evolved from exposure to a special<FE>magnetic field. Three units generate<FE>magnetism.	FE	83	3	0x12100B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006397	0x1210598	98	The long tongue is always soggy with<FE>slobber. The saliva contains a solvent<FE>that causes numbness.	FE	95	3	0x12100D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006398	0x1210600	94	From holes in its palms, it fires out<FE>Geodude. Its carapace can withstand<FE>volcanic eruptions.	FE	91	3	0x12100F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006399	0x12106D0	105	Its body has shifted into a monstrous,<FE>berserk state, cloaked in crackling<FE>lightning and shadowy energy.	FE	102	3	0x1210140	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006400	0x12107A0	85	It will never appear where there is<FE>strife. Its sightings have become rare<FE>recently.	FE	82	3	0x1210188	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006401	0x1210808	93	Its jaw power is incredible. It is<FE>adept at biting apart foes while flying<FE>by at high speed.	FE	90	3	0x12101AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006402	0x1210816	79	is incredible. It is<FE>adept at biting apart foes while flying<FE>by at high speed.	FE	76	3	0x016C6F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006403	0x1210821	68	le. It is<FE>adept at biting apart foes while flying<FE>by at high speed.	FE	65	3	0x106C274,0x12211D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006404	0x1210870	98	Legends in snowy regions say that a<FE>woman who was lost on an icy mountain<FE>was reborn as Froslass.	FE	95	3	0x12101D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006405	0x12108D8	99	It observes prey while hanging inverted<FE>from branches. When the chance presents<FE>itself, it swoops!	FE	96	3	0x12101F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006406	0x1210918	35	chance presents<FE>itself, it swoops!	FE	33	2	0x1AFC3F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006407	0x1210940	93	Its programming was modified to enable<FE>work in alien dimensions. It did not<FE>work as planned.	FE	90	3	0x1210218	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006408	0x1210A10	77	It freely controls three small units<FE>called Mini-Noses using magnetic force.	FE	75	2	0x1210260	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006409	0x1210AE0	90	A frozen one was dug up from soil<FE>dating back 10,000 years. It woke up to<FE>much amazement.	FE	87	3	0x12102A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006410	0x1210B0C	46	k 10,000 years. It woke up to<FE>much amazement.	FE	44	2	0x0A35B08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006411	0x1210BB0	93	Just like a plant, it uses<FE>photosynthesis. As a result, it is<FE>always enveloped in clear air.	FE	90	3	0x12102F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006412	0x1210C18	96	It causes small ice crystals to form by<FE>lowering the temperature of the<FE>surrounding atmosphere.	FE	93	3	0x1210314	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006413	0x1210D40	89	It attracts prey with a sweet aroma,<FE>then downs it with thorny whips hidden<FE>in its arms.	FE	86	3	0x120FFFC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006414	0x1215400	72	A harsh attack that<FE>absorbs half the<FE>damage it inflicted<FE>to restore HP.	FE	68	4	0x129F8EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006415	0x12154C0	68	Restores half of the<FE>user’s maximum HP<FE>and raises<FE>the user’s Speed.	FE	64	4	0x129F8F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006416	0x1215700	28	Normal moves become Aether.		27	1	0x10B8EBC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006391	0x1210390	72	It is very difficult to dodge the<FE>consecutive strikes of its two tails.	FE	70	2	0x1210020	Pokedex entry	Il est très difficile d’esquiver<FE>les coups consécutifs de ses deux queues.	TRANSLATED
+ODYSSEY-TXT-006392	0x12103F8	98	A vengeful caster of mind-controlling<FE>and debilitating hexes that slowly<FE>deteriorate its enemies.	FE	95	3	0x1210044	Pokedex entry	Un lanceur de sorts vindicatif, expert en<FE>maléfices de contrôle mental et d’affaiblissement<FE>qui rongent lentement ses ennemis.	TRANSLATED
+ODYSSEY-TXT-006393	0x1210460	77	Becoming active at night, it is known<FE>to swarm with numerous Murkrow in tow.	FE	75	2	0x1210068	Pokedex entry	Devenant actif la nuit, il est connu<FE>pour se déplacer en essaim avec de nombreux Cornebre à sa suite.	TRANSLATED
+ODYSSEY-TXT-006394	0x12104C8	104	It hides in shadows and uses the art<FE>of ninpo to catch its prey by either<FE>poisoning or paralyzing them.	FE	101	3	0x121008C	Pokedex entry	Il se cache dans l’ombre et utilise l’art<FE>du ninpo pour capturer ses proies, soit en<FE>les empoisonnant, soit en les paralysant.	TRANSLATED
+ODYSSEY-TXT-006395	0x1210509	39	y either<FE>poisoning or paralyzing them.	FE	37	2	0x1AF9CA4	fragment, overlapping pointer	soit en<FE>les empoisonnant, soit en les paralysant.	TRANSLATED
+ODYSSEY-TXT-006396	0x1210530	86	It evolved from exposure to a special<FE>magnetic field. Three units generate<FE>magnetism.	FE	83	3	0x12100B0	Pokedex entry	Il a évolué après une exposition à un<FE>champ magnétique spécial. Trois unités génèrent<FE>du magnétisme.	TRANSLATED
+ODYSSEY-TXT-006397	0x1210598	98	The long tongue is always soggy with<FE>slobber. The saliva contains a solvent<FE>that causes numbness.	FE	95	3	0x12100D4	Pokedex entry	Sa longue langue est toujours trempée<FE>de bave. Cette salive contient un solvant<FE>qui provoque un engourdissement.	TRANSLATED
+ODYSSEY-TXT-006398	0x1210600	94	From holes in its palms, it fires out<FE>Geodude. Its carapace can withstand<FE>volcanic eruptions.	FE	91	3	0x12100F8	Pokedex entry	Par les trous de ses paumes, il tire<FE>des Racaillou. Sa carapace peut résister<FE>à des éruptions volcaniques.	TRANSLATED
+ODYSSEY-TXT-006399	0x12106D0	105	Its body has shifted into a monstrous,<FE>berserk state, cloaked in crackling<FE>lightning and shadowy energy.	FE	102	3	0x1210140	Pokedex entry	Son corps a basculé dans un état<FE>monstrueux et déchaîné, enveloppé d’éclairs<FE>crépitants et d’énergie ténébreuse.	TRANSLATED
+ODYSSEY-TXT-006400	0x12107A0	85	It will never appear where there is<FE>strife. Its sightings have become rare<FE>recently.	FE	82	3	0x1210188	Pokedex entry	Il n’apparaît jamais là où règnent<FE>les conflits. Ses apparitions se sont faites<FE>rares dernièrement.	TRANSLATED
+ODYSSEY-TXT-006401	0x1210808	93	Its jaw power is incredible. It is<FE>adept at biting apart foes while flying<FE>by at high speed.	FE	90	3	0x12101AC	Pokedex entry	La puissance de sa mâchoire est incroyable.<FE>Il excelle à déchiqueter ses ennemis en<FE>les mordant lors de passages à grande vitesse.	TRANSLATED
+ODYSSEY-TXT-006402	0x1210816	79	is incredible. It is<FE>adept at biting apart foes while flying<FE>by at high speed.	FE	76	3	0x016C6F8	fragment, overlapping pointer	est incroyable.<FE>Il excelle à déchiqueter ses ennemis en<FE>les mordant lors de passages à grande vitesse.	TRANSLATED
+ODYSSEY-TXT-006403	0x1210821	68	le. It is<FE>adept at biting apart foes while flying<FE>by at high speed.	FE	65	3	0x106C274,0x12211D8	fragment, overlapping pointer	est incroyable.<FE>Il excelle à déchiqueter ses ennemis en<FE>les mordant lors de passages à grande vitesse.	TRANSLATED
+ODYSSEY-TXT-006404	0x1210870	98	Legends in snowy regions say that a<FE>woman who was lost on an icy mountain<FE>was reborn as Froslass.	FE	95	3	0x12101D0	Pokedex entry	Les légendes des régions enneigées racontent<FE>qu’une femme perdue sur une montagne glacée<FE>a été réincarnée en Momartik.	TRANSLATED
+ODYSSEY-TXT-006405	0x12108D8	99	It observes prey while hanging inverted<FE>from branches. When the chance presents<FE>itself, it swoops!	FE	96	3	0x12101F4	Pokedex entry	Il observe ses proies suspendu la tête<FE>en bas aux branches. Quand l’occasion<FE>se présente, il fond sur elles !	TRANSLATED
+ODYSSEY-TXT-006406	0x1210918	35	chance presents<FE>itself, it swoops!	FE	33	2	0x1AFC3F0	fragment, overlapping pointer	l’occasion<FE>se présente, il fond sur elles !	TRANSLATED
+ODYSSEY-TXT-006407	0x1210940	93	Its programming was modified to enable<FE>work in alien dimensions. It did not<FE>work as planned.	FE	90	3	0x1210218	Pokedex entry	Sa programmation a été modifiée pour lui<FE>permettre de travailler dans des dimensions étrangères.<FE>Cela ne s’est pas passé comme prévu.	TRANSLATED
+ODYSSEY-TXT-006408	0x1210A10	77	It freely controls three small units<FE>called Mini-Noses using magnetic force.	FE	75	2	0x1210260	Pokedex entry	Il contrôle librement trois petites unités<FE>appelées Mini-Nez grâce à la force magnétique.	TRANSLATED
+ODYSSEY-TXT-006409	0x1210AE0	90	A frozen one was dug up from soil<FE>dating back 10,000 years. It woke up to<FE>much amazement.	FE	87	3	0x12102A8	Pokedex entry	Un spécimen gelé a été extrait d’un sol<FE>vieux de 10 000 ans. Son réveil a<FE>suscité un immense étonnement.	TRANSLATED
+ODYSSEY-TXT-006410	0x1210B0C	46	k 10,000 years. It woke up to<FE>much amazement.	FE	44	2	0x0A35B08	fragment, overlapping pointer	vieux de 10 000 ans. Son réveil a<FE>suscité un immense étonnement.	TRANSLATED
+ODYSSEY-TXT-006411	0x1210BB0	93	Just like a plant, it uses<FE>photosynthesis. As a result, it is<FE>always enveloped in clear air.	FE	90	3	0x12102F0	Pokedex entry	Tout comme une plante, il utilise<FE>la photosynthèse. Il est donc<FE>toujours enveloppé d’un air pur.	TRANSLATED
+ODYSSEY-TXT-006412	0x1210C18	96	It causes small ice crystals to form by<FE>lowering the temperature of the<FE>surrounding atmosphere.	FE	93	3	0x1210314	Pokedex entry	Il fait naître de petits cristaux de glace<FE>en abaissant la température de<FE>l’atmosphère environnante.	TRANSLATED
+ODYSSEY-TXT-006413	0x1210D40	89	It attracts prey with a sweet aroma,<FE>then downs it with thorny whips hidden<FE>in its arms.	FE	86	3	0x120FFFC	Pokedex entry	Il attire ses proies avec un doux arôme,<FE>puis les abat avec des fouets épineux cachés<FE>dans ses bras.	TRANSLATED
+ODYSSEY-TXT-006414	0x1215400	72	A harsh attack that<FE>absorbs half the<FE>damage it inflicted<FE>to restore HP.	FE	68	4	0x129F8EC	Move description	Une attaque brutale qui<FE>absorbe la moitié des<FE>dégâts infligés<FE>pour restaurer des PV.	TRANSLATED
+ODYSSEY-TXT-006415	0x12154C0	68	Restores half of the<FE>user’s maximum HP<FE>and raises<FE>the user’s Speed.	FE	64	4	0x129F8F0	Move description	Restaure la moitié des<FE>PV max. de l’utilisateur<FE>et augmente<FE>sa Vitesse.	TRANSLATED
+ODYSSEY-TXT-006416	0x1215700	28	Normal moves become Aether.		27	1	0x10B8EBC	Ability description	Les capacités Normal deviennent Éther.	TRANSLATED
 ODYSSEY-TXT-006417	0x1221880	7	1 time		6	1	0x03DFE18	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006418	0x1221900	8	5 times		7	1	0x03DFE20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006419	0x1221980	9	10 times		8	1	0x03DFE28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006420	0x1222180	76	Causes damage equal<FE>to the user’s level<FE>and decreases<FE>the target’s Defense.	FE	72	4	0x129F8F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006421	0x1223900	74	The user quickly<FE>leaps out from tall<FE>Grass. It also ups<FE>the user’s Speed.	FE	70	4	0x129F8F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006422	0x12239C0	79	The user cloaks<FE>itself in flames and<FE>attacks. It also ups<FE>the user’s Speed.   	FE	75	4	0x129F8FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006423	0x1223A80	68	The user gathers<FE>solar energy to<FE>strike foes with<FE>a blade of light.	FE	64	4	0x129F900	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006424	0x1223B40	71	Powerful move, but it<FE>only works the first<FE>turn the user is in<FE>battle.	FE	67	4	0x129F904	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006425	0x12249C0	72	A dance that raises<FE>the user’s Speed<FE>and the partner’s<FE>Def and Sp. Def.	FE	68	4	0x129F914	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006426	0x1224A80	74	A dance that raises<FE>the user’s Evasion<FE>and the partner’s<FE>Atk and Sp. Atk.	FE	70	4	0x129F910	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006427	0x1224B40	72	A song that sharply<FE>raises the team’s<FE>Accuracy and the<FE>partner’s Speed.	FE	68	4	0x129F918	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006428	0x1224C00	70	A song that raises<FE>the team’s Speed<FE>and heals their<FE>status condition.	FE	66	4	0x129F91C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006429	0x1226200	66	A piercing attack<FE>that fires 2 to 5<FE>bullets at once<FE>at one enemy.	FE	62	4	0x129F920	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006418	0x1221900	8	5 times		7	1	0x03DFE20	UNKNOWN	5 fois	TRANSLATED
+ODYSSEY-TXT-006419	0x1221980	9	10 times		8	1	0x03DFE28	UNKNOWN	10 fois	TRANSLATED
+ODYSSEY-TXT-006420	0x1222180	76	Causes damage equal<FE>to the user’s level<FE>and decreases<FE>the target’s Defense.	FE	72	4	0x129F8F4	Move description	Inflige des dégâts égaux<FE>au niveau de l’utilisateur<FE>et réduit la Défense<FE>de la cible.	TRANSLATED
+ODYSSEY-TXT-006421	0x1223900	74	The user quickly<FE>leaps out from tall<FE>Grass. It also ups<FE>the user’s Speed.	FE	70	4	0x129F8F8	Move description	L’utilisateur jaillit<FE>rapidement des hautes<FE>herbes. Augmente aussi<FE>sa Vitesse.	TRANSLATED
+ODYSSEY-TXT-006422	0x12239C0	79	The user cloaks<FE>itself in flames and<FE>attacks. It also ups<FE>the user’s Speed.   	FE	75	4	0x129F8FC	Move description	L’utilisateur s’enveloppe<FE>de flammes et<FE>attaque. Augmente aussi<FE>sa Vitesse.	TRANSLATED
+ODYSSEY-TXT-006423	0x1223A80	68	The user gathers<FE>solar energy to<FE>strike foes with<FE>a blade of light.	FE	64	4	0x129F900	Move description	L’utilisateur rassemble<FE>de l’énergie solaire pour<FE>frapper ses ennemis avec<FE>une lame de lumière.	TRANSLATED
+ODYSSEY-TXT-006424	0x1223B40	71	Powerful move, but it<FE>only works the first<FE>turn the user is in<FE>battle.	FE	67	4	0x129F904	Move description	Capacité puissante, mais qui<FE>ne fonctionne qu’au premier<FE>tour où l’utilisateur est<FE>en combat.	TRANSLATED
+ODYSSEY-TXT-006425	0x12249C0	72	A dance that raises<FE>the user’s Speed<FE>and the partner’s<FE>Def and Sp. Def.	FE	68	4	0x129F914	Move description	Une danse qui augmente<FE>la Vitesse de l’utilisateur<FE>et la Défense et la<FE>Défense Spéciale du partenaire.	TRANSLATED
+ODYSSEY-TXT-006426	0x1224A80	74	A dance that raises<FE>the user’s Evasion<FE>and the partner’s<FE>Atk and Sp. Atk.	FE	70	4	0x129F910	Move description	Une danse qui augmente<FE>l’Esquive de l’utilisateur<FE>et l’Attaque et l’Atq.<FE>Spéciale du partenaire.	TRANSLATED
+ODYSSEY-TXT-006427	0x1224B40	72	A song that sharply<FE>raises the team’s<FE>Accuracy and the<FE>partner’s Speed.	FE	68	4	0x129F918	Move description	Un chant qui augmente<FE>fortement la Précision<FE>de l’équipe et la<FE>Vitesse du partenaire.	TRANSLATED
+ODYSSEY-TXT-006428	0x1224C00	70	A song that raises<FE>the team’s Speed<FE>and heals their<FE>status condition.	FE	66	4	0x129F91C	Move description	Un chant qui augmente<FE>la Vitesse de l’équipe<FE>et soigne leurs<FE>problèmes de statut.	TRANSLATED
+ODYSSEY-TXT-006429	0x1226200	66	A piercing attack<FE>that fires 2 to 5<FE>bullets at once<FE>at one enemy.	FE	62	4	0x129F920	Move description	Une attaque perforante<FE>qui tire 2 à 5<FE>projectiles d’un coup<FE>sur un seul ennemi.	TRANSLATED
 ODYSSEY-TXT-006430	0x1227177	10	         		9	1	0x11F98E4,0x11F9F28,0x11FA068	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006431	0x1228B00	68	<FE>Lead Developer, Maps,<FE>Scripts, Sprites, Story,<FE>Dialogues, Music<FE><FE><FE>	FE	61	7	0x04145BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006432	0x1228C40	25	<FE>English Translation<FE><FE><FE><FE>	FE	19	6	0x04145E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006433	0x1228CC0	43	<FE>Sidequest Menu,<FE>FOE System, Major ASM<FE><FE><FE><FE>	FE	36	7	0x04145EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006434	0x1228D40	40	<FE><FE>Hapu<FE>FlamingDragonGaming<FE>LanturnJoe<FE><FE>	FE	33	7	0x0414608	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006435	0x1228DC0	37	<FE><FE>Nah.png<FE>Prof. A. Malgam.<FE>Streyar<FE><FE>	FE	30	7	0x0414614	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006436	0x1228E40	29	<FE><FE>Dekadent<FE>Hallan<FE>Seraphim<FE><FE>	FE	22	7	0x0414620	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006431	0x1228B00	68	<FE>Lead Developer, Maps,<FE>Scripts, Sprites, Story,<FE>Dialogues, Music<FE><FE><FE>	FE	61	7	0x04145BC	UNKNOWN	<FE>Développeur Principal, Cartes,<FE>Scripts, Sprites, Scénario,<FE>Dialogues, Musique<FE><FE><FE>	TRANSLATED
+ODYSSEY-TXT-006432	0x1228C40	25	<FE>English Translation<FE><FE><FE><FE>	FE	19	6	0x04145E0	UNKNOWN	<FE>Traduction Anglaise<FE><FE><FE><FE>	TRANSLATED
+ODYSSEY-TXT-006433	0x1228CC0	43	<FE>Sidequest Menu,<FE>FOE System, Major ASM<FE><FE><FE><FE>	FE	36	7	0x04145EC	UNKNOWN	<FE>Menu de Quêtes Annexes,<FE>Système F.O.E., ASM Majeur<FE><FE><FE><FE>	TRANSLATED
+ODYSSEY-TXT-006434	0x1228D40	40	<FE><FE>Hapu<FE>FlamingDragonGaming<FE>LanturnJoe<FE><FE>	FE	33	7	0x0414608	UNKNOWN	<FE><FE>Hapu<FE>FlamingDragonGaming<FE>LanturnJoe<FE><FE>	TRANSLATED
+ODYSSEY-TXT-006435	0x1228DC0	37	<FE><FE>Nah.png<FE>Prof. A. Malgam.<FE>Streyar<FE><FE>	FE	30	7	0x0414614	UNKNOWN	<FE><FE>Nah.png<FE>Prof. A. Malgam.<FE>Streyar<FE><FE>	TRANSLATED
+ODYSSEY-TXT-006436	0x1228E40	29	<FE><FE>Dekadent<FE>Hallan<FE>Seraphim<FE><FE>	FE	22	7	0x0414620	UNKNOWN	<FE><FE>Dekadent<FE>Hallan<FE>Seraphim<FE><FE>	TRANSLATED
 ODYSSEY-TXT-006437	0x1235680	17	                		16	1	0x1235504	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006438	0x1242200	31	ter not keep the boss waiting.		30	1	0x0C3B020	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006439	0x1249940	13	Trade Center		12	1	0x03F1CB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006440	0x1250285	17	Obtained 3.000$!		16	1	0x1250268	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006441	0x1250305	17	Obtained 2.000$!		16	1	0x12502E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006442	0x1250385	17	Obtained 3.000$!		16	1	0x1250368	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006438	0x1242200	31	ter not keep the boss waiting.		30	1	0x0C3B020	fragment, overlapping pointer	vaut mieux ne pas faire attendre le patron.	TRANSLATED
+ODYSSEY-TXT-006439	0x1249940	13	Trade Center		12	1	0x03F1CB4	UNKNOWN	Centre d’Échange	TRANSLATED
+ODYSSEY-TXT-006440	0x1250285	17	Obtained 3.000$!		16	1	0x1250268	UNKNOWN	Vous avez obtenu 3.000 $ !	TRANSLATED
+ODYSSEY-TXT-006441	0x1250305	17	Obtained 2.000$!		16	1	0x12502E8	UNKNOWN	Vous avez obtenu 2.000 $ !	TRANSLATED
+ODYSSEY-TXT-006442	0x1250385	17	Obtained 3.000$!		16	1	0x1250368	UNKNOWN	Vous avez obtenu 3.000 $ !	TRANSLATED
 ODYSSEY-TXT-006443	0x1253340	257	                                                                                                                                                                                                                                                                		256	1	0x1252788	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006444	0x125393E	3	  		2	1	0x0AA490C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006445	0x1254100	257	                                                                                                                                                                                                                                                                		256	1	0x1253548	UNKNOWN		SKIP_NOISE
