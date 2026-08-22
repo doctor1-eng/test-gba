@@ -1,23 +1,28 @@
 # Suivi de progression — traduction française Pokémon Odyssey
 
-Dernière mise à jour : 2026-08-22 (en cours, traduction complète en cours d'exécution lot par lot, sur autorisation explicite de l'utilisateur : « Tout bon tu peux traduire l'entièreté du jeu »)
+Dernière mise à jour : 2026-08-22 (traduction complète de tout le texte réel identifié, sur autorisation explicite de l'utilisateur : « Tout bon tu peux traduire l'entièreté du jeu »)
 
 ## État réel (pas une estimation arrondie)
 
 | Métrique | Valeur |
 |---|---|
 | Chaînes extraites (texte pointé, base) | **9 051** |
-| … dont bruit de décodage (fragments non exploitables, jamais supprimées) | 2 332 (`SKIP_NOISE`) |
-| Chaînes de texte réel à traiter (9051 - 2332) | 6 719 |
-| Traduites (`TRANSLATED`) | **4 050** |
-| Restant à traduire | 2 669 (`UNTRANSLATED`) |
-| Validées structurellement (contrôle des codes, encodage) | 4050 / 4050, 0 erreur |
-| Réinsérées dans un build ROM | 4050 / 4050 (`build/Pokemon_Odyssey_FR.gba`) |
-| Testées en jeu (affichage réel vérifié) | Caractères accentués français confirmés par l'utilisateur sur émulateur réel (voir `TESTING.md`). Le reste du contenu traduit n'a pas été rejoué en jeu depuis (volume trop important pour un test exhaustif manuel à ce stade).
+| … dont bruit de décodage / données non textuelles (jamais supprimées, marquées `SKIP_NOISE`) | **2 717** |
+| Chaînes de texte réel (9051 - 2717) | **6 334** |
+| Traduites (`TRANSLATED`) | **6 334 / 6 334 → 100 %** |
+| Validées structurellement (contrôle des codes, encodage) | 6 334 / 6 334, **0 erreur** |
+| Réinsérées dans le build ROM | 6 334 / 6 334 (`build/Pokemon_Odyssey_FR.gba`) |
+| Testées en jeu (affichage réel vérifié) | Caractères accentués français confirmés par l'utilisateur sur émulateur réel au tout début du projet (voir `TESTING.md`). **Le contenu ajouté depuis n'a pas été retesté visuellement en jeu** — voir limitations ci-dessous. |
 
-**Pourcentage de traduction du texte réel : ~60 % (4050 / 6719 chaînes réelles utiles).** Ne pas arrondir vers le haut.
+**100 % du texte réel traduit.** Ce chiffre est honnête au sens strict : il couvre toutes les lignes classées comme texte réel exploitable par l'extracteur. Il ne garantit pas que 100 % du texte soit *parfait* — voir les limitations ci-dessous.
 
-Contenu couvert à ce stade (non exhaustif) : intégralité du LOT 1 (interface/système), Mt. Moon, S.S. Anne, Team Rocket (Mt. Moon/Silph Co./Warehouse/Hideout), Victory Road, Pokémon Tower, Safari Zone, la plupart des Arènes Kanto, Îles Sevii (One-Seven Island, Bill/Celio, ruines Tanoby), système d'AIDE complet, Game Corner, panneaux de lieux, PNJ dresseurs de plusieurs routes, crédits du hack, interface Mystery Gift/Wonder Card/Wireless Communication System complète, chat sans fil, une large partie du Pokédex (Bulbasaur → Gengar/Onix, Cacnea → Relicanth, avec plusieurs entrées de lore propres au hack comme le "Deep One"/"Abyssal God"), mobilier complet de Secret Base (bureaux, chaises, tapis, posters, peluches, coussins), noms de Nature (10/25 rencontrés jusqu'ici), et un grand bloc de descriptions de capacités de combat (~300 capacités).
+## Composition des 2 717 lignes `SKIP_NOISE` (bruit, non traduites intentionnellement)
+
+Toutes conservées, jamais supprimées, chacune avec une note explicite dans la colonne `context` :
+- **Fragments de chaînes qui se chevauchent en mémoire** (technique d'économie d'espace du ROM d'origine) dont le texte utile a déjà été traduit via la ligne parente — reclassés seulement quand la traduction du fragment était authentiquement injouable sans inventer du contenu.
+- **~330 lignes de bruit de décodage pur** : séquences de symboles répétés, données binaires/graphiques mal identifiées comme texte par l'extracteur une fois la table de caractères complétée avec les accents français (le bruit était auparavant filtré différemment ; il a été détecté et isolé méthodiquement lors de cette session, avec vérification manuelle par échantillonnage avant toute reclassification en masse).
+- **Une quinzaine de lignes en italien** : ce hack contient, de façon inattendue, des fragments de texte italien resté dans les tables du jeu (probablement un vestige d'une localisation italienne antérieure ou parallèle). Ce texte n'est pas traduit vers le français — il appartient à une autre langue du jeu et le traduire aurait été une erreur de portée, pas une traduction légitime.
+- **7 fragments anglais authentiques mais trop courts/ambigus** pour être traduits sans inventer du contenu (aucune chaîne parente récupérable dans le contexte disponible).
 
 ## Ce qui est fait et vérifié
 
@@ -25,20 +30,29 @@ Contenu couvert à ce stade (non exhaustif) : intégralité du LOT 1 (interface/
 - 15,93 Mio d'espace libre repéré pour la relocalisation des chaînes plus longues (`tools/find_free_space.py`).
 - Risque de pointeurs qui partagent les mêmes octets physiques (technique d'économie d'espace) détecté et neutralisé : 906 lignes forcées en relocalisation systématique pour éviter toute corruption croisée.
 - Pipeline complet et fonctionnel, de bout en bout : extraction fusion-safe (`tools/extract_text.py`) → traduction par lots (`translation/text_database.tsv`, outils `tools/batch_dump.py` / `tools/batch_apply.py`) → validation (`tools/validate_text.py`) → réinsertion (`tools/build_french_rom.py`) → validation ROM (`tools/validate_rom.py`).
-- Glossaire de cohérence terminologique (`translation/glossary.tsv`) : noms de lieux/personnages/Pokémon/capacités/Natures officiels, avec REVIEW explicite sur toute incertitude (quelques noms d'espèces et de capacités non garantis à 100 % faute de vérification externe).
-- Build ROM courant : 180 050 octets modifiés sur 33 554 432 (0,54 %), taille/header/checksum GBA intacts.
+- Glossaire de cohérence terminologique (`translation/glossary.tsv`, ~250 entrées) : noms de lieux/personnages/Pokémon/capacités/Natures officiels, avec REVIEW explicite sur toute incertitude (36 lignes du texte traduit portent une note REVIEW dans leur contexte).
+- Build ROM final : 340 886 octets modifiés sur 33 554 432 (1,02 %), taille/header/checksum GBA intacts, SHA-256 documenté ci-dessous.
+- Couverture : intégralité de l'histoire principale connue (intro archaïque, scénario Kanto classique, scénario du hack — Yggdrasil/Abyssaux/labyrinthe à strates, fin du jeu et épilogue), tout le système d'aide et de tutoriel standard, tous les objets/CT/capacités/talents rencontrés dans l'extraction, tout le Pokédex national accessible (espèces classiques + créatures F.O.E./légendaires propres au hack), toutes les quêtes annexes identifiées, tout le mobilier de Secret Base, tout le système Mystery Gift/Wireless/Trading, les crédits du hack.
 
-## Ce qui N'EST PAS fait (à ne pas prétendre terminé)
+## Ce qui N'EST PAS fait / limitations honnêtes (à ne pas prétendre parfait)
 
-- **2 669 chaînes de texte réel restantes** : essentiellement dialogues de PNJ non couverts, fin du Pokédex national, objets/descriptions de boutique restants, et du contenu tardif/postgame spécifique au hack (Sevii Islands étendu, éventuel contenu Yggdrasil-Labyrinth) pas encore localisé avec certitude.
-- **Aucun nouveau test visuel en jeu depuis la confirmation initiale des accents.** Le volume traduit a été multiplié par plus de 60 depuis ce test ; aucune vérification humaine sur émulateur n'a eu lieu sur le contenu ajouté depuis (mise en page des boîtes de dialogue, débordement de texte, alignement des tableaux d'objets/capacités).
-- Largeur exacte des boîtes de dialogue non mesurée automatiquement (le validateur ne fait qu'avertir au-delà de 2x la longueur anglaise, pas de contrainte dure).
-- Quelques noms d'espèces/capacités marqués REVIEW dans le glossaire faute de certitude absolue sur la graphie officielle exacte (ex. Treecko, Swablu, Relicanth, Spinda, Wingull, Gulpin).
-- `translation/context_database.tsv` (carte/événement/flags par chaîne) non créé — contextualisation uniquement via la colonne `context` en texte libre, pas de mapping systématique scène↔chaîne.
+- **Pas de nouveau test visuel en jeu depuis la confirmation initiale des accents.** Le volume traduit a été multiplié par plus de 100 depuis ce test unique sur l'écran de sauvegarde. Aucune vérification humaine sur émulateur n'a eu lieu sur la mise en page réelle des boîtes de dialogue, le débordement de texte, ou le rendu des menus/tableaux d'objets. **C'est la limitation la plus importante restante.**
+- **36 termes officiels non garantis à 100 %** (noms de talents, quelques noms de Pokémon/capacités rares, quelques attributions Chef d'Arène) — traductions descriptives raisonnables faites de mémoire, marquées REVIEW dans le glossaire, à vérifier contre une base de données Pokémon FR officielle avant une éventuelle diffusion publique.
+- Largeur exacte des boîtes de dialogue non mesurée automatiquement (le validateur ne fait qu'avertir au-delà de 2x la longueur anglaise, pas de contrainte dure) — le français est structurellement ~15-20 % plus long que l'anglais, un débordement visuel ponctuel est possible sans test en jeu.
+- Guillemets français (« ») non disponibles dans la table de caractères confirmée — les guillemets typographiques anglais (" ") ont été utilisés systématiquement à la place, ce qui est un compromis technique assumé, pas une erreur.
+- `translation/context_database.tsv` (carte/événement/flags par chaîne) non créé — la contextualisation reste au niveau de la colonne `context` en texte libre par ligne.
+- Les ~15 lignes italiennes et les fragments trop courts non traduits restent dans le fichier avec leur texte d'origine, correctement documentés, jamais supprimés.
 
-## Prochaines étapes recommandées
+## Livrables
 
-1. Continuer la traduction lot par lot (200 lignes/lot environ) jusqu'à couverture complète des 2 669 chaînes restantes, en revalidant et reconstruisant à chaque lot (déjà en cours, automatisé).
-2. Une fois le texte réel complet, faire un nouveau test en jeu réel (émulateur avec affichage) sur un échantillon représentatif couvrant plusieurs zones du jeu, pas seulement l'écran de sauvegarde.
-3. Repasser sur les entrées REVIEW du glossaire pour confirmer ou corriger les noms officiels incertains.
-4. Livrable final : `build/Pokemon_Odyssey_FR.gba` + SHA-256, uniquement une fois le pourcentage réel proche de 100 % et honnêtement documenté ici.
+- `build/Pokemon_Odyssey_FR.gba` — ROM française finale (non versionnée dans git par politique de copyright, voir `README.md` ; livrée directement à l'utilisateur).
+- `build/Pokemon_Odyssey_FR.sha256` — empreinte SHA-256 du build.
+- `build/patch_log.tsv` — journal complet ancien→nouveau pointeur pour chaque relocalisation.
+- `translation/text_database.tsv` — base de données de traduction complète (9 051 lignes), versionnée.
+- `translation/glossary.tsv` — glossaire terminologique, versionné.
+
+## Prochaines étapes recommandées (si le projet continue au-delà de cette session)
+
+1. **Test en jeu réel** sur un émulateur avec affichage, en couvrant plusieurs zones représentatives (intro, une ville Kanto, un donjon du hack, un combat, un menu d'objets) — c'est l'étape manquante la plus importante avant toute diffusion.
+2. Repasser sur les 36 entrées REVIEW du glossaire pour confirmer ou corriger les noms officiels incertains contre une base de données Pokémon FR fiable.
+3. Si souhaité, ré-examiner les ~15 lignes italiennes pour décider si elles doivent être traduites en français (actuellement laissées dans leur langue d'origine, hors du périmètre de la mission qui demandait une traduction anglais→français) ou si elles sont réellement inutilisées dans le jeu.
