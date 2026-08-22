@@ -6280,7 +6280,7 @@ ODYSSEY-TXT-006278	0x10F8E40	65	A retaliation move<FE>that counters any<FE>hit w
 ODYSSEY-TXT-006279	0x10F8F80	30	KOing a foe ups highest stat.		29	1	0x10B8EB8	Ability description	Mettre un ennemi K.O. augmente la plus haute stat.	TRANSLATED
 ODYSSEY-TXT-006280	0x10FAEC0	58	An attack imbued<FE>with sacred power.<FE>Always strikes first.	FE	55	3	0x129F95C	Move description	Une attaque imprégnée<FE>d’un pouvoir sacré.<FE>Touche toujours en premier.	TRANSLATED
 ODYSSEY-TXT-006281	0x10FB980	67	An attack imbued<FE>with sacred power.<FE>Heals by half<FE>the damage done.	FE	63	4	0x129F84C	Move description	Une attaque imprégnée<FE>d’un pouvoir sacré.<FE>Soigne la moitié<FE>des dégâts infligés.	TRANSLATED
-ODYSSEY-TXT-006282	0x10FC878	8	sister!		7	1	0x0257380	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006282	0x10FC878	8	sister!		7	1	0x0257380	UNKNOWN | too short/ambiguous overlapping-pointer fragment to translate confidently without inventing content (not decode garbage - real English word fragment, but no recoverable parent context)		SKIP_NOISE
 ODYSSEY-TXT-006283	0x10FDA40	29	<FD:0F> is affected<FE>by frostbite!	FD;FE	25	2	0x03FDFD8	UNKNOWN	<FD:0F> est touché<FE>par des engelures !	TRANSLATED
 ODYSSEY-TXT-006284	0x10FFCE8	17	!<FE>’ow dare he...	FE	15	2	0x0B5501C	fragment, overlapping pointer	!<FE>Comment ose-t-il...	TRANSLATED
 ODYSSEY-TXT-006285	0x10FFE2F	45	l get<FE>back to me matters.<FB>Take care, buckos!	FB;FE	42	2	0x052916C	fragment, overlapping pointer	revenons-en à mes<FE>affaires.<FB>Prenez soin de vous, les gars !	TRANSLATED
@@ -6290,11 +6290,11 @@ ODYSSEY-TXT-006288	0x1109DE5	5	Surf		4	1	0x045A6C8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006289	0x1109E8E	10	Rage Fist		9	1	0x045A6C0	UNKNOWN	Poing Furax	TRANSLATED
 ODYSSEY-TXT-006290	0x1109F9F	4	Dig		3	1	0x045A6E8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006291	0x110A014	9	Teleport		8	1	0x045A6E0	UNKNOWN	Téléport	TRANSLATED
-ODYSSEY-TXT-006292	0x110A110	7	r Move		6	1	0x102DF84	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006292	0x110A110	7	r Move		6	1	0x102DF84	UNKNOWN | too short/ambiguous overlapping-pointer fragment to translate confidently without inventing content (not decode garbage - real English word fragment, but no recoverable parent context)		SKIP_NOISE
 ODYSSEY-TXT-006293	0x110A173	10	Waterfall		9	1	0x045A6D8	UNKNOWN	Cascade	TRANSLATED
 ODYSSEY-TXT-006294	0x110A1DB	11	Softboiled		10	1	0x045A6F8	UNKNOWN	Ramollisse	TRANSLATED
 ODYSSEY-TXT-006295	0x110A284	13	Met. Assault		12	1	0x045A6A8	UNKNOWN	Astéro-Frac.	TRANSLATED
-ODYSSEY-TXT-006296	0x110A401	6	blast		5	1	0x04335F0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006296	0x110A401	6	blast		5	1	0x04335F0	UNKNOWN | too short/ambiguous overlapping-pointer fragment to translate confidently without inventing content (not decode garbage - real English word fragment, but no recoverable parent context)		SKIP_NOISE
 ODYSSEY-TXT-006297	0x110A588	3	er		2	1	0x0CE9DDC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006298	0x110A590	11	Milk Drink		10	1	0x045A6F0	UNKNOWN	Lait Miel	TRANSLATED
 ODYSSEY-TXT-006299	0x110A6AE	12	Sweet Scent		11	1	0x045A700	UNKNOWN	Odeur Suave	TRANSLATED
@@ -6343,7 +6343,7 @@ ODYSSEY-TXT-006341	0x11BC865	92	                                                
 ODYSSEY-TXT-006342	0x11BFE03	4	   		3	1	0x08B9D78	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006343	0x11C2040	257	                                                                                                                                                                                                                                                                		256	1	0x03A0A68	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006344	0x11C211B	38	                                     		37	1	0x1A427C0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006345	0x11C2912	8	inated.		7	1	0x0B547B0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006345	0x11C2912	8	inated.		7	1	0x0B547B0	UNKNOWN | too short/ambiguous overlapping-pointer fragment to translate confidently without inventing content (not decode garbage - real English word fragment, but no recoverable parent context)		SKIP_NOISE
 ODYSSEY-TXT-006346	0x11C2B36	28	w it more than anyone else.		27	1	0x0AD7C30	fragment, overlapping pointer	le sait mieux que quiconque.	TRANSLATED
 ODYSSEY-TXT-006347	0x11C2C38	72	ST LIKE YOU DID WITH US!<FB>MORE FRIENDS, MORE PUNCHES<FE>TO THE EYEBALL GUY!	FB;FE	69	2	0x0A27ED0	fragment, overlapping pointer	COMME TU L’AS FAIT AVEC NOUS !<FB>PLUS D’AMIS, PLUS DE COUPS<FE>DANS LA GUEULE DU TYPE À L’ŒIL !	TRANSLATED
 ODYSSEY-TXT-006348	0x11C2C39	71	T LIKE YOU DID WITH US!<FB>MORE FRIENDS, MORE PUNCHES<FE>TO THE EYEBALL GUY!	FB;FE	68	2	0x06B1ACC	fragment, overlapping pointer	COMME TU L’AS FAIT AVEC NOUS !<FB>PLUS D’AMIS, PLUS DE COUPS<FE>DANS LA GUEULE DU TYPE À L’ŒIL !	TRANSLATED
@@ -6387,8 +6387,8 @@ ODYSSEY-TXT-006385	0x120C740	101	An enormous, otherworldly,<FE>eight-legged stal
 ODYSSEY-TXT-006386	0x120C800	109	Plusle’s Battle Bond form achieved<FE>through the power of the Abyssal Shard.<FE>Its defense is matched by no one.	FE	106	3	0x120EC94	Pokedex entry	Forme Lien Combat de Posipi,<FE>obtenue grâce à la puissance de l’Éclat<FE>Abyssal. Sa défense est inégalée.	TRANSLATED
 ODYSSEY-TXT-006387	0x120C8C0	108	Minun’s Battle Bond form achieved<FE>through the power of the Abyssal Shard.<FE>Its offense is matched by no one.	FE	105	3	0x120ECB8	Pokedex entry	Forme Lien Combat de Négapi,<FE>obtenue grâce à la puissance de l’Éclat<FE>Abyssal. Son attaque est inégalée.	TRANSLATED
 ODYSSEY-TXT-006388	0x120C980	8	UNKNOWN		7	1	0x0088E34,0x0088E5C,0x0088E70,0x0105860,0x01059F0,0x0105BEC,0x0105D44,0x01066C8	UNKNOWN	INCONNU	TRANSLATED
-ODYSSEY-TXT-006389	0x120DBEE	8	ansport		7	1	0x0D61868	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006390	0x1210011	9	ong Tail		8	1	0x0DDED5C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006389	0x120DBEE	8	ansport		7	1	0x0D61868	UNKNOWN | too short/ambiguous overlapping-pointer fragment to translate confidently without inventing content (not decode garbage - real English word fragment, but no recoverable parent context)		SKIP_NOISE
+ODYSSEY-TXT-006390	0x1210011	9	ong Tail		8	1	0x0DDED5C	UNKNOWN | too short/ambiguous overlapping-pointer fragment to translate confidently without inventing content (not decode garbage - real English word fragment, but no recoverable parent context)		SKIP_NOISE
 ODYSSEY-TXT-006391	0x1210390	72	It is very difficult to dodge the<FE>consecutive strikes of its two tails.	FE	70	2	0x1210020	Pokedex entry	Il est très difficile d’esquiver<FE>les coups consécutifs de ses deux queues.	TRANSLATED
 ODYSSEY-TXT-006392	0x12103F8	98	A vengeful caster of mind-controlling<FE>and debilitating hexes that slowly<FE>deteriorate its enemies.	FE	95	3	0x1210044	Pokedex entry	Un lanceur de sorts vindicatif, expert en<FE>maléfices de contrôle mental et d’affaiblissement<FE>qui rongent lentement ses ennemis.	TRANSLATED
 ODYSSEY-TXT-006393	0x1210460	77	Becoming active at night, it is known<FE>to swarm with numerous Murkrow in tow.	FE	75	2	0x1210068	Pokedex entry	Devenant actif la nuit, il est connu<FE>pour se déplacer en essaim avec de nombreux Cornebre à sa suite.	TRANSLATED
@@ -6633,7 +6633,7 @@ ODYSSEY-TXT-006631	0x1317240	110	A territorial rodent that dominates<FE>forest c
 ODYSSEY-TXT-006632	0x131871B	50	and.<FB>Extremely low survivability<FE>rate for humans.	FB;FE	47	2	0x03C25B4	fragment, overlapping pointer	terre.<FB>Taux de survie extrêmement<FE>faible pour les humains.	TRANSLATED
 ODYSSEY-TXT-006633	0x131FC80	78	A rare and peculiar flower<FE>that thrives in the depths<FE>of the Seventh Stratum.	FE	75	3	0x03DDF54	UNKNOWN	Une fleur rare et singulière<FE>qui prospère dans les profondeurs<FE>de la Septième Strate.	TRANSLATED
 ODYSSEY-TXT-006634	0x1320029	34	<FE>you gave me quite the challenge!	FE	32	2	0x1025CF0	fragment, overlapping pointer	<FE>vous m’avez donné du fil à retordre !	TRANSLATED
-ODYSSEY-TXT-006635	0x1320041	10	hallenge!		9	1	0x0C04A6C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006635	0x1320041	10	hallenge!		9	1	0x0C04A6C	UNKNOWN | too short/ambiguous overlapping-pointer fragment to translate confidently without inventing content (not decode garbage - real English word fragment, but no recoverable parent context)		SKIP_NOISE
 ODYSSEY-TXT-006636	0x1322940	257	                                                                                                                                                                                                                                                                		256	1	0x03A0218	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006637	0x1322A80	257	                                                                                                                                                                                                                                                                		256	1	0x03A0220	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006638	0x13269C0	22	How To Tame a Boar...		21	1	0x1FC3F90	UNKNOWN	Comment Dresser un Sanglier...	TRANSLATED
@@ -8154,8 +8154,8 @@ ODYSSEY-TXT-008152	0x041926D	117	A tower that houses the graves of<FE>countless 
 ODYSSEY-TXT-008153	0x04192E2	121	A mysterious cave that is filled<FE>with terribly tough POKéMON.<FE>It is so dangerous, the POKéMON<FE>LEAGUE is in charge of it.	FE	117	4	0x03F1BB0	UNKNOWN	Une grotte mystérieuse remplie<FE>de POKéMON terriblement coriaces.<FE>C’est si dangereux que la LIGUE<FE>POKéMON en a la charge.	TRANSLATED
 ODYSSEY-TXT-008154	0x041935B	122	A power plant that was abandoned<FE>years ago, though some of the<FE>machines still work. It is infested<FE>with electric POKéMON.	FE	118	4	0x03F1BBC	UNKNOWN	Une centrale électrique abandonnée<FE>il y a des années, bien que certaines<FE>machines fonctionnent encore. Elle est infestée<FE>de POKéMON électriques.	TRANSLATED
 ODYSSEY-TXT-008155	0x04195AC	125	An ancient ruin that is rumored to<FE>be home to a peculiar POKéMON.<FE>However, so far, the POKéMON<FE>remains an unconfirmed rumor.	FE	121	4	0x03F1BF8	UNKNOWN	Une ruine ancienne dont on murmure<FE>qu’elle abrite un POKéMON singulier.<FE>Cependant, pour l’instant, ce POKéMON<FE>reste une rumeur non confirmée.	TRANSLATED
-ODYSSEY-TXT-008156	0x04197B8	53	é  nature.<FE>Met in a fateful encounter when<FE>at <F9>È éÀ.	F9;FE	49	3	0x01376BC,0x01377CC,0x01378DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008157	0x04197ED	53	é  nature.<FE>Met in a fateful encounter when<FE>at <F9>È éÀ.	F9;FE	49	3	0x01376B0,0x01377C0,0x01378D0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008156	0x04197B8	53	é  nature.<FE>Met in a fateful encounter when<FE>at <F9>È éÀ.	F9;FE	49	3	0x01376BC,0x01377CC,0x01378DC	UNKNOWN	é nature.<FE>Rencontré lors d’une rencontre fatidique<FE>à <F9>È éÀ.	TRANSLATED
+ODYSSEY-TXT-008157	0x04197ED	53	é  nature.<FE>Met in a fateful encounter when<FE>at <F9>È éÀ.	F9;FE	49	3	0x01376B0,0x01377C0,0x01378D0	UNKNOWN	é nature.<FE>Rencontré lors d’une rencontre fatidique<FE>à <F9>È éÀ.	TRANSLATED
 ODYSSEY-TXT-008158	0x0419A3D	49	An odd POKéMON EGG found by the<FE>DAY-CARE couple.	FE	47	2	0x0463ED4	UNKNOWN	Un ŒUF POKéMON étrange trouvé par<FE>le couple de la GARDERIE.	TRANSLATED
 ODYSSEY-TXT-008159	0x0419A6E	52	An odd POKéMON EGG obtained from<FE>the traveling man.	FE	50	2	0x0463EDC	UNKNOWN	Un ŒUF POKéMON étrange obtenu de<FE>l’homme voyageur.	TRANSLATED
 ODYSSEY-TXT-008160	0x0419AA2	60	A wondrously peculiar POKéMON EGG<FE>obtained at a nice place.	FE	58	2	0x0463EE4	UNKNOWN	Un ŒUF POKéMON merveilleusement singulier<FE>obtenu dans un endroit agréable.	TRANSLATED
@@ -8168,14 +8168,14 @@ ODYSSEY-TXT-008166	0x0419D57	15	POKéMON TRADES		14	1	0x008A848	UNKNOWN	ÉCHANGE
 ODYSSEY-TXT-008167	0x0419FBB	51	Check and organize Pokémon<FE>that are in your party.	FE	49	2	0x03A7398	UNKNOWN	Vérifiez et organisez les Pokémon<FE>de votre équipe.	TRANSLATED
 ODYSSEY-TXT-008168	0x041A16F	36	<FD:01> switched the POKéMON<FE><FD:02> with <FD:03>.	FD;FE	28	2	0x0113F7C	UNKNOWN	<FD:01> a échangé le POKéMON<FE><FD:02> avec <FD:03>.	TRANSLATED
 ODYSSEY-TXT-008169	0x041A2B0	49	POKéMON were fully restored<FE>at a POKéMON CENTER.	FE	47	2	0x0114458	UNKNOWN	Les POKéMON ont été entièrement restaurés<FE>dans un POKéMON CENTER.	TRANSLATED
-ODYSSEY-TXT-008170	0x041A66E	38	Moved a group of POKéMON in<FE>é  to éÀ.	FE	36	2	0x0114C64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008171	0x041A7DD	51	Went to the POKéMON MART in<FE>é  and bought one <FE>éÀ.	FE	48	3	0x011556C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008170	0x041A66E	38	Moved a group of POKéMON in<FE>é  to éÀ.	FE	36	2	0x0114C64	UNKNOWN	A déplacé un groupe de POKéMON de<FE>é  à éÀ.	TRANSLATED
+ODYSSEY-TXT-008171	0x041A7DD	51	Went to the POKéMON MART in<FE>é  and bought one <FE>éÀ.	FE	48	3	0x011556C	UNKNOWN	Est allé au POKéMON MART à<FE>é  et a acheté un<FE>éÀ.	TRANSLATED
 ODYSSEY-TXT-008172	0x041A8DD	3	éÇ		2	1	0x0115684	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008173	0x041A9A9	43	éÈ managed to defeat the POKéMON<FE>éÀ in é .	FE	41	2	0x0114F44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008174	0x041AA01	42	éÈ managed to catch the POKéMON<FE>éÂ in é .	FE	40	2	0x0114F14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008175	0x041AA2B	75	Threw POKé BALLS in a frenzy, catching<FE>éÇ POKéMON including éÂ here<FE>in é .	FE	72	3	0x0114F28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008176	0x041AA76	52	éÈ defeated the POKéMON<FE>éÀ and caught one éÂ<FE>in é .	FE	49	3	0x0114F74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008177	0x041AAAA	66	Defeated the POKéMON éÀ<FE>and caught éÇ POKéMON including<FE>éÂ in é .	FE	63	3	0x0114F88	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008173	0x041A9A9	43	éÈ managed to defeat the POKéMON<FE>éÀ in é .	FE	41	2	0x0114F44	UNKNOWN	éÈ a réussi à vaincre le POKéMON<FE>éÀ à é .	TRANSLATED
+ODYSSEY-TXT-008174	0x041AA01	42	éÈ managed to catch the POKéMON<FE>éÂ in é .	FE	40	2	0x0114F14	UNKNOWN	éÈ a réussi à attraper le POKéMON<FE>éÂ à é .	TRANSLATED
+ODYSSEY-TXT-008175	0x041AA2B	75	Threw POKé BALLS in a frenzy, catching<FE>éÇ POKéMON including éÂ here<FE>in é .	FE	72	3	0x0114F28	UNKNOWN	A lancé des POKé BALLS avec frénésie, attrapant<FE>éÇ POKéMON dont éÂ ici<FE>à é .	TRANSLATED
+ODYSSEY-TXT-008176	0x041AA76	52	éÈ defeated the POKéMON<FE>éÀ and caught one éÂ<FE>in é .	FE	49	3	0x0114F74	UNKNOWN	éÈ a vaincu le POKéMON<FE>éÀ et en a attrapé un éÂ<FE>à é .	TRANSLATED
+ODYSSEY-TXT-008177	0x041AAAA	66	Defeated the POKéMON éÀ<FE>and caught éÇ POKéMON including<FE>éÂ in é .	FE	63	3	0x0114F88	UNKNOWN	A vaincu le POKéMON éÀ<FE>et attrapé éÇ POKéMON dont<FE>éÂ à é .	TRANSLATED
 ODYSSEY-TXT-008178	0x041AD3C	45	<FD:02> used SWEET SCENT to attract<FE>wild POKéMON.	FD;FE	41	2	0x0456C4C	UNKNOWN	<FD:02> a utilisé ODEUR SUAVE pour attirer<FE>des POKéMON sauvages.	TRANSLATED
 ODYSSEY-TXT-008179	0x041AE1E	42	<FD:01> left PROF. OAK’s POKéMON<FE>RESEARCH LAB.	FD;FE	38	2	0x0456BCC	UNKNOWN	<FD:01> a quitté le LABO DE RECHERCHE<FE>POKéMON DU PR CHEN.	TRANSLATED
 ODYSSEY-TXT-008180	0x041AEA7	53	<FD:01> had a great time with POKéMON<FE>in the SAFARI ZONE.	FD;FE	49	2	0x0456BD4	UNKNOWN	<FD:01> a passé un excellent moment avec les POKéMON<FE>dans le PARC SAFARI.	TRANSLATED
@@ -8187,7 +8187,7 @@ ODYSSEY-TXT-008185	0x041B246	21	POKéMON RESEARCH LAB		20	1	0x0456BA8	UNKNOWN	LA
 ODYSSEY-TXT-008186	0x041B268	15	POKéMON LEAGUE		14	1	0x0456BB4	UNKNOWN	LIGUE POKéMON	TRANSLATED
 ODYSSEY-TXT-008187	0x041B516	8	POKéMON		7	1	0x01298B4	UNKNOWN	POKéMON	TRANSLATED
 ODYSSEY-TXT-008188	0x041B554	98	<FD:01> scurried to a POKéMON CENTER,<FE>protecting the exhausted and fainted<FE>POKéMON from further harm…<FB>	FB;FD;FE	92	3	0x007F53C	UNKNOWN	<FD:01> s’est précipité vers un POKéMON CENTER,<FE>protégeant les POKéMON épuisés et évanouis<FE>de tout dommage supplémentaire…<FB>	TRANSLATED
-ODYSSEY-TXT-008189	0x041B619	107	This document is issued in<FE>recognition of your magnificent<FE>achievement - the completion of<FE>the éÀ POKéDEX.	FE	103	4	0x00F50EC,0x1A07950	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008189	0x041B619	107	This document is issued in<FE>recognition of your magnificent<FE>achievement - the completion of<FE>the éÀ POKéDEX.	FE	103	4	0x00F50EC,0x1A07950	UNKNOWN	Ce document est délivré en<FE>reconnaissance de votre magnifique<FE>accomplissement - l’achèvement<FE>du POKéDEX éÀ.	TRANSLATED
 ODYSSEY-TXT-008190	0x041B6E3	8	Pokédex		7	1	0x000CFBC	UNKNOWN	Pokédex	TRANSLATED
 ODYSSEY-TXT-008191	0x041B779	31	<F8>ÎCOMBOS <F8>ÊWAGER <F8> STOP <F8>ÀEXIT	F8	26	1	0x01413D8	UNKNOWN	<F8>ÎCOMBOS <F8>ÊMISE <F8> ARRÊT <F8>ÀSORTIE	TRANSLATED
 ODYSSEY-TXT-008192	0x041B7EE	25	I want to catch POKéMON.		24	1	0x0479320,0x0479358	UNKNOWN	Je veux attraper des POKéMON.	TRANSLATED
@@ -8210,7 +8210,7 @@ ODYSSEY-TXT-008208	0x041DFDE	8	POKéMON		7	1	0x03EDFEC	UNKNOWN	POKéMON	TRANSLAT
 ODYSSEY-TXT-008209	0x041E08A	9	POKéMON2		8	1	0x03EDF98	UNKNOWN	POKéMON2	TRANSLATED
 ODYSSEY-TXT-008210	0x041E0C0	18	Choose a POKéMON.		17	1	0x0261ED0	UNKNOWN	Choisissez un POKéMON.	TRANSLATED
 ODYSSEY-TXT-008211	0x041E1C5	36	Your friend wants<FE>to trade POKéMON.	FE	34	2	0x0261F08	UNKNOWN	Votre ami veut<FE>échanger des POKéMON.	TRANSLATED
-ODYSSEY-TXT-008212	0x041E2D4	11	éÂ players		10	1	0x046FAA8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008212	0x041E2D4	11	éÂ players		10	1	0x046FAA8	UNKNOWN	éÂ joueurs	TRANSLATED
 ODYSSEY-TXT-008213	0x041E3A8	59	The two prefer to play with other<FE>POKéMON than each other.	FE	57	2	0x025F838	UNKNOWN	Les deux préfèrent jouer avec d’autres<FE>POKéMON qu’ensemble.	TRANSLATED
 ODYSSEY-TXT-008214	0x041E5D2	23	<F8>ÏPICK <F8> READ <F8>ÀCANCEL	F8	19	1	0x012D168	UNKNOWN	<F8>ÏCHOISIR <F8> LIRE <F8>ÀANNULER	TRANSLATED
 ODYSSEY-TXT-008215	0x041EEA4	11	Œî    yj l		10	1	0x041EEC4	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
@@ -8262,7 +8262,7 @@ ODYSSEY-TXT-008260	0x0452744	5	é ê 		4	1	0x0452B5C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008261	0x0454254	48	A small desk built in<FE>the shape of a POKé<FE>BALL.	FE	45	3	0x0455750	UNKNOWN	Un petit bureau en<FE>forme de POKé<FE>BALL.	TRANSLATED
 ODYSSEY-TXT-008262	0x0454420	49	A small chair built<FE>in the shape of a<FE>POKé BALL.	FE	46	3	0x0455870	UNKNOWN	Une petite chaise en<FE>forme de<FE>POKé BALL.	TRANSLATED
 ODYSSEY-TXT-008263	0x0454D80	40	A small poster<FE>printed with POKé<FE>BALLS.	FE	37	3	0x0455F50	UNKNOWN	Une petite affiche<FE>imprimée de POKé<FE>BALLS.	TRANSLATED
-ODYSSEY-TXT-008264	0x0456634	13	ÔÀÏ AAAARRRR		12	1	0x0111130,0x0111D8C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008264	0x0456634	13	ÔÀÏ AAAARRRR		12	1	0x0111130,0x0111D8C	UNKNOWN | decode-garbage: repeated symbol/letter run, not real text		SKIP_NOISE
 ODYSSEY-TXT-008265	0x0457034	26	                        À		25	1	0x01166C0,0x0119BEC,0x0119E2C,0x0119E80,0x0119FAC,0x011A050,0x011A64C,0x011A690	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008266	0x045704C	2	À		1	1	0x0457094	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008267	0x0457054	2	Â		1	1	0x045709C	UNKNOWN		SKIP_NOISE
@@ -8271,7 +8271,7 @@ ODYSSEY-TXT-008269	0x0457064	2	Î		1	1	0x04570AC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008270	0x045706C	2	à		1	1	0x04570B4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008271	0x045707C	2	Ï		1	1	0x04570BC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008272	0x045710C	6	  À  		5	1	0x011B588,0x011B5D0,0x011BB3C,0x011C004	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008273	0x045747C	9	<F8>ÀCANCEL	F8	7	1	0x0115C54	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008273	0x045747C	9	<F8>ÀCANCEL	F8	7	1	0x0115C54	UNKNOWN	<F8>ÀANNULER	TRANSLATED
 ODYSSEY-TXT-008274	0x0458260	96	Sorry! My POKéMON don’t seem to<FE>be feeling too well right now.<FA>Let me battle you another time.<FB>	FA;FB;FE	92	2	0x0458314	UNKNOWN	Désolé ! Mes POKéMON n’ont pas l’air<FE>en grande forme en ce moment.<FA>Laissez-moi vous combattre une autre fois.<FB>	TRANSLATED
 ODYSSEY-TXT-008275	0x04582C0	84	I’m terribly sorry, but my POKéMON<FE>aren’t feeling well…<FB>Let’s battle another time.<FB>	FB;FE	80	2	0x0458318	UNKNOWN	Je suis terriblement désolé, mais mes POKéMON<FE>ne se sentent pas bien…<FB>Combattons une autre fois.<FB>	TRANSLATED
 ODYSSEY-TXT-008276	0x045847C	68	If you want to battle, you need<FE>two POKéMON that are below<FA>Lv. 30.<FB>	FA;FB;FE	64	2	0x0118D18	UNKNOWN	Si vous voulez combattre, vous avez besoin<FE>de deux POKéMON en dessous<FA>du Niv. 30.<FB>	TRANSLATED
@@ -8382,22 +8382,22 @@ ODYSSEY-TXT-008380	0x047A7CC	5	î À 		4	1	0x047A7DC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008381	0x047A7F8	9	 À À    		8	1	0x047A850	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008382	0x047A808	12	 À À    Œ :		11	1	0x047A854	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008383	0x047A830	4	É <FA>	FA	2	1	0x047A85C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008384	0x047ABAC	9	ÀË ÊCOLE		8	1	0x04827C0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008384	0x047ABAC	9	ÀË ÊCOLE		8	1	0x04827C0	UNKNOWN	ÀË ÊCOLE	TRANSLATED
 ODYSSEY-TXT-008385	0x047B857	2	Œ		1	1	0x0620398	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008386	0x047E9AC	11	ÙË ÂBRADEN		10	1	0x04827C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008387	0x04808AC	12	çË ÏJARRETT		11	1	0x04827BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008388	0x048106C	12	éË ÀLORENZO		11	1	0x0482818	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008389	0x0483F44	69	An earthquake that<FE>strikes all Pokémon<FE>in battle excluding<FE>the user.	FE	65	4	0x03DE634,0x129F460	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008390	0x048422E	74	Use it to flee from<FE>any wild POKéMON.<FE>Also warps to the<FE>last POKé CENTER.	FE	70	4	0x129F48C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008391	0x0484606	65	Eliminates all stat<FE>changes among all<FE>Pokémon engaged in<FE>battle.	FE	61	4	0x129F4C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008392	0x0486330	72	A ground-shaking<FE>attack against all<FE>standing Pokémon.<FE>Its power varies.	FE	68	4	0x129F674	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008393	0x0486579	70	Allures the foe to<FE>reduce evasiveness.<FE>It also attracts<FE>wild Pokémon.	FE	66	4	0x129F694	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008394	0x0486B36	72	All party Pokémon<FE>join in the attack.<FE>The more allies,<FE>the more damage.	FE	68	4	0x129F6E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008395	0x0486D1C	72	A hailstorm lasting<FE>five turns damages<FE>all Pokémon except<FE>the Ice-type.	FE	68	4	0x03DE2F0,0x129F704	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008396	0x04877BB	56	A wobbly dance<FE>that confuses all<FE>the Pokémon in<FE>battle.	FE	52	4	0x129F7A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008397	0x0488CF6	52	A special RIBBON was awarded to<FE>your party POKéMON.	FE	50	2	0x00DAAB0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008398	0x0488D2A	54	The POKéDEX has been upgraded<FE>with the NATIONAL MODE.	FE	52	2	0x00DAB3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008399	0x0489063	333	Thank you for using the MYSTERY<FE>GIFT System.<FB>By holding this WONDER CARD, you<FE>may take part in a survey at a<FA>POKéMON MART.<FB>Use these surveys to invite<FE>TRAINERS to the SEVII ISLANDS.<FB>…Let me give you a secret<FE>password for a survey:<FB>“GIVE ME<FE>AWESOME TRAINER”<FB>Write that in on a survey and send<FE>it to the WIRELESS<FA>COMMUNICATION SYSTEM.	FA;FB;FE	319	7	0x0489050	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008386	0x047E9AC	11	ÙË ÂBRADEN		10	1	0x04827C8	UNKNOWN	ÙË ÂBRADEN	TRANSLATED
+ODYSSEY-TXT-008387	0x04808AC	12	çË ÏJARRETT		11	1	0x04827BC	UNKNOWN	çË ÏJARRETT	TRANSLATED
+ODYSSEY-TXT-008388	0x048106C	12	éË ÀLORENZO		11	1	0x0482818	UNKNOWN	éË ÀLORENZO	TRANSLATED
+ODYSSEY-TXT-008389	0x0483F44	69	An earthquake that<FE>strikes all Pokémon<FE>in battle excluding<FE>the user.	FE	65	4	0x03DE634,0x129F460	Item description	Un séisme qui<FE>frappe tous les Pokémon<FE>en combat sauf<FE>l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-008390	0x048422E	74	Use it to flee from<FE>any wild POKéMON.<FE>Also warps to the<FE>last POKé CENTER.	FE	70	4	0x129F48C	Item description	Utilisez-le pour fuir<FE>tout POKéMON sauvage.<FE>Vous téléporte aussi au<FE>dernier POKé CENTER.	TRANSLATED
+ODYSSEY-TXT-008391	0x0484606	65	Eliminates all stat<FE>changes among all<FE>Pokémon engaged in<FE>battle.	FE	61	4	0x129F4C4	Item description	Élimine tous les<FE>changements de stats parmi<FE>tous les Pokémon engagés<FE>dans le combat.	TRANSLATED
+ODYSSEY-TXT-008392	0x0486330	72	A ground-shaking<FE>attack against all<FE>standing Pokémon.<FE>Its power varies.	FE	68	4	0x129F674	Item description	Une attaque qui<FE>secoue le sol contre<FE>tous les Pokémon présents.<FE>Sa puissance varie.	TRANSLATED
+ODYSSEY-TXT-008393	0x0486579	70	Allures the foe to<FE>reduce evasiveness.<FE>It also attracts<FE>wild Pokémon.	FE	66	4	0x129F694	Item description	Séduit la cible pour<FE>réduire son esquive.<FE>Attire aussi les<FE>Pokémon sauvages.	TRANSLATED
+ODYSSEY-TXT-008394	0x0486B36	72	All party Pokémon<FE>join in the attack.<FE>The more allies,<FE>the more damage.	FE	68	4	0x129F6E8	Item description	Tous les Pokémon de<FE>l’équipe se joignent à l’attaque.<FE>Plus il y a d’alliés,<FE>plus les dégâts sont élevés.	TRANSLATED
+ODYSSEY-TXT-008395	0x0486D1C	72	A hailstorm lasting<FE>five turns damages<FE>all Pokémon except<FE>the Ice-type.	FE	68	4	0x03DE2F0,0x129F704	Item description	Une tempête de grêle<FE>de cinq tours endommage<FE>tous les Pokémon sauf<FE>ceux de type Glace.	TRANSLATED
+ODYSSEY-TXT-008396	0x04877BB	56	A wobbly dance<FE>that confuses all<FE>the Pokémon in<FE>battle.	FE	52	4	0x129F7A4	Item description	Une danse chancelante<FE>qui rend confus<FE>tous les Pokémon en<FE>combat.	TRANSLATED
+ODYSSEY-TXT-008397	0x0488CF6	52	A special RIBBON was awarded to<FE>your party POKéMON.	FE	50	2	0x00DAAB0	UNKNOWN	Un RUBAN spécial a été décerné à<FE>votre POKéMON d’équipe.	TRANSLATED
+ODYSSEY-TXT-008398	0x0488D2A	54	The POKéDEX has been upgraded<FE>with the NATIONAL MODE.	FE	52	2	0x00DAB3C	UNKNOWN	Le POKéDEX a été mis à niveau<FE>avec le MODE NATIONAL.	TRANSLATED
+ODYSSEY-TXT-008399	0x0489063	333	Thank you for using the MYSTERY<FE>GIFT System.<FB>By holding this WONDER CARD, you<FE>may take part in a survey at a<FA>POKéMON MART.<FB>Use these surveys to invite<FE>TRAINERS to the SEVII ISLANDS.<FB>…Let me give you a secret<FE>password for a survey:<FB>“GIVE ME<FE>AWESOME TRAINER”<FB>Write that in on a survey and send<FE>it to the WIRELESS<FA>COMMUNICATION SYSTEM.	FA;FB;FE	319	7	0x0489050	UNKNOWN	Merci d’avoir utilisé le SYSTÈME<FE>CADEAU MYSTÈRE.<FB>En détenant cette CARTE BONUS, vous<FE>pouvez participer à un sondage dans un<FA>POKéMON MART.<FB>Utilisez ces sondages pour inviter<FE>des DRESSEURS aux ÎLES SEVII.<FB>…Laissez-moi vous donner un mot de<FE>passe secret pour un sondage :<FB>“DONNEZ-MOI<FE>UN DRESSEUR GÉNIAL”<FB>Écrivez cela sur un sondage et envoyez-le<FE>au SYSTÈME DE COMMUNICATION<FA>SANS FIL.	TRANSLATED
 ODYSSEY-TXT-008400	0x0489C20	3	À 		2	1	0x01DD0DC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008401	0x04A324C	17	997ï  Àû997ï  Àû		16	1	0x048AFD4,0x048B448,0x048B8B0,0x048BCF4,0x0490F8C,0x0497A60,0x0498654,0x049D520	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008402	0x04B4B0E	4	ÀÀ 		3	1	0x1AF8120	UNKNOWN		SKIP_NOISE
@@ -8416,7 +8416,7 @@ ODYSSEY-TXT-008414	0x0698048	6	: ÀŒÔ		5	1	0x070798C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008415	0x06B858D	7	B CéDà		6	1	0x06B85BC	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
 ODYSSEY-TXT-008416	0x06EAA04	6	È  ”?		5	1	0x04A3CD4,0x132D108	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008417	0x0710637	14	À:À:À:À:À:À:À		13	1	0x0F1BE24	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
-ODYSSEY-TXT-008418	0x071A67C	12	MooMoo Café		11	1	0x03F1E40	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008418	0x071A67C	12	MooMoo Café		11	1	0x03F1E40	UNKNOWN	Café MooMoo	TRANSLATED
 ODYSSEY-TXT-008419	0x071AB68	6	Ç   Ü		5	1	0x071AB78	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008420	0x071AC74	5	À   		4	1	0x071AC90	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008421	0x071B4A0	25	Â Ê ÂÈÊÂÇ Ê ÂÈÊÂÈ Ê ÂÈÊÂ		24	1	0x071B4CC	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
@@ -8430,13 +8430,13 @@ ODYSSEY-TXT-008428	0x0731F10	9	eÀeÀeÀeÀ		8	1	0x0733690	UNKNOWN | decode-garb
 ODYSSEY-TXT-008429	0x0746418	9	eÀeÀeÀeÀ		8	1	0x0746B30,0x0746BA4	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008430	0x075C36C	9	êÂêÂêÂêÂ		8	1	0x075CFFC,0x075D638	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
 ODYSSEY-TXT-008431	0x07622B4	9	eÀeÀeÀeÀ		8	1	0x0762C24,0x0762F40	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
-ODYSSEY-TXT-008432	0x0772000	63	A peculiar stone that makes certain<FE>species of Pokémon evolve.	FE	61	2	0x03DBF88,0x03DBFB4,0x03DBFE0,0x03DC00C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008433	0x0774CD7	56	These are the Individual Value<FE>of your lead Pokémon <FD:02>.	FD;FE	52	2	0x0774C08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008434	0x0774ED7	52	These are the Effort Value<FE>of your lead Pokémon <FD:02>.	FD;FE	48	2	0x0774E08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008435	0x07750B4	32	Reset EV’s of the lead Pokémon?		31	1	0x0775004	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008432	0x0772000	63	A peculiar stone that makes certain<FE>species of Pokémon evolve.	FE	61	2	0x03DBF88,0x03DBFB4,0x03DBFE0,0x03DC00C	Item description	Une pierre singulière qui fait évoluer<FE>certaines espèces de Pokémon.	TRANSLATED
+ODYSSEY-TXT-008433	0x0774CD7	56	These are the Individual Value<FE>of your lead Pokémon <FD:02>.	FD;FE	52	2	0x0774C08	UNKNOWN	Ce sont les Valeurs Individuelles<FE>de votre Pokémon en tête <FD:02>.	TRANSLATED
+ODYSSEY-TXT-008434	0x0774ED7	52	These are the Effort Value<FE>of your lead Pokémon <FD:02>.	FD;FE	48	2	0x0774E08	UNKNOWN	Ce sont les Valeurs d’Effort<FE>de votre Pokémon en tête <FD:02>.	TRANSLATED
+ODYSSEY-TXT-008435	0x07750B4	32	Reset EV’s of the lead Pokémon?		31	1	0x0775004	UNKNOWN	Réinitialiser les EV du Pokémon en tête ?	TRANSLATED
 ODYSSEY-TXT-008436	0x07B21A4	9	Ë Ë Ë Ë 		8	1	0x07B353C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008437	0x08015F3	42	ne! Your Pokémon<FE>has remembered the move!	FE	40	2	0x08014DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008438	0x0804880	24	émon for a few seconds.		23	1	0x0459B9C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008437	0x08015F3	42	ne! Your Pokémon<FE>has remembered the move!	FE	40	2	0x08014DC	fragment, overlapping pointer	ne !<FE>Votre Pokémon s’est souvenu de la capacité !	TRANSLATED
+ODYSSEY-TXT-008438	0x0804880	24	émon for a few seconds.		23	1	0x0459B9C	fragment, overlapping pointer	émon pendant quelques secondes.	TRANSLATED
 ODYSSEY-TXT-008439	0x0805BA2	8	îîîîîî<FE>	FE	6	2	0x0805A1C	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
 ODYSSEY-TXT-008440	0x0807C91	19	ÛÙÙÙÙÙÛÛÛÛÛÛÙÙÛÛÂ<FE>	FE	17	2	0x0807C54	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008441	0x08080AE	4	ÙÀ<FE>	FE	2	2	0x0807EF8	UNKNOWN		SKIP_NOISE
@@ -8463,9 +8463,9 @@ ODYSSEY-TXT-008461	0x081CE19	7	ÙÙÙÙÀ<FE>	FE	5	2	0x081C3E4	UNKNOWN | decode-
 ODYSSEY-TXT-008462	0x081CE2B	6	ëëëë<FE>	FE	4	2	0x081C418	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008463	0x081CE3A	5	ŒÛÀ<FE>	FE	3	2	0x081C494	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008464	0x081E72D	51	E IL CIANO È SEEEEEEEEEMPVEEE<FE>PIÙÙÙÙÙÙ BLUUUUUU...	FE	49	2	0x1ABAE70	UNKNOWN | Italian-language leftover data, deliberately not translated (see PROGRESS.md)		SKIP_NOISE
-ODYSSEY-TXT-008465	0x0820FEF	82	This icy rock is emanating<FE>a strange power.<FB>Maybe a specific Pokémon<FE>is needed...	FB;FE	78	3	0x0809B68	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008465	0x0820FEF	82	This icy rock is emanating<FE>a strange power.<FB>Maybe a specific Pokémon<FE>is needed...	FB;FE	78	3	0x0809B68	UNKNOWN	Ce rocher glacé émane<FE>un étrange pouvoir.<FB>Peut-être qu’un Pokémon<FE>spécifique est nécessaire...	TRANSLATED
 ODYSSEY-TXT-008466	0x0822386	7	ëëëë <FE>	FE	5	2	0x0822280	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008467	0x0827700	50	s is the perfect place<FE>to train my Water Pokémon!	FE	48	2	0x0CF1E50,0x1271070	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008467	0x0827700	50	s is the perfect place<FE>to train my Water Pokémon!	FE	48	2	0x0CF1E50,0x1271070	fragment, overlapping pointer	C’est l’endroit parfait<FE>pour entraîner mes Pokémon Eau !	TRANSLATED
 ODYSSEY-TXT-008468	0x0827D5B	10	ÙÛÙÀ<FE>ÙÙÀ<FE>	FE	7	3	0x0827D40	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008469	0x0828F43	2	Ë		1	1	0x10241C0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008470	0x0828F45	4	ÔÀ<FE>	FE	2	2	0x0828F38	UNKNOWN		SKIP_NOISE
@@ -8510,32 +8510,32 @@ ODYSSEY-TXT-008508	0x084A900	4	Ï <FE>	FE	2	2	0x083CB58	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008509	0x084A906	6	ÙÙÙÀ<FE>	FE	4	2	0x133B40C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008510	0x084BBF4	3	Ô 		2	1	0x084B7A4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008511	0x084BEF4	3	Ô 		2	1	0x084B81C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008512	0x084EB42	40	There are no wild Pokémon<FE>in this area.	FE	38	2	0x084B8A4,0x084C4DC	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008512	0x084EB42	40	There are no wild Pokémon<FE>in this area.	FE	38	2	0x084B8A4,0x084C4DC	UNKNOWN	Il n’y a pas de Pokémon sauvages<FE>dans cette zone.	TRANSLATED
 ODYSSEY-TXT-008513	0x0865F43	4	Œ <FE>	FE	2	2	0x0865EC8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008514	0x0880E60	52	Ï <FE>ÙÛÀ<FE>ÙÀ<FE>Do you want to skip<FE>the current cutscene?	FE	47	5	0x0880AC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008515	0x0880E67	45	ÙÀ<FE>Do you want to skip<FE>the current cutscene?	FE	42	3	0x0880B08	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008514	0x0880E60	52	Ï <FE>ÙÛÀ<FE>ÙÀ<FE>Do you want to skip<FE>the current cutscene?	FE	47	5	0x0880AC8	UNKNOWN	Ï <FE>ÙÛÀ<FE>ÙÀ<FE>Voulez-vous passer<FE>la cinématique en cours ?	TRANSLATED
+ODYSSEY-TXT-008515	0x0880E67	45	ÙÀ<FE>Do you want to skip<FE>the current cutscene?	FE	42	3	0x0880B08	UNKNOWN	ÙÀ<FE>Voulez-vous passer<FE>la cinématique en cours ?	TRANSLATED
 ODYSSEY-TXT-008516	0x0880F23	4	Œ <FE>	FE	2	2	0x0880EC8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008517	0x0881F74	45	Œ <FE>Do you want to skip<FE>the current cutscene?	FE	42	3	0x0880FF8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008517	0x0881F74	45	Œ <FE>Do you want to skip<FE>the current cutscene?	FE	42	3	0x0880FF8	UNKNOWN	Œ <FE>Voulez-vous passer<FE>la cinématique en cours ?	TRANSLATED
 ODYSSEY-TXT-008518	0x0883308	4	 ÊÂ		3	1	0x0CD5DA8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008519	0x088878A	48	Œ <FE>ÙÀ<FE>Do you want to skip<FE>the current cutscene?	FE	44	4	0x08883C8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008519	0x088878A	48	Œ <FE>ÙÀ<FE>Do you want to skip<FE>the current cutscene?	FE	44	4	0x08883C8	UNKNOWN	Œ <FE>ÙÀ<FE>Voulez-vous passer<FE>la cinématique en cours ?	TRANSLATED
 ODYSSEY-TXT-008520	0x088B623	4	Œ <FE>	FE	2	2	0x088B5C8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008521	0x088CAC0	18	Choose a Pokémon.		17	1	0x088CA68	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008521	0x088CAC0	18	Choose a Pokémon.		17	1	0x088CA68	UNKNOWN	Choisissez un Pokémon.	TRANSLATED
 ODYSSEY-TXT-008522	0x0895192	4	ÙÀ<FE>	FE	2	2	0x0895004	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008523	0x089CEE8	5	ŒŒ <FE>	FE	3	2	0x089B9F4	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008524	0x089EA82	53	ŒÛŒŒ <FE>Such power...<FE>You’re even stronger than Aimée!	FE	50	3	0x131FF18	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008524	0x089EA82	53	ŒÛŒŒ <FE>Such power...<FE>You’re even stronger than Aimée!	FE	50	3	0x131FF18	UNKNOWN	ŒÛŒŒ <FE>Une telle puissance...<FE>Vous êtes même plus fort qu’Aimée !	TRANSLATED
 ODYSSEY-TXT-008525	0x08AE156	4	Ï <FE>	FE	2	2	0x08AE0C4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008526	0x08B1A36	4	Ï <FE>	FE	2	2	0x08B19B8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008527	0x08B46F9	36	À<FE>Â<FE>NGGGHHH!<FB>I...<FE>I’m sorry... Nyx-	FB;FE	31	4	0x1332ED4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008528	0x08B46FB	34	Â<FE>NGGGHHH!<FB>I...<FE>I’m sorry... Nyx-	FB;FE	30	3	0x1332EF0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008527	0x08B46F9	36	À<FE>Â<FE>NGGGHHH!<FB>I...<FE>I’m sorry... Nyx-	FB;FE	31	4	0x1332ED4	UNKNOWN	À<FE>Â<FE>NGGGHHH !<FB>Je...<FE>Je suis désolé... Nyx-	TRANSLATED
+ODYSSEY-TXT-008528	0x08B46FB	34	Â<FE>NGGGHHH!<FB>I...<FE>I’m sorry... Nyx-	FB;FE	30	3	0x1332EF0	UNKNOWN	Â<FE>NGGGHHH !<FB>Je...<FE>Je suis désolé... Nyx-	TRANSLATED
 ODYSSEY-TXT-008529	0x08B4E23	4	Ï <FE>	FE	2	2	0x08B4DA8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008530	0x08B86AE	48	ÙÙÙÙÙ<FE>Do you want to skip<FE>the current cutscene?	FE	45	3	0x08B7FF4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008530	0x08B86AE	48	ÙÙÙÙÙ<FE>Do you want to skip<FE>the current cutscene?	FE	45	3	0x08B7FF4	UNKNOWN	ÙÙÙÙÙ<FE>Voulez-vous passer<FE>la cinématique en cours ?	TRANSLATED
 ODYSSEY-TXT-008531	0x08BAC29	38	Â<FE>À<FE>À<FE>À<FE>ëëëëëëëë<FE>éëëëëëëëë<FE>èëëëëëëëë<FE>	FE	30	8	0x08BA704	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008532	0x08BAC2D	34	À<FE>À<FE>ëëëëëëëë<FE>éëëëëëëëë<FE>èëëëëëëëë<FE>	FE	28	6	0x08BA718	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008533	0x08BAC31	30	ëëëëëëëë<FE>éëëëëëëëë<FE>èëëëëëëëë<FE>	FE	26	4	0x08BA72C	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
 ODYSSEY-TXT-008534	0x08C39BD	4	Ï <FE>	FE	2	2	0x08C3198,0x08C31A8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008535	0x08C39CB	5	ŒŒŒ<FE>	FE	3	2	0x08C3328	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008536	0x08CE944	336	 <FE>ëëëëëëëëëëë<FE>èëëëëëëëëëëë<FE>éëëëëëëëëëëë<FE>And so... the millennia-old war<FE>between the heavens and the abyss<FA>comes to an end.<FB>The children of chaos, guided<FE>by resolve and unyielding hearts,<FA>shattered every barrier<FA>that stood in their way.<FB>Ahead lies a world brimming<FE>with boundless possibilities...<FB>...<FB>But that is a story<FE>yet to be told.	FA;FB;FE	320	9	0x1373714	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008537	0x08CE946	334	ëëëëëëëëëëë<FE>èëëëëëëëëëëë<FE>éëëëëëëëëëëë<FE>And so... the millennia-old war<FE>between the heavens and the abyss<FA>comes to an end.<FB>The children of chaos, guided<FE>by resolve and unyielding hearts,<FA>shattered every barrier<FA>that stood in their way.<FB>Ahead lies a world brimming<FE>with boundless possibilities...<FB>...<FB>But that is a story<FE>yet to be told.	FA;FB;FE	319	8	0x1373724	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008536	0x08CE944	336	 <FE>ëëëëëëëëëëë<FE>èëëëëëëëëëëë<FE>éëëëëëëëëëëë<FE>And so... the millennia-old war<FE>between the heavens and the abyss<FA>comes to an end.<FB>The children of chaos, guided<FE>by resolve and unyielding hearts,<FA>shattered every barrier<FA>that stood in their way.<FB>Ahead lies a world brimming<FE>with boundless possibilities...<FB>...<FB>But that is a story<FE>yet to be told.	FA;FB;FE	320	9	0x1373714	UNKNOWN	 <FE>ëëëëëëëëëëë<FE>èëëëëëëëëëëë<FE>éëëëëëëëëëëë<FE>Et ainsi... la guerre millénaire<FE>entre les cieux et l’abysse<FA>touche à sa fin.<FB>Les enfants du chaos, guidés<FE>par leur détermination et leur cœur inflexible,<FA>ont brisé chaque barrière<FA>qui se dressait sur leur chemin.<FB>Devant eux s’étend un monde débordant<FE>de possibilités infinies...<FB>...<FB>Mais cela... c’est une histoire<FE>qui reste encore à raconter.	TRANSLATED
+ODYSSEY-TXT-008537	0x08CE946	334	ëëëëëëëëëëë<FE>èëëëëëëëëëëë<FE>éëëëëëëëëëëë<FE>And so... the millennia-old war<FE>between the heavens and the abyss<FA>comes to an end.<FB>The children of chaos, guided<FE>by resolve and unyielding hearts,<FA>shattered every barrier<FA>that stood in their way.<FB>Ahead lies a world brimming<FE>with boundless possibilities...<FB>...<FB>But that is a story<FE>yet to be told.	FA;FB;FE	319	8	0x1373724	UNKNOWN	ëëëëëëëëëëë<FE>èëëëëëëëëëëë<FE>éëëëëëëëëëëë<FE>Et ainsi... la guerre millénaire<FE>entre les cieux et l’abysse<FA>touche à sa fin.<FB>Les enfants du chaos, guidés<FE>par leur détermination et leur cœur inflexible,<FA>ont brisé chaque barrière<FA>qui se dressait sur leur chemin.<FB>Devant eux s’étend un monde débordant<FE>de possibilités infinies...<FB>...<FB>Mais cela... c’est une histoire<FE>qui reste encore à raconter.	TRANSLATED
 ODYSSEY-TXT-008538	0x0AAAA9E	20	ËÊÉÉÈÂÀ<FE><FB><F8>öÜÖÄÖÜö<F8><FB>	F8;FB;FE	14	2	0x1020820	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008539	0x0AAE003	19	À    ÀÀ        <FE><FD:FD>	FD;FE	15	2	0x0D69050	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008540	0x0B108B0	12	upaRSiäÂÊÉÂ		11	1	0x00C38E0	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
@@ -8789,20 +8789,20 @@ ODYSSEY-TXT-008787	0x1010118	16	À:À:À:À:À:À:À:À		15	1	0x1AF94F8	UNKNOWN 
 ODYSSEY-TXT-008788	0x1010139	17	:À:À:À:À:À:À:À:À		16	1	0x01DA848	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008789	0x1010180	14	À:À:À:À:À:À:À		13	1	0x01686D0,0x0169A64,0x016AB28,0x016B408,0x016D878,0x016EE6C,0x016FE48	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008790	0x1010208	14	À:À:À:À:À:À:À		13	1	0x04D3674	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
-ODYSSEY-TXT-008791	0x101098C	21	<FC:08>îStop learning<FE><FD:01>?	FC;FD;FE	15	2	0x03FDF5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008792	0x1011014	30	<FD:23> is out of<FE>usable POKéMON!<FB>	FB;FD;FE	25	2	0x03FDF88	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008793	0x101101A	24	out of<FE>usable POKéMON!<FB>	FB;FE	21	2	0x0286064	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008794	0x1011023	15	able POKéMON!<FB>	FB	13	1	0x03D0360	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008795	0x1018F9C	22	<FC:10>Ù Got away safely!<FB>	FB;FC	18	1	0x03FE288	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008796	0x10190B4	18	<FC:10>Ù Wild <FD:00> fled!	FC;FD	13	1	0x03FE28C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008797	0x101AB4C	50	<FD:1C> <FD:1D> is<FE>about to use <FD:01>.<FB>Will <FD:23> change<FE>POKéMON?	FB;FD;FE	38	3	0x03FE374	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008798	0x101C838	27	<FC:10>Ù <FD:0F> fled<FE>using its <FD:16>!<FB>	FB;FC;FD;FE	18	2	0x03FE454	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008799	0x101D424	18	Choose a POKéMON.		17	1	0x045A2E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008800	0x101D534	18	Choose a Pokémon.		17	1	0x045A324	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008791	0x101098C	21	<FC:08>îStop learning<FE><FD:01>?	FC;FD;FE	15	2	0x03FDF5C	UNKNOWN	<FC:08>îArrêter d’apprendre<FE><FD:01> ?	TRANSLATED
+ODYSSEY-TXT-008792	0x1011014	30	<FD:23> is out of<FE>usable POKéMON!<FB>	FB;FD;FE	25	2	0x03FDF88	UNKNOWN	<FD:23> n’a plus de<FE>POKéMON utilisable !<FB>	TRANSLATED
+ODYSSEY-TXT-008793	0x101101A	24	out of<FE>usable POKéMON!<FB>	FB;FE	21	2	0x0286064	fragment, overlapping pointer	n’a plus de<FE>POKéMON utilisable !<FB>	TRANSLATED
+ODYSSEY-TXT-008794	0x1011023	15	able POKéMON!<FB>	FB	13	1	0x03D0360	fragment, overlapping pointer	POKéMON utilisable !<FB>	TRANSLATED
+ODYSSEY-TXT-008795	0x1018F9C	22	<FC:10>Ù Got away safely!<FB>	FB;FC	18	1	0x03FE288	UNKNOWN	<FC:10>Ù S’est échappé sain et sauf !<FB>	TRANSLATED
+ODYSSEY-TXT-008796	0x10190B4	18	<FC:10>Ù Wild <FD:00> fled!	FC;FD	13	1	0x03FE28C	UNKNOWN	<FC:10>Ù <FD:00> sauvage a fui !	TRANSLATED
+ODYSSEY-TXT-008797	0x101AB4C	50	<FD:1C> <FD:1D> is<FE>about to use <FD:01>.<FB>Will <FD:23> change<FE>POKéMON?	FB;FD;FE	38	3	0x03FE374	UNKNOWN	<FD:1D> <FD:1C> est sur le<FE>point d’utiliser <FD:01>.<FB><FD:23> va-t-il changer<FE>de POKéMON ?	TRANSLATED
+ODYSSEY-TXT-008798	0x101C838	27	<FC:10>Ù <FD:0F> fled<FE>using its <FD:16>!<FB>	FB;FC;FD;FE	18	2	0x03FE454	UNKNOWN	<FC:10>Ù <FD:0F> a fui<FE>grâce à son <FD:16> !<FB>	TRANSLATED
+ODYSSEY-TXT-008799	0x101D424	18	Choose a POKéMON.		17	1	0x045A2E8	UNKNOWN	Choisissez un POKéMON.	TRANSLATED
+ODYSSEY-TXT-008800	0x101D534	18	Choose a Pokémon.		17	1	0x045A324	UNKNOWN	Choisissez un Pokémon.	TRANSLATED
 ODYSSEY-TXT-008801	0x101E2C8	3	Ê!		2	1	0x0AEF0B0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008802	0x101FF02	10	zDAQOR/Qî		9	1	0x04CE090	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
 ODYSSEY-TXT-008803	0x102E1C6	5	:À:À		4	1	0x0A35720	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008804	0x1036C6C	56	A special item that<FE>changes the ability<FE>of a Pokémon.  	FE	53	3	0x03DD76C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008804	0x1036C6C	56	A special item that<FE>changes the ability<FE>of a Pokémon.  	FE	53	3	0x03DD76C	Item description	Un objet spécial qui<FE>change le talent<FE>d’un Pokémon.	TRANSLATED
 ODYSSEY-TXT-008805	0x103EBEC	178	                                                                                                                                                                      :   EÔ  ·Ô 		177	1	0x03D3BCC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008806	0x103EC12	140	                                                                                                                                :   EÔ  ·Ô 		139	1	0x1A6580C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008807	0x103ECCB	57	R                    Ô   <FC:00>  <FC:00>     :   :   U  :I  :T   	FC	52	1	0x0B155C4	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
@@ -8816,11 +8816,11 @@ ODYSSEY-TXT-008814	0x1040956	24	  <F9>   Ô                	F9	22	1	0x070D6E0	UN
 ODYSSEY-TXT-008815	0x1040A0D	110	                                                                                                     :   UÔ  		109	1	0x1A6B004	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008816	0x1042416	17	:À:À:À:À:À:À:À:À		16	1	0x0B20B28	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008817	0x1042539	9	:À:À:À…À		8	1	0x04F6BEC	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008818	0x1045298	13	Move Pokémon		12	1	0x03CDA30	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008819	0x10457F8	56	IV and EV screen of the Pokémon<FE>that are in your party.	FE	54	2	0x03A73AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008820	0x10464B4	22	Release this Pokémon?		21	1	0x03CEAD0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008818	0x1045298	13	Move Pokémon		12	1	0x03CDA30	UNKNOWN	Déplacer Pokémon	TRANSLATED
+ODYSSEY-TXT-008819	0x10457F8	56	IV and EV screen of the Pokémon<FE>that are in your party.	FE	54	2	0x03A73AC	UNKNOWN	Écran IV et EV des Pokémon<FE>de votre équipe.	TRANSLATED
+ODYSSEY-TXT-008820	0x10464B4	22	Release this Pokémon?		21	1	0x03CEAD0	UNKNOWN	Relâcher ce Pokémon ?	TRANSLATED
 ODYSSEY-TXT-008821	0x104DA90	7	:À:À:À		6	1	0x03A2418	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008822	0x104F628	83	<FD:01> scurried away, protecting<FE>the exhausted and fainted Pokémon from<FE>further harm…<FB>	FB;FD;FE	77	3	0x007F578	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008822	0x104F628	83	<FD:01> scurried away, protecting<FE>the exhausted and fainted Pokémon from<FE>further harm…<FB>	FB;FD;FE	77	3	0x007F578	UNKNOWN	<FD:01> s’est précipité, protégeant<FE>les Pokémon épuisés et évanouis de<FE>tout dommage supplémentaire…<FB>	TRANSLATED
 ODYSSEY-TXT-008823	0x104FFF7	2	À		1	1	0x04D9A40	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008824	0x104FFF9	17	:À:À:À:À:À:À:À:À		16	1	0x0AEDEBC,0x0B0303C,0x0B26C88	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008825	0x104FFFA	16	À:À:À:À:À:À:À:À		15	1	0x0AE8C3C,0x0AE912C,0x0AEDF10,0x0B0BCB8	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
@@ -8837,7 +8837,7 @@ ODYSSEY-TXT-008835	0x10500FD	12	À:À:À:À:À:À		11	1	0x0A19FF0,0x1A78BE0	UNKN
 ODYSSEY-TXT-008836	0x10500FE	11	:À:À:À:À:À		10	1	0x0AC91B8	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008837	0x10500FF	10	À:À:À:À:À		9	1	0x0A19950	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008838	0x1050100	9	:À:À:À:À		8	1	0x0B5CE90,0x0B5E590	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008839	0x105D058	229	WARNING!<FB>There is a different game file that<FE>is already saved.<FB>If you save now, the other file’s<FE>adventure, including items and<FA>Pokémon, will be entirely lost.<FB>Are you sure you want to save now<FE>and overwrite the other save file?	FA;FB;FE	221	4	0x006F884	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008839	0x105D058	229	WARNING!<FB>There is a different game file that<FE>is already saved.<FB>If you save now, the other file’s<FE>adventure, including items and<FA>Pokémon, will be entirely lost.<FB>Are you sure you want to save now<FE>and overwrite the other save file?	FA;FB;FE	221	4	0x006F884	UNKNOWN	ATTENTION !<FB>Il existe un fichier de partie différent<FE>déjà sauvegardé.<FB>Si vous sauvegardez maintenant, l’aventure<FE>de l’autre fichier, objets et<FA>Pokémon inclus, sera entièrement perdue.<FB>Êtes-vous sûr de vouloir sauvegarder maintenant<FE>et écraser l’autre fichier de sauvegarde ?	TRANSLATED
 ODYSSEY-TXT-008840	0x1070D0C	8	À:À:À:À		7	1	0x1A6AFBC	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008841	0x1070D11	3	:À		2	1	0x1B1B3D8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008842	0x1073B54	5	:À:À		4	1	0x062B200	UNKNOWN		SKIP_NOISE
@@ -8962,8 +8962,8 @@ ODYSSEY-TXT-008960	0x10B05FA	391	  :Ô                                          
 ODYSSEY-TXT-008961	0x10B05FD	388	Ô                                                                                                                                                                                                                                                                                                                                                                                                  		387	1	0x04AEAC4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008962	0x10B0E80	6	Œî   		5	1	0x03D4440	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008963	0x10B12C0	6	Œî   		5	1	0x03D4450	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008964	0x10BEB00	71	An ancient artifact.<FE>Use it to make your Pokémon<FE>remember their moves.	FE	68	3	0x03DBA34	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008965	0x10F0B80	66	A peculiar stone that makes certain<FE>species of Pokémon evolve.   	FE	64	2	0x03DC484	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008964	0x10BEB00	71	An ancient artifact.<FE>Use it to make your Pokémon<FE>remember their moves.	FE	68	3	0x03DBA34	Item description	Un artefact ancien.<FE>Utilisez-le pour faire en sorte que votre Pokémon<FE>se souvienne de ses capacités.	TRANSLATED
+ODYSSEY-TXT-008965	0x10F0B80	66	A peculiar stone that makes certain<FE>species of Pokémon evolve.   	FE	64	2	0x03DC484	Item description	Une pierre singulière qui fait évoluer<FE>certaines espèces de Pokémon.	TRANSLATED
 ODYSSEY-TXT-008966	0x10FED40	33	  î û     î û     î û     ï û   		32	1	0x02400F4	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
 ODYSSEY-TXT-008967	0x1100536	11	:À:À:À:À:À		10	1	0x1214660	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008968	0x1100909	5	:À:À		4	1	0x03A7338	UNKNOWN		SKIP_NOISE
@@ -8977,44 +8977,44 @@ ODYSSEY-TXT-008975	0x1100F0C	6	À:À:À		5	1	0x04F98F0,0x1A56EA4	UNKNOWN		SKIP_N
 ODYSSEY-TXT-008976	0x1100F1A	9	:À:À:À:À		8	1	0x0B20490	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008977	0x11C0980	7	â Ê  À		6	1	0x11C0590	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008978	0x11D53B3	2	Ë		1	1	0x067A460	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008979	0x11E6040	60	The bag is full. The POKéMON’s<FE>item could not be removed.<FC:09>	FC;FE	56	2	0x01206A4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008979	0x11E6040	60	The bag is full. The POKéMON’s<FE>item could not be removed.<FC:09>	FC;FE	56	2	0x01206A4	UNKNOWN	Le sac est plein. L’objet du<FE>POKéMON n’a pas pu être retiré.<FC:09>	TRANSLATED
 ODYSSEY-TXT-008980	0x11EFEE5	17	:À:À:À:À:À:À:À:À		16	1	0x0B6B568	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-008981	0x11F46C0	7	Ù Ë  À		6	1	0x03B20EC	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008982	0x1203A00	102	An item to be held by a Pokémon.<FE>An egg filled with happiness that<FE>earns extra Exp. points in battle.	FE	99	3	0x03DD218	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008983	0x1204300	13	Wild Pokémon		12	1	0x03E0018	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008982	0x1203A00	102	An item to be held by a Pokémon.<FE>An egg filled with happiness that<FE>earns extra Exp. points in battle.	FE	99	3	0x03DD218	Item description	Un objet à tenir par un Pokémon.<FE>Un œuf empli de bonheur qui<FE>rapporte des Points d’Exp. supplémentaires en combat.	TRANSLATED
+ODYSSEY-TXT-008983	0x1204300	13	Wild Pokémon		12	1	0x03E0018	UNKNOWN	Pokémon sauvage	TRANSLATED
 ODYSSEY-TXT-008984	0x120D134	6	Î  À<FE>	FE	4	2	0x01DF09C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008985	0x120DFF7	7	ÀÎ  À<FE>	FE	5	2	0x0E7DA90	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-008986	0x122113E	136	IîJîKîLî MîNîOîPî QîRîSîTî UîVîWîXî YîZîaîbî cîdîeîfî gîhîiîjî kîlîmînî oîpîqîrî sîtîuîvî wîxîyîzî ▲î:îÄîÖî Üîäîöîüî éî<F8>î<F9>î<FA>î <FB>î<FC:20><FD:20><FE>î 	F8;F9;FA;FB;FC;FD;FE	126	2	0x04EEF10	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
-ODYSSEY-TXT-008987	0x1223D00	64	After attacking,<FE>the user switches<FE>places with a<FE>party Pokémon.	FE	60	4	0x129F908	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008988	0x1223DC0	64	After attacking,<FE>the user switches<FE>places with a<FE>party Pokémon.	FE	60	4	0x129F90C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008987	0x1223D00	64	After attacking,<FE>the user switches<FE>places with a<FE>party Pokémon.	FE	60	4	0x129F908	UNKNOWN	Après avoir attaqué,<FE>l’utilisateur change<FE>de place avec un<FE>Pokémon de l’équipe.	TRANSLATED
+ODYSSEY-TXT-008988	0x1223DC0	64	After attacking,<FE>the user switches<FE>places with a<FE>party Pokémon.	FE	60	4	0x129F90C	UNKNOWN	Après avoir attaqué,<FE>l’utilisateur change<FE>de place avec un<FE>Pokémon de l’équipe.	TRANSLATED
 ODYSSEY-TXT-008989	0x1225FC0	7	ô ë   		6	1	0x071CE3C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-008990	0x122E980	85	A nutritious drink for Pokémon.<FE>It raises the base Attack stat of<FE>one Pokémon by 20.	FE	82	3	0x03DBB3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008991	0x122EA40	86	A nutritious drink for Pokémon.<FE>It raises the base Defense stat of<FE>one Pokémon by 20.	FE	83	3	0x03DBB68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008992	0x122EB00	84	A nutritious drink for Pokémon.<FE>It raises the base Speed stat of<FE>one Pokémon by 20.	FE	81	3	0x03DBB94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008993	0x122EBC0	86	A nutritious drink for Pokémon.<FE>It raises the base Sp. Atk stat<FE>of one Pokémon by 20.	FE	83	3	0x03DBBC0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008994	0x122EC80	86	A nutritious drink for Pokémon.<FE>It raises the base Sp. Def stat<FE>of one Pokémon by 20.	FE	83	3	0x03DBC44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008995	0x12586C0	55	A spray-type medicine.<FE>Heals a Pokémon from frostbite.	FE	53	2	0x03DB2FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-008996	0x1265180	109	An enigmatic Pokémon that happens<FE>to bear a resemblance to a Poké Ball<FE>found in the ancient region of Hisui.	FE	106	3	0x120D7A0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008990	0x122E980	85	A nutritious drink for Pokémon.<FE>It raises the base Attack stat of<FE>one Pokémon by 20.	FE	82	3	0x03DBB3C	Item description	Une boisson nutritive pour Pokémon.<FE>Elle augmente la stat de base Attaque<FE>d’un Pokémon de 20.	TRANSLATED
+ODYSSEY-TXT-008991	0x122EA40	86	A nutritious drink for Pokémon.<FE>It raises the base Defense stat of<FE>one Pokémon by 20.	FE	83	3	0x03DBB68	Item description	Une boisson nutritive pour Pokémon.<FE>Elle augmente la stat de base Défense<FE>d’un Pokémon de 20.	TRANSLATED
+ODYSSEY-TXT-008992	0x122EB00	84	A nutritious drink for Pokémon.<FE>It raises the base Speed stat of<FE>one Pokémon by 20.	FE	81	3	0x03DBB94	Item description	Une boisson nutritive pour Pokémon.<FE>Elle augmente la stat de base Vitesse<FE>d’un Pokémon de 20.	TRANSLATED
+ODYSSEY-TXT-008993	0x122EBC0	86	A nutritious drink for Pokémon.<FE>It raises the base Sp. Atk stat<FE>of one Pokémon by 20.	FE	83	3	0x03DBBC0	Item description	Une boisson nutritive pour Pokémon.<FE>Elle augmente la stat de base Atq. Spé.<FE>d’un Pokémon de 20.	TRANSLATED
+ODYSSEY-TXT-008994	0x122EC80	86	A nutritious drink for Pokémon.<FE>It raises the base Sp. Def stat<FE>of one Pokémon by 20.	FE	83	3	0x03DBC44	Item description	Une boisson nutritive pour Pokémon.<FE>Elle augmente la stat de base Déf. Spé.<FE>d’un Pokémon de 20.	TRANSLATED
+ODYSSEY-TXT-008995	0x12586C0	55	A spray-type medicine.<FE>Heals a Pokémon from frostbite.	FE	53	2	0x03DB2FC	Item description	Un médicament de type spray.<FE>Soigne un Pokémon des engelures.	TRANSLATED
+ODYSSEY-TXT-008996	0x1265180	109	An enigmatic Pokémon that happens<FE>to bear a resemblance to a Poké Ball<FE>found in the ancient region of Hisui.	FE	106	3	0x120D7A0	Pokedex entry	Un Pokémon énigmatique qui semble<FE>ressembler à une Poké Ball<FE>trouvée dans l’ancienne région de Hisui.	TRANSLATED
 ODYSSEY-TXT-008997	0x1265C95	17	:À:À:À:À:À:À:À:À		16	1	0x05FA728	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
-ODYSSEY-TXT-008998	0x126DE80	64	After attacking,<FE>the user switches<FE>places with a<FE>party Pokémon.	FE	60	4	0x129F93C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-008998	0x126DE80	64	After attacking,<FE>the user switches<FE>places with a<FE>party Pokémon.	FE	60	4	0x129F93C	UNKNOWN	Après avoir attaqué,<FE>l’utilisateur change<FE>de place avec un<FE>Pokémon de l’équipe.	TRANSLATED
 ODYSSEY-TXT-008999	0x126E5C0	129	                                                            FRÏ                                 R9R ?9P R9R FRÏ                 		128	1	0x126E204	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-009000	0x1272200	147	                           :   :                :Ô  ·<FA>:Ô<FA>Ô·<FA><FA>:<FA>Ô                                                                   ·   ·   ·   ▲  	FA	141	1	0x03D3DF8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-009001	0x1277C40	54	Capture 40 Pokémon for the<FE>Scientist in Coastal Road.	FE	52	2	0x1FC3EE4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-009001	0x1277C40	54	Capture 40 Pokémon for the<FE>Scientist in Coastal Road.	FE	52	2	0x1FC3EE4	UNKNOWN	Capturez 40 Pokémon pour le<FE>Scientifique de la Route Côtière.	TRANSLATED
 ODYSSEY-TXT-009002	0x1289000	47	…ÉGÉ”É…ÉGÉ”É…É“É”É…É“É”É…É“ÉHÉ…É“ÉHÉ…É“É”É ÊÎÊ		46	1	0x0305C34	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
-ODYSSEY-TXT-009003	0x128CC00	97	Use it to find out which Pokémon<FE>are in your current map. You can<FE>also check EVs and friendship.	FE	94	3	0x03DECBC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009004	0x128CF00	98	The stone on Mareep’s forehead<FE>grants it the power to look into<FE>the dreams of humans and Pokémon.	FE	95	3	0x120E2BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009005	0x128D500	106	It is highly attuned to the emotions of<FE>people and Pokémon. It might become<FE>a great leader in the future.	FE	103	3	0x120F0F0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-009003	0x128CC00	97	Use it to find out which Pokémon<FE>are in your current map. You can<FE>also check EVs and friendship.	FE	94	3	0x03DECBC	Item description	Utilisez-le pour découvrir quels Pokémon<FE>se trouvent sur votre carte actuelle. Vous pouvez<FE>aussi vérifier les EV et l’amitié.	TRANSLATED
+ODYSSEY-TXT-009004	0x128CF00	98	The stone on Mareep’s forehead<FE>grants it the power to look into<FE>the dreams of humans and Pokémon.	FE	95	3	0x120E2BC	Pokedex entry	La pierre sur le front de Wattouat<FE>lui accorde le pouvoir de sonder<FE>les rêves des humains et des Pokémon.	TRANSLATED
+ODYSSEY-TXT-009005	0x128D500	106	It is highly attuned to the emotions of<FE>people and Pokémon. It might become<FE>a great leader in the future.	FE	103	3	0x120F0F0	Pokedex entry	Il est très en phase avec les émotions des<FE>gens et des Pokémon. Il pourrait devenir<FE>un grand chef à l’avenir.	TRANSLATED
 ODYSSEY-TXT-009006	0x1290140	7	Ê À  À		6	1	0x03BC0B0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009007	0x12B2123	4	WjÈ		3	1	0x0756CB4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009008	0x12C5268	13	:Ä:À:À:À:À:À		12	1	0x04E396C	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-009009	0x130B4C7	7	:À:À:À		6	1	0x070D91C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-009010	0x130E680	112	It’s an enigmatic but loyal Pokémon<FE>that appears to harbor an arcane power.<FE>It can be seen together with Ralts.	FE	109	3	0x120EB2C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009011	0x130E980	110	Deeply connected to nature, Cubone<FE>summons the spirits of Pokémon to aid it<FE>in battle and protect its allies.	FE	107	3	0x120D830	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009012	0x1317180	114	A nimble and cunning Pokémon that<FE>scurries through dense forests, using<FE>its sharp claws to climb trees with ease.	FE	111	3	0x120CC3C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-009010	0x130E680	112	It’s an enigmatic but loyal Pokémon<FE>that appears to harbor an arcane power.<FE>It can be seen together with Ralts.	FE	109	3	0x120EB2C	Pokedex entry	C’est un Pokémon énigmatique mais loyal<FE>qui semble receler un pouvoir occulte.<FE>On peut l’apercevoir aux côtés de Ralts.	TRANSLATED
+ODYSSEY-TXT-009011	0x130E980	110	Deeply connected to nature, Cubone<FE>summons the spirits of Pokémon to aid it<FE>in battle and protect its allies.	FE	107	3	0x120D830	Pokedex entry	Profondément connecté à la nature, Osselait<FE>invoque les esprits de Pokémon pour l’aider<FE>au combat et protéger ses alliés.	TRANSLATED
+ODYSSEY-TXT-009012	0x1317180	114	A nimble and cunning Pokémon that<FE>scurries through dense forests, using<FE>its sharp claws to climb trees with ease.	FE	111	3	0x120CC3C	Pokedex entry	Un Pokémon agile et rusé qui<FE>file à travers les forêts denses, utilisant<FE>ses griffes acérées pour grimper aux arbres avec aisance.	TRANSLATED
 ODYSSEY-TXT-009013	0x1330C2E	19	  À               		18	1	0x0716C54	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009014	0x1332443	15	:À:À:À:À:À:À:À		14	1	0x10F054C	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
-ODYSSEY-TXT-009015	0x13444A9	13	Lixin’s Café		12	1	0x1344494	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009016	0x1376700	94	An item to be held by a Pokémon.<FE>A sacred pendant that boosts<FE>the power of Aether-type moves.	FE	91	3	0x03DD9A8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-009015	0x13444A9	13	Lixin’s Café		12	1	0x1344494	UNKNOWN	Café de Lixin	TRANSLATED
+ODYSSEY-TXT-009016	0x1376700	94	An item to be held by a Pokémon.<FE>A sacred pendant that boosts<FE>the power of Aether-type moves.	FE	91	3	0x03DD9A8	Item description	Un objet à tenir par un Pokémon.<FE>Un pendentif sacré qui renforce<FE>la puissance des capacités de type Éther.	TRANSLATED
 ODYSSEY-TXT-009017	0x1A06EF4	8	Œî   Jù		7	1	0x03D4768	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009018	0x1A0F628	6	Œî   		5	1	0x03D4568	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009019	0x1A0F720	6	Œî   		5	1	0x03D4560	UNKNOWN		SKIP_NOISE
@@ -9024,27 +9024,27 @@ ODYSSEY-TXT-009022	0x1A20001	3	 À		2	1	0x1370FB4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009023	0x1A4CB80	24	Non c’è nulla da vedere		23	1	0x1A4CAF0	UNKNOWN | Italian-language leftover data, deliberately not translated (see PROGRESS.md)		SKIP_NOISE
 ODYSSEY-TXT-009024	0x1A7C2DC	7	<FE><FD:FC>ÀÇ 	FD;FE	3	2	0x1028C40	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009025	0x1A92150	10	Œî   JùLâ		9	1	0x03D49E8	UNKNOWN | decode-garbage: repeated symbol runs / control-code-heavy debug string, not real text		SKIP_NOISE
-ODYSSEY-TXT-009026	0x1A944A0	49	A mysterious scale that<FE>evolves certain Pokémon.	FE	47	2	0x03DC140	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-009026	0x1A944A0	49	A mysterious scale that<FE>evolves certain Pokémon.	FE	47	2	0x03DC140	Item description	Une écaille mystérieuse qui<FE>fait évoluer certains Pokémon.	TRANSLATED
 ODYSSEY-TXT-009027	0x1A94560	6	Œî   		5	1	0x03D45B0	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-009028	0x1A97C40	74	An item to be held by a Pokémon.<FE>Burns the holder at the end<FE>of the turn.	FE	71	3	0x03DD8CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009029	0x1A97C90	76	An item to be held by a Pokémon.<FE>Poisons the holder at the end<FE>of the turn.	FE	73	3	0x03DD8F8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-009028	0x1A97C40	74	An item to be held by a Pokémon.<FE>Burns the holder at the end<FE>of the turn.	FE	71	3	0x03DD8CC	Item description	Un objet à tenir par un Pokémon.<FE>Brûle le porteur à la fin<FE>du tour.	TRANSLATED
+ODYSSEY-TXT-009029	0x1A97C90	76	An item to be held by a Pokémon.<FE>Poisons the holder at the end<FE>of the turn.	FE	73	3	0x03DD8F8	Item description	Un objet à tenir par un Pokémon.<FE>Empoisonne le porteur à la fin<FE>du tour.	TRANSLATED
 ODYSSEY-TXT-009030	0x1A9B8D0	3	kÂ		2	1	0x0EA2980,0x0EA2984	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009031	0x1AAEAC0	7	· … ÊÀ		6	1	0x0452964	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009032	0x1AAF040	7	éÀêÀëÀ		6	1	0x04529F4	UNKNOWN | decode-garbage: high-density extended-Latin symbols with no recognizable English word, likely leftover non-text (image/binary) data misdecoded through the completed charmap		SKIP_NOISE
 ODYSSEY-TXT-009033	0x1AB0B00	7	â À  À		6	1	0x03AF3F4	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009034	0x1AB6550	6	Œî   		5	1	0x03D45C0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009035	0x1AB6670	6	Œî   		5	1	0x03D45C8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-009036	0x1AB66A0	81	A box brimming with magma<FE>energy. It allows a certain kind<FE>of Pokémon to evolve.	FE	78	3	0x03DBF30	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009037	0x1AB6700	78	A box full of electric energy.<FE>It allows a certain kind of<FE>Pokémon to evolve.	FE	75	3	0x03DBF5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009038	0x1AB6760	86	A durable piece of protective<FE>equipment. It allows certain<FE>kind of Pokémon to evolve.	FE	83	3	0x03DC16C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009039	0x1AB67D0	84	An enigmatic disc with dubious<FE>data. It allows a certain kind<FE>of Pokémon to evolve.	FE	81	3	0x03DC198	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009040	0x1AB6830	85	A cloth imbued with spiritual<FE>energy. It allows a certain kind<FE>of Pokémon to evolve.	FE	82	3	0x03DC1C4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-009036	0x1AB66A0	81	A box brimming with magma<FE>energy. It allows a certain kind<FE>of Pokémon to evolve.	FE	78	3	0x03DBF30	Item description	Une boîte débordante d’énergie<FE>magmatique. Elle permet à une certaine<FE>sorte de Pokémon d’évoluer.	TRANSLATED
+ODYSSEY-TXT-009037	0x1AB6700	78	A box full of electric energy.<FE>It allows a certain kind of<FE>Pokémon to evolve.	FE	75	3	0x03DBF5C	Item description	Une boîte pleine d’énergie électrique.<FE>Elle permet à une certaine sorte de<FE>Pokémon d’évoluer.	TRANSLATED
+ODYSSEY-TXT-009038	0x1AB6760	86	A durable piece of protective<FE>equipment. It allows certain<FE>kind of Pokémon to evolve.	FE	83	3	0x03DC16C	Item description	Un équipement de protection<FE>durable. Il permet à une certaine<FE>sorte de Pokémon d’évoluer.	TRANSLATED
+ODYSSEY-TXT-009039	0x1AB67D0	84	An enigmatic disc with dubious<FE>data. It allows a certain kind<FE>of Pokémon to evolve.	FE	81	3	0x03DC198	Item description	Un disque énigmatique aux données<FE>douteuses. Il permet à une certaine<FE>sorte de Pokémon d’évoluer.	TRANSLATED
+ODYSSEY-TXT-009040	0x1AB6830	85	A cloth imbued with spiritual<FE>energy. It allows a certain kind<FE>of Pokémon to evolve.	FE	82	3	0x03DC1C4	Item description	Un tissu imprégné d’énergie<FE>spirituelle. Il permet à une certaine<FE>sorte de Pokémon d’évoluer.	TRANSLATED
 ODYSSEY-TXT-009041	0x1AB7500	6	Œî   		5	1	0x03D4D98	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009042	0x1ABAD7E	4	Œ <FE>	FE	2	2	0x1ABAC68	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-009043	0x1AF21A1	33	ÛÀ<FE>Â<FE>Â<FE> <FE>Runtime error detected-	FE	28	5	0x1AF1CE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009044	0x1AF2580	103	An item to be held by a Pokémon.<FE>It’s a well-worn belt that boosts<FE>the power of super effective moves.	FE	100	3	0x03DD8A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009045	0x1B0CA9C	8	POKÉDEX		7	1	0x1B0CBF4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-009046	0x1B0CAA4	8	POKÉMON		7	1	0x1B0CC08	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-009043	0x1AF21A1	33	ÛÀ<FE>Â<FE>Â<FE> <FE>Runtime error detected-	FE	28	5	0x1AF1CE0	UNKNOWN	ÛÀ<FE>Â<FE>Â<FE> <FE>Erreur d’exécution détectée-	TRANSLATED
+ODYSSEY-TXT-009044	0x1AF2580	103	An item to be held by a Pokémon.<FE>It’s a well-worn belt that boosts<FE>the power of super effective moves.	FE	100	3	0x03DD8A0	Item description	Un objet à tenir par un Pokémon.<FE>Une ceinture usée qui renforce<FE>la puissance des capacités super efficaces.	TRANSLATED
+ODYSSEY-TXT-009045	0x1B0CA9C	8	POKÉDEX		7	1	0x1B0CBF4	UNKNOWN	POKÉDEX	TRANSLATED
+ODYSSEY-TXT-009046	0x1B0CAA4	8	POKÉMON		7	1	0x1B0CC08	UNKNOWN	POKÉMON	TRANSLATED
 ODYSSEY-TXT-009047	0x1B0CCA4	5	Œ   		4	1	0x1B0CCA0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009048	0x1B0CCCC	5	Ç   		4	1	0x1B0CCC8	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-009049	0x1F8FB0E	7	:À:À:À		6	1	0x0B637E0,0x0B64730	UNKNOWN		SKIP_NOISE
