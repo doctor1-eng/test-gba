@@ -174,7 +174,7 @@ Smoochum	Lippouti	pokemon-name	nom officiel FR
 Whiscash	Maskadra	pokemon-name	nom officiel FR
 Corsola	Corayon	pokemon-name	nom officiel FR
 Metang	Metang	pokemon-name	identique en FR
-Treecko	Arbre Col	pokemon-name	REVIEW: nom officiel probable "Arbrouss'"/"Arcko", verifier - graphie provisoire
+Treecko	Arcko	pokemon-name	nom officiel FR — corrige (etait "Arbre Col", erreur IDs 004320/004341)
 Torchic	Poussifeu	pokemon-name	nom officiel FR
 Mudkip	Gobou	pokemon-name	nom officiel FR
 Cyndaquil	Hericendre	pokemon-name	nom officiel FR
@@ -301,3 +301,28 @@ Boomburst	Boum Sonique	move-name	terme officiel FR probable
 Icicle Crash	Chute Glace	move-name	terme officiel FR probable
 Aether (type/energy)	Ether	lore-custom	type/energie custom Odyssey (distinct de "energie etherique")
 Etheric energy	energie etherique	lore-custom	deja etabli, distinct du type "Ether"
+Charmander	Salameche	pokemon-name	nom officiel FR
+Squirtle	Carapuce	pokemon-name	nom officiel FR
+Xatu	Xatu	pokemon-name	identique en FR
+Illumise	Lumivole	pokemon-name	nom officiel FR
+Volbeat	Muciole	pokemon-name	REVIEW: nom officiel FR probable, a verifier
+Mismagius	Magireve	pokemon-name	REVIEW: nom officiel FR non confirme avec certitude (distinct de Misdreavus)
+Misdreavus	Feuforeve	pokemon-name	REVIEW: nom officiel FR probable, a verifier (distinct de Mismagius)
+Feraligatr	Aligatueur	pokemon-name	nom officiel FR
+Meganium	Meganium	pokemon-name	identique en FR
+Poochyena	Medhyena	pokemon-name	nom officiel FR
+Suicune	Suicune	pokemon-name	identique en FR
+Salamence	Drattak	pokemon-name	nom officiel FR
+Flaaffy	Moumouton	pokemon-name	nom officiel FR
+Ekans	Abo	pokemon-name	nom officiel FR
+Pyroar	Nemelios	pokemon-name	nom officiel FR
+Noctowl	Hypocean	pokemon-name	nom officiel FR
+Magneton	Magneton	pokemon-name	identique en FR
+Ralts	Ralts	pokemon-name	identique en FR
+Kabutops (F.O.E.)	Kabutops	pokemon-name	identique en FR
+Faraway Island	Ile Lointaine	place-name-custom	region custom Odyssey
+Porcelain Cave	Grotte de Porcelaine	place-name-custom	region custom Odyssey
+Claret Hollows	Creux Pourpre	place-name-custom	region custom Odyssey
+Tharsis	Tharsis	place-name-custom	nom propre custom Odyssey, non traduit
+Fafnir (lore)	Fafnir	lore-custom	nom propre (mythologie nordique/dragon), non traduit
+Compendium (feature)	Compendium	gameplay-custom	nom de fonctionnalite custom Odyssey (type bestiaire), non traduit comme Pokedex

@@ -4318,7 +4318,7 @@ ODYSSEY-TXT-004316	0x0454CA2	57	A mat with a POWDER<FE>SNOW image design.<FE>Put
 ODYSSEY-TXT-004317	0x0454CDB	56	A mat designed with<FE>an ATTRACT image.<FE>Put items on top.	FE	53	3	0x0455EF0	UNKNOWN	Un tapis à l’effigie<FE>de CHARME. Posez-y<FE>des objets.	TRANSLATED
 ODYSSEY-TXT-004318	0x0454D13	55	A mat designed with<FE>a FISSURE image.<FE>Put items on top.	FE	52	3	0x0455F10	UNKNOWN	Un tapis à l’effigie<FE>de FISSURE. Posez-y<FE>des objets.	TRANSLATED
 ODYSSEY-TXT-004319	0x0454D4A	54	A mat designed with<FE>a SPIKES image.<FE>Put items on top.	FE	51	3	0x0455F30	UNKNOWN	Un tapis à l’effigie<FE>de PIQUANTS. Posez-y<FE>des objets.	TRANSLATED
-ODYSSEY-TXT-004320	0x0454DA8	37	A small poster with<FE>a TREECKO print.	FE	35	2	0x0455F70	UNKNOWN	Une petite affiche<FE>imprimée d’un ARBRE COL.	TRANSLATED
+ODYSSEY-TXT-004320	0x0454DA8	37	A small poster with<FE>a TREECKO print.	FE	35	2	0x0455F70	UNKNOWN	Une petite affiche<FE>imprimée d’un ARCKO.	TRANSLATED
 ODYSSEY-TXT-004321	0x0454DCD	37	A small poster with<FE>a TORCHIC print.	FE	35	2	0x0455F90	UNKNOWN	Une petite affiche<FE>imprimée d’un POUSSIFEU.	TRANSLATED
 ODYSSEY-TXT-004322	0x0454DF2	36	A small poster with<FE>a MUDKIP print.	FE	34	2	0x0455FB0	UNKNOWN	Une petite affiche<FE>imprimée d’un GOBOU.	TRANSLATED
 ODYSSEY-TXT-004323	0x0454E16	38	A small poster with<FE>an AZURILL print.	FE	36	2	0x0455FD0	UNKNOWN	Une petite affiche<FE>imprimée d’un AZURILL.	TRANSLATED
@@ -4339,7 +4339,7 @@ ODYSSEY-TXT-004337	0x045506E	44	A MEOWTH doll.<FE>Place it on a mat<FE>or a desk
 ODYSSEY-TXT-004338	0x045509A	46	A CLEFAIRY doll.<FE>Place it on a mat<FE>or a desk.	FE	43	3	0x04561B0	UNKNOWN	Une peluche MELOFEE.<FE>Posez-la sur un tapis<FE>ou un bureau.	TRANSLATED
 ODYSSEY-TXT-004339	0x04550C8	43	A DITTO doll.<FE>Place it on a mat<FE>or a desk.	FE	40	3	0x04561D0	UNKNOWN	Une peluche METAMORPH.<FE>Posez-la sur un tapis<FE>ou un bureau.	TRANSLATED
 ODYSSEY-TXT-004340	0x04550F3	46	A SMOOCHUM doll.<FE>Place it on a mat<FE>or a desk.	FE	43	3	0x04561F0	UNKNOWN	Une peluche LIPPOUTI.<FE>Posez-la sur un tapis<FE>ou un bureau.	TRANSLATED
-ODYSSEY-TXT-004341	0x0455121	45	A TREECKO doll.<FE>Place it on a mat<FE>or a desk.	FE	42	3	0x0456210	UNKNOWN	Une peluche ARBRE COL.<FE>Posez-la sur un tapis<FE>ou un bureau.	TRANSLATED
+ODYSSEY-TXT-004341	0x0455121	45	A TREECKO doll.<FE>Place it on a mat<FE>or a desk.	FE	42	3	0x0456210	UNKNOWN	Une peluche ARCKO.<FE>Posez-la sur un tapis<FE>ou un bureau.	TRANSLATED
 ODYSSEY-TXT-004342	0x045514E	45	A TORCHIC doll.<FE>Place it on a mat<FE>or a desk.	FE	42	3	0x0456230	UNKNOWN	Une peluche POUSSIFEU.<FE>Posez-la sur un tapis<FE>ou un bureau.	TRANSLATED
 ODYSSEY-TXT-004343	0x045517B	44	A MUDKIP doll.<FE>Place it on a mat<FE>or a desk.	FE	41	3	0x0456250	UNKNOWN	Une peluche GOBOU.<FE>Posez-la sur un tapis<FE>ou un bureau.	TRANSLATED
 ODYSSEY-TXT-004344	0x04551A7	45	A DUSKULL doll.<FE>Place it on a mat<FE>or a desk.	FE	42	3	0x0456270	UNKNOWN	Une peluche SKELENOX.<FE>Posez-la sur un tapis<FE>ou un bureau.	TRANSLATED
@@ -6325,7 +6325,7 @@ ODYSSEY-TXT-006323	0x11A9040	77	The user emits an<FE>immense amount of<FE>etheri
 ODYSSEY-TXT-006324	0x11A9100	70	The foe is fought<FE>up close. This cuts<FE>the user’s Defense<FE>and Sp. Def.	FE	66	4	0x129F8D0	Move description	Le combat se fait<FE>au corps à corps. Cela réduit<FE>la Défense et la Défense<FE>Spéciale de l’utilisateur.	TRANSLATED
 ODYSSEY-TXT-006325	0x11A9740	70	The foe is sliced<FE>by a blade of air.<FE>It may also make<FE>the foe flinch.	FE	66	4	0x129F8D4	Move description	La cible est tranchée<FE>par une lame d’air.<FE>Peut aussi faire<FE>flancher la cible.	TRANSLATED
 ODYSSEY-TXT-006326	0x11A9D8E	6	Suuus		5	1	0x11A9D88	UNKNOWN	Fiouu	TRANSLATED
-ODYSSEY-TXT-006327	0x11AAD80	69	A 3-kick attack<FE>that becomes more<FE>powerful with each<FE>successive hit.	FE	65	4	0x129F8D8	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006327	0x11AAD80	69	A 3-kick attack<FE>that becomes more<FE>powerful with each<FE>successive hit.	FE	65	4	0x129F8D8	Move description	Une attaque en<FE>3 coups de pied,<FE>de plus en plus<FE>puissants à chaque coup.	TRANSLATED
 ODYSSEY-TXT-006328	0x11AFF00	2	F		1	1	0x11AFE9C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006329	0x11B1080	16	The Three Bells		15	1	0x1FC4070	UNKNOWN	Les Trois Cloches	TRANSLATED
 ODYSSEY-TXT-006330	0x11B10A0	54	Collect the three bells<FE>and return to the Sea Temple.	FE	52	2	0x1FC4074	UNKNOWN	Récupérez les trois cloches<FE>et retournez au Temple des Mers.	TRANSLATED
@@ -6378,7 +6378,7 @@ ODYSSEY-TXT-006376	0x1204380	21	EV-Friendship Viewer		20	1	0x03E0020	UNKNOWN	Vis
 ODYSSEY-TXT-006377	0x1204400	24	Numerical Mode: Talrega		23	1	0x0452024	UNKNOWN	Mode Numérique : Talrega	TRANSLATED
 ODYSSEY-TXT-006378	0x1204480	8	Talrega		7	1	0x0102DBC	UNKNOWN	Talrega	TRANSLATED
 ODYSSEY-TXT-006379	0x1204500	111	A Magician who can manipulate the Etheric<FE>energy of the stars. It has complete<FE>control over multiple elements.	FE	108	3	0x120E298	Pokedex entry	Un Magicien capable de manipuler l’énergie<FE>Éthérique des étoiles. Il maîtrise<FE>parfaitement de multiples éléments.	TRANSLATED
-ODYSSEY-TXT-006380	0x1204B80	31	Compendium   Table of Contents		30	1	0x0102EB4	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006380	0x1204B80	31	Compendium   Table of Contents		30	1	0x0102EB4	UNKNOWN	Compendium   Table des Matières	TRANSLATED
 ODYSSEY-TXT-006381	0x120C440	116	A gargantuan bird that has control over<FE>lightning. It’s said it was the guardian<FE>deity of a forgotten forest tribe.	FE	113	3	0x120CCA8	Pokedex entry	Un oiseau gigantesque qui maîtrise<FE>la foudre. On dit qu’il était la divinité<FE>protectrice d’une tribu forestière oubliée.	TRANSLATED
 ODYSSEY-TXT-006382	0x120C500	110	It busily flits around here and there.<FE>Even if it is frail, it can be a tough<FE>foe that uses electric attacks.	FE	107	3	0x120CC84	Pokedex entry	Il voltige sans cesse ici et là.<FE>Bien que fragile, il peut être un<FE>adversaire coriace grâce à ses attaques électriques.	TRANSLATED
 ODYSSEY-TXT-006383	0x120C5C0	110	It was discovered in an aquatic ruin<FE>off the shores of Talrega. It can<FE>breathe etheric energy in lieu of air.	FE	107	3	0x120CCCC	Pokedex entry	Il a été découvert dans des ruines aquatiques<FE>au large de Talrega. Il peut<FE>respirer de l’énergie éthérique au lieu de l’air.	TRANSLATED
@@ -6444,210 +6444,210 @@ ODYSSEY-TXT-006442	0x1250385	17	Obtained 3.000$!		16	1	0x1250368	UNKNOWN	Vous av
 ODYSSEY-TXT-006443	0x1253340	257	                                                                                                                                                                                                                                                                		256	1	0x1252788	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006444	0x125393E	3	  		2	1	0x0AA490C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006445	0x1254100	257	                                                                                                                                                                                                                                                                		256	1	0x1253548	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006446	0x125DC80	11	Charmander		10	1	0x03E0270	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006447	0x125DD00	9	Squirtle		8	1	0x03E0278	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006448	0x125DD80	10	Cyndaquil		9	1	0x03E0288	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006449	0x125DE00	9	Totodile		8	1	0x03E0290	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006450	0x125DE80	10	Chikorita		9	1	0x03E0280	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006451	0x125DF00	8	Treecko		7	1	0x03DFEB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006452	0x125DF80	8	Torchic		7	1	0x03DFEC0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006453	0x125E000	7	Mudkip		6	1	0x03DFEC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006454	0x125E080	18	Saya’s Research 1		17	1	0x1FC3EB0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006455	0x125E100	51	Find a Gulpin and show it<FE>to Saya in Coastal Road.	FE	49	2	0x1FC3EB4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006456	0x125E180	52	Find a Corsola and show it<FE>to Saya in Coastal Road.	FE	50	2	0x1FC3EC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006457	0x125E200	18	Saya’s Research 2		17	1	0x1FC3EC0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006458	0x125E280	18	Saya’s Research 3		17	1	0x1FC3ED0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006459	0x125E300	49	Find a Xatu and show it<FE>to Saya in Coastal Road.	FE	47	2	0x1FC3ED4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006460	0x125E740	60	A poison-imbued<FE>scythe slash that<FE>may badly poison<FE>the foe.	FE	56	4	0x129F924	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006461	0x125E7C0	77	A wave of miasma<FE>hits both opponents<FE>and reduces their<FE>Accuracy and Evasion.	FE	73	4	0x129F928	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006462	0x1262600	8	Stratum		7	1	0x045B44C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006463	0x12650C0	106	Commonly spotted scavenging the shores,<FE>it consumes coins and scrap metal<FE>to grow its steely exoskeleton.	FE	103	3	0x120D758	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006464	0x1265240	104	Ancient statues in the Abyssal Shrine<FE>are built in the likeness of this<FE>primordial and mystical maiden.	FE	101	3	0x120DB00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006465	0x1265300	91	Parts of its body turned to stone<FE>thanks to an extremely rare ore<FE>found in volcanic areas.	FE	88	3	0x120DC20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006466	0x12653C0	76	Kecleon’s Battle Bond form achieved<FE>through the power of the Abyssal Shard.	FE	74	2	0x120DEA8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006467	0x12686C0	60	A reckless rush<FE>that may lower the<FE>opponent’s Defense<FE>stat.	FE	56	4	0x129F92C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006468	0x12687C0	62	The user coils up,<FE>raising its Attack,<FE>Defense, and<FE>accuracy.	FE	58	4	0x129F930	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006469	0x12688C0	78	Turns the target’s<FE>power against it.<FE>Power increases with<FE>the foe’s Atk stat.	FE	74	4	0x129F934	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006470	0x1268980	78	The foe is struck<FE>with large, electric<FE>wings that may also<FE>inflict paralysis.	FE	74	4	0x129F938	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006471	0x126FBC0	58	The user emits a very<FE>loud cry that may<FE>confuse the foes.	FE	55	3	0x129F940	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006472	0x126FC40	76	The user violently<FE>whirls its vines to<FE>lash the foe. May<FE>inflict paralysis.	FE	72	4	0x129F944	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006473	0x126FD80	81	A defensive formation<FE>that boosts the team’s<FE>Defense stat.<FE>Always strikes first.	FE	77	4	0x129F948	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006446	0x125DC80	11	Charmander		10	1	0x03E0270	UNKNOWN	Salamèche	TRANSLATED
+ODYSSEY-TXT-006447	0x125DD00	9	Squirtle		8	1	0x03E0278	UNKNOWN	Carapuce	TRANSLATED
+ODYSSEY-TXT-006448	0x125DD80	10	Cyndaquil		9	1	0x03E0288	UNKNOWN	Héricendre	TRANSLATED
+ODYSSEY-TXT-006449	0x125DE00	9	Totodile		8	1	0x03E0290	UNKNOWN	Kaiminus	TRANSLATED
+ODYSSEY-TXT-006450	0x125DE80	10	Chikorita		9	1	0x03E0280	UNKNOWN	Germignon	TRANSLATED
+ODYSSEY-TXT-006451	0x125DF00	8	Treecko		7	1	0x03DFEB8	UNKNOWN	Arcko	TRANSLATED
+ODYSSEY-TXT-006452	0x125DF80	8	Torchic		7	1	0x03DFEC0	UNKNOWN	Poussifeu	TRANSLATED
+ODYSSEY-TXT-006453	0x125E000	7	Mudkip		6	1	0x03DFEC8	UNKNOWN	Gobou	TRANSLATED
+ODYSSEY-TXT-006454	0x125E080	18	Saya’s Research 1		17	1	0x1FC3EB0	UNKNOWN	Recherches de Saya 1	TRANSLATED
+ODYSSEY-TXT-006455	0x125E100	51	Find a Gulpin and show it<FE>to Saya in Coastal Road.	FE	49	2	0x1FC3EB4	UNKNOWN	Trouvez un GLOUPTI et montrez-le<FE>à Saya sur la Route Côtière.	TRANSLATED
+ODYSSEY-TXT-006456	0x125E180	52	Find a Corsola and show it<FE>to Saya in Coastal Road.	FE	50	2	0x1FC3EC4	UNKNOWN	Trouvez un CORAYON et montrez-le<FE>à Saya sur la Route Côtière.	TRANSLATED
+ODYSSEY-TXT-006457	0x125E200	18	Saya’s Research 2		17	1	0x1FC3EC0	UNKNOWN	Recherches de Saya 2	TRANSLATED
+ODYSSEY-TXT-006458	0x125E280	18	Saya’s Research 3		17	1	0x1FC3ED0	UNKNOWN	Recherches de Saya 3	TRANSLATED
+ODYSSEY-TXT-006459	0x125E300	49	Find a Xatu and show it<FE>to Saya in Coastal Road.	FE	47	2	0x1FC3ED4	UNKNOWN	Trouvez un XATOU et montrez-le<FE>à Saya sur la Route Côtière.	TRANSLATED
+ODYSSEY-TXT-006460	0x125E740	60	A poison-imbued<FE>scythe slash that<FE>may badly poison<FE>the foe.	FE	56	4	0x129F924	Move description	Une lame de faux<FE>imprégnée de poison<FE>qui peut gravement<FE>empoisonner la cible.	TRANSLATED
+ODYSSEY-TXT-006461	0x125E7C0	77	A wave of miasma<FE>hits both opponents<FE>and reduces their<FE>Accuracy and Evasion.	FE	73	4	0x129F928	Move description	Une vague de miasme<FE>frappe les deux adversaires<FE>et réduit leur<FE>Précision et leur Esquive.	TRANSLATED
+ODYSSEY-TXT-006462	0x1262600	8	Stratum		7	1	0x045B44C	UNKNOWN	Strate	TRANSLATED
+ODYSSEY-TXT-006463	0x12650C0	106	Commonly spotted scavenging the shores,<FE>it consumes coins and scrap metal<FE>to grow its steely exoskeleton.	FE	103	3	0x120D758	Pokedex entry	Fréquemment aperçu à fouiller les rivages,<FE>il consomme pièces et ferraille<FE>pour développer son exosquelette d’acier.	TRANSLATED
+ODYSSEY-TXT-006464	0x1265240	104	Ancient statues in the Abyssal Shrine<FE>are built in the likeness of this<FE>primordial and mystical maiden.	FE	101	3	0x120DB00	Pokedex entry	D’anciennes statues dans le Sanctuaire<FE>Abyssal représentent cette<FE>vierge primordiale et mystique.	TRANSLATED
+ODYSSEY-TXT-006465	0x1265300	91	Parts of its body turned to stone<FE>thanks to an extremely rare ore<FE>found in volcanic areas.	FE	88	3	0x120DC20	Pokedex entry	Certaines parties de son corps se sont<FE>pétrifiées grâce à un minerai extrêmement<FE>rare trouvé dans les zones volcaniques.	TRANSLATED
+ODYSSEY-TXT-006466	0x12653C0	76	Kecleon’s Battle Bond form achieved<FE>through the power of the Abyssal Shard.	FE	74	2	0x120DEA8	Pokedex entry	Forme Lien Combat de Kecleon,<FE>obtenue grâce à la puissance de l’Éclat Abyssal.	TRANSLATED
+ODYSSEY-TXT-006467	0x12686C0	60	A reckless rush<FE>that may lower the<FE>opponent’s Defense<FE>stat.	FE	56	4	0x129F92C	Move description	Une ruée téméraire<FE>qui peut baisser la<FE>Défense de<FE>l’adversaire.	TRANSLATED
+ODYSSEY-TXT-006468	0x12687C0	62	The user coils up,<FE>raising its Attack,<FE>Defense, and<FE>accuracy.	FE	58	4	0x129F930	Move description	L’utilisateur s’enroule,<FE>augmentant son Attaque,<FE>sa Défense et<FE>sa précision.	TRANSLATED
+ODYSSEY-TXT-006469	0x12688C0	78	Turns the target’s<FE>power against it.<FE>Power increases with<FE>the foe’s Atk stat.	FE	74	4	0x129F934	Move description	Retourne la force<FE>de la cible contre elle.<FE>La puissance augmente avec<FE>l’Attaque de la cible.	TRANSLATED
+ODYSSEY-TXT-006470	0x1268980	78	The foe is struck<FE>with large, electric<FE>wings that may also<FE>inflict paralysis.	FE	74	4	0x129F938	Move description	La cible est frappée<FE>par de grandes ailes<FE>électriques qui peuvent aussi<FE>causer une paralysie.	TRANSLATED
+ODYSSEY-TXT-006471	0x126FBC0	58	The user emits a very<FE>loud cry that may<FE>confuse the foes.	FE	55	3	0x129F940	Move description	L’utilisateur pousse un<FE>cri très fort qui peut<FE>rendre les ennemis confus.	TRANSLATED
+ODYSSEY-TXT-006472	0x126FC40	76	The user violently<FE>whirls its vines to<FE>lash the foe. May<FE>inflict paralysis.	FE	72	4	0x129F944	Move description	L’utilisateur fait<FE>violemment tournoyer ses lianes<FE>pour fouetter la cible. Peut<FE>causer une paralysie.	TRANSLATED
+ODYSSEY-TXT-006473	0x126FD80	81	A defensive formation<FE>that boosts the team’s<FE>Defense stat.<FE>Always strikes first.	FE	77	4	0x129F948	Move description	Une formation défensive<FE>qui augmente la Défense<FE>de l’équipe.<FE>Touche toujours en premier.	TRANSLATED
 ODYSSEY-TXT-006474	0x1271280	56	                                                       		55	1	0x03D3DF0	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006475	0x127240A	44	                                           		43	1	0x070BA2C	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006476	0x1272A40	79	The user violently<FE>stomps the ground to<FE>cause a rock slide<FE>that hits the foes.	FE	75	4	0x129F950	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006477	0x1272B00	65	A sequence of 2<FE>earth-shattering<FE>punches is thrown<FE>at the enemy.	FE	61	4	0x129F94C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006478	0x1272BC0	65	A strong hailstorm<FE>hits the opponents.<FE>It may inflict<FE>frostbite.	FE	61	4	0x129F954	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006479	0x1272F00	73	A poisonous wind hits<FE>both opponents.<FE>It may also badly<FE>poison the foes.	FE	69	4	0x129F958	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006480	0x1274540	79	The user vanishes,<FE>then strikes on the<FE>next turn, hitting<FE>even protected foes.	FE	75	4	0x129F348	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006481	0x1274600	79	The user vanishes,<FE>then strikes on the<FE>next turn, hitting<FE>even protected foes.	FE	75	4	0x129F788	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006482	0x1277BC0	19	Your Compendium...		18	1	0x1FC3EE0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006483	0x1277E40	49	<FA>The F.O.E. had its stats<FE>increased by 1 stage!<FB>	FA;FB;FE	45	2	0x1B03D68	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006476	0x1272A40	79	The user violently<FE>stomps the ground to<FE>cause a rock slide<FE>that hits the foes.	FE	75	4	0x129F950	Move description	L’utilisateur frappe<FE>violemment le sol pour<FE>provoquer un éboulement<FE>qui touche les ennemis.	TRANSLATED
+ODYSSEY-TXT-006477	0x1272B00	65	A sequence of 2<FE>earth-shattering<FE>punches is thrown<FE>at the enemy.	FE	61	4	0x129F94C	Move description	Une série de 2<FE>coups de poing<FE>dévastateurs est lancée<FE>sur l’ennemi.	TRANSLATED
+ODYSSEY-TXT-006478	0x1272BC0	65	A strong hailstorm<FE>hits the opponents.<FE>It may inflict<FE>frostbite.	FE	61	4	0x129F954	Move description	Une violente grêle<FE>frappe les adversaires.<FE>Peut causer<FE>des engelures.	TRANSLATED
+ODYSSEY-TXT-006479	0x1272F00	73	A poisonous wind hits<FE>both opponents.<FE>It may also badly<FE>poison the foes.	FE	69	4	0x129F958	Move description	Un vent toxique frappe<FE>les deux adversaires.<FE>Peut aussi gravement<FE>les empoisonner.	TRANSLATED
+ODYSSEY-TXT-006480	0x1274540	79	The user vanishes,<FE>then strikes on the<FE>next turn, hitting<FE>even protected foes.	FE	75	4	0x129F348	Move description	L’utilisateur disparaît,<FE>puis frappe au tour<FE>suivant, touchant même<FE>les cibles protégées.	TRANSLATED
+ODYSSEY-TXT-006481	0x1274600	79	The user vanishes,<FE>then strikes on the<FE>next turn, hitting<FE>even protected foes.	FE	75	4	0x129F788	Move description	L’utilisateur disparaît,<FE>puis frappe au tour<FE>suivant, touchant même<FE>les cibles protégées.	TRANSLATED
+ODYSSEY-TXT-006482	0x1277BC0	19	Your Compendium...		18	1	0x1FC3EE0	UNKNOWN	Votre Compendium...	TRANSLATED
+ODYSSEY-TXT-006483	0x1277E40	49	<FA>The F.O.E. had its stats<FE>increased by 1 stage!<FB>	FA;FB;FE	45	2	0x1B03D68	UNKNOWN	<FA>Les stats du F.O.E. ont<FE>augmenté d’un niveau !<FB>	TRANSLATED
 ODYSSEY-TXT-006484	0x1282627	282	                                                                                                                                                                                                                                                                                         		281	1	0x0500A08	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006485	0x12826FF	66	                                                                 		65	1	0x04F5EF8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006486	0x1288B40	125	It plays its guitar on the lakeside to<FE>entertain its friends during Summer nights.<FE>It usually performs in duo with Illumise.	FE	122	3	0x120F594	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006487	0x1288C00	114	It dances gracefully whenever one<FE>of its friends needs to be cheered up.<FE>It usually performs in duo with Volbeat.	FE	111	3	0x120F5B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006488	0x1288F40	122	The hardened head from the tail protects<FE>the head of the main body. This way, it can<FE>headbutt its enemies without recoil.	FE	119	3	0x12102CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006489	0x128BF80	109	A guardian of the netherworld who can<FE>manipulate souls and life force at will.<FE>It can be seen in graveyards.	FE	106	3	0x1210284	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006490	0x128C040	101	A mighty and commanding general who<FE>decimates its foes with the Kantonian<FE>dual-wielding sword style.	FE	98	3	0x121023C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006491	0x128C100	113	For centuries, countless pirate ships<FE>have fallen victim to the infernal heat<FE>blasted from its cannon-like arms.	FE	110	3	0x1210164	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006492	0x128C1C0	117	A horrifying, tentacular creature.<FE>It once caused mass panic, mistaken for<FE>the reincarnation of an otherworldly god.	FE	114	3	0x121011C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006493	0x128C280	118	This mysterious, queenly figure can<FE>sing a chilling ballad that freezes its<FE>surroundings in a black, unbreakable ice.	FE	115	3	0x120FEB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006494	0x128C340	100	The Deep Ones could not breach this<FE>towering construct. Its body was<FE>stronger than any known metal.	FE	97	3	0x120FEDC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006495	0x128C400	112	A stronger version of Mismagius’s regional<FE>variant who inhabits the Abandoned Lab.<FE>It follows Yggdrasil’s will.	FE	109	3	0x120FF48	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006496	0x128C4C0	114	A stronger version of Feraligatr’s regional<FE>variant who inhabits the Northern Atoll.<FE>It follows Yggdrasil’s will.	FE	111	3	0x120FF6C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006497	0x128C580	106	A stronger version of Meganium’s regional<FE>variant who inhabits Varley Woods.<FE>It follows Yggdrasil’s will.	FE	103	3	0x120FF90	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006498	0x128C640	100	Thanks to its coloration, it blends in<FE>with the seafloor to evade predators<FE>in the Sea of Galazeah.	FE	97	3	0x120FD98	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006499	0x128C700	106	It’s said it drives the snorkelers<FE>to tight spaces to immobilise and eat them<FE>once they’re out of oxygen.	FE	103	3	0x120FD74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006500	0x128C7C0	87	It has a burly physique and prefers<FE>to live in swamps.<FE>It can manipulate peat at will.	FE	84	3	0x120FD50	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006501	0x128C880	102	It imbues its fists with the power of rage<FE>that it kept hidden in its heart.<FE>Its power has no limits.	FE	99	3	0x120FD08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006502	0x128C940	106	It uses the flame on its head to drive<FE>children to the netherworld and devour<FE>their innocent, pure souls.	FE	103	3	0x120FB7C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006503	0x128CA00	111	When it eats enough pure souls, Duskull<FE>evolves and gains enough power<FE>to manipulate the life force around it.	FE	108	3	0x120FBA0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006504	0x128CAC0	120	Its body is made of some strange, bouncy<FE>material that can nullify impacts.<FE>It makes its nest near abandoned buildings.	FE	117	3	0x120F600	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006505	0x128CCC0	104	The inhaled bacteria from its toxic<FE>breath can destroy human tissues<FE>and organs in the blink of an eye.	FE	101	3	0x120DF38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006506	0x128CD80	100	A Misdreavus who got corrupted by<FE>the Deep One’s miasma eons ago.<FE>It can see the soul of its enemy.	FE	97	3	0x120E208	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006507	0x128CE40	96	A Magneton who got corrupted by<FE>the Deep One’s miasma eons ago.<FE>It controls steel sand at will.	FE	93	3	0x120E1E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006508	0x128CFC0	96	Its arms are covered by huge golden<FE>scales that resemble a shield.<FE>Its body has no blind spots.	FE	93	3	0x120F498	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006509	0x128D002	30	<FE>Its body has no blind spots.	FE	28	2	0x00757C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006510	0x128D080	99	Its royal orders have the power<FE>to raise the morale of its allies<FE>and turn the tide of the battle.	FE	96	3	0x120F138	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006511	0x128D61A	55	No, not this way.<FB>I have to go to the base<FE>camp first.	FB;FE	52	2	0x128D5CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006512	0x128E400	120	It can be seen with a pack of Poochyena,<FE>of which it’s the leader. Many adventurers<FE>have fallen prey to its cold fangs.	FE	117	3	0x120EE68	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006513	0x128E4C0	99	This insect is as fierce as it is<FE>beautiful. Its migratory path lies<FE>littered with frozen remains.	FE	96	3	0x120EF1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006514	0x128E580	96	A mermaid-like being, often<FE>referenced in ancient texts.<FE>Their eerie dancing is well rehearsed.	FE	93	3	0x120EB08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006515	0x128E640	83	A corrupted Suicune that was<FE>created by the Abyssal God<FE>during the banishment war.	FE	80	3	0x120EA9C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006516	0x128E700	98	A Salamence who got corrupted by<FE>the Deep One’s miasma eons ago.<FE>It resembles its Mega Evolution.	FE	95	3	0x120EA78	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006517	0x128E7C0	101	It can cause violent thunderstorms<FE>by bumping its fists together.<FE>It’s also called “God of thunder”.	FE	98	3	0x120E5D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006518	0x128E880	99	When Flaaffy sleeps, it visits the<FE>dreams of others. If a dream<FE>is sweet enough, it gets devoured.	FE	96	3	0x120E2E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006519	0x128E940	63	The user summons a<FE>tempest to hit<FE>the enemy with<FE>a water bomb.	FE	59	4	0x129F960	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006520	0x128EF80	64	An icy wind hits<FE>both opponents.<FE>It may also<FE>inflict frostbite.	FE	60	4	0x129F964	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006521	0x128F000	58	Blasts the foe with<FE>a snowy gust.<FE>It may cause<FE>frostbite.	FE	54	4	0x129F5D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006522	0x128F180	15	Withdraw Items		14	1	0x0402208	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006523	0x128F200	60	The user curses<FE>the opponent in order<FE>to inflict frostbite.	FE	57	3	0x129F968	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006524	0x1290680	85	The opponents are hit<FE>by a violent storm<FE>that breaks the sky.<FE>May paralyze the foes.	FE	81	4	0x129F96C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006525	0x1290740	101	A beast worshipped as the messenger<FE>of the gods during ancient times.<FE>It controls lightning at will.	FE	98	3	0x120CEE8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006526	0x1290800	107	While young, it has six gorgeous tails.<FE>Some religions consider it to be<FE>the child of the celestial judge.	FE	104	3	0x120CEC4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006527	0x12909C0	59	A ninja-style<FE>slash attack that<FE>may paralyze<FE>the opponent.	FE	55	4	0x129F970	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006528	0x1290A80	76	A piercing attack<FE>made with ninja tools<FE>that may put the<FE>opponent to sleep.	FE	72	4	0x129F974	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006529	0x1290B40	71	A ninja art that<FE>halves the user’s HP<FE>to sharply increase<FE>its Evasion.	FE	67	4	0x129F978	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006530	0x1290C00	74	The foe is hit by<FE>violent slashes.<FE>It sharply reduces<FE>the user’s Evasion.	FE	70	4	0x129F97C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006531	0x1291300	111	A trainee ninja that’s studying the art<FE>of ninpo to become stronger. It’s able<FE>to create duplicates of itself.	FE	108	3	0x120E7CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006532	0x129E740	15	Abyssal Palace		14	1	0x03F1D80	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006533	0x12A0E80	73	The user inspires<FE>its underlings to<FE>boost the team’s<FE>Sp. Def by 1 stage.	FE	69	4	0x129F984	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006534	0x12A0ECC	73	The user inspires<FE>its underlings to<FE>boost the team’s<FE>Sp. Atk by 1 stage.	FE	69	4	0x129F980	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006535	0x12A0FB0	76	An attack that does<FE>double damage to a<FE>target affected by<FE>a status problem.	FE	72	4	0x129F990	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006536	0x12A0FFC	47	A melee bash<FE>attack that may<FE>paralyze the foe.	FE	44	3	0x129F994	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006537	0x12A1048	51	The more HP the<FE>target has, the<FE>greater the power.	FE	48	3	0x129F998	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006538	0x12A112C	62	A cursed punch<FE>that hits both<FE>opponents and<FE>damages the user.	FE	58	4	0x129F9A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006539	0x12A4F00	63	The user shoots<FE>a barrage of spores<FE>to the enemy.<FE>2 to 5 hits.	FE	59	4	0x129F988	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006540	0x12A5000	64	A violent slash that<FE>changes its type<FE>according to the<FE>weather.	FE	60	4	0x129F98C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006541	0x12A5080	88	A piece of bread to be held by a<FE>Farfetch’d. It raises Farfetch’d’s<FE>critical-hit ratio.	FE	85	3	0x03DD6E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006542	0x12A9640	57	A left hand jab<FE>followed by a right<FE>cross. Hits 2 times.	FE	54	3	0x129F99C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006543	0x12A97C0	72	An attack that hits<FE>another time if the<FE>target is BRN, PAR,<FE>PSN or SLP.	FE	68	4	0x129F9A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006544	0x12A9974	62	Summons an Ekans’s<FE>spirit that may<FE>badly poison<FE>the opponent.	FE	58	4	0x129F9AC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006545	0x12A9A0C	54	Summons a Pyroar’s<FE>spirit that may<FE>burn the opponent.	FE	51	3	0x129F9B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006546	0x12A9AC0	65	The user recovers<FE>HP every turn and<FE>raises its speed<FE>by 1 stage.	FE	61	4	0x129F9A8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006547	0x12AF000	60	Summons a Noctowl’s<FE>spirit that may put<FE>the enemy to sleep.	FE	57	3	0x129F9B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006548	0x12AF03C	73	Summons the allies<FE>for an all-out hit.<FE>The more allies,<FE>the more damage.	FE	69	4	0x129F9B8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006549	0x12AF088	66	An ancient song<FE>that sharply lowers<FE>the Defense of<FE>the opponents.	FE	62	4	0x129F9BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006550	0x12AF0D4	61	The foe is hit by<FE>a psychic attack<FE>that may put it<FE>to sleep.	FE	57	4	0x129F9C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006551	0x12AF16C	76	An attack that does<FE>double damage to a<FE>target affected by<FE>a status problem.	FE	72	4	0x129F9C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006552	0x12AF1B8	53	A soothing song<FE>that may put the<FE>opponents to sleep.	FE	50	3	0x129F9CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006553	0x12AF250	53	A confusion<FE>inducing dust<FE>is scattered<FE>around a foe.	FE	49	4	0x129F9D4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006554	0x12AF29C	59	A mystic eye<FE>that lowers Def<FE>and Sp. Def of<FE>the opponents.	FE	55	4	0x129F9D8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006555	0x12AF4C0	15	Claret Hollows		14	1	0x03F1B88,0x03F1D74	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006556	0x12BFD80	26	Raises Speed during Hail.		25	1	0x10B8D58	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006557	0x12BFE00	31	Raises Speed during Sandstorm.		30	1	0x10B8D5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006558	0x12BFE80	29	Healing moves have priority.		28	1	0x10B8F00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006559	0x12BFF00	29	“Order” moves have priority.		28	1	0x10B8EFC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006560	0x12BFF80	24	Status moves hit first.		23	1	0x10B8EF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006561	0x12C8F80	74	The user throws a<FE>rotten egg that<FE>lowers Atk and Sp.Atk<FE>of the opponents.	FE	70	4	0x129F9C4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006562	0x12C9040	79	The user plants<FE>seeds at the enemies’<FE>feet that lower their<FE>Speed and Evasion.	FE	75	4	0x129F9D0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006563	0x12CB018	72	An etheric mist<FE>that protects and<FE>heals the party<FE>from status problems.	FE	68	4	0x129F9DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006564	0x12CB0B0	69	The foe is hit<FE>by a blast of arcane<FE>energy that also<FE>hurts the user.	FE	65	4	0x129F9E4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006565	0x12CB0FC	65	A retaliation move<FE>that counters any<FE>hit with double<FE>the damage.	FE	61	4	0x129F9E8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006566	0x12CB148	63	The foe is slashed<FE>repeatedly with a<FE>scythe two to<FE>five times.	FE	59	4	0x129F9EC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006567	0x12CB194	76	The user slams<FE>the target with its<FE>wings. The target is<FE>hit twice in a row.	FE	72	4	0x129F9F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006568	0x12CB1E0	65	An almost invisibly<FE>fast attack that<FE>is certain to strike<FE>first.	FE	61	4	0x129F9F4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006569	0x12CB22C	72	The user unleashes<FE>Fafnir’s power.<FE>Hits both enemies<FE>but causes recoil.	FE	68	4	0x129F9F8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006570	0x12CB278	71	Raises the user’s<FE>offensive stats,<FE>at the cost of its<FE>defensive stats.	FE	67	4	0x129F9FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006571	0x12CB2C4	69	The foe is hit by<FE>violent slashes.<FE>It has a high<FE>critical-hit ratio.	FE	65	4	0x129FA00	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006572	0x12CB9C0	71	Accelerates time<FE>to boost the team’s<FE>Speed by 1. Always<FE>strikes first.	FE	67	4	0x129F9E0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006573	0x12CBC80	16	<F9>p Underg. City	F9	14	1	0x12CBB30	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006574	0x12CBE00	34	Fight and Ground moves gain STAB.		33	1	0x10B8ED0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006575	0x12D3030	11	Sea Temple		10	1	0x12D2FD8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006576	0x12D3100	16	Jagged Mountain		15	1	0x12D2FA8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006577	0x12D3180	15	Waterfall Wood		14	1	0x12D2FB0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006578	0x12D3200	15	Northern Atoll		14	1	0x12D2FB8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006579	0x12D3280	15	Faraway Island		14	1	0x12D2FC0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006580	0x12D3300	13	Maple Island		12	1	0x12D2FC8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006581	0x12D3380	14	Pirate Island		13	1	0x12D2FD0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006582	0x12D35C0	9	Set Sail		8	1	0x03E01C0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006583	0x12D3640	6	Kanto		5	1	0x12D3740	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006584	0x12D36C0	6	Hoenn		5	1	0x12D3750	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006585	0x12D37C0	6	Johto		5	1	0x12D3748	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006586	0x12D54A8	69	The user wears a<FE>mask that boosts<FE>its Speed and<FE>Accuracy by 1 stage.	FE	65	4	0x129FA10	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006587	0x12D54F0	66	The user wears a<FE>mask that boosts<FE>its Atk and<FE>Sp. Atk by 1 stage.	FE	62	4	0x129FA14	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006588	0x12D5538	66	The user wears a<FE>mask that boosts<FE>its Def and<FE>Sp. Def by 1 stage.	FE	62	4	0x129FA18	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006589	0x12D5658	66	Filthy garbage is<FE>shot at the foe.<FE>It may also poison<FE>the target.	FE	62	4	0x129FA28	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006590	0x12D6080	64	The foes are hit<FE>by a freezing howl<FE>that may inflict<FE>frostbite.	FE	60	4	0x129FA04	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006591	0x12D6100	73	The foes are hit by<FE>a violent tsunami.<FE>It has a high<FE>critical-hit ratio.	FE	69	4	0x129FA08	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006592	0x12D61C0	72	The more the target’s<FE>stats have been<FE>raised, the stronger<FE>the move is.	FE	68	4	0x129FA0C	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006486	0x1288B40	125	It plays its guitar on the lakeside to<FE>entertain its friends during Summer nights.<FE>It usually performs in duo with Illumise.	FE	122	3	0x120F594	Pokedex entry	Il joue de la guitare au bord du lac pour<FE>divertir ses amis les nuits d’été.<FE>Il se produit généralement en duo avec Lumivole.	TRANSLATED
+ODYSSEY-TXT-006487	0x1288C00	114	It dances gracefully whenever one<FE>of its friends needs to be cheered up.<FE>It usually performs in duo with Volbeat.	FE	111	3	0x120F5B8	Pokedex entry	Elle danse avec grâce chaque fois<FE>que l’un de ses amis a besoin d’être réconforté.<FE>Elle se produit généralement en duo avec Muciole.	TRANSLATED
+ODYSSEY-TXT-006488	0x1288F40	122	The hardened head from the tail protects<FE>the head of the main body. This way, it can<FE>headbutt its enemies without recoil.	FE	119	3	0x12102CC	Pokedex entry	La tête durcie de sa queue protège<FE>la tête de son corps principal. Ainsi, il peut<FE>donner des coups de tête sans subir de contrecoup.	TRANSLATED
+ODYSSEY-TXT-006489	0x128BF80	109	A guardian of the netherworld who can<FE>manipulate souls and life force at will.<FE>It can be seen in graveyards.	FE	106	3	0x1210284	Pokedex entry	Un gardien de l’outre-tombe capable de<FE>manipuler les âmes et la force vitale à volonté.<FE>On peut l’apercevoir dans les cimetières.	TRANSLATED
+ODYSSEY-TXT-006490	0x128C040	101	A mighty and commanding general who<FE>decimates its foes with the Kantonian<FE>dual-wielding sword style.	FE	98	3	0x121023C	Pokedex entry	Un général puissant et autoritaire qui<FE>décime ses ennemis grâce au style d’escrime<FE>à deux lames de Kanto.	TRANSLATED
+ODYSSEY-TXT-006491	0x128C100	113	For centuries, countless pirate ships<FE>have fallen victim to the infernal heat<FE>blasted from its cannon-like arms.	FE	110	3	0x1210164	Pokedex entry	Depuis des siècles, d’innombrables navires<FE>pirates ont succombé à la chaleur infernale<FE>projetée par ses bras semblables à des canons.	TRANSLATED
+ODYSSEY-TXT-006492	0x128C1C0	117	A horrifying, tentacular creature.<FE>It once caused mass panic, mistaken for<FE>the reincarnation of an otherworldly god.	FE	114	3	0x121011C	Pokedex entry	Une créature tentaculaire terrifiante.<FE>Elle a jadis provoqué une panique générale, prise<FE>pour la réincarnation d’un dieu venu d’ailleurs.	TRANSLATED
+ODYSSEY-TXT-006493	0x128C280	118	This mysterious, queenly figure can<FE>sing a chilling ballad that freezes its<FE>surroundings in a black, unbreakable ice.	FE	115	3	0x120FEB8	Pokedex entry	Cette mystérieuse figure royale peut<FE>chanter une ballade glaçante qui fige<FE>ses environs dans une glace noire et incassable.	TRANSLATED
+ODYSSEY-TXT-006494	0x128C340	100	The Deep Ones could not breach this<FE>towering construct. Its body was<FE>stronger than any known metal.	FE	97	3	0x120FEDC	Pokedex entry	Les Êtres des Profondeurs n’ont pu percer<FE>cette construction imposante. Son corps était<FE>plus résistant que n’importe quel métal connu.	TRANSLATED
+ODYSSEY-TXT-006495	0x128C400	112	A stronger version of Mismagius’s regional<FE>variant who inhabits the Abandoned Lab.<FE>It follows Yggdrasil’s will.	FE	109	3	0x120FF48	Pokedex entry	Une version plus puissante de la<FE>variante régionale de Feuforêve qui habite<FE>le Labo Abandonné. Il obéit à la volonté d’Yggdrasil.	TRANSLATED
+ODYSSEY-TXT-006496	0x128C4C0	114	A stronger version of Feraligatr’s regional<FE>variant who inhabits the Northern Atoll.<FE>It follows Yggdrasil’s will.	FE	111	3	0x120FF6C	Pokedex entry	Une version plus puissante de la<FE>variante régionale d’Aligatueur qui habite<FE>l’Atoll du Nord. Il obéit à la volonté d’Yggdrasil.	TRANSLATED
+ODYSSEY-TXT-006497	0x128C580	106	A stronger version of Meganium’s regional<FE>variant who inhabits Varley Woods.<FE>It follows Yggdrasil’s will.	FE	103	3	0x120FF90	Pokedex entry	Une version plus puissante de la<FE>variante régionale de Méganium qui habite<FE>le Bois de Varley. Il obéit à la volonté d’Yggdrasil.	TRANSLATED
+ODYSSEY-TXT-006498	0x128C640	100	Thanks to its coloration, it blends in<FE>with the seafloor to evade predators<FE>in the Sea of Galazeah.	FE	97	3	0x120FD98	Pokedex entry	Grâce à sa coloration, il se fond<FE>dans les fonds marins pour échapper aux prédateurs<FE>de la mer de Galazeah.	TRANSLATED
+ODYSSEY-TXT-006499	0x128C700	106	It’s said it drives the snorkelers<FE>to tight spaces to immobilise and eat them<FE>once they’re out of oxygen.	FE	103	3	0x120FD74	Pokedex entry	On dit qu’il pousse les plongeurs<FE>vers des espaces exigus pour les immobiliser et les dévorer<FE>une fois qu’ils manquent d’oxygène.	TRANSLATED
+ODYSSEY-TXT-006500	0x128C7C0	87	It has a burly physique and prefers<FE>to live in swamps.<FE>It can manipulate peat at will.	FE	84	3	0x120FD50	Pokedex entry	Il a une carrure robuste et préfère<FE>vivre dans les marécages.<FE>Il peut manipuler la tourbe à volonté.	TRANSLATED
+ODYSSEY-TXT-006501	0x128C880	102	It imbues its fists with the power of rage<FE>that it kept hidden in its heart.<FE>Its power has no limits.	FE	99	3	0x120FD08	Pokedex entry	Il imprègne ses poings de la puissance de la rage<FE>qu’il gardait cachée dans son cœur.<FE>Sa puissance n’a aucune limite.	TRANSLATED
+ODYSSEY-TXT-006502	0x128C940	106	It uses the flame on its head to drive<FE>children to the netherworld and devour<FE>their innocent, pure souls.	FE	103	3	0x120FB7C	Pokedex entry	Il utilise la flamme sur sa tête pour attirer<FE>les enfants vers l’outre-tombe et dévorer<FE>leurs âmes innocentes et pures.	TRANSLATED
+ODYSSEY-TXT-006503	0x128CA00	111	When it eats enough pure souls, Duskull<FE>evolves and gains enough power<FE>to manipulate the life force around it.	FE	108	3	0x120FBA0	Pokedex entry	Quand il a dévoré assez d’âmes pures, Skelénox<FE>évolue et acquiert assez de puissance<FE>pour manipuler la force vitale qui l’entoure.	TRANSLATED
+ODYSSEY-TXT-006504	0x128CAC0	120	Its body is made of some strange, bouncy<FE>material that can nullify impacts.<FE>It makes its nest near abandoned buildings.	FE	117	3	0x120F600	Pokedex entry	Son corps est fait d’une étrange matière<FE>élastique capable d’annuler les impacts.<FE>Il fait son nid près des bâtiments abandonnés.	TRANSLATED
+ODYSSEY-TXT-006505	0x128CCC0	104	The inhaled bacteria from its toxic<FE>breath can destroy human tissues<FE>and organs in the blink of an eye.	FE	101	3	0x120DF38	Pokedex entry	Les bactéries inhalées depuis son souffle<FE>toxique peuvent détruire les tissus<FE>et organes humains en un clin d’œil.	TRANSLATED
+ODYSSEY-TXT-006506	0x128CD80	100	A Misdreavus who got corrupted by<FE>the Deep One’s miasma eons ago.<FE>It can see the soul of its enemy.	FE	97	3	0x120E208	Pokedex entry	Un Feuforêve corrompu il y a des<FE>éons par le miasme de l’Être des Profondeurs.<FE>Il peut voir l’âme de son ennemi.	TRANSLATED
+ODYSSEY-TXT-006507	0x128CE40	96	A Magneton who got corrupted by<FE>the Deep One’s miasma eons ago.<FE>It controls steel sand at will.	FE	93	3	0x120E1E4	Pokedex entry	Un Magnéton corrompu il y a des<FE>éons par le miasme de l’Être des Profondeurs.<FE>Il contrôle le sable d’acier à volonté.	TRANSLATED
+ODYSSEY-TXT-006508	0x128CFC0	96	Its arms are covered by huge golden<FE>scales that resemble a shield.<FE>Its body has no blind spots.	FE	93	3	0x120F498	Pokedex entry	Ses bras sont couverts d’immenses écailles<FE>dorées qui ressemblent à un bouclier.<FE>Son corps n’a aucun angle mort.	TRANSLATED
+ODYSSEY-TXT-006509	0x128D002	30	<FE>Its body has no blind spots.	FE	28	2	0x00757C8	fragment, overlapping pointer	<FE>Son corps n’a aucun angle mort.	TRANSLATED
+ODYSSEY-TXT-006510	0x128D080	99	Its royal orders have the power<FE>to raise the morale of its allies<FE>and turn the tide of the battle.	FE	96	3	0x120F138	Pokedex entry	Ses ordres royaux ont le pouvoir<FE>de remonter le moral de ses alliés<FE>et de faire basculer le cours de la bataille.	TRANSLATED
+ODYSSEY-TXT-006511	0x128D61A	55	No, not this way.<FB>I have to go to the base<FE>camp first.	FB;FE	52	2	0x128D5CC	UNKNOWN	Non, pas comme ça.<FB>Je dois d’abord aller<FE>au camp de base.	TRANSLATED
+ODYSSEY-TXT-006512	0x128E400	120	It can be seen with a pack of Poochyena,<FE>of which it’s the leader. Many adventurers<FE>have fallen prey to its cold fangs.	FE	117	3	0x120EE68	Pokedex entry	On peut l’apercevoir avec une meute de Medhyèna,<FE>dont il est le chef. De nombreux aventuriers<FE>sont tombés sous ses crocs glacés.	TRANSLATED
+ODYSSEY-TXT-006513	0x128E4C0	99	This insect is as fierce as it is<FE>beautiful. Its migratory path lies<FE>littered with frozen remains.	FE	96	3	0x120EF1C	Pokedex entry	Cet insecte est aussi féroce que<FE>magnifique. Sa route migratoire est<FE>jonchée de dépouilles gelées.	TRANSLATED
+ODYSSEY-TXT-006514	0x128E580	96	A mermaid-like being, often<FE>referenced in ancient texts.<FE>Their eerie dancing is well rehearsed.	FE	93	3	0x120EB08	Pokedex entry	Un être semblable à une sirène, souvent<FE>mentionné dans les textes anciens.<FE>Leur danse envoûtante est parfaitement maîtrisée.	TRANSLATED
+ODYSSEY-TXT-006515	0x128E640	83	A corrupted Suicune that was<FE>created by the Abyssal God<FE>during the banishment war.	FE	80	3	0x120EA9C	Pokedex entry	Un Suicune corrompu, créé par le<FE>Dieu Abyssal durant la guerre<FE>du bannissement.	TRANSLATED
+ODYSSEY-TXT-006516	0x128E700	98	A Salamence who got corrupted by<FE>the Deep One’s miasma eons ago.<FE>It resembles its Mega Evolution.	FE	95	3	0x120EA78	Pokedex entry	Un Drattak corrompu il y a des<FE>éons par le miasme de l’Être des Profondeurs.<FE>Il ressemble à sa Méga-Évolution.	TRANSLATED
+ODYSSEY-TXT-006517	0x128E7C0	101	It can cause violent thunderstorms<FE>by bumping its fists together.<FE>It’s also called “God of thunder”.	FE	98	3	0x120E5D4	Pokedex entry	Il peut déclencher de violents orages<FE>en cognant ses poings l’un contre l’autre.<FE>On le surnomme aussi “Dieu du tonnerre”.	TRANSLATED
+ODYSSEY-TXT-006518	0x128E880	99	When Flaaffy sleeps, it visits the<FE>dreams of others. If a dream<FE>is sweet enough, it gets devoured.	FE	96	3	0x120E2E0	Pokedex entry	Quand Moumouton dort, il visite les<FE>rêves des autres. Si un rêve<FE>est assez doux, il le dévore.	TRANSLATED
+ODYSSEY-TXT-006519	0x128E940	63	The user summons a<FE>tempest to hit<FE>the enemy with<FE>a water bomb.	FE	59	4	0x129F960	Move description	L’utilisateur invoque<FE>une tempête pour frapper<FE>l’ennemi avec<FE>une bombe d’eau.	TRANSLATED
+ODYSSEY-TXT-006520	0x128EF80	64	An icy wind hits<FE>both opponents.<FE>It may also<FE>inflict frostbite.	FE	60	4	0x129F964	Move description	Un vent glacial frappe<FE>les deux adversaires.<FE>Peut aussi<FE>causer des engelures.	TRANSLATED
+ODYSSEY-TXT-006521	0x128F000	58	Blasts the foe with<FE>a snowy gust.<FE>It may cause<FE>frostbite.	FE	54	4	0x129F5D0	Move description	Frappe la cible avec<FE>une rafale de neige.<FE>Peut causer<FE>des engelures.	TRANSLATED
+ODYSSEY-TXT-006522	0x128F180	15	Withdraw Items		14	1	0x0402208	UNKNOWN	Retirer des Objets	TRANSLATED
+ODYSSEY-TXT-006523	0x128F200	60	The user curses<FE>the opponent in order<FE>to inflict frostbite.	FE	57	3	0x129F968	Move description	L’utilisateur maudit<FE>l’adversaire afin de<FE>lui causer des engelures.	TRANSLATED
+ODYSSEY-TXT-006524	0x1290680	85	The opponents are hit<FE>by a violent storm<FE>that breaks the sky.<FE>May paralyze the foes.	FE	81	4	0x129F96C	Move description	Les adversaires sont frappés<FE>par une tempête violente<FE>qui déchire le ciel.<FE>Peut les paralyser.	TRANSLATED
+ODYSSEY-TXT-006525	0x1290740	101	A beast worshipped as the messenger<FE>of the gods during ancient times.<FE>It controls lightning at will.	FE	98	3	0x120CEE8	Pokedex entry	Une bête vénérée comme le messager<FE>des dieux dans les temps anciens.<FE>Elle contrôle la foudre à volonté.	TRANSLATED
+ODYSSEY-TXT-006526	0x1290800	107	While young, it has six gorgeous tails.<FE>Some religions consider it to be<FE>the child of the celestial judge.	FE	104	3	0x120CEC4	Pokedex entry	Jeune, il possède six magnifiques queues.<FE>Certaines religions le considèrent comme<FE>l’enfant du juge céleste.	TRANSLATED
+ODYSSEY-TXT-006527	0x12909C0	59	A ninja-style<FE>slash attack that<FE>may paralyze<FE>the opponent.	FE	55	4	0x129F970	Move description	Une attaque tranchante<FE>de style ninja qui<FE>peut paralyser<FE>l’adversaire.	TRANSLATED
+ODYSSEY-TXT-006528	0x1290A80	76	A piercing attack<FE>made with ninja tools<FE>that may put the<FE>opponent to sleep.	FE	72	4	0x129F974	Move description	Une attaque perforante<FE>réalisée avec des outils<FE>ninja qui peut endormir<FE>l’adversaire.	TRANSLATED
+ODYSSEY-TXT-006529	0x1290B40	71	A ninja art that<FE>halves the user’s HP<FE>to sharply increase<FE>its Evasion.	FE	67	4	0x129F978	Move description	Un art ninja qui<FE>divise par deux les PV<FE>de l’utilisateur pour augmenter<FE>fortement son Esquive.	TRANSLATED
+ODYSSEY-TXT-006530	0x1290C00	74	The foe is hit by<FE>violent slashes.<FE>It sharply reduces<FE>the user’s Evasion.	FE	70	4	0x129F97C	Move description	La cible reçoit de<FE>violentes lacérations.<FE>Réduit fortement<FE>l’Esquive de l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-006531	0x1291300	111	A trainee ninja that’s studying the art<FE>of ninpo to become stronger. It’s able<FE>to create duplicates of itself.	FE	108	3	0x120E7CC	Pokedex entry	Un ninja apprenti qui étudie l’art<FE>du ninpo pour devenir plus fort. Il est capable<FE>de créer des doubles de lui-même.	TRANSLATED
+ODYSSEY-TXT-006532	0x129E740	15	Abyssal Palace		14	1	0x03F1D80	UNKNOWN	Palais Abyssal	TRANSLATED
+ODYSSEY-TXT-006533	0x12A0E80	73	The user inspires<FE>its underlings to<FE>boost the team’s<FE>Sp. Def by 1 stage.	FE	69	4	0x129F984	Move description	L’utilisateur inspire<FE>ses subalternes pour<FE>augmenter la Défense<FE>Spéciale de l’équipe d’un niveau.	TRANSLATED
+ODYSSEY-TXT-006534	0x12A0ECC	73	The user inspires<FE>its underlings to<FE>boost the team’s<FE>Sp. Atk by 1 stage.	FE	69	4	0x129F980	Move description	L’utilisateur inspire<FE>ses subalternes pour<FE>augmenter l’Attaque<FE>Spéciale de l’équipe d’un niveau.	TRANSLATED
+ODYSSEY-TXT-006535	0x12A0FB0	76	An attack that does<FE>double damage to a<FE>target affected by<FE>a status problem.	FE	72	4	0x129F990	Move description	Une attaque qui<FE>inflige le double des<FE>dégâts à une cible<FE>affectée par un problème de statut.	TRANSLATED
+ODYSSEY-TXT-006536	0x12A0FFC	47	A melee bash<FE>attack that may<FE>paralyze the foe.	FE	44	3	0x129F994	Move description	Une attaque au corps<FE>à corps qui peut<FE>paralyser la cible.	TRANSLATED
+ODYSSEY-TXT-006537	0x12A1048	51	The more HP the<FE>target has, the<FE>greater the power.	FE	48	3	0x129F998	Move description	Plus la cible a<FE>de PV, plus<FE>la puissance est élevée.	TRANSLATED
+ODYSSEY-TXT-006538	0x12A112C	62	A cursed punch<FE>that hits both<FE>opponents and<FE>damages the user.	FE	58	4	0x129F9A4	Move description	Un coup de poing maudit<FE>qui touche les deux<FE>adversaires et<FE>blesse l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-006539	0x12A4F00	63	The user shoots<FE>a barrage of spores<FE>to the enemy.<FE>2 to 5 hits.	FE	59	4	0x129F988	Move description	L’utilisateur tire<FE>une volée de spores<FE>sur l’ennemi.<FE>2 à 5 coups.	TRANSLATED
+ODYSSEY-TXT-006540	0x12A5000	64	A violent slash that<FE>changes its type<FE>according to the<FE>weather.	FE	60	4	0x129F98C	Move description	Une lacération violente<FE>qui change de type<FE>selon la<FE>météo.	TRANSLATED
+ODYSSEY-TXT-006541	0x12A5080	88	A piece of bread to be held by a<FE>Farfetch’d. It raises Farfetch’d’s<FE>critical-hit ratio.	FE	85	3	0x03DD6E8	UNKNOWN	Un morceau de pain à faire tenir par un<FE>CANARTICHO. Il augmente le taux<FE>de coups critiques de CANARTICHO.	TRANSLATED
+ODYSSEY-TXT-006542	0x12A9640	57	A left hand jab<FE>followed by a right<FE>cross. Hits 2 times.	FE	54	3	0x129F99C	Move description	Un jab de la main<FE>gauche suivi d’un<FE>direct du droit. Touche 2 fois.	TRANSLATED
+ODYSSEY-TXT-006543	0x12A97C0	72	An attack that hits<FE>another time if the<FE>target is BRN, PAR,<FE>PSN or SLP.	FE	68	4	0x129F9A0	Move description	Une attaque qui touche<FE>une fois de plus si<FE>la cible est BRÛ, PAR,<FE>PSN ou SOM.	TRANSLATED
+ODYSSEY-TXT-006544	0x12A9974	62	Summons an Ekans’s<FE>spirit that may<FE>badly poison<FE>the opponent.	FE	58	4	0x129F9AC	Move description	Invoque l’esprit d’un<FE>Abo qui peut<FE>gravement empoisonner<FE>l’adversaire.	TRANSLATED
+ODYSSEY-TXT-006545	0x12A9A0C	54	Summons a Pyroar’s<FE>spirit that may<FE>burn the opponent.	FE	51	3	0x129F9B4	Move description	Invoque l’esprit d’un<FE>Némélios qui peut<FE>brûler l’adversaire.	TRANSLATED
+ODYSSEY-TXT-006546	0x12A9AC0	65	The user recovers<FE>HP every turn and<FE>raises its speed<FE>by 1 stage.	FE	61	4	0x129F9A8	Move description	L’utilisateur récupère<FE>des PV chaque tour et<FE>augmente sa vitesse<FE>d’un niveau.	TRANSLATED
+ODYSSEY-TXT-006547	0x12AF000	60	Summons a Noctowl’s<FE>spirit that may put<FE>the enemy to sleep.	FE	57	3	0x129F9B0	Move description	Invoque l’esprit d’un<FE>Hypocéan qui peut<FE>endormir l’ennemi.	TRANSLATED
+ODYSSEY-TXT-006548	0x12AF03C	73	Summons the allies<FE>for an all-out hit.<FE>The more allies,<FE>the more damage.	FE	69	4	0x129F9B8	Move description	Rassemble les alliés<FE>pour une attaque totale.<FE>Plus il y a d’alliés,<FE>plus les dégâts sont élevés.	TRANSLATED
+ODYSSEY-TXT-006549	0x12AF088	66	An ancient song<FE>that sharply lowers<FE>the Defense of<FE>the opponents.	FE	62	4	0x129F9BC	Move description	Un chant ancien<FE>qui réduit fortement<FE>la Défense des<FE>adversaires.	TRANSLATED
+ODYSSEY-TXT-006550	0x12AF0D4	61	The foe is hit by<FE>a psychic attack<FE>that may put it<FE>to sleep.	FE	57	4	0x129F9C0	Move description	La cible reçoit<FE>une attaque psychique<FE>qui peut<FE>l’endormir.	TRANSLATED
+ODYSSEY-TXT-006551	0x12AF16C	76	An attack that does<FE>double damage to a<FE>target affected by<FE>a status problem.	FE	72	4	0x129F9C8	Move description	Une attaque qui<FE>inflige le double des<FE>dégâts à une cible<FE>affectée par un problème de statut.	TRANSLATED
+ODYSSEY-TXT-006552	0x12AF1B8	53	A soothing song<FE>that may put the<FE>opponents to sleep.	FE	50	3	0x129F9CC	Move description	Un chant apaisant<FE>qui peut endormir<FE>les adversaires.	TRANSLATED
+ODYSSEY-TXT-006553	0x12AF250	53	A confusion<FE>inducing dust<FE>is scattered<FE>around a foe.	FE	49	4	0x129F9D4	Move description	Une poudre provoquant<FE>la confusion<FE>est dispersée<FE>autour d’une cible.	TRANSLATED
+ODYSSEY-TXT-006554	0x12AF29C	59	A mystic eye<FE>that lowers Def<FE>and Sp. Def of<FE>the opponents.	FE	55	4	0x129F9D8	Move description	Un œil mystique<FE>qui baisse la Défense<FE>et la Défense Spéciale<FE>des adversaires.	TRANSLATED
+ODYSSEY-TXT-006555	0x12AF4C0	15	Claret Hollows		14	1	0x03F1B88,0x03F1D74	UNKNOWN	Creux Pourpre	TRANSLATED
+ODYSSEY-TXT-006556	0x12BFD80	26	Raises Speed during Hail.		25	1	0x10B8D58	Ability description	Augmente la Vitesse sous la grêle.	TRANSLATED
+ODYSSEY-TXT-006557	0x12BFE00	31	Raises Speed during Sandstorm.		30	1	0x10B8D5C	Ability description	Augmente la Vitesse pendant une tempête de sable.	TRANSLATED
+ODYSSEY-TXT-006558	0x12BFE80	29	Healing moves have priority.		28	1	0x10B8F00	Ability description	Les capacités de soin ont la priorité.	TRANSLATED
+ODYSSEY-TXT-006559	0x12BFF00	29	“Order” moves have priority.		28	1	0x10B8EFC	Ability description	Les capacités “Ordre” ont la priorité.	TRANSLATED
+ODYSSEY-TXT-006560	0x12BFF80	24	Status moves hit first.		23	1	0x10B8EF8	Ability description	Les capacités de statut touchent en premier.	TRANSLATED
+ODYSSEY-TXT-006561	0x12C8F80	74	The user throws a<FE>rotten egg that<FE>lowers Atk and Sp.Atk<FE>of the opponents.	FE	70	4	0x129F9C4	Move description	L’utilisateur lance<FE>un œuf pourri qui<FE>baisse l’Attaque et l’Atq. Spé.<FE>des adversaires.	TRANSLATED
+ODYSSEY-TXT-006562	0x12C9040	79	The user plants<FE>seeds at the enemies’<FE>feet that lower their<FE>Speed and Evasion.	FE	75	4	0x129F9D0	Move description	L’utilisateur plante<FE>des graines aux pieds<FE>des ennemis, réduisant leur<FE>Vitesse et leur Esquive.	TRANSLATED
+ODYSSEY-TXT-006563	0x12CB018	72	An etheric mist<FE>that protects and<FE>heals the party<FE>from status problems.	FE	68	4	0x129F9DC	Move description	Une brume éthérique<FE>qui protège et<FE>soigne l’équipe<FE>des problèmes de statut.	TRANSLATED
+ODYSSEY-TXT-006564	0x12CB0B0	69	The foe is hit<FE>by a blast of arcane<FE>energy that also<FE>hurts the user.	FE	65	4	0x129F9E4	Move description	La cible reçoit<FE>une salve d’énergie<FE>arcanique qui blesse aussi<FE>l’utilisateur.	TRANSLATED
+ODYSSEY-TXT-006565	0x12CB0FC	65	A retaliation move<FE>that counters any<FE>hit with double<FE>the damage.	FE	61	4	0x129F9E8	Move description	Une capacité de représailles<FE>qui contre n’importe quel<FE>coup en doublant<FE>les dégâts.	TRANSLATED
+ODYSSEY-TXT-006566	0x12CB148	63	The foe is slashed<FE>repeatedly with a<FE>scythe two to<FE>five times.	FE	59	4	0x129F9EC	Move description	La cible est lacérée<FE>à répétition par une<FE>faux, deux à<FE>cinq fois.	TRANSLATED
+ODYSSEY-TXT-006567	0x12CB194	76	The user slams<FE>the target with its<FE>wings. The target is<FE>hit twice in a row.	FE	72	4	0x129F9F0	Move description	L’utilisateur frappe<FE>la cible avec ses<FE>ailes. La cible est<FE>touchée deux fois de suite.	TRANSLATED
+ODYSSEY-TXT-006568	0x12CB1E0	65	An almost invisibly<FE>fast attack that<FE>is certain to strike<FE>first.	FE	61	4	0x129F9F4	Move description	Une attaque presque<FE>invisible tant elle<FE>est rapide. Elle<FE>touche toujours en premier.	TRANSLATED
+ODYSSEY-TXT-006569	0x12CB22C	72	The user unleashes<FE>Fafnir’s power.<FE>Hits both enemies<FE>but causes recoil.	FE	68	4	0x129F9F8	Move description	L’utilisateur libère<FE>la puissance de Fafnir.<FE>Touche les deux ennemis<FE>mais provoque un contrecoup.	TRANSLATED
+ODYSSEY-TXT-006570	0x12CB278	71	Raises the user’s<FE>offensive stats,<FE>at the cost of its<FE>defensive stats.	FE	67	4	0x129F9FC	Ability description	Augmente les stats<FE>offensives de<FE>l’utilisateur, au prix<FE>de ses stats défensives.	TRANSLATED
+ODYSSEY-TXT-006571	0x12CB2C4	69	The foe is hit by<FE>violent slashes.<FE>It has a high<FE>critical-hit ratio.	FE	65	4	0x129FA00	Move description	La cible reçoit de<FE>violentes lacérations.<FE>Taux de coups<FE>critiques élevé.	TRANSLATED
+ODYSSEY-TXT-006572	0x12CB9C0	71	Accelerates time<FE>to boost the team’s<FE>Speed by 1. Always<FE>strikes first.	FE	67	4	0x129F9E0	Move description	Accélère le temps<FE>pour augmenter la Vitesse<FE>de l’équipe de 1. Touche<FE>toujours en premier.	TRANSLATED
+ODYSSEY-TXT-006573	0x12CBC80	16	<F9>p Underg. City	F9	14	1	0x12CBB30	UNKNOWN	<F9>p Cité Souterr.	TRANSLATED
+ODYSSEY-TXT-006574	0x12CBE00	34	Fight and Ground moves gain STAB.		33	1	0x10B8ED0	Ability description	Les capacités Combat et Sol bénéficient du bonus de type STAB.	TRANSLATED
+ODYSSEY-TXT-006575	0x12D3030	11	Sea Temple		10	1	0x12D2FD8	UNKNOWN	Temple des Mers	TRANSLATED
+ODYSSEY-TXT-006576	0x12D3100	16	Jagged Mountain		15	1	0x12D2FA8	UNKNOWN	Mont Déchiqueté	TRANSLATED
+ODYSSEY-TXT-006577	0x12D3180	15	Waterfall Wood		14	1	0x12D2FB0	UNKNOWN	Bois de la Cascade	TRANSLATED
+ODYSSEY-TXT-006578	0x12D3200	15	Northern Atoll		14	1	0x12D2FB8	UNKNOWN	Atoll du Nord	TRANSLATED
+ODYSSEY-TXT-006579	0x12D3280	15	Faraway Island		14	1	0x12D2FC0	UNKNOWN	Île Lointaine	TRANSLATED
+ODYSSEY-TXT-006580	0x12D3300	13	Maple Island		12	1	0x12D2FC8	UNKNOWN	Île de l’Érable	TRANSLATED
+ODYSSEY-TXT-006581	0x12D3380	14	Pirate Island		13	1	0x12D2FD0	UNKNOWN	Île des Pirates	TRANSLATED
+ODYSSEY-TXT-006582	0x12D35C0	9	Set Sail		8	1	0x03E01C0	UNKNOWN	Appareiller	TRANSLATED
+ODYSSEY-TXT-006583	0x12D3640	6	Kanto		5	1	0x12D3740	UNKNOWN	Kanto	TRANSLATED
+ODYSSEY-TXT-006584	0x12D36C0	6	Hoenn		5	1	0x12D3750	UNKNOWN	Hoenn	TRANSLATED
+ODYSSEY-TXT-006585	0x12D37C0	6	Johto		5	1	0x12D3748	UNKNOWN	Johto	TRANSLATED
+ODYSSEY-TXT-006586	0x12D54A8	69	The user wears a<FE>mask that boosts<FE>its Speed and<FE>Accuracy by 1 stage.	FE	65	4	0x129FA10	Move description	L’utilisateur porte<FE>un masque qui augmente<FE>sa Vitesse et sa<FE>Précision d’un niveau.	TRANSLATED
+ODYSSEY-TXT-006587	0x12D54F0	66	The user wears a<FE>mask that boosts<FE>its Atk and<FE>Sp. Atk by 1 stage.	FE	62	4	0x129FA14	Move description	L’utilisateur porte<FE>un masque qui augmente<FE>son Attaque et son<FE>Atq. Spéciale d’un niveau.	TRANSLATED
+ODYSSEY-TXT-006588	0x12D5538	66	The user wears a<FE>mask that boosts<FE>its Def and<FE>Sp. Def by 1 stage.	FE	62	4	0x129FA18	Move description	L’utilisateur porte<FE>un masque qui augmente<FE>sa Défense et sa<FE>Défense Spéciale d’un niveau.	TRANSLATED
+ODYSSEY-TXT-006589	0x12D5658	66	Filthy garbage is<FE>shot at the foe.<FE>It may also poison<FE>the target.	FE	62	4	0x129FA28	Move description	Des détritus infects<FE>sont projetés sur la cible.<FE>Peuvent aussi<FE>l’empoisonner.	TRANSLATED
+ODYSSEY-TXT-006590	0x12D6080	64	The foes are hit<FE>by a freezing howl<FE>that may inflict<FE>frostbite.	FE	60	4	0x129FA04	Move description	Les adversaires reçoivent<FE>un hurlement glacial<FE>qui peut causer<FE>des engelures.	TRANSLATED
+ODYSSEY-TXT-006591	0x12D6100	73	The foes are hit by<FE>a violent tsunami.<FE>It has a high<FE>critical-hit ratio.	FE	69	4	0x129FA08	Move description	Les adversaires sont frappés<FE>par un tsunami violent.<FE>Taux de coups<FE>critiques élevé.	TRANSLATED
+ODYSSEY-TXT-006592	0x12D61C0	72	The more the target’s<FE>stats have been<FE>raised, the stronger<FE>the move is.	FE	68	4	0x129FA0C	Move description	Plus les stats de<FE>la cible ont été<FE>augmentées, plus<FE>la capacité est puissante.	TRANSLATED
 ODYSSEY-TXT-006593	0x12E1808	57	                                                        		56	1	0x0B20B54	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006594	0x12E190C	373	                                                                                                                                                                                                                                                                                                                                                                                    		372	1	0x1AFA314	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006595	0x12E1917	362	                                                                                                                                                                                                                                                                                                                                                                         		361	1	0x01A937C	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006596	0x12F1638	73	                                                                        		72	1	0x0835CDC,0x1AF1E30	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006597	0x12F1E29	152	                                                                                                                                                       		151	1	0x1B1E3A8	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006598	0x12F4000	77	The user smashes into<FE>the target at high<FE>speed. This move<FE>always goes first.	FE	73	4	0x129FA1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006599	0x12F40C0	75	The user spins into<FE>the target at high<FE>speed. This move<FE>always goes first.	FE	71	4	0x129FA20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006600	0x12FD000	15	Porcelain Cave		14	1	0x03F1E20	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006601	0x130E040	77	Rotating its gears,<FE>the user raises its<FE>Attack and sharply<FE>raises its Speed.	FE	73	4	0x129FA24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006602	0x130E480	24	Flying moves hit first.		23	1	0x10B8EEC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006603	0x130E500	109	A master of circle magic, capable of<FE>controlling time at will. Some say<FE>it comes from a land called Tharsis.	FE	106	3	0x120ECDC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006604	0x130E5C0	119	Its dormant power has awakened, causing<FE>it to take on a draconic form. However,<FE>it’s still far from reaching its peak.	FE	116	3	0x120DB24	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006605	0x130E6CB	37	<FE>It can be seen together with Ralts.	FE	35	2	0x06AA9DC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006606	0x130E740	118	It thrives for damp, shadowy forests.<FE>Too much exposure to its spores can leave<FE>one lost in a waking dream for hours.	FE	115	3	0x120F1A4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006607	0x130E800	119	An enigmatic fighter that lurks in misty<FE>woodlands and releases hypnotic spores<FE>to trap its victims in endless dreams.	FE	116	3	0x120F1C8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006608	0x130E8C0	94	Agile and graceful, it dances through<FE>the battle with lightning-fast strikes.<FE>It loves bread.	FE	91	3	0x120D53C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006609	0x130EAC0	104	It harnesses both mind and body in<FE>perfect harmony, allowing it to<FE>battle fiercely and heal its allies.	FE	101	3	0x120F4BC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006610	0x130EB80	108	It’s only active during daytime.<FE>It lures prey with its warm radiance<FE>before ensnaring them in fiery vines.	FE	105	3	0x120E490	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006611	0x130EC40	106	Its punches are so powerful that they<FE>create shockwaves capable of shattering<FE>even the toughest defenses.	FE	103	3	0x120D2FC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006612	0x130ED00	115	It can unleash a relentless barrage of<FE>strikes, generating shockwaves strong<FE>enough to reduce mountains to rubble.	FE	112	3	0x120D320	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006613	0x130EDC0	91	Its haunting hoots carry hypnotic<FE>power, making even the strongest<FE>minds succumb to sleep.	FE	88	3	0x120E07C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006614	0x130EE80	90	With a single glance, this nocturnal<FE>bird can lull its prey into a deep,<FE>dreamless sleep.	FE	87	3	0x120E0A0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006615	0x130EF40	116	It sings lullabies to soothe both crops<FE>and creatures. It’s said that its voice<FE>helps plants grow lush and healthy.	FE	113	3	0x120CF0C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006616	0x130F000	116	It nurtures land and listeners using its<FE>soothing voice. Its lullabies can leave<FE>adventurers napping in the fields.	FE	113	3	0x120CF30	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006617	0x130F0C0	111	Lurking in the shadows, it waits patiently<FE>for the perfect moment to strike.<FE>Its prey never escapes its grasp.	FE	108	3	0x120DD40	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006618	0x130F180	108	Its scythe-like arms strike with<FE>deadly precision. Those who glimpse<FE>its eyes rarely live to tell the tale.	FE	105	3	0x120DD64	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006619	0x130F240	119	An ageless guardian said to watch over<FE>forbidden ruins. Its elemental masks can<FE>deflect any attack that comes its way.	FE	116	3	0x120F9F0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006620	0x130F300	110	With an unwavering gaze, this ancient<FE>protector stands vigilant over sacred<FE>lands, warding off any intruders.	FE	107	3	0x120F9CC	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006621	0x130F3C0	108	It commands the oceans with its mighty<FE>roar. Its colossal size allows it<FE>to create devastating tidal waves.	FE	105	3	0x120F6B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006622	0x1313EF4	57	Slashes imbued<FE>with miasma that<FE>may paralyze<FE>the target.	FE	53	4	0x129FA30	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006623	0x1313F7C	26	No description<FE>available.	FE	24	2	0x129FA38	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006624	0x1313FC0	26	No description<FE>available.	FE	24	2	0x129FA3C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006625	0x1314080	71	The user hardens<FE>its body to boost<FE>its Atk, Def and<FE>Sp.Def by 1 stage.	FE	67	4	0x129FA2C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006626	0x13141C0	111	Its many tentacles extend like grasping<FE>vines, siphoning life force from its<FE>surroundings to sustain its core.	FE	108	3	0x120DCF8	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006627	0x1314280	119	An ancient predator whose tentacles drain<FE>the life force from the surroundings,<FE>turning biomes into barren wastelands.	FE	116	3	0x120DD1C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006628	0x13143C0	55	A reckless move<FE>that blasts foes<FE>with a solar<FE>tempest.	FE	51	4	0x129FA34	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006598	0x12F4000	77	The user smashes into<FE>the target at high<FE>speed. This move<FE>always goes first.	FE	73	4	0x129FA1C	Move description	L’utilisateur percute<FE>la cible à grande<FE>vitesse. Cette capacité<FE>touche toujours en premier.	TRANSLATED
+ODYSSEY-TXT-006599	0x12F40C0	75	The user spins into<FE>the target at high<FE>speed. This move<FE>always goes first.	FE	71	4	0x129FA20	Move description	L’utilisateur tournoie<FE>vers la cible à grande<FE>vitesse. Cette capacité<FE>touche toujours en premier.	TRANSLATED
+ODYSSEY-TXT-006600	0x12FD000	15	Porcelain Cave		14	1	0x03F1E20	UNKNOWN	Grotte de Porcelaine	TRANSLATED
+ODYSSEY-TXT-006601	0x130E040	77	Rotating its gears,<FE>the user raises its<FE>Attack and sharply<FE>raises its Speed.	FE	73	4	0x129FA24	Move description	En faisant tourner ses<FE>rouages, l’utilisateur augmente<FE>son Attaque et augmente<FE>fortement sa Vitesse.	TRANSLATED
+ODYSSEY-TXT-006602	0x130E480	24	Flying moves hit first.		23	1	0x10B8EEC	Ability description	Les capacités de type Vol touchent en premier.	TRANSLATED
+ODYSSEY-TXT-006603	0x130E500	109	A master of circle magic, capable of<FE>controlling time at will. Some say<FE>it comes from a land called Tharsis.	FE	106	3	0x120ECDC	Pokedex entry	Un maître de la magie circulaire, capable de<FE>contrôler le temps à volonté. Certains disent<FE>qu’il vient d’une terre appelée Tharsis.	TRANSLATED
+ODYSSEY-TXT-006604	0x130E5C0	119	Its dormant power has awakened, causing<FE>it to take on a draconic form. However,<FE>it’s still far from reaching its peak.	FE	116	3	0x120DB24	Pokedex entry	Son pouvoir endormi s’est réveillé, lui<FE>faisant prendre une forme draconique. Cependant,<FE>il est encore loin d’atteindre son apogée.	TRANSLATED
+ODYSSEY-TXT-006605	0x130E6CB	37	<FE>It can be seen together with Ralts.	FE	35	2	0x06AA9DC	fragment, overlapping pointer	<FE>On peut l’apercevoir aux côtés de Ralts.	TRANSLATED
+ODYSSEY-TXT-006606	0x130E740	118	It thrives for damp, shadowy forests.<FE>Too much exposure to its spores can leave<FE>one lost in a waking dream for hours.	FE	115	3	0x120F1A4	Pokedex entry	Il prospère dans les forêts humides et<FE>sombres. Une exposition excessive à ses spores peut<FE>plonger quelqu’un dans un rêve éveillé pendant des heures.	TRANSLATED
+ODYSSEY-TXT-006607	0x130E800	119	An enigmatic fighter that lurks in misty<FE>woodlands and releases hypnotic spores<FE>to trap its victims in endless dreams.	FE	116	3	0x120F1C8	Pokedex entry	Un combattant énigmatique qui rôde dans les<FE>bois brumeux et libère des spores hypnotiques<FE>pour piéger ses victimes dans des rêves sans fin.	TRANSLATED
+ODYSSEY-TXT-006608	0x130E8C0	94	Agile and graceful, it dances through<FE>the battle with lightning-fast strikes.<FE>It loves bread.	FE	91	3	0x120D53C	Pokedex entry	Agile et gracieux, il danse à travers<FE>le combat avec des coups d’une rapidité fulgurante.<FE>Il adore le pain.	TRANSLATED
+ODYSSEY-TXT-006609	0x130EAC0	104	It harnesses both mind and body in<FE>perfect harmony, allowing it to<FE>battle fiercely and heal its allies.	FE	101	3	0x120F4BC	Pokedex entry	Il maîtrise à la fois l’esprit et le corps en<FE>parfaite harmonie, ce qui lui permet de<FE>combattre férocement et de soigner ses alliés.	TRANSLATED
+ODYSSEY-TXT-006610	0x130EB80	108	It’s only active during daytime.<FE>It lures prey with its warm radiance<FE>before ensnaring them in fiery vines.	FE	105	3	0x120E490	Pokedex entry	Il n’est actif que le jour.<FE>Il attire ses proies avec sa chaleur radieuse<FE>avant de les piéger dans des lianes enflammées.	TRANSLATED
+ODYSSEY-TXT-006611	0x130EC40	106	Its punches are so powerful that they<FE>create shockwaves capable of shattering<FE>even the toughest defenses.	FE	103	3	0x120D2FC	Pokedex entry	Ses coups de poing sont si puissants qu’ils<FE>créent des ondes de choc capables de briser<FE>même les défenses les plus solides.	TRANSLATED
+ODYSSEY-TXT-006612	0x130ED00	115	It can unleash a relentless barrage of<FE>strikes, generating shockwaves strong<FE>enough to reduce mountains to rubble.	FE	112	3	0x120D320	Pokedex entry	Il peut déclencher une avalanche implacable<FE>de coups, générant des ondes de choc assez<FE>puissantes pour réduire des montagnes en gravats.	TRANSLATED
+ODYSSEY-TXT-006613	0x130EDC0	91	Its haunting hoots carry hypnotic<FE>power, making even the strongest<FE>minds succumb to sleep.	FE	88	3	0x120E07C	Pokedex entry	Ses hululements envoûtants portent un pouvoir<FE>hypnotique, faisant succomber au sommeil<FE>même les esprits les plus résistants.	TRANSLATED
+ODYSSEY-TXT-006614	0x130EE80	90	With a single glance, this nocturnal<FE>bird can lull its prey into a deep,<FE>dreamless sleep.	FE	87	3	0x120E0A0	Pokedex entry	D’un seul regard, cet oiseau nocturne<FE>peut plonger ses proies dans un sommeil<FE>profond et sans rêve.	TRANSLATED
+ODYSSEY-TXT-006615	0x130EF40	116	It sings lullabies to soothe both crops<FE>and creatures. It’s said that its voice<FE>helps plants grow lush and healthy.	FE	113	3	0x120CF0C	Pokedex entry	Il chante des berceuses pour apaiser aussi<FE>bien les cultures que les créatures. On dit que sa voix<FE>aide les plantes à pousser luxuriantes et saines.	TRANSLATED
+ODYSSEY-TXT-006616	0x130F000	116	It nurtures land and listeners using its<FE>soothing voice. Its lullabies can leave<FE>adventurers napping in the fields.	FE	113	3	0x120CF30	Pokedex entry	Il nourrit la terre et ceux qui l’écoutent grâce à sa<FE>voix apaisante. Ses berceuses peuvent laisser<FE>des aventuriers s’assoupir dans les champs.	TRANSLATED
+ODYSSEY-TXT-006617	0x130F0C0	111	Lurking in the shadows, it waits patiently<FE>for the perfect moment to strike.<FE>Its prey never escapes its grasp.	FE	108	3	0x120DD40	Pokedex entry	Tapi dans l’ombre, il attend patiemment<FE>le moment parfait pour frapper.<FE>Sa proie n’échappe jamais à son emprise.	TRANSLATED
+ODYSSEY-TXT-006618	0x130F180	108	Its scythe-like arms strike with<FE>deadly precision. Those who glimpse<FE>its eyes rarely live to tell the tale.	FE	105	3	0x120DD64	Pokedex entry	Ses bras en forme de faux frappent avec<FE>une précision mortelle. Ceux qui croisent<FE>son regard survivent rarement pour le raconter.	TRANSLATED
+ODYSSEY-TXT-006619	0x130F240	119	An ageless guardian said to watch over<FE>forbidden ruins. Its elemental masks can<FE>deflect any attack that comes its way.	FE	116	3	0x120F9F0	Pokedex entry	Un gardien sans âge qui veillerait sur<FE>des ruines interdites. Ses masques élémentaires peuvent<FE>dévier toute attaque venant vers lui.	TRANSLATED
+ODYSSEY-TXT-006620	0x130F300	110	With an unwavering gaze, this ancient<FE>protector stands vigilant over sacred<FE>lands, warding off any intruders.	FE	107	3	0x120F9CC	Pokedex entry	D’un regard inébranlable, cet ancien<FE>protecteur veille sur des terres sacrées,<FE>repoussant tout intrus.	TRANSLATED
+ODYSSEY-TXT-006621	0x130F3C0	108	It commands the oceans with its mighty<FE>roar. Its colossal size allows it<FE>to create devastating tidal waves.	FE	105	3	0x120F6B4	Pokedex entry	Il commande les océans par son puissant<FE>rugissement. Sa taille colossale lui permet<FE>de créer des raz-de-marée dévastateurs.	TRANSLATED
+ODYSSEY-TXT-006622	0x1313EF4	57	Slashes imbued<FE>with miasma that<FE>may paralyze<FE>the target.	FE	53	4	0x129FA30	Move description	Des lacérations imprégnées<FE>de miasme qui<FE>peuvent paralyser<FE>la cible.	TRANSLATED
+ODYSSEY-TXT-006623	0x1313F7C	26	No description<FE>available.	FE	24	2	0x129FA38	UNKNOWN	Aucune description<FE>disponible.	TRANSLATED
+ODYSSEY-TXT-006624	0x1313FC0	26	No description<FE>available.	FE	24	2	0x129FA3C	UNKNOWN	Aucune description<FE>disponible.	TRANSLATED
+ODYSSEY-TXT-006625	0x1314080	71	The user hardens<FE>its body to boost<FE>its Atk, Def and<FE>Sp.Def by 1 stage.	FE	67	4	0x129FA2C	Move description	L’utilisateur endurcit<FE>son corps pour augmenter<FE>son Attaque, sa Défense et<FE>sa Défense Spéciale d’un niveau.	TRANSLATED
+ODYSSEY-TXT-006626	0x13141C0	111	Its many tentacles extend like grasping<FE>vines, siphoning life force from its<FE>surroundings to sustain its core.	FE	108	3	0x120DCF8	Pokedex entry	Ses nombreux tentacules s’étendent comme des<FE>lianes agrippantes, siphonnant la force vitale de<FE>son environnement pour alimenter son noyau.	TRANSLATED
+ODYSSEY-TXT-006627	0x1314280	119	An ancient predator whose tentacles drain<FE>the life force from the surroundings,<FE>turning biomes into barren wastelands.	FE	116	3	0x120DD1C	Pokedex entry	Un prédateur ancien dont les tentacules drainent<FE>la force vitale de son environnement,<FE>transformant les biomes en terres stériles.	TRANSLATED
+ODYSSEY-TXT-006628	0x13143C0	55	A reckless move<FE>that blasts foes<FE>with a solar<FE>tempest.	FE	51	4	0x129FA34	Move description	Une capacité téméraire<FE>qui frappe les ennemis<FE>d’une tempête<FE>solaire.	TRANSLATED
 ODYSSEY-TXT-006629	0x1315561	7	re...?		6	1	0x0A4BC30	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006630	0x1316A80	65	Woah! You are amazing for your age!<FE>That was one heck of a show!	FE	63	2	0x08107A4,0x08107B0	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006631	0x1317240	110	A territorial rodent that dominates<FE>forest canopies, gnawing through thick<FE>branches to build sprawling nests.	FE	107	3	0x120CC60	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006632	0x131871B	50	and.<FB>Extremely low survivability<FE>rate for humans.	FB;FE	47	2	0x03C25B4	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006633	0x131FC80	78	A rare and peculiar flower<FE>that thrives in the depths<FE>of the Seventh Stratum.	FE	75	3	0x03DDF54	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006634	0x1320029	34	<FE>you gave me quite the challenge!	FE	32	2	0x1025CF0	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006630	0x1316A80	65	Woah! You are amazing for your age!<FE>That was one heck of a show!	FE	63	2	0x08107A4,0x08107B0	UNKNOWN	Waouh ! Vous êtes incroyable pour votre âge !<FE>Ça, c’était un sacré spectacle !	TRANSLATED
+ODYSSEY-TXT-006631	0x1317240	110	A territorial rodent that dominates<FE>forest canopies, gnawing through thick<FE>branches to build sprawling nests.	FE	107	3	0x120CC60	Pokedex entry	Un rongeur territorial qui domine<FE>les canopées forestières, rongeant d’épaisses<FE>branches pour bâtir de vastes nids.	TRANSLATED
+ODYSSEY-TXT-006632	0x131871B	50	and.<FB>Extremely low survivability<FE>rate for humans.	FB;FE	47	2	0x03C25B4	fragment, overlapping pointer	terre.<FB>Taux de survie extrêmement<FE>faible pour les humains.	TRANSLATED
+ODYSSEY-TXT-006633	0x131FC80	78	A rare and peculiar flower<FE>that thrives in the depths<FE>of the Seventh Stratum.	FE	75	3	0x03DDF54	UNKNOWN	Une fleur rare et singulière<FE>qui prospère dans les profondeurs<FE>de la Septième Strate.	TRANSLATED
+ODYSSEY-TXT-006634	0x1320029	34	<FE>you gave me quite the challenge!	FE	32	2	0x1025CF0	fragment, overlapping pointer	<FE>vous m’avez donné du fil à retordre !	TRANSLATED
 ODYSSEY-TXT-006635	0x1320041	10	hallenge!		9	1	0x0C04A6C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-006636	0x1322940	257	                                                                                                                                                                                                                                                                		256	1	0x03A0218	UNKNOWN		SKIP_NOISE
 ODYSSEY-TXT-006637	0x1322A80	257	                                                                                                                                                                                                                                                                		256	1	0x03A0220	UNKNOWN		SKIP_NOISE
-ODYSSEY-TXT-006638	0x13269C0	22	How To Tame a Boar...		21	1	0x1FC3F90	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006639	0x1326A40	37	Fight against Teo in Fibernia<FE>Woods.	FE	35	2	0x1FC3F94	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006640	0x1327380	45	Defeat Kabutops F.O.E.<FE>in the First Stratum.	FE	43	2	0x1FC4004	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006641	0x1327400	17	The Mantis’ Nest		16	1	0x1FC4000	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006642	0x1329738	40	Boiling hot water<FE>is shot at the<FE>enemy.	FE	37	3	0x129FA40	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006643	0x1329804	67	The foe is hit<FE>by an explosion<FE>of miasma that may<FE>burn the target.	FE	63	4	0x129FA4C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006644	0x1329848	49	A primordial blow<FE>that may make<FE>the foes flinch.	FE	46	3	0x129FA50	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006645	0x132988C	64	The foe is stomped<FE>on its head.<FE>It may also confuse<FE>the target.	FE	60	4	0x129FA54	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006646	0x1329914	81	A potion that causes<FE>damage to the foe.<FE>If it targets an ally,<FE>it heals instead.	FE	77	4	0x129FA5C	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006647	0x132A580	77	This move allows<FE>the user to strike<FE>first, if the foe is<FE>readying an attack.	FE	73	4	0x129FA44	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006648	0x132A640	65	A flame charge that<FE>raises the user’s<FE>Def and Sp.Def<FE>by 1 stage.	FE	61	4	0x129FA48	UNKNOWN		UNTRANSLATED
-ODYSSEY-TXT-006649	0x132A92C	6	Other		5	1	0x132A918	UNKNOWN		UNTRANSLATED
+ODYSSEY-TXT-006638	0x13269C0	22	How To Tame a Boar...		21	1	0x1FC3F90	UNKNOWN	Comment Dresser un Sanglier...	TRANSLATED
+ODYSSEY-TXT-006639	0x1326A40	37	Fight against Teo in Fibernia<FE>Woods.	FE	35	2	0x1FC3F94	UNKNOWN	Affrontez Teo dans le Bois<FE>de Fibernia.	TRANSLATED
+ODYSSEY-TXT-006640	0x1327380	45	Defeat Kabutops F.O.E.<FE>in the First Stratum.	FE	43	2	0x1FC4004	UNKNOWN	Vaincre le F.O.E. Kabutops<FE>dans la Première Strate.	TRANSLATED
+ODYSSEY-TXT-006641	0x1327400	17	The Mantis’ Nest		16	1	0x1FC4000	UNKNOWN	Le Nid de la Mante	TRANSLATED
+ODYSSEY-TXT-006642	0x1329738	40	Boiling hot water<FE>is shot at the<FE>enemy.	FE	37	3	0x129FA40	Move description	De l’eau bouillante<FE>est projetée sur<FE>l’ennemi.	TRANSLATED
+ODYSSEY-TXT-006643	0x1329804	67	The foe is hit<FE>by an explosion<FE>of miasma that may<FE>burn the target.	FE	63	4	0x129FA4C	Move description	La cible reçoit<FE>une explosion<FE>de miasme qui peut<FE>la brûler.	TRANSLATED
+ODYSSEY-TXT-006644	0x1329848	49	A primordial blow<FE>that may make<FE>the foes flinch.	FE	46	3	0x129FA50	Move description	Un coup primordial<FE>qui peut faire<FE>flancher les ennemis.	TRANSLATED
+ODYSSEY-TXT-006645	0x132988C	64	The foe is stomped<FE>on its head.<FE>It may also confuse<FE>the target.	FE	60	4	0x129FA54	Move description	La cible reçoit un<FE>coup de pied sur la tête.<FE>Peut aussi<FE>la rendre confuse.	TRANSLATED
+ODYSSEY-TXT-006646	0x1329914	81	A potion that causes<FE>damage to the foe.<FE>If it targets an ally,<FE>it heals instead.	FE	77	4	0x129FA5C	Move description	Une potion qui inflige<FE>des dégâts à la cible.<FE>Si elle cible un allié,<FE>elle le soigne à la place.	TRANSLATED
+ODYSSEY-TXT-006647	0x132A580	77	This move allows<FE>the user to strike<FE>first, if the foe is<FE>readying an attack.	FE	73	4	0x129FA44	Move description	Cette capacité permet<FE>à l’utilisateur de frapper<FE>en premier, si la cible<FE>prépare une attaque.	TRANSLATED
+ODYSSEY-TXT-006648	0x132A640	65	A flame charge that<FE>raises the user’s<FE>Def and Sp.Def<FE>by 1 stage.	FE	61	4	0x129FA48	Move description	Une charge enflammée qui<FE>augmente la Défense<FE>et la Défense Spéciale<FE>de l’utilisateur d’un niveau.	TRANSLATED
+ODYSSEY-TXT-006649	0x132A92C	6	Other		5	1	0x132A918	UNKNOWN	Autre	TRANSLATED
 ODYSSEY-TXT-006650	0x132A980	14	Battle Themes		13	1	0x132A910	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-006651	0x1332F80	82	You can sense a sinister presence<FE>behind this door.<FB>Do you still wish to proceed?	FB;FE	79	2	0x08B4D8C	UNKNOWN		UNTRANSLATED
 ODYSSEY-TXT-006652	0x1333800	14	Abyssal Shard		13	1	0x03F1CC4	UNKNOWN		UNTRANSLATED
