@@ -105,6 +105,12 @@ SURF (HM)	SURF	move	non traduit (déjà court)
 ITEMFINDER	DÉTECTOBJET	item	traduction cohérente, non officiellement confirmé
 guillemets	utiliser " " (0xB1/0xB2, confirmés) au lieu de « » (non confirmés)	NOTE	rappel technique pour éviter les erreurs d'encodage
 
+Lt. Surge	LT. SURGE	character	REVIEW: possible nom officiel "MAJOR BOB", conservé non traduit par prudence
+FAME CHECKER	VÉRIF-CÉLÉBRITÉ	item	traduction cohérente, non officiellement confirmé
+CRUSHER (trainer class)	CATCHEUR	trainer class	REVIEW: traduction approximative
+RESORT GORGEOUS	RESORT GORGEOUS	place	non traduit (nom propre Sevii)
+ROCKET HIDEOUT	REPAIRE ROCKET	place	traduction cohérente
+
 # --- Pokémon (noms officiels FR) ---
 ZUBAT	NOSFERAPTI	pokemon	officiel
 WIGGLYTUFF	GRODOUDOU	pokemon	officiel
