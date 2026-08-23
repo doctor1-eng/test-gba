@@ -66,10 +66,27 @@ CHARMAP = {
     # CONFIRMED 2026-08-22 by real emulator test (build/Pokemon_Odyssey_CHARTEST.gba,
     # see TESTING.md) -- promoted from HYPOTHESIS_LOWRANGE in
     # tools/build_charset_test.py after visual confirmation.
-    0x01: 'À', 0x03: 'Â', 0x04: 'Ç', 0x05: 'È', 0x06: 'É', 0x07: 'Ê',
+    #
+    # BUG FOUND 2026-08-23 (in-game corruption report -- see docs/PROGRESS.md):
+    # the CHARTEST string never actually included 'é'/'É' on screen (it
+    # relied on the pre-existing, independently confirmed 0xF7='é' and
+    # simply omitted 0x06/0x1B from the rendered test), yet both got
+    # swept into the blanket "confirmed" promotion anyway. 0x1B='é' was
+    # a silent, NEVER-VISUALLY-CONFIRMED duplicate of the real 0xF7 --
+    # and being encode_string()'s reverse-mapping winner (defined later
+    # in this dict), it was the byte actually written for every 'é' a
+    # translator typed: ~46% of all translated rows contain 'é'. Removed
+    # here so REVERSE_CHARMAP['é'] falls back to the one byte that was
+    # genuinely confirmed (0xF7, verified via "Pokémon" in real ROM
+    # text -- see docs/TECHNICAL_AUDIT.md section 3). 0x06='É' had no
+    # confirmed alternative at all, so it is removed outright (encode
+    # falls back to plain 'E' via ASCII_FALLBACK below -- a standard,
+    # accepted French typographic convention for capitals, and always
+    # safe rather than gambling on an unverified byte).
+    0x01: 'À', 0x03: 'Â', 0x04: 'Ç', 0x05: 'È', 0x07: 'Ê',
     0x08: 'Ë', 0x0B: 'Î', 0x0C: 'Ï', 0x0F: 'Ô', 0x10: 'Œ', 0x11: 'Ù',
     0x13: 'Û',
-    0x16: 'à', 0x18: 'â', 0x19: 'ç', 0x1A: 'è', 0x1B: 'é', 0x1C: 'ê',
+    0x16: 'à', 0x18: 'â', 0x19: 'ç', 0x1A: 'è', 0x1C: 'ê',
     0x1D: 'ë', 0x20: 'î', 0x21: 'ï', 0x24: 'ô', 0x25: 'œ', 0x26: 'ù',
     0x28: 'û',
 }
@@ -96,6 +113,7 @@ REVERSE_CHARMAP = {v: k for k, v in CHARMAP.items()}
 
 ASCII_FALLBACK = {
     'ä': 'a',
+    'É': 'E',
 }
 
 

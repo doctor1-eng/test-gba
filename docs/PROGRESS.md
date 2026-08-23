@@ -56,6 +56,32 @@ Nouveau build : 339 040 octets modifiés (1,010 %, contre 340 886 précédemment
 
 Limitation honnête restante : ce correctif est un garde-fou statistique fondé sur la structure typique des tables de pointeurs GBA, pas une preuve formelle que chaque référence conservée est réelle à 100 % — mais il est nettement plus prudent que l'ancien comportement, et le seul test en émulateur réel disponible (celui de l'utilisateur) portait justement sur la zone corrigée.
 
+**Ce premier correctif s'est révélé insuffisant** : l'utilisateur a retesté le build corrigé (SHA-256 `be77f2ee...`) et a rapporté exactement les mêmes symptômes, avec la demande explicite de vérifier l'intégrité de l'ensemble des fichiers.
+
+## Second bug, beaucoup plus large, trouvé sur re-vérification complète (2026-08-23)
+
+Suite au signalement « toujours pas », un audit complet a été relancé plutôt que de supposer le premier correctif suffisant (conformément à la règle du mandat : ne jamais traiter une extraction heuristique comme une preuve de structure). Plusieurs pistes ont été vérifiées et éliminées avec preuves à l'appui avant de trouver la vraie cause :
+- Allocation d'espace libre : vérifiée saine (un seul bloc de 5,92 Mio, largement contigu, seulement 284 Ko réellement utilisés — aucun risque de recouvrement avec des données utilisées).
+- Détection des chevauchements de pointeurs : re-vérifiée par un algorithme exhaustif (pas seulement les paires adjacentes) — 0 ligne manquée.
+- Adressage au-delà de 16 Mio (ROM étendue à 32 Mio) : écarté avec preuve directe — des messages de combat *vanilla* absolument essentiels (« X gained EXP. Points! », « X fainted! ») vivent déjà au-delà de 16 Mio dans le ROM anglais d'origine et s'affichent normalement, donc le moteur du jeu gère bien ces adresses nativement.
+- Comptage d'octets des codes de contrôle `<F8>`/`<F9>`/`<FC:xx>` : anomalie statistique réelle détectée (le octet suivant ces codes tombe dans la plage `0x00`-`0x28` bien plus souvent que la normale), mais sans impact concret car chaque caractère « mystère » avait déjà été préservé tel quel par la traduction (technique de préservation de placeholder déjà en usage) — inoffensif en pratique, documenté pour référence future.
+
+**La vraie cause : deux caractères accentués jamais réellement vérifiés à l'écran, mais déclarés "confirmés" par erreur.** Le test de jeu de caractères du 2026-08-22 (`tools/build_charset_test.py`, résultat dans `TESTING.md`) affichait la chaîne `"à â ç è ê ë î ï ô ù û"` / `"À Â Ç È Ê Ë Î Ï Ô Ù Û Œ œ"` sur un émulateur réel, confirmée visuellement par l'utilisateur. **Mais cette chaîne de test ne contient ni `é` ni `É`** — ces deux lettres ont été oubliées du texte affiché à l'écran. Or la mise à jour "CONFIRMÉ" de `docs/TECHNICAL_AUDIT.md` a promu **l'intégralité** de la plage basse (`0x01`-`0x28`) comme validée, y compris `0x06='É'` et `0x1B='é'`, qui n'avaient donc jamais été réellement vus à l'écran.
+
+Pire : `0x1B='é'` était un **doublon silencieux** d'un octet différent, `0xF7`, qui lui était authentiquement confirmé (présent dans le mot « Pokémon » lisible dans le ROM). Comme `0x1B` était défini plus tard dans le dictionnaire Python `CHARMAP`, c'est lui qui gagnait lors de la construction de la table inverse utilisée pour encoder le français — **tout `é` tapé par un traducteur dans ce projet a donc systématiquement été écrit dans le ROM avec l'octet jamais vérifié `0x1B`, jamais avec le `0xF7` réellement confirmé.**
+
+Impact mesuré : **2 879 lignes sur 6 334 traduites (45,5 %) contiennent la lettre `é`** — largement la lettre accentuée la plus fréquente du français (verbes au participe passé, « été », « café », etc.). Si `0x1B` ne s'affiche pas correctement dans cette ROM précise (ce qui est resté non vérifié jusqu'ici), près de la moitié de tout le texte traduit afficherait un caractère faux, un tuile vide, ou un artefact graphique à chaque `é` — une explication beaucoup plus cohérente avec « les dialogues ne s'affichent pas » que les 2 lignes touchées par le premier bug.
+
+**Correctif appliqué** dans `tools/gen3_charmap.py` :
+- Retrait de `0x1B: 'é'` de `CHARMAP` → la table inverse retombe automatiquement sur le seul octet réellement confirmé, `0xF7`.
+- Retrait de `0x06: 'É'` (aucune alternative confirmée n'existe) → repli automatique sur `E` sans accent via `ASCII_FALLBACK`, une convention typographique française classique et sans risque (365 lignes / 5,8 % concernées, chacune marquée `REVIEW` par `tools/validate_text.py`, 0 erreur bloquante).
+
+Nouveau build : 339 039 octets modifiés (1,010 %). `tools/validate_rom.py` confirme taille/en-tête/checksum intacts. Vérifié : l'usage de l'octet `0xF7` dans le ROM final augmente de 5 775 occurrences par rapport à l'original, cohérent avec la redirection de tous les `é` nouvellement traduits.
+
+**Nouveau SHA-256 : voir `build/Pokemon_Odyssey_FR.sha256`** (remplace `be77f2ee...`).
+
+**Limitation honnête** : sans émulateur avec affichage disponible dans cet environnement (tenté via Xvfb + mGBA headless — même le ROM anglais d'origine, non modifié, restait à l'écran noir dans ce montage, donc le test n'apporte aucune preuve dans un sens ou l'autre), ce correctif n'a **pas pu être re-confirmé visuellement** avant livraison. Il repose sur un raisonnement de traçabilité rigoureux (le test réel du 2026-08-22 n'a jamais montré `é`/`É` à l'écran, malgré la mention "confirmé") plutôt que sur une nouvelle preuve visuelle. **Seul un nouveau test par l'utilisateur confirmera si ce second correctif résout réellement le problème.**
+
 ## Ce qui N'EST PAS fait / limitations honnêtes (à ne pas prétendre parfait)
 
 - **Pas de nouveau test visuel en jeu depuis la confirmation initiale des accents.** Le volume traduit a été multiplié par plus de 100 depuis ce test unique sur l'écran de sauvegarde. Aucune vérification humaine sur émulateur n'a eu lieu sur la mise en page réelle des boîtes de dialogue, le débordement de texte, ou le rendu des menus/tableaux d'objets. **C'est la limitation la plus importante restante.**
