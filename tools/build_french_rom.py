@@ -59,6 +59,61 @@ class FreeSpaceAllocator:
         raise RuntimeError(f"out of free space allocating {size} bytes")
 
 
+def trustworthy_refs(refs, max_gap=0x4000, big_list_threshold=40, min_retained_frac=0.60):
+    """Filter a row's raw 'references' list before it is used to blindly
+    overwrite pointer bytes elsewhere in the ROM.
+
+    Root cause of a real bug found via in-game testing: extract_text.py's
+    scan_pointers() records ANY 4-byte-aligned word matching a discovered
+    text's address as a "reference", with no check that the word is truly
+    a pointer-table entry rather than a coincidental byte match inside
+    unrelated binary data (graphics/audio/padding). This is usually
+    harmless (median row has exactly 1 real reference), but a handful of
+    text offsets happen to be "attractive nuisance" addresses -- e.g.
+    physical offset 0x1090909 encodes as pointer word 09 09 09 09, a
+    4-byte repdigit that recurs by pure coincidence throughout large
+    low-entropy binary regions (confirmed by inspecting the referrer
+    positions in the original ROM: most have neighbouring words with
+    invalid/out-of-range high bytes, and the match count peaks exactly
+    at the most repetitive byte pattern in a family of 1-byte-shifted
+    overlapping string fragments -- see docs/PROGRESS.md).
+
+    Two defenses, both grounded in how real GBA pointer tables look
+    (a bounded array of same-purpose pointers, physically localized):
+
+    1. Spatial clustering: a genuine pointer table referencing a shared
+       string lives in one bounded region of the ROM. Refs are grouped
+       into clusters (gap <= max_gap between consecutive sorted refs)
+       and only the single largest cluster is kept -- this discards
+       refs scattered many MB away as coincidental noise.
+    2. Retention cap: if the raw list was already large (> big_list_
+       threshold) and clustering only recovered a small minority of it
+       (< min_retained_frac), the target's reference set is not just
+       noisy but fundamentally untrustworthy -- even the "surviving"
+       cluster could itself be part of the same coincidental low-entropy
+       binary region. Such rows are reported back as UNTRUSTED (empty
+       return) so the caller can skip inserting them rather than risk
+       corrupting dozens of unrelated ROM locations.
+    """
+    if len(refs) <= 1:
+        return refs
+    srefs = sorted(refs)
+    clusters = []
+    cur = [srefs[0]]
+    for r in srefs[1:]:
+        if r - cur[-1] <= max_gap:
+            cur.append(r)
+        else:
+            clusters.append(cur)
+            cur = [r]
+    clusters.append(cur)
+    clusters.sort(key=len, reverse=True)
+    biggest = clusters[0]
+    if len(refs) > big_list_threshold and len(biggest) / len(refs) < min_retained_frac:
+        return None
+    return biggest
+
+
 def find_overlapping_ids(all_rows):
     """Some extracted strings share physical ROM bytes: a second pointer
     can reference a few bytes INTO another string's already-captured
@@ -101,6 +156,7 @@ def main():
     n_inplace = 0
     n_relocated = 0
     n_skipped_errors = 0
+    n_skipped_untrusted_refs = 0
 
     for row in to_insert:
         target = int(row["offset"], 16)
@@ -112,7 +168,7 @@ def main():
             print(f"SKIP {row['id']}: unencodable chars {hard_errors}")
             continue
 
-        refs = [int(r, 16) for r in row["references"].split(",") if r]
+        raw_refs = [int(r, 16) for r in row["references"].split(",") if r]
         must_relocate = row["id"] in overlapping_ids
 
         if len(encoded) <= orig_size and not must_relocate:
@@ -125,6 +181,22 @@ def main():
                 "refs_updated": "",
             })
         else:
+            refs = trustworthy_refs(raw_refs)
+            if refs is None:
+                # Relocation requires rewriting every referencing pointer,
+                # but this target's reference list could not be trusted
+                # (see trustworthy_refs docstring) -- rewriting it would
+                # risk corrupting unrelated ROM data. Leaving the original
+                # English bytes untouched is always safe.
+                n_skipped_untrusted_refs += 1
+                print(f"SKIP {row['id']}: {len(raw_refs)} raw references, could not be trusted for relocation -- left in English")
+                log_rows.append({
+                    "id": row["id"], "mode": "skipped_untrusted_refs",
+                    "old_offset": f"0x{target:07X}", "new_offset": "",
+                    "old_size": orig_size, "new_size": "",
+                    "refs_updated": "",
+                })
+                continue
             new_addr = allocator.alloc(len(encoded))
             rom[new_addr:new_addr + len(encoded)] = encoded
             new_ptr = (0x08000000 + new_addr).to_bytes(4, "little")
@@ -137,6 +209,8 @@ def main():
                 "old_size": orig_size, "new_size": len(encoded),
                 "refs_updated": ",".join(f"0x{r:07X}" for r in refs),
             })
+            if len(refs) < len(raw_refs):
+                print(f"NOTE {row['id']}: {len(raw_refs)} raw references -> {len(refs)} trusted (clustering discarded {len(raw_refs)-len(refs)} likely-coincidental matches)")
 
     assert len(rom) == len(original), "ROM size must not change"
 
@@ -153,7 +227,7 @@ def main():
         w.writeheader()
         w.writerows(log_rows)
 
-    print(f"in-place: {n_inplace}, relocated: {n_relocated}, skipped (unencodable): {n_skipped_errors}")
+    print(f"in-place: {n_inplace}, relocated: {n_relocated}, skipped (unencodable): {n_skipped_errors}, skipped (untrusted references): {n_skipped_untrusted_refs}")
     print(f"wrote {OUT_ROM_PATH} sha256={digest}")
 
 
