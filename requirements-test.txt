@@ -1,0 +1,7 @@
+# Optional -- only needed for real-emulation visual testing via
+# tools/headless_playtest.py and tools/replay_patch_log.py. The core
+# translation pipeline (extract_text.py, build_french_rom.py, etc.)
+# has no external dependencies beyond the Python standard library.
+mgba
+numpy
+Pillow

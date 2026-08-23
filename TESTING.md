@@ -2,31 +2,40 @@
 
 Ce fichier suit la règle n°12 du mandat : la traduction n'est pas "terminée" simplement parce que les scripts se compilent, elle doit être vérifiée en jeu.
 
-## Test prioritaire à faire en premier : le jeu de caractères
+## Mise à jour majeure (2026-08-23) : test réel en émulateur maintenant possible sans affichage
 
-**Fichier :** `build/Pokemon_Odyssey_CHARTEST.gba` (généré par `tools/build_charset_test.py`, non commité au dépôt — voir `.gitignore`)
+`mgba-sdl` sous Xvfb s'est révélé inutilisable dans cet environnement (fenêtre créée, focus détecté, mais le cœur d'émulation ne rendait jamais rien — même la ROM anglaise d'origine restait à l'écran noir ; limitation de cet environnement, pas un bug du jeu). Les vraies liaisons Python de mGBA (`pip install mgba`) contournent complètement le problème : elles pilotent le cœur d'émulation directement en mémoire, sans SDL ni serveur d'affichage, et exposent le framebuffer brut.
 
-**Pourquoi :** seul le caractère `é` (et `Ä Ö Ü ä ö ü`) est confirmé dans la table de caractères de cette ROM (voir `docs/TECHNICAL_AUDIT.md` section 3). Tous les autres accents français (`à â ç è ê ë î ï ô ù û œ` + majuscules) reposent sur une hypothèse non vérifiée, faute d'émulateur avec affichage dans l'environnement où ce travail a été fait.
+**Outils** (voir aussi `requirements-test.txt`) :
+- `tools/headless_playtest.py <rom.gba> <out_dir> [n_presses]` — boot la ROM, laisse jouer les logos, puis mitraille le bouton A (+ Start périodiquement) pour avancer dans les boîtes de dialogue, en sauvegardant une capture d'écran PNG et un indice de variance (`std`) à intervalles réguliers. Comparer deux runs (ex. ROM anglaise vs ROM française, avec la même séquence de touches) permet de repérer automatiquement un écran corrompu (variance qui s'effondre près de 0 = image en une seule couleur unie) sans jamais avoir besoin d'un vrai appareil.
+- `tools/replay_patch_log.py <n> <out.gba> [id_a_exclure ...]` — reconstruit une ROM en ne rejouant que les N premières lignes de `build/patch_log.tsv` (dans l'ordre), avec la possibilité d'exclure des IDs précis. Combiné avec `headless_playtest.py`, ça permet une **bissection automatique** : trouver exactement quelle ligne de traduction casse l'affichage, sans deviner à partir d'une analyse statique seule.
 
-**Comment tester :**
-1. Charger `build/Pokemon_Odyssey_CHARTEST.gba` dans n'importe quel émulateur GBA (mGBA, VBA, etc.) — la BIOS GBA n'est pas nécessaire pour ce test.
-2. Depuis l'écran-titre, démarrer une nouvelle partie (ou continuer, peu importe).
-3. Ouvrir le menu Start (bouton Start), choisir **SAVE / SAUVEGARDER**.
-4. Lire le texte affiché : il doit dire `TEST CHARSET:` suivi de deux lignes montrant `a e i o u c : à â ç è ê ë î ï ô ù û` puis les majuscules `À Â Ç È Ê Ë Î Ï Ô Ù Û Œ œ`.
+C'est exactement cette méthode (bissection + comparaison EN/FR automatisée) qui a permis de confirmer et corriger le bug de corruption de l'écran-titre du 2026-08-23 (voir `docs/PROGRESS.md`) — la ligne fautive (`ODYSSEY-TXT-004785`, une référence unique et jamais validée pointant en plein dans le code de démarrage du ROM à l'adresse `0x0000D90`) a été isolée automatiquement en une douzaine d'itérations de recherche dichotomique, puis confirmée visuellement (capture d'écran de l'écran-titre correctement restauré) — pas seulement déduite par raisonnement.
 
-**Résultat attendu et action à suivre :**
-| Observation | Signification | Action |
-|---|---|---|
-| Toutes les lettres accentuées s'affichent correctement | L'hypothèse basse-plage (`tools/build_charset_test.py:HYPOTHESIS_LOWRANGE`) est confirmée | Copier ces valeurs dans `CHARMAP` de `tools/gen3_charmap.py`, relancer `tools/build_french_rom.py` — toutes les traductions passeront automatiquement des accents en mode ASCII (ex. `a`) aux vrais accents |
-| Certaines lettres sont des tuiles vides/du bruit graphique | Ces bytes précis sont faux ou non alloués à des glyphes dans cette ROM | Documenter précisément lesquelles dans ce fichier (ligne "bug"), il faudra une analyse plus poussée (désassemblage du moteur de rendu de texte) |
-| Le jeu plante / freeze à l'ouverture du menu SAVE | Un des bytes utilisés entre en conflit avec un vrai code de contrôle du moteur | Ne pas réessayer sans investigation — signaler précisément quel(s) octet(s) sont en cause |
+**Usage rapide :**
+```
+pip install -r requirements-test.txt
+python3 tools/headless_playtest.py roms/original/odyssey_en_v4.1.1.gba /tmp/en_test 150
+python3 tools/headless_playtest.py build/Pokemon_Odyssey_FR.gba /tmp/fr_test 150
+# comparer /tmp/en_test/*.png et /tmp/fr_test/*.png visuellement, ou les colonnes "std" imprimées
+```
+
+## Test du jeu de caractères — accents français
+
+**Historique :** le test dédié `build/Pokemon_Odyssey_CHARTEST.gba` (généré par `tools/build_charset_test.py`) a été confirmé visuellement par l'utilisateur sur un émulateur réel le 2026-08-22 pour 24 des 26 caractères testés. **Bug trouvé le 2026-08-23** : la chaîne de test elle-même omettait `é` et `É` — ces deux caractères n'ont donc jamais été réellement vus à l'écran malgré leur promotion en "confirmé". Corrigé (voir `docs/PROGRESS.md` et `docs/TECHNICAL_AUDIT.md`) : `é` retombe sur l'octet `0xF7`, authentiquement confirmé par ailleurs (présent dans « Pokémon » en texte ROM lisible) ; `É` n'a pas d'octet confirmé disponible et retombe sur `E` sans accent.
 
 ## Suivi des tests
 
 | zone | événement | test | résultat | bug | correction |
 |---|---|---|---|---|---|
-| Save menu | Prompt de sauvegarde | Jeu de caractères accentués (voir ci-dessus) | **NON TESTÉ** (nécessite un émulateur avec affichage — indisponible dans cet environnement) | — | — |
-| LOT 1 (système) | 63 chaînes système/UI traduites (save, wireless, mystery gift, union room, options...) | Build produit et validé structurellement (`tools/validate_rom.py`) mais **pas encore rejoué en jeu** | Construction OK, affichage réel non vérifié | — | — |
+| Jeu de caractères (24/26 lettres) | Menu Start > SAVE | Chaîne de test dédiée sur émulateur réel | **Confirmé** par l'utilisateur (2026-08-22) | `é`/`É` absents de la chaîne de test, promus "confirmé" par erreur | Voir ci-dessus (2026-08-23) |
+| Écran-titre | Boot du jeu | `tools/headless_playtest.py` (mGBA headless, comparaison EN/FR) | **Confirmé visuellement** — logo "Pokémon Odyssey" identique à l'original (2026-08-23) | Référence unique non validée (`0x0000D90`, code de boot) corrompant le titre | `tools/build_french_rom.py`: filtre plancher d'adresse plausible (`MIN_PLAUSIBLE_REF_ADDR`) |
+| Narration d'introduction | Après l'écran-titre | `tools/headless_playtest.py`, 150 points de contrôle comparés EN/FR | **Confirmé visuellement** — texte français lisible sur fond graphique correct | Fragments qui se chevauchent avec références ambiguës (voir PROGRESS.md) | Mode strict de `trustworthy_refs()` pour les lignes `overlapping_ids` |
+| Reste du jeu (menus, combats, dialogues NPC) | — | Variance std comparée EN/FR sur 150 points de contrôle | Cohérent (pas d'effondrement vers une couleur unie) | — | — |
+
+## Limitation honnête découverte le 2026-08-23
+
+Le test approfondi a révélé au moins 2 fragments de texte (dans la narration d'introduction) accessibles uniquement via une adresse **calculée/indirecte**, invisible pour `tools/extract_text.py` qui ne scanne que les pointeurs absolus 4 octets alignés. Ces fragments restent donc en anglais dans le build — ce n'est pas une corruption, seulement une lacune de couverture déjà documentée comme risque connu (`docs/TECHNICAL_AUDIT.md` section 9 : « une chaîne référencée par pointeur arithmétique... »), maintenant confirmée avec un exemple concret. Corriger ça demanderait de rétro-ingénierer le mécanisme d'adressage indirect du moteur de script — hors du périmètre de cette session.
 
 ## Comment produire un build à tester
 
@@ -36,4 +45,4 @@ python3 tools/build_charset_test.py     # build/Pokemon_Odyssey_CHARTEST.gba (te
 python3 tools/validate_rom.py           # vérifie taille/header/checksum du dernier build FR
 ```
 
-Les deux ROM produites (`build/*.gba`) ne sont **pas commitées au dépôt git** (droits d'auteur — voir `.gitignore`) : elles doivent être régénérées localement à partir de `roms/original/odyssey_en_v4.1.1.gba` (également non commité) + `translation/text_database.tsv`.
+Les ROM produites (`build/*.gba`) ne sont **pas commitées au dépôt git** (droits d'auteur — voir `.gitignore`) : elles doivent être régénérées localement à partir de `roms/original/odyssey_en_v4.1.1.gba` (également non commité) + `translation/text_database.tsv`.

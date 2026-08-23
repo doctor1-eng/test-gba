@@ -1,6 +1,6 @@
 # Suivi de progression — traduction française Pokémon Odyssey
 
-Dernière mise à jour : 2026-08-23 (correction d'un bug de corruption ROM signalé par l'utilisateur en jeu réel — voir section dédiée ci-dessous)
+Dernière mise à jour : 2026-08-23 (quatrième correctif de corruption ROM, cette fois confirmé visuellement via un vrai émulateur headless — voir « Quatrième bug » ci-dessous)
 
 ## État réel (pas une estimation arrondie)
 
@@ -11,8 +11,8 @@ Dernière mise à jour : 2026-08-23 (correction d'un bug de corruption ROM signa
 | Chaînes de texte réel (9051 - 2717) | **6 334** |
 | Traduites (`TRANSLATED`) | **6 334 / 6 334 → 100 %** |
 | Validées structurellement (contrôle des codes, encodage) | 6 334 / 6 334, **0 erreur** |
-| Réinsérées dans le build ROM | 6 332 / 6 334 (`build/Pokemon_Odyssey_FR.gba`) — 2 lignes volontairement laissées en anglais par sécurité anti-corruption, voir section « Bug critique » ci-dessous |
-| Testées en jeu (affichage réel vérifié) | Caractères accentués français confirmés par l'utilisateur sur émulateur réel au tout début du projet (voir `TESTING.md`). Un test en jeu ultérieur (2026-08-23) a révélé un bug de corruption critique, corrigé le jour même (voir ci-dessous) — **le build corrigé n'a pas encore été retesté en jeu par l'utilisateur.** |
+| Réinsérées dans le build ROM | 6 298 / 6 334 (`build/Pokemon_Odyssey_FR.gba`) — 36 lignes volontairement laissées en anglais par sécurité anti-corruption, voir « Quatrième bug » ci-dessous |
+| Testées en jeu (affichage réel vérifié) | Caractères accentués français confirmés par l'utilisateur sur émulateur réel au tout début du projet (voir `TESTING.md`). Deux bugs de corruption signalés par l'utilisateur en jeu réel (vidéos) ont été corrigés. **Un test headless via un vrai émulateur (mGBA en liaison Python, 2026-08-23) confirme désormais visuellement l'écran-titre et l'intégralité de la narration d'introduction** — la première confirmation par image réelle plutôt que par raisonnement seul dans ce projet. Le reste du jeu (menus, combats, zones avancées) n'a pas été parcouru exhaustivement. |
 
 **100 % du texte réel traduit.** Ce chiffre est honnête au sens strict : il couvre toutes les lignes classées comme texte réel exploitable par l'extracteur. Il ne garantit pas que 100 % du texte soit *parfait* — voir les limitations ci-dessous.
 
@@ -98,6 +98,24 @@ Résultat : 34 lignes sur 6 334 sont désormais laissées en anglais par sécuri
 **Nouveau SHA-256 : voir `build/Pokemon_Odyssey_FR.sha256`** (remplace `f81570ad...`).
 
 **Limitation honnête** : comme pour le correctif précédent, aucune confirmation visuelle n'a pu être faite dans cet environnement avant livraison. Ce correctif est ciblé précisément sur la zone montrée dans la vidéo de l'utilisateur (narration d'intro), mais il reste possible que d'autres zones du jeu (non visitées dans les vidéos de test jusqu'ici) contiennent des problèmes similaires non encore détectés.
+
+## Quatrième bug, trouvé ET confirmé visuellement pour la première fois via un vrai émulateur headless (2026-08-23)
+
+L'utilisateur a demandé de tester directement le build livré. Plutôt que de refaire une analyse statique, une vraie capacité de test visuel a été mise en place dans cette session : les liaisons Python officielles de mGBA (`pip install mgba`) pilotent le cœur d'émulation en mémoire, sans SDL ni serveur d'affichage — contrairement à `mgba-sdl` sous Xvfb (essayé lors des corrections précédentes), qui ne rendait jamais rien dans cet environnement, y compris pour la ROM anglaise d'origine intacte. Voir `TESTING.md` pour les outils (`tools/headless_playtest.py`, `tools/replay_patch_log.py`) et leur usage.
+
+**Premier test réel** : capture d'écran automatisée de l'écran-titre (identique séquence de touches pour la ROM EN et FR). Résultat : **le logo « Pokémon Odyssey » était toujours remplacé par un motif de losanges corrompu répétitif** dans le build FR le plus récent — un tout autre bug que les trois précédents, présent dès le tout premier écran du jeu.
+
+**Cause trouvée par bissection automatique** (et non plus par déduction manuelle) : `tools/replay_patch_log.py` a permis de reconstruire la ROM en ne rejouant qu'un préfixe de `build/patch_log.tsv`, combiné à une recherche dichotomique automatisée sur `tools/headless_playtest.py` — 12 itérations ont isolé la ligne fautive : `ODYSSEY-TXT-004785` (description de capacité « Drain Punch »), qui avait **exactement une seule référence brute**, à l'adresse `0x0000D90`. Vérification directe des octets du ROM d'origine à cette adresse : code machine ARM/THUMB dense et à haute entropie (le tout début du code de démarrage/gestionnaires d'interruption du ROM, bien avant que la moindre table de pointeurs de texte ne puisse exister — l'en-tête de cartouche GBA fait `0xC0` octets et le code de boot occupe encore plusieurs Ko après). Ce n'était clairement pas un pointeur de texte légitime.
+
+**La faille précise** : les deux correctifs précédents (`trustworthy_refs()`) ne s'appliquaient qu'à partir de 2 références (clustering, seuils stricts/permissifs) — mais une ligne avec **une seule référence** passait toujours sans aucune validation (`if len(refs) <= 1: return refs`), sur l'hypothèse que la médiane de la base (1 référence réelle par ligne) rendait ce cas presque toujours sûr. Cette instance prouve que même une référence unique peut être une coïncidence.
+
+**Correctif** : ajout d'un plancher d'adresse plausible (`MIN_PLAUSIBLE_REF_ADDR = 0x8000`, soit 32 Kio) appliqué à **toute** ligne avant même de compter les références — toute adresse en dessous est rejetée d'office, qu'il y en ait une ou cent. Sur toute la base de données, seulement 14 références sur 11 015 tombent sous ce seuil (dont 8 dans des lignes `SKIP_NOISE` jamais insérées) ; seules 2 lignes `TRANSLATED` étaient concernées (`004785` et `004376`, « SMALL DESK »/petit bureau, référence à `0x14C`, en plein dans la zone d'en-tête/vecteurs d'entrée).
+
+**Vérification** : après correctif, l'écran-titre a été recapturé — **logo « Pokémon Odyssey » correctement affiché**, variance de pixels (`std`) quasi identique à l'original (64,5/64,0/53,3 contre 64,3/63,7/53,6 pour l'anglais). Test étendu à 150 points de contrôle en mitraillant le bouton A à travers toute l'introduction et le début du jeu : les courbes de variance EN/FR se suivent de très près sur l'ensemble de la séquence (contre un effondrement vers une couleur unie observé avant correctif). Capture d'écran de la narration d'intro également confirmée : fond graphique correct (arbre/racines/coffre) avec texte français lisible par-dessus. **C'est la première fois dans ce projet qu'un correctif est confirmé par une image réelle plutôt que par un raisonnement seul.**
+
+Nouveau build : 36 lignes laissées en anglais par sécurité (contre 34), 336 298 octets modifiés (1,002 %). `tools/validate_rom.py` confirme taille/en-tête/checksum intacts. **Nouveau SHA-256 : voir `build/Pokemon_Odyssey_FR.sha256`** (remplace `9fa0f77c...`).
+
+**Découverte annexe, non corrigée (hors périmètre)** : le test approfondi a aussi révélé au moins 2 fragments de la narration d'intro qui restent en anglais parce qu'ils sont référencés par une adresse **calculée/indirecte** (aucun pointeur absolu, aligné ou non, ne pointe vers eux nulle part dans le ROM), invisible pour la méthode de scan actuelle. Ce n'est pas une corruption — juste une lacune de couverture déjà anticipée dans `docs/TECHNICAL_AUDIT.md` section 9, maintenant confirmée avec un exemple concret. Non corrigé dans cette session (nécessiterait de rétro-ingénierer le mécanisme d'adressage du moteur de script).
 
 ## Ce qui N'EST PAS fait / limitations honnêtes (à ne pas prétendre parfait)
 

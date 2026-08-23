@@ -59,6 +59,22 @@ class FreeSpaceAllocator:
         raise RuntimeError(f"out of free space allocating {size} bytes")
 
 
+MIN_PLAUSIBLE_REF_ADDR = 0x8000
+"""Any 'reference' address below this is rejected outright, regardless of
+how many total refs a row has. Found via bisection against a real in-game
+title-screen corruption report (see docs/PROGRESS.md): row ODYSSEY-TXT-
+004785 had exactly one raw reference, at 0x0000D90 -- inside the GBA
+ROM's early boot/interrupt-handler code (confirmed: the bytes there are
+dense, high-entropy machine code, not plausible pointer-table data; the
+cartridge header alone ends at 0xC0). Because a row with a single
+reference was trusted unconditionally (no peer to cluster against), this
+one coincidental match was blindly rewritten with a new pointer, directly
+corrupting boot-critical code and breaking the title screen. Database-
+wide, only 14 of 11015 references fall below this floor (8 in SKIP_NOISE
+rows that are never inserted), so this costs almost nothing while closing
+the exact gap the single-reference fast path left open."""
+
+
 def trustworthy_refs(refs, strict=False, max_gap=0x4000, big_list_threshold=40, min_retained_frac=0.60):
     """Filter a row's raw 'references' list before it is used to blindly
     overwrite pointer bytes elsewhere in the ROM.
@@ -120,6 +136,9 @@ def trustworthy_refs(refs, strict=False, max_gap=0x4000, big_list_threshold=40, 
     this row rather than risk corrupting unrelated ROM data) when the
     trust bar isn't met.
     """
+    refs = [r for r in refs if r >= MIN_PLAUSIBLE_REF_ADDR]
+    if not refs:
+        return None
     if len(refs) <= 1:
         return refs
     srefs = sorted(refs)
