@@ -59,7 +59,7 @@ class FreeSpaceAllocator:
         raise RuntimeError(f"out of free space allocating {size} bytes")
 
 
-def trustworthy_refs(refs, max_gap=0x4000, big_list_threshold=40, min_retained_frac=0.60):
+def trustworthy_refs(refs, strict=False, max_gap=0x4000, big_list_threshold=40, min_retained_frac=0.60):
     """Filter a row's raw 'references' list before it is used to blindly
     overwrite pointer bytes elsewhere in the ROM.
 
@@ -78,22 +78,47 @@ def trustworthy_refs(refs, max_gap=0x4000, big_list_threshold=40, min_retained_f
     at the most repetitive byte pattern in a family of 1-byte-shifted
     overlapping string fragments -- see docs/PROGRESS.md).
 
-    Two defenses, both grounded in how real GBA pointer tables look
-    (a bounded array of same-purpose pointers, physically localized):
+    Spatial clustering (always applied): a genuine pointer table
+    referencing a shared string lives in one bounded region of the ROM.
+    Refs are grouped into clusters (gap <= max_gap between consecutive
+    sorted refs) and only the single largest cluster is kept -- this
+    discards refs scattered many MB away as coincidental noise.
 
-    1. Spatial clustering: a genuine pointer table referencing a shared
-       string lives in one bounded region of the ROM. Refs are grouped
-       into clusters (gap <= max_gap between consecutive sorted refs)
-       and only the single largest cluster is kept -- this discards
-       refs scattered many MB away as coincidental noise.
-    2. Retention cap: if the raw list was already large (> big_list_
-       threshold) and clustering only recovered a small minority of it
-       (< min_retained_frac), the target's reference set is not just
-       noisy but fundamentally untrustworthy -- even the "surviving"
-       cluster could itself be part of the same coincidental low-entropy
-       binary region. Such rows are reported back as UNTRUSTED (empty
-       return) so the caller can skip inserting them rather than risk
-       corrupting dozens of unrelated ROM locations.
+    Two trust modes for what happens after clustering:
+
+    - Normal (strict=False): trust the largest cluster unless the raw
+      list was already large (> big_list_threshold) and clustering only
+      recovered a small minority of it (< min_retained_frac) -- e.g. a
+      list of 178 that clusters down to 25 is still untrustworthy even
+      at 25. This is permissive enough to keep large, internally
+      consistent multi-reference patterns that are entirely normal in
+      this ROM (e.g. ~230 ability-description rows each legitimately
+      referenced from exactly 2 separate UI screens -- verified these
+      are NOT part of any overlapping-fragment family, unlike the rows
+      below).
+    - Strict (strict=True): only trust a cluster that is unanimous (every
+      raw ref agrees) or an overwhelming, clearly-tabular majority
+      (cluster size >= 20 AND >= 90% retained). A found-in-the-wild
+      example of why: two refs over 1MB apart is a coin flip for the
+      clustering heuristic above, and for a normal standalone string
+      that coin flip is low-stakes (the vast majority of such cases,
+      like the ability descriptions, are genuine dual references) -- but
+      for a row physically overlapping a neighbour (build_french_rom's
+      overlapping_ids, forced to relocate regardless of length), the
+      SAME "attractive nuisance address" mechanism documented above is
+      already known to be in play, so an ambiguous cluster there is far
+      more likely to be coincidence than structure. Confirmed against
+      the intro-narration overlap family (IDs 006145/146/149/150): each
+      has 2-27 raw refs spread across MB-scale gaps with no dominant
+      cluster, and relocating them was very likely still corrupting a
+      handful of unrelated ROM locations even after the general fix
+      above -- consistent with the in-game corruption the user reported
+      persisting after that first fix. The caller should pass
+      strict=True whenever the row is in overlapping_ids.
+
+    Either mode returns None (untrusted -- caller should skip inserting
+    this row rather than risk corrupting unrelated ROM data) when the
+    trust bar isn't met.
     """
     if len(refs) <= 1:
         return refs
@@ -109,6 +134,12 @@ def trustworthy_refs(refs, max_gap=0x4000, big_list_threshold=40, min_retained_f
     clusters.append(cur)
     clusters.sort(key=len, reverse=True)
     biggest = clusters[0]
+    if strict:
+        if len(biggest) == len(refs):
+            return biggest
+        if len(biggest) >= 20 and len(biggest) / len(refs) >= 0.90:
+            return biggest
+        return None
     if len(refs) > big_list_threshold and len(biggest) / len(refs) < min_retained_frac:
         return None
     return biggest
@@ -181,7 +212,7 @@ def main():
                 "refs_updated": "",
             })
         else:
-            refs = trustworthy_refs(raw_refs)
+            refs = trustworthy_refs(raw_refs, strict=must_relocate)
             if refs is None:
                 # Relocation requires rewriting every referencing pointer,
                 # but this target's reference list could not be trusted

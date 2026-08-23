@@ -82,6 +82,23 @@ Nouveau build : 339 039 octets modifiés (1,010 %). `tools/validate_rom.py` conf
 
 **Limitation honnête** : sans émulateur avec affichage disponible dans cet environnement (tenté via Xvfb + mGBA headless — même le ROM anglais d'origine, non modifié, restait à l'écran noir dans ce montage, donc le test n'apporte aucune preuve dans un sens ou l'autre), ce correctif n'a **pas pu être re-confirmé visuellement** avant livraison. Il repose sur un raisonnement de traçabilité rigoureux (le test réel du 2026-08-22 n'a jamais montré `é`/`É` à l'écran, malgré la mention "confirmé") plutôt que sur une nouvelle preuve visuelle. **Seul un nouveau test par l'utilisateur confirmera si ce second correctif résout réellement le problème.**
 
+## Troisième bug : le premier correctif de références n'était pas assez strict (2026-08-23)
+
+L'utilisateur a fourni une nouvelle vidéo de test du build corrigé (SHA-256 `f81570ad...`). Analyse image par image (`ffmpeg` + inspection visuelle) :
+- L'intro cinématique **s'affiche désormais correctement** (« YGGDRASIL PROJECT » avec portrait de personnage) — ce point est bien résolu.
+- Juste après, l'écran enchaîne une bande de bruit statique → noir plein → deux cadres de boîte de dialogue vides (silhouette de personnage en fond, **mais aucun texte ne s'affiche jamais dedans**) → marron plein → noir plein à nouveau, sans jamais se rétablir malgré des appuis répétés. C'est exactement le symptôme original (« fond noir qui change de couleur aléatoirement », « dialogues ne s'affichent pas »), toujours présent.
+- Le dernier "écran" de la vidéo n'est pas le jeu : c'est le Centre de contrôle iOS affichant le texte système « À l'arrêt » (statut du lecteur média) — sans rapport avec le jeu, probablement une confusion de l'utilisateur en interprétant ce texte système comme un bouton.
+
+Cette séquence corrompue correspond exactement à l'emplacement de la narration d'introduction (« ...draw countless explorers from all over the world... ») déjà identifiée comme zone à risque. En creusant plus loin dans la même famille de fragments qui se chevauchent (`006135`-`006152`), **4 lignes de plus** (`006145`, `006146`, `006149`, `006150`) avaient des listes de références ambiguës (2 à 27 références brutes, dispersées sur plusieurs Mio, sans cluster dominant) que le garde-fou du premier correctif (seuil de rétention à 60 % sur les listes de plus de 40) ne couvrait pas — ces listes plus courtes passaient sous le radar du seuil.
+
+**Correctif affiné** dans `tools/build_french_rom.py` (`trustworthy_refs()`) : un second mode « strict » s'applique désormais spécifiquement aux lignes qui partagent physiquement des octets avec une voisine (`overlapping_ids`, la même famille que la narration d'intro) — celles-ci n'ont le droit à une relocalisation que si le cluster de références est **unanime** (100 % d'accord) ou représente un motif de table clairement écrasant (≥ 20 références, ≥ 90 % retenues). Les lignes standalone (non chevauchantes) gardent la règle d'origine, plus permissive : vérifié explicitement que ~230 lignes de description de talent ont chacune exactement 2 références légitimes, à des endroits différents du ROM (probablement écran Résumé + liste des talents), et qu'aucune n'appartient à une famille de chevauchement — leur appliquer la règle stricte les aurait faussement fait échouer.
+
+Résultat : 34 lignes sur 6 334 sont désormais laissées en anglais par sécurité (contre 2 après le premier correctif), toutes vérifiées comme faisant partie de familles de chevauchement physique. Nouveau build : 336 376 octets modifiés (1,002 %). `tools/validate_rom.py` confirme taille/en-tête/checksum intacts.
+
+**Nouveau SHA-256 : voir `build/Pokemon_Odyssey_FR.sha256`** (remplace `f81570ad...`).
+
+**Limitation honnête** : comme pour le correctif précédent, aucune confirmation visuelle n'a pu être faite dans cet environnement avant livraison. Ce correctif est ciblé précisément sur la zone montrée dans la vidéo de l'utilisateur (narration d'intro), mais il reste possible que d'autres zones du jeu (non visitées dans les vidéos de test jusqu'ici) contiennent des problèmes similaires non encore détectés.
+
 ## Ce qui N'EST PAS fait / limitations honnêtes (à ne pas prétendre parfait)
 
 - **Pas de nouveau test visuel en jeu depuis la confirmation initiale des accents.** Le volume traduit a été multiplié par plus de 100 depuis ce test unique sur l'écran de sauvegarde. Aucune vérification humaine sur émulateur n'a eu lieu sur la mise en page réelle des boîtes de dialogue, le débordement de texte, ou le rendu des menus/tableaux d'objets. **C'est la limitation la plus importante restante.**
