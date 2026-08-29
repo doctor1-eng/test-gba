@@ -34,6 +34,8 @@ HeartSoul_CinnabarAttack_RefugiesCacher:
 HeartSoul_CinnabarAttack_Verrouillage:
 	setflag FLAG_CINNABAR_VERROUILLEE
 	setflag FLAG_ACTE_1_TERMINE
+	setflag FLAG_OBJET_PERDU_TROUVE
+	msgbox HeartSoul_Text_ObjetTrouve, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_FuiteRoute21, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -87,6 +89,15 @@ HeartSoul_Text_FuiteRoute21:
 	.string "Cinnabar est coupee du monde. Un\n"
 	.string "dernier bateau attend au port,\l"
 	.string "pret a partir vers le continent.$"
+
+HeartSoul_Text_ObjetTrouve:
+	.string "En courant vers le port, tu\n"
+	.string "trebuches sur un bracelet grave,\l"
+	.string "tombe des affaires d'une famille\l"
+	.string "de refugies.\p"
+	.string "Tu le glisses dans ta poche. Il\n"
+	.string "faudra le rendre, si tu croises\l"
+	.string "quelqu'un qui le reconnait.$"
 
 // Blocage physique du retour a Cinnabar (FLAG_CINNABAR_VERROUILLEE). Declenche depuis
 // CinnabarIsland_hns_MapScripts (data/maps/CinnabarIsland_hns/scripts.inc), via

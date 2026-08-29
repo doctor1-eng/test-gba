@@ -36,6 +36,56 @@ HeartSoul_EventScript_ActeIITermine::
 	setflag FLAG_ACTE_2_TERMINE
 	return
 
+// Route 1, objet perdu (section 8 de histoire.md, point de reputation section 9). Appele en
+// fin de Route1_EventScript_Quinn (data/maps/Route1_hns/scripts.inc), apres le message de
+// post-combat existant, jamais avant trainerbattle_single (script declenche par la vue du
+// dresseur, pas d'appel/msgbox prealable connu et teste dans ce fork pour ce cas - on ne
+// prend pas ce risque, meme motif que les autres regles ON_TRANSITION deja documentees).
+HeartSoul_EventScript_MiliceRoute1::
+	goto_if_unset FLAG_ACTE_1_TERMINE, HeartSoul_MiliceRoute1_Skip
+	goto_if_unset FLAG_OBJET_PERDU_TROUVE, HeartSoul_MiliceRoute1_Skip
+	goto_if_set FLAG_OBJET_PERDU_RENDU, HeartSoul_MiliceRoute1_Skip
+	msgbox HeartSoul_Text_MiliceIntro, MSGBOX_DEFAULT
+HeartSoul_MiliceRoute1_Choice:
+	dynmultipush HeartSoul_Text_RendreObjet, 0
+	dynmultipush HeartSoul_Text_GarderObjet, 1
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, HeartSoul_MiliceRoute1_Rendre
+	case 1, HeartSoul_MiliceRoute1_Garder
+	goto HeartSoul_MiliceRoute1_Choice
+HeartSoul_MiliceRoute1_Rendre:
+	setflag FLAG_OBJET_PERDU_RENDU
+	addvar VAR_REPUTATION, 1
+	msgbox HeartSoul_Text_MiliceRendreResultat, MSGBOX_DEFAULT
+	return
+HeartSoul_MiliceRoute1_Garder:
+	msgbox HeartSoul_Text_MiliceGarderResultat, MSGBOX_DEFAULT
+	return
+HeartSoul_MiliceRoute1_Skip:
+	return
+
+HeartSoul_Text_MiliceIntro:
+	.string "QUINN: Attends. Ce bracelet, a ta\n"
+	.string "ceinture… je le reconnais.\p"
+	.string "Il appartient a une famille de\n"
+	.string "CINNABAR qu'on a recueillie ici.$"
+
+HeartSoul_Text_RendreObjet:
+	.string "Le lui rendre$"
+
+HeartSoul_Text_GarderObjet:
+	.string "Le garder$"
+
+HeartSoul_Text_MiliceRendreResultat:
+	.string "QUINN: Merci. Ca va compter, pour\n"
+	.string "eux comme pour nous.\p"
+	.string "Passe, tu es attendue en ville.$"
+
+HeartSoul_Text_MiliceGarderResultat:
+	.string "QUINN: …\p"
+	.string "Comme tu veux. Passe.$"
+
 HeartSoul_Text_PierreDouteIntro:
 	.string "PIERRE: Attends. Avant le combat,\n"
 	.string "j'ai entendu ce qui se dit sur\l"

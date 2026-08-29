@@ -14,7 +14,9 @@ Route1_EventScript_SchoolboyDanny::
 
 Route1_EventScript_Quinn::
 	trainerbattle_single TRAINER_QUINN_HNS, Route1_Text_CooltrainerFQuinn_Seen, Route1_Text_CooltrainerFQuinn_Beaten
-	msgbox Route1_Text_CooltrainerFQuinn_AfterBattle, MSGBOX_AUTOCLOSE
+	msgbox Route1_Text_CooltrainerFQuinn_AfterBattle, MSGBOX_DEFAULT
+	call HeartSoul_EventScript_MiliceRoute1
+	closemessage
 	end
 
 Route1_EventScript_Sign::

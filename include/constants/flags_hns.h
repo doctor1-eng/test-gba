@@ -1211,8 +1211,10 @@
 #define FLAG_PIERRE_CONVAINCU                       (HNS_EXTENDED_CONTENT_START + 324)
 #define FLAG_ONDINE_CONVAINCUE                      (HNS_EXTENDED_CONTENT_START + 325)
 #define FLAG_ACTE_2_TERMINE                         (HNS_EXTENDED_CONTENT_START + 326)
+#define FLAG_OBJET_PERDU_TROUVE                     (HNS_EXTENDED_CONTENT_START + 327)
+#define FLAG_OBJET_PERDU_RENDU                      (HNS_EXTENDED_CONTENT_START + 328)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  327
+#define HNS_EXTENDED_CONTENT_COUNT                  329
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 
