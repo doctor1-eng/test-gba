@@ -16,7 +16,20 @@ CeruleanCity_EventScript_CooltrainerMReturnedPart::
 	end
 
 CeruleanCity_EventScript_Boy::
+	goto_if_unset FLAG_ACTE_1_TERMINE, CeruleanCity_EventScript_BoyFlavor
+	goto_if_set FLAG_CANALISATIONS_REPAREES, CeruleanCity_EventScript_BoyAfter
+	lock
+	faceplayer
+	call HeartSoul_EventScript_CanalisationsCerulean
+	release
+	end
+
+CeruleanCity_EventScript_BoyFlavor::
 	msgbox CeruleanCity_Text_SuperNerd, MSGBOX_NPC
+	end
+
+CeruleanCity_EventScript_BoyAfter::
+	msgbox HeartSoul_Text_CanalisationsApres, MSGBOX_NPC
 	end
 
 CeruleanCity_EventScript_Guard::

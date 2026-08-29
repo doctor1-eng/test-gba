@@ -235,3 +235,60 @@ HeartSoul_Text_BucheronsAiderResultat:
 HeartSoul_Text_BucheronsIgnorerResultat:
 	.string "…\p"
 	.string "Ouais, c'est ca. File.$"
+
+// Azuria (Cerulean), canalisations sabotees (section 8/9 de histoire.md). Appele depuis
+// CeruleanCity_EventScript_Boy (data/maps/CeruleanCity_hns/scripts.inc), PNJ existant a
+// interaction classique (msgbox MSGBOX_NPC), meme motif que
+// HeartSoul_EventScript_CommercantViridian.
+HeartSoul_EventScript_CanalisationsCerulean::
+	goto_if_unset FLAG_ACTE_1_TERMINE, HeartSoul_CanalisationsCerulean_Skip
+	goto_if_set FLAG_CANALISATIONS_REPAREES, HeartSoul_CanalisationsCerulean_Skip
+	msgbox HeartSoul_Text_CanalisationsIntro, MSGBOX_DEFAULT
+HeartSoul_CanalisationsCerulean_Choice:
+	dynmultipush HeartSoul_Text_ReparerCanalisations, 0
+	dynmultipush HeartSoul_Text_IgnorerCanalisations, 1
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, HeartSoul_CanalisationsCerulean_Reparer
+	case 1, HeartSoul_CanalisationsCerulean_Ignorer
+	goto HeartSoul_CanalisationsCerulean_Choice
+HeartSoul_CanalisationsCerulean_Reparer:
+	setflag FLAG_CANALISATIONS_REPAREES
+	addvar VAR_REPUTATION, 1
+	msgbox HeartSoul_Text_CanalisationsReparerResultat, MSGBOX_DEFAULT
+	return
+HeartSoul_CanalisationsCerulean_Ignorer:
+	setflag FLAG_CANALISATIONS_REPAREES
+	msgbox HeartSoul_Text_CanalisationsIgnorerResultat, MSGBOX_DEFAULT
+	return
+HeartSoul_CanalisationsCerulean_Skip:
+	return
+
+HeartSoul_Text_CanalisationsIntro:
+	.string "…\p"
+	.string "La TEAM ROCKET a sabote nos\n"
+	.string "canalisations avant de repartir.\l"
+	.string "L'ARENE d'ONDINE sert de poste de\l"
+	.string "secours, en attendant.\p"
+	.string "Un coup de main pour les\n"
+	.string "reparations, ca compterait pour\l"
+	.string "elle.$"
+
+HeartSoul_Text_ReparerCanalisations:
+	.string "Donner un coup de main$"
+
+HeartSoul_Text_IgnorerCanalisations:
+	.string "Passer ton chemin$"
+
+HeartSoul_Text_CanalisationsReparerResultat:
+	.string "Merci. Avec toi, ca ira plus\n"
+	.string "vite. ONDINE pourra rouvrir son\l"
+	.string "ARENE normalement.$"
+
+HeartSoul_Text_CanalisationsIgnorerResultat:
+	.string "…\p"
+	.string "Bon, tant pis. On se debrouillera.$"
+
+HeartSoul_Text_CanalisationsApres:
+	.string "Grace a toi, les canalisations\n"
+	.string "tiennent de nouveau.$"
