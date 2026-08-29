@@ -42,7 +42,9 @@ Route2_EventScript_Ed::
 
 Route2_EventScript_Doug::
 	trainerbattle_single TRAINER_DOUG_HNS, Route2_Text_BugCatcherDoug_Seen, Route2_Text_BugCatcherDoug_Beaten
-	msgbox Route2_Text_BugCatcherDoug_AfterBattle, MSGBOX_AUTOCLOSE
+	msgbox Route2_Text_BugCatcherDoug_AfterBattle, MSGBOX_DEFAULT
+	call HeartSoul_EventScript_BucheronsForet
+	closemessage
 	end
 
 Route2_EventScript_Sign::
