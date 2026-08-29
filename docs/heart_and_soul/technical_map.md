@@ -27,7 +27,7 @@ map si une réutilisable existe ».
 | Pokémon Lab (carnets de Blaine) | *(aucune version `_hns`)* → réutiliser `MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE`+ | — | Oui, par warp externe | Idem. Support de la sous-intrigue "carnets de Blaine" (section 8). |
 | Route 21 | `Route21_hns` | Cinnabar ↔ Route 20 | Oui | Séquence de fuite/sauvetage en mer à scripter. |
 | Pallet Town | `PalletTown_hns` | `Route1_hns`, `Route21_hns` | Oui | PNJ "dresseur local" (section 8) à ajouter. |
-| Route 1 | `Route1_hns` | Pallet ↔ Viridian | Oui | Quête objet perdu / milice de Viridian à scripter. |
+| Route 1 | `Route1_hns` | Pallet ↔ Viridian | Oui | Quête objet perdu / milice de Viridian faite (voir implementation_notes.md) : Quinn reflavorée en milice, `HeartSoul_EventScript_MiliceRoute1`. |
 | Viridian City | `ViridianCity_hns` (+ `_Gym_hns`) | Route 1, Route 2, Route 22 | Oui | Arène : Blue (`TRAINER_BLUE_HNS`, Champion d'Arène dans le jeu de base) masqué jusqu'à l'Acte V — conflit narratif avec l'antagoniste résolu (voir implementation_notes.md). Débat commerçant/résistance (section 8) toujours à ajouter. |
 | Viridian Forest | `ViridianForest_hns` | Accès via `Gate_Route2_ViridianForest_hns` / `Gate_ViridianForest_Route2_hns` (portes dédiées, pas de connexion `map.json` directe) | Oui | Repaire de Lyre (lieutenant). |
 | Pewter City | `PewterCity_hns` (+ `_Gym_hns`) | Route 2, Route 3 | Oui | Scène de doute de Pierre ajoutée (`HeartSoul_EventScript_PierreDoute`, `heart_and_soul_act2.inc`), câblée dans `EventScript_Brock` avant le combat de badge existant. Sous-intrigue "vivres cachées par Pierre" (section 8) toujours à ajouter. |

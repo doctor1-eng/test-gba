@@ -566,6 +566,32 @@ fermée** (plutôt que garder le combat avec un texte réécrit, ou laisser tel 
 
 `make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.
 
+## Sous-intrigue Route 1 — l'objet perdu (section 8 de `histoire.md`)
+
+Point de barème chiffré en section 9 (« Route 1, objet perdu | Le rendre à la famille | +1 |
+Ignorer | 0 ») implémenté en réutilisant des éléments existants plutôt qu'en devinant de la
+géométrie :
+
+- Le joueur trouve un bracelet en fuyant Cinnabar (`FLAG_OBJET_PERDU_TROUVE`, narré au même
+  endroit que le reste de la séquence de fuite dans `heart_and_soul_act1.inc`).
+- `Route1_hns/scripts.inc` : `Quinn` (dresseuse « Cooltrainer F » déjà présente sur Route 1,
+  déjà relevée au niveau 34) est reflavorée en milice locale plutôt que d'ajouter un nouveau
+  PNJ à des coordonnées devinées. Après son combat existant (message de post-combat déjà
+  fonctionnel, inchangé), un nouveau sous-script `call`/`return`
+  (`HeartSoul_EventScript_MiliceRoute1`, `heart_and_soul_act2.inc`) propose de rendre le
+  bracelet (+1 réputation, `FLAG_OBJET_PERDU_RENDU`) ou de le garder (0).
+- **Choix de placement volontaire** : inséré après le message de post-combat existant
+  (`msgbox ... AfterBattle`), jamais avant `trainerbattle_single`. Aucun exemple trouvé dans
+  ce fork d'un `msgbox`/`dynmultichoice` précédant un `trainerbattle_single` déclenché par la
+  vue du joueur (contrairement à `trainerbattle_no_intro`, prévu pour ça) — plutôt que de
+  parier sur un comportement non vérifié après le bug de blocage déjà rencontré une fois
+  cette session, le choix a été placé à un endroit dont le fonctionnement est déjà prouvé.
+- Les dialogues de combat déjà existants de Quinn (Seen/Beaten) restent en anglais,
+  conformément à la limite déjà posée au retour de test n°2 : seuls les textes écrits pour
+  Heart & Soul sont traduits, pas l'ensemble des dialogues du jeu de base.
+
+`make hns -j4` : PASS, 0 erreur. ROM à 94.45 %.
+
 ## Retour de test n°6 : dresseurs surclassés (Brock niveau 66, etc.)
 
 Fuite confirmée fonctionnelle par l'utilisateur. Demande suivante : remettre les dresseurs au

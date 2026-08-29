@@ -11,6 +11,8 @@ pas sur la seule base de la compilation.
 - [ ] Cinnabar (Acte I) — bug bloquant confirmé par l'utilisateur (fuite impossible sans CS Fly), corrigé (warp scripté vers Pallet Town + blocage du retour via ON_FRAME_TABLE, voir implementation_notes.md retour n°5). Compilé, PASS ; **fuite non encore rejouée en émulateur après le correctif, à confirmer par l'utilisateur en priorité**.
 - [ ] Cinnabar — warps des bâtiments (Arène/Manoir/Labo) — **pas fait** : nécessite une vérification visuelle de la tilemap (capture d'écran utilisateur) pour ne pas placer un warp sur une case incohérente avec le décor.
 - [ ] Acte II — Pierre/Ondine doutent avant le combat de badge (`heart_and_soul_act2.inc`) — compilé, PASS ; **non joué en émulateur**.
+- [ ] Argenta (Viridian) — Blue masqué, Arène fermée — compilé, PASS ; **non joué en émulateur**.
+- [ ] Route 1 — objet perdu / milice (Quinn) — compilé, PASS ; **non joué en émulateur**. Point d'attention particulier : le nouveau dialogue s'enchaîne après un combat déclenché par la vue du joueur (`trainerbattle_single`), premier cas de ce type dans cette session — à confirmer que ça ne reproduit pas le bug de blocage déjà rencontré ailleurs.
 - [ ] Route 21
 - [ ] Route 1
 - [ ] Viridian
