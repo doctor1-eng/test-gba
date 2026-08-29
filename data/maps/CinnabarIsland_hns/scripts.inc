@@ -2,106 +2,41 @@ CinnabarIsland_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
-	
+
 CinnabarIsland_OnTransition:
 	setflag FLAG_VISITED_CINNABAR_ISLAND
 	callnative SetTimeBasedEncounters
+	compare VAR_TYPE_CHOISI, 0
+	goto_if_eq CinnabarIsland_OnTransition_NoAttackYet
+	goto_if_set FLAG_ATTAQUE_CINNABAR_LANCEE, CinnabarIsland_OnTransition_NoAttackYet
+	setflag FLAG_HIDE_CINNABAR_BLUE
+	call HeartSoul_EventScript_CinnabarAttack
+CinnabarIsland_OnTransition_NoAttackYet:
 	end
 
+@ Heart & Soul : Blaine reste joignable tant que l'attaque n'a pas encore ete declenchee
+@ (fenetre tres courte, l'OnTransition ci-dessus la lance des la premiere entree sur la map).
 CinnabarIsland_EventScript_Blaine::
-    lock
-    faceplayer
-    msgbox CinnabarIsland_Text_Blaine, MSGBOX_DEFAULT
-    closemessage
-    fadescreenswapbuffers FADE_TO_BLACK
-    setflag FLAG_HIDE_CINNABAR_BLAINE
-    removeobject LOCALID_CINNABAR_BLAINE
-    fadescreenswapbuffers FADE_FROM_BLACK
-    clearflag FLAG_HIDE_DOJO_BLAINE
-    release
-    end
+	lock
+	faceplayer
+	msgbox CinnabarIsland_Text_Blaine, MSGBOX_DEFAULT
+	release
+	end
 
 CinnabarIsland_Text_Blaine:
-    .string "BLAINE: I'll never give up\n"
-	.string "until the day I've rebuilt\l"
-	.string "CINNABAR GYM!\p"
-	.string "I'll be at the FIGHTING DOJO\n"
-	.string "until then.$"
+	.string "BLAINE: Tout est calme, pour\n"
+	.string "l'instant…\p"
+	.string "Mais je n'aime pas ce silence.$"
 
-
-
+@ Heart & Soul : Blue n'est plus un ancien Champion de passage a Cinnabar.
+@ Il est masque des l'arrivee sur la map (voir CinnabarIsland_OnTransition) : il dirige
+@ l'attaque depuis ailleurs, il ne reste jamais visible ici. Ce script ne devrait plus
+@ jamais se declencher, mais on le remplace quand meme pour ne rien laisser d'incoherent.
 CinnabarIsland_EventScript_Blue::
 	lock
 	faceplayer
-	goto_if_eq VAR_NUM_BADGES, 15, CinnabarIsland_EventScript_BlueActive
-	msgbox CinnabarIsland_Text_BlueBefore, MSGBOX_NPC
 	release
 	end
-
-CinnabarIsland_EventScript_BlueActive::
-	msgbox CinnabarIsland_Text_Blue, MSGBOX_NPC
-	fadescreenswapbuffers FADE_TO_BLACK
-	setflag FLAG_HIDE_CINNABAR_BLUE
-	removeobject LOCALID_CINNABAR_BLUE
-	clearflag FLAG_HIDE_VIRIDIAN_BLUE
-	fadescreenswapbuffers FADE_FROM_BLACK
-	release
-	end
-
-
-CinnabarIsland_Text_BlueBefore:
-	.string "Who are you?\p"
-	.string "Well, it's plain to see that you're\n"
-	.string "a trainer…\p"
-	.string "My name's BLUE.\p"
-	.string "I was once the CHAMPION, although\n"
-	.string "it was for only a short time…\p"
-	.string "That meddling RED did me in…\p"
-	.string "Anyway, what do you want? You want\n"
-	.string "to challenge me or something?\p"
-	.string "…I hate to say it, but I'm not in\n"
-	.string "the mood for a battle now.\p"
-	.string "Take a good look around you…\p"
-	.string "A volcano erupts, and just like\n"
-	.string "that, a whole town disappears.\p"
-	.string "We can go on winning and losing in\n"
-	.string "POKéMON. But if nature so much as\l"
-	.string "twitches, we can lose in a second.\p"
-	.string "…\p"
-	.string "That's the way it is…\p"
-	.string "But, anyway, I'm still a trainer.\p"
-	.string "If I see a strong opponent, it\n"
-	.string "makes me want to battle.\p"
-	.string "If you want to battle me, you'll\n"
-	.string "need 15 badges first.\p"
-	.string "I'll take you on then.$"
-
-CinnabarIsland_Text_Blue:
-	.string "Who are you?\p"
-	.string "Well, it's plain to see that you're\n"
-	.string "a trainer…\p"
-	.string "My name's BLUE.\p"
-	.string "I was once the CHAMPION, although\n"
-	.string "it was for only a short time…\p"
-	.string "That meddling RED did me in…\p"
-	.string "Anyway, what do you want? You want\n"
-	.string "to challenge me or something?\p"
-	.string "…I hate to say it, but I'm not in\n"
-	.string "the mood for a battle now.\p"
-	.string "Take a good look around you…\p"
-	.string "A volcano erupts, and just like\n"
-	.string "that, a whole town disappears.\p"
-	.string "We can go on winning and losing in\n"
-	.string "POKéMON. But if nature so much as\l"
-	.string "twitches, we can lose in a second.\p"
-	.string "…\p"
-	.string "That's the way it is…\p"
-	.string "But, anyway, I'm still a trainer.\p"
-	.string "If I see a strong opponent, it\n"
-	.string "makes me want to battle.\p"
-	.string "If you want to battle me, come to\n"
-	.string "the VIRIDIAN GYM.\p"
-	.string "I'll take you on then.$"
 
 CinnabarIsland_EventScript_Sign::
 	msgbox CinnabarIsland_Text_Sign, MSGBOX_SIGN

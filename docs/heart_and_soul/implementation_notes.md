@@ -259,12 +259,99 @@ littéral) :
 Aucune de ces valeurs ne doit être modifiée sans mettre à jour ce tableau et
 `HNS_EXTENDED_CONTENT_COUNT` en conséquence.
 
+## Phase 2 — Vertical slice (choix du type → Acte I → fuite)
+
+Implémenté, compilé (`make hns` : **PASS, 0 erreur**), non testé visuellement (voir
+"Limite de test" plus bas).
+
+### Point d'entrée de nouvelle partie
+
+`src/new_game.c`, fonction `WarpToTruck()`, branche `IS_HNS` : modifiée pour faire démarrer
+toute nouvelle sauvegarde dans `CinnabarIsland_PokemonCenter_hns` (coordonnées `7,8`, reprises
+du warp existant qui relie déjà ce Pokémon Center à l'extérieur — donc garanties praticables,
+pas de nouvelle géométrie devinée) au lieu de la maison du joueur à New Bark Town. **C'est le
+changement au plus grand rayon d'impact de cette session** : il redéfinit ce qui se passe pour
+toute nouvelle partie sur cette ROM. Documenté ici en évidence plutôt que noyé dans le diff.
+
+### Choix du type et de l'équipe (`data/scripts/heart_and_soul_intro.inc`, généré puis relu)
+
+- `CinnabarIsland_PokemonCenter_hns_MapScripts` (`OnTransition`) lance
+  `HeartSoul_EventScript_ChooseType` la toute première fois (`VAR_TYPE_CHOISI == 0`, vars à 0
+  par défaut sur une sauvegarde neuve) — pas de nouveau flag nécessaire pour ce garde-fou.
+- Menu des 18 types via le système `dynmultipush`/`dynmultistack` (liste déroulante réelle,
+  scroll natif inclus — voir découverte technique ci-dessous), pas un `multichoice` statique
+  qui ne supporte pas plus de quelques lignes sans le casser visuellement.
+- **Seul le type Feu mène à une sélection réelle** (les 20 Pokémon de la section 6 de
+  `histoire.md`, vérifiés un par un contre `include/constants/species.h`, y compris les 3
+  formes d'Alola qui utilisent le suffixe réel `_ALOLA` et non `_ALOLAN` comme on aurait pu le
+  deviner — `SPECIES_NINETALES_ALOLA`, `SPECIES_SANDSLASH_ALOLA`, `SPECIES_MAROWAK_ALOLA`).
+  Les 17 autres types affichent "Ce type n'est pas encore disponible" et renvoient au choix du
+  type — jamais de blocage, mais pas non plus une fausse liste. C'est exactement la portée que
+  le zip lui-même annonçait ("Feu en exemple complet, 17 types à dupliquer") : le mécanisme est
+  prouvé et prêt à dupliquer, la duplication réelle reste à faire.
+- Sélection de 4 Pokémon distincts : sous-script `HeartSoul_EventScript_PickOne_Feu` réutilisé
+  4 fois via `call`/`return`, avec un garde anti-doublon par `compare`/`goto_if_eq` qui rouvre
+  la liste si le joueur choisit deux fois le même Pokémon (pas de filtrage dynamique de la
+  liste — plus simple, zéro risque, suffisant pour la contrainte "aucun doublon").
+- `givemon` niveau 34 pour les 4 choix, mêmes paramètres que le starter picker `_hns` existant
+  (`NewBarkTown_Lab_hns/scripts.inc`) — convention réutilisée à l'identique.
+
+### Découverte technique : système de liste déroulante réelle déjà présent dans le moteur
+
+`ScrCmd_dynmultichoice`/`dynmultipush` (`src/scrcmd.c`, macro `dynmultistack` dans
+`asm/macros/event.inc`) construit un menu à défilement (`ListMenu` + flèches de scroll) à
+partir d'éléments poussés un par un depuis le script, avec un id numérique par entrée récupéré
+dans `VAR_RESULT`. Déjà utilisé en production dans `data/scripts/debug.inc`. C'est la bonne
+brique pour tout menu de plus de ~8 entrées dans ce fork — le `multichoice` statique classique
+ne scroll pas et casse visuellement au-delà d'une poignée d'options (fenêtre dimensionnée à
+`count * 2` tuiles sans limite). Aucune modification native (C) n'a été nécessaire : tout est
+scriptable avec les commandes existantes.
+
+### Acte I — attaque de Cinnabar (`data/scripts/heart_and_soul_act1.inc`)
+
+`CinnabarIsland_hns_MapScripts` (`OnTransition`) déclenche `HeartSoul_EventScript_CinnabarAttack`
+au premier passage sur la map extérieure une fois l'équipe choisie
+(`VAR_TYPE_CHOISI != 0` et `FLAG_ATTAQUE_CINNABAR_LANCEE` non posé).
+
+Séquence : narration de l'attaque → Blaine disparaît (`removeobject LOCALID_CINNABAR_BLAINE`,
+`FLAG_BLAINE_DISPARU`) → choix réfugiés (guider = `+2` réputation /
+cacher = `+1`, via `dynmultipush`/`dynmultistack`, `FLAG_REFUGIES_GUIDES` ou
+`FLAG_REFUGIES_CACHES`) → `FLAG_CINNABAR_VERROUILLEE` + `FLAG_ACTE_1_TERMINE` → message de
+fuite vers Route 21.
+
+**Simplifications volontaires de cette passe, documentées plutôt que cachées :**
+- Le choix des réfugiés est présenté par narration directe (pas de PNJ dédié placé sur la
+  carte) : ça évite de deviner des coordonnées d'objet-événement sans pouvoir vérifier
+  visuellement le résultat dans un émulateur. Une vraie rencontre de PNJ reste une amélioration
+  naturelle, pas un mensonge sur ce qui existe.
+- La fuite vers Route 21/Pallet/Route 1 ne fait l'objet d'aucun `warp` scripté : la carte
+  `CinnabarIsland_hns` se connecte déjà nativement à `Route21_hns` (`map.json`, connexion non
+  modifiée) — le joueur sort simplement par le bord nord de la carte, comme dans le jeu de
+  base. Aucune coordonnée inventée.
+- `FLAG_CINNABAR_VERROUILLEE` est posé mais **le blocage effectif du retour n'est pas encore
+  implémenté** (bloquer une connexion de bord de carte demande une modification de collision
+  ou un script de garde que je n'ai pas pu vérifier visuellement dans cet environnement sans
+  écran). Le critère de réussite de la section 7 du brief ("atteindre le continent sans
+  softlock") est rempli ; "empêcher physiquement de revenir" reste un travail futur signalé
+  ici, pas silencieusement oublié.
+- Blue est masqué dès `CinnabarIsland_OnTransition` (n'apparaît plus jamais comme PNJ amical à
+  Cinnabar) plutôt que déplacé ou re-scripté ailleurs dans cette passe — son rôle de chef de la
+  Team Rocket (Acte V) reste à écrire.
+
+### Limite de test importante
+
+Cette session n'a pas d'accès à un émulateur avec écran (mGBA headless présent
+via `tools/mgba/mgba-rom-test`, mais c'est un framework de tests unitaires de commandes de
+script, pas un moyen de jouer la séquence à l'écran). **Tout ce qui précède est vérifié par
+compilation (0 erreur, ROM générée) et relecture attentive du script, pas par une partie
+jouée.** Aucun softlock connu dans la logique relue, mais une vraie session de jeu (section 19
+du brief) reste à faire avant de considérer l'Acte I "terminé" au sens de la règle anti-bugs.
+
 ## Statut
 
 Phase 0 (build baseline) : **terminée, PASS**.
 Phase audit (section 3 du brief) : **terminée**.
-Phase 1 (registre flags/vars) : **terminée, PASS** — matrice ci-dessus.
-Aucun script narratif Heart & Soul n'a encore été écrit. Prochaine étape : Phase 2
-(vertical slice — choix du type, attaque de Cinnabar, fuite vers Route 21/Pallet/Route 1),
-qui nécessite d'abord l'ajout des warps de bâtiments à `CinnabarIsland_hns` (voir
-`technical_map.md`).
+Phase 1 (registre flags/vars) : **terminée, PASS**.
+Phase 2 (vertical slice, type Feu uniquement) : **compilée, PASS ; non testée en jeu**.
+Prochaine étape : dupliquer le mécanisme Feu vers les 17 autres types (mécanique, la
+structure est prouvée), puis playtest réel en émulateur, puis Actes II+.

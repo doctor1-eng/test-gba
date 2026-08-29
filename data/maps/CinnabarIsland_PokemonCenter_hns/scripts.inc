@@ -4,6 +4,10 @@ CinnabarIsland_PokemonCenter_hns_MapScripts::
 
 CinnabarIsland_PokemonCenter_OnTransition::
 	setrespawn HEAL_LOCATION_CINNABAR_ISLAND_HNS
+	compare VAR_TYPE_CHOISI, 0
+	goto_if_ne CinnabarIsland_PokemonCenter_OnTransition_TypeAlreadyChosen
+	goto HeartSoul_EventScript_ChooseType
+CinnabarIsland_PokemonCenter_OnTransition_TypeAlreadyChosen:
 	end
 
 CinnabarIsland_PokemonCenter_EventScript_Cooltrainer::
@@ -15,10 +19,9 @@ CinnabarIsland_PokemonCenter_EventScript_Fisher::
 	end
 
 CinnabarIsland_PokemonCenter1F_Text_CooltrainerF:
-	.string "CINNABAR GYM's BLAINE apparently\n"
-	.string "lives alone in the SEAFOAM ISLANDS\l"
-	.string "cave…$"
+	.string "On dit que BLAINE veut rebatir\n"
+	.string "l'ARENE depuis des annees…$"
 
 CinnabarIsland_PokemonCenter1F_Text_Fisher:
-	.string "It's been a year since the volcano\n"
-	.string "erupted.$"
+	.string "Cinnabar a toujours ete isolee.\n"
+	.string "On s'en sort seuls, ici.$"
