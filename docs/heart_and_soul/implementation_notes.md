@@ -445,6 +445,53 @@ Phase 1 (registre flags/vars) : **terminée, PASS**.
 Phase 2 (vertical slice, type Feu uniquement) : **compilée, PASS ; non testée en jeu**.
 Phase 2bis (18 types complets, noms français, choix des attaques, chaussures de course) :
 **compilée, PASS ; non testée en jeu**.
+Phase 2ter (correctif menu Pokémon, Acte II - doute de Pierre/Ondine) : **compilée, PASS ;
+non testée en jeu**. Voir sections dédiées ci-dessous.
 Prochaine étape : playtest réel en émulateur (priorité, avant d'empiler plus de contenu),
 puis warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo), blocage effectif du retour
-via `FLAG_CINNABAR_VERROUILLEE`, puis Acte II.
+via `FLAG_CINNABAR_VERROUILLEE`, puis suite de l'Acte II (Route 1/Viridian, choix section 8)
+et Acte III.
+
+## Retour de test n°4 : entrée "Pokémon" absente du menu START
+
+Bug remonté par l'utilisateur : après avoir choisi son équipe de 4, aucun moyen de la
+consulter depuis le menu START (pas d'entrée "Pokémon").
+
+**Cause** : `BuildNormalStartMenu` (`src/start_menu.c:363`) n'ajoute l'entrée
+`MENU_ACTION_POKEMON` que si `FLAG_SYS_POKEMON_GET` est posé. Ce flag est mis par le flow
+normal du starter picker (`NewBarkTown_Lab_hns/scripts.inc:244`), mais jamais par le flow
+Heart & Soul, qui donne les 4 Pokémon directement via `givemon` sans passer par ce script.
+
+**Correctif** : ajout de `setflag FLAG_SYS_POKEMON_GET` juste après les 4 `givemon`, dans
+les 18 `HeartSoul_EventScript_ChooseTeam_{type}` de `heart_and_soul_intro.inc` (même endroit
+que `FLAG_RECEIVED_RUNNING_SHOES`). `make hns -j4` : PASS, 0 erreur.
+
+## Acte II — premier contact avec Pierre et Ondine (`data/scripts/heart_and_soul_act2.inc`)
+
+Section 2 de `histoire.md` : "rejoindre le continent, convaincre les premiers Champions
+(Pierre, Ondine) de l'ampleur de la menace. Ils doutent : 'tu n'as pas su protéger ta propre
+ville.'"
+
+- Deux sous-scripts `call`/`return` (`HeartSoul_EventScript_PierreDoute`,
+  `HeartSoul_EventScript_OndineDoute`), insérés par un simple `call` dans les scripts
+  existants de `PewterCity_Gym_hns/scripts.inc` (`EventScript_Brock`) et
+  `CeruleanCity_Gym_hns/scripts.inc` (`EventScript_Misty`), juste après le
+  `goto_if_set FLAG_DEFEATED_*` de garde et avant le `msgbox` d'intro normal. Le combat de
+  badge lui-même n'est pas modifié : le joueur enchaîne directement dessus après la scène de
+  doute.
+- Chaque scène ne se déclenche qu'une fois (`FLAG_PIERRE_CONVAINCU` /
+  `FLAG_ONDINE_CONVAINCUE`), et seulement une fois `FLAG_ACTE_1_TERMINE` posé — sinon le
+  combat de badge se déroule normalement, sans texte H&S (couvre le cas où quelqu'un joue une
+  sauvegarde sans être passé par Cinnabar).
+- `FLAG_ACTE_2_TERMINE` est posé dès que les deux flags de conviction sont actifs, peu
+  importe l'ordre (Pewter et Cerulean sont accessibles dans n'importe quel ordre depuis
+  Viridian) — vérifié via `call_if_set` symétrique dans les deux sous-scripts.
+- **Aucun point de réputation ajouté ici** : le barème de la section 9 de `histoire.md` ne
+  liste pas ce moment (contrairement aux choix d'Acte I déjà câblés) — pas d'invention de
+  règle non spécifiée par le brief.
+- Simplification volontaire : les deux scènes sont de la narration à sens unique (pas de
+  choix multiple pour le joueur), le combat qui suit sert de "preuve" implicite. Le brief ne
+  spécifie pas de mécanique de dialogue à choix pour cette scène précise (contrairement à
+  Terrence/Kess, section 3) — rien n'a donc été inventé au-delà de ce que demande le texte.
+
+`make hns -j4` : PASS, 0 erreur après ces deux changements. ROM à 94.44 %.

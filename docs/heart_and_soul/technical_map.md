@@ -30,9 +30,9 @@ map si une réutilisable existe ».
 | Route 1 | `Route1_hns` | Pallet ↔ Viridian | Oui | Quête objet perdu / milice de Viridian à scripter. |
 | Viridian City | `ViridianCity_hns` (+ `_Gym_hns`) | Route 1, Route 2, Route 22 | Oui | Débat commerçant/résistance à ajouter. |
 | Viridian Forest | `ViridianForest_hns` | Accès via `Gate_Route2_ViridianForest_hns` / `Gate_ViridianForest_Route2_hns` (portes dédiées, pas de connexion `map.json` directe) | Oui | Repaire de Lyre (lieutenant). |
-| Pewter City | `PewterCity_hns` (+ `_Gym_hns`) | Route 2, Route 3 | Oui | Combat Brock déjà scripté (`PewterCity_Gym_hns/scripts.inc`, sert de référence de syntaxe). Sous-intrigue "vivres cachées par Pierre" à ajouter. |
+| Pewter City | `PewterCity_hns` (+ `_Gym_hns`) | Route 2, Route 3 | Oui | Scène de doute de Pierre ajoutée (`HeartSoul_EventScript_PierreDoute`, `heart_and_soul_act2.inc`), câblée dans `EventScript_Brock` avant le combat de badge existant. Sous-intrigue "vivres cachées par Pierre" (section 8) toujours à ajouter. |
 | Mt Moon | `MtMoon_Outside_hns`, `MtMoon_Cave_hns`, `MtMoon_Shop_hns` | Route 4 | Oui | Repaire de Selen. Chercheuse rationaliste (section 8) à ajouter. |
-| Cerulean City | `CeruleanCity_hns` (+ `_Gym_hns`) | Routes 4, 5, 9, 24 | Oui | Quête canalisations/inondation — état "endommagé" de la Gym à vérifier/créer. |
+| Cerulean City | `CeruleanCity_hns` (+ `_Gym_hns`) | Routes 4, 5, 9, 24 | Oui | Scène de doute d'Ondine ajoutée (`HeartSoul_EventScript_OndineDoute`, `heart_and_soul_act2.inc`), câblée dans `EventScript_Misty` avant le combat de badge existant. Quête canalisations/inondation — état "endommagé" de la Gym (section 9) toujours à vérifier/créer. |
 | Rock Tunnel | `RockTunnel_1F_hns`, `_B1F_hns` | Accès via portes dédiées (à vérifier, pas de connexion `map.json` directe trouvée) | Oui | Repaire de Terrence (conviction). Mineurs piégés (section 8) à créer. |
 | Vermilion City | `VermilionCity_hns` (+ `_Gym_hns`) | Route 6, Route 11, `VermilionCity_PortOutside_hns` | Oui | Major Bob / interception radio à scripter. Port existant = bon point d'ancrage pour la traversée maritime Cinnabar↔continent. |
 | Zone Safari | `SafariZone1/2/3_hns`, `_Indoor_hns`, zones `_TopLeft/TopMid/...` | `SafariZoneGate_hns` ↔ `Route48_hns` | Oui | Repaire de Kess (conviction). Pokémon braconnés à libérer. |
