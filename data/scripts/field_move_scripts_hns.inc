@@ -2,7 +2,6 @@
 EventScript_CutTree::
 	lockall
 	goto_if_unset FLAG_RECEIVED_HM_CUT, EventScript_CheckTreeCantCut
-	goto_if_unset FLAG_BADGE02_GET, EventScript_CheckTreeCantCut
 	checkpartymove MOVE_CUT
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
@@ -67,7 +66,6 @@ EventScript_UseRockSmash::
 EventScript_RockSmash::
 	lockall
 	checkpartymove MOVE_ROCK_SMASH
-	goto_if_unset FLAG_BADGE01_GET, EventScript_CantSmashRock
 	goto_if_unset FLAG_RECEIVED_HM_ROCK_SMASH, EventScript_CantSmashRock
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
@@ -323,7 +321,6 @@ Text_CantHeadbutt:
 
 EventScript_StrengthBoulder::
 	lockall
-	goto_if_unset FLAG_BADGE03_GET, EventScript_CantStrength
 	checkitem ITEM_HM_STRENGTH
 	goto_if_eq VAR_RESULT, FALSE, EventScript_CantStrength
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulder
@@ -385,7 +382,6 @@ Text_StrengthActivated:
 
 EventScript_UseWaterfall::
 	lockall
-	goto_if_unset FLAG_BADGE08_GET, EventScript_CantWaterfall
 	checkpartymove MOVE_WATERFALL
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantWaterfall
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
@@ -467,7 +463,6 @@ EventScript_EndSurface::
 @HnS
 EventScript_Whirlpool::
 	lockall
-	goto_if_unset FLAG_BADGE07_GET, EventScript_CantWhirlpool
 	@checkpartymove MOVE_WHIRLPOOL @checkpartymove doesn't work for the 8th hm i guess.
 	@goto_if_eq VAR_RESULT, FALSE, EventScript_CantWhirlpool
 	playse SE_M_WATERFALL
