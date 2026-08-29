@@ -323,16 +323,13 @@ fuite vers Route 21.
   carte) : ça évite de deviner des coordonnées d'objet-événement sans pouvoir vérifier
   visuellement le résultat dans un émulateur. Une vraie rencontre de PNJ reste une amélioration
   naturelle, pas un mensonge sur ce qui existe.
-- La fuite vers Route 21/Pallet/Route 1 ne fait l'objet d'aucun `warp` scripté : la carte
-  `CinnabarIsland_hns` se connecte déjà nativement à `Route21_hns` (`map.json`, connexion non
-  modifiée) — le joueur sort simplement par le bord nord de la carte, comme dans le jeu de
-  base. Aucune coordonnée inventée.
-- `FLAG_CINNABAR_VERROUILLEE` est posé mais **le blocage effectif du retour n'est pas encore
-  implémenté** (bloquer une connexion de bord de carte demande une modification de collision
-  ou un script de garde que je n'ai pas pu vérifier visuellement dans cet environnement sans
-  écran). Le critère de réussite de la section 7 du brief ("atteindre le continent sans
-  softlock") est rempli ; "empêcher physiquement de revenir" reste un travail futur signalé
-  ici, pas silencieusement oublié.
+- ~~La fuite vers Route 21/Pallet/Route 1 ne fait l'objet d'aucun `warp` scripté...~~ **Erreur
+  corrigée au retour de test n°5** (voir section dédiée plus bas) : cette hypothèse initiale
+  était fausse et bloquait réellement la progression. `Route21_hns`/`Route20_hns` sont des
+  connexions à 100 % en eau (comme la Route 21 canonique) — sans CS Surf, impossible à
+  traverser à pied en tout début de partie. Remplacé par un `warp` scripté.
+- ~~`FLAG_CINNABAR_VERROUILLEE` est posé mais le blocage effectif du retour n'est pas encore
+  implémenté...~~ **Fait au retour de test n°5** (voir plus bas).
 - Blue est masqué dès `CinnabarIsland_OnTransition` (n'apparaît plus jamais comme PNJ amical à
   Cinnabar) plutôt que déplacé ou re-scripté ailleurs dans cette passe — son rôle de chef de la
   Team Rocket (Acte V) reste à écrire.
@@ -446,11 +443,14 @@ Phase 2 (vertical slice, type Feu uniquement) : **compilée, PASS ; non testée 
 Phase 2bis (18 types complets, noms français, choix des attaques, chaussures de course) :
 **compilée, PASS ; non testée en jeu**.
 Phase 2ter (correctif menu Pokémon, Acte II - doute de Pierre/Ondine) : **compilée, PASS ;
-non testée en jeu**. Voir sections dédiées ci-dessous.
-Prochaine étape : playtest réel en émulateur (priorité, avant d'empiler plus de contenu),
-puis warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo), blocage effectif du retour
-via `FLAG_CINNABAR_VERROUILLEE`, puis suite de l'Acte II (Route 1/Viridian, choix section 8)
-et Acte III.
+non testée en jeu**.
+Phase 2quater (correctif bug bloquant de fuite de Cinnabar, blocage du retour) : **compilée,
+PASS ; corrige un bug bloquant confirmé par l'utilisateur, fuite non testée en jeu après
+correctif**. Voir sections dédiées ci-dessus/dessous.
+Prochaine étape : playtest réel en émulateur du correctif de fuite (priorité, pour confirmer
+que le blocage est bien levé), warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo,
+bloqué par l'absence de rendu visuel — capture d'écran utilisateur utile ici), puis suite de
+l'Acte II (Route 1/Viridian, choix section 8) et Acte III.
 
 ## Retour de test n°4 : entrée "Pokémon" absente du menu START
 
@@ -495,3 +495,53 @@ ville.'"
   Terrence/Kess, section 3) — rien n'a donc été inventé au-delà de ce que demande le texte.
 
 `make hns -j4` : PASS, 0 erreur après ces deux changements. ROM à 94.44 %.
+
+## Retour de test n°5 : impossible de quitter Cinnabar (bug bloquant) + blocage du retour
+
+Remonté par l'utilisateur : après l'attaque de Cinnabar, plus aucun moyen de continuer
+l'histoire, au point de devoir envisager un CS Fly de debug pour sortir de l'île.
+
+**Cause réelle** : hypothèse fausse documentée (et maintenant corrigée) dans la section
+Acte I ci-dessus. `HeartSoul_CinnabarAttack_Verrouillage` affichait le message de fuite puis
+relâchait simplement le joueur (`releaseall`/`end`) en supposant qu'il pourrait sortir par le
+bord nord de la carte via la connexion `CinnabarIsland_hns` → `Route21_hns` (`map.json`). Or
+cette connexion, comme `Route20_hns`, est entièrement entourée d'eau (vérifié via
+`data/maps/Route21_hns/map.json` : aucun `warp_events`, uniquement des `connections` ; la
+Route 21 canonique est intégralement maritime) — sans CS Surf, impossible à traverser en tout
+début de partie. Le joueur restait donc réellement bloqué sur l'île malgré le texte annonçant
+un départ en bateau.
+
+**Correctif** :
+- `HeartSoul_CinnabarAttack_Verrouillage` fait maintenant un `warp` scripté direct vers
+  `MAP_PALLET_TOWN_HNS, 6, 8` après le message de fuite (fade to black inclus), au lieu de
+  compter sur un déplacement du joueur. Coordonnée **vérifiée, pas devinée** : lue directement
+  dans `data/layouts/PalletTown_hns/map.bin` (décodage manuel du format blockdata pokeemerald,
+  2 octets/case) — collision `0` (case franchissable) sur toute la rangée `y=8` autour de
+  `x=6`, élévation cohérente avec le reste de la rue extérieure ; à comparer aux cases
+  `y=5-7` juste au-dessus (collision `1`, la porte de la maison de Red et ses abords) qui,
+  elles, auraient été risquées. Aucun rendu visuel disponible dans cet environnement, mais
+  cette vérification par les données brutes du layout est une preuve, pas une supposition.
+- Texte `HeartSoul_Text_FuiteRoute21` ajusté en conséquence (« un dernier bateau attend au
+  port » plutôt que « fuir par la Route 21 », qui laissait croire à tort à un trajet à pied).
+- **Blocage physique du retour à Cinnabar**, maintenant réellement implémenté :
+  `CinnabarIsland_hns_MapScripts` gagne un `MAP_SCRIPT_ON_FRAME_TABLE` (même motif que
+  `CinnabarIsland_PokemonCenter_hns` et `CeruleanCity_Gym_hns_OnFrame`, `VAR_TEMP_0, 0` comme
+  condition toujours vraie) qui appelle `HeartSoul_EventScript_CinnabarVerrouilleeCheck`
+  (`heart_and_soul_act1.inc`) : si `FLAG_CINNABAR_VERROUILLEE` est posé et
+  `FLAG_ACTE_5_DEBLOQUE` ne l'est pas encore, le joueur est renvoyé au même point d'arrivée
+  sur le continent avec un message expliquant pourquoi, plutôt que laissé face à un mur d'eau
+  incompréhensible. Le garde sur `FLAG_ACTE_5_DEBLOQUE` (déjà réservé dans le registre de
+  flags) anticipe le retour à Cinnabar prévu à l'Acte V sans qu'il faille revenir modifier ce
+  script plus tard.
+
+**Limite honnête, toujours d'actualité** : les warps vers les bâtiments de Cinnabar
+(Arène/Manoir/Labo) ne sont **toujours pas faits**. Contrairement au bug ci-dessus, ce n'est
+pas une question de logique de script mais d'édition de tilemap (ajouter `warp_events` sur
+`CinnabarIsland_hns` à des coordonnées qui doivent correspondre à une porte de bâtiment
+dessinée sur la carte) — un rendu visuel de la carte est nécessaire pour ne pas placer un
+warp invisible sur une case incohérente avec le décor. Je n'ai pas cette capacité dans
+l'environnement actuel (pas de porymap, pas de rendu déjà exporté). Piste proposée à
+l'utilisateur : une capture d'écran de la carte extérieure de Cinnabar depuis son émulateur
+donnerait une vérité de terrain suffisante pour faire cette dernière passe sans deviner.
+
+`make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.

@@ -8,7 +8,8 @@ pas sur la seule base de la compilation.
 - [x] Intro / choix du type, type Feu — **joué et confirmé par l'utilisateur** : sélection des 4 Pokémon Feu fonctionnelle, choix des attaques (Move Relearner) fonctionnel, chaussures de course actives.
 - [ ] Intro / choix du type, 17 autres types — compilé, PASS (`make hns -j4`, 0 erreur) après extension du mécanisme Feu à tous les types ; **non joué en émulateur par personne** (généré et vérifié par compilation + relecture, pas testé en jeu). À confirmer par l'utilisateur type par type ou par sondage.
 - [x] Menu START, entrée "Pokémon" — bug remonté par l'utilisateur (absente après le choix d'équipe), corrigé par `setflag FLAG_SYS_POKEMON_GET` dans les 18 `ChooseTeam_{type}` (voir implementation_notes.md). Compilé, PASS ; à reconfirmer par l'utilisateur en jeu.
-- [ ] Cinnabar (Acte I) — compilé, PASS ; **non joué en émulateur**. Verrouillage de Cinnabar posé en flag mais pas encore appliqué au retour (voir implementation_notes.md).
+- [ ] Cinnabar (Acte I) — bug bloquant confirmé par l'utilisateur (fuite impossible sans CS Fly), corrigé (warp scripté vers Pallet Town + blocage du retour via ON_FRAME_TABLE, voir implementation_notes.md retour n°5). Compilé, PASS ; **fuite non encore rejouée en émulateur après le correctif, à confirmer par l'utilisateur en priorité**.
+- [ ] Cinnabar — warps des bâtiments (Arène/Manoir/Labo) — **pas fait** : nécessite une vérification visuelle de la tilemap (capture d'écran utilisateur) pour ne pas placer un warp sur une case incohérente avec le décor.
 - [ ] Acte II — Pierre/Ondine doutent avant le combat de badge (`heart_and_soul_act2.inc`) — compilé, PASS ; **non joué en émulateur**.
 - [ ] Route 21
 - [ ] Route 1
