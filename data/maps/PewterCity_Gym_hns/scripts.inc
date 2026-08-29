@@ -12,6 +12,7 @@ PewterCity_Gym_EventScript_Brock::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_PEWTER_GYM, PewterCity_Gym_EventScript_Brock_Defeated
+	call HeartSoul_EventScript_PierreDoute
 	msgbox PewterCity_Gym_Text_Brock_Intro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_BROCK_HNS, PewterCity_Gym_Text_Brock_WinLoss
 	message PewterCity_Gym_Text_ReceivedBoulderBadge

@@ -1208,8 +1208,11 @@
 #define FLAG_EPILOGUE_JOUE                          (HNS_EXTENDED_CONTENT_START + 321)
 #define FLAG_ZONE_BONUS_DEBLOQUEE                   (HNS_EXTENDED_CONTENT_START + 322)
 #define FLAG_KAIN_VAINCU                            (HNS_EXTENDED_CONTENT_START + 323)
+#define FLAG_PIERRE_CONVAINCU                       (HNS_EXTENDED_CONTENT_START + 324)
+#define FLAG_ONDINE_CONVAINCUE                      (HNS_EXTENDED_CONTENT_START + 325)
+#define FLAG_ACTE_2_TERMINE                         (HNS_EXTENDED_CONTENT_START + 326)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  324
+#define HNS_EXTENDED_CONTENT_COUNT                  327
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

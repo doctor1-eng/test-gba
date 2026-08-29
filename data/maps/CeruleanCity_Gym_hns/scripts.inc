@@ -183,6 +183,7 @@ CeruleanCity_Gym_EventScript_Misty::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_CERULEAN_GYM, CeruleanCity_Gym_EventScript_Misty_Defeated
+	call HeartSoul_EventScript_OndineDoute
 	msgbox CeruleanGym_Text_MistyIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_MISTY_HNS, CeruleanGym_Text_MistyWinLoss
 	message CeruleanGym_Text_ReceivedBadge
