@@ -545,3 +545,35 @@ l'utilisateur : une capture d'écran de la carte extérieure de Cinnabar depuis 
 donnerait une vérité de terrain suffisante pour faire cette dernière passe sans deviner.
 
 `make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.
+
+## Retour de test n°6 : dresseurs surclassés (Brock niveau 66, etc.)
+
+Fuite confirmée fonctionnelle par l'utilisateur. Demande suivante : remettre les dresseurs au
+niveau de l'équipe du joueur (34).
+
+**Constat** : les dresseurs `_hns` de Kanto sont conçus pour le postgame façon HGSS (après un
+run complet de Johto), pas pour un début de partie. Exemples relevés dans
+`src/data/trainers_hns.party` avant correctif : `TRAINER_BROCK_HNS` = 6 Pokémon niveau **66**
+avec objets et mouvements compétitifs ; `TRAINER_ARNOLD_HNS` (Route 21, rencontré juste après
+la fuite de Cinnabar) = niveau **61**. Totalement injouable face à une équipe de 4 Pokémon
+niveau 34 fraîchement obtenue.
+
+**Correctif** : script Python identifiant, via les appels `trainerbattle` réels (pas une
+supposition) dans les `scripts.inc` de toutes les cartes du chemin actuellement construit
+(Route 20/21, Pallet, Route 1, Viridian + Arène, Route 2, Forêt de Jade, Argenta + Arène,
+Route 3, Mont Sélénite, Route 4, Azuria + Arène), les 28 dresseurs réellement placés sur ce
+chemin. Chaque `Level:` de chacun de leurs Pokémon mis à `34` dans
+`src/data/trainers_hns.party` (85 lignes modifiées), sans toucher à la taille des équipes, aux
+objets, mouvements ou IVs.
+
+**Trouvaille non traitée ici, signalée pour suite** : `TRAINER_BLUE_HNS` est le Champion
+d'Arène d'Argenta (`ViridianCity_Gym_hns`) dans le jeu de base — un PNJ amical qui donne un
+badge. Conflit direct avec Blue antagoniste de Heart & Soul. Fait notable : le dialogue
+existant du jeu de base dit déjà « I wasn't in the mood at CINNABAR, but now I'm ready to
+battle you » — la trame de base semble déjà anticiper un passage par Cinnabar avant ce combat,
+ce qui pourrait faciliter une réconciliation narrative plutôt qu'une réécriture complète. Pas
+touché dans cette passe (décision de structure, pas juste un correctif de niveau) : à trancher
+avec l'utilisateur (cache-t-on Blue ici comme à Cinnabar en bloquant l'accès à l'Arène jusqu'à
+l'Acte V, ou garde-t-on ce combat avec un nouveau texte cohérent ?).
+
+`make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.
