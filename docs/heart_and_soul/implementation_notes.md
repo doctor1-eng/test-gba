@@ -448,10 +448,15 @@ Phase 2quater (correctif bug bloquant de fuite de Cinnabar, blocage du retour) :
 PASS ; corrige un bug bloquant confirmé par l'utilisateur, fuite confirmée fonctionnelle**.
 Phase 2quinquies (Blue masqué à Argenta, dresseurs Cinnabar→Azuria relevés niveau 34,
 sous-intrigues Route 1/Viridian/Forêt de Jade/Azuria, intro Chen sautée, 5 Poké Balls de
-départ) : **compilée, PASS ; non testée en jeu**. Voir sections dédiées ci-dessous.
-Prochaine étape : playtest du lot complet ci-dessous, puis warps réels des bâtiments de
-Cinnabar (Arène/Manoir/Labo, bloqué par l'absence de rendu visuel — capture d'écran
-utilisateur utile ici), puis suite de l'Acte II (Pallet Town, Pewter vivres — non chiffré au
+départ) : **compilée, PASS ; fuite confirmée, dialogue Route 1 remonté en échec**.
+Phase 2sexies (correctif dialogues post-combat Quinn/Doug/Pierre/Ondine, Pokémon sauvages
+Cinnabar→Azuria relevés niveau 34, Pokégear/carte dès le départ, capacités de terrain
+utilisables sans badge) : **compilée, PASS ; non testée en jeu**. Voir section dédiée
+ci-dessous.
+Prochaine étape : playtest du lot complet ci-dessous (priorité : le correctif Quinn/Pierre),
+puis warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo, bloqué par l'absence de rendu
+visuel — capture d'écran utilisateur utile ici), puis suite de l'Acte II (Pallet Town, Pewter
+vivres — non chiffré au
 barème) et Acte III.
 
 ## Retour de test n°4 : entrée "Pokémon" absente du menu START
@@ -671,4 +676,78 @@ existant, jamais avant.
 
 `make hns -j4` : PASS, 0 erreur, à chaque étape. ROM à 94.44-94.45 %.
 
-`make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.
+## Retour de test n°8 : dialogues post-combat non déclenchés — cause réelle identifiée
+
+Confirmation utilisateur du retour n°7 : le dialogue de Quinn ne se lance toujours pas
+automatiquement (il faut lui reparler après le combat, l'ancien dialogue anglais s'affichant
+en premier avant le nôtre), et Pierre a un problème symétrique (notre dialogue s'affiche bien
+la première fois, suivi du dialogue anglais d'origine ; mais après une défaite, seul le
+dialogue anglais se relance).
+
+**Cause réelle, identifiée dans `data/scripts/trainer_battle.inc` (pas une supposition)** :
+`trainerbattle_single`, sur une **première victoire**, passe par `EventScript_EndTrainerBattle`
+→ `gotobeatenscript` — qui saute directement au **4ᵉ argument `event_script`** de
+`trainerbattle_single` s'il est fourni, sinon à un script générique silencieux
+(`EventScript_TryGetTrainerScript`), puis `releaseall`/`end`. **`gotopostbattlescript`** (qui
+reprend la ligne suivant directement `trainerbattle_single` dans le script — ce que j'avais
+supposé à tort) n'est utilisé que sur le chemin « dresseur déjà vaincu, on lui reparle »
+(`EventScript_NoNormalTrainerBattle`). Autrement dit : sans le 4ᵉ argument, tout ce qui suit
+`trainerbattle_single` dans un script (mon `msgbox`+`call` inclus) est **inatteignable à la
+première victoire**, et ne s'exécute qu'au rappel — exactement le symptôme remonté.
+
+**Correctif** : `Route1_EventScript_Quinn` et `Route2_EventScript_Doug` passent maintenant
+leur logique de suite (message de post-combat + sous-intrigue) en 4ᵉ argument
+(`event_script`) de `trainerbattle_single`, exactement le motif déjà présent dans ce fork pour
+`Route2_EventScript_RegisterRob` (enregistrement du numéro de Rob, qui lui fonctionnait déjà
+car câblé de cette façon dès le départ — la preuve que ce motif est correct était donc déjà
+dans le dépôt, il suffisait de le suivre).
+
+**Pierre/Ondine, cause différente** : `trainerbattle_no_intro` (utilisé par Brock/Misty,
+combat déclenché par interaction directe, pas par la vue du joueur) enchaîne bien
+automatiquement sur la suite du script après une victoire
+(`EventScript_DoNoIntroTrainerBattle` → `dotrainerbattle` → `gotopostbattlescript`
+inconditionnel). Le vrai problème : `HeartSoul_EventScript_PierreDoute` posait
+`FLAG_PIERRE_CONVAINCU` dès l'affichage du dialogue, **avant** le combat qui suit — donc dès
+la première tentative, que le combat soit gagné ou perdu. Sur une défaite (le joueur est
+white-out, pas de suite de script possible, mais le flag reste posé), une nouvelle tentative
+sautait directement la scène de doute (déjà « vue ») pour aller droit au dialogue anglais
+d'origine. Corrigé en déplaçant la pose du flag hors du sous-script de dialogue, vers deux
+nouveaux sous-scripts (`HeartSoul_EventScript_PierreConvaincu` /
+`_OndineConvaincue`) appelés uniquement dans la branche de victoire du combat de badge (aux
+côtés de `FLAG_DEFEATED_PEWTER_GYM`/`FLAG_DEFEATED_CERULEAN_GYM`) : la scène de doute se
+rejoue désormais à chaque tentative tant que le combat n'est pas gagné, ce qui colle au texte
+(« Prouve-le sur le terrain »).
+
+## Confort de jeu supplémentaire (retour de test n°8)
+
+Trois demandes complémentaires, toutes livrées dans le même lot :
+
+- **Pokémon sauvages relevés niveau 34** : même méthode que pour les dresseurs (retour de
+  test n°6) — script Python ciblant les 13 cartes du chemin déjà construit dans
+  `src/data/wild_encounters.json` (12 avaient une table de rencontres ; `MAP_MT_MOON_OUTSIDE_HNS`
+  n'en a aucune, rien à faire). Un exemple de l'ampleur du problème avant correctif : Route 21
+  proposait des Spearow/Rattata niveau 45-47 et des Ekans niveau 48-50, alors que le joueur
+  vient d'obtenir une équipe de niveau 34 quelques minutes plus tôt. `min_level`/`max_level`
+  de chaque emplacement (herbe, eau, pêche, Rock Smash) mis à `34` — 606 emplacements sur les
+  12 cartes concernées. Format JSON revérifié par un aller-retour parse/dump sans diff avant
+  la vraie modification, pour ne changer que les valeurs, jamais la mise en forme.
+- **Pokégear (« la carte ») dès le départ** : ce fork (base HGSS) n'a pas d'objet « Carte »
+  indépendant distribué par un PNJ sur les cartes `_hns` — seule la variante `_Frlg` inerte
+  (déjà documentée comme non jouable, voir audit initial) en donne un. La carte régionale fait
+  partie du Pokégear/Pokénav dans ce jeu. Les 3 flags que
+  `NewBarkTown_PlayersHouse_1F_hns` pose normalement pour le donner
+  (`FLAG_SYS_POKENAV_GET`, `FLAG_HAS_MATCH_CALL`, `FLAG_RECEIVED_POKENAV`) sont désormais posés
+  avec le reste du kit de départ (Poké Balls, chaussures de course) dans les 18
+  `ChooseTeam_{type}`.
+- **Capacités de terrain utilisables sans badge** : `src/field_move.c` centralise la
+  vérification de déblocage de chaque capacité de terrain (Coupe, Flash, Force, Surf, Vol,
+  Plongée, Cascade, Rock Smash) via `gFieldMoveInfo[].isUnlockedFunc` — les 8 fonctions
+  `IsFieldMoveUnlocked_X` retournent maintenant `TRUE` sans condition pour `IS_HNS` au lieu de
+  vérifier `FLAG_BADGEnn_GET`. Côté script, `data/scripts/field_move_scripts_hns.inc` avait
+  aussi ses propres vérifications de badge redondantes lors de l'interaction avec un objet de
+  la carte (arbre à couper, rocher à fracasser/pousser, cascade, tourbillon) — les 5
+  `goto_if_unset FLAG_BADGEnn_GET` retirés. Dans les deux cas, seule la condition du badge saute
+  : posséder la CT et l'avoir enseignée à un Pokémon reste requis (mécanique normale
+  conservée).
+
+`make hns -j4` : PASS, 0 erreur à chaque étape. ROM à 94.45 %.
