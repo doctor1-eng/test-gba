@@ -176,10 +176,95 @@ dessus.
 
 **Décision requise avant Phase 2 (voir message de session).**
 
+## Décisions utilisateur (2026-08-29)
+
+1. **Conflit Blue/Blaine** : réécriture directe des scripts `CinnabarIsland_hns` pour la
+   trame Heart & Soul (le contenu Johto d'origine à cet endroit disparaît, reste dans
+   l'historique `upstream`). Pas de gating par flag de mode.
+2. **Cible Kanto** : `_hns`, malgré son incomplétude à Cinnabar (pas de Mansion/Gym/Lab).
+   Corroboré après coup par un indice technique : dans `flags_hns.h`, tout le contenu
+   d'objets cachés/état propre à `_Frlg` (des centaines de `FLAG_HIDE_SILPH_CO_*`,
+   `FLAG_HIDE_SEVEN_ISLAND_*`, etc.) est câblé à la valeur littérale `0` — signe que `_Frlg`
+   est traité comme inerte dans cette variante. Audit de connectivité complémentaire :
+   `_hns` s'avère être un Kanto complet et connecté (Pallet↔Route1↔Viridian↔...↔Saffron↔
+   Celadon, graphe overworld cohérent sur toutes les villes testées) — seule Cinnabar
+   manque de warps vers des bâtiments. Voir `technical_map.md` pour le plan de réutilisation
+   de la géométrie `_Frlg` (Mansion/Gym/Lab) par nouveaux warps depuis `CinnabarIsland_hns`.
+
+## ⚠️ Piège découvert : les noms `FLAG_UNUSED_0xNNN` de `flags_hns.h` ne sont PAS tous des créneaux libres
+
+Avant d'allouer les flags Heart & Soul, un piège a été identifié et évité : une grande partie
+des `#define FLAG_UNUSED_0xNNN` dispersés dans `flags_hns.h` (plusieurs centaines, sections
+`0x022`–`0x0FF`, `0x1AA`+, `0x2xx`, `0x4xx`, `0x8xx`, `0x9xx`) ont pour valeur **la constante
+littérale `0`**, pas l'adresse indiquée par leur propre nom. Ce ne sont pas des créneaux
+disponibles — écrire un `setflag` dessus reviendrait à cibler le flag système 0 pour tous,
+un bug garanti. Ce sont des restes de la table de flags FRLG d'origine, neutralisés en bloc
+et conservés uniquement pour la lisibilité des diffs avec l'amont. **Ne jamais leur faire
+confiance sans vérifier leur valeur réelle.**
+
+Le seul registre fiable pour ajouter du contenu neuf est documenté explicitement dans le
+fichier lui-même : bloc "Extended content flags" (`HNS_EXTENDED_CONTENT_START = 0x36A`,
+300 créneaux consommés jusqu'à l'ajout ci-dessous, plage `0x496–0x4FF` explicitement
+réservée pour extension future par un commentaire des mainteneurs). Vérifié par comptage des
+usages réels de la macro `(HNS_EXTENDED_CONTENT_START + N)` avant toute allocation.
+
+## Registre Heart & Soul alloué (Phase 1)
+
+Déclaré dans `include/constants/flags_hns.h`, à la suite du bloc "extended content"
+existant (`HNS_EXTENDED_CONTENT_START + 300` à `+323`, adresses `0x496`–`0x4AD`) ;
+`HNS_EXTENDED_CONTENT_COUNT` mis à jour de `300` à `324`. Build revérifié après ajout :
+**PASS, 0 erreur**.
+
+| Flag | Valeur |
+|---|---|
+| `FLAG_ATTAQUE_CINNABAR_LANCEE` | `HNS_EXTENDED_CONTENT_START + 300` |
+| `FLAG_BLAINE_DISPARU` | `+301` |
+| `FLAG_BLAINE_SAUVE` | `+302` |
+| `FLAG_REFUGIES_GUIDES` | `+303` |
+| `FLAG_REFUGIES_CACHES` | `+304` |
+| `FLAG_ACTE_1_TERMINE` | `+305` |
+| `FLAG_CINNABAR_VERROUILLEE` | `+306` |
+| `FLAG_LYRE_VAINCUE` | `+307` |
+| `FLAG_SELEN_VAINCUE` | `+308` |
+| `FLAG_MIRA_VOSS_VAINCUE` | `+309` |
+| `FLAG_TERRENCE_RESOLU` | `+310` |
+| `FLAG_TERRENCE_CONVAINCU` | `+311` |
+| `FLAG_TERRENCE_COMBAT_ALLEGE` | `+312` |
+| `FLAG_TERRENCE_VAINCU` | `+313` |
+| `FLAG_KESS_RESOLUE` | `+314` |
+| `FLAG_KESS_CONVAINCUE` | `+315` |
+| `FLAG_KESS_COMBAT_ALLEGE` | `+316` |
+| `FLAG_KESS_VAINCUE` | `+317` |
+| `FLAG_DOCUMENTS_MIRA_VOSS_LUS` | `+318` |
+| `FLAG_ACTE_5_DEBLOQUE` | `+319` |
+| `FLAG_BLUE_VAINCU` | `+320` |
+| `FLAG_EPILOGUE_JOUE` | `+321` |
+| `FLAG_ZONE_BONUS_DEBLOQUEE` | `+322` |
+| `FLAG_KAIN_VAINCU` | `+323` |
+
+Vars déclarées dans `include/constants/vars_hns.h`, créneaux `VAR_UNUSED_HNS_0x40D8`–
+`0x40DE` (valeurs réelles, pas le piège ci-dessus — `vars_hns.h` encode bien l'adresse en
+littéral) :
+
+| Var | Valeur |
+|---|---|
+| `VAR_TYPE_CHOISI` | `0x40D8` |
+| `VAR_TEAM_SLOT` | `0x40D9` |
+| `VAR_TEMP_SPECIES` | `0x40DA` |
+| `VAR_REPUTATION` | `0x40DB` |
+| `VAR_PERSUASION_TERRENCE` | `0x40DC` |
+| `VAR_PERSUASION_KESS` | `0x40DD` |
+| `VAR_DIALOGUE_BLUE` | `0x40DE` |
+
+Aucune de ces valeurs ne doit être modifiée sans mettre à jour ce tableau et
+`HNS_EXTENDED_CONTENT_COUNT` en conséquence.
+
 ## Statut
 
 Phase 0 (build baseline) : **terminée, PASS**.
-Phase "audit obligatoire" (section 3 du brief) : **en cours**, voir `technical_map.md` pour
-la cartographie Kanto détaillée. Aucun script Heart & Soul n'a encore été écrit — en attente
-des deux décisions ci-dessus avant de commencer la Phase 1 (infrastructure : déclaration des
-flags/vars réels).
+Phase audit (section 3 du brief) : **terminée**.
+Phase 1 (registre flags/vars) : **terminée, PASS** — matrice ci-dessus.
+Aucun script narratif Heart & Soul n'a encore été écrit. Prochaine étape : Phase 2
+(vertical slice — choix du type, attaque de Cinnabar, fuite vers Route 21/Pallet/Route 1),
+qui nécessite d'abord l'ajout des warps de bâtiments à `CinnabarIsland_hns` (voir
+`technical_map.md`).

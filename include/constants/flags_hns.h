@@ -1182,9 +1182,36 @@
 #define FLAG_PONI_CAVE_HIDDEN_ITEM_2                (HNS_EXTENDED_CONTENT_START + 297)
 #define FLAG_PONI_CAVE_HIDDEN_ITEM_1                (HNS_EXTENDED_CONTENT_START + 298)
 #define FLAG_MELEMELE_HIDDEN_ITEM                   (HNS_EXTENDED_CONTENT_START + 299)
-#define HNS_EXTENDED_CONTENT_COUNT                  300
+
+// Heart & Soul story flags (Kanto open-world campaign)
+#define FLAG_ATTAQUE_CINNABAR_LANCEE                (HNS_EXTENDED_CONTENT_START + 300)
+#define FLAG_BLAINE_DISPARU                         (HNS_EXTENDED_CONTENT_START + 301)
+#define FLAG_BLAINE_SAUVE                           (HNS_EXTENDED_CONTENT_START + 302)
+#define FLAG_REFUGIES_GUIDES                        (HNS_EXTENDED_CONTENT_START + 303)
+#define FLAG_REFUGIES_CACHES                        (HNS_EXTENDED_CONTENT_START + 304)
+#define FLAG_ACTE_1_TERMINE                         (HNS_EXTENDED_CONTENT_START + 305)
+#define FLAG_CINNABAR_VERROUILLEE                   (HNS_EXTENDED_CONTENT_START + 306)
+#define FLAG_LYRE_VAINCUE                           (HNS_EXTENDED_CONTENT_START + 307)
+#define FLAG_SELEN_VAINCUE                          (HNS_EXTENDED_CONTENT_START + 308)
+#define FLAG_MIRA_VOSS_VAINCUE                      (HNS_EXTENDED_CONTENT_START + 309)
+#define FLAG_TERRENCE_RESOLU                        (HNS_EXTENDED_CONTENT_START + 310)
+#define FLAG_TERRENCE_CONVAINCU                     (HNS_EXTENDED_CONTENT_START + 311)
+#define FLAG_TERRENCE_COMBAT_ALLEGE                 (HNS_EXTENDED_CONTENT_START + 312)
+#define FLAG_TERRENCE_VAINCU                        (HNS_EXTENDED_CONTENT_START + 313)
+#define FLAG_KESS_RESOLUE                           (HNS_EXTENDED_CONTENT_START + 314)
+#define FLAG_KESS_CONVAINCUE                        (HNS_EXTENDED_CONTENT_START + 315)
+#define FLAG_KESS_COMBAT_ALLEGE                     (HNS_EXTENDED_CONTENT_START + 316)
+#define FLAG_KESS_VAINCUE                           (HNS_EXTENDED_CONTENT_START + 317)
+#define FLAG_DOCUMENTS_MIRA_VOSS_LUS                (HNS_EXTENDED_CONTENT_START + 318)
+#define FLAG_ACTE_5_DEBLOQUE                        (HNS_EXTENDED_CONTENT_START + 319)
+#define FLAG_BLUE_VAINCU                            (HNS_EXTENDED_CONTENT_START + 320)
+#define FLAG_EPILOGUE_JOUE                          (HNS_EXTENDED_CONTENT_START + 321)
+#define FLAG_ZONE_BONUS_DEBLOQUEE                   (HNS_EXTENDED_CONTENT_START + 322)
+#define FLAG_KAIN_VAINCU                            (HNS_EXTENDED_CONTENT_START + 323)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  324
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
-// 0x496–0x4FF remaining reserved for future expansion
+// 0x4AE–0x4FF remaining reserved for future expansion
 
 // Trainer registered (match call) flags — one per rematchable trainer
 #define TRAINER_REGISTERED_FLAGS_START               0x310

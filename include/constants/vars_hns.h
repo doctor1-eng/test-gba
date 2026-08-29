@@ -113,13 +113,14 @@
 #define VAR_UNUSED_HNS_0x40C9                            0x40C9
 #define VAR_UNUSED_HNS_0x40CA                            0x40CA
 
-#define VAR_UNUSED_HNS_0x40D8                           0x40D8
-#define VAR_UNUSED_HNS_0x40D9                           0x40D9
-#define VAR_UNUSED_HNS_0x40DA                           0x40DA
-#define VAR_UNUSED_HNS_0x40DB                           0x40DB
-#define VAR_UNUSED_HNS_0x40DC                           0x40DC
-#define VAR_UNUSED_HNS_0x40DD                           0x40DD
-#define VAR_UNUSED_HNS_0x40DE                           0x40DE
+// Heart & Soul story vars (Kanto open-world campaign)
+#define VAR_TYPE_CHOISI                                 0x40D8
+#define VAR_TEAM_SLOT                                   0x40D9
+#define VAR_TEMP_SPECIES                                0x40DA
+#define VAR_REPUTATION                                  0x40DB
+#define VAR_PERSUASION_TERRENCE                         0x40DC
+#define VAR_PERSUASION_KESS                             0x40DD
+#define VAR_DIALOGUE_BLUE                               0x40DE
 #define VAR_UNUSED_HNS_0x40DF                           0x40DF
 #define VAR_UNUSED_HNS_0x40E0                           0x40E0
 #define VAR_UNUSED_HNS_0x40E1                           0x40E1
