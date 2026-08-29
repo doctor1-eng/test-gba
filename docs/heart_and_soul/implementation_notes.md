@@ -546,6 +546,26 @@ donnerait une vérité de terrain suffisante pour faire cette dernière passe sa
 
 `make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.
 
+## Résolution : Blue masqué à l'Arène d'Argenta (Viridian)
+
+Décision utilisateur sur le conflit signalé au retour de test n°6 : **cacher Blue, Arène
+fermée** (plutôt que garder le combat avec un texte réécrit, ou laisser tel quel).
+
+- `ViridianCity_Gym_hns_MapScripts` gagne un `MAP_SCRIPT_ON_TRANSITION` (`setflag` simple,
+  pas de `msgbox` — même règle que `CinnabarIsland_OnTransition`) qui pose
+  `FLAG_HIDE_VIRIDIAN_BLUE` tant que `FLAG_ACTE_5_DEBLOQUE` n'est pas posé. Ce flag existait
+  déjà, câblé nativement sur l'objet-événement de Blue dans
+  `ViridianCity_Gym_hns/map.json` — aucune nouvelle géométrie, juste une condition de garde
+  supplémentaire en amont.
+- Texte du PNJ guide de l'Arène (`ViridianCity_Gym_Text_Guide`) réécrit en français : annonce
+  la fermeture de l'Arène plutôt que le combat, cohérent avec l'absence du Champion.
+- Le combat, le badge et le reste du script `ViridianCity_Gym_EventScript_Blue` restent
+  intacts dans le code, simplement inaccessibles tant que `FLAG_ACTE_5_DEBLOQUE` n'est pas
+  posé (flag déjà réservé dans le registre, pas encore posé nulle part — Acte V pas encore
+  écrit).
+
+`make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.
+
 ## Retour de test n°6 : dresseurs surclassés (Brock niveau 66, etc.)
 
 Fuite confirmée fonctionnelle par l'utilisateur. Demande suivante : remettre les dresseurs au
@@ -566,14 +586,9 @@ chemin. Chaque `Level:` de chacun de leurs Pokémon mis à `34` dans
 `src/data/trainers_hns.party` (85 lignes modifiées), sans toucher à la taille des équipes, aux
 objets, mouvements ou IVs.
 
-**Trouvaille non traitée ici, signalée pour suite** : `TRAINER_BLUE_HNS` est le Champion
-d'Arène d'Argenta (`ViridianCity_Gym_hns`) dans le jeu de base — un PNJ amical qui donne un
-badge. Conflit direct avec Blue antagoniste de Heart & Soul. Fait notable : le dialogue
-existant du jeu de base dit déjà « I wasn't in the mood at CINNABAR, but now I'm ready to
-battle you » — la trame de base semble déjà anticiper un passage par Cinnabar avant ce combat,
-ce qui pourrait faciliter une réconciliation narrative plutôt qu'une réécriture complète. Pas
-touché dans cette passe (décision de structure, pas juste un correctif de niveau) : à trancher
-avec l'utilisateur (cache-t-on Blue ici comme à Cinnabar en bloquant l'accès à l'Arène jusqu'à
-l'Acte V, ou garde-t-on ce combat avec un nouveau texte cohérent ?).
+**Trouvaille signalée pour suite, résolue juste après** (voir section dédiée juste au-dessus,
+« Blue masqué à l'Arène d'Argenta ») : `TRAINER_BLUE_HNS` était le Champion d'Arène d'Argenta
+(`ViridianCity_Gym_hns`) dans le jeu de base — un PNJ amical qui donne un badge, en conflit
+direct avec Blue antagoniste de Heart & Soul.
 
 `make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.
