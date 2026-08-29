@@ -55,6 +55,7 @@ static u8 sHnsSpeechMainTaskId;
 // Static function declarations
 static void Task_NewGameHnsSpeech_Init(u8);
 static void AddHnsSpeechObjects(u8);
+static void Task_NewGameHnsSpeech_SkipToGender(u8);
 static void Task_NewGameHnsSpeech_WaitToShowProfessor(u8);
 static void NewGameHnsSpeech_StartFadeInTarget1OutTarget2(u8, u8);
 static void NewGameHnsSpeech_StartFadePlatformOut(u8, u8);
@@ -287,10 +288,32 @@ static void Task_NewGameHnsSpeech_Init(u8 taskId)
     ResetAllPicSprites();
     AddHnsSpeechObjects(taskId);
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
-    gTasks[taskId].func = Task_NewGameHnsSpeech_WaitToShowProfessor;
+    gTasks[taskId].func = Task_NewGameHnsSpeech_SkipToGender;
     PlayBGM(MUS_HG_NEW_GAME);
     ShowBg(0);
     ShowBg(1);
+}
+
+// Heart & Soul : saute le discours du Professeur Chen (This is a Pokemon / And you are...)
+// pour accelerer les tests repetes. Reprend directement au point ou
+// Task_NewGameHnsSpeech_WaitForPlayerFadeIn aurait normalement laisse la machine a etats :
+// sprite joueur (masculin par defaut, mêmes valeurs que Task_NewGameHnsSpeech_StartPlayerFadeIn)
+// visible et affecte a tPlayerSpriteId, professeur/mon caches, direction vers BoyOrGirl. Pas de
+// nouvel etat invente : mêmes affectations que le code qu'on saute, juste sans l'animation ni
+// le texte.
+static void Task_NewGameHnsSpeech_SkipToGender(u8 taskId)
+{
+    u8 spriteId = gTasks[taskId].tGoldSpriteId;
+
+    gSprites[spriteId].x = 180;
+    gSprites[spriteId].y = 60;
+    gSprites[spriteId].invisible = FALSE;
+    gSprites[spriteId].oam.objMode = ST_OAM_OBJ_NORMAL;
+    gTasks[taskId].tPlayerSpriteId = spriteId;
+    gTasks[taskId].tPlayerGender = MALE;
+    gSprites[gTasks[taskId].tProfessorSpriteId].invisible = TRUE;
+    gSprites[gTasks[taskId].tMonSpriteId].invisible = TRUE;
+    gTasks[taskId].func = Task_NewGameHnsSpeech_BoyOrGirl;
 }
 
 static void Task_NewGameHnsSpeech_WaitToShowProfessor(u8 taskId)
