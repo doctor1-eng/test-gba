@@ -1,5 +1,17 @@
 ViridianCity_Gym_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ViridianCity_Gym_OnTransition
 	.byte 0
+
+@ Heart & Soul : Blue est le chef de la Team Rocket (voir Cinnabar), pas un Champion
+@ d'Arene amical. Meme motif que CinnabarIsland_OnTransition (data/maps/CinnabarIsland_hns/
+@ scripts.inc) : setflag simple, pas de msgbox, donc ON_TRANSITION reste sur ici. Le garde sur
+@ FLAG_ACTE_5_DEBLOQUE laisse la possibilite de le faire reapparaitre plus tard sans retoucher
+@ ce script (meme motif que HeartSoul_EventScript_CinnabarVerrouilleeCheck).
+ViridianCity_Gym_OnTransition:
+	goto_if_set FLAG_ACTE_5_DEBLOQUE, ViridianCity_Gym_OnTransition_End
+	setflag FLAG_HIDE_VIRIDIAN_BLUE
+ViridianCity_Gym_OnTransition_End:
+	end
 
 ViridianCity_Gym_EventScript_Blue::
 	lock
@@ -109,13 +121,11 @@ ViridianCity_Gym_EventScript_GymGuyAfter::
 	end
 
 ViridianCity_Gym_Text_Guide:
-	.string "Yo, CHAMP in making!\p"
-	.string "How's it going? Looks like you're on\n"
-	.string "a roll.\p"
-	.string "The GYM LEADER is a guy who battled\n"
-	.string "the CHAMPION three years ago.\p"
-	.string "He's no pushover.\p"
-	.string "Give it everything you've got!$"
+	.string "…\p"
+	.string "Personne n'a revu le Champion\n"
+	.string "depuis l'attaque de CINNABAR.\p"
+	.string "L'Arene est fermee jusqu'a nouvel\n"
+	.string "ordre.$"
 
 ViridianCity_Gym_Text_Guide_Win:
 	.string "Man, you are truly tough…\p"
