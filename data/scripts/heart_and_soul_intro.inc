@@ -206,45 +206,45 @@ HeartSoul_PickOne_Feu_Case19:
 	return
 
 HeartSoul_Text_Mon_Feu_0:
-	.string "CHARIZARD$"
+	.string "DRACAUFEU$"
 HeartSoul_Text_Mon_Feu_1:
-	.string "ARCANINE$"
+	.string "ARCANIN$"
 HeartSoul_Text_Mon_Feu_2:
-	.string "RAPIDASH$"
+	.string "GALOPA$"
 HeartSoul_Text_Mon_Feu_3:
-	.string "MAGMORTAR$"
+	.string "MAGANON$"
 HeartSoul_Text_Mon_Feu_4:
-	.string "FLAREON$"
+	.string "PYROLI$"
 HeartSoul_Text_Mon_Feu_5:
-	.string "NINETALES$"
+	.string "FEUNARD$"
 HeartSoul_Text_Mon_Feu_6:
 	.string "TYPHLOSION$"
 HeartSoul_Text_Mon_Feu_7:
-	.string "TORKOAL$"
+	.string "CHARTOR$"
 HeartSoul_Text_Mon_Feu_8:
-	.string "CAMERUPT$"
+	.string "CAMÉRUPT$"
 HeartSoul_Text_Mon_Feu_9:
-	.string "HOUNDOOM$"
+	.string "DEMOLOSSE$"
 HeartSoul_Text_Mon_Feu_10:
-	.string "INFERNAPE$"
+	.string "SIMIABRAZ$"
 HeartSoul_Text_Mon_Feu_11:
-	.string "BLAZIKEN$"
+	.string "BRASEGALI$"
 HeartSoul_Text_Mon_Feu_12:
-	.string "EMBOAR$"
+	.string "ROITIFLAM$"
 HeartSoul_Text_Mon_Feu_13:
-	.string "DELPHOX$"
+	.string "GOUPELIN$"
 HeartSoul_Text_Mon_Feu_14:
-	.string "TALONFLAME$"
+	.string "FLAMBUSARD$"
 HeartSoul_Text_Mon_Feu_15:
-	.string "VOLCARONA$"
+	.string "PYRAX$"
 HeartSoul_Text_Mon_Feu_16:
-	.string "CHANDELURE$"
+	.string "LUGULABRE$"
 HeartSoul_Text_Mon_Feu_17:
-	.string "SIMISEAR$"
+	.string "FLAMOUTAN$"
 HeartSoul_Text_Mon_Feu_18:
-	.string "PYROAR$"
+	.string "NEMELIOS$"
 HeartSoul_Text_Mon_Feu_19:
-	.string "MAGCARGO$"
+	.string "VOLCAROPOD$"
 
 HeartSoul_EventScript_ChooseTeam_Feu::
 	call HeartSoul_EventScript_PickOne_Feu
@@ -274,9 +274,45 @@ HeartSoul_ChooseTeam_Feu_Slot4::
 	givemon VAR_0x8005, 34, ITEM_NONE, BALL_POKE, NATURE_RANDOM, NUM_ABILITY_PERSONALITY, MON_GENDER_RANDOM, 0, 0, 0, 0, 0, 0, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, MOVE_DEFAULT, MOVE_DEFAULT, MOVE_DEFAULT, MOVE_DEFAULT, SHINY_MODE_NEVER
 	givemon VAR_0x8006, 34, ITEM_NONE, BALL_POKE, NATURE_RANDOM, NUM_ABILITY_PERSONALITY, MON_GENDER_RANDOM, 0, 0, 0, 0, 0, 0, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, MOVE_DEFAULT, MOVE_DEFAULT, MOVE_DEFAULT, MOVE_DEFAULT, SHINY_MODE_NEVER
 	givemon VAR_0x8007, 34, ITEM_NONE, BALL_POKE, NATURE_RANDOM, NUM_ABILITY_PERSONALITY, MON_GENDER_RANDOM, 0, 0, 0, 0, 0, 0, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, USE_RANDOM_IVS, MOVE_DEFAULT, MOVE_DEFAULT, MOVE_DEFAULT, MOVE_DEFAULT, SHINY_MODE_NEVER
-	releaseall
-	goto HeartSoul_EventScript_CinnabarAttack
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
+	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
+HeartSoul_ChooseMoves_Feu_ChooseMon::
+	msgbox HeartSoul_Text_ChoisirPokemonAttaque, MSGBOX_DEFAULT
+	setmoverelearnerstate MOVE_RELEARNER_LEVEL_UP_MOVES
+	chooseboxmon SELECT_PC_MON_MOVE_RELEARNER
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, HeartSoul_EventScript_CinnabarAttack
+	special HasMovesToRelearn
+	goto_if_eq VAR_RESULT, FALSE, HeartSoul_ChooseMoves_Feu_NoMove
+	msgbox HeartSoul_Text_QuelleAttaque, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	waitstate
+	goto HeartSoul_ChooseMoves_Feu_ChooseMon
+HeartSoul_ChooseMoves_Feu_NoMove:
+	msgbox HeartSoul_Text_PlusRienAApprendre, MSGBOX_DEFAULT
+	goto HeartSoul_ChooseMoves_Feu_ChooseMon
 	end
+
+HeartSoul_Text_ChoisisAttaquesIntro:
+	.string "Avant de partir, choisis les\n"
+	.string "attaques de tes 4 POKEMON.\p"
+	.string "Pour chacun, tu pourras remplacer\n"
+	.string "une attaque par une autre qu'il\l"
+	.string "peut apprendre par niveau.\p"
+	.string "Quitte le menu quand tu as fini.$"
+
+HeartSoul_Text_ChoisirPokemonAttaque:
+	.string "Choisis le POKEMON dont tu veux\n"
+	.string "changer une attaque.$"
+
+HeartSoul_Text_QuelleAttaque:
+	.string "Quelle attaque doit-il apprendre ?$"
+
+HeartSoul_Text_PlusRienAApprendre:
+	.string "Ce POKEMON ne peut apprendre\n"
+	.string "aucune autre attaque par niveau\l"
+	.string "pour l'instant.$"
 
 HeartSoul_EventScript_ChooseTeam_Eau::
 	msgbox HeartSoul_Text_TeamNotReady_Eau, MSGBOX_DEFAULT

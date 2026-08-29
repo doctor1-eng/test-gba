@@ -378,6 +378,40 @@ compilation (0 erreur, ROM générée) et relecture attentive du script, pas par
 jouée.** Aucun softlock connu dans la logique relue, mais une vraie session de jeu (section 19
 du brief) reste à faire avant de considérer l'Acte I "terminé" au sens de la règle anti-bugs.
 
+## Retour de test n°2 : noms français, choix des attaques, chaussures de course
+
+Trois demandes suite au premier test réussi (les 4 Feu se choisissent bien) :
+
+- **Noms français des Pokémon** : les 20 noms de la liste Feu (`HeartSoul_Text_Mon_Feu_*`)
+  étaient en anglais. Remplacés par les noms officiels français, vérifiés un par un par
+  recherche web plutôt que de mémoire (4 des 20 noms que j'avais initialement en tête
+  étaient en fait ceux de la pré-évolution, pas de l'espèce demandée — Infernape n'est pas
+  Ouisticram [Chimchar] mais Simiabraz, Simisear n'est pas Flamajou [Pansear] mais Flamoutan,
+  Pyroar n'est pas resté "Pyroar" mais Némélios, Magcargo n'est pas Limagma [Slugma] mais
+  Volcaropod — bon rappel que "je pense m'en souvenir" n'est pas une vérification).
+  **Limite honnête** : seuls les noms de Pokémon et les textes que j'ai écrits sont en
+  français. Les noms d'attaques affichés par le sélecteur de capacités (voir ci-dessous)
+  restent en anglais — ce fork ne contient aucune table de texte française pour les
+  attaques/objets/etc. (vérifié à l'audit initial), donc les traduire dépasserait largement
+  cette tâche (il faudrait importer une table de traduction complète, absente du projet).
+- **Choix des attaques** : réutilise le Move Relearner déjà présent dans le moteur
+  (`src/move_relearner.c`, primitives `setmoverelearnerstate` / `chooseboxmon
+  SELECT_PC_MON_MOVE_RELEARNER` / `special HasMovesToRelearn` / `special
+  TeachMoveRelearnerMove`), sur le même modèle que le vrai Tuteur de Capacités de
+  Blackthorn City (`BlackthornCity_House3_hns/scripts.inc`) — sans le coût en Écaille Cœur.
+  Après les 4 `givemon`, le joueur choisit un de ses 4 nouveaux Pokémon, remplace une
+  attaque par une autre apprise par niveau, répète pour n'importe lequel de ses 4 Pokémon
+  autant de fois qu'il veut, puis quitte (bouton B / "annuler" sur l'écran de choix du
+  Pokémon) pour enchaîner sur l'attaque de Cinnabar. Pas un flow "exactement 4 attaques une
+  fois" figé : le joueur peut ajuster librement chacun des 4 emplacements de chacun de ses 4
+  Pokémon avant de continuer — couvre la demande sans réinventer une UI (réutilisation totale
+  du moteur existant).
+- **Chaussures de course** : `setflag FLAG_RECEIVED_RUNNING_SHOES` + `setflag
+  FLAG_SYS_B_DASH` juste après les `givemon`, même paire de flags que celle utilisée pour
+  cette fonctionnalité ailleurs dans le code (`data/scripts/debug.inc`).
+
+`make hns` : PASS, 0 erreur après ces changements.
+
 ## Statut
 
 Phase 0 (build baseline) : **terminée, PASS**.
