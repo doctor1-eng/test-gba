@@ -12,7 +12,11 @@ pas sur la seule base de la compilation.
 - [ ] Cinnabar — warps des bâtiments (Arène/Manoir/Labo) — **pas fait** : nécessite une vérification visuelle de la tilemap (capture d'écran utilisateur) pour ne pas placer un warp sur une case incohérente avec le décor.
 - [ ] Acte II — Pierre/Ondine doutent avant le combat de badge (`heart_and_soul_act2.inc`) — compilé, PASS ; **non joué en émulateur**.
 - [ ] Argenta (Viridian) — Blue masqué, Arène fermée — compilé, PASS ; **non joué en émulateur**.
-- [ ] Route 1 — objet perdu / milice (Quinn) — compilé, PASS ; **non joué en émulateur**. Point d'attention particulier : le nouveau dialogue s'enchaîne après un combat déclenché par la vue du joueur (`trainerbattle_single`), premier cas de ce type dans cette session — à confirmer que ça ne reproduit pas le bug de blocage déjà rencontré ailleurs.
+- [ ] Route 1 — objet perdu / milice (Quinn) — **retour utilisateur : le dialogue post-combat ne s'est pas déclenché**. Relecture du script : structure identique au motif déjà prouvé (Act I). Hypothèse la plus probable : sauvegarde ayant déjà dépassé la scène de fuite de Cinnabar avant que `FLAG_OBJET_PERDU_TROUVE` existe dans le ROM testé, donc jamais posé pour cette sauvegarde (voir implementation_notes.md, retour n°7). **À retester sur une sauvegarde neuve en priorité absolue** — c'est le test qui doit trancher si c'est un vrai bug de code ou un artefact de continuité de sauvegarde.
+- [x] Confort de test — discours du Professeur Chen sauté, 5 Poké Balls de départ — compilé, PASS ; à confirmer que l'écran de choix du genre s'affiche correctement juste après l'écran-titre (premier point à vérifier avant tout le reste, puisque tout test futur en dépend).
+- [ ] Viridian, commerçant résistant (Mart) — compilé, PASS ; **non joué en émulateur**.
+- [ ] Forêt de Jade, bûcherons déplacés (Doug) — compilé, PASS ; **non joué en émulateur**. Même point d'attention que Route 1 (post-combat `trainerbattle_single`).
+- [ ] Azuria, canalisations sabotées (Boy) — compilé, PASS ; **non joué en émulateur**.
 - [ ] Route 21
 - [ ] Route 1
 - [ ] Viridian

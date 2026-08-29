@@ -445,12 +445,14 @@ Phase 2bis (18 types complets, noms français, choix des attaques, chaussures de
 Phase 2ter (correctif menu Pokémon, Acte II - doute de Pierre/Ondine) : **compilée, PASS ;
 non testée en jeu**.
 Phase 2quater (correctif bug bloquant de fuite de Cinnabar, blocage du retour) : **compilée,
-PASS ; corrige un bug bloquant confirmé par l'utilisateur, fuite non testée en jeu après
-correctif**. Voir sections dédiées ci-dessus/dessous.
-Prochaine étape : playtest réel en émulateur du correctif de fuite (priorité, pour confirmer
-que le blocage est bien levé), warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo,
-bloqué par l'absence de rendu visuel — capture d'écran utilisateur utile ici), puis suite de
-l'Acte II (Route 1/Viridian, choix section 8) et Acte III.
+PASS ; corrige un bug bloquant confirmé par l'utilisateur, fuite confirmée fonctionnelle**.
+Phase 2quinquies (Blue masqué à Argenta, dresseurs Cinnabar→Azuria relevés niveau 34,
+sous-intrigues Route 1/Viridian/Forêt de Jade/Azuria, intro Chen sautée, 5 Poké Balls de
+départ) : **compilée, PASS ; non testée en jeu**. Voir sections dédiées ci-dessous.
+Prochaine étape : playtest du lot complet ci-dessous, puis warps réels des bâtiments de
+Cinnabar (Arène/Manoir/Labo, bloqué par l'absence de rendu visuel — capture d'écran
+utilisateur utile ici), puis suite de l'Acte II (Pallet Town, Pewter vivres — non chiffré au
+barème) et Acte III.
 
 ## Retour de test n°4 : entrée "Pokémon" absente du menu START
 
@@ -616,5 +618,57 @@ objets, mouvements ou IVs.
 « Blue masqué à l'Arène d'Argenta ») : `TRAINER_BLUE_HNS` était le Champion d'Arène d'Argenta
 (`ViridianCity_Gym_hns`) dans le jeu de base — un PNJ amical qui donne un badge, en conflit
 direct avec Blue antagoniste de Heart & Soul.
+
+## Retour de test n°7 : dialogue Route 1 non déclenché + confort de test + suite des sous-intrigues
+
+Retour utilisateur : « Le dialogue ne se lance pas automatiquement après le combat » (Quinn,
+Route 1). Demandes associées : sauter le discours du Professeur Chen pour les prochains
+tests, donner 5 Poké Balls de départ, puis continuer les sous-intrigues avant le prochain
+envoi de ROM.
+
+**Sur le dialogue Route 1** : relecture complète de `Route1_EventScript_Quinn` et
+`HeartSoul_EventScript_MiliceRoute1` — structure identique au motif déjà prouvé fonctionnel
+dans `heart_and_soul_act1.inc` (deux `msgbox ..., MSGBOX_DEFAULT` enchaînés, puis
+`dynmultipush`/`dynmultistack`), rien d'anormal trouvé côté script. **Hypothèse la plus
+probable, non a confirmé** : le test a été fait sur une sauvegarde qui avait déjà dépassé la
+scène de fuite de Cinnabar *avant* que `FLAG_OBJET_PERDU_TROUVE` n'existe dans le ROM testé —
+ce flag n'est posé qu'une fois, au moment précis de la scène de fuite
+(`HeartSoul_CinnabarAttack_Verrouillage`), donc une sauvegarde qui a déjà dépassé ce point sur
+une version antérieure du ROM ne peut plus jamais l'obtenir rétroactivement. Résultat observé :
+le combat et le message de post-combat s'affichent (inchangés), mais
+`HeartSoul_EventScript_MiliceRoute1` se termine immédiatement sur son garde
+`goto_if_unset FLAG_OBJET_PERDU_TROUVE` sans rien afficher — silencieux, donc perçu comme
+« le dialogue ne se lance pas ». Pas de correctif de code appliqué sur cette hypothèse (rien
+d'anormal identifié à corriger) ; **à confirmer par un test sur une sauvegarde neuve**, ce que
+les deux changements suivants doivent justement faciliter.
+
+**Confort de test** :
+- `src/oak_speech_hns.c` : le discours du Professeur Chen (« This is a Pokemon » / « And you
+  are... ») est sauté ; la partie démarre directement sur l'écran de choix du genre. Voir le
+  commentaire dans le code pour le détail technique (nouvel état
+  `Task_NewGameHnsSpeech_SkipToGender` qui reproduit exactement les affectations que l'état
+  sauté aurait faites, sans animation ni texte).
+- `heart_and_soul_intro.inc` : `giveitem ITEM_POKE_BALL, 5` ajouté aux 18
+  `ChooseTeam_{type}`, même quantité que le flow starter Johto normal
+  (`NewBarkTown_Lab_hns/scripts.inc:497`).
+
+**Suite des sous-intrigues** (section 8/9 de `histoire.md`), toutes chiffrées au barème et
+toutes sur le chemin déjà construit (Cinnabar → Azuria) :
+- Viridian, commerçant résistant (+1) : PNJ « Cooltrainer M » du Mart (`ViridianCity_Mart_hns`,
+  texte déjà existant mentionnant Cinnabar) reflavoré.
+- Forêt de Jade, bûcherons déplacés (+1) : Doug (« Bug Catcher », déjà relevé niveau 34)
+  reflavoré, même motif que Quinn (inséré après le message de post-combat existant).
+- Azuria, canalisations sabotées (+1) : le « Boy » de Cerulean (flavor « SuperNerd »)
+  reflavoré.
+
+Chaque sous-intrigue suit exactement le même squelette : flag « résolu » posé dans les deux
+issues (aider/ignorer) pour éviter un déclenchement répété, `+1` réputation seulement sur
+l'issue positive, sous-script `call`/`return` dans `heart_and_soul_act2.inc`. Les PNJ à
+interaction classique (`MSGBOX_NPC`, pas de `trainerbattle`) n'ont aucune contrainte de
+placement particulière ; ceux à `trainerbattle_single` (Quinn, Doug) gardent la règle établie
+au retour de test n°6 : le nouveau contenu est inséré après le message de post-combat
+existant, jamais avant.
+
+`make hns -j4` : PASS, 0 erreur, à chaque étape. ROM à 94.44-94.45 %.
 
 `make hns -j4` : PASS, 0 erreur. ROM à 94.44 %.
