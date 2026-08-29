@@ -35,7 +35,10 @@ HeartSoul_CinnabarAttack_Verrouillage:
 	setflag FLAG_CINNABAR_VERROUILLEE
 	setflag FLAG_ACTE_1_TERMINE
 	msgbox HeartSoul_Text_FuiteRoute21, MSGBOX_DEFAULT
-	releaseall
+	closemessage
+	fadescreenswapbuffers FADE_TO_BLACK
+	warp MAP_PALLET_TOWN_HNS, 6, 8
+	waitstate
 	end
 
 HeartSoul_Text_AttaqueDebut:
@@ -81,6 +84,31 @@ HeartSoul_Text_RefugiesCacherResultat:
 
 HeartSoul_Text_FuiteRoute21:
 	.string "Il n'y a plus rien a faire ici.\p"
-	.string "Cinnabar est coupee du monde,\n"
-	.string "il faut fuir par la ROUTE 21 et\l"
-	.string "rejoindre le continent.$"
+	.string "Cinnabar est coupee du monde. Un\n"
+	.string "dernier bateau attend au port,\l"
+	.string "pret a partir vers le continent.$"
+
+// Blocage physique du retour a Cinnabar (FLAG_CINNABAR_VERROUILLEE). Declenche depuis
+// CinnabarIsland_hns_MapScripts (data/maps/CinnabarIsland_hns/scripts.inc), via
+// MAP_SCRIPT_ON_FRAME_TABLE + map_script_2 (pas ON_TRANSITION : meme regle que le blocage
+// deja documente sur CinnabarIsland_PokemonCenter_hns, un menu/msgbox interactif ne peut pas
+// tourner avant que l'ecran soit pret). Renvoie le joueur vers le point d'arrivee verifie sur
+// le continent (voir HeartSoul_CinnabarAttack_Verrouillage plus haut) plutot que de bloquer
+// silencieusement son deplacement.
+HeartSoul_EventScript_CinnabarVerrouilleeCheck::
+	goto_if_unset FLAG_CINNABAR_VERROUILLEE, HeartSoul_CinnabarVerrouillee_Skip
+	goto_if_set FLAG_ACTE_5_DEBLOQUE, HeartSoul_CinnabarVerrouillee_Skip
+	lockall
+	msgbox HeartSoul_Text_CinnabarToujoursVerrouillee, MSGBOX_DEFAULT
+	closemessage
+	fadescreenswapbuffers FADE_TO_BLACK
+	warp MAP_PALLET_TOWN_HNS, 6, 8
+	waitstate
+	end
+HeartSoul_CinnabarVerrouillee_Skip:
+	end
+
+HeartSoul_Text_CinnabarToujoursVerrouillee:
+	.string "La TEAM ROCKET tient toujours le\n"
+	.string "port. Impossible d'accoster ici\l"
+	.string "pour l'instant.$"

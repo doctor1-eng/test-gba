@@ -1,6 +1,7 @@
 CinnabarIsland_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CinnabarIsland_OnFrame
 	.byte 0
 
 CinnabarIsland_OnTransition:
@@ -8,6 +9,16 @@ CinnabarIsland_OnTransition:
 	callnative SetTimeBasedEncounters
 	setflag FLAG_HIDE_CINNABAR_BLUE
 	end
+
+@ Heart & Soul : blocage physique du retour a Cinnabar tant que FLAG_CINNABAR_VERROUILLEE est
+@ pose (voir HeartSoul_EventScript_CinnabarVerrouilleeCheck, data/scripts/heart_and_soul_act1.inc).
+@ ON_FRAME_TABLE et pas ON_TRANSITION : meme regle que ci-dessus, un msgbox/lockall ne peut pas
+@ tourner avant que l'ecran soit pret. VAR_TEMP_0, 0 est une condition toujours vraie (meme motif
+@ que CeruleanCity_Gym_hns/scripts.inc, CeruleanCity_Gym_OnFrame) : le script appele decide
+@ lui-meme, via goto_if_set/unset sur les vrais flags, s'il doit agir ou ne rien faire.
+CinnabarIsland_OnFrame::
+	map_script_2 VAR_TEMP_0, 0, HeartSoul_EventScript_CinnabarVerrouilleeCheck
+	.2byte 0
 
 @ Heart & Soul : l'attaque (HeartSoul_EventScript_CinnabarAttack, dans
 @ data/scripts/heart_and_soul_act1.inc) est enchainee directement depuis
