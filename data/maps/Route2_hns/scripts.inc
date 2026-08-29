@@ -41,10 +41,20 @@ Route2_EventScript_Ed::
 	end
 
 Route2_EventScript_Doug::
-	trainerbattle_single TRAINER_DOUG_HNS, Route2_Text_BugCatcherDoug_Seen, Route2_Text_BugCatcherDoug_Beaten
+	trainerbattle_single TRAINER_DOUG_HNS, Route2_Text_BugCatcherDoug_Seen, Route2_Text_BugCatcherDoug_Beaten, Route2_EventScript_DougPostBattle
+	msgbox Route2_Text_BugCatcherDoug_AfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+// Heart & Soul : meme correctif que Route1_EventScript_QuinnPostBattle (voir son commentaire,
+// data/maps/Route1_hns/scripts.inc) - event_script requis pour s'executer des la premiere
+// victoire, pas seulement au rappel.
+Route2_EventScript_DougPostBattle::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
 	msgbox Route2_Text_BugCatcherDoug_AfterBattle, MSGBOX_DEFAULT
 	call HeartSoul_EventScript_BucheronsForet
 	closemessage
+	release
 	end
 
 Route2_EventScript_Sign::

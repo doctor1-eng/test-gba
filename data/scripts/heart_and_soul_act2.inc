@@ -1,12 +1,20 @@
 // Heart & Soul - Acte II : l'exil et la mefiance
-// Deux sous-scripts appeles (call/return, pas goto/end) depuis les scripts existants des
+// Sous-scripts appeles (call/return, pas goto/end) depuis les scripts existants des
 // Champions de PEWTER (PierreDoute, dans PewterCity_Gym_hns/scripts.inc, EventScript_Brock)
 // et CERULEAN (OndineDoute, dans CeruleanCity_Gym_hns/scripts.inc, EventScript_Misty).
 // Le joueur est deja verrouille (lock/faceplayer) par le script appelant : ces sous-scripts
 // ne font ni lock ni release, seulement des msgbox, comme HeartSoul_EventScript_PickOne_*.
-// Se declenchent une seule fois chacun (garde FLAG_PIERRE_CONVAINCU / FLAG_ONDINE_CONVAINCUE),
-// uniquement une fois l'Acte I termine (FLAG_ACTE_1_TERMINE), avant le combat de badge normal
-// qui n'est pas modifie par cette passe.
+//
+// FLAG_PIERRE_CONVAINCU / FLAG_ONDINE_CONVAINCUE ne sont PAS poses par ces sous-scripts eux-
+// memes (retour de test n°8 : les poser ici les figeait des la premiere tentative, meme en
+// cas de defaite au combat qui suit - sur une deuxieme tentative apres une defaite, seul le
+// dialogue anglais d'origine se relancait, plus le notre). Ils sont poses par
+// HeartSoul_EventScript_PierreConvaincu / _OndineConvaincue, appeles depuis le script
+// appelant UNIQUEMENT dans la branche de victoire (aux cotes de
+// setflag FLAG_DEFEATED_PEWTER_GYM / FLAG_DEFEATED_CERULEAN_GYM) : la scene de doute se
+// rejoue donc a chaque nouvelle tentative tant que le combat n'est pas gagne, ce qui colle
+// mieux au texte ("Prouve-le sur le terrain") qu'un declenchement unique decorrele du
+// resultat du combat.
 
 HeartSoul_EventScript_PierreDoute::
 	goto_if_unset FLAG_ACTE_1_TERMINE, HeartSoul_PierreDoute_Skip
@@ -14,10 +22,13 @@ HeartSoul_EventScript_PierreDoute::
 	msgbox HeartSoul_Text_PierreDouteIntro, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_PierreDouteRecit, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_PierreDouteConclusion, MSGBOX_DEFAULT
-	setflag FLAG_PIERRE_CONVAINCU
-	call_if_set FLAG_ONDINE_CONVAINCUE, HeartSoul_EventScript_ActeIITermine
 	return
 HeartSoul_PierreDoute_Skip:
+	return
+
+HeartSoul_EventScript_PierreConvaincu::
+	setflag FLAG_PIERRE_CONVAINCU
+	call_if_set FLAG_ONDINE_CONVAINCUE, HeartSoul_EventScript_ActeIITermine
 	return
 
 HeartSoul_EventScript_OndineDoute::
@@ -26,10 +37,13 @@ HeartSoul_EventScript_OndineDoute::
 	msgbox HeartSoul_Text_OndineDouteIntro, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_OndineDouteRecit, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_OndineDouteConclusion, MSGBOX_DEFAULT
-	setflag FLAG_ONDINE_CONVAINCUE
-	call_if_set FLAG_PIERRE_CONVAINCU, HeartSoul_EventScript_ActeIITermine
 	return
 HeartSoul_OndineDoute_Skip:
+	return
+
+HeartSoul_EventScript_OndineConvaincue::
+	setflag FLAG_ONDINE_CONVAINCUE
+	call_if_set FLAG_PIERRE_CONVAINCU, HeartSoul_EventScript_ActeIITermine
 	return
 
 HeartSoul_EventScript_ActeIITermine::
