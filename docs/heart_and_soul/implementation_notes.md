@@ -281,20 +281,19 @@ toute nouvelle partie sur cette ROM. Documenté ici en évidence plutôt que noy
 - Menu des 18 types via le système `dynmultipush`/`dynmultistack` (liste déroulante réelle,
   scroll natif inclus — voir découverte technique ci-dessous), pas un `multichoice` statique
   qui ne supporte pas plus de quelques lignes sans le casser visuellement.
-- **Seul le type Feu mène à une sélection réelle** (les 20 Pokémon de la section 6 de
-  `histoire.md`, vérifiés un par un contre `include/constants/species.h`, y compris les 3
-  formes d'Alola qui utilisent le suffixe réel `_ALOLA` et non `_ALOLAN` comme on aurait pu le
-  deviner — `SPECIES_NINETALES_ALOLA`, `SPECIES_SANDSLASH_ALOLA`, `SPECIES_MAROWAK_ALOLA`).
-  Les 17 autres types affichent "Ce type n'est pas encore disponible" et renvoient au choix du
-  type — jamais de blocage, mais pas non plus une fausse liste. C'est exactement la portée que
-  le zip lui-même annonçait ("Feu en exemple complet, 17 types à dupliquer") : le mécanisme est
-  prouvé et prêt à dupliquer, la duplication réelle reste à faire.
-- Sélection de 4 Pokémon distincts : sous-script `HeartSoul_EventScript_PickOne_Feu` réutilisé
-  4 fois via `call`/`return`, avec un garde anti-doublon par `compare`/`goto_if_eq` qui rouvre
-  la liste si le joueur choisit deux fois le même Pokémon (pas de filtrage dynamique de la
-  liste — plus simple, zéro risque, suffisant pour la contrainte "aucun doublon").
+- **Les 18 types mènent désormais à une sélection réelle** (mise à jour du retour de test
+  n°3 — voir section dédiée plus bas). Chaque type a sa propre paire de scripts
+  `HeartSoul_EventScript_PickOne_{type}` / `HeartSoul_EventScript_ChooseTeam_{type}`, générée
+  avec exactement la même structure que Feu, y compris les formes spéciales qui utilisent le
+  suffixe réel `_ALOLA` et non `_ALOLAN` comme on aurait pu le deviner —
+  `SPECIES_NINETALES_ALOLA`, `SPECIES_SANDSLASH_ALOLA`, `SPECIES_MAROWAK_ALOLA`.
+- Sélection de 4 Pokémon distincts par type : sous-script `HeartSoul_EventScript_PickOne_{type}`
+  réutilisé 4 fois via `call`/`return`, avec un garde anti-doublon par `compare`/`goto_if_eq`
+  qui rouvre la liste si le joueur choisit deux fois le même Pokémon (pas de filtrage
+  dynamique de la liste — plus simple, zéro risque, suffisant pour la contrainte "aucun
+  doublon").
 - `givemon` niveau 34 pour les 4 choix, mêmes paramètres que le starter picker `_hns` existant
-  (`NewBarkTown_Lab_hns/scripts.inc`) — convention réutilisée à l'identique.
+  (`NewBarkTown_Lab_hns/scripts.inc`) — convention réutilisée à l'identique, pour les 18 types.
 
 ### Découverte technique : système de liste déroulante réelle déjà présent dans le moteur
 
@@ -412,11 +411,40 @@ Trois demandes suite au premier test réussi (les 4 Feu se choisissent bien) :
 
 `make hns` : PASS, 0 erreur après ces changements.
 
+## Retour de test n°3 : duplication du mécanisme Feu aux 17 autres types
+
+Suite à "continue le process", extension de `heart_and_soul_intro.inc` du seul type Feu
+(vertical slice initiale) aux 18 types complets.
+
+- **Génération** : script Python (`gen_intro_full.py`, scratchpad de session) qui produit,
+  pour chacun des 18 types, la même structure exacte que Feu (`PickOne_{type}` /
+  `ChooseTeam_{type}`, garde anti-doublon, `givemon` niveau 34, chaînage vers le sélecteur
+  d'attaques puis vers `HeartSoul_EventScript_CinnabarAttack`), à partir des listes d'espèces
+  par type de la section 6 de `histoire.md` vérifiées contre `include/constants/species.h`.
+  Le menu `HeartSoul_EventScript_ChooseType` (`switch VAR_TYPE_CHOISI`) pointe maintenant vers
+  les 18 `ChooseTeam_{type}` réels ; il n'y a plus de branche "type pas encore disponible".
+- **Noms français** : les ~200 espèces couvrant les 17 nouveaux types ont été vérifiées une
+  par une par recherche web (pas de traduction par lot ni par mémoire), après l'expérience du
+  retour n°2 où 4 noms mémorisés sur 20 s'étaient révélés être ceux de la pré-évolution. Aucun
+  nom manquant en sortie du générateur (`missing french names: []`).
+- Aucune nouvelle mécanique introduite dans cette passe : uniquement de la duplication
+  structurelle du modèle Feu déjà validé, plus la traduction. `data/scripts/heart_and_soul_act1.inc`,
+  les hooks de map et le reste de la logique Acte I sont inchangés.
+
+`make hns -j4` : PASS, 0 erreur. ROM à 94.44 % (contre 94.39 % avant l'extension — la marge
+avant le plafond de 32 Mo reste confortable malgré ~18x plus de contenu d'espèces/texte).
+Toujours **non testé en émulateur avec écran** (même limite que les retours précédents) :
+vérifié par compilation propre et relecture du fichier généré (nombre de scripts,
+disparition du placeholder), pas par une partie jouée.
+
 ## Statut
 
 Phase 0 (build baseline) : **terminée, PASS**.
 Phase audit (section 3 du brief) : **terminée**.
 Phase 1 (registre flags/vars) : **terminée, PASS**.
 Phase 2 (vertical slice, type Feu uniquement) : **compilée, PASS ; non testée en jeu**.
-Prochaine étape : dupliquer le mécanisme Feu vers les 17 autres types (mécanique, la
-structure est prouvée), puis playtest réel en émulateur, puis Actes II+.
+Phase 2bis (18 types complets, noms français, choix des attaques, chaussures de course) :
+**compilée, PASS ; non testée en jeu**.
+Prochaine étape : playtest réel en émulateur (priorité, avant d'empiler plus de contenu),
+puis warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo), blocage effectif du retour
+via `FLAG_CINNABAR_VERROUILLEE`, puis Acte II.
