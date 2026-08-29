@@ -1,0 +1,169 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Acte I : la chute de Cinnabar
+// Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// À ADAPTER : noms de maps réels (MAP_CINNABAR_*, MAP_ROUTE21), objets
+// événements (LOCALID_*), et vérifier les commandes exactes disponibles
+// dans votre version (applymovement, trainerbattle, warp, etc. peuvent
+// avoir une syntaxe légèrement différente selon la version du fork).
+//
+// PRÉREQUIS NARRATIF : ce script suppose que EventScript_FinSelection
+// (fichier intro_choix_type.pory) a déjà été joué — le joueur a son
+// équipe de 4 Pokémon niveau 34 avant le déclenchement de l'attaque.
+// =====================================================================
+
+// ---------------------------------------------------------------------
+// VARIABLES ET FLAGS UTILISÉS
+// ---------------------------------------------------------------------
+// FLAG_ATTAQUE_CINNABAR_LANCEE  -> empêche de rejouer la cutscène d'intro
+// FLAG_BLAINE_DISPARU           -> état de Blaine, lu dans les actes suivants
+// FLAG_REFUGIES_GUIDES          -> choix "guider vers le bateau" fait
+// FLAG_REFUGIES_CACHES          -> choix "cacher sur place" fait
+// FLAG_ACTE_1_TERMINE           -> déclenche l'ouverture de l'Acte II
+// FLAG_CINNABAR_VERROUILLEE     -> bloque le retour à Cinnabar jusqu'à l'Acte V
+// VAR_REPUTATION                -> déjà défini (section 9 du document d'histoire)
+
+// =====================================================================
+// DÉCLENCHEUR — script de map exécuté à l'arrivée sur Cinnabar
+// =====================================================================
+
+mapscripts MapScripts_Cinnabar {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (flag(FLAG_ATTAQUE_CINNABAR_LANCEE) == FALSE) {
+            call(EventScript_DebutAttaque)
+        }
+    }
+}
+
+// =====================================================================
+// ÉTAPE 1 — CUTSCENE D'OUVERTURE (alarme, grunts, disparition de Blaine)
+// =====================================================================
+
+script EventScript_DebutAttaque {
+    lockall
+    setflag(FLAG_ATTAQUE_CINNABAR_LANCEE)
+    playse(SE_ALARM)  // à remplacer par le SE réel disponible dans le fork
+    msgbox("Une sirène retentit dans toute la ville...", MSGBOX_DEFAULT)
+    applymovement(LOCALID_BLAINE, Movement_BlaineSEnfuit)
+    waitmovement(0)
+    msgbox("Blaine : \"Ils sont là ! Mets tes Pokémon à l'abri, je vais—\"", MSGBOX_DEFAULT)
+    removeobject(LOCALID_BLAINE)
+    setflag(FLAG_BLAINE_DISPARU)
+    msgbox("... Blaine a disparu dans la fumée.", MSGBOX_DEFAULT)
+    goto EventScript_PremierCombatForce
+    end
+}
+
+movement Movement_BlaineSEnfuit {
+    walk_left
+    walk_left
+    face_up
+}
+
+// =====================================================================
+// ÉTAPE 2 — COMBAT FORCÉ CONTRE UN GRUNT ROCKET (obstacle, pas boss)
+// =====================================================================
+
+script EventScript_PremierCombatForce {
+    msgbox("Rocket Grunt : \"Tiens, un Champion. Ça tombe bien.\"", MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_ROCKET_GRUNT_CINNABAR_1, "Tiens, un Champion.", "Pas cette fois !", EventScript_ApresCombatForce)
+    end
+}
+
+script EventScript_ApresCombatForce {
+    msgbox("Le passage vers le Mont Cinnabar est libre.", MSGBOX_DEFAULT)
+    releaseall
+    end
+}
+
+// =====================================================================
+// ÉTAPE 3 — LES RÉFUGIÉS DU MONT CINNABAR (choix moral, impact réputation)
+// =====================================================================
+// À placer sur l'objet événement du PNJ "réfugiés" dans la grotte du
+// Mont Cinnabar (map séparée, ex. MAP_MONT_CINNABAR_GROTTE).
+
+script EventScript_RefugiesMontCinnabar {
+    lock
+    faceplayer
+    msgbox("Une famille est cachée ici, terrifiée par le bruit des combats.", MSGBOX_DEFAULT)
+    msgbox("\"Le port est encore accessible... mais c'est risqué.\nQu'est-ce qu'on fait ?\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_CHOIX_REFUGIES, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: goto EventScript_GuiderRefugies       // "Je vous guide vers le bateau"
+        case 1: goto EventScript_CacherRefugies        // "Restez cachés ici, c'est plus sûr"
+        case MULTI_B_PRESSED: goto EventScript_RefugiesMontCinnabar
+    }
+    end
+}
+
+script EventScript_GuiderRefugies {
+    setflag(FLAG_REFUGIES_GUIDES)
+    addvar(VAR_REPUTATION, 2)
+    msgbox("Vous vous frayez un chemin jusqu'au port, sous le bruit des combats au loin.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script EventScript_CacherRefugies {
+    setflag(FLAG_REFUGIES_CACHES)
+    addvar(VAR_REPUTATION, 1)
+    msgbox("\"D'accord. On reste. Merci de ne pas nous avoir oubliés.\"", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// =====================================================================
+// ÉTAPE 4 — FUITE FINALE ET TRANSITION VERS L'ACTE II (Route 21)
+// =====================================================================
+// À placer sur l'objet événement / la tuile de sortie du port de Cinnabar.
+
+script EventScript_FuiteFinaleCinnabar {
+    lockall
+    msgbox("Le dernier bateau appareille. Cinnabar disparaît derrière vous.", MSGBOX_DEFAULT)
+    setflag(FLAG_ACTE_1_TERMINE)
+    setflag(FLAG_CINNABAR_VERROUILLEE)
+    warp(MAP_ROUTE21, 0, 0, 0)
+    waitstate
+    releaseall
+    end
+}
+
+// =====================================================================
+// ÉTAPE 5 — VERROUILLAGE DU RETOUR À CINNABAR (jusqu'à l'Acte V)
+// =====================================================================
+// À placer sur le script de warp qui mènerait normalement vers Cinnabar
+// depuis Route 21, pour empêcher un retour prématuré.
+
+script EventScript_TentativeRetourCinnabar {
+    lock
+    faceplayer
+    if (flag(FLAG_CINNABAR_VERROUILLEE) == TRUE) {
+        if (flag(FLAG_ACTE_5_DEBLOQUE) == FALSE) {
+            msgbox("La mer est trop dangereuse pour retourner à Cinnabar maintenant.", MSGBOX_DEFAULT)
+            release
+            end
+        }
+    }
+    warp(MAP_CINNABAR_ISLAND, 0, 0, 0)
+    waitstate
+    release
+    end
+}
+
+// =====================================================================
+// NOTES D'ADAPTATION
+// =====================================================================
+// 1. LOCALID_BLAINE, TRAINER_ROCKET_GRUNT_CINNABAR_1, MAP_ROUTE21,
+//    MAP_CINNABAR_ISLAND, SE_ALARM : remplacer par les constantes réelles
+//    déclarées dans votre projet (constants/trainers.h, layout des maps,
+//    liste des sons).
+// 2. MULTI_CHOIX_REFUGIES : définir cette liste multichoice avec les 2
+//    entrées exactes ("Je vous guide vers le bateau" / "Restez cachés").
+// 3. removeobject() peut nécessiter un flag de visibilité PNJ plutôt
+//    qu'une suppression directe selon la version du fork (vérifier
+//    VirtualObject / object_event visibility flags).
+// 4. Le combat forcé (étape 2) est volontairement simple (1 seul grunt,
+//    niveau faible) — c'est un obstacle narratif, pas un boss.
+// 5. FLAG_ACTE_5_DEBLOQUE doit être posé en fin d'Acte IV (à scripter
+//    dans le prochain lot, avec la logique d'ouverture d'acte).
+// =====================================================================

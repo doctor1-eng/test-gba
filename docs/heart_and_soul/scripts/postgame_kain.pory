@@ -1,0 +1,56 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Boss post-game : Commandant Kaïn
+// Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// Accessible uniquement si FLAG_ZONE_BONUS_DEBLOQUEE est actif
+// (posé dans epilogues.pory, palier "réputation exemplaire").
+// Équipe niveau 55-60, thème Poison/Ténèbres : Muk, Weezing, Crobat,
+// Skuntank, Drapion, Tyranitar (voir docs/histoire.md section 10).
+// =====================================================================
+
+script EventScript_EntreeSousSolsMansion {
+    lock
+    faceplayer
+    if (flag(FLAG_ZONE_BONUS_DEBLOQUEE) == FALSE) {
+        msgbox("Cette partie du manoir est scellée.", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    warp(MAP_CINNABAR_MANSION_SOUS_SOL, 0, 0, 0)
+    waitstate
+    release
+    end
+}
+
+script EventScript_CommandantKain {
+    lock
+    faceplayer
+    if (flag(FLAG_KAIN_VAINCU) == TRUE) {
+        goto EventScript_KainApresDefaite
+    }
+    msgbox("Un homme âgé, en uniforme délavé, se lève lentement.", MSGBOX_DEFAULT)
+    msgbox("Commandant Kaïn : \"Vingt ans que j'attends un ordre.\nLe premier visage que je vois, et ce n'est même pas le Boss.\nAutant en finir proprement.\"", MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_COMMANDANT_KAIN, "Autant en finir proprement.", "...", EventScript_KainApresCombat)
+    end
+}
+
+script EventScript_KainApresCombat {
+    setflag(FLAG_KAIN_VAINCU)
+    msgbox("Kaïn s'assoit simplement, indifférent à la suite.", MSGBOX_DEFAULT)
+    msgbox("Il ne se rend pas au sens classique — il te laisse simplement\naccéder aux archives.", MSGBOX_DEFAULT)
+    msgbox("Tu obtiens : Archives complètes du Pokémon Mansion.", MSGBOX_DEFAULT)
+    // giveitem(ITEM_ARCHIVES_MANSION) — ou tout autre objet de lore
+    // décidé pour représenter les archives (à définir)
+    release
+    end
+}
+
+script EventScript_KainApresDefaite {
+    msgbox("Kaïn reste assis, silencieux, dans les sous-sols du manoir.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// NOTES : MAP_CINNABAR_MANSION_SOUS_SOL et TRAINER_COMMANDANT_KAIN à
+// créer. Niveaux 55-60 à définir directement dans les données du
+// trainer (fichier trainers.party ou équivalent selon la version).

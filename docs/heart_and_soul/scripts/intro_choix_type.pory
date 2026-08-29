@@ -1,0 +1,211 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Choix du type + sélection de 4 Pokémon (niv. 34)
+// Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// À ADAPTER : noms de maps, constantes MULTI_*, SPECIES_*, et flags/vars
+// selon les conventions réelles de votre projet (vérifier include/constants/
+// et src/data/multichoice_lists.h ou équivalent).
+//
+// CONTRAINTE TECHNIQUE IMPORTANTE :
+// Le multichoice natif de pokeemerald(-expansion) affiche correctement
+// jusqu'à ~8-9 lignes à l'écran sans scroll. Pour proposer ~20 Pokémon,
+// deux options :
+//   (A) Paginer en 3 écrans de 7 (recommandé, pas de modif moteur)
+//   (B) Implémenter un menu scrollable custom (plus de travail, meilleur
+//       confort joueur) — non couvert par ce template, à faire évoluer
+//       si votre fork a déjà une base de menu scrollable (ex. Pokédex).
+// Ce template retient l'option (A) par défaut.
+// =====================================================================
+
+// ---------------------------------------------------------------------
+// VARIABLES ET FLAGS UTILISÉS (à déclarer dans include/constants/vars.h
+// et include/constants/flags.h)
+// ---------------------------------------------------------------------
+// VAR_TYPE_CHOISI       -> stocke l'index du type sélectionné (0-17)
+// VAR_TEAM_SLOT         -> compteur de Pokémon déjà choisis (0 à 4)
+// VAR_TEMP_SPECIES      -> stocke temporairement l'espèce sélectionnée
+// FLAG_INTRO_TYPE_FAIT  -> empêche de relancer la sélection une fois faite
+
+// =====================================================================
+// ÉTAPE 1 — CHOIX DU TYPE (paginé en 2 écrans de 9)
+// =====================================================================
+
+script EventScript_ChoixDuType {
+    lock
+    faceplayer
+    if (flag(FLAG_INTRO_TYPE_FAIT) == TRUE) {
+        goto EventScript_DejaChoisi
+    }
+    msgbox("Quel type de Pokémon veux-tu représenter\nen tant que Champion·ne ?", MSGBOX_DEFAULT)
+    goto EventScript_TypePage1
+    end
+}
+
+script EventScript_TypePage1 {
+    // Page 1 : Normal, Feu, Eau, Plante, Électrik, Glace, Combat, Poison, Sol
+    multichoice(0, 0, MULTI_TYPES_PAGE1, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: setvar(VAR_TYPE_CHOISI, TYPE_NORMAL); goto EventScript_ConfirmerType
+        case 1: setvar(VAR_TYPE_CHOISI, TYPE_FEU); goto EventScript_ConfirmerType
+        case 2: setvar(VAR_TYPE_CHOISI, TYPE_EAU); goto EventScript_ConfirmerType
+        case 3: setvar(VAR_TYPE_CHOISI, TYPE_PLANTE); goto EventScript_ConfirmerType
+        case 4: setvar(VAR_TYPE_CHOISI, TYPE_ELECTRIK); goto EventScript_ConfirmerType
+        case 5: setvar(VAR_TYPE_CHOISI, TYPE_GLACE); goto EventScript_ConfirmerType
+        case 6: setvar(VAR_TYPE_CHOISI, TYPE_COMBAT); goto EventScript_ConfirmerType
+        case 7: setvar(VAR_TYPE_CHOISI, TYPE_POISON); goto EventScript_ConfirmerType
+        case 8: goto EventScript_TypePage2  // "Page suivante"
+        case MULTI_B_PRESSED: goto EventScript_TypePage1
+    }
+    end
+}
+
+script EventScript_TypePage2 {
+    // Page 2 : Sol, Vol, Psy, Insecte, Roche, Spectre, Dragon, Ténèbres, Acier, Fée
+    multichoice(0, 0, MULTI_TYPES_PAGE2, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: setvar(VAR_TYPE_CHOISI, TYPE_SOL); goto EventScript_ConfirmerType
+        case 1: setvar(VAR_TYPE_CHOISI, TYPE_VOL); goto EventScript_ConfirmerType
+        case 2: setvar(VAR_TYPE_CHOISI, TYPE_PSY); goto EventScript_ConfirmerType
+        case 3: setvar(VAR_TYPE_CHOISI, TYPE_INSECTE); goto EventScript_ConfirmerType
+        case 4: setvar(VAR_TYPE_CHOISI, TYPE_ROCHE); goto EventScript_ConfirmerType
+        case 5: setvar(VAR_TYPE_CHOISI, TYPE_SPECTRE); goto EventScript_ConfirmerType
+        case 6: setvar(VAR_TYPE_CHOISI, TYPE_DRAGON); goto EventScript_ConfirmerType
+        case 7: setvar(VAR_TYPE_CHOISI, TYPE_TENEBRES); goto EventScript_ConfirmerType
+        case 8: setvar(VAR_TYPE_CHOISI, TYPE_ACIER); goto EventScript_ConfirmerType
+        case MULTI_B_PRESSED: goto EventScript_TypePage1
+    }
+    end
+    // Note : Fée (10e entrée de la page 2) nécessite soit une page 3,
+    // soit de retirer une entrée d'une des deux pages existantes.
+    // À trancher selon la limite réelle du multichoice de votre fork.
+}
+
+script EventScript_ConfirmerType {
+    msgbox("Tu as choisi le type {STR_VAR_1}.\nEst-ce ton choix définitif ?", MSGBOX_YESNO)
+    switch (var(VAR_RESULT)) {
+        case NO: goto EventScript_ChoixDuType
+        case YES: goto EventScript_SelectionPokemon
+    }
+    end
+}
+
+// =====================================================================
+// ÉTAPE 2 — AFFICHAGE DE LA LISTE DE 20 POKÉMON DU TYPE CHOISI
+// =====================================================================
+// Chaque type a sa propre table de 20 espèces (voir data ci-dessous).
+// Ici : dispatch vers le script de liste correspondant au type choisi.
+
+script EventScript_SelectionPokemon {
+    setvar(VAR_TEAM_SLOT, 0)
+    switch (var(VAR_TYPE_CHOISI)) {
+        case TYPE_NORMAL: goto EventScript_Liste_Normal
+        case TYPE_FEU: goto EventScript_Liste_Feu
+        case TYPE_EAU: goto EventScript_Liste_Eau
+        // ... répéter pour les 18 types (un script de liste par type)
+    }
+    end
+}
+
+// ---------------------------------------------------------------------
+// EXEMPLE COMPLET POUR UN TYPE (Feu) — à dupliquer pour les 17 autres
+// ---------------------------------------------------------------------
+// Liste complète (20) : Charizard, Arcanine, Rapidash, Magmortar, Flareon,
+// Ninetales, Typhlosion, Torkoal, Camerupt, Houndoom, Infernape, Blaziken,
+// Emboar, Delphox, Talonflame, Volcarona, Chandelure, Simisear, Pyroar,
+// Magcargo (voir section 6 du document d'histoire pour la répartition
+// des rôles de combat).
+//
+// Paginée en 3 écrans de 7 (7+7+6) pour rester compatible multichoice natif.
+
+script EventScript_Liste_Feu {
+    msgbox("Choisis un Pokémon Feu ({STR_VAR_1}/4 choisis) :", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_FEU_PAGE1, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: setvar(VAR_TEMP_SPECIES, SPECIES_CHARIZARD); goto EventScript_ValiderChoixMon
+        case 1: setvar(VAR_TEMP_SPECIES, SPECIES_ARCANINE); goto EventScript_ValiderChoixMon
+        case 2: setvar(VAR_TEMP_SPECIES, SPECIES_RAPIDASH); goto EventScript_ValiderChoixMon
+        case 3: setvar(VAR_TEMP_SPECIES, SPECIES_MAGMORTAR); goto EventScript_ValiderChoixMon
+        case 4: setvar(VAR_TEMP_SPECIES, SPECIES_FLAREON); goto EventScript_ValiderChoixMon
+        case 5: setvar(VAR_TEMP_SPECIES, SPECIES_NINETALES); goto EventScript_ValiderChoixMon
+        case 6: goto EventScript_Liste_Feu_Page2  // "Page suivante"
+        case MULTI_B_PRESSED: goto EventScript_Liste_Feu
+    }
+    end
+}
+
+script EventScript_Liste_Feu_Page2 {
+    multichoice(0, 0, MULTI_FEU_PAGE2, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: setvar(VAR_TEMP_SPECIES, SPECIES_TYPHLOSION); goto EventScript_ValiderChoixMon
+        case 1: setvar(VAR_TEMP_SPECIES, SPECIES_TORKOAL); goto EventScript_ValiderChoixMon
+        case 2: setvar(VAR_TEMP_SPECIES, SPECIES_CAMERUPT); goto EventScript_ValiderChoixMon
+        case 3: setvar(VAR_TEMP_SPECIES, SPECIES_HOUNDOOM); goto EventScript_ValiderChoixMon
+        case 4: setvar(VAR_TEMP_SPECIES, SPECIES_INFERNAPE); goto EventScript_ValiderChoixMon
+        case 5: setvar(VAR_TEMP_SPECIES, SPECIES_BLAZIKEN); goto EventScript_ValiderChoixMon
+        case 6: goto EventScript_Liste_Feu_Page3
+        case MULTI_B_PRESSED: goto EventScript_Liste_Feu
+    }
+    end
+}
+
+script EventScript_Liste_Feu_Page3 {
+    multichoice(0, 0, MULTI_FEU_PAGE3, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: setvar(VAR_TEMP_SPECIES, SPECIES_EMBOAR); goto EventScript_ValiderChoixMon
+        case 1: setvar(VAR_TEMP_SPECIES, SPECIES_DELPHOX); goto EventScript_ValiderChoixMon
+        case 2: setvar(VAR_TEMP_SPECIES, SPECIES_TALONFLAME); goto EventScript_ValiderChoixMon
+        case 3: setvar(VAR_TEMP_SPECIES, SPECIES_VOLCARONA); goto EventScript_ValiderChoixMon
+        case 4: setvar(VAR_TEMP_SPECIES, SPECIES_CHANDELURE); goto EventScript_ValiderChoixMon
+        case 5: setvar(VAR_TEMP_SPECIES, SPECIES_SIMISEAR); goto EventScript_ValiderChoixMon
+        case MULTI_B_PRESSED: goto EventScript_Liste_Feu_Page2
+    }
+    end
+    // Pyroar et Magcargo : à ajouter en réduisant une entrée d'une des
+    // 3 pages, ou en ajoutant une 4e page courte (2 entrées).
+}
+
+// =====================================================================
+// ÉTAPE 3 — VALIDATION D'UN CHOIX ET DON DU POKÉMON (niveau 34)
+// =====================================================================
+
+script EventScript_ValiderChoixMon {
+    givemon(var(VAR_TEMP_SPECIES), 34, ITEM_NONE, 0, 0, 0)
+    addvar(VAR_TEAM_SLOT, 1)
+    if (var(VAR_TEAM_SLOT) < 4) {
+        goto EventScript_SelectionPokemon  // relance la liste pour le prochain slot
+    } else {
+        goto EventScript_FinSelection
+    }
+    end
+}
+
+script EventScript_FinSelection {
+    setflag(FLAG_INTRO_TYPE_FAIT)
+    msgbox("Ton équipe est prête. Bonne chance, Champion·ne.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script EventScript_DejaChoisi {
+    msgbox("Tu as déjà fait ton choix.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// =====================================================================
+// NOTES D'ADAPTATION
+// =====================================================================
+// 1. Les constantes MULTI_TYPES_PAGE1/2, MULTI_FEU_PAGE1/2/3, etc. doivent
+//    être définies dans votre fichier de listes multichoice (souvent
+//    src/data/text/multichoice_lists.h ou équivalent selon la version du
+//    fork), avec le texte exact affiché pour chaque entrée + "Page suivante"
+//    comme dernière ligne de chaque page pleine.
+// 2. Dupliquer EventScript_Liste_Feu (et ses pages) pour les 17 autres
+//    types, en utilisant les listes de la section 6 du document d'histoire.
+// 3. givemon() : vérifier la syntaxe exacte de la commande dans votre
+//    version du fork (certains forks utilisent createmon + un système
+//    d'ajout à l'équipe séparé plutôt qu'une commande unique).
+// 4. Envisager un écran de confirmation finale ("Voici ton équipe : X, Y,
+//    Z, W — confirmer ?") avant de verrouiller FLAG_INTRO_TYPE_FAIT,
+//    pour permettre de recommencer en cas d'erreur de sélection.
+// =====================================================================

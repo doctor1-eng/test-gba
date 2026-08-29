@@ -1,0 +1,84 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Épilogues (branchement selon VAR_REPUTATION)
+// Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// Déclenché depuis blue_final.pory (EventScript_DeclencherEpilogue),
+// juste après FLAG_BLUE_VAINCU. Barème complet : docs/histoire.md
+// section 9. Seuils : <=8 ternie, 9-16 équilibrée, >=17 exemplaire.
+// FLAGS : FLAG_EPILOGUE_JOUE, FLAG_ZONE_BONUS_DEBLOQUEE (post-game)
+// =====================================================================
+
+script EventScript_DeclencherEpilogue {
+    if (flag(FLAG_EPILOGUE_JOUE) == TRUE) {
+        end
+    }
+    setflag(FLAG_EPILOGUE_JOUE)
+    if (var(VAR_REPUTATION) >= 17) {
+        goto EventScript_EpilogueExemplaire
+    } elif (var(VAR_REPUTATION) >= 9) {
+        goto EventScript_EpilogueEquilibre
+    } else {
+        goto EventScript_EpilogueTerni
+    }
+    end
+}
+
+// ---------------------------------------------------------------------
+// ÉPILOGUE — Réputation ternie (<= 8)
+// ---------------------------------------------------------------------
+script EventScript_EpilogueTerni {
+    msgbox("Cinnabar renaît, mais lentement. Les bateaux reviennent un à un,\nsans cérémonie.", MSGBOX_DEFAULT)
+    msgbox("Pierre, Ondine et les autres Champions envoient un message de\nfélicitations officiel, signé, distant. Aucun d'eux ne fait le\ndéplacement.", MSGBOX_DEFAULT)
+    if (flag(FLAG_BLAINE_SAUVE) == TRUE) {
+        msgbox("Blaine reste en retrait, marqué par sa captivité.\nIl n'évoque jamais publiquement ce qui s'est passé.", MSGBOX_DEFAULT)
+    } else {
+        msgbox("La disparition de Blaine reste sans réponse — un vide que même\nla victoire sur Blue ne comble pas.", MSGBOX_DEFAULT)
+    }
+    msgbox("\"On a gagné. Personne n'est venu le dire.\"", MSGBOX_DEFAULT)
+    releaseall
+    end
+}
+
+// ---------------------------------------------------------------------
+// ÉPILOGUE — Réputation équilibrée (9 à 16)
+// ---------------------------------------------------------------------
+script EventScript_EpilogueEquilibre {
+    msgbox("La reconstruction de Cinnabar s'organise avec l'aide ponctuelle\nde quelques Champions.", MSGBOX_DEFAULT)
+    if (flag(FLAG_BLAINE_SAUVE) == TRUE) {
+        msgbox("Blaine reprend discrètement sa place de mentor.\n\"Content que tu aies tenu.\"", MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_TERRENCE_CONVAINCU) == TRUE) {
+        msgbox("Terrence réapparaît, disponible pour un combat amical.", MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_KESS_CONVAINCUE) == TRUE) {
+        msgbox("Kess réapparaît, disponible pour un combat amical.", MSGBOX_DEFAULT)
+    }
+    msgbox("\"Ça ne répare pas tout. Mais ça repart.\"", MSGBOX_DEFAULT)
+    releaseall
+    end
+}
+
+// ---------------------------------------------------------------------
+// ÉPILOGUE — Réputation exemplaire (>= 17)
+// ---------------------------------------------------------------------
+script EventScript_EpilogueExemplaire {
+    msgbox("Cinnabar accueille une cérémonie de reconstruction où tous les\nChampions du Kanto sont présents.", MSGBOX_DEFAULT)
+    if (flag(FLAG_BLAINE_SAUVE) == TRUE) {
+        msgbox("Blaine prend la parole publiquement : il raconte sa captivité,\nsalue le joueur, et remet en question le silence passé de la Ligue.", MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_TERRENCE_CONVAINCU) == TRUE) {
+        msgbox("Terrence supervise désormais la sécurisation du tunnel.", MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_KESS_CONVAINCUE) == TRUE) {
+        msgbox("Kess obtient la reconnaissance légale de la réserve Safari.", MSGBOX_DEFAULT)
+    }
+    msgbox("\"Pour une fois, Kanto entier a regardé dans la même direction.\"", MSGBOX_DEFAULT)
+    setflag(FLAG_ZONE_BONUS_DEBLOQUEE)
+    msgbox("Un accès aux sous-sols du Pokémon Mansion est désormais ouvert.", MSGBOX_DEFAULT)
+    releaseall
+    end
+}
+
+// NOTES : FLAG_BLAINE_SAUVE doit être posé dans le script de sauvetage
+// de Blaine (Acte IV/V, non détaillé ici — dépend de l'endroit choisi
+// pour sa captivité : Silph Co ou Cinnabar Mansion selon docs/histoire.md).

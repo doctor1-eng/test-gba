@@ -1,0 +1,207 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Quêtes annexes par ville/route (compact)
+// Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// Le texte narratif complet de chaque quête est dans docs/histoire.md
+// section 8. Ici : uniquement le squelette fonctionnel (flag + éventuel
+// gain de réputation selon le barème de la section 9). À enrichir de
+// dialogues complets au moment de l'intégration réelle.
+// =====================================================================
+
+// --- Route 1 : objet perdu de la famille de réfugiés ---
+script EventScript_Route1_ObjetPerdu {
+    lock
+    faceplayer
+    if (flag(FLAG_ROUTE1_OBJET_RENDU) == TRUE) {
+        msgbox("\"Merci encore pour votre aide.\"", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("\"Vous avez retrouvé notre bien ? Merci infiniment.\"", MSGBOX_DEFAULT)
+    setflag(FLAG_ROUTE1_OBJET_RENDU)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// --- Viridian City : commerçant résistant ---
+script EventScript_Viridian_CommercantResistant {
+    lock
+    faceplayer
+    if (flag(FLAG_VIRIDIAN_COMMERCANT_AIDE) == TRUE) {
+        msgbox("\"Reste prudent, dehors.\"", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("\"Aide-moi à faire passer ces informations, discrètement.\"", MSGBOX_DEFAULT)
+    setflag(FLAG_VIRIDIAN_COMMERCANT_AIDE)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// --- Viridian Forest : bûcherons déplacés ---
+script EventScript_ViridianForest_Bucherons {
+    lock
+    faceplayer
+    if (flag(FLAG_FORET_BUCHERONS_AIDES) == TRUE) {
+        msgbox("\"On s'en sort, grâce à toi.\"", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("\"On n'a plus de travail depuis que la Team Rocket a\n'repris' la forêt. Tu peux nous aider ?\"", MSGBOX_DEFAULT)
+    setflag(FLAG_FORET_BUCHERONS_AIDES)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// --- Mont Sélénite : chercheuse rationaliste ---
+script EventScript_MontSelenite_Chercheuse {
+    lock
+    faceplayer
+    if (flag(FLAG_CHERCHEUSE_SOUTENUE) == TRUE) {
+        msgbox("\"La science finira par avoir raison du folklore.\"", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("\"Selen raconte n'importe quoi sur les météorites. Aide-moi\nà prouver mes recherches ?\"", MSGBOX_DEFAULT)
+    setflag(FLAG_CHERCHEUSE_SOUTENUE)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// --- Cerulean City : réparation des canalisations ---
+script EventScript_Cerulean_Canalisations {
+    lock
+    faceplayer
+    if (flag(FLAG_CERULEAN_CANALISATIONS_REPAREES) == TRUE) {
+        msgbox("L'eau coule normalement, désormais.", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("\"Le sabotage Rocket a inondé une partie de la ville.\nUn coup de main ?\"", MSGBOX_DEFAULT)
+    setflag(FLAG_CERULEAN_CANALISATIONS_REPAREES)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// --- Rock Tunnel : mineurs piégés (indépendant de Terrence) ---
+script EventScript_RockTunnel_MineursPieges {
+    lock
+    faceplayer
+    if (flag(FLAG_MINEURS_SAUVES) == TRUE) {
+        msgbox("\"On ne l'oubliera pas.\"", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("Des voix étouffées vous parviennent d'une galerie effondrée.", MSGBOX_DEFAULT)
+    setflag(FLAG_MINEURS_SAUVES)
+    addvar(VAR_REPUTATION, 2)
+    release
+    end
+}
+
+// --- Vermilion City : interception radio (Major Bob) ---
+script EventScript_Vermilion_InterceptionRadio {
+    lock
+    faceplayer
+    if (flag(FLAG_INTERCEPTION_RADIO_REUSSIE) == TRUE) {
+        msgbox("\"Toujours rien de nouveau sur les fréquences.\"", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("Major Bob : \"Aide-moi à décoder cette transmission Rocket.\"", MSGBOX_DEFAULT)
+    // Ici : insérer un mini-jeu ou une séquence de choix si le fork le permet.
+    setflag(FLAG_INTERCEPTION_RADIO_REUSSIE)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// --- Zone Safari : libération des Pokémon braconnés ---
+script EventScript_Safari_LibererPokemon {
+    lock
+    faceplayer
+    if (flag(FLAG_POKEMON_BRACONNES_LIBERES) == TRUE) {
+        msgbox("Les cages sont vides, désormais.", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("Des Pokémon capturés illégalement s'agitent dans leurs cages.", MSGBOX_DEFAULT)
+    setflag(FLAG_POKEMON_BRACONNES_LIBERES)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// --- Fuchsia City : débat du clan de Koga ---
+script EventScript_Fuchsia_DebatKoga {
+    lock
+    faceplayer
+    if (flag(FLAG_DEBAT_KOGA_RESOLU) == TRUE) {
+        msgbox("Le clan a choisi sa voie.", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("\"Engagement direct ou stratégie de l'ombre : à toi de trancher.\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_FUCHSIA_KOGA, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: setflag(FLAG_KOGA_ENGAGEMENT_DIRECT); goto EventScript_Fuchsia_DebatKoga_Fin
+        case 1: setflag(FLAG_KOGA_STRATEGIE_OMBRE); goto EventScript_Fuchsia_DebatKoga_Fin
+        case MULTI_B_PRESSED: goto EventScript_Fuchsia_DebatKoga
+    }
+    end
+}
+
+script EventScript_Fuchsia_DebatKoga_Fin {
+    setflag(FLAG_DEBAT_KOGA_RESOLU)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// --- Céladopole : financement Rocket du grand magasin ---
+script EventScript_Celadopole_FinancementRocket {
+    lock
+    faceplayer
+    if (flag(FLAG_FINANCEMENT_ROCKET_EXPOSE) == TRUE) {
+        msgbox("Le scandale a déjà éclaté.", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("Les registres du sous-sol du grand magasin ne mentent pas.", MSGBOX_DEFAULT)
+    setflag(FLAG_FINANCEMENT_ROCKET_EXPOSE)
+    addvar(VAR_REPUTATION, 2)
+    release
+    end
+}
+
+// --- Saffron / Silph Co : documents sur Mira Voss ---
+script EventScript_Saffron_DocumentsMiraVoss {
+    lock
+    faceplayer
+    if (flag(FLAG_DOCUMENTS_MIRA_VOSS_LUS) == TRUE) {
+        msgbox("Vous avez déjà lu ce dossier.", MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox("Un dossier RH mentionne l'éviction de Mira Voss au profit\nd'un cadre mieux connecté.", MSGBOX_DEFAULT)
+    setflag(FLAG_DOCUMENTS_MIRA_VOSS_LUS)
+    addvar(VAR_REPUTATION, 1)
+    release
+    end
+}
+
+// NOTES GÉNÉRALES :
+// - Pallet Town (jeune dresseur), Pewter City (Pierre/vivres) et
+//   Cinnabar (réfugiés du Mont Cinnabar) ont des scripts dédiés plus
+//   développés ailleurs (cinnabar_acte1.pory pour Cinnabar). Pewter et
+//   Pallet sont volontairement de simples scènes de dialogue sans choix
+//   ni impact réputation direct (voir docs/histoire.md section 8) — pas
+//   de script séparé nécessaire, une simple série de msgbox suffit.
+// - MULTI_FUCHSIA_KOGA à définir avec les 2 libellés exacts.
+// - Tous les FLAG_* de ce fichier sont à déclarer dans
+//   include/constants/flags.h.

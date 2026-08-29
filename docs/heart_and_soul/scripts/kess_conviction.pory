@@ -1,0 +1,107 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Conviction de Kess (Zone Safari)
+// Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// FLAGS/VARS : VAR_PERSUASION_KESS, FLAG_KESS_RESOLUE,
+// FLAG_KESS_CONVAINCUE, FLAG_KESS_COMBAT_ALLEGE, FLAG_KESS_VAINCUE
+// =====================================================================
+
+script EventScript_Kess {
+    lock
+    faceplayer
+    if (flag(FLAG_KESS_RESOLUE) == TRUE) {
+        goto EventScript_KessDejaResolue
+    }
+    setvar(VAR_PERSUASION_KESS, 0)
+    msgbox("Kess : \"Ne m'oblige pas à faire ça.\"", MSGBOX_DEFAULT)
+    goto EventScript_KessQ1
+    end
+}
+
+script EventScript_KessQ1 {
+    msgbox("\"Blue menace vraiment tes employés si tu n'obéis pas ?\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_KESS_Q1, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_PERSUASION_KESS, 2); goto EventScript_KessQ2   // "Je peux organiser leur protection dès maintenant."
+        case 1: addvar(VAR_PERSUASION_KESS, 1); goto EventScript_KessQ2   // "C'est vraiment grave ?"
+        case 2: goto EventScript_KessCombatComplet                        // "Ce n'est pas mon problème, bats-toi." (court-circuit)
+        case MULTI_B_PRESSED: goto EventScript_KessQ1
+    }
+    end
+}
+
+script EventScript_KessQ2 {
+    msgbox("Kess : \"Le braconnage que je fais pour Blue... tu crois que j'y crois ?\"", MSGBOX_DEFAULT)
+    msgbox("\"Non, mais je n'ai pas le choix.\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_KESS_Q2, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_PERSUASION_KESS, 2); goto EventScript_KessQ3   // "Alors laisse-moi te donner ce choix."
+        case 1: addvar(VAR_PERSUASION_KESS, -1); goto EventScript_KessQ3  // Menacer de révéler son rôle publiquement
+        case 2: addvar(VAR_PERSUASION_KESS, 0); goto EventScript_KessQ3   // (ne rien dire de concret)
+        case MULTI_B_PRESSED: goto EventScript_KessQ2
+    }
+    end
+}
+
+script EventScript_KessQ3 {
+    msgbox("\"Si je bats Blue, la réserve retrouve son statut légal — tu as ma parole.\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_KESS_Q3, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_PERSUASION_KESS, 1); goto EventScript_KessResoudre   // Accepter la promesse
+        case 1: addvar(VAR_PERSUASION_KESS, 2); goto EventScript_KessResoudre   // Exiger une garantie écrite d'un Champion
+        case 2: addvar(VAR_PERSUASION_KESS, 0); goto EventScript_KessResoudre   // Ignorer, combattre
+        case MULTI_B_PRESSED: goto EventScript_KessQ3
+    }
+    end
+}
+
+script EventScript_KessResoudre {
+    setflag(FLAG_KESS_RESOLUE)
+    if (var(VAR_PERSUASION_KESS) >= 5) {
+        goto EventScript_KessRalliee
+    } elif (var(VAR_PERSUASION_KESS) >= 3) {
+        goto EventScript_KessCombatAllege
+    } else {
+        goto EventScript_KessCombatComplet
+    }
+    end
+}
+
+script EventScript_KessRalliee {
+    setflag(FLAG_KESS_CONVAINCUE)
+    addvar(VAR_REPUTATION, 2)
+    msgbox("Kess : \"...Merci. Je vais faire libérer les Pokémon retenus ici.\"", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script EventScript_KessCombatAllege {
+    setflag(FLAG_KESS_CONVAINCUE)
+    addvar(VAR_REPUTATION, 1)
+    msgbox("Kess : \"Je dois quand même vérifier que tu es à la hauteur. Bats-toi.\"", MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_KESS_ALLEGE, "Bats-toi.", "... Merci.", EventScript_KessApresCombat)
+    end
+}
+
+script EventScript_KessCombatComplet {
+    setflag(FLAG_KESS_RESOLUE)
+    msgbox("Kess : \"Je n'ai pas le choix. Désolée.\"", MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_KESS_COMPLET, "Désolée.", "... C'est terminé.", EventScript_KessApresCombat)
+    end
+}
+
+script EventScript_KessApresCombat {
+    setflag(FLAG_KESS_VAINCUE)
+    msgbox("La Zone Safari est de nouveau accessible.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script EventScript_KessDejaResolue {
+    msgbox("Kess : \"On a déjà réglé ça.\"", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// NOTES : MULTI_KESS_Q1/Q2/Q3 à définir avec les libellés exacts
+// (voir docs/histoire.md, section "Lieutenants régionaux").

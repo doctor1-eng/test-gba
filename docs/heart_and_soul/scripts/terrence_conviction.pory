@@ -1,0 +1,111 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Conviction de Terrence (Route de la Centrale)
+// Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// FLAGS/VARS : VAR_PERSUASION_TERRENCE, FLAG_TERRENCE_RESOLU,
+// FLAG_TERRENCE_CONVAINCU, FLAG_TERRENCE_COMBAT_ALLEGE, FLAG_TERRENCE_VAINCU
+// VAR_REPUTATION (déjà défini)
+// =====================================================================
+
+script EventScript_Terrence {
+    lock
+    faceplayer
+    if (flag(FLAG_TERRENCE_RESOLU) == TRUE) {
+        goto EventScript_TerrenceDejaResolu
+    }
+    setvar(VAR_PERSUASION_TERRENCE, 0)
+    msgbox("Terrence : \"Encore un qui vient jouer les héros. Écoute d'abord.\"", MSGBOX_DEFAULT)
+    goto EventScript_TerrenceQ1
+    end
+}
+
+script EventScript_TerrenceQ1 {
+    msgbox("\"Si tu perds ici, Blue effacera ma dette ?\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_TERRENCE_Q1, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_PERSUASION_TERRENCE, 0); goto EventScript_TerrenceQ2   // "Blue tient toujours parole."
+        case 1: addvar(VAR_PERSUASION_TERRENCE, 2); goto EventScript_TerrenceQ2   // "As-tu déjà vu quelqu'un payé après un échec ?"
+        case 2: goto EventScript_TerrenceCombatComplet                            // "Je me fiche de ta dette, bats-toi." (court-circuit)
+        case MULTI_B_PRESSED: goto EventScript_TerrenceQ1
+    }
+    end
+}
+
+script EventScript_TerrenceQ2 {
+    msgbox("\"Et si tu me trouvais un travail légal qui couvre ma dette ?\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_TERRENCE_Q2, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_PERSUASION_TERRENCE, 2); goto EventScript_TerrenceQ3   // "Je peux t'obtenir un contrat minier légitime."
+        case 1: addvar(VAR_PERSUASION_TERRENCE, 0); goto EventScript_TerrenceQ3   // "Trouve une solution toi-même."
+        case 2: addvar(VAR_PERSUASION_TERRENCE, -1); goto EventScript_TerrenceQ3  // "Ce n'est pas mon problème."
+        case MULTI_B_PRESSED: goto EventScript_TerrenceQ2
+    }
+    end
+}
+
+script EventScript_TerrenceQ3 {
+    msgbox("\"Le tunnel que je garde sera détruit si Blue perd, tu le sais ?\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_TERRENCE_Q3, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_PERSUASION_TERRENCE, 2); goto EventScript_TerrenceResoudre  // "Exactement, et ta ville avec lui."
+        case 1: addvar(VAR_PERSUASION_TERRENCE, -1); goto EventScript_TerrenceResoudre // "Ce n'est qu'un tunnel."
+        case 2: addvar(VAR_PERSUASION_TERRENCE, 0); goto EventScript_TerrenceResoudre  // (ne rien dire)
+        case MULTI_B_PRESSED: goto EventScript_TerrenceQ3
+    }
+    end
+}
+
+script EventScript_TerrenceResoudre {
+    setflag(FLAG_TERRENCE_RESOLU)
+    if (var(VAR_PERSUASION_TERRENCE) >= 5) {
+        goto EventScript_TerrenceRallie
+    } elif (var(VAR_PERSUASION_TERRENCE) >= 3) {
+        goto EventScript_TerrenceCombatAllege
+    } else {
+        goto EventScript_TerrenceCombatComplet
+    }
+    end
+}
+
+script EventScript_TerrenceRallie {
+    setflag(FLAG_TERRENCE_CONVAINCU)
+    addvar(VAR_REPUTATION, 2)
+    msgbox("Terrence : \"... D'accord. Je descends les armes. Mais tu me trouves ce contrat.\"", MSGBOX_DEFAULT)
+    msgbox("Terrence te donne une information : un passage secondaire vers Silph Co.", MSGBOX_DEFAULT)
+    // setflag(FLAG_INFO_PASSAGE_SILPH) — à utiliser dans le script de l'Acte IV
+    release
+    end
+}
+
+script EventScript_TerrenceCombatAllege {
+    setflag(FLAG_TERRENCE_CONVAINCU)
+    addvar(VAR_REPUTATION, 1)
+    msgbox("Terrence : \"Je dois quand même sauver la face. Un dernier combat, pour l'honneur.\"", MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_TERRENCE_ALLEGE, "On y va.", "... Bien joué.", EventScript_TerrenceApresCombat)
+    end
+}
+
+script EventScript_TerrenceCombatComplet {
+    setflag(FLAG_TERRENCE_RESOLU)
+    msgbox("Terrence : \"Discussion terminée. Bats-toi.\"", MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_TERRENCE_COMPLET, "Bats-toi.", "... Pas mal.", EventScript_TerrenceApresCombat)
+    end
+}
+
+script EventScript_TerrenceApresCombat {
+    setflag(FLAG_TERRENCE_VAINCU)
+    msgbox("Le passage de la Route de la Centrale est libre.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script EventScript_TerrenceDejaResolu {
+    msgbox("Terrence : \"On a déjà réglé ça.\"", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// NOTES : MULTI_TERRENCE_Q1/Q2/Q3 à définir avec les libellés exacts
+// (voir docs/histoire.md, section "Lieutenants régionaux").
+// TRAINER_TERRENCE_ALLEGE doit avoir une équipe réduite/affaiblie par
+// rapport à TRAINER_TERRENCE_COMPLET.

@@ -1,0 +1,100 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Combats des lieutenants sans mécanique de conviction
+// (Lyre, Selen, Mira Voss) — Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// Ces trois lieutenants n'ont pas de séquence de conviction (choix
+// délibéré, voir docs/histoire.md section 9 "Points ouverts" résolue :
+// "Lyre et Mira Voss restent des combats classiques"). Structure
+// identique pour les trois, avec dialogue avant/après reflétant leur
+// personnalité propre.
+// =====================================================================
+
+// ---------------------------------------------------------------------
+// LYRE — Viridian Forest (idéaliste sincère)
+// ---------------------------------------------------------------------
+script EventScript_Lyre {
+    lock
+    faceplayer
+    if (flag(FLAG_LYRE_VAINCUE) == TRUE) {
+        goto EventScript_LyreApresDefaite
+    }
+    msgbox("Lyre : \"Cette forêt appartient aux Pokémon, pas aux promoteurs.\nJe ne te laisserai pas la reprendre pour la Ligue.\"", MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_LYRE, "Tu ne comprends pas.", "... Peut-être que j'avais tort sur la méthode.", EventScript_LyreApresCombat)
+    end
+}
+
+script EventScript_LyreApresCombat {
+    setflag(FLAG_LYRE_VAINCUE)
+    msgbox("Lyre : \"La forêt reste protégée, avec ou sans Blue. Ça, au moins, ça ne change pas.\"", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script EventScript_LyreApresDefaite {
+    msgbox("Lyre veille toujours sur la forêt, à sa manière.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// ---------------------------------------------------------------------
+// SELEN — Mont Sélénite (fanatisme mystique)
+// ---------------------------------------------------------------------
+script EventScript_Selen {
+    lock
+    faceplayer
+    if (flag(FLAG_SELEN_VAINCUE) == TRUE) {
+        goto EventScript_SelenApresDefaite
+    }
+    msgbox("Selen : \"Les météorites ont choisi Blue. Tu ne peux pas t'opposer à ça.\"", MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_SELEN, "Les astres sont avec moi.", "... Ce n'était pas écrit, alors.", EventScript_SelenApresCombat)
+    end
+}
+
+script EventScript_SelenApresCombat {
+    setflag(FLAG_SELEN_VAINCUE)
+    msgbox("Selen : \"Peut-être que je me suis trompée de signe.\"", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script EventScript_SelenApresDefaite {
+    msgbox("Selen contemple toujours le ciel depuis le sommet du Mont Sélénite.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// ---------------------------------------------------------------------
+// MIRA VOSS — Silph Co, Saffron (miroir de Blue, la plus dangereuse)
+// ---------------------------------------------------------------------
+// Rappel narratif : si le joueur a lu les documents internes sur Mira
+// Voss avant ce combat (quête annexe Saffron, docs/histoire.md section 8),
+// une ligne de dialogue supplémentaire doit être insérée ici via un
+// flag FLAG_DOCUMENTS_MIRA_VOSS_LUS (à vérifier avant le combat).
+
+script EventScript_MiraVoss {
+    lock
+    faceplayer
+    if (flag(FLAG_MIRA_VOSS_VAINCUE) == TRUE) {
+        goto EventScript_MiraVossApresDefaite
+    }
+    if (flag(FLAG_DOCUMENTS_MIRA_VOSS_LUS) == TRUE) {
+        msgbox("Mira Voss : \"Tu as lu mon dossier, alors. Ça ne changera rien.\"", MSGBOX_DEFAULT)
+    } else {
+        msgbox("Mira Voss : \"On m'a écartée pour quelqu'un de mieux connecté. Blue, lui, m'a écoutée.\"", MSGBOX_DEFAULT)
+    }
+    trainerbattle_single(TRAINER_MIRA_VOSS, "Voyons ce que tu vaux.", "... Blue avait raison sur un point : la force compte.", EventScript_MiraVossApresCombat)
+    end
+}
+
+script EventScript_MiraVossApresCombat {
+    setflag(FLAG_MIRA_VOSS_VAINCUE)
+    msgbox("Mira Voss : \"Le dernier verrou avant Blue vient de sauter. Vas-y.\"", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script EventScript_MiraVossApresDefaite {
+    msgbox("Les bureaux de Silph Co sont calmes, désormais.", MSGBOX_DEFAULT)
+    release
+    end
+}

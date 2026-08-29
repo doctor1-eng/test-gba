@@ -1,0 +1,93 @@
+// =====================================================================
+// TEMPLATE GÉNÉRIQUE — Confrontation finale avec Blue (Acte V)
+// Fork pokeemerald-expansion — Heart & Soul
+// =====================================================================
+// PRÉREQUIS : joué après FLAG_MIRA_VOSS_VAINCUE (dernier verrou) et
+// après le retour scripté à Cinnabar (déblocage via FLAG_ACTE_5_DEBLOQUE,
+// qui doit désactiver FLAG_CINNABAR_VERROUILLEE — voir cinnabar_acte1.pory).
+// FLAGS/VARS : VAR_DIALOGUE_BLUE (temporaire), FLAG_BLUE_VAINCU
+// =====================================================================
+
+script EventScript_ConfrontationBlue {
+    lock
+    faceplayer
+    if (flag(FLAG_BLUE_VAINCU) == TRUE) {
+        goto EventScript_BlueApresDefaite
+    }
+    setvar(VAR_DIALOGUE_BLUE, 0)
+    msgbox("Blue : \"Tu crois que je fais ça pour le pouvoir ? J'ai battu l'Élite 4\navant mes seize ans. Ils m'ont dit non — pas assez 'présentable'.\nToi, on t'a donné un badge et une ville. Moi, une porte fermée.\"", MSGBOX_DEFAULT)
+    goto EventScript_BlueQ1
+    end
+}
+
+script EventScript_BlueQ1 {
+    multichoice(0, 0, MULTI_BLUE_Q1, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_DIALOGUE_BLUE, 2); goto EventScript_BlueQ2   // "Tu as peut-être raison sur l'injustice. Mais ça n'explique pas Cinnabar."
+        case 1: addvar(VAR_DIALOGUE_BLUE, 0); goto EventScript_BlueQ2   // "Peu importe ta raison, tu as détruit des vies."
+        case 2: addvar(VAR_DIALOGUE_BLUE, -2); goto EventScript_BlueQ2  // "Le système est cassé, tu as bien fait de le prouver comme ça."
+        case MULTI_B_PRESSED: goto EventScript_BlueQ1
+    }
+    end
+}
+
+script EventScript_BlueQ2 {
+    msgbox("Blue : \"Ces archives prouvent que la Ligue savait, pour Giovanni.\nElle a laissé faire tant que ça restait discret.\"", MSGBOX_DEFAULT)
+    multichoice(0, 0, MULTI_BLUE_Q2, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_DIALOGUE_BLUE, 1); goto EventScript_BlueQ3   // "Alors prouve-le publiquement. Pas comme ça."
+        case 1: addvar(VAR_DIALOGUE_BLUE, 1); goto EventScript_BlueQ3   // "Ça ne te donne pas le droit de faire souffrir Cinnabar."
+        case 2: addvar(VAR_DIALOGUE_BLUE, -1); goto EventScript_BlueQ3  // "Personne ne te croira de toute façon."
+        case MULTI_B_PRESSED: goto EventScript_BlueQ2
+    }
+    end
+}
+
+script EventScript_BlueQ3 {
+    multichoice(0, 0, MULTI_BLUE_Q3, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0: addvar(VAR_DIALOGUE_BLUE, 1); goto EventScript_BlueResoudreDialogue   // "Rends-toi. On réglera ça autrement."
+        case 1: addvar(VAR_DIALOGUE_BLUE, 0); goto EventScript_BlueResoudreDialogue   // "Je vais te prouver que la force ne suffit pas."
+        case 2: addvar(VAR_DIALOGUE_BLUE, -1); goto EventScript_BlueResoudreDialogue  // "Tu n'es qu'un lâche qui cherche des excuses."
+        case MULTI_B_PRESSED: goto EventScript_BlueQ3
+    }
+    end
+}
+
+script EventScript_BlueResoudreDialogue {
+    // Conversion du score de dialogue en points de réputation (section 9
+    // de docs/histoire.md) : ≥3 -> +2, 0-2 -> 0, négatif -> -2
+    if (var(VAR_DIALOGUE_BLUE) >= 3) {
+        addvar(VAR_REPUTATION, 2)
+    } elif (var(VAR_DIALOGUE_BLUE) >= 0) {
+        addvar(VAR_REPUTATION, 0)
+    } else {
+        addvar(VAR_REPUTATION, -2)
+    }
+    goto EventScript_BlueCombat
+    end
+}
+
+script EventScript_BlueCombat {
+    trainerbattle_single(TRAINER_BLUE_FINAL, "Montre-moi ce que tu vaux vraiment.", "...", EventScript_BlueApresCombat)
+    end
+}
+
+script EventScript_BlueApresCombat {
+    setflag(FLAG_BLUE_VAINCU)
+    msgbox("Blue s'effondre, mais garde les yeux ouverts.", MSGBOX_DEFAULT)
+    msgbox("Blue : \"Ces archives prouvent que la Ligue savait, pour Giovanni.\nElle a laissé faire tant que ça restait discret.\nJe ne détruis rien qui ne soit pas déjà pourri.\"", MSGBOX_DEFAULT)
+    goto EventScript_DeclencherEpilogue
+    end
+}
+
+script EventScript_BlueApresDefaite {
+    msgbox("Blue est désormais en détention, quelque part sur le continent.", MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// NOTES : MULTI_BLUE_Q1/Q2/Q3 à définir avec les libellés exacts
+// (voir docs/histoire.md, section "Blue — motivation et scène de
+// révélation"). EventScript_DeclencherEpilogue est défini dans
+// epilogues.pory.
