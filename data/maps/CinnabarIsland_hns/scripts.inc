@@ -6,16 +6,17 @@ CinnabarIsland_hns_MapScripts::
 CinnabarIsland_OnTransition:
 	setflag FLAG_VISITED_CINNABAR_ISLAND
 	callnative SetTimeBasedEncounters
-	compare VAR_TYPE_CHOISI, 0
-	goto_if_eq CinnabarIsland_OnTransition_NoAttackYet
-	goto_if_set FLAG_ATTAQUE_CINNABAR_LANCEE, CinnabarIsland_OnTransition_NoAttackYet
 	setflag FLAG_HIDE_CINNABAR_BLUE
-	call HeartSoul_EventScript_CinnabarAttack
-CinnabarIsland_OnTransition_NoAttackYet:
 	end
 
-@ Heart & Soul : Blaine reste joignable tant que l'attaque n'a pas encore ete declenchee
-@ (fenetre tres courte, l'OnTransition ci-dessus la lance des la premiere entree sur la map).
+@ Heart & Soul : l'attaque (HeartSoul_EventScript_CinnabarAttack, dans
+@ data/scripts/heart_and_soul_act1.inc) est enchainee directement depuis
+@ HeartSoul_EventScript_ChooseTeam_Feu (meme execution de script, pas de rechargement de
+@ carte entre les deux) - pas besoin de la redeclencher ici. Un ancien essai la relancait
+@ depuis CinnabarIsland_OnTransition (MAP_SCRIPT_ON_TRANSITION) ; retire, car ce point
+@ d'accroche tourne avant que l'ecran soit pret pour des fenetres/menus (voir le blocage
+@ constate en test sur le meme probleme dans CinnabarIsland_PokemonCenter_hns).
+@ Blaine reste joignable tant que l'attaque n'a pas encore ete declenchee.
 CinnabarIsland_EventScript_Blaine::
 	lock
 	faceplayer

@@ -1,7 +1,7 @@
 // Heart & Soul - Acte I : la chute de Cinnabar
-// Declenche automatiquement par CinnabarIsland_hns_MapScripts (CinnabarIsland_OnTransition)
-// des que le joueur a choisi son type/equipe (VAR_TYPE_CHOISI != 0) et que l'attaque n'a
-// pas encore ete jouee (FLAG_ATTAQUE_CINNABAR_LANCEE non pose).
+// Enchaine directement (goto, meme execution de script) a la fin de
+// HeartSoul_EventScript_ChooseTeam_Feu (data/scripts/heart_and_soul_intro.inc), une fois
+// l'equipe de depart donnee. Se termine par "end", pas "return" : appele par goto, pas call.
 
 HeartSoul_EventScript_CinnabarAttack::
 	lockall
@@ -36,7 +36,7 @@ HeartSoul_CinnabarAttack_Verrouillage:
 	setflag FLAG_ACTE_1_TERMINE
 	msgbox HeartSoul_Text_FuiteRoute21, MSGBOX_DEFAULT
 	releaseall
-	return
+	end
 
 HeartSoul_Text_AttaqueDebut:
 	.string "Un grondement secoue Cinnabar.\p"

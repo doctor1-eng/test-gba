@@ -338,6 +338,37 @@ fuite vers Route 21.
   Cinnabar) plutôt que déplacé ou re-scripté ailleurs dans cette passe — son rôle de chef de la
   Team Rocket (Acte V) reste à écrire.
 
+### Bug corrigé après premier retour de test : blocage au tout premier lancement
+
+Retour utilisateur : le jeu se bloquait juste après la création de personnage (choix du
+sexe, nom, options), au moment du transport dans le jeu.
+
+**Cause réelle** : `HeartSoul_EventScript_ChooseType` (menu interactif `dynmultichoice`,
+`lockall`) était déclenché depuis `MAP_SCRIPT_ON_TRANSITION` sur
+`CinnabarIsland_PokemonCenter_hns`. Or `include/constants/map_scripts.h` documente
+explicitement ce point d'accroche comme tournant *pendant* le chargement de la carte, avant
+l'affichage — "Used to set map-specific flags/vars... update object positions", pas pour
+ouvrir des fenêtres de menu. Un vrai événement interactif au premier chargement doit passer
+par `MAP_SCRIPT_ON_FRAME_TABLE` ("Run every frame after the map has faded in, before player
+input is processed... trigger an event"), confirmé par un exemple réel du fork
+(`AzaleaTown_hns/scripts.inc`, `AzaleaTown_EventScript_GSBall`, qui fait `lock`/`msgbox`/
+`giveitem` depuis ce point d'accroche sans problème).
+
+**Correctif** :
+- `CinnabarIsland_PokemonCenter_hns/scripts.inc` : le déclenchement passe par
+  `map_script MAP_SCRIPT_ON_FRAME_TABLE` + `map_script_2 VAR_TYPE_CHOISI, 0, ...` (même
+  motif que l'exemple ci-dessus) au lieu de `ON_TRANSITION`.
+- `CinnabarIsland_hns/scripts.inc` : le déclenchement redondant de l'attaque depuis
+  `ON_TRANSITION` (même bug) a été retiré — inutile de toute façon, la chaîne
+  `ChooseTeam_Feu → CinnabarAttack` s'enchaîne déjà dans la même exécution de script
+  (`goto`, pas de rechargement de carte entre les deux).
+- `HeartSoul_EventScript_CinnabarAttack` se termine maintenant par `end` et non `return` :
+  il est atteint par `goto`, pas `call`, depuis `heart_and_soul_intro.inc` — un `return` sans
+  `call` correspondant aurait dépilé une adresse de retour invalide et provoqué un second
+  blocage/comportement erratique juste après la séquence d'attaque.
+
+`make hns` : PASS, 0 erreur après correctif. Toujours non testé en émulateur de mon côté.
+
 ### Limite de test importante
 
 Cette session n'a pas d'accès à un émulateur avec écran (mGBA headless présent
