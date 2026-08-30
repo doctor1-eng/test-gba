@@ -59,12 +59,12 @@ CinnabarIsland_EventScript_GymSign::
 	end
 
 CinnabarIsland_Text_GymSign:
-	.string "There's a notice here…\p"
-	.string "CINNABAR GYM has relocated to\n"
-	.string "SEAFOAM ISLANDS.\p"
+	.string "Il y a un avis affiché ici…\p"
+	.string "L'ARENE de CINNABAR a déménagé\n"
+	.string "aux SEAFOAM ISLANDS.\p"
 	.string "BLAINE$"
 
 CinnabarIsland_Text_Sign:
 	.string "CINNABAR ISLAND\p"
-	.string "The Fiery Town of Burning Desire$"
+	.string "La ville ardente du désir brûlant$"
 

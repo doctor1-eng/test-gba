@@ -39,34 +39,37 @@ PewterCity_Museum_1F_EventScript_Bones::
 	end
 
 PewterCity_Museum_1F_Text_Recptionist:
-	.string "Welcome!\p"
-	.string "Just to let you know, all the large\n"
-	.string "specimens have been taken to the\l"
-	.string "other museums for display.\p"
-	.string "So for now, admission is free of\n"
-	.string "charge!\p"
-	.string "Please go ahead.$"
+	.string "Bienvenue !\p"
+	.string "Pour info, tous les grands\n"
+	.string "spécimens ont été transférés\l"
+	.string "vers d'autres musées pour\l"
+	.string "exposition.\p"
+	.string "Donc pour l'instant, l'entrée\n"
+	.string "est gratuite !\p"
+	.string "Allez-y, je vous en prie.$"
 
 PewterCity_Museum_1F_Text_FossilWoman:
-	.string "You must be a strong trainer.\p"
-	.string "We don't have much use for the\n"
-	.string "fossils on the counter over there.\p"
-	.string "A strange man with silver hair\n"
-	.string "dropped a ton of them off here.\p"
-	.string "Go ahead and take them if you like.$"
+	.string "Vous devez être un dresseur\n"
+	.string "aguerri.\p"
+	.string "On n'a pas trop l'utilité des\n"
+	.string "fossiles sur ce comptoir, là-bas.\p"
+	.string "Un homme étrange aux cheveux\n"
+	.string "argentés en a déposé un tas ici.\p"
+	.string "Prenez-les si ça vous intéresse.$"
 
 PewterCity_Museum_1F_Text_FossilWomanAfter:
-	.string "We often share research with the\n"
-	.string "RUINS OF ALPH researchers.\p"
-	.string "We even share fossils with them\n"
-	.string "through the PC!$"
+	.string "On partage souvent nos\n"
+	.string "recherches avec les chercheurs\l"
+	.string "de RUINS OF ALPH.\p"
+	.string "On partage même des fossiles\n"
+	.string "avec eux via le PC !$"
 
 PewterCity_Museum_1F_Text_Oldman:
-	.string "I should be grateful for my long\n"
-	.string "life.\p"
-	.string "Never did I think I would get to\n"
-	.string "see the bones of a dragon!$"
+	.string "Je devrais être reconnaissant\n"
+	.string "d'avoir vécu si longtemps.\p"
+	.string "Je n'aurais jamais cru voir un\n"
+	.string "jour les os d'un dragon !$"
 
 PewterCity_Museum_1F_Text_Bones:
-	.string "Bones of an ancient dragon\n"
-	.string "POKéMON.$"
+	.string "Ossements d'un ancien POKéMON\n"
+	.string "dragon.$"

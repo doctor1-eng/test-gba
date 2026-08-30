@@ -10,13 +10,15 @@ PewterCity_Mart_EventScript_Nerd::
 	end
 
 PewterCity_Mart_Text_Youngster:
-	.string "Hi! Check out my GYARADOS!\p"
-	.string "I raised it from a MAGIKARP. I can't\n"
-	.string "believe how strong it has become.$"
+	.string "Salut ! Regarde mon GYARADOS !\p"
+	.string "Je l'ai élevé depuis que c'était\n"
+	.string "un MAGIKARP. Il est devenu\n"
+	.string "incroyablement fort !$"
 
 PewterCity_Mart_Text_SuperNerd:
-	.string "There once was a weird old man who sold\n"
+	.string "Il y avait une fois un vieil\n"
+	.string "homme bizarre qui vendait des\n"
 	.string "MAGIKARP.\p"
-	.string "He was saying the MAGIKARP from the\n"
-	.string "LAKE OF RAGE were excellent.$"
+	.string "Il disait que les MAGIKARP du\n"
+	.string "LAKE OF RAGE étaient excellents.$"
 
