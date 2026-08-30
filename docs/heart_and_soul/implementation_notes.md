@@ -1028,3 +1028,53 @@ l'apostrophe isolée — pas de renommage de la syntaxe `@` en `//` dans tout le
 minimale. Build de contrôle après fusion + correctif : **PASS, 0 erreur**, plus aucun warning
 propre à Heart & Soul (seul un warning `setvar`/`copyvar` pré-existant et sans lien,
 `UlaUla_Forest_hns`, base hors-Kanto, reste présent).
+
+## Carte de Vol qui n'affichait pas Kanto (signalé après capture d'écran utilisateur)
+
+Signalement : sur l'écran « FLY to where? », le nom affiché est correct (« VERMILION CITY »)
+mais le curseur atterrit sur une carte dont les routes/villes alentour ne correspondent pas à
+la vraie géographie autour de Carmin-sur-Mer. Root cause trouvée par lecture de code (pas
+supposée) :
+
+`src/region_map.c`, `GetRegionMapType()` et `GetMapSecIdAt()`, branche `#if IS_HNS` : ce fork
+(demake HGSS, Johto = trame principale, Kanto = post-game normalement débloqué via
+`Route27_hns` après avoir battu la Ligue de Johto — voir `docs/world_map.md` section 1) ne
+choisit qu'entre deux jeux de données pour l'écran Carte/Vol, sur la seule base de
+`FLAG_VISITED_KANTO` : `sRegionMapSections_Johto` (Johto seul) si le flag n'est pas posé,
+`sRegionMapSections_JK` (Johto + Kanto combinés, même feuille) si posé. **`sRegionMapSections_
+Kanto` (Kanto pur) n'est jamais utilisé sous `IS_HNS`** — code mort pour cette variante par
+conception d'origine.
+
+Or Heart & Soul se déroule entièrement à Kanto dès le départ et ne fait jamais visiter Johto :
+aucun script `_hns` ne pose `FLAG_VISITED_KANTO` (seul `Route27_hns`, la porte d'entrée
+normale vers Kanto côté Johto, le fait — jamais traversée dans cette variante). Conséquence :
+`GetMapSecIdAt()` restait bloqué toute la partie sur `sRegionMapSections_Johto`, la carte de
+Johto seule — le curseur, positionné aux coordonnées réelles de Vermilion (dans la zone Kanto
+de la grille), tombait donc sur des cases qui n'appartiennent pas à la carte de Johto,
+produisant un décor de routes/villes incohérent avec la vraie géographie. Confirmation
+indépendante trouvée dans `src/pokenav_menu_handler_gfx.c:1308` : la description du Pokénav
+affichait littéralement *"Check the map of the JOHTO region"* pendant toute une partie
+Heart & Soul, alors que le joueur n'a jamais mis les pieds à Johto.
+
+**Corrigé** : `setflag FLAG_VISITED_KANTO` ajouté dans les 18 `HeartSoul_EventScript_
+ChooseTeam_{type}` (`data/scripts/heart_and_soul_intro.inc`), à côté des autres flags de kit
+de départ (`FLAG_SYS_POKENAV_GET`/`FLAG_HAS_MATCH_CALL`/`FLAG_RECEIVED_POKENAV`) — fait basculer
+l'écran Vol sur `sRegionMapSections_JK` (Johto+Kanto combinés) dès la création du personnage,
+qui contient les bonnes données Kanto (`MAPSEC_VERMILION_CITY` bien présent dans
+`region_map_layout_jk.h`, avec Route 11/12/17 alentour cohérentes avec `docs/world_map.md`).
+Solution minimale : réutilise des graphismes/données déjà présents et déjà câblés pour
+`IS_HNS` (`sPokedexAreaMapJK_Gfx`, etc.), pas de nouvel asset ni de nouveau code moteur créé.
+
+**Limite connue, non corrigée** : `src/field_region_map.c`, `PrintTitleWindowText()` (écran
+Carte du menu START/Pokégear, différent de l'écran Vol) affiche toujours `gText_Johto` en dur
+pour `IS_HNS`, sans vérifier `FLAG_VISITED_KANTO` — titre "JOHTO" qui restera affiché même
+après ce correctif sur cet écran précis. Non traité ici (hors du signalement, qui portait sur
+l'écran Vol) ; à corriger si un futur retour le signale.
+
+**Ne s'applique qu'aux nouvelles parties** : le flag n'est posé qu'à la création du personnage
+(`ChooseTeam_{type}`), pas rétroactivement sur une sauvegarde déjà commencée. La sauvegarde de
+test en cours au moment du signalement ne verra pas la correction sans repartir sur une
+nouvelle partie (cohérent avec la règle déjà en place de tester chaque ROM sur une partie
+neuve, `quick_test_checklist.md`).
+
+`make hns -j4` : **PASS, 0 erreur**, ROM 94.47 %.
