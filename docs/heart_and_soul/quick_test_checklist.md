@@ -17,7 +17,7 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Choisir un type **différent de la dernière fois** si possible, pour couvrir les 18 au fil des tests.
 - [ ] Sélection de 4 Pokémon distincts : un doublon fait bien rouvrir la liste.
 - [ ] Pour au moins un des 4, choix des 4 attaques via le Tuteur de Capacités (bouton B pour arrêter).
-- [ ] Sac : 5 Poké Balls présentes, + les 8 CT de capacités de terrain (Coupe, Vol, Surf, Force, Flash, Rock Smash, Cascade, Tourbillon).
+- [ ] Sac : 5 Poké Balls présentes, + les 8 CT de capacités de terrain (Coupe, Vol, Surf, Force, Flash, Rock Smash, Cascade, Tourbillon), + les 3 cannes à pêche (Old/Good/Super Rod).
 - [ ] Sac : la Bicyclette est présente et utilisable.
 - [ ] Menu START : entrée « Pokémon » présente (équipe consultable).
 - [ ] Menu START : entrée « Pokénav »/Pokégear présente (carte accessible).
@@ -39,6 +39,7 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 ## 5. Viridian (Argenta)
 
 - [ ] Mart : parler au PNJ (ex-« Cooltrainer M ») → proposition de rejoindre la résistance, choix aider/décliner fonctionnent.
+- [ ] Mart : parler au vendeur (comptoir) → un vrai magasin s'ouvre avec Poké Ball/Potion/Antidote/Anti-Paralysie à acheter.
 - [ ] Arène : Blue est absent, le PNJ à l'intérieur explique que l'Arène est fermée (pas de combat possible).
 
 ## 6. Forêt de Jade (= « Viridian Forest » affiché en anglais à l'écran — c'est la même zone, juste après Viridian/Argenta, avant Pewter/Jadielle)
@@ -54,12 +55,14 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 
 ## 8. Arène de Pierre (Jadielle)
 
-- [ ] En arrivant : notre dialogue (Pierre doute) s'affiche, **puis** le dialogue anglais d'origine, **puis** le combat démarre.
+- [ ] Mart de Jadielle : le vendeur au comptoir vend Poké Ball/Potion/Antidote/Anti-Paralysie/Réveil/Anti-Brûlure/Corde Sortie/Repousse.
+- [ ] En arrivant à l'Arène : notre dialogue (Pierre doute) s'affiche, **puis** le dialogue anglais d'origine, **puis** le combat démarre.
 - [ ] **Perdre volontairement** ce premier combat, puis reparler à Pierre : la scène de doute (en français) doit **se rejouer**, pas seulement l'anglais.
 - [ ] Gagner le combat : badge reçu normalement.
 
 ## 9. Azuria
 
+- [ ] Mart d'Azuria : le vendeur vend en plus une Super Potion.
 - [ ] PNJ « canalisations sabotées » (Boy) : choix aider/ignorer fonctionnent.
 - [ ] Arène d'Ondine : même test que Pierre — notre dialogue puis l'anglais puis le combat ; en cas de défaite, la scène de doute se rejoue à la tentative suivante.
 
@@ -68,12 +71,20 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Depuis Azuria, prendre la route vers le nord (Route 5) → traverser Safrania (Saffron, simple passage, pas d'arène à faire ici) → Route 6 → Carmin-sur-Mer (Vermilion). Aucun garde ne doit bloquer ce trajet.
 - [ ] Dresseurs et Pokémon sauvages sur ce trajet : niveau ~34.
 - [ ] À Carmin-sur-Mer : parler au PNJ « Nerd » (interception radio) → choix aider/ignorer fonctionnent.
+- [ ] Mart de Carmin-sur-Mer : le vendeur vend Poké Ball/Super Potion/Antidote/Anti-Paralysie/Réveil/Anti-Gel/Repousse.
 
 ## 11. Arène de Major Bob (Carmin-sur-Mer, 4e arène)
 
 - [ ] Même schéma que Pierre/Ondine : notre dialogue (Major Bob doute), puis l'anglais, puis le combat.
 - [ ] Perdre volontairement puis retenter : la scène de doute se rejoue.
 - [ ] Gagner : badge reçu normalement.
+
+## 12. Portes de Cinnabar (Arène/Manoir/Labo) — build séparé
+
+- [ ] Ce test ne se fait **pas** dans la partie normale : lancer `make hns MAPTEST=1` (voir `MAP_TEST_README.md` à la racine du dépôt) pour une ROM dédiée qui démarre directement à côté des 3 portes sur `CinnabarIsland_hns`.
+- [ ] Les 3 portes (Arène, Manoir, Labo) sont visibles et franchissables, chacune mène au bon intérieur.
+- [ ] Sortir de chaque bâtiment ramène bien sur Cinnabar (pas sur l'ancien Kanto inerte).
+- [ ] **Ne pas entrer dans le Centre Pokémon** dans ce build de test : ça déclenche le script d'attaque de l'Acte I, hors périmètre de ce test précis.
 
 ---
 

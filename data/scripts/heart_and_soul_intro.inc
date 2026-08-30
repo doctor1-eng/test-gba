@@ -277,6 +277,9 @@ HeartSoul_ChooseTeam_Normal_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -491,6 +494,9 @@ HeartSoul_ChooseTeam_Feu_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -705,6 +711,9 @@ HeartSoul_ChooseTeam_Eau_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -919,6 +928,9 @@ HeartSoul_ChooseTeam_Plante_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -1133,6 +1145,9 @@ HeartSoul_ChooseTeam_Electrik_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -1347,6 +1362,9 @@ HeartSoul_ChooseTeam_Glace_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -1561,6 +1579,9 @@ HeartSoul_ChooseTeam_Combat_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -1775,6 +1796,9 @@ HeartSoul_ChooseTeam_Poison_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -1989,6 +2013,9 @@ HeartSoul_ChooseTeam_Sol_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -2203,6 +2230,9 @@ HeartSoul_ChooseTeam_Vol_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -2417,6 +2447,9 @@ HeartSoul_ChooseTeam_Psy_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -2631,6 +2664,9 @@ HeartSoul_ChooseTeam_Insecte_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -2845,6 +2881,9 @@ HeartSoul_ChooseTeam_Roche_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -3059,6 +3098,9 @@ HeartSoul_ChooseTeam_Spectre_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -3273,6 +3315,9 @@ HeartSoul_ChooseTeam_Dragon_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -3487,6 +3532,9 @@ HeartSoul_ChooseTeam_Tenebres_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -3701,6 +3749,9 @@ HeartSoul_ChooseTeam_Acier_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
@@ -3915,6 +3966,9 @@ HeartSoul_ChooseTeam_Fee_Slot4::
 	giveitem ITEM_HM_ROCK_SMASH
 	giveitem ITEM_HM_WATERFALL
 	giveitem ITEM_HM_WHIRLPOOL
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_HM_CUT
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
