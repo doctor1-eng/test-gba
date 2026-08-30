@@ -380,7 +380,10 @@
     "FuchsiaCity_Route15_Gate_hns"
   ],
   "gMapGroup_IndoorCinnabar_Hns": [
-    "CinnabarIsland_PokemonCenter_hns"
+    "CinnabarIsland_PokemonCenter_hns",
+    "CinnabarIsland_Gym_Hns",
+    "CinnabarIsland_Mansion_Hns",
+    "CinnabarIsland_PokemonLab_Hns"
   ],
   "gMapGroup_IndoorIndigo_Hns": [
     "IndigoPlateau_PokemonCenter_hns",
