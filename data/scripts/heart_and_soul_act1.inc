@@ -115,8 +115,18 @@ HeartSoul_EventScript_CinnabarVerrouilleeCheck::
 	fadescreenswapbuffers FADE_TO_BLACK
 	warp MAP_PALLET_TOWN_HNS, 6, 8
 	waitstate
+	setvar VAR_TEMP_0, 1
 	end
 HeartSoul_CinnabarVerrouillee_Skip:
+	@ Sans ce setvar, la condition VAR_TEMP_0==0 de CinnabarIsland_hns_MapScripts (ON_FRAME_TABLE)
+	@ reste vraie a chaque frame : TryRunOnFrameMapScript() (src/script.c) renvoie alors TRUE en
+	@ boucle et ProcessPlayerFieldInput() (src/field_control_avatar.c) ne traite plus jamais le
+	@ deplacement ni le bouton START tant que le joueur reste sur cette carte - vu comme un
+	@ freeze total. Meme motif que CeruleanCity_Gym_EventScript_TryMachinePart (qui, lui, pose
+	@ bien ce setvar sur chaque sortie) : VAR_TEMP_0 est remis a 0 par le moteur a chaque nouveau
+	@ chargement de carte (ClearTempFieldEventData, src/event_data.c), donc ce setvar ne fait que
+	@ desarmer la verification jusqu'au prochain chargement, sans changer son resultat.
+	setvar VAR_TEMP_0, 1
 	end
 
 HeartSoul_Text_CinnabarToujoursVerrouillee:
