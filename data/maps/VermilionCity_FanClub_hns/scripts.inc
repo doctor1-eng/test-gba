@@ -167,21 +167,22 @@ PokemonFanClub_Text_ClefairyGuy_GoingToGetOne:
 @============================================================================================================================
 
 PokemonFanClub_Text_Teacher:
-	.string "Look at my darling BAYLEEF!\p"
-	.string "The leaf on its head is so cute!$"
+	.string "Regarde mon adorable BAYLEEF!\p"
+	.string "La feuille sur sa tête est\n"
+	.string "trop mignonne!$"
 
 PokemonFanClub_Text_ClefairyDoll:
-	.string "It's a CLEFAIRY! Huh?\p"
-	.string "Oh, right. It's a CLEFAIRY POKé\n"
-	.string "DOLL.$"
+	.string "C'est un CLEFAIRY! Hein?\p"
+	.string "Ah, mais non. C'est une POKé\n"
+	.string "DOLL CLEFAIRY.$"
 
 PokemonFanClub_Text_Bayleef:
 	.string "BAYLEEF: Li liif!$"
 
 PokemonFanClub_Text_Listen:
-	.string "Let's all listen politely to\n"
-	.string "other trainers.$"
+	.string "Écoutons tous poliment les\n"
+	.string "autres dresseurs.$"
 
 PokemonFanClub_Text_Bragging:
-	.string "If someone brags, brag right\n"
-	.string "back!$"
+	.string "Si quelqu'un se vante,\n"
+	.string "vante-toi en retour!$"
