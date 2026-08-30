@@ -68,6 +68,31 @@ Ces trois sorties pointaient auparavant vers `MAP_CINNABAR_ISLAND` (l'ancien Kan
 relisant directement les `map.json` des 3 intérieurs : plus aucun warp lié à ces 3 bâtiments ne
 cible l'ancien Kanto.
 
+## 5bis. Bug corrigé : blocage total des contrôles sur CinnabarIsland_hns
+
+Découvert en testant cette ROM (déplacement et bouton START tous les deux sans effet dès
+l'arrivée sur la carte, perçu comme un freeze). Cause réelle, confirmée par lecture du moteur :
+`CinnabarIsland_hns_MapScripts` déclenche `HeartSoul_EventScript_CinnabarVerrouilleeCheck` à
+chaque frame tant que `VAR_TEMP_0 == 0` (`MAP_SCRIPT_ON_FRAME_TABLE`). `TryRunOnFrameMapScript()`
+(`src/script.c`) renvoie alors `TRUE`, et `ProcessPlayerFieldInput()`
+(`src/field_control_avatar.c`) s'arrête avant de traiter le déplacement ou le bouton START pour
+cette frame — même si le script appelé ne fait ensuite qu'un `end` immédiat. Le script ne
+remettait jamais `VAR_TEMP_0` à une valeur non nulle : la condition restait donc vraie à chaque
+frame, indéfiniment, tant que le joueur restait sur la carte. Motif déjà correctement utilisé
+ailleurs dans le même fichier (`CeruleanCity_Gym_EventScript_TryMachinePart`, qui pose bien
+`setvar VAR_TEMP_0, 1` sur chaque sortie) — c'est cet appel qui manquait ici.
+
+Corrigé (`data/scripts/heart_and_soul_act1.inc`) en ajoutant `setvar VAR_TEMP_0, 1` sur les deux
+sorties du script. `VAR_TEMP_0` est remis à 0 par le moteur à chaque nouveau chargement de carte
+(`ClearTempFieldEventData`, `src/event_data.c`), donc ce `setvar` désarme seulement la
+vérification jusqu'au prochain chargement, sans changer son résultat ni le verrou scénaristique
+Acte I/V. Ce bug touchait déjà potentiellement le jeu normal (pas seulement cette ROM de test) :
+tout séjour prolongé sur `CinnabarIsland_hns` avec ce script actif aurait figé les contrôles de
+la même façon.
+
+**Si votre ROM date d'avant ce correctif, retéléchargez-la et recommencez une nouvelle
+partie** — une sauvegarde faite sur l'ancienne ROM figée reproduira le même blocage.
+
 ## 6. Limitations connues
 
 - **N'entrez pas dans le Pokémon Center** (`CinnabarIsland_hns` warp `(45,29)`) avec cette ROM
