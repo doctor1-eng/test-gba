@@ -122,7 +122,74 @@ partie** — une sauvegarde faite sur l'ancienne ROM figée reproduira le même 
   final). La confirmation visuelle du rendu, des collisions ressenties en jeu et de la
   cohérence esthétique reste à faire par vous, dans un émulateur.
 
-## 7. Ce qui n'a pas été touché
+## 8. Équipe et inventaire de test complets (menu debug, aucun code modifié)
+
+Le jeu embarque déjà un menu de debug complet (`include/config/debug.h`,
+`DEBUG_OVERWORLD_MENU = TRUE` par défaut) : **maintenir R puis appuyer sur START en extérieur**
+(pas dans un menu) l'ouvre. Il permet de créer des Pokémon niveau 100 avec IVs parfaites et de
+remplir entièrement le sac — pas besoin de modifier le jeu pour ça, ni de recompiler la ROM.
+
+### 8.1 Six Pokémon (meilleures stats totales réellement disponibles)
+
+Les formes Méga/Primal/Gigamax/Téracristal sont désactivées dans ce fork
+(`include/config/species_enabled.h`) — ce top 6 exclut donc ces formes et a été vérifié
+directement dans `src/data/pokemon/species_info/*.h` (BST = somme des 6 stats de base) :
+
+| # | Pokémon | ID espèce | BST | PV/Atq/Déf/AtqS/DéfS/Vit |
+|---|---|---|---|---|
+| 1 | Arceus | 493 | 720 | 120/120/120/120/120/120 |
+| 2 | Zacian (Couronné) | 1227 | 700 | 92/150/115/80/115/148 |
+| 3 | Zamazenta (Couronné) | 1228 | 700 | 92/120/140/80/140/128 |
+| 4 | Eternatus | 890 | 690 | 140/85/95/145/95/130 |
+| 5 | Dialga (Origine) | 1069 | 680 | 100/100/120/150/120/90 |
+| 6 | Palkia (Origine) | 1070 | 680 | 90/100/100/150/120/120 |
+
+**Pour les obtenir** : menu debug → `Give X…` → `Pokémon (Complex)` → entrer l'ID espèce →
+niveau **100** → puis Shiny/Nature/Ability/Tera/Dynamax/Gigantamax (au choix) → **IVs : 31 sur
+les 6 stats** (pour de vraies stats maximales) → EVs/Moves au choix. Répéter pour les 6 IDs.
+Version rapide sans réglage IV/EV : `Pokémon (Basic)` (juste ID + niveau).
+
+### 8.2 Tout l'inventaire d'un coup
+
+Menu debug → `PC/Bag…` :
+
+- `Fill Pocket TMHM` — toutes les CT/CS
+- `Fill Pocket Items` — tous les objets
+- `Fill Pocket Poké Balls` — toutes les Poké Balls
+- `Fill Pocket Key Items` — tous les objets clés
+- `Fill PC Items` — au cas où le sac déborde
+
+Menu debug → `Give X…` → `Max Money` / `Max Coins` si besoin d'acheter en boutique.
+
+## 8bis. Checklist de test (à cocher à chaque session)
+
+**Avant de commencer**
+- [ ] Nouvelle partie sur la dernière version de `heart-and-soul-map-test.gba`
+- [ ] Équipe de test donnée (section 8.1) et sac rempli (section 8.2)
+- [ ] Position de départ confirmée : `CinnabarIsland_hns (30,17)`, aucun blocage d'input
+
+**Par bâtiment (Arène, Manoir, Labo) — répéter 3 fois**
+- [ ] Façade visible et cohérente depuis l'extérieur (pas de tuiles manquantes/mal alignées)
+- [ ] Pas de superposition avec le décor existant (arbres, PNJ, faune) autour de la porte
+- [ ] Approche à pied depuis le point de spawn sans collision anormale
+- [ ] Entrée par la porte : pas de blocage dans l'encadrement, atterrissage correct à l'intérieur
+- [ ] Collisions intérieures : murs, meubles, PNJ tous infranchissables comme attendu
+- [ ] Étages/salles annexes si présents (Manoir 2F/3F/B1F ; Labo Lounge/Research/Experiment) accessibles
+- [ ] Sortie par la porte : atterrissage exact devant le bon bâtiment sur `CinnabarIsland_hns`
+- [ ] Pas de téléportation vers l'ancien Kanto `_Frlg` en sortant
+
+**Général sur CinnabarIsland_hns**
+- [ ] Déplacement libre dans toutes les directions autour des 3 portes, aucun freeze
+- [ ] Bouton START ouvre bien le menu (Pokémon/Sac/Sauvegarde/Options)
+- [ ] Pas d'entrée accidentelle dans le Pokémon Center déclenchant l'intro Acte I (sauf test volontaire)
+- [ ] Limites de la carte (bords) ne laissent pas sortir de la zone jouable
+
+**À noter pour chaque anomalie trouvée**
+- [ ] Bâtiment/zone concerné, coordonnées approximatives, capture d'écran si possible
+- [ ] Reproductible ou ponctuel
+- [ ] Bloquant (freeze/soft-lock) ou cosmétique
+
+## 9. Ce qui n'a pas été touché
 
 Aucune autre map, aucun autre script, aucun dialogue, aucun dresseur, aucun objet, aucun
 Pokémon n'a été modifié pour ce chantier. Le mécanisme de test (`MAPTEST=1`,
