@@ -362,6 +362,15 @@ HeartSoul_Text_RocketGruntCerulean:
 // toujours vraie, le sous-script decide lui-meme via goto_if_set/unset). Fait disparaitre le
 // Rocket une fois les canalisations reparees, sans toucher a VAR_KANTO_ROCKET_STORY_STATE
 // (systeme du jeu de base, non modifie).
+// IMPORTANT (bug freeze deja rencontre et corrige ailleurs dans ce depot sur
+// HeartSoul_EventScript_CinnabarVerrouilleeCheck, meme cause) : VAR_TEMP_1 doit etre remis a
+// une valeur non nulle sur CHAQUE sortie de ce script. Sans ca, TryRunOnFrameMapScript()
+// (src/script.c) declenche ce script a chaque frame indefiniment et
+// ProcessPlayerFieldInput() (src/field_control_avatar.c) ne traite plus jamais le deplacement
+// ni le bouton START tant que le joueur reste sur cette carte - percu comme un freeze total.
+// VAR_TEMP_1 est remis a 0 par le moteur a chaque nouveau chargement de carte
+// (ClearTempFieldEventData), donc ce setvar desarme seulement la verification jusqu'au
+// prochain chargement.
 HeartSoul_EventScript_CeruleanGymRocketCheck::
 	goto_if_unset FLAG_CANALISATIONS_REPAREES, HeartSoul_CeruleanGymRocketCheck_End
 	goto_if_set FLAG_CERULEAN_GYM_ROCKET_PARTI, HeartSoul_CeruleanGymRocketCheck_End
@@ -369,6 +378,7 @@ HeartSoul_EventScript_CeruleanGymRocketCheck::
 	removeobject LOCALID_CERULEAN_GYM_ROCKET
 	setflag FLAG_CERULEAN_GYM_ROCKET_PARTI
 HeartSoul_CeruleanGymRocketCheck_End:
+	setvar VAR_TEMP_1, 1
 	end
 
 // Pallet Town, "le monde d'avant" (section 8 de histoire.md). PNJ existant reflavore
