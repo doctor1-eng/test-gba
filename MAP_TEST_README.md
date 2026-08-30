@@ -93,6 +93,32 @@ la même façon.
 **Si votre ROM date d'avant ce correctif, retéléchargez-la et recommencez une nouvelle
 partie** — une sauvegarde faite sur l'ancienne ROM figée reproduira le même blocage.
 
+## 5ter. Bug corrigé : porte du Labo infranchissable
+
+Signalé en testant cette ROM : la grotte du Labo `(23,21)` était visible mais impossible à
+franchir, aucune réaction en marchant dessus. Cause confirmée par comparaison directe avec des
+portes du même type déjà fonctionnelles ailleurs dans le jeu (`CeruleanCity_hns (7,10)` →
+Grotte Céladopole, `VermilionCity_hns (61,10)` → Grotte Digda, même tileset primaire
+`Kanto_General_Hns`) : la tuile avait le bon metatile et le bon comportement
+(`MB_NON_ANIMATED_DOOR`), mais avec le bit de collision à **1** au lieu de **0** dans
+`data/layouts/CinnabarIsland_hns/map.bin`. `MapGridGetCollisionAt()` (`src/fieldmap.c`) est
+utilisé sans exception pour ce type de porte par `event_object_movement.c` : collision ≠ 0
+bloque physiquement le pas, donc le joueur ne pouvait jamais se tenir sur la case et le warp
+n'était jamais évalué.
+
+Vérifié en même temps que l'**Arène** `(49,16)` et le **Manoir** `(30,16)` n'ont **pas** ce
+problème : leur type de porte (`MB_ANIMATED_DOOR`, porte à deux battants) a une collision=1 qui
+est cette fois normale (entrée gérée par une animation forcée qui contourne la collision
+standard) — valeurs identiques bit pour bit à la porte d'Arène de `CeruleanCity_hns (34,31)`
+qui fonctionne déjà. Aucune modification nécessaire de leur côté ; à confirmer quand même en
+jeu.
+
+Corrigé : une seule case modifiée dans `map.bin` (collision 1→0, élévation 0→3, alignée sur les
+portes de grotte déjà fonctionnelles). Metatile et `warp_events` inchangés.
+
+**Si votre ROM date d'avant ce correctif, retéléchargez-la** — la grotte du Labo restera
+bloquée sur l'ancienne version.
+
 ## 6. Limitations connues
 
 - **N'entrez pas dans le Pokémon Center** (`CinnabarIsland_hns` warp `(45,29)`) avec cette ROM
