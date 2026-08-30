@@ -17,7 +17,8 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Choisir un type **différent de la dernière fois** si possible, pour couvrir les 18 au fil des tests.
 - [ ] Sélection de 4 Pokémon distincts : un doublon fait bien rouvrir la liste.
 - [ ] Pour au moins un des 4, choix des 4 attaques via le Tuteur de Capacités (bouton B pour arrêter).
-- [ ] Sac : 5 Poké Balls présentes.
+- [ ] Sac : 5 Poké Balls présentes, + les 8 CT de capacités de terrain (Coupe, Vol, Surf, Force, Flash, Rock Smash, Cascade, Tourbillon).
+- [ ] Sac : la Bicyclette est présente et utilisable.
 - [ ] Menu START : entrée « Pokémon » présente (équipe consultable).
 - [ ] Menu START : entrée « Pokénav »/Pokégear présente (carte accessible).
 - [ ] Chaussures de course actives (bouton B pour courir sur la carte).
@@ -40,7 +41,7 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Mart : parler au PNJ (ex-« Cooltrainer M ») → proposition de rejoindre la résistance, choix aider/décliner fonctionnent.
 - [ ] Arène : Blue est absent, le PNJ à l'intérieur explique que l'Arène est fermée (pas de combat possible).
 
-## 6. Forêt de Jade
+## 6. Forêt de Jade (= « Viridian Forest » affiché en anglais à l'écran — c'est la même zone, juste après Viridian/Argenta, avant Pewter/Jadielle)
 
 - [ ] Combattre Doug (Bug Catcher).
 - [ ] **Juste après la victoire**, sans avoir à lui reparler : dialogue bûcherons déplacés, choix aider/ignorer fonctionnent.
@@ -49,7 +50,7 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 
 - [ ] Pokémon sauvages rencontrés sur Route 1/2/3/4, Forêt de Jade, Mont Sélénite : niveau ~34 (pas 45+).
 - [ ] Dresseurs rencontrés sur la route (Danny, Ed, Rob, etc.) : niveau ~34.
-- [ ] Si une CT est en poche et qu'un Pokémon de l'équipe la connaît : Coupe/Surf/Vol/Force/etc. utilisable **sans badge** depuis le menu Pokémon.
+- [ ] Coupe/Surf/Vol/Force/etc. utilisable **sans badge** depuis le menu Pokémon (CT + Pokémon compatible fournis dès le départ, voir section 2).
 
 ## 8. Arène de Pierre (Jadielle)
 
@@ -61,6 +62,18 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 
 - [ ] PNJ « canalisations sabotées » (Boy) : choix aider/ignorer fonctionnent.
 - [ ] Arène d'Ondine : même test que Pierre — notre dialogue puis l'anglais puis le combat ; en cas de défaite, la scène de doute se rejoue à la tentative suivante.
+
+## 10. Route vers Carmin-sur-Mer (Vermilion)
+
+- [ ] Depuis Azuria, prendre la route vers le nord (Route 5) → traverser Safrania (Saffron, simple passage, pas d'arène à faire ici) → Route 6 → Carmin-sur-Mer (Vermilion). Aucun garde ne doit bloquer ce trajet.
+- [ ] Dresseurs et Pokémon sauvages sur ce trajet : niveau ~34.
+- [ ] À Carmin-sur-Mer : parler au PNJ « Nerd » (interception radio) → choix aider/ignorer fonctionnent.
+
+## 11. Arène de Major Bob (Carmin-sur-Mer, 4e arène)
+
+- [ ] Même schéma que Pierre/Ondine : notre dialogue (Major Bob doute), puis l'anglais, puis le combat.
+- [ ] Perdre volontairement puis retenter : la scène de doute se rejoue.
+- [ ] Gagner : badge reçu normalement.
 
 ---
 
