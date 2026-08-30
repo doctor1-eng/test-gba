@@ -463,9 +463,12 @@ parallèle sur cette même branche (commits `d524e40`-`7ba52e2`, fusionnés sans
 piste de travail. Point auparavant bloqué de notre côté (pas de rendu visuel disponible),
 débloqué par une méthode différente (décodage direct des comportements de metatile +
 flood-fill sur la grille de collision, plutôt qu'une capture d'écran) — statut : blockout
-compilé, PASS, **non testé en jeu**, limites documentées dans `MAP_TEST_README.md`
-(notamment : ne pas entrer dans le Pokémon Center dans le build de test dédié `MAPTEST=1`,
-car ça déclenche le script d'attaque de l'Acte I).
+compilé, PASS, **audit technique de connectivité/collision étendu aux étages intérieurs
+complété et PASS** (2026-08-30, voir section dédiée plus bas et `technical_map.md`),
+**non testé en jeu** (validation visuelle toujours ouverte), limites documentées dans
+`MAP_TEST_README.md` (notamment : ne pas entrer dans le Pokémon Center dans le build de test
+dédié `MAPTEST=1`, car ça déclenche le script d'attaque de l'Acte I) et dans
+`technical_map.md` (2 warps orphelins inatteignables, sans impact joueur).
 Prochaine étape : playtest complet du chemin Cinnabar → Vermilion (priorité : confirmer que
 la traduction ne casse rien visuellement, texte trop long pour une fenêtre par exemple ; et
 que les magasins vendent bien les bons objets), puis validation en jeu des portes Cinnabar
@@ -853,3 +856,41 @@ blockout des portes Arène/Manoir/Labo sur `CinnabarIsland_hns` (voir `docs/map_
 bloqué faute de rendu visuel. Fusionné sans conflit (fichiers disjoints des miens) dans le
 commit `2c7f519e2f`. Détail technique et statut de test : voir ces documents dédiés plutôt que
 dupliqué ici.
+
+## Audit technique approfondi des bâtiments de Cinnabar (2026-08-30)
+
+Chantier demandé explicitement : pousser l'audit des portes Gym/Manoir/Labo au-delà des
+seules portes d'entrée (2F/3F/B1F du Manoir, 3 salles du Labo) avant de considérer ce
+blockout comme complet. Méthode : lecture de tous les `warp_events` des `map.json` concernés
+(9 maps : `PokemonMansion_{1F,2F,3F,B1F}_Frlg`, `CinnabarIsland_PokemonLab_{Entrance,Lounge,
+ResearchRoom,ExperimentRoom}_Frlg`, `CinnabarIsland_Gym_Frlg`, `CinnabarIsland_hns`) +
+décodage binaire de chaque `map.bin` (format `MAPGRID_METATILE_ID_MASK`/`COLLISION_MASK`/
+`ELEVATION_MASK` de `include/global.fieldmap.h`) pour vérifier la collision réelle sous
+chaque tuile de warp.
+
+**Résultat** : les 3 chaînes de warps (Manoir 1F↔2F↔3F↔B1F, Labo Entrance↔3 salles, Gym) sont
+internement cohérentes — chaque `dest_warp_id` pointe vers l'index correct dans le tableau
+de la map cible, aucune map de destination erronée, aucune tuile d'arrivée effectivement
+utilisée par le joueur qui soit bloquée. Confirme et complète (sans le contredire)
+`MAP_TEST_README.md`.
+
+**2 warps orphelins trouvés** (tuile de collision non nulle → physiquement inatteignables,
+donc sans impact joueur) : `PokemonMansion_1F` warp 6 `(35,34)` et warp 9 `(11,13)`, hérités
+tels quels de la géométrie vanilla FRLG du Manoir (portes/jumeaux d'élévation qui servaient
+à d'autres agencements dans le jeu d'origine). Documentés comme LIMITATION CONNUE dans
+`technical_map.md`, non corrigés : les supprimer demanderait de renuméroter tous les
+`dest_warp_id` qui référencent ces tableaux par index dans plusieurs fichiers, un risque de
+régression plus grand que le bénéfice pour du contenu jamais atteint en jeu (règle « ne pas
+sur-corriger »).
+
+`docs/heart_and_soul/technical_map.md` mis à jour en conséquence (les lignes Cinnabar/
+Manoir/Gym/Labo indiquaient encore par erreur ce travail comme non fait).
+
+Build de contrôle sur cette session (environnement neuf, toolchain installée à l'identique
+de la Phase 0 : `gcc-arm-none-eabi` 13.2.1 via `apt`) : `make hns -j$(nproc)` → **PASS, 0
+erreur**, ROM 33 554 432 octets, EWRAM 94.47 %, IWRAM 78.37 %, ROM 94.47 % — chiffres
+identiques à la baseline Phase 0, confirmant que le build reste reproductible et que rien ne
+s'est dégradé depuis.
+
+Aucune donnée de map modifiée dans cet audit (lecture seule) ; seule la documentation a été
+mise à jour.
