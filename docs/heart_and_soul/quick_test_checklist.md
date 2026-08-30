@@ -44,7 +44,7 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 
 ## 6. Forêt de Jade (= « Viridian Forest » affiché en anglais à l'écran — c'est la même zone, juste après Viridian/Argenta, avant Pewter/Jadielle)
 
-- [ ] Combattre Doug (Bug Catcher).
+- [ ] Combattre Doug (Bug Catcher) — il erre (déplacement aléatoire) **assez loin de l'entrée nord**, plutôt vers le centre-sud de la forêt, proche de la sortie côté Jadielle/Pewter. Pas de flag caché : toujours présent, juste facile à rater dans une map en labyrinthe. Continuer vers le sud si non trouvé près de l'entrée.
 - [ ] **Juste après la victoire**, sans avoir à lui reparler : dialogue bûcherons déplacés, choix aider/ignorer fonctionnent.
 
 ## 7. Argenta → Jadielle → Azuria (route et niveaux)
@@ -56,15 +56,17 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 ## 8. Arène de Pierre (Jadielle)
 
 - [ ] Mart de Jadielle : le vendeur au comptoir vend Poké Ball/Potion/Antidote/Anti-Paralysie/Réveil/Anti-Brûlure/Corde Sortie/Repousse.
-- [ ] En arrivant à l'Arène : notre dialogue (Pierre doute) s'affiche, **puis** le dialogue anglais d'origine, **puis** le combat démarre.
-- [ ] **Perdre volontairement** ce premier combat, puis reparler à Pierre : la scène de doute (en français) doit **se rejouer**, pas seulement l'anglais.
-- [ ] Gagner le combat : badge reçu normalement.
+- [ ] En arrivant à l'Arène : **seul** notre dialogue (Pierre doute) s'affiche, puis le combat démarre directement — **plus de texte anglais générique** avant le combat.
+- [ ] **Perdre volontairement** ce premier combat, puis reparler à Pierre : la scène de doute (en français) doit **se rejouer**.
+- [ ] Gagner le combat : badge + CT Éboulement reçus normalement, **puis** un nouveau texte (en français, lié à notre histoire) où Pierre reconnaît avoir été convaincu.
 
 ## 9. Azuria
 
 - [ ] Mart d'Azuria : le vendeur vend en plus une Super Potion.
-- [ ] PNJ « canalisations sabotées » (Boy) : choix aider/ignorer fonctionnent.
-- [ ] Arène d'Ondine : même test que Pierre — notre dialogue puis l'anglais puis le combat ; en cas de défaite, la scène de doute se rejoue à la tentative suivante.
+- [ ] **Avant** de réparer les canalisations : à l'Arène, Ondine explique le problème (Arène inondée/bloquée) et dit qu'elle n'écoutera qu'une fois les canalisations réparées — **pas de combat possible** à ce stade.
+- [ ] Toujours avant réparation : un PNJ Team Rocket est présent et **interactif** dans l'Arène (parler à lui affiche une ligne de sabotage).
+- [ ] PNJ « canalisations sabotées » (Boy, en ville) : choix aider/ignorer fonctionnent, réparation obtenue.
+- [ ] **Après** réparation des canalisations : retourner à l'Arène — le PNJ Rocket a disparu, le combat contre Ondine est maintenant possible (notre dialogue, puis le combat) ; en cas de défaite, la scène se rejoue à la tentative suivante.
 
 ## 10. Route vers Carmin-sur-Mer (Vermilion)
 
