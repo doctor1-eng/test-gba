@@ -39,26 +39,27 @@ Route1_EventScript_Sign::
 	end
 
 Route1_Text_SchoolboyDanny_Seen:
-	.string "If trainers meet, the first\n"
-	.string "thing to do is battle.$"
+	.string "Quand des dresseurs se croisent,\n"
+	.string "la première chose à faire, c'est\l"
+	.string "de se battre.$"
 
 Route1_Text_SchoolboyDanny_Beaten:
-	.string "Awww… I've got a losing record…$"
+	.string "Aïe… j'ai un bilan négatif…$"
 
 Route1_Text_SchoolboyDanny_AfterBattle:
-	.string "For trainers, it's a given that\n"
-	.string "we'll battle whenever we meet.$"
+	.string "Pour des dresseurs, c'est normal\n"
+	.string "de se battre à chaque rencontre.$"
 
 Route1_Text_CooltrainerFQuinn_Seen:
-	.string "You there! Want to battle?$"
+	.string "Hé, toi ! Envie de te battre ?$"
 
 Route1_Text_CooltrainerFQuinn_Beaten:
-	.string "Down and out…$"
+	.string "Anéantie…$"
 
 Route1_Text_CooltrainerFQuinn_AfterBattle:
-	.string "You're strong.\p"
-	.string "You obviously must have trained\n"
-	.string "hard.$"
+	.string "Tu es forte.\p"
+	.string "Ça se voit que tu t'es\n"
+	.string "entraînée dur.$"
 
 Route1_Text_Sign:
 	.string "ROUTE 1\p"

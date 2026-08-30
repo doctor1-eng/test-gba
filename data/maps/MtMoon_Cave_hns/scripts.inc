@@ -86,35 +86,36 @@ MtMoon_Cave_Movement_SilverLeave:
 
 MtMoon_Cave_Text_Rival_Before:
 	.string "..................................\p"
-	.string "It's been a while, {PLAYER}.\p"
-	.string "…Since I lost to you, I thought about\n"
-	.string "what I was lacking with my POKéMON…\p"
-	.string "And we came up with an answer.\p"
-	.string "{PLAYER}, now we'll show you!$"
+	.string "Ça faisait longtemps, {PLAYER}.\p"
+	.string "…Depuis ma défaite face à toi, j'ai\n"
+	.string "réfléchi à ce qui manquait à mes\l"
+	.string "POKéMON…\p"
+	.string "Et on a trouvé une réponse.\p"
+	.string "{PLAYER}, on va te montrer ça !$"
 
 MtMoon_Cave_Text_Rival_Win:
 	.string "..................................\p"
-	.string "I thought I raised my POKéMON to be the\n"
-	.string "best they could be…\p"
-	.string "…But it still wasn't enough…$"
+	.string "Je pensais avoir élevé mes POKéMON\n"
+	.string "du mieux possible…\p"
+	.string "…Mais ça n'a pas suffi…$"
 
 MtMoon_Cave_Text_Rival_After:
 	.string "..................................\p"
-	.string "…You won, fair and square.\p"
-	.string "I admit it. But this isn't the end.\p"
-	.string "I'm going to be the greatest POKéMON\n"
-	.string "trainer ever.\p"
-	.string "Because these guys are behind me.\p"
-	.string "…Listen, {PLAYER}.\p"
-	.string "One of these days I'm going to prove\n"
-	.string "how good I am by beating you.$"
+	.string "…Tu as gagné, en toute loyauté.\p"
+	.string "Je l'admets. Mais ce n'est pas fini.\p"
+	.string "Je vais devenir le meilleur dresseur\n"
+	.string "POKéMON de tous les temps.\p"
+	.string "Parce que ces gars sont derrière moi.\p"
+	.string "…Écoute, {PLAYER}.\p"
+	.string "Un de ces jours, je te prouverai ma\n"
+	.string "valeur en te battant.$"
 
 MtMoon_Cave_Text_Rival_Loss:
 	.string "..................................\p"
-	.string "I've repaid my debt to you.\p"
-	.string "With my POKéMON, I'm going to beat the\n"
-	.string "CHAMPION and become the world's greatest\n"
-	.string "trainer.$"
+	.string "Je t'ai rendu ce que je te devais.\p"
+	.string "Avec mes POKéMON, je vais battre le\n"
+	.string "CHAMPION et devenir le meilleur\l"
+	.string "dresseur du monde.$"
 
 MtMoon_Cave_Text_Sign:
 	.string "MT MOON SQUARE ->$"
