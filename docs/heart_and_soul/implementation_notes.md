@@ -463,9 +463,12 @@ parallèle sur cette même branche (commits `d524e40`-`7ba52e2`, fusionnés sans
 piste de travail. Point auparavant bloqué de notre côté (pas de rendu visuel disponible),
 débloqué par une méthode différente (décodage direct des comportements de metatile +
 flood-fill sur la grille de collision, plutôt qu'une capture d'écran) — statut : blockout
-compilé, PASS, **non testé en jeu**, limites documentées dans `MAP_TEST_README.md`
-(notamment : ne pas entrer dans le Pokémon Center dans le build de test dédié `MAPTEST=1`,
-car ça déclenche le script d'attaque de l'Acte I).
+compilé, PASS, **audit technique de connectivité/collision étendu aux étages intérieurs
+complété et PASS** (2026-08-30, voir section dédiée plus bas et `technical_map.md`),
+**non testé en jeu** (validation visuelle toujours ouverte), limites documentées dans
+`MAP_TEST_README.md` (notamment : ne pas entrer dans le Pokémon Center dans le build de test
+dédié `MAPTEST=1`, car ça déclenche le script d'attaque de l'Acte I) et dans
+`technical_map.md` (2 warps orphelins inatteignables, sans impact joueur).
 Prochaine étape : playtest complet du chemin Cinnabar → Vermilion (priorité : confirmer que
 la traduction ne casse rien visuellement, texte trop long pour une fenêtre par exemple ; et
 que les magasins vendent bien les bons objets), puis validation en jeu des portes Cinnabar
@@ -853,3 +856,88 @@ blockout des portes Arène/Manoir/Labo sur `CinnabarIsland_hns` (voir `docs/map_
 bloqué faute de rendu visuel. Fusionné sans conflit (fichiers disjoints des miens) dans le
 commit `2c7f519e2f`. Détail technique et statut de test : voir ces documents dédiés plutôt que
 dupliqué ici.
+
+## Audit technique approfondi des bâtiments de Cinnabar (2026-08-30)
+
+Chantier demandé explicitement : pousser l'audit des portes Gym/Manoir/Labo au-delà des
+seules portes d'entrée (2F/3F/B1F du Manoir, 3 salles du Labo) avant de considérer ce
+blockout comme complet. Méthode : lecture de tous les `warp_events` des `map.json` concernés
+(9 maps : `PokemonMansion_{1F,2F,3F,B1F}_Frlg`, `CinnabarIsland_PokemonLab_{Entrance,Lounge,
+ResearchRoom,ExperimentRoom}_Frlg`, `CinnabarIsland_Gym_Frlg`, `CinnabarIsland_hns`) +
+décodage binaire de chaque `map.bin` (format `MAPGRID_METATILE_ID_MASK`/`COLLISION_MASK`/
+`ELEVATION_MASK` de `include/global.fieldmap.h`) pour vérifier la collision réelle sous
+chaque tuile de warp.
+
+**Résultat** : les 3 chaînes de warps (Manoir 1F↔2F↔3F↔B1F, Labo Entrance↔3 salles, Gym) sont
+internement cohérentes — chaque `dest_warp_id` pointe vers l'index correct dans le tableau
+de la map cible, aucune map de destination erronée, aucune tuile d'arrivée effectivement
+utilisée par le joueur qui soit bloquée. Confirme et complète (sans le contredire)
+`MAP_TEST_README.md`.
+
+**2 warps orphelins trouvés** (tuile de collision non nulle → physiquement inatteignables,
+donc sans impact joueur) : `PokemonMansion_1F` warp 6 `(35,34)` et warp 9 `(11,13)`, hérités
+tels quels de la géométrie vanilla FRLG du Manoir (portes/jumeaux d'élévation qui servaient
+à d'autres agencements dans le jeu d'origine). Documentés comme LIMITATION CONNUE dans
+`technical_map.md`, non corrigés : les supprimer demanderait de renuméroter tous les
+`dest_warp_id` qui référencent ces tableaux par index dans plusieurs fichiers, un risque de
+régression plus grand que le bénéfice pour du contenu jamais atteint en jeu (règle « ne pas
+sur-corriger »).
+
+`docs/heart_and_soul/technical_map.md` mis à jour en conséquence (les lignes Cinnabar/
+Manoir/Gym/Labo indiquaient encore par erreur ce travail comme non fait).
+
+Build de contrôle sur cette session (environnement neuf, toolchain installée à l'identique
+de la Phase 0 : `gcc-arm-none-eabi` 13.2.1 via `apt`) : `make hns -j$(nproc)` → **PASS, 0
+erreur**, ROM 33 554 432 octets, EWRAM 94.47 %, IWRAM 78.37 %, ROM 94.47 % — chiffres
+identiques à la baseline Phase 0, confirmant que le build reste reproductible et que rien ne
+s'est dégradé depuis.
+
+Aucune donnée de map modifiée dans cet audit (lecture seule) ; seule la documentation a été
+mise à jour.
+
+## Acte III — premier lieutenant scripté : Lyre (Forêt de Jade)
+
+Chantier ouvert (docs/heart_and_soul/docs/histoire.md section 3 : Viridian Forest/Mont
+Sélénite/Rock Tunnel, open world, ordre libre). Décision de méthode : les 3 lieutenants
+traités un par un (« travail par lots »), pas en bloc — Lyre d'abord, la plus simple des
+trois (combat direct, pas de mécanique de conviction contrairement à Terrence).
+
+**Constat avant script** : contrairement à Route1/Route2 (Quinn, Doug, Ed — tous des
+Bug Catcher génériques déjà présents, reflavorés), `ViridianForest_hns` ne contient aucun
+PNJ dresseur "boss" réutilisable pour incarner une lieutenante régionale de la TEAM ROCKET.
+Décision : nouvel `object_event`, sprite `OBJ_EVENT_GFX_ROCKET_F_HNS` (déjà présent dans les
+graphismes du jeu de base, jamais assigné à un PNJ nommé dans ce fork — pas de graphisme
+inventé). Position `(46,40)` choisie par le même procédé que l'audit Cinnabar : décodage de
+`data/layouts/ViridianForest_hns/map.bin`, recherche d'une case de collision 0 avec ses 8
+voisines également à 0, non occupée par un autre `object_event`/`warp_event`.
+
+**Trainer** : `TRAINER_LYRE_HNS` ajouté en fin de liste (`include/constants/opponents_hns.h`,
+id `631`, `TRAINERS_COUNT_HNS` `631`→`632`) — jamais inséré au milieu, le fichier documente
+lui-même pourquoi (décalerait les flags de victoire de tous les dresseurs suivants). Équipe
+dans `src/data/trainers_hns.party` : Venomoth/Beedrill/Ariados/Parasect niveau 34 (même
+convention plate que Brock/tout le reste du jeu), thème Bug/Poison + statut-piège
+(Stun Spore/Sleep Powder/Spider Web/Spore) cohérent avec "guérilla, pièges et embuscades"
+(histoire.md section 3). Classe `Rocket Admin Hns` / pic `Rocket Grunt F Hns`, déjà utilisés
+ailleurs dans ce fork pour d'autres PNJ Rocket — pas de nouvelle classe inventée.
+
+**Script** (`data/scripts/heart_and_soul_act3.inc`, nouveau fichier, ajouté à
+`data/event_scripts.s`) : suit exactement le patron `Route1_EventScript_Quinn` /
+`Route1_EventScript_QuinnPostBattle` déjà validé (`trainerbattle_single` avec le 4e argument
+`event_script`, `special PlayerFaceTrainerAfterBattle` + `waitmovement 0` avant le message de
+victoire, flag posé uniquement dans la branche de victoire). **Décision assumée** : le combat
+n'est pas conditionné par un flag d'acte, comme aucun combat de ce fork ne l'est (seul le
+contenu narratif qui suit un combat l'est ailleurs, ex. `HeartSoul_EventScript_MiliceRoute1`
+après Quinn) — Lyre est donc combattable dès que le joueur atteint la Forêt de Jade, y
+compris avant la fin officielle de l'Acte II. Simplification délibérée, pas un oubli.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**, symbole
+`ViridianForest_EventScript_Lyre` confirmé présent dans `pokehns.map`. ROM 33 554 432 octets
+(inchangé), 94.47 % ROM/EWRAM, 78.37 % IWRAM.
+
+**Non testé en jeu** (validation visuelle toujours indisponible côté agent) : positionnement
+réel de Lyre sur la carte, dialogue à l'écran, équilibrage du combat.
+
+**Reste à faire pour clore Acte III** : Selen (Mont Sélénite) et Terrence (Rock Tunnel, avec
+sa mécanique de conviction à 3 choix, `VAR_PERSUASION_TERRENCE` déjà réservée en Phase 1) —
+même méthode (nouvel object_event, sprite Rocket, position vérifiée par collision), à traiter
+en chantiers séparés.

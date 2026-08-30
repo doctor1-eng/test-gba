@@ -68,6 +68,57 @@ Ces trois sorties pointaient auparavant vers `MAP_CINNABAR_ISLAND` (l'ancien Kan
 relisant directement les `map.json` des 3 intérieurs : plus aucun warp lié à ces 3 bâtiments ne
 cible l'ancien Kanto.
 
+## 5bis. Bug corrigé : blocage total des contrôles sur CinnabarIsland_hns
+
+Découvert en testant cette ROM (déplacement et bouton START tous les deux sans effet dès
+l'arrivée sur la carte, perçu comme un freeze). Cause réelle, confirmée par lecture du moteur :
+`CinnabarIsland_hns_MapScripts` déclenche `HeartSoul_EventScript_CinnabarVerrouilleeCheck` à
+chaque frame tant que `VAR_TEMP_0 == 0` (`MAP_SCRIPT_ON_FRAME_TABLE`). `TryRunOnFrameMapScript()`
+(`src/script.c`) renvoie alors `TRUE`, et `ProcessPlayerFieldInput()`
+(`src/field_control_avatar.c`) s'arrête avant de traiter le déplacement ou le bouton START pour
+cette frame — même si le script appelé ne fait ensuite qu'un `end` immédiat. Le script ne
+remettait jamais `VAR_TEMP_0` à une valeur non nulle : la condition restait donc vraie à chaque
+frame, indéfiniment, tant que le joueur restait sur la carte. Motif déjà correctement utilisé
+ailleurs dans le même fichier (`CeruleanCity_Gym_EventScript_TryMachinePart`, qui pose bien
+`setvar VAR_TEMP_0, 1` sur chaque sortie) — c'est cet appel qui manquait ici.
+
+Corrigé (`data/scripts/heart_and_soul_act1.inc`) en ajoutant `setvar VAR_TEMP_0, 1` sur les deux
+sorties du script. `VAR_TEMP_0` est remis à 0 par le moteur à chaque nouveau chargement de carte
+(`ClearTempFieldEventData`, `src/event_data.c`), donc ce `setvar` désarme seulement la
+vérification jusqu'au prochain chargement, sans changer son résultat ni le verrou scénaristique
+Acte I/V. Ce bug touchait déjà potentiellement le jeu normal (pas seulement cette ROM de test) :
+tout séjour prolongé sur `CinnabarIsland_hns` avec ce script actif aurait figé les contrôles de
+la même façon.
+
+**Si votre ROM date d'avant ce correctif, retéléchargez-la et recommencez une nouvelle
+partie** — une sauvegarde faite sur l'ancienne ROM figée reproduira le même blocage.
+
+## 5ter. Bug corrigé : porte du Labo infranchissable
+
+Signalé en testant cette ROM : la grotte du Labo `(23,21)` était visible mais impossible à
+franchir, aucune réaction en marchant dessus. Cause confirmée par comparaison directe avec des
+portes du même type déjà fonctionnelles ailleurs dans le jeu (`CeruleanCity_hns (7,10)` →
+Grotte Céladopole, `VermilionCity_hns (61,10)` → Grotte Digda, même tileset primaire
+`Kanto_General_Hns`) : la tuile avait le bon metatile et le bon comportement
+(`MB_NON_ANIMATED_DOOR`), mais avec le bit de collision à **1** au lieu de **0** dans
+`data/layouts/CinnabarIsland_hns/map.bin`. `MapGridGetCollisionAt()` (`src/fieldmap.c`) est
+utilisé sans exception pour ce type de porte par `event_object_movement.c` : collision ≠ 0
+bloque physiquement le pas, donc le joueur ne pouvait jamais se tenir sur la case et le warp
+n'était jamais évalué.
+
+Vérifié en même temps que l'**Arène** `(49,16)` et le **Manoir** `(30,16)` n'ont **pas** ce
+problème : leur type de porte (`MB_ANIMATED_DOOR`, porte à deux battants) a une collision=1 qui
+est cette fois normale (entrée gérée par une animation forcée qui contourne la collision
+standard) — valeurs identiques bit pour bit à la porte d'Arène de `CeruleanCity_hns (34,31)`
+qui fonctionne déjà. Aucune modification nécessaire de leur côté ; à confirmer quand même en
+jeu.
+
+Corrigé : une seule case modifiée dans `map.bin` (collision 1→0, élévation 0→3, alignée sur les
+portes de grotte déjà fonctionnelles). Metatile et `warp_events` inchangés.
+
+**Si votre ROM date d'avant ce correctif, retéléchargez-la** — la grotte du Labo restera
+bloquée sur l'ancienne version.
+
 ## 6. Limitations connues
 
 - **N'entrez pas dans le Pokémon Center** (`CinnabarIsland_hns` warp `(45,29)`) avec cette ROM
@@ -97,7 +148,74 @@ cible l'ancien Kanto.
   final). La confirmation visuelle du rendu, des collisions ressenties en jeu et de la
   cohérence esthétique reste à faire par vous, dans un émulateur.
 
-## 7. Ce qui n'a pas été touché
+## 8. Équipe et inventaire de test complets (menu debug, aucun code modifié)
+
+Le jeu embarque déjà un menu de debug complet (`include/config/debug.h`,
+`DEBUG_OVERWORLD_MENU = TRUE` par défaut) : **maintenir R puis appuyer sur START en extérieur**
+(pas dans un menu) l'ouvre. Il permet de créer des Pokémon niveau 100 avec IVs parfaites et de
+remplir entièrement le sac — pas besoin de modifier le jeu pour ça, ni de recompiler la ROM.
+
+### 8.1 Six Pokémon (meilleures stats totales réellement disponibles)
+
+Les formes Méga/Primal/Gigamax/Téracristal sont désactivées dans ce fork
+(`include/config/species_enabled.h`) — ce top 6 exclut donc ces formes et a été vérifié
+directement dans `src/data/pokemon/species_info/*.h` (BST = somme des 6 stats de base) :
+
+| # | Pokémon | ID espèce | BST | PV/Atq/Déf/AtqS/DéfS/Vit |
+|---|---|---|---|---|
+| 1 | Arceus | 493 | 720 | 120/120/120/120/120/120 |
+| 2 | Zacian (Couronné) | 1227 | 700 | 92/150/115/80/115/148 |
+| 3 | Zamazenta (Couronné) | 1228 | 700 | 92/120/140/80/140/128 |
+| 4 | Eternatus | 890 | 690 | 140/85/95/145/95/130 |
+| 5 | Dialga (Origine) | 1069 | 680 | 100/100/120/150/120/90 |
+| 6 | Palkia (Origine) | 1070 | 680 | 90/100/100/150/120/120 |
+
+**Pour les obtenir** : menu debug → `Give X…` → `Pokémon (Complex)` → entrer l'ID espèce →
+niveau **100** → puis Shiny/Nature/Ability/Tera/Dynamax/Gigantamax (au choix) → **IVs : 31 sur
+les 6 stats** (pour de vraies stats maximales) → EVs/Moves au choix. Répéter pour les 6 IDs.
+Version rapide sans réglage IV/EV : `Pokémon (Basic)` (juste ID + niveau).
+
+### 8.2 Tout l'inventaire d'un coup
+
+Menu debug → `PC/Bag…` :
+
+- `Fill Pocket TMHM` — toutes les CT/CS
+- `Fill Pocket Items` — tous les objets
+- `Fill Pocket Poké Balls` — toutes les Poké Balls
+- `Fill Pocket Key Items` — tous les objets clés
+- `Fill PC Items` — au cas où le sac déborde
+
+Menu debug → `Give X…` → `Max Money` / `Max Coins` si besoin d'acheter en boutique.
+
+## 8bis. Checklist de test (à cocher à chaque session)
+
+**Avant de commencer**
+- [ ] Nouvelle partie sur la dernière version de `heart-and-soul-map-test.gba`
+- [ ] Équipe de test donnée (section 8.1) et sac rempli (section 8.2)
+- [ ] Position de départ confirmée : `CinnabarIsland_hns (30,17)`, aucun blocage d'input
+
+**Par bâtiment (Arène, Manoir, Labo) — répéter 3 fois**
+- [ ] Façade visible et cohérente depuis l'extérieur (pas de tuiles manquantes/mal alignées)
+- [ ] Pas de superposition avec le décor existant (arbres, PNJ, faune) autour de la porte
+- [ ] Approche à pied depuis le point de spawn sans collision anormale
+- [ ] Entrée par la porte : pas de blocage dans l'encadrement, atterrissage correct à l'intérieur
+- [ ] Collisions intérieures : murs, meubles, PNJ tous infranchissables comme attendu
+- [ ] Étages/salles annexes si présents (Manoir 2F/3F/B1F ; Labo Lounge/Research/Experiment) accessibles
+- [ ] Sortie par la porte : atterrissage exact devant le bon bâtiment sur `CinnabarIsland_hns`
+- [ ] Pas de téléportation vers l'ancien Kanto `_Frlg` en sortant
+
+**Général sur CinnabarIsland_hns**
+- [ ] Déplacement libre dans toutes les directions autour des 3 portes, aucun freeze
+- [ ] Bouton START ouvre bien le menu (Pokémon/Sac/Sauvegarde/Options)
+- [ ] Pas d'entrée accidentelle dans le Pokémon Center déclenchant l'intro Acte I (sauf test volontaire)
+- [ ] Limites de la carte (bords) ne laissent pas sortir de la zone jouable
+
+**À noter pour chaque anomalie trouvée**
+- [ ] Bâtiment/zone concerné, coordonnées approximatives, capture d'écran si possible
+- [ ] Reproductible ou ponctuel
+- [ ] Bloquant (freeze/soft-lock) ou cosmétique
+
+## 9. Ce qui n'a pas été touché
 
 Aucune autre map, aucun autre script, aucun dialogue, aucun dresseur, aucun objet, aucun
 Pokémon n'a été modifié pour ce chantier. Le mécanisme de test (`MAPTEST=1`,
