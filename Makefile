@@ -54,6 +54,9 @@ LTO          ?= 0
 # Makes an optimized build for release, also enabling NDEBUG macro and disabling other debugging features
 # Enables LTO by default, but can be changed in the config.mk file
 RELEASE      ?= 0
+# Heart & Soul map-test build: `make hns MAPTEST=1` produces heart-and-soul-map-test.gba in
+# its own build directory, isolated from the normal hns build (see include/config/map_test.h).
+MAPTEST      ?= 0
 
 ifeq (compare,$(MAKECMDGOALS))
   COMPARE := 1
@@ -103,12 +106,16 @@ CPP := $(PREFIX)cpp
 ifeq ($(RELEASE),1)
 	FILE_NAME := $(FILE_NAME)-release
 endif
+ifeq ($(MAPTEST),1)
+	FILE_NAME := heart-and-soul-map-test
+endif
 
 ROM_NAME := $(FILE_NAME).gba
 OBJ_DIR_NAME := $(BUILD_DIR)/$(BUILD_NAME)
 OBJ_DIR_NAME_TEST := $(BUILD_DIR)/$(BUILD_NAME)-test
 OBJ_DIR_NAME_DEBUG := $(BUILD_DIR)/$(BUILD_NAME)-debug
 OBJ_DIR_NAME_RELEASE := $(BUILD_DIR)/$(BUILD_NAME)-release
+OBJ_DIR_NAME_MAPTEST := $(BUILD_DIR)/$(BUILD_NAME)-maptest
 
 ELF_NAME := $(ROM_NAME:.gba=.elf)
 MAP_NAME := $(ROM_NAME:.gba=.map)
@@ -130,6 +137,9 @@ ifeq ($(DEBUG),1)
 endif
 ifeq ($(RELEASE),1)
   OBJ_DIR := $(OBJ_DIR_NAME_RELEASE)
+endif
+ifeq ($(MAPTEST),1)
+  OBJ_DIR := $(OBJ_DIR_NAME_MAPTEST)
 endif
 ELF := $(ROM:.gba=.elf)
 MAP := $(ROM:.gba=.map)
@@ -171,6 +181,9 @@ ifeq ($(RELEASE),1)
 	ifeq ($(USE_LTO_ON_RELEASE),1)
 		LTO := 1
 	endif
+endif
+ifeq ($(MAPTEST),1)
+	override CPPFLAGS += -DHNS_MAP_TEST_BUILD=TRUE
 endif
 ARMCC := $(PREFIX)gcc
 PATH_ARMCC := PATH="$(PATH)" $(ARMCC)
