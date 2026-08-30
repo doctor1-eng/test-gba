@@ -142,12 +142,64 @@ joueur doit d'abord habiter ces lieux). Acte V : retour sur la même carte, dans
 6. `make hns`, PASS obligatoire avant tout envoi pour test.
 7. Statut **BLOCKOUT** tant qu'aucune capture d'écran n'a confirmé le rendu ; **FINAL** ensuite.
 
-### 5.4 Ce dont j'ai besoin avant d'exécuter
+### 5.4 Exécution (2026-08-30)
 
-Rien de bloquant au sens strict (la méthode de la section 1 permet d'avancer sans capture
-d'écran). Mais une capture d'écran de l'état actuel de `CinnabarIsland_hns` en jeu
-accélérerait fortement la fiabilité du placement (zéro incertitude sur le décor déjà en place),
-et reste la seule façon de faire passer ce chantier de BLOCKOUT à FINAL.
+Feu vert utilisateur reçu, sans capture d'écran disponible — exécuté selon la méthode de la
+section 1, avec une étape supplémentaire découverte en cours de route (5.4.1).
+
+**Méthode réellement suivie** :
+1. Décodage de `CinnabarIsland_hns/map.bin` (grille 72×44 metatile/collision/élévation) et
+   croisement avec `metatile_attributes.bin` (primaire `Kanto_General_Hns` + secondaire
+   `Lavaridge_Hns`) pour obtenir le **comportement** (`MB_*`) de chaque tuile, pas seulement son
+   id — notamment repérer les tuiles de porte (`MB_ANIMATED_DOOR`, `MB_NON_ANIMATED_DOOR`).
+2. Identification, en scannant toutes les villes `_hns` du même groupe régional (même tileset
+   primaire `Kanto_General_Hns`), des **« tampons » de bâtiment déjà utilisés et prouvés** —
+   plutôt que d'inventer une composition de tuiles jamais vérifiée :
+   - **Gym** : bloc 7×5 (`0x139`–`0x168`), identique tuile pour tuile entre `CeruleanCity_hns`
+     et `AzaleaTown_hns` (deux tilesets secondaires différents) → entièrement issu du tileset
+     primaire partagé, donc portable sans risque sur Cinnabar.
+   - **Lab** : façade de falaise 5×3 (`0x070`–`0x0b2`), identique entre `CeruleanCity_hns`
+     (entrée Grotte Céladopole) et `VermilionCity_hns` (entrée Grotte Digda) — thématiquement
+     cohérent avec un labo creusé dans le Mont Cinnabar.
+   - **Mansion** : réutilise le même tampon que le Gym (aucun troisième tampon "grand bâtiment"
+     n'a pu être validé comme portable — voir limite 5.4.2).
+3. Recherche programmatique, sur la grille décodée, de 3 emplacements : (a) sans tuile d'eau
+   dans l'empreinte, (b) avec un accès piéton existant immédiatement au sud de la porte, (c)
+   sans recouvrement des `object_events`/warps déjà en place. Retenus : Gym `(49,16)`, Manoir
+   `(30,16)`, Labo `(23,21)` — mutuellement espacés, aucun chevauchement.
+4. Écriture directe des tuiles (`map.bin`, collision et élévation `0` identiques au Pokémon
+   Center déjà fonctionnel sur cette carte — élévation `0` fait office de joker qui se raccorde
+   à n'importe quelle élévation voisine, confirmé en observant que le PC existant fonctionne
+   malgré une élévation de terrain voisine différente).
+5. Ajout de 3 `warp_events` sur `CinnabarIsland_hns/map.json` (indices 2, 3, 4).
+
+#### 5.4.1 Découverte non anticipée : les warps de sortie des intérieurs `_Frlg` pointaient vers l'ancien Kanto
+
+Les intérieurs réutilisés (`CinnabarIsland_Gym_Frlg`, `PokemonMansion_1F_Frlg`,
+`CinnabarIsland_PokemonLab_Entrance_Frlg`) ont leurs propres warps de sortie câblés en dur vers
+`MAP_CINNABAR_ISLAND` (la version `_Frlg`, pas `_hns`) — un residu de leur origine. Sans
+correction, sortir de ces bâtiments aurait téléporté le joueur vers l'autre Kanto plutôt que de
+le ramener à la nouvelle porte. Corrigé : les warps de sortie des 3 intérieurs pointent
+désormais vers `MAP_CINNABAR_ISLAND_HNS`, avec le bon `dest_warp_id` (2/3/4). Vérifié qu'aucun
+autre warp de ces fichiers ne visait `MAP_CINNABAR_ISLAND` par erreur avant modification.
+
+#### 5.4.2 Limite honnête
+
+Aucun troisième tampon de bâtiment "grand/imposant" entièrement portable (primaire seul) n'a
+été trouvé dans le tileset partagé — les façades de Mart/Dept Store examinées dépendent toutes
+de tuiles du tileset **secondaire** de leur ville d'origine (donc absentes du tileset
+volcanique `Lavaridge_Hns` de Cinnabar). Le Manoir réutilise donc **la même silhouette
+extérieure que l'Arène** plutôt qu'une architecture distincte — un compromis assumé plutôt que
+deviné : mieux valait une composition prouvée deux fois ailleurs dans le jeu qu'un mélange de
+tuiles jamais vérifié ensemble. Une passe visuelle ultérieure (capture d'écran ou Porymap)
+reste la bonne occasion de donner au Manoir une façade propre.
+
+**Build** : `make hns -j4` → **PASS, 0 erreur**, ROM 94.46 % (inchangé par rapport à la
+baseline, aucun nouvel asset ajouté — seules des tuiles déjà présentes dans les tilesets
+existants ont été réarrangées).
+
+**Statut** : **BLOCKOUT** — non vérifié visuellement (aucune capture d'écran disponible).
+Prêt pour un test en jeu.
 
 ## 6. Format de fiche de map (pour chaque zone traitée à partir de maintenant)
 
@@ -169,7 +221,6 @@ et reste la seule façon de faire passer ce chantier de BLOCKOUT à FINAL.
 
 ## 7. Prochaine étape
 
-En attente de validation avant d'exécuter le blockout Cinnabar (section 5) : confirmer que
-l'ordre (Cinnabar d'abord), la méthode (décodage blockdata + capture d'écran en confirmation
-finale, pas en préalable), et l'emplacement approximatif des 3 bâtiments conviennent avant
-modification réelle de `CinnabarIsland_hns`.
+Blockout Cinnabar (section 5) exécuté et compilé PASS. Prochaine étape : **test en jeu** pour
+confirmer que les 3 portes s'affichent et fonctionnent comme attendu (statut BLOCKOUT → FINAL),
+puis reprendre la feuille de route (section 4) à la Phase 2/3 selon ce que révèle ce test.
