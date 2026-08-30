@@ -23,6 +23,9 @@ pas sur la seule base de la compilation.
 - [ ] CT (Coupe/Vol/Surf/etc.) et Bicyclette données dès le départ — nouveau, compilé PASS, **non testé en jeu**. Le CS Vol en particulier était le point signalé cassé, à revérifier en priorité.
 - [ ] Route vers Carmin-sur-Mer (Route 5 → Safrania → Route 6), dresseurs/sauvages niveau 34 — nouveau, compilé PASS, **non testé en jeu**.
 - [ ] Carmin-sur-Mer, interception radio (PNJ Nerd) — nouveau, compilé PASS, **non testé en jeu**.
+- [ ] Cannes à pêche (Old/Good/Super Rod) dans le sac dès le départ — nouveau, compilé PASS, **non testé en jeu**.
+- [ ] Magasins d'Argenta/Jadielle/Azuria/Carmin-sur-Mer vendent réellement des objets (PNJ Clerk était mal câblé sur le vendeur de Cherrygrove/Johto) — nouveau, compilé PASS, **non testé en jeu**.
+- [ ] Portes Arène/Manoir/Labo sur Cinnabar (travail d'une session parallèle, fusionné) — blockout compilé, PASS, **non testé en jeu** ; voir `MAP_TEST_README.md` pour un build de test dédié (`make hns MAPTEST=1`) qui démarre directement à côté des 3 portes.
 - [ ] 4e Arène (Major Bob/Lt. Surge) — même schéma que Pierre/Ondine — nouveau, compilé PASS, **non testé en jeu**.
 - [ ] Pallet Town, événement « le monde d'avant » (PNJ Woman) — nouveau, compilé PASS, **non testé en jeu**.
 - [ ] **Traduction française complète Cinnabar → Vermilion** — chantier de ~1300 lignes réparti sur ~45 cartes, build PASS, balayage automatique ne trouve plus de texte anglais résiduel (sauf le bloc Blue à Argenta, volontairement laissé de côté car inaccessible avant l'Acte V). **Jamais testé visuellement en émulateur** — c'est le point qui demande le plus de vigilance : vérifier qu'aucune ligne ne déborde de sa fenêtre de dialogue.

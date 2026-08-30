@@ -454,12 +454,23 @@ Cinnabar→Azuria relevés niveau 34, Pokégear/carte dès le départ, capacité
 utilisables sans badge) : **compilée, PASS ; corrige les bugs confirmés Quinn/Pierre**.
 Phase 2septies (CT + bicyclette dès le départ, histoire avancée jusqu'à la 4e arène/Major Bob
 à Carmin-sur-Mer, traduction française complète de tous les dialogues PNJ de Cinnabar à
+Vermilion) : **compilée, PASS ; non testée en jeu**.
+Phase 2octies (cannes à pêche de départ, vrais magasins à Viridian/Pewter/Cerulean/
 Vermilion) : **compilée, PASS ; non testée en jeu**. Voir sections dédiées ci-dessous.
+**Warps des bâtiments de Cinnabar (Arène/Manoir/Labo)** : fait entre-temps par une session
+parallèle sur cette même branche (commits `d524e40`-`7ba52e2`, fusionnés sans conflit dans
+`2c7f519`) — voir `docs/map_design.md` et `docs/world_map.md` pour le détail de cette autre
+piste de travail. Point auparavant bloqué de notre côté (pas de rendu visuel disponible),
+débloqué par une méthode différente (décodage direct des comportements de metatile +
+flood-fill sur la grille de collision, plutôt qu'une capture d'écran) — statut : blockout
+compilé, PASS, **non testé en jeu**, limites documentées dans `MAP_TEST_README.md`
+(notamment : ne pas entrer dans le Pokémon Center dans le build de test dédié `MAPTEST=1`,
+car ça déclenche le script d'attaque de l'Acte I).
 Prochaine étape : playtest complet du chemin Cinnabar → Vermilion (priorité : confirmer que
-la traduction ne casse rien visuellement, texte trop long pour une fenêtre par exemple), puis
-warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo, bloqué par l'absence de rendu
-visuel — capture d'écran utilisateur utile ici), puis suite de l'histoire après la 4e arène
-(Acte III : Forêt de Jade/Mont Sélénite/Route de la Centrale en monde ouvert avec les
+la traduction ne casse rien visuellement, texte trop long pour une fenêtre par exemple ; et
+que les magasins vendent bien les bons objets), puis validation en jeu des portes Cinnabar
+ci-dessus, puis suite de l'histoire après la 4e arène (Acte III : Forêt de Jade/Mont
+Sélénite/Route de la Centrale en monde ouvert avec les
 lieutenants).
 
 ## Retour de test n°4 : entrée "Pokémon" absente du menu START
@@ -801,3 +812,44 @@ maintenant, sera fait avec le reste du contenu de l'Acte V.
 
 `make hns -j4` : PASS, 0 erreur, vérifié après chaque lot puis sur l'état final consolidé.
 ROM à 94.46 %.
+
+## Retour de test n°10 : cannes à pêche et magasins vides
+
+Demande : cannes à pêche et objets achetables dans chaque magasin.
+
+**Cannes à pêche** : les 3 cannes (`ITEM_OLD_ROD`/`ITEM_GOOD_ROD`/`ITEM_SUPER_ROD`) ajoutées
+au kit de départ des 18 `ChooseTeam_{type}`. Aucun script `_hns` de Kanto n'en donne (la seule
+occurrence de `ITEM_OLD_ROD` dans tout le dépôt est à `Route32_PokemonCenter_hns`, en Johto —
+jamais atteignable dans une partie Heart & Soul qui reste entièrement à Kanto).
+
+**Magasins vides, cause réelle trouvée** : aucun des 4 Marts de Viridian/Pewter/Cerulean/
+Vermilion ne vendait quoi que ce soit. Cause identifiée dans `map.json` (pas une supposition)
+: le PNJ « Clerk » déjà placé sur chacune des 4 cartes pointait vers
+`Cherrygrove_Pokemart_EventScript_Clerk` — le vendeur de Cherrygrove City, une ville de
+**Johto**, dont le stock de démarrage ne contient que Potion/Antidote, sans lien avec la
+ville visitée. Vraisemblablement un placeholder resté de la génération initiale des cartes
+Kanto `_hns`, jamais complété (cohérent avec le reste de l'audit initial : ce Kanto est traité
+comme contenu de postgame dans le jeu de base, où le joueur arrive déjà équipé depuis Johto et
+n'a normalement pas besoin de ces magasins).
+
+**Correctif** : chaque PNJ Clerk repointé (même objet-événement, seul le script visé change
+dans `map.json`) vers un nouveau script de vendeur propre à la carte, avec l'inventaire réel
+de cette ville — porté tel quel depuis la variante `_Frlg` inerte de ce même dépôt
+(`PewterCity_Mart_Frlg`, etc., déjà conçue avec les bons objets par ville, jamais du contenu
+inventé) :
+- Argenta (Viridian) : Poké Ball, Potion, Antidote, Anti-Paralysie.
+- Jadielle (Pewter) : + Réveil, Anti-Brûlure, Corde Sortie, Repousse.
+- Azuria (Cerulean) : + Super Potion (en tête de liste, avant Potion).
+- Carmin-sur-Mer (Vermilion) : Poké Ball, Super Potion, Antidote, Anti-Paralysie, Réveil,
+  Anti-Gel, Repousse.
+
+`make hns -j4` : PASS, 0 erreur. ROM à 94.47 %.
+
+## Note : travail parallèle fusionné (warps Cinnabar)
+
+En parallèle de ce retour n°10, une autre session a poussé sur cette même branche le
+blockout des portes Arène/Manoir/Labo sur `CinnabarIsland_hns` (voir `docs/map_design.md`,
+`docs/world_map.md`, `MAP_TEST_README.md`) — le point que ce journal documentait comme
+bloqué faute de rendu visuel. Fusionné sans conflit (fichiers disjoints des miens) dans le
+commit `2c7f519e2f`. Détail technique et statut de test : voir ces documents dédiés plutôt que
+dupliqué ici.
