@@ -451,13 +451,16 @@ sous-intrigues Route 1/Viridian/Forêt de Jade/Azuria, intro Chen sautée, 5 Pok
 départ) : **compilée, PASS ; fuite confirmée, dialogue Route 1 remonté en échec**.
 Phase 2sexies (correctif dialogues post-combat Quinn/Doug/Pierre/Ondine, Pokémon sauvages
 Cinnabar→Azuria relevés niveau 34, Pokégear/carte dès le départ, capacités de terrain
-utilisables sans badge) : **compilée, PASS ; non testée en jeu**. Voir section dédiée
-ci-dessous.
-Prochaine étape : playtest du lot complet ci-dessous (priorité : le correctif Quinn/Pierre),
-puis warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo, bloqué par l'absence de rendu
-visuel — capture d'écran utilisateur utile ici), puis suite de l'Acte II (Pallet Town, Pewter
-vivres — non chiffré au
-barème) et Acte III.
+utilisables sans badge) : **compilée, PASS ; corrige les bugs confirmés Quinn/Pierre**.
+Phase 2septies (CT + bicyclette dès le départ, histoire avancée jusqu'à la 4e arène/Major Bob
+à Carmin-sur-Mer, traduction française complète de tous les dialogues PNJ de Cinnabar à
+Vermilion) : **compilée, PASS ; non testée en jeu**. Voir sections dédiées ci-dessous.
+Prochaine étape : playtest complet du chemin Cinnabar → Vermilion (priorité : confirmer que
+la traduction ne casse rien visuellement, texte trop long pour une fenêtre par exemple), puis
+warps réels des bâtiments de Cinnabar (Arène/Manoir/Labo, bloqué par l'absence de rendu
+visuel — capture d'écran utilisateur utile ici), puis suite de l'histoire après la 4e arène
+(Acte III : Forêt de Jade/Mont Sélénite/Route de la Centrale en monde ouvert avec les
+lieutenants).
 
 ## Retour de test n°4 : entrée "Pokémon" absente du menu START
 
@@ -751,3 +754,50 @@ Trois demandes complémentaires, toutes livrées dans le même lot :
   conservée).
 
 `make hns -j4` : PASS, 0 erreur à chaque étape. ROM à 94.45 %.
+
+## Retour de test n°9 : CT/bicyclette, histoire jusqu'à la 4e arène, traduction complète
+
+Suite à la confirmation que les correctifs Quinn/Pierre/Doug fonctionnent (« Perdre exprès
+une fois → reparler à Pierre : (Fonctionne) »), trois demandes : des événements avant Pierre,
+la bicyclette activée directement, l'histoire avancée jusqu'à la 4e Arène, et la traduction
+française de toutes les lignes de dialogue de PNJ avant cette 4e Arène.
+
+**CT et bicyclette dès le départ** : les 8 CT de capacités de terrain (Coupe, Vol, Surf,
+Force, Flash, Rock Smash, Cascade, Tourbillon) et la Bicyclette (`ITEM_BICYCLE`, l'objet du
+Magasin de Vélos de ce fork HGSS) ajoutées au kit de départ dans les 18 `ChooseTeam_{type}`.
+Root cause du signalement « la carte pour voler ne s'active pas correctement » : le badge
+n'était déjà plus requis (retour n°8), mais aucune CT n'avait jamais été donnée, donc aucun
+Pokémon ne pouvait connaître Vol. Deux flags supplémentaires posés
+(`FLAG_RECEIVED_HM_CUT`/`FLAG_RECEIVED_HM_ROCK_SMASH`, réels dans `flags_hns.h` mais jamais
+posés par aucun script `_hns` puisque le PNJ qui les pose normalement n'existe qu'en Hoenn).
+
+**Histoire jusqu'à la 4e Arène** : chemin vérifié sans blocage (`map.json`, aucun garde/flag) :
+Azuria → Route 5 → Safrania (simple passage) → Route 6 → Carmin-sur-Mer. 6 dresseurs et 211
+emplacements de rencontres sauvages sur ces 4 cartes relevés niveau 34 (Major Bob/Lt. Surge
+était niveau 57). Major Bob reçoit le même traitement que Pierre/Ondine (scène de doute,
+`HeartSoul_EventScript_MajorBobDoute`/`_Convaincu`, flag posé uniquement à la victoire).
+Sous-intrigue « interception radio » (section 8/9, +1 réputation) implémentée en réutilisant
+le PNJ « Nerd » existant de Carmin-sur-Mer — simplification documentée : le brief décrit un
+mini-jeu d'écoute, remplacé par un choix aider/ignorer faute de mini-jeu existant à réutiliser
+sans risque. Petit événement ajouté à Pallet Town (« le monde d'avant », section 8, sans point
+de barème) sur le PNJ « Woman » existant.
+
+**Traduction française complète (Cinnabar → Vermilion)** : chantier de grande ampleur (~45
+fichiers de cartes, environ 1300 lignes `.string` au total) délégué à 4 agents en parallèle,
+chacun sur un groupe de cartes disjoint (Cinnabar/Pallet/Route1/Viridian ;
+Route2/Forêt de Jade/Pewter/Route3 ; Mont Sélénite/Route4/Azuria ;
+Route5/Safrania/Route6/Vermilion), avec des règles strictes communes : ne toucher que le
+texte entre guillemets, préserver exactement les codes de contrôle (`\n`/`\l`/`\p`/`$`),
+jamais traduire les noms d'espèces/capacités/objets (aucune table française n'existe pour
+eux dans ce fork), garder les noms de villes/routes en anglais (cohérence avec les bannières
+de carte, non retouchées), et remplacer BROCK/MISTY/SURGE par leurs noms officiels français
+PIERRE/ONDINE/MAJOR BOB (pas une invention : ce sont les vraies traductions Pokémon
+officielles), cohérent avec les scènes de doute déjà écrites sous ces noms. Un balayage final
+(recherche de mots anglais courants sur les ~45 fichiers) ne remonte plus aucune ligne
+suspecte, à une exception documentée et volontaire près : le bloc de dialogue de Blue à
+l'Arène d'Argenta (`ViridianCity_Gym_Text_LeaderBlue_*`) reste en anglais, car ce contenu est
+actuellement inaccessible en jeu (Blue masqué jusqu'à l'Acte V) — pas de valeur à le traduire
+maintenant, sera fait avec le reste du contenu de l'Acte V.
+
+`make hns -j4` : PASS, 0 erreur, vérifié après chaque lot puis sur l'état final consolidé.
+ROM à 94.46 %.
