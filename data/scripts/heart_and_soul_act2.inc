@@ -306,3 +306,116 @@ HeartSoul_Text_CanalisationsIgnorerResultat:
 HeartSoul_Text_CanalisationsApres:
 	.string "Grace a toi, les canalisations\n"
 	.string "tiennent de nouveau.$"
+
+// Pallet Town, "le monde d'avant" (section 8 de histoire.md). PNJ existant reflavore
+// (PalletTown_EventScript_Woman, texte d'origine deja retire). Pas de choix ni de point de
+// reputation : narration seule, comme prevu par le brief ("recroise en Acte III/IV").
+HeartSoul_EventScript_PalletJeuneDresseur::
+	goto_if_unset FLAG_ACTE_1_TERMINE, HeartSoul_PalletJeuneDresseur_Skip
+	goto_if_set FLAG_PALLET_JEUNE_DRESSEUR_RESOLU, HeartSoul_PalletJeuneDresseur_Apres
+	msgbox HeartSoul_Text_PalletJeuneDresseurIntro, MSGBOX_NPC
+	setflag FLAG_PALLET_JEUNE_DRESSEUR_RESOLU
+	return
+HeartSoul_PalletJeuneDresseur_Apres:
+	msgbox HeartSoul_Text_PalletJeuneDresseurApres, MSGBOX_NPC
+	return
+HeartSoul_PalletJeuneDresseur_Skip:
+	return
+
+HeartSoul_Text_PalletJeuneDresseurIntro:
+	.string "Cinnabar ? On en parle, oui…\n"
+	.string "mais bon, ici tout va bien.\p"
+	.string "Vous vous en faites toujours\n"
+	.string "trop, vous les gens du sud.$"
+
+HeartSoul_Text_PalletJeuneDresseurApres:
+	.string "J'espere que tu retrouveras\n"
+	.string "vite BLAINE.$"
+
+// Vermilion, doute de Major Bob avant le combat de badge (meme motif que Pierre/Ondine,
+// meme correctif retour de test n°8 : le flag n'est pose qu'a la victoire, jamais dans ce
+// sous-script, pour que la scene se rejoue tant que le combat n'est pas gagne).
+HeartSoul_EventScript_MajorBobDoute::
+	goto_if_unset FLAG_ACTE_1_TERMINE, HeartSoul_MajorBobDoute_Skip
+	goto_if_set FLAG_MAJORBOB_CONVAINCU, HeartSoul_MajorBobDoute_Skip
+	msgbox HeartSoul_Text_MajorBobDouteIntro, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_MajorBobDouteRecit, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_MajorBobDouteConclusion, MSGBOX_DEFAULT
+	return
+HeartSoul_MajorBobDoute_Skip:
+	return
+
+HeartSoul_EventScript_MajorBobConvaincu::
+	setflag FLAG_MAJORBOB_CONVAINCU
+	return
+
+HeartSoul_Text_MajorBobDouteIntro:
+	.string "MAJOR BOB: Alors comme ca c'est\n"
+	.string "toi, la Championne de CINNABAR.$"
+
+HeartSoul_Text_MajorBobDouteRecit:
+	.string "MAJOR BOB: On m'a parle d'un\n"
+	.string "reseau ROCKET, de lieutenants…\l"
+	.string "Facile a dire. Difficile a\l"
+	.string "prouver.$"
+
+HeartSoul_Text_MajorBobDouteConclusion:
+	.string "…\p"
+	.string "MAJOR BOB: Montre-moi ce que tu\n"
+	.string "vaux au combat. On en reparlera\l"
+	.string "apres.$"
+
+// Azuria->Vermilion, interception radio (section 8/9). PNJ existant reflavore
+// (VermilionCity_EventScript_Nerd). Simplification volontaire, documentee : le brief decrit
+// une "sequence d'ecoute/puzzle" ; sans mini-jeu existant a reutiliser dans ce fork pour ca,
+// implemente comme un choix simple (aider/ignorer), meme structure que les autres
+// sous-intrigues, plutot que d'inventer un mini-jeu risque sans verification possible.
+HeartSoul_EventScript_InterceptionRadio::
+	goto_if_unset FLAG_ACTE_1_TERMINE, HeartSoul_InterceptionRadio_Skip
+	goto_if_set FLAG_INTERCEPTION_RADIO_RESOLUE, HeartSoul_InterceptionRadio_Skip
+	msgbox HeartSoul_Text_InterceptionRadioIntro, MSGBOX_DEFAULT
+HeartSoul_InterceptionRadio_Choice:
+	dynmultipush HeartSoul_Text_AiderRadio, 0
+	dynmultipush HeartSoul_Text_IgnorerRadio, 1
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, HeartSoul_InterceptionRadio_Aider
+	case 1, HeartSoul_InterceptionRadio_Ignorer
+	goto HeartSoul_InterceptionRadio_Choice
+HeartSoul_InterceptionRadio_Aider:
+	setflag FLAG_INTERCEPTION_RADIO_RESOLUE
+	addvar VAR_REPUTATION, 1
+	msgbox HeartSoul_Text_InterceptionRadioAiderResultat, MSGBOX_DEFAULT
+	return
+HeartSoul_InterceptionRadio_Ignorer:
+	setflag FLAG_INTERCEPTION_RADIO_RESOLUE
+	msgbox HeartSoul_Text_InterceptionRadioIgnorerResultat, MSGBOX_DEFAULT
+	return
+HeartSoul_InterceptionRadio_Skip:
+	return
+
+HeartSoul_Text_InterceptionRadioIntro:
+	.string "…\p"
+	.string "MAJOR BOB me fait intercepter\n"
+	.string "les transmissions radio de la\l"
+	.string "TEAM ROCKET. J'ai besoin d'un\l"
+	.string "coup de main pour trier tout ca.$"
+
+HeartSoul_Text_AiderRadio:
+	.string "Aider a trier les transmissions$"
+
+HeartSoul_Text_IgnorerRadio:
+	.string "Laisser faire$"
+
+HeartSoul_Text_InterceptionRadioAiderResultat:
+	.string "Merci. On a repere des mouvements\n"
+	.string "suspects du cote de SAFRANIA.\p"
+	.string "Ca servira, pour la suite.$"
+
+HeartSoul_Text_InterceptionRadioIgnorerResultat:
+	.string "…\p"
+	.string "Tant pis, je me debrouillerai.$"
+
+HeartSoul_Text_InterceptionRadioApres:
+	.string "Toujours rien de neuf sur les\n"
+	.string "frequences ROCKET.$"

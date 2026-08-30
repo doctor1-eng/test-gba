@@ -2858,11 +2858,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Pikachu
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Ampharos
-Level: 56
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VIRGIL_HNS ===
@@ -4570,19 +4570,19 @@ Double Battle: No
 AI: Check Bad Move
 
 Magneton
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Electrode
-Level: 55
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Magneton
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Jolteon
-Level: 55
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANTHONY_HNS ===
@@ -5343,19 +5343,19 @@ Double Battle: No
 AI: Check Bad Move
 
 Electrode
-Level: 56
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Electrode
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Electrode
-Level: 56
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Electrode
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KENJI_HNS ===
@@ -6835,7 +6835,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Stantler
-Level: 55
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALLAN_HNS ===
@@ -6848,7 +6848,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Granbull
-Level: 55
+Level: 34
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_NAOKO_HNS ===
@@ -8403,7 +8403,7 @@ Items: Full Restore / Full Restore
 Mugshot: Yellow
 
 Electrode @ Focus Band
-Level: 57
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shock Wave
 - Rain Dance
@@ -8411,7 +8411,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Explosion
 
 Magnezone
-Level: 59
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunder
 - Reflect
@@ -8419,7 +8419,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Double Edge
 
 Lanturn @ Leftovers
-Level: 58
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Ion Deluge
 - Hydro Pump
@@ -8427,7 +8427,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Confuse ray
 
 Manectric
-Level: 58
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Wild Charge
 - Charge
@@ -8435,7 +8435,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Electric Terrain
 
 Electivire @ Scope Lens
-Level: 59
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunderbolt
 - Fire Punch
@@ -8443,7 +8443,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Submission
 
 Raichu @ Magnet
-Level: 60
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunder
 - Rain Dance

@@ -7,6 +7,11 @@ PalletTown_EventScript_CityEnter::
 	end
 
 PalletTown_EventScript_Woman::
+	goto_if_unset FLAG_ACTE_1_TERMINE, PalletTown_EventScript_WomanFlavor
+	call HeartSoul_EventScript_PalletJeuneDresseur
+	end
+
+PalletTown_EventScript_WomanFlavor::
 	msgbox PalletTown_Text_Teacher, MSGBOX_NPC
 	end
 PalletTown_EventScript_Fatman::

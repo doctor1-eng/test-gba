@@ -173,7 +173,20 @@ VermilionCity_EventScript_Machop::
 	end
 
 VermilionCity_EventScript_Nerd::
+	goto_if_unset FLAG_ACTE_1_TERMINE, VermilionCity_EventScript_NerdFlavor
+	goto_if_set FLAG_INTERCEPTION_RADIO_RESOLUE, VermilionCity_EventScript_NerdAfter
+	lock
+	faceplayer
+	call HeartSoul_EventScript_InterceptionRadio
+	release
+	end
+
+VermilionCity_EventScript_NerdFlavor::
 	msgbox VermilionCity_Text_SuperNerd, MSGBOX_NPC
+	end
+
+VermilionCity_EventScript_NerdAfter::
+	msgbox HeartSoul_Text_InterceptionRadioApres, MSGBOX_NPC
 	end
 
 VermilionCity_EventScript_Snorlax::
