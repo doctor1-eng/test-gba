@@ -190,6 +190,20 @@ static void WarpToTruck(void)
 {
     if (IS_FRLG)
         SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 6, 6);
+#if HNS_MAP_TEST_BUILD
+    else if (IS_HNS)
+        // Map-test build only (make hns MAPTEST=1, see MAP_TEST_README.md): spawn directly on
+        // CinnabarIsland_hns next to the Gym/Mansion/Lab doors instead of inside the Pokemon
+        // Center. This also sidesteps the Act I intro/attack script, which only triggers from
+        // CinnabarIsland_PokemonCenter_hns's MAP_SCRIPT_ON_FRAME_TABLE
+        // (HeartSoul_EventScript_ChooseType, data/maps/CinnabarIsland_PokemonCenter_hns/
+        // scripts.inc) - never entering that map means it never fires. (30,17) is the tile
+        // immediately south of the Manoir door (30,16); confirmed reachable to the Gym door
+        // (49,16), the Lab door (23,21) and the Pokemon Center warp (45,29) by a 4-directional
+        // flood fill over the decoded collision layer of data/layouts/CinnabarIsland_hns/
+        // map.bin (see MAP_TEST_README.md).
+        SetWarpDestination(MAP_GROUP(MAP_CINNABAR_ISLAND_HNS), MAP_NUM(MAP_CINNABAR_ISLAND_HNS), WARP_ID_NONE, 30, 17);
+#endif
     else if (IS_HNS)
         // Heart & Soul: the player starts as Cinnabar's Gym Leader, not in New Bark Town.
         SetWarpDestination(MAP_GROUP(MAP_CINNABAR_ISLAND_POKEMON_CENTER_HNS), MAP_NUM(MAP_CINNABAR_ISLAND_POKEMON_CENTER_HNS), WARP_ID_NONE, 7, 8);
@@ -273,6 +287,14 @@ void NewGameInitData(void)
     ResetFanClub();
     ResetLotteryCorner();
     WarpToTruck();
+#if HNS_MAP_TEST_BUILD
+    if (IS_HNS)
+        // Belt-and-suspenders for the map-test build: guarantees
+        // CinnabarIsland_hns_MapScripts' return-lock check (HeartSoul_EventScript_
+        // CinnabarVerrouilleeCheck, data/scripts/heart_and_soul_act1.inc) can never warp the
+        // player away from Cinnabar, even if the Act I attack script were ever reached.
+        FlagSet(FLAG_ACTE_5_DEBLOQUE);
+#endif
 #if IS_FRLG
     RunScriptImmediately(EventScript_ResetAllMapFlagsFrlg);
 #elif IS_HNS
