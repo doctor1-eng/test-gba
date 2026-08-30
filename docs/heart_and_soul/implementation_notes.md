@@ -894,3 +894,50 @@ s'est dégradé depuis.
 
 Aucune donnée de map modifiée dans cet audit (lecture seule) ; seule la documentation a été
 mise à jour.
+
+## Acte III — premier lieutenant scripté : Lyre (Forêt de Jade)
+
+Chantier ouvert (docs/heart_and_soul/docs/histoire.md section 3 : Viridian Forest/Mont
+Sélénite/Rock Tunnel, open world, ordre libre). Décision de méthode : les 3 lieutenants
+traités un par un (« travail par lots »), pas en bloc — Lyre d'abord, la plus simple des
+trois (combat direct, pas de mécanique de conviction contrairement à Terrence).
+
+**Constat avant script** : contrairement à Route1/Route2 (Quinn, Doug, Ed — tous des
+Bug Catcher génériques déjà présents, reflavorés), `ViridianForest_hns` ne contient aucun
+PNJ dresseur "boss" réutilisable pour incarner une lieutenante régionale de la TEAM ROCKET.
+Décision : nouvel `object_event`, sprite `OBJ_EVENT_GFX_ROCKET_F_HNS` (déjà présent dans les
+graphismes du jeu de base, jamais assigné à un PNJ nommé dans ce fork — pas de graphisme
+inventé). Position `(46,40)` choisie par le même procédé que l'audit Cinnabar : décodage de
+`data/layouts/ViridianForest_hns/map.bin`, recherche d'une case de collision 0 avec ses 8
+voisines également à 0, non occupée par un autre `object_event`/`warp_event`.
+
+**Trainer** : `TRAINER_LYRE_HNS` ajouté en fin de liste (`include/constants/opponents_hns.h`,
+id `631`, `TRAINERS_COUNT_HNS` `631`→`632`) — jamais inséré au milieu, le fichier documente
+lui-même pourquoi (décalerait les flags de victoire de tous les dresseurs suivants). Équipe
+dans `src/data/trainers_hns.party` : Venomoth/Beedrill/Ariados/Parasect niveau 34 (même
+convention plate que Brock/tout le reste du jeu), thème Bug/Poison + statut-piège
+(Stun Spore/Sleep Powder/Spider Web/Spore) cohérent avec "guérilla, pièges et embuscades"
+(histoire.md section 3). Classe `Rocket Admin Hns` / pic `Rocket Grunt F Hns`, déjà utilisés
+ailleurs dans ce fork pour d'autres PNJ Rocket — pas de nouvelle classe inventée.
+
+**Script** (`data/scripts/heart_and_soul_act3.inc`, nouveau fichier, ajouté à
+`data/event_scripts.s`) : suit exactement le patron `Route1_EventScript_Quinn` /
+`Route1_EventScript_QuinnPostBattle` déjà validé (`trainerbattle_single` avec le 4e argument
+`event_script`, `special PlayerFaceTrainerAfterBattle` + `waitmovement 0` avant le message de
+victoire, flag posé uniquement dans la branche de victoire). **Décision assumée** : le combat
+n'est pas conditionné par un flag d'acte, comme aucun combat de ce fork ne l'est (seul le
+contenu narratif qui suit un combat l'est ailleurs, ex. `HeartSoul_EventScript_MiliceRoute1`
+après Quinn) — Lyre est donc combattable dès que le joueur atteint la Forêt de Jade, y
+compris avant la fin officielle de l'Acte II. Simplification délibérée, pas un oubli.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**, symbole
+`ViridianForest_EventScript_Lyre` confirmé présent dans `pokehns.map`. ROM 33 554 432 octets
+(inchangé), 94.47 % ROM/EWRAM, 78.37 % IWRAM.
+
+**Non testé en jeu** (validation visuelle toujours indisponible côté agent) : positionnement
+réel de Lyre sur la carte, dialogue à l'écran, équilibrage du combat.
+
+**Reste à faire pour clore Acte III** : Selen (Mont Sélénite) et Terrence (Rock Tunnel, avec
+sa mécanique de conviction à 3 choix, `VAR_PERSUASION_TERRENCE` déjà réservée en Phase 1) —
+même méthode (nouvel object_event, sprite Rocket, position vérifiée par collision), à traiter
+en chantiers séparés.
