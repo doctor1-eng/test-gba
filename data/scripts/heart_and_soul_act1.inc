@@ -125,7 +125,7 @@ HeartSoul_CinnabarVerrouillee_Skip:
 	@ freeze total. Meme motif que CeruleanCity_Gym_EventScript_TryMachinePart (qui, lui, pose
 	@ bien ce setvar sur chaque sortie) : VAR_TEMP_0 est remis a 0 par le moteur a chaque nouveau
 	@ chargement de carte (ClearTempFieldEventData, src/event_data.c), donc ce setvar ne fait que
-	@ desarmer la verification jusqu'au prochain chargement, sans changer son resultat.
+	@ desarmer la verification avant le prochain chargement, sans changer son resultat.
 	setvar VAR_TEMP_0, 1
 	end
 

@@ -941,3 +941,90 @@ réel de Lyre sur la carte, dialogue à l'écran, équilibrage du combat.
 sa mécanique de conviction à 3 choix, `VAR_PERSUASION_TERRENCE` déjà réservée en Phase 1) —
 même méthode (nouvel object_event, sprite Rocket, position vérifiée par collision), à traiter
 en chantiers séparés.
+
+## Retours de test n°8/9 : Pierre (texte doublon) et Ondine (arène verrouillée)
+
+### Pierre — suppression du texte d'intro générique, texte post-victoire H&S
+
+Retour n°8 : le texte de base de Pierre (`PewterCity_Gym_Text_Brock_Intro`, générique,
+"pas si fréquent de voir un jeune dresseur…") s'affichait en plus de la scène de doute H&S
+déjà scriptée (`HeartSoul_EventScript_PierreDoute`), en doublon. Décision : garder uniquement
+le texte H&S avant combat, ajouter un texte H&S après victoire (au lieu du texte de base après
+victoire), sans toucher aux mécaniques (badge, CT Éboulement) déjà en place.
+
+`data/maps/PewterCity_Gym_hns/scripts.inc` : suppression de la ligne
+`msgbox PewterCity_Gym_Text_Brock_Intro` (et du bloc `.string` associé, mort) entre l'appel à
+`HeartSoul_EventScript_PierreDoute` et `trainerbattle_no_intro` — confirmé sans risque,
+`trainerbattle_no_intro` (`TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT`) n'affiche par conception
+aucun texte d'intro séparé. Ajout de `msgbox HeartSoul_Text_PierreApresVictoire` juste après
+le texte d'explication de la CT et avant `setflag FLAG_BADGE09_GET` : la remise du badge et de
+la CT Éboulement restent inchangées, seul du texte narratif H&S est ajouté après. Texte ajouté
+dans `data/scripts/heart_and_soul_act2.inc` (`HeartSoul_Text_PierreApresVictoire`), en écho à
+la scène de doute — Pierre reconnaît avoir été convaincu par le joueur.
+
+### Ondine — arène verrouillée tant que les canalisations ne sont pas réparées
+
+Retour n°9 : l'arène de Cerulean était accessible directement, sans lien
+avec la sous-intrigue déjà existante des canalisations bouchées (`HeartSoul_EventScript_
+CanalisationsCerulean`, PNJ garçon de `CeruleanCity_hns`) — et le PNJ Team Rocket déjà présent
+dans le layout de l'arène (`LOCALID_CERULEAN_GYM_ROCKET`, `script: null` dans `map.json`,
+littéralement injouable) restait un décor mort. Demande explicite : développer l'arc où
+déboucher les canalisations ouvre l'arène, avec une scène préalable où Ondine explique le
+problème et dit qu'elle n'écoutera que si le joueur l'aide.
+
+Décision (réemploi plutôt qu'invention, comme pour Lyre/Quinn) : le PNJ Rocket déjà posé dans
+l'arène devient le saboteur en fiction — cohérent avec le fait qu'il y est déjà littéralement
+présent sans rien y faire. Pas de nouveau sprite, pas de nouvelles coordonnées.
+
+- `data/maps/CeruleanCity_Gym_hns/scripts.inc` : `CeruleanCity_Gym_EventScript_Misty`
+  restructuré — `goto_if_unset FLAG_CANALISATIONS_REPAREES` redirige vers une nouvelle branche
+  `_AvantCanalisations` (appelle `HeartSoul_EventScript_OndineAvantCanalisations`, scène
+  d'explication + demande d'aide, pas de combat) ; le combat existant devient
+  `_Battle`, atteignable seulement une fois `FLAG_CANALISATIONS_REPAREES` posé (déjà posé par
+  la sous-intrigue existante du garçon de `CeruleanCity_hns`, aucune nouvelle condition créée).
+- `CeruleanCity_Gym_OnFrame` (table `MAP_SCRIPT_ON_FRAME_TABLE`) : nouvelle entrée
+  `map_script_2 VAR_TEMP_1, 0, HeartSoul_EventScript_CeruleanGymRocketCheck` — retire le PNJ
+  Rocket (`removeobject LOCALID_CERULEAN_GYM_ROCKET`) dès que `FLAG_CANALISATIONS_REPAREES`
+  est posé, une seule fois (gardé par `FLAG_CERULEAN_GYM_ROCKET_PARTI`, nouveau flag,
+  `flags_hns.h`, `HNS_EXTENDED_CONTENT_COUNT` 335→336).
+- `data/maps/CeruleanCity_Gym_hns/map.json` : `LOCALID_CERULEAN_GYM_ROCKET` reçoit un script
+  (`HeartSoul_EventScript_RocketGruntCerulean`, ligne de texte de sabotage) au lieu de
+  `script: null` — interactible tant qu'il est présent.
+- `data/scripts/heart_and_soul_act2.inc` : ajout de `HeartSoul_EventScript_
+  OndineAvantCanalisations` (scène pré-combat), `HeartSoul_EventScript_RocketGruntCerulean`
+  et `HeartSoul_EventScript_CeruleanGymRocketCheck`.
+
+**Deux bugs de script attrapés avant compilation/push** (revue personnelle, pas signalés par
+l'utilisateur) :
+1. `OndineAvantCanalisations` appelé par `call` depuis `Misty_AvantCanalisations` : le premier
+   jet se terminait par `closemessage/release/end`, incompatible avec `call` (qui exige un
+   `return`, sous peine de corrompre la pile de retour du moteur de script — même classe de
+   bug déjà rencontrée sur la séquence d'attaque de Cinnabar). Corrigé : le sous-script se
+   termine par `return`, `closemessage/release/end` déplacés dans l'appelant.
+2. `CeruleanGymRocketCheck` utilisait `map_script_2 VAR_TEMP_1, 0, ...` comme déclencheur
+   "toujours vrai" sans jamais remettre `VAR_TEMP_1` à une valeur non nulle en sortie — exact
+   même défaut que celui corrigé en parallèle par une autre session sur `VAR_TEMP_0`
+   (`CinnabarIsland_hns`, commit `d70d54503c`) : `TryRunOnFrameMapScript()` aurait retrigger la
+   condition à chaque frame et `ProcessPlayerFieldInput()` aurait cessé de traiter tout
+   déplacement/START sur cette carte — freeze total. Repéré en lisant le commit de l'autre
+   session avant de pousser le mien. Corrigé : `setvar VAR_TEMP_1, 1` avant chaque sortie
+   (`end`), commenté avec la même explication technique.
+
+Build de contrôle après ces deux ajouts : `make hns -j4` → **PASS, 0 erreur** (avant fusion du
+travail parallèle).
+
+### Warning cpp résiduel après fusion (`heart_and_soul_act1.inc:130`)
+
+Après fusion d'un correctif parallèle sur `HeartSoul_EventScript_CinnabarVerrouilleeCheck`
+(commit `d70d54503c`, le pendant `VAR_TEMP_0` du bug ci-dessus), le build a produit un nouveau
+warning : `heart_and_soul_act1.inc:130:41: warning: missing terminating ' character`. Cause :
+le commentaire ajouté par ce correctif utilise la syntaxe `@` (reconnue par `as`, l'assembleur
+GNU, mais pas par `cpp`, le préprocesseur C qui tourne avant) et contient une seule apostrophe
+sur une ligne ("jusqu'au"), que `cpp` essaie de tokeniser comme début de littéral caractère
+non terminé. Les commentaires `//` du même fichier (ex. ligne 106, "l'ecran") ne posent pas ce
+problème car `cpp` les reconnaît et les retire avant tokenisation. Simple warning (le build
+aboutissait déjà), corrigé en reformulant la ligne ("jusqu'au" → "avant le") pour retirer
+l'apostrophe isolée — pas de renommage de la syntaxe `@` en `//` dans tout le bloc, correction
+minimale. Build de contrôle après fusion + correctif : **PASS, 0 erreur**, plus aucun warning
+propre à Heart & Soul (seul un warning `setvar`/`copyvar` pré-existant et sans lien,
+`UlaUla_Forest_hns`, base hors-Kanto, reste présent).
