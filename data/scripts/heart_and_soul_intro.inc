@@ -268,6 +268,17 @@ HeartSoul_ChooseTeam_Normal_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -471,6 +482,17 @@ HeartSoul_ChooseTeam_Feu_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -674,6 +696,17 @@ HeartSoul_ChooseTeam_Eau_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -877,6 +910,17 @@ HeartSoul_ChooseTeam_Plante_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -1080,6 +1124,17 @@ HeartSoul_ChooseTeam_Electrik_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -1283,6 +1338,17 @@ HeartSoul_ChooseTeam_Glace_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -1486,6 +1552,17 @@ HeartSoul_ChooseTeam_Combat_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -1689,6 +1766,17 @@ HeartSoul_ChooseTeam_Poison_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -1892,6 +1980,17 @@ HeartSoul_ChooseTeam_Sol_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -2095,6 +2194,17 @@ HeartSoul_ChooseTeam_Vol_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -2298,6 +2408,17 @@ HeartSoul_ChooseTeam_Psy_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -2501,6 +2622,17 @@ HeartSoul_ChooseTeam_Insecte_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -2704,6 +2836,17 @@ HeartSoul_ChooseTeam_Roche_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -2907,6 +3050,17 @@ HeartSoul_ChooseTeam_Spectre_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -3110,6 +3264,17 @@ HeartSoul_ChooseTeam_Dragon_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -3313,6 +3478,17 @@ HeartSoul_ChooseTeam_Tenebres_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -3516,6 +3692,17 @@ HeartSoul_ChooseTeam_Acier_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
@@ -3719,6 +3906,17 @@ HeartSoul_ChooseTeam_Fee_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_HM_CUT
+	giveitem ITEM_HM_FLY
+	giveitem ITEM_HM_SURF
+	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_HM_FLASH
+	giveitem ITEM_HM_ROCK_SMASH
+	giveitem ITEM_HM_WATERFALL
+	giveitem ITEM_HM_WHIRLPOOL
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	msgbox HeartSoul_Text_ChoisisAttaquesIntro, MSGBOX_DEFAULT
