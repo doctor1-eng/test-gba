@@ -14637,8 +14637,51 @@ Ability: Sniper
 Level: 70  
 EVs: 252 Atk / 252 Spe  
 Naive Nature  
-- Drill Run  
-- Focus Energy  
-- Drill Peck  
-- Double-Edge  
+- Drill Run
+- Focus Energy
+- Drill Peck
+- Double-Edge
+
+=== TRAINER_LYRE_HNS ===
+Name: LYRE
+Class: Rocket Admin Hns
+Pic: Rocket Grunt F Hns
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Venomoth @ Focus Sash
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Stun Spore
+- Sleep Powder
+- Bug Buzz
+- Psychic
+
+Beedrill @ Poison Barb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Poison Jab
+- X-Scissor
+- Pin Missile
+- Agility
+
+Ariados @ Sticky Barb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Spider Web
+- Sucker Punch
+- Toxic
+- Signal Beam
+
+Parasect @ Persim Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Spore
+- X-Scissor
+- Giga Drain
+- Toxic
 

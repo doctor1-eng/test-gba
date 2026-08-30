@@ -647,8 +647,14 @@
 #define TRAINER_BEVERLY_4_HNS                 629
 #define TRAINER_BEVERLY_5_HNS                 630
 
+// Heart & Soul, Acte III (docs/heart_and_soul/docs/histoire.md section 3) : lieutenants
+// regionaux de Blue. Appendes en fin de liste, jamais inserees au milieu (voir commentaire
+// ci-dessus sur TRAINER_IRWIN_2_HNS : un ID mi-liste decalerait les flags de victoire de
+// tous les entraineurs suivants).
+#define TRAINER_LYRE_HNS                      631
+
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       631
+#define TRAINERS_COUNT_HNS                       632
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H
