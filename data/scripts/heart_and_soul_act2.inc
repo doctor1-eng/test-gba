@@ -121,6 +121,17 @@ HeartSoul_Text_PierreDouteConclusion:
 	.string "Apres, on reparlera de la TEAM\n"
 	.string "ROCKET.$"
 
+HeartSoul_Text_PierreApresVictoire:
+	.string "PIERRE: D'accord. Tu tiens le\n"
+	.string "choc, et tu n'as pas menti sur\l"
+	.string "CINNABAR.\p"
+	.string "Une Championne qui perd sa ville\n"
+	.string "et qui vient quand meme se\l"
+	.string "battre pour convaincre les\l"
+	.string "autres, ca merite du respect.\p"
+	.string "Si la TEAM ROCKET avance vers\n"
+	.string "JADIELLE, je serai pret.$"
+
 HeartSoul_Text_OndineDouteIntro:
 	.string "ONDINE: Alors c'est vrai. CINNABAR\n"
 	.string "est tombee.$"
@@ -306,6 +317,59 @@ HeartSoul_Text_CanalisationsIgnorerResultat:
 HeartSoul_Text_CanalisationsApres:
 	.string "Grace a toi, les canalisations\n"
 	.string "tiennent de nouveau.$"
+
+// Azuria - Arene fermee tant que les canalisations ne sont pas reparees (retour de test n°11).
+// La TEAM ROCKET (l'objet-evenement LOCALID_CERULEAN_GYM_ROCKET, deja present dans ce fork
+// mais sans aucun script d'interaction - "script": NULL dans map.json - vraisemblablement un
+// reste de generation jamais complete) est le sabotage a l'origine du probleme. Reutilise
+// plutot que d'ajouter un nouveau PNJ.
+HeartSoul_EventScript_OndineAvantCanalisations::
+	msgbox HeartSoul_Text_OndineAvantCanalisationsIntro, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_OndineAvantCanalisationsDemande, MSGBOX_DEFAULT
+	return
+
+HeartSoul_Text_OndineAvantCanalisationsIntro:
+	.string "ONDINE: N'approche pas plus.\n"
+	.string "L'ARENE est hors service.\p"
+	.string "Un type de la TEAM ROCKET a\n"
+	.string "sabote nos canalisations avant\l"
+	.string "de filer. Je gere l'inondation,\l"
+	.string "pas le temps de me battre.$"
+
+HeartSoul_Text_OndineAvantCanalisationsDemande:
+	.string "ONDINE: Si tu veux vraiment que\n"
+	.string "je t'ecoute parler de reseau\l"
+	.string "ROCKET, commence par m'aider a\l"
+	.string "reparer ce gachis en ville.\p"
+	.string "Apres, on parlera.$"
+
+HeartSoul_EventScript_RocketGruntCerulean::
+	lock
+	faceplayer
+	msgbox HeartSoul_Text_RocketGruntCerulean, MSGBOX_DEFAULT
+	release
+	end
+
+HeartSoul_Text_RocketGruntCerulean:
+	.string "Alors, elle est belle ma\n"
+	.string "petite inondation ?\p"
+	.string "Tu peux toujours essayer de\n"
+	.string "reparer ca, ca ne rouvrira pas\l"
+	.string "cette ARENE de sitot.$"
+
+// Declenche depuis CeruleanCity_Gym_OnFrame (map_script_2 VAR_TEMP_1, 0), meme motif que
+// CeruleanCity_Gym_EventScript_TryMachinePart juste au-dessus dans le meme fichier (condition
+// toujours vraie, le sous-script decide lui-meme via goto_if_set/unset). Fait disparaitre le
+// Rocket une fois les canalisations reparees, sans toucher a VAR_KANTO_ROCKET_STORY_STATE
+// (systeme du jeu de base, non modifie).
+HeartSoul_EventScript_CeruleanGymRocketCheck::
+	goto_if_unset FLAG_CANALISATIONS_REPAREES, HeartSoul_CeruleanGymRocketCheck_End
+	goto_if_set FLAG_CERULEAN_GYM_ROCKET_PARTI, HeartSoul_CeruleanGymRocketCheck_End
+	setflag FLAG_HIDE_CERULEAN_GYM_ROCKET
+	removeobject LOCALID_CERULEAN_GYM_ROCKET
+	setflag FLAG_CERULEAN_GYM_ROCKET_PARTI
+HeartSoul_CeruleanGymRocketCheck_End:
+	end
 
 // Pallet Town, "le monde d'avant" (section 8 de histoire.md). PNJ existant reflavore
 // (PalletTown_EventScript_Woman, texte d'origine deja retire). Pas de choix ni de point de

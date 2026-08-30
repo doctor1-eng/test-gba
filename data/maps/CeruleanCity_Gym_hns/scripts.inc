@@ -5,6 +5,7 @@ CeruleanCity_Gym_hns_MapScripts::
 CeruleanCity_Gym_OnFrame::
 	map_script_2 VAR_KANTO_ROCKET_STORY_STATE, 2,  CeruleanCity_Gym_EventScript_RocketGrunt
 	map_script_2 VAR_TEMP_0, 0,  CeruleanCity_Gym_EventScript_TryMachinePart
+	map_script_2 VAR_TEMP_1, 0,  HeartSoul_EventScript_CeruleanGymRocketCheck
 	.2byte 0
 
 CeruleanCity_Gym_EventScript_RocketGrunt::
@@ -183,6 +184,9 @@ CeruleanCity_Gym_EventScript_Misty::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_CERULEAN_GYM, CeruleanCity_Gym_EventScript_Misty_Defeated
+	goto_if_unset FLAG_ACTE_1_TERMINE, CeruleanCity_Gym_EventScript_Misty_Battle
+	goto_if_unset FLAG_CANALISATIONS_REPAREES, CeruleanCity_Gym_EventScript_Misty_AvantCanalisations
+CeruleanCity_Gym_EventScript_Misty_Battle::
 	call HeartSoul_EventScript_OndineDoute
 	msgbox CeruleanGym_Text_MistyIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_MISTY_HNS, CeruleanGym_Text_MistyWinLoss
@@ -200,6 +204,12 @@ CeruleanCity_Gym_EventScript_Misty::
 	msgbox CeruleanGym_Text_Misty_ExplainTM, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_CAPE_MISTY
 	call_if_eq VAR_SUICUNE_ENCOUNTERS, 5, CeruleanCity_Gym_SetSuicuneScene
+	closemessage
+	release
+	end
+
+CeruleanCity_Gym_EventScript_Misty_AvantCanalisations::
+	call HeartSoul_EventScript_OndineAvantCanalisations
 	closemessage
 	release
 	end
