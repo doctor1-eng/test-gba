@@ -1171,3 +1171,43 @@ Reste ouvert pour cette zone : validation visuelle/gameplay en jeu (les 3 lieute
 contenu de section 8 non encore scripté (bûcherons déjà fait en Acte II, chercheuse
 rationaliste du Mont Sélénite et mineurs piégés de Rock Tunnel restent à faire — hors
 périmètre de ce chantier, qui portait sur les lieutenants eux-mêmes).
+
+## Contenu interne des 3 bâtiments de Cinnabar (meublage des blockouts)
+
+Chantier demandé explicitement après la correction de `technical_map.md` : les 3 intérieurs
+reconstruits (`CinnabarIsland_Gym_Hns`/`_Mansion_Hns`/`_PokemonLab_Hns`, voir plus haut)
+étaient des blockouts identiques et vides (0 `object_events`, 0 `bg_events` dans les 3
+`map.json`). Portée volontairement limitée (règle « ne pas sur-corriger ») : pas de nouvelle
+tuile, pas de nouveau flag/var, pas de nouvelle mécanique — uniquement des objets
+lisibles/parlables, positions vérifiées par décodage de `map.bin` (les 3 bâtiments partagent
+exactement le même layout 13×10, copié de `VermilionCity_House1_hns` : zone ouverte colonnes
+0-10/lignes 2-7 sauf un obstacle 2×2 en `(5-6,4-5)`).
+
+- **Arène** : 1 PNJ ouvrier (`OBJ_EVENT_GFX_WORKER_M_HNS`, déjà compilé et utilisé ailleurs
+  dans le jeu, aucun nouveau sprite), position `(8,3)`. Texte explique que l'Arène est en
+  reconstruction et que Blaine dirige toujours depuis le Dojo — **résout directement** la
+  contradiction déjà documentée dans `MAP_TEST_README.md` section 6 (« le panneau existant
+  devant l'Arène contredit maintenant la porte fonctionnelle juste à côté »), cohérent avec
+  `CinnabarIsland_EventScript_Blaine` déjà existant.
+- **Labo** : 1 PNJ assistante (`OBJ_EVENT_GFX_SCIENTIST_M_HNS`), position `(8,3)`. Texte
+  cohérent avec l'état « Blaine disparu » déjà posé en Acte I (`FLAG_BLAINE_DISPARU`) — labo
+  au ralenti, pas à l'arrêt total.
+- **Manoir** : 2 `bg_events` de type `sign` (même mécanisme que `Route1_EventScript_Sign` —
+  aucun sprite, juste un texte lu sur place), positions `(3,3)` et `(8,6)`. Contenu = les
+  « carnets de Blaine » prévus par `histoire.md` section 8 (« fragments de journal... les
+  soupçons que Blaine nourrissait déjà à l'époque... ce fil se referme en Acte V »). Écrit de
+  façon elliptique exprès (mentionne Giovanni, jamais Blue nommément) pour préparer la
+  révélation d'Acte V sans la dévoiler ici.
+
+Nouveau fichier `data/scripts/heart_and_soul_cinnabar_interiors.inc`, ajouté à
+`data/event_scripts.s`. Aucun flag/var Heart & Soul consommé (texte statique, re-lisible,
+pas d'état à suivre).
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**, les 4 symboles de script
+confirmés dans `pokehns.map`. ROM 31704980 octets, 94.49 % ROM, 94.47 % EWRAM, 78.37 % IWRAM
+— pas de dégradation.
+
+**Non testé en jeu** : comme pour tout le reste de ce chantier, aucune validation visuelle
+possible côté agent — en particulier l'affichage réel des `bg_events` de type `sign` sur ces
+2 nouvelles maps n'a jamais été vérifié en exécution (mécanisme réutilisé tel quel depuis
+Route 1, mais jamais testé sur une map neuve comme celle-ci).
