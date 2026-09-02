@@ -14728,3 +14728,73 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rapid Spin
 - Rest
 
+=== TRAINER_TERRENCE_HNS ===
+Name: TERRENCE
+Class: Rocket Admin Hns
+Pic: Rocket Grunt M Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Steelix @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Iron Tail
+- Earthquake
+- Stealth Rock
+- Roar
+
+Rhydon @ Eviolite
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Stone Edge
+- Earthquake
+- Megahorn
+- Substitute
+
+Graveler @ Chesto Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Rock Slide
+- Earthquake
+- Explosion
+- Substitute
+
+Marowak @ Thick Club
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Bonemerang
+- Earthquake
+- Rock Slide
+- Double-Edge
+
+=== TRAINER_TERRENCE_LIGHT_HNS ===
+Name: TERRENCE
+Class: Rocket Admin Hns
+Pic: Rocket Grunt M Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Graveler
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Rock Slide
+- Earthquake
+- Explosion
+- Substitute
+
+Rhydon
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Stone Edge
+- Earthquake
+- Megahorn
+- Substitute
+

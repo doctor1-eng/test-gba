@@ -653,9 +653,14 @@
 // tous les entraineurs suivants).
 #define TRAINER_LYRE_HNS                      631
 #define TRAINER_SELEN_HNS                     632
+// Terrence a 2 IDs : combat complet (score <=2 a la sequence de conviction) et combat allege
+// (score 3-4, equipe reduite) - voir data/scripts/heart_and_soul_act3.inc et histoire.md
+// section 3 "Mecanique de conviction". Score >=5 : pas de combat, aucun TRAINER_ requis.
+#define TRAINER_TERRENCE_HNS                  633
+#define TRAINER_TERRENCE_LIGHT_HNS            634
 
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       633
+#define TRAINERS_COUNT_HNS                       635
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

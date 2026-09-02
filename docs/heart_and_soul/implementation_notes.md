@@ -1117,3 +1117,57 @@ nouvelle partie (cohérent avec la règle déjà en place de tester chaque ROM s
 neuve, `quick_test_checklist.md`).
 
 `make hns -j4` : **PASS, 0 erreur**, ROM 94.47 %.
+
+## Acte III — troisième lieutenant scripté : Terrence (Route de la Centrale / RockTunnel_1F_hns) — Acte III clos
+
+Même méthode que Lyre/Selen pour le placement (aucun PNJ dresseur reflavorable sur
+`RockTunnel_1F_hns` — uniquement item balls et rochers cassables ; nouvel `object_event`,
+sprite `OBJ_EVENT_GFX_ROCKET_M_HNS`, variante masculine du même choix visuel). Différences
+délibérées par rapport à Lyre/Selen :
+- Position `(17,20)` vérifiée avec une marge de sécurité 5x5 (au lieu de 3x3) car ce PNJ est
+  **immobile** (`MOVEMENT_TYPE_FACE_DOWN`) — un mercenaire qui garde un point précis, pas une
+  embuscade mobile.
+- `TRAINER_TYPE_NONE` (interaction au lieu d'approche automatique) : la séquence de questions
+  doit se dérouler avant tout déclenchement de combat, ce qu'une approche automatique ne
+  permet pas proprement.
+
+**Mécanique de conviction** (seul des trois lieutenants à la porter, histoire.md section 3) :
+3 questions, chaque réponse vaut -1/0/+2, seuils >=5 convaincu / 3-4 combat allégé / <=2
+combat complet. **Piège évité avant script** : `VAR_PERSUASION_TERRENCE` est un entier 16
+bits non signé — un total négatif via `subvar` boucherait à ~65535 et ferait passer tous les
+`goto_if_ge` comme vrais (faux "convaincu" à partir d'un parcours entièrement négatif). Fix :
+décalage de +1 par question (valeurs -1/0/+2 → 0/1/3, jamais négatives), qui préserve
+l'ordre relatif des réponses et donc le classement — seuils recalculés en conséquence (>=8 /
+6-7 / <=5). Ce décalage double aussi de garde anti-répétition : `VAR_PERSUASION_TERRENCE`
+vaut exactement 0 seulement avant la toute première question ; une fois calculé (toujours
+>=1), une visite ultérieure saute direct à l'issue déjà déterminée sans reposer les
+questions. Choix C (agressif) de la question 1 court-circuite vers le combat complet sans
+poser Q2/Q3 (règle explicite de histoire.md) en fixant directement le score à 1 (minimum du
+palier combat complet) plutôt que d'ajouter une branche de code séparée.
+
+**2 trainers** (`opponents_hns.h`, ids `633`/`634`, `TRAINERS_COUNT_HNS` `633`→`635`) :
+`TRAINER_TERRENCE_HNS` (combat complet, 4 Pokémon niveau 34 : Steelix/Rhydon/Graveler/Marowak,
+tenue d'objets, thème Rock/Ground "walls/terrain-control" cohérent avec la fiche) et
+`TRAINER_TERRENCE_LIGHT_HNS` (combat allégé, 2 des mêmes Pokémon sans objets tenus — équipe
+réduite plutôt qu'affaiblissement par les stats, plus simple à équilibrer et à vérifier).
+
+Flags déjà réservés en Phase 1 utilisés tels quels, aucune nouvelle allocation nécessaire :
+`FLAG_TERRENCE_RESOLU/_CONVAINCU/_COMBAT_ALLEGE/_VAINCU`, `VAR_PERSUASION_TERRENCE`.
+Réputation posée conformément au barème (histoire.md section 9) : +2 convaincu, +1 combat
+allégé, +0 combat complet.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**, symboles
+`RockTunnel_EventScript_Terrence`, `RockTunnel_EventScript_TerrenceVictoire` et
+`RockTunnel_EventScript_TerrenceAllegeVictoire` confirmés dans `pokehns.map`. ROM 31704180
+octets, 94.49 % ROM (+0.02 point, dans la marge attendue pour 2 équipes de dresseur + une
+séquence de dialogue à embranchements), 94.47 % EWRAM, 78.37 % IWRAM — pas de dégradation.
+
+**Non testé en jeu** : comme pour Lyre/Selen, aucune validation visuelle possible côté agent —
+en particulier l'enchaînement des choix (`dynmultipush`/`dynmultistack`) et le calcul du
+score decalé n'ont été vérifiés que par relecture du script, pas en exécution réelle.
+
+**Acte III (Lyre/Selen/Terrence) considéré TECHNICAL PASS — clos pour la partie scriptage.**
+Reste ouvert pour cette zone : validation visuelle/gameplay en jeu (les 3 lieutenants), et le
+contenu de section 8 non encore scripté (bûcherons déjà fait en Acte II, chercheuse
+rationaliste du Mont Sélénite et mineurs piégés de Rock Tunnel restent à faire — hors
+périmètre de ce chantier, qui portait sur les lieutenants eux-mêmes).

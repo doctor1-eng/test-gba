@@ -94,3 +94,318 @@ HeartSoul_Text_SelenAfterBattle:
 	.string "SELEN: Un signe peut en cacher\n"
 	.string "un autre. Peut-être que je n'ai\l"
 	.string "pas lu le bon.$"
+
+// Troisieme lieutenant scripte : Terrence (Route de la Centrale / RockTunnel_1F_hns), seul
+// des trois a porter la mecanique de conviction a 3 choix (histoire.md section 3
+// "Mecanique de conviction (Terrence & Kess)"). Meme constat que Selen : aucun PNJ dresseur
+// existant sur RockTunnel_1F_hns (uniquement item balls et rochers casssables), donc nouvel
+// object_event, sprite OBJ_EVENT_GFX_ROCKET_M_HNS (variante masculine du meme choix visuel
+// que Lyre/Selen). Position (17,20) verifiee par decodage de
+// data/layouts/RockTunnel_1F_hns/map.bin, rayon de securite 5x5 (marge superieure aux deux
+// precedents car ce PNJ est immobile - MOVEMENT_TYPE_FACE_DOWN, pas d'erreance : coherent
+// avec un mercenaire qui "garde" un point precis plutot qu'une embuscade mobile).
+//
+// A la difference de Lyre/Selen (TRAINER_TYPE_NORMAL, approche automatique), Terrence est
+// TRAINER_TYPE_NONE : le joueur doit l'aborder (interaction A), plus coherent avec une
+// negociation qu'une embuscade, et necessaire techniquement puisque la sequence de questions
+// doit se derouler AVANT tout declenchement de combat.
+//
+// Bareme des points (histoire.md) : chaque reponse vaut -1/0/+2 et le total sur 3 questions
+// determine l'issue (>=5 convaincu, 3-4 combat allege, <=2 combat complet). Les macros de
+// script ne geren pas les entiers negatifs de maniere sure sur VAR_PERSUASION_TERRENCE (var
+// 16 bits non signee : un total negatif via subvar boucherait a ~65535 et ferait rater tous
+// les seuils goto_if_ge). Solution : decalage de +1 par question (les valeurs -1/0/+2
+// deviennent 0/1/3), qui ne change JAMAIS le classement relatif des reponses ni les paliers -
+// seuils recalcules en consequence : >=5 devient >=8, 3-4 devient 6-7, <=2 devient <=5 (le
+// score decale minimum possible est 1, jamais 0 hors reinitialisation). VAR_PERSUASION_TERRENCE
+// vaut exactement 0 uniquement avant la premiere question jamais posee : sert aussi de garde
+// pour ne pas reposer les questions a chaque nouvelle visite (une fois calcule, une visite
+// ulterieure saute direct a l'issue deja determinee, meme logique que le "flag pose seulement
+// a la victoire" deja utilise pour Pierre/Ondine/Lyre/Selen).
+//
+// Choix C (agressif) de la question 1 court-circuite vers le combat complet SANS poser les
+// questions 2/3 (regle explicite de histoire.md, "pour eviter un dialogue qui sonnerait faux
+// apres une hostilite affichee") : implemente en fixant directement
+// VAR_PERSUASION_TERRENCE a 1 (le score decale minimum, donc <=5, donc combat complet) sans
+// passer par Q2/Q3.
+RockTunnel_EventScript_Terrence::
+	lock
+	faceplayer
+	goto_if_set FLAG_TERRENCE_CONVAINCU, RockTunnel_Terrence_ApresConvaincu
+	goto_if_set FLAG_TERRENCE_COMBAT_ALLEGE, RockTunnel_Terrence_ApresAllege
+	goto_if_set FLAG_TERRENCE_VAINCU, RockTunnel_Terrence_ApresVaincu
+	goto_if_ne VAR_PERSUASION_TERRENCE, 0, RockTunnel_Terrence_Evaluate
+	msgbox HeartSoul_Text_TerrenceIntro, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_TerrenceQ1, MSGBOX_DEFAULT
+RockTunnel_Terrence_Q1Choice:
+	dynmultipush HeartSoul_Text_TerrenceQ1_A, 0
+	dynmultipush HeartSoul_Text_TerrenceQ1_B, 1
+	dynmultipush HeartSoul_Text_TerrenceQ1_C, 2
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, RockTunnel_Terrence_Q1_A
+	case 1, RockTunnel_Terrence_Q1_B
+	case 2, RockTunnel_Terrence_Q1_C
+	goto RockTunnel_Terrence_Q1Choice
+
+RockTunnel_Terrence_Q1_A:
+	addvar VAR_PERSUASION_TERRENCE, 1
+	msgbox HeartSoul_Text_TerrenceQ1_A_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Q2
+RockTunnel_Terrence_Q1_B:
+	addvar VAR_PERSUASION_TERRENCE, 3
+	msgbox HeartSoul_Text_TerrenceQ1_B_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Q2
+RockTunnel_Terrence_Q1_C:
+	setvar VAR_PERSUASION_TERRENCE, 1
+	msgbox HeartSoul_Text_TerrenceQ1_C_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Evaluate
+
+RockTunnel_Terrence_Q2:
+	msgbox HeartSoul_Text_TerrenceQ2, MSGBOX_DEFAULT
+RockTunnel_Terrence_Q2Choice:
+	dynmultipush HeartSoul_Text_TerrenceQ2_A, 0
+	dynmultipush HeartSoul_Text_TerrenceQ2_B, 1
+	dynmultipush HeartSoul_Text_TerrenceQ2_C, 2
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, RockTunnel_Terrence_Q2_A
+	case 1, RockTunnel_Terrence_Q2_B
+	case 2, RockTunnel_Terrence_Q2_C
+	goto RockTunnel_Terrence_Q2Choice
+
+RockTunnel_Terrence_Q2_A:
+	addvar VAR_PERSUASION_TERRENCE, 3
+	msgbox HeartSoul_Text_TerrenceQ2_A_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Q3
+RockTunnel_Terrence_Q2_B:
+	addvar VAR_PERSUASION_TERRENCE, 1
+	msgbox HeartSoul_Text_TerrenceQ2_B_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Q3
+RockTunnel_Terrence_Q2_C:
+	msgbox HeartSoul_Text_TerrenceQ2_C_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Q3
+
+RockTunnel_Terrence_Q3:
+	msgbox HeartSoul_Text_TerrenceQ3, MSGBOX_DEFAULT
+RockTunnel_Terrence_Q3Choice:
+	dynmultipush HeartSoul_Text_TerrenceQ3_A, 0
+	dynmultipush HeartSoul_Text_TerrenceQ3_B, 1
+	dynmultipush HeartSoul_Text_TerrenceQ3_C, 2
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, RockTunnel_Terrence_Q3_A
+	case 1, RockTunnel_Terrence_Q3_B
+	case 2, RockTunnel_Terrence_Q3_C
+	goto RockTunnel_Terrence_Q3Choice
+
+RockTunnel_Terrence_Q3_A:
+	addvar VAR_PERSUASION_TERRENCE, 3
+	msgbox HeartSoul_Text_TerrenceQ3_A_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Evaluate
+RockTunnel_Terrence_Q3_B:
+	msgbox HeartSoul_Text_TerrenceQ3_B_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Evaluate
+RockTunnel_Terrence_Q3_C:
+	addvar VAR_PERSUASION_TERRENCE, 1
+	msgbox HeartSoul_Text_TerrenceQ3_C_Resultat, MSGBOX_DEFAULT
+	goto RockTunnel_Terrence_Evaluate
+
+RockTunnel_Terrence_Evaluate:
+	goto_if_ge VAR_PERSUASION_TERRENCE, 8, RockTunnel_Terrence_Convaincu
+	goto_if_ge VAR_PERSUASION_TERRENCE, 6, RockTunnel_Terrence_CombatAllege
+	goto RockTunnel_Terrence_CombatComplet
+
+RockTunnel_Terrence_Convaincu:
+	msgbox HeartSoul_Text_TerrenceConvaincu, MSGBOX_DEFAULT
+	setflag FLAG_TERRENCE_CONVAINCU
+	setflag FLAG_TERRENCE_RESOLU
+	addvar VAR_REPUTATION, 2
+	closemessage
+	release
+	end
+
+RockTunnel_Terrence_CombatAllege:
+	msgbox HeartSoul_Text_TerrenceCombatAllege, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_TERRENCE_LIGHT_HNS, HeartSoul_Text_TerrenceLightSeen, HeartSoul_Text_TerrenceLightBeaten, RockTunnel_EventScript_TerrenceAllegeVictoire
+	msgbox HeartSoul_Text_TerrenceLightAfterBattle, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RockTunnel_EventScript_TerrenceAllegeVictoire::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HeartSoul_Text_TerrenceLightAfterBattle, MSGBOX_DEFAULT
+	setflag FLAG_TERRENCE_COMBAT_ALLEGE
+	setflag FLAG_TERRENCE_RESOLU
+	addvar VAR_REPUTATION, 1
+	closemessage
+	release
+	end
+
+RockTunnel_Terrence_CombatComplet:
+	msgbox HeartSoul_Text_TerrenceCombatComplet, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_TERRENCE_HNS, HeartSoul_Text_TerrenceSeen, HeartSoul_Text_TerrenceBeaten, RockTunnel_EventScript_TerrenceVictoire
+	msgbox HeartSoul_Text_TerrenceAfterBattle, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RockTunnel_EventScript_TerrenceVictoire::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HeartSoul_Text_TerrenceAfterBattle, MSGBOX_DEFAULT
+	setflag FLAG_TERRENCE_VAINCU
+	setflag FLAG_TERRENCE_RESOLU
+	closemessage
+	release
+	end
+
+RockTunnel_Terrence_ApresConvaincu:
+	msgbox HeartSoul_Text_TerrenceApresConvaincu, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RockTunnel_Terrence_ApresAllege:
+	msgbox HeartSoul_Text_TerrenceLightAfterBattle, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RockTunnel_Terrence_ApresVaincu:
+	msgbox HeartSoul_Text_TerrenceAfterBattle, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+HeartSoul_Text_TerrenceIntro:
+	.string "TERRENCE: Encore un pas et je\n"
+	.string "te bute. …Ou pas.\p"
+	.string "T'as l'air du genre a vouloir\n"
+	.string "discuter avant de te battre.\l"
+	.string "Vas-y, j'ai deux minutes.$"
+
+HeartSoul_Text_TerrenceQ1:
+	.string "TERRENCE: Si tu me bats ici,\n"
+	.string "BLUE efface ma dette. C'est ce\l"
+	.string "qu'il m'a promis.$"
+
+HeartSoul_Text_TerrenceQ1_A:
+	.string "BLUE tient toujours parole$"
+HeartSoul_Text_TerrenceQ1_B:
+	.string "Tu as deja vu quelqu'un d'autre\npaye apres un echec ?$"
+HeartSoul_Text_TerrenceQ1_C:
+	.string "Je me fiche de ta dette, bats-toi$"
+
+HeartSoul_Text_TerrenceQ1_A_Resultat:
+	.string "TERRENCE: …Ouais. P't-etre.$"
+
+HeartSoul_Text_TerrenceQ1_B_Resultat:
+	.string "TERRENCE: …\p"
+	.string "Non. J'en ai pas vu.$"
+
+HeartSoul_Text_TerrenceQ1_C_Resultat:
+	.string "TERRENCE: T'as choisi. On se\n"
+	.string "bat, alors.$"
+
+HeartSoul_Text_TerrenceQ2:
+	.string "TERRENCE: Et si t'avais une\n"
+	.string "meilleure offre a me faire ?$"
+
+HeartSoul_Text_TerrenceQ2_A:
+	.string "Un contrat minier legitime,\nvia PIERRE$"
+HeartSoul_Text_TerrenceQ2_B:
+	.string "Trouve une solution toi-meme$"
+HeartSoul_Text_TerrenceQ2_C:
+	.string "Ce n'est pas mon probleme$"
+
+HeartSoul_Text_TerrenceQ2_A_Resultat:
+	.string "TERRENCE: …Un vrai contrat ?\n"
+	.string "Avec PIERRE ?\p"
+	.string "Ca, ca m'interesse plus que\n"
+	.string "les promesses de BLUE.$"
+
+HeartSoul_Text_TerrenceQ2_B_Resultat:
+	.string "TERRENCE: Facile a dire, pour\n"
+	.string "toi.$"
+
+HeartSoul_Text_TerrenceQ2_C_Resultat:
+	.string "TERRENCE: …\p"
+	.string "T'es pas venue pour m'aider,\n"
+	.string "alors.$"
+
+HeartSoul_Text_TerrenceQ3:
+	.string "TERRENCE: Ce tunnel que je\n"
+	.string "garde… il saute si BLUE perd.\l"
+	.string "Tu le savais ?$"
+
+HeartSoul_Text_TerrenceQ3_A:
+	.string "Exactement, et ta ville\nd'origine avec$"
+HeartSoul_Text_TerrenceQ3_B:
+	.string "Ce n'est qu'un tunnel$"
+HeartSoul_Text_TerrenceQ3_C:
+	.string "Ne rien dire, passer au combat$"
+
+HeartSoul_Text_TerrenceQ3_A_Resultat:
+	.string "TERRENCE: …\p"
+	.string "Ma ville. J'y avais meme plus\n"
+	.string "pense.$"
+
+HeartSoul_Text_TerrenceQ3_B_Resultat:
+	.string "TERRENCE: Un tunnel qui m'a\n"
+	.string "nourri dix ans. Ouais, c'est\l"
+	.string "'qu'un tunnel'.$"
+
+HeartSoul_Text_TerrenceQ3_C_Resultat:
+	.string "TERRENCE: …\p"
+	.string "Bon. On regle ca autrement,\n"
+	.string "alors.$"
+
+HeartSoul_Text_TerrenceConvaincu:
+	.string "TERRENCE: …\p"
+	.string "D'accord. J'arrete. La dette,\n"
+	.string "BLUE peut se la garder.\p"
+	.string "Ce tunnel, c'est le mien avant\n"
+	.string "d'etre le sien.$"
+
+HeartSoul_Text_TerrenceCombatAllege:
+	.string "TERRENCE: …T'as pas tout a fait\n"
+	.string "tort. Mais ca reste pas gagne\l"
+	.string "d'avance.$"
+
+HeartSoul_Text_TerrenceLightSeen:
+	.string "TERRENCE: Bon. Montre-moi ce\n"
+	.string "que tu vaux, alors.$"
+
+HeartSoul_Text_TerrenceLightBeaten:
+	.string "TERRENCE: …\p"
+	.string "OK. T'as gagne ca, au moins.$"
+
+HeartSoul_Text_TerrenceLightAfterBattle:
+	.string "TERRENCE: J'y reflechirai. Le\n"
+	.string "contrat minier, ca tient\l"
+	.string "toujours ?$"
+
+HeartSoul_Text_TerrenceCombatComplet:
+	.string "TERRENCE: Ca suffit, les mots.\n"
+	.string "J'ai une dette a effacer.$"
+
+HeartSoul_Text_TerrenceSeen:
+	.string "TERRENCE: J'ai une dette a\n"
+	.string "effacer. Rien de personnel.$"
+
+HeartSoul_Text_TerrenceBeaten:
+	.string "TERRENCE: …\p"
+	.string "La dette reste. Mais j'ai mal.$"
+
+HeartSoul_Text_TerrenceAfterBattle:
+	.string "TERRENCE: T'as gagne. Ca\n"
+	.string "n'efface rien, mais… t'as\l"
+	.string "gagne.$"
+
+HeartSoul_Text_TerrenceApresConvaincu:
+	.string "TERRENCE: Ce tunnel reste sous\n"
+	.string "ma garde. La vraie, cette\l"
+	.string "fois.$"
