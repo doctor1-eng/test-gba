@@ -36,9 +36,13 @@ portes et au warp du Pokémon Center. Le détail de cette vérification est dans
 ## 3. Maps à tester
 
 - `CinnabarIsland_hns` (extérieur, 72×44, tileset `Kanto_General_Hns` / `Lavaridge_Hns`)
-- `CinnabarIsland_Gym_Frlg` (Arène)
-- `PokemonMansion_1F_Frlg` (+ 2F/3F/B1F si vous poussez plus loin)
-- `CinnabarIsland_PokemonLab_Entrance_Frlg` (+ Lounge/Research Room/Experiment Room)
+- `CinnabarIsland_Gym_Hns` (Arène — intérieur neuf, voir section 5quater)
+- `CinnabarIsland_Mansion_Hns` (Manoir — intérieur neuf)
+- `CinnabarIsland_PokemonLab_Hns` (Labo — intérieur neuf)
+
+Les anciens intérieurs `_Frlg` (`CinnabarIsland_Gym_Frlg`, `PokemonMansion_1F_Frlg`,
+`CinnabarIsland_PokemonLab_Entrance_Frlg`, etc.) ne sont **plus utilisés** par ces 3 portes —
+voir section 5quater pour pourquoi.
 
 ## 4. Comment tester chaque bâtiment
 
@@ -48,25 +52,26 @@ Pour chacun des trois bâtiments :
    (murs, toit, porte) et l'absence de superposition avec le décor existant.
 2. Entrer : vérifier l'atterrissage correct à l'intérieur, sans blocage dans l'encadrement de
    la porte.
-3. Vérifier les collisions intérieures (murs, meubles, PNJ) et les éventuels étages/salles
-   (Manoir : 2F/3F/B1F ; Labo : Lounge/Research Room/Experiment Room).
-4. Ressortir par la même porte (ou une sortie équivalente) et vérifier l'atterrissage exact
-   devant le bon bâtiment sur `CinnabarIsland_hns` — **pas** de téléportation vers un autre
-   Kanto.
+3. Vérifier les collisions intérieures (murs, sortie).
+4. Ressortir par la même porte et vérifier l'atterrissage exact devant le bon bâtiment sur
+   `CinnabarIsland_hns` — **pas** de téléportation vers un autre Kanto, pas de reboot.
 
-## 5. Warps à vérifier (déjà corrigés, à confirmer visuellement)
+Chaque intérieur est une seule pièce (pas d'étages/salles annexes pour l'instant — voir
+section 5quater, "limite assumée").
+
+## 5. Warps (nouveaux intérieurs, voir section 5quater pour le contexte)
 
 | Bâtiment | Warp entrée (CinnabarIsland_hns → intérieur) | Warp sortie (intérieur → CinnabarIsland_hns) |
 |---|---|---|
-| Arène | `(49,16)` → `MAP_CINNABAR_ISLAND_GYM`, warp id 1 | `(24-26,23)` → `MAP_CINNABAR_ISLAND_HNS`, warp id 2 |
-| Manoir | `(30,16)` → `MAP_POKEMON_MANSION_1F`, warp id 1 | `(7-9,33)` / `(34,33)` / `(35,34)` → `MAP_CINNABAR_ISLAND_HNS`, warp id 3 |
-| Labo | `(23,21)` → `MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE`, warp id 1 | `(3-5,9)` → `MAP_CINNABAR_ISLAND_HNS`, warp id 4 |
+| Arène | `(49,16)` → `MAP_CINNABAR_ISLAND_GYM_HNS`, warp id 0 | `(4,8)` → `MAP_CINNABAR_ISLAND_HNS`, warp id 2 |
+| Manoir | `(30,16)` → `MAP_CINNABAR_ISLAND_MANSION_HNS`, warp id 0 | `(4,8)` → `MAP_CINNABAR_ISLAND_HNS`, warp id 3 |
+| Labo | `(23,21)` → `MAP_CINNABAR_ISLAND_POKEMON_LAB_HNS`, warp id 0 | `(4,8)` → `MAP_CINNABAR_ISLAND_HNS`, warp id 4 |
 
-Ces trois sorties pointaient auparavant vers `MAP_CINNABAR_ISLAND` (l'ancien Kanto FRLG inerte)
-— déjà corrigé vers `MAP_CINNABAR_ISLAND_HNS` dans un commit précédent
-(`feat(hs-map): blockout des entrées Gym/Manoir/Labo sur CinnabarIsland_hns`), revérifié ici en
-relisant directement les `map.json` des 3 intérieurs : plus aucun warp lié à ces 3 bâtiments ne
-cible l'ancien Kanto.
+Vérifié directement dans les fichiers compilés (`data/maps/*/events.inc`, générés par l'outil
+`mapjson`) après build : les 3 `warp_def` de `CinnabarIsland_hns` ciblent bien ces 3 nouvelles
+maps, et chacune d'elles a un unique warp de sortie vers `MAP_CINNABAR_ISLAND_HNS` avec le bon
+`dest_warp_id` (2/3/4, correspondant à l'index de la porte dans le tableau de warps de
+`CinnabarIsland_hns`).
 
 ## 5bis. Bug corrigé : blocage total des contrôles sur CinnabarIsland_hns
 
@@ -92,6 +97,78 @@ la même façon.
 
 **Si votre ROM date d'avant ce correctif, retéléchargez-la et recommencez une nouvelle
 partie** — une sauvegarde faite sur l'ancienne ROM figée reproduira le même blocage.
+
+## 5ter. Bug corrigé : porte du Labo infranchissable
+
+Signalé en testant cette ROM : la grotte du Labo `(23,21)` était visible mais impossible à
+franchir, aucune réaction en marchant dessus. Cause confirmée par comparaison directe avec des
+portes du même type déjà fonctionnelles ailleurs dans le jeu (`CeruleanCity_hns (7,10)` →
+Grotte Céladopole, `VermilionCity_hns (61,10)` → Grotte Digda, même tileset primaire
+`Kanto_General_Hns`) : la tuile avait le bon metatile et le bon comportement
+(`MB_NON_ANIMATED_DOOR`), mais avec le bit de collision à **1** au lieu de **0** dans
+`data/layouts/CinnabarIsland_hns/map.bin`. `MapGridGetCollisionAt()` (`src/fieldmap.c`) est
+utilisé sans exception pour ce type de porte par `event_object_movement.c` : collision ≠ 0
+bloque physiquement le pas, donc le joueur ne pouvait jamais se tenir sur la case et le warp
+n'était jamais évalué.
+
+Vérifié en même temps que l'**Arène** `(49,16)` et le **Manoir** `(30,16)` n'ont **pas** ce
+problème : leur type de porte (`MB_ANIMATED_DOOR`, porte à deux battants) a une collision=1 qui
+est cette fois normale (entrée gérée par une animation forcée qui contourne la collision
+standard) — valeurs identiques bit pour bit à la porte d'Arène de `CeruleanCity_hns (34,31)`
+qui fonctionne déjà. Aucune modification nécessaire de leur côté ; à confirmer quand même en
+jeu.
+
+Corrigé : une seule case modifiée dans `map.bin` (collision 1→0, élévation 0→3, alignée sur les
+portes de grotte déjà fonctionnelles). Metatile et `warp_events` inchangés.
+
+**Si votre ROM date d'avant ce correctif, retéléchargez-la** — la grotte du Labo restera
+bloquée sur l'ancienne version.
+
+## 5quater. Changement d'architecture : pourquoi les intérieurs `_Frlg` ont été abandonnés
+
+Signalé en testant cette ROM : entrer dans l'Arène/le Manoir/le Labo faisait **redémarrer le
+jeu** (sauf le Pokémon Center, sans rapport avec ce chantier — voir section 6). Cause identifiée
+en lisant directement les fichiers compilés : le plan initial (réutiliser la géométrie des
+intérieurs `_Frlg` existants via un warp externe depuis `CinnabarIsland_hns`) repose sur une
+hypothèse fausse. `_Frlg` et `_Hns` ne sont pas deux contenus qui coexistent dans le même
+binaire : dans `src/data/tilesets/headers.h`,
+
+```c
+#if !IS_FRLG && !IS_HNS
+    // tilesets Emerald
+#elif IS_FRLG
+    // tilesets FRLG (gTileset_BuildingFrlg, gTileset_CinnabarGym, gTileset_PokemonMansion...)
+#elif IS_HNS
+    // tilesets HNS
+#endif
+```
+
+Pour un build `POKEMON_HNS`, la branche `#elif IS_FRLG` est **totalement absente du binaire** —
+pas seulement inerte au niveau du scénario, réellement non compilée. Confirmé en trois temps :
+1. `data/layouts/layouts_table.inc` (généré) : le slot de `LAYOUT_CINNABAR_ISLAND_GYM` valait
+   `.4byte NULL` — d'où le crash au chargement (déréférencement NULL).
+2. Un essai de correctif « retag `game_version: frlg → hns` sur les 9 map.json/layouts.json
+   concernés » a été tenté puis **annulé** : ça débloque bien les layouts, mais fait échouer le
+   lien avec des dizaines de `undefined reference` (tilesets et scripts de ces intérieurs,
+   toujours absents du binaire pour ce type de build).
+3. Conclusion : impossible à corriger par un simple tag JSON. Remonter plus loin (modifier
+   `headers.h` pour compiler ces tilesets FRLG aussi en HNS) était risqué et hors du périmètre
+   décidé — la ROM est déjà à 94,5 % de ses 32 Mo, et c'est un fichier partagé par tout le jeu,
+   pas seulement Cinnabar.
+
+**Décision retenue** : construire 3 intérieurs neufs (`CinnabarIsland_Gym_Hns`,
+`CinnabarIsland_Mansion_Hns`, `CinnabarIsland_PokemonLab_Hns`), avec des tilesets déjà compilés
+côté HNS (`gTileset_Johto_Building_Hns` + `gTileset_House_Lab_Hns`), le même combo déjà utilisé
+avec succès par plusieurs maisons existantes (`CeruleanCity_House1_hns`,
+`VermilionCity_House1_hns`...). Chaque intérieur est une pièce simple (13×10, copiée depuis
+`VermilionCity_House1_hns`, sans PNJ ni panneau ajoutés) avec une seule sortie, vérifiée après
+compilation (section 5) — plus de dépendance à du contenu `_Frlg` non compilé pour ce build.
+
+**Limite assumée** : les 3 intérieurs sont actuellement des **blockouts identiques** (même
+pièce vide, même tileset) — pas de mobilier thématique (Blaine dans l'Arène, statues du Manoir,
+machines du Labo), pas d'étages. Suffisant pour valider warps/collisions/transitions (l'objet
+de cette ROM de test) ; une passe de contenu (mobilier, PNJ, plusieurs pièces) reste à faire
+séparément, hors du périmètre de ce chantier.
 
 ## 6. Limitations connues
 
@@ -172,11 +249,11 @@ Menu debug → `Give X…` → `Max Money` / `Max Coins` si besoin d'acheter en 
 - [ ] Façade visible et cohérente depuis l'extérieur (pas de tuiles manquantes/mal alignées)
 - [ ] Pas de superposition avec le décor existant (arbres, PNJ, faune) autour de la porte
 - [ ] Approche à pied depuis le point de spawn sans collision anormale
-- [ ] Entrée par la porte : pas de blocage dans l'encadrement, atterrissage correct à l'intérieur
-- [ ] Collisions intérieures : murs, meubles, PNJ tous infranchissables comme attendu
-- [ ] Étages/salles annexes si présents (Manoir 2F/3F/B1F ; Labo Lounge/Research/Experiment) accessibles
+- [ ] Entrée par la porte : pas de blocage dans l'encadrement, atterrissage correct à l'intérieur,
+      **pas de reboot/crash**
+- [ ] Collisions intérieures : murs de la pièce infranchissables comme attendu
 - [ ] Sortie par la porte : atterrissage exact devant le bon bâtiment sur `CinnabarIsland_hns`
-- [ ] Pas de téléportation vers l'ancien Kanto `_Frlg` en sortant
+- [ ] Pas de téléportation vers un autre Kanto ni vers un autre bâtiment en sortant
 
 **Général sur CinnabarIsland_hns**
 - [ ] Déplacement libre dans toutes les directions autour des 3 portes, aucun freeze

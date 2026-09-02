@@ -13701,6 +13701,42 @@
       "layout_version": "hns"
     },
     {
+      "id": "LAYOUT_CINNABAR_ISLAND_GYM_HNS",
+      "name": "CinnabarIsland_Gym_Hns_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_House_Lab_Hns",
+      "border_filepath": "data/layouts/CinnabarIsland_Gym_Hns/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Gym_Hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_MANSION_HNS",
+      "name": "CinnabarIsland_Mansion_Hns_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_House_Lab_Hns",
+      "border_filepath": "data/layouts/CinnabarIsland_Mansion_Hns/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Mansion_Hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_POKEMON_LAB_HNS",
+      "name": "CinnabarIsland_PokemonLab_Hns_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_House_Lab_Hns",
+      "border_filepath": "data/layouts/CinnabarIsland_PokemonLab_Hns/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_PokemonLab_Hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
       "id": "LAYOUT_VERMILION_CITY_HOUSE2_HNS",
       "name": "VermilionCity_House2_hns_Layout",
       "width": 13,

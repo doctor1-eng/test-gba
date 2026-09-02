@@ -268,6 +268,7 @@ HeartSoul_ChooseTeam_Normal_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -485,6 +486,7 @@ HeartSoul_ChooseTeam_Feu_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -702,6 +704,7 @@ HeartSoul_ChooseTeam_Eau_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -919,6 +922,7 @@ HeartSoul_ChooseTeam_Plante_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -1136,6 +1140,7 @@ HeartSoul_ChooseTeam_Electrik_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -1353,6 +1358,7 @@ HeartSoul_ChooseTeam_Glace_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -1570,6 +1576,7 @@ HeartSoul_ChooseTeam_Combat_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -1787,6 +1794,7 @@ HeartSoul_ChooseTeam_Poison_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -2004,6 +2012,7 @@ HeartSoul_ChooseTeam_Sol_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -2221,6 +2230,7 @@ HeartSoul_ChooseTeam_Vol_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -2438,6 +2448,7 @@ HeartSoul_ChooseTeam_Psy_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -2655,6 +2666,7 @@ HeartSoul_ChooseTeam_Insecte_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -2872,6 +2884,7 @@ HeartSoul_ChooseTeam_Roche_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -3089,6 +3102,7 @@ HeartSoul_ChooseTeam_Spectre_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -3306,6 +3320,7 @@ HeartSoul_ChooseTeam_Dragon_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -3523,6 +3538,7 @@ HeartSoul_ChooseTeam_Tenebres_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -3740,6 +3756,7 @@ HeartSoul_ChooseTeam_Acier_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY
@@ -3957,6 +3974,7 @@ HeartSoul_ChooseTeam_Fee_Slot4::
 	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_RECEIVED_POKENAV
+	setflag FLAG_VISITED_KANTO
 	giveitem ITEM_BICYCLE
 	giveitem ITEM_HM_CUT
 	giveitem ITEM_HM_FLY

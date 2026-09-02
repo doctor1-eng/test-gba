@@ -13,7 +13,6 @@ PewterCity_Gym_EventScript_Brock::
 	faceplayer
 	goto_if_set FLAG_DEFEATED_PEWTER_GYM, PewterCity_Gym_EventScript_Brock_Defeated
 	call HeartSoul_EventScript_PierreDoute
-	msgbox PewterCity_Gym_Text_Brock_Intro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_BROCK_HNS, PewterCity_Gym_Text_Brock_WinLoss
 	message PewterCity_Gym_Text_ReceivedBoulderBadge
 	waitmessage
@@ -21,6 +20,7 @@ PewterCity_Gym_EventScript_Brock::
 	msgbox PewterCity_Gym_Text_Brock_GiveTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM_ROCK_SLIDE
 	msgbox PewterCity_Gym_Text_Brock_ExplainTM, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_PierreApresVictoire, MSGBOX_DEFAULT
 	setflag FLAG_BADGE09_GET
 	setflag FLAG_DEFEATED_PEWTER_GYM
 	call HeartSoul_EventScript_PierreConvaincu
@@ -39,20 +39,6 @@ PewterCity_Gym_EventScript_Brock_Defeated::
 	release
 	end
 
-
-PewterCity_Gym_Text_Brock_Intro:
-	.string "PIERRE : Wow, ce n'est pas si\n"
-	.string "fréquent d'avoir un challenger\l"
-	.string "venu de JOHTO.\p"
-	.string "Je suis PIERRE, le CHEF de\n"
-	.string "PEWTER GYM.\p"
-	.string "Je suis un expert des POKéMON\n"
-	.string "de type ROCHE.\p"
-	.string "Mes POKéMON résistent à la\n"
-	.string "plupart des attaques\l"
-	.string "physiques. Tu auras du mal à\l"
-	.string "leur infliger des dégâts.\p"
-	.string "Allons-y !$"
 
 PewterCity_Gym_Text_Brock_WinLoss:
 	.string "PIERRE : Les puissantes attaques\n"
