@@ -110,6 +110,13 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Pour les 3 : les dresseurs élèves rencontrés avant la Championne (ex. Michelle/Tanya/Julia à Céladopole, Rebecca/Franklin/Doris/Jared à Safrania, Alice/Linda/Cindy/Barry à Fuchsia) sont aussi niveau ~34, pas surclassés.
 - [ ] Badge reçu normalement après chaque victoire.
 
+## 15. Acte IV (suite) — 7e Arène : retrouvailles avec Blaine (Seafoam Islands)
+
+- [ ] Avant le combat, une scène de retrouvailles en français s'affiche (Blaine reconnaît le joueur, explique avoir été emmené ici après l'attaque de Cinnabar), puis le dialogue anglais d'origine, puis le combat.
+- [ ] Équipe de Blaine niveau ~34 (pas 65+).
+- [ ] Badge reçu normalement après victoire.
+- [ ] En reparlant à Blaine après la victoire (ou en revenant plus tard) : le texte anglais d'origine s'affiche, suivi d'une ligne française (« On rentre à Cinnabar dès que possible »).
+
 ---
 
 **Après chaque test**, dites-moi simplement : ce qui a marché (pas besoin de détail), et pour

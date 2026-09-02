@@ -111,3 +111,52 @@ HeartSoul_Text_JanineDouteConclusion:
 	.string "…\p"
 	.string "JANINE: Alors montrez-moi vos\n"
 	.string "actes. Un combat suffira.$"
+
+// Retrouvailles avec Blaine (Seafoam Islands). Decision utilisateur (2026-09-02, meme nature
+// de conflit que Blue/Blaine a Cinnabar) : ce jeu de base fait deja combattre un BLAINE
+// pleinement fonctionnel a l'Arene de Seafoam (SeafoamIslands_Gym_EventScript_Blaine,
+// TRAINER_BLAINE_HNS), ce qui contredit "Blaine disparu jusqu'a l'Acte IV/V" de histoire.md.
+// Plutot que de verrouiller l'Arene ou d'ignorer la contradiction, Seafoam devient LE lieu de
+// retrouvailles avec Blaine - remplace la mention "Silph Co" de histoire.md section 2 (Acte
+// IV), qui n'a de toute facon aucun contenu scripte a ce jour. Le combat de badge existant
+// est conserve tel quel (texte original du jeu de base non touche, meme convention que
+// Pierre/Ondine/Erika/Sabrina/Janine) : sert desormais de "preuve" que le joueur est pret,
+// plutot que d'un simple combat d'Arene anonyme.
+HeartSoul_EventScript_BlaineRetrouve::
+	goto_if_set FLAG_BLAINE_SAUVE, HeartSoul_BlaineRetrouve_Skip
+	msgbox HeartSoul_Text_BlaineRetrouveIntro, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_BlaineRetrouveRecit, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_BlaineRetrouveConclusion, MSGBOX_DEFAULT
+	return
+HeartSoul_BlaineRetrouve_Skip:
+	return
+
+HeartSoul_EventScript_BlaineSauve::
+	setflag FLAG_BLAINE_SAUVE
+	return
+
+HeartSoul_Text_BlaineRetrouveIntro:
+	.string "BLAINE: …{PLAYER} ?\p"
+	.string "C'est vraiment toi ? Je pensais\n"
+	.string "ne plus jamais revoir personne\l"
+	.string "de CINNABAR.$"
+
+HeartSoul_Text_BlaineRetrouveRecit:
+	.string "BLAINE: Ils m'ont traîné ici\n"
+	.string "après l'attaque. Pas vraiment\l"
+	.string "libre, juste assez loin pour\l"
+	.string "que personne ne pense à me\l"
+	.string "chercher à cet endroit.$"
+
+HeartSoul_Text_BlaineRetrouveConclusion:
+	.string "…\p"
+	.string "BLAINE: Avant qu'on reparte\n"
+	.string "d'ici : montre-moi ce que tu\l"
+	.string "vaux. J'ai besoin de savoir que\l"
+	.string "CINNABAR a toujours sa\l"
+	.string "Championne.$"
+
+HeartSoul_Text_BlaineApresRetrouvailles:
+	.string "BLAINE: On rentre à CINNABAR\n"
+	.string "dès que possible. Ensemble,\l"
+	.string "cette fois.$"

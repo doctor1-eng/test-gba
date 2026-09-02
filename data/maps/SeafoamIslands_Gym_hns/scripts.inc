@@ -10,6 +10,7 @@ SeafoamIslands_Gym_EventScript_Blaine::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_CINNABAR_ISLAND_GYM, SeafoamIslands_Gym_EventScript_Blaine_Defeated
+	call HeartSoul_EventScript_BlaineRetrouve
 	msgbox SeafoamIslands_Gym_Text_BlaineIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_BLAINE_HNS, SeafoamIslands_Gym_Text_BlaineWinLoss
 	message SeafoamIslands_Gym_Text_ReceivedVolcanoBadge
@@ -20,6 +21,7 @@ SeafoamIslands_Gym_EventScript_Blaine::
 	msgbox SeafoamIslands_Gym_Text_Blaine_ExplainTM, MSGBOX_DEFAULT
 	setflag FLAG_BADGE15_GET
 	setflag FLAG_DEFEATED_CINNABAR_ISLAND_GYM
+	call HeartSoul_EventScript_BlaineSauve
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 15
 	clearflag FLAG_HIDE_SEAFOAM_GYMGUY
@@ -30,6 +32,7 @@ SeafoamIslands_Gym_EventScript_Blaine::
 
 SeafoamIslands_Gym_EventScript_Blaine_Defeated::
 	msgbox SeafoamIslands_Gym_Text_BlaineAfterBattle, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_BlaineApresRetrouvailles, MSGBOX_DEFAULT
 	closemessage
 	release
 	end

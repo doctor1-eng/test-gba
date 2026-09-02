@@ -1277,3 +1277,49 @@ journal, "Décisions utilisateur 2026-08-29"). Je ne l'ai pas touché : ni scrip
 doute dessus, ni vérifié/modifié son contenu, en attendant une décision plutôt que de deviner
 silencieusement sur un point déjà tranché une fois de façon similaire par une vraie
 discussion. Voir message de session pour la décision demandée.
+
+## Acte IV (suite) — 7e Arène : retrouvailles avec Blaine (Seafoam Islands)
+
+**Décision utilisateur (2026-09-02)** : Seafoam Islands devient le lieu où Blaine est
+retrouvé (option recommandée), en remplacement de la mention « Silph Co » de histoire.md
+section 2 — qui n'a de toute façon aucun contenu scripté à ce jour, donc rien à réconcilier
+de ce côté. Le combat de badge existant (déjà pleinement fonctionnel dans le jeu de base,
+`SeafoamIslands_Gym_EventScript_Blaine`, `TRAINER_BLAINE_HNS`) est conservé tel quel — ses
+textes anglais d'origine ne sont pas touchés, même convention que Pierre/Ondine/Erika/Sabrina/
+Janine — mais devient désormais une scène de retrouvailles : Blaine explique avoir été
+emmené ici après l'attaque de Cinnabar (Acte I) et amené prisonnier/isolé plutôt que libre,
+puis propose le combat comme preuve que le joueur est prêt, plutôt qu'un simple combat
+d'Arène anonyme.
+
+Ajouté à `data/scripts/heart_and_soul_act4.inc` : `HeartSoul_EventScript_BlaineRetrouve`
+(scène avant combat, 3 messages) et `HeartSoul_EventScript_BlaineSauve` (pose
+`FLAG_BLAINE_SAUVE`, réservé sans être utilisé depuis la Phase 1 — aucune nouvelle
+allocation nécessaire), câblés dans `SeafoamIslands_Gym_hns/scripts.inc` avec le même patron
+`call` avant/après que les autres Championnes. Une ligne de texte français ajoutée aussi en
+sortie (`HeartSoul_Text_BlaineApresRetrouvailles`, « On rentre à Cinnabar dès que possible »)
+après le texte anglais existant de l'état "déjà vaincu".
+
+**Bug de compilation attrapé avant la fin du build** : `data/scripts/heart_and_soul_act4.inc`
+utilisait un tiret cadratin `—` (caractère Unicode U+2014, absent du charmap de ce jeu) dans
+`HeartSoul_Text_BlaineRetrouveRecit` — `preproc` a refusé de compiler
+(`unknown character U+2014`). Corrigé en le remplaçant par une simple virgule ; vérifié
+qu'aucune autre occurrence de ce caractère ne traînait dans le fichier.
+
+**Même bug de niveaux que les 3 Championnes précédentes**, corrigé pour la même raison :
+`TRAINER_BLAINE_HNS` était encore au niveau d'origine (65-67). Vérifié qu'il n'est utilisé
+que dans 2 endroits (`SeafoamIslands_Gym_hns` — notre combat — et
+`SaffronCity_FightingDojoVIP_hns`, le rematch optionnel post-badge déjà présent dans le jeu
+de base, cohérent avec le même système déjà utilisé pour Brock/Misty/etc.) avant de rescale
+ses 6 Pokémon à `Level: 34`.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur** (après correctif du caractère
+Unicode), symboles `HeartSoul_EventScript_BlaineRetrouve` et `HeartSoul_EventScript_
+BlaineSauve` confirmés dans `pokehns.map`. ROM 31706468 octets, 94.49 % ROM, 94.47 % EWRAM,
+78.37 % IWRAM.
+
+**Acte IV considéré TECHNICAL PASS jusqu'à la 7e Arène (Seafoam/Blaine) incluse**, comme
+demandé. Non testé en jeu (aucune validation visuelle possible côté agent, comme pour tout le
+reste). Reste hors périmètre de ce chantier : la 8e Arène (Viridian/Blue, verrouillée
+jusqu'à l'Acte V par conception), le contenu de section 8 encore manquant pour les zones
+d'Acte IV (débat clan Koga/Janine à Fuchsia, financement Rocket à Céladopole, documents Mira
+Voss à Saffron), et Silph Co/Mira Voss elle-même (lieutenant final, jamais scriptée).
