@@ -59,6 +59,16 @@ Pour chacun des trois bâtiments :
 Chaque intérieur est une seule pièce (pas d'étages/salles annexes pour l'instant — voir
 section 5quater, "limite assumée").
 
+5. **Nouveau (2026-09-02)** : chaque pièce a maintenant un contenu à vérifier —
+   - **Arène** : un PNJ ouvrier vers le haut de la pièce. Lui parler doit afficher un texte
+     expliquant que l'Arène est en reconstruction et que Blaine dirige depuis le Dojo.
+   - **Labo** : un PNJ assistante, même position relative. Texte sur le ralentissement des
+     recherches depuis la disparition de Blaine.
+   - **Manoir** : pas de PNJ visible, mais 2 panneaux invisibles (mécanisme "sign", comme les
+     panneaux de route) à des positions différentes dans la pièce — marcher dessus et
+     appuyer A doit afficher un fragment de "carnet de Blaine". Vérifier que les 2 panneaux
+     affichent des textes différents (pas le même dupliqué par erreur).
+
 ## 5. Warps (nouveaux intérieurs, voir section 5quater pour le contexte)
 
 | Bâtiment | Warp entrée (CinnabarIsland_hns → intérieur) | Warp sortie (intérieur → CinnabarIsland_hns) |

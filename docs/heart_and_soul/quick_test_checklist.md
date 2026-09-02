@@ -87,6 +87,20 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Les 3 portes (Arène, Manoir, Labo) sont visibles et franchissables, chacune mène au bon intérieur.
 - [ ] Sortir de chaque bâtiment ramène bien sur Cinnabar (pas sur l'ancien Kanto inerte).
 - [ ] **Ne pas entrer dans le Centre Pokémon** dans ce build de test : ça déclenche le script d'attaque de l'Acte I, hors périmètre de ce test précis.
+- [ ] **Nouveau** : dans l'Arène, le PNJ ouvrier est présent et son dialogue s'affiche (reconstruction en cours / Blaine au Dojo).
+- [ ] **Nouveau** : dans le Labo, la PNJ assistante est présente et son dialogue s'affiche (recherches au ralenti).
+- [ ] **Nouveau** : dans le Manoir, les 2 panneaux "carnet de Blaine" sont trouvables et affichent chacun un texte différent.
+
+## 13. Acte III — les 3 lieutenants (partie normale, `pokehns.gba`)
+
+- [ ] **Lyre (Forêt de Jade / Viridian Forest)** : en traversant la forêt (entre Argenta et Jadielle), une dresseuse LYRE (sprite TEAM ROCKET) approche automatiquement et lance un combat. Dialogue d'avant-combat, de défaite (si vous perdez) et d'après-victoire s'affichent correctement.
+- [ ] **Selen (Mont Sélénite / Mt Moon)** : au milieu du groupe de Clefairy sur `MtMoon_Outside_hns`, une dresseuse SELEN approche automatiquement et lance un combat. Mêmes vérifications (avant/défaite/après).
+- [ ] **Terrence (Route de la Centrale / Rock Tunnel 1F)** : PNJ TERRENCE immobile, **à aborder** (pas d'approche automatique — lui parler avec A). Dérouler la séquence de 3 questions à choix multiples :
+  - [ ] Répondre B/A/A (le plus convaincant à chaque fois) → devrait mener à « convaincu », **pas de combat**, Terrence rejoint votre cause.
+  - [ ] Réessayer sur une autre partie/sauvegarde en répondant C à la question 1 (agressif) → devrait court-circuiter directement vers un combat complet, sans poser les questions 2 et 3.
+  - [ ] Réessayer en visant un score intermédiaire (par exemple B/B/A) → devrait mener à un combat **allégé** (équipe réduite à 2 Pokémon, sans objets tenus) plutôt que l'équipe complète à 4.
+  - [ ] Après une défaite (quelle que soit la branche combat), reparler à Terrence : la séquence de questions ne doit **pas** se rejouer, le jeu doit relancer directement le même combat.
+- [ ] Pour les 3 : vérifier qu'aucun des 3 lieutenants ne bloque le passage ou ne casse le déplacement après le combat (pas de blocage de contrôles).
 
 ---
 
