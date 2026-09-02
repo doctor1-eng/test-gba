@@ -652,9 +652,10 @@
 // ci-dessus sur TRAINER_IRWIN_2_HNS : un ID mi-liste decalerait les flags de victoire de
 // tous les entraineurs suivants).
 #define TRAINER_LYRE_HNS                      631
+#define TRAINER_SELEN_HNS                     632
 
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       632
+#define TRAINERS_COUNT_HNS                       633
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

@@ -941,3 +941,42 @@ réel de Lyre sur la carte, dialogue à l'écran, équilibrage du combat.
 sa mécanique de conviction à 3 choix, `VAR_PERSUASION_TERRENCE` déjà réservée en Phase 1) —
 même méthode (nouvel object_event, sprite Rocket, position vérifiée par collision), à traiter
 en chantiers séparés.
+
+## Acte III — deuxième lieutenante scriptée : Selen (Mont Sélénite / MtMoon_Outside_hns)
+
+Même méthode que Lyre, appliquée intégralement. Constat avant script :
+`MtMoon_Outside_hns` ne contient **aucun PNJ dresseur du tout** (uniquement des Pokémon
+sauvages Clefairy/Jirachi/Skarmory/Pidgey/Spearow en object events, une pierre Lune, un
+warp vers le Shop et deux vers la Cave) — donc, comme pour Lyre, nouvel `object_event` plutôt
+que reflavorage. Sprite `OBJ_EVENT_GFX_ROCKET_F_HNS` réutilisé tel quel (cohérence visuelle
+entre lieutenants — tous portent l'uniforme ROCKET, décision prise avec Lyre et reconduite
+ici plutôt que réinventée). Position `(13,10)` : centre du groupe de Clefairy déjà placé sur
+cette carte (cohérent avec sa fiche « mystique obsédée par... le folklore Clefairy »,
+histoire.md section 3), vérifiée par décodage de `data/layouts/MtMoon_Outside_hns/map.bin` —
+collision nulle sur la case ET sur tout le rayon d'erreance déclaré (2 tuiles dans les 4
+directions), aucun chevauchement avec un `object_event`/`warp_event` existant (17 objets
+déjà présents sur cette carte, tous vérifiés).
+
+**Trainer** : `TRAINER_SELEN_HNS` ajouté en fin de liste (`opponents_hns.h`, id `632`,
+`TRAINERS_COUNT_HNS` `632`→`633`). Équipe niveau 34 (même convention plate) :
+Clefable/Lunatone/Solrock/Claydol — thème Rock/Psychic/Fairy à statuts et effets de terrain
+(Calm Mind, Reflect/Light Screen, Stealth Rock, Rapid Spin) cohérent avec « combat lent mais
+beaucoup de statuts et d'effets de terrain » (histoire.md section 3). Lunatone/Solrock/Claydol
+choisis spécifiquement pour le thème météorite/mystique de Selen, pas des Rock/Psychic
+génériques.
+
+**Script** : ajouté à `data/scripts/heart_and_soul_act3.inc` (même fichier que Lyre), patron
+identique (`trainerbattle_single` + `event_script` de victoire, flag posé uniquement à la
+victoire, combat non conditionné par un flag d'acte — même décision assumée que pour Lyre,
+pas reprise en question ici).
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**, symbole
+`MtMoon_Outside_EventScript_Selen` confirmé présent dans `pokehns.map`. ROM 31699300 octets
+(+464 octets vs Lyre, dans la marge attendue pour une nouvelle table de dresseur), 94.47 %
+ROM/EWRAM, 78.37 % IWRAM — pas de dégradation.
+
+**Non testé en jeu** : comme pour Lyre, aucune validation visuelle possible côté agent.
+
+**Reste à faire pour clore Acte III** : Terrence (Rock Tunnel), seul des trois à porter la
+mécanique de conviction à 3 choix (histoire.md section 3, `VAR_PERSUASION_TERRENCE` déjà
+réservée en Phase 1) — chantier distinct, plus complexe que Lyre/Selen (combat simple).

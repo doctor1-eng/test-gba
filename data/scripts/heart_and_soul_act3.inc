@@ -50,3 +50,47 @@ HeartSoul_Text_LyreAfterBattle:
 	.string "cette forêt méritait d'être\l"
 	.string "protégée. Sur les moyens, par\l"
 	.string "contre… je commence à douter.$"
+
+// Deuxieme lieutenante scriptee : Selen (Mont Selenite / MtMoon_Outside_hns). Meme methode
+// que Lyre : nouvel objet-evenement (aucun PNJ existant a reflavorer sur cette carte -
+// contrairement a ViridianForest_hns, MtMoon_Outside_hns n'a aucun dresseur, seulement des
+// Pokemon sauvages Clefairy/Jirachi et une pierre Lune), meme sprite
+// OBJ_EVENT_GFX_ROCKET_F_HNS (coherence visuelle entre lieutenants), positionne en (13,10) -
+// au centre du groupe de Clefairy deja place sur cette carte (coherent avec sa fiche
+// "mystique obsedee par... le folklore Clefairy"), verifie par decodage de
+// data/layouts/MtMoon_Outside_hns/map.bin (collision 0 sur la case et son rayon d'erreance
+// complet 2x2, aucun chevauchement avec un object_event/warp existant).
+//
+// Meme choix que Lyre : combat non conditionne par un flag d'acte (aucun dresseur de ce fork
+// ne l'est).
+MtMoon_Outside_EventScript_Selen::
+	trainerbattle_single TRAINER_SELEN_HNS, HeartSoul_Text_SelenSeen, HeartSoul_Text_SelenBeaten, MtMoon_Outside_EventScript_SelenPostBattle
+	msgbox HeartSoul_Text_SelenAfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+MtMoon_Outside_EventScript_SelenPostBattle::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox HeartSoul_Text_SelenAfterBattle, MSGBOX_DEFAULT
+	setflag FLAG_SELEN_VAINCUE
+	closemessage
+	release
+	end
+
+HeartSoul_Text_SelenSeen:
+	.string "SELEN: …Les météorites ne\n"
+	.string "tombent jamais par hasard.\p"
+	.string "BLUE en est la preuve vivante :\n"
+	.string "un élu, venu révéler ce que\l"
+	.string "KANTO refuse de voir.\p"
+	.string "Toi aussi, tu vas comprendre.$"
+
+HeartSoul_Text_SelenBeaten:
+	.string "SELEN: …\p"
+	.string "Non. Ce n'était pas écrit\n"
+	.string "comme ça.$"
+
+HeartSoul_Text_SelenAfterBattle:
+	.string "SELEN: Un signe peut en cacher\n"
+	.string "un autre. Peut-être que je n'ai\l"
+	.string "pas lu le bon.$"

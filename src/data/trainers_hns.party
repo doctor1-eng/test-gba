@@ -14685,3 +14685,46 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Giga Drain
 - Toxic
 
+=== TRAINER_SELEN_HNS ===
+Name: SELEN
+Class: Rocket Admin Hns
+Pic: Rocket Grunt F Hns
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Clefable @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Moonblast
+- Moonlight
+- Calm Mind
+- Thunder Wave
+
+Lunatone @ Light Clay
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Psychic
+- Rock Slide
+- Reflect
+- Light Screen
+
+Solrock @ Chesto Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Stealth Rock
+- Earth Power
+- Psychic
+- Rest
+
+Claydol @ Sitrus Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Earthquake
+- Psychic
+- Rapid Spin
+- Rest
+
