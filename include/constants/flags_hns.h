@@ -1220,8 +1220,14 @@
 #define FLAG_INTERCEPTION_RADIO_RESOLUE              (HNS_EXTENDED_CONTENT_START + 333)
 #define FLAG_PALLET_JEUNE_DRESSEUR_RESOLU            (HNS_EXTENDED_CONTENT_START + 334)
 #define FLAG_CERULEAN_GYM_ROCKET_PARTI               (HNS_EXTENDED_CONTENT_START + 335)
+// Acte IV (histoire.md section 2/4) : rallier les Championnes restantes. FLAG_JANINE_CONVAINCUE
+// (pas FLAG_KOGA_*) car le chef d'Arene de Fuchsia dans ce fork est bien JANINE (TRAINER_JANINE_HNS,
+// FuchsiaCity_Gym_hns), pas Koga lui-meme - voir implementation_notes.md pour la decision.
+#define FLAG_ERIKA_CONVAINCUE                       (HNS_EXTENDED_CONTENT_START + 336)
+#define FLAG_SABRINA_CONVAINCUE                     (HNS_EXTENDED_CONTENT_START + 337)
+#define FLAG_JANINE_CONVAINCUE                      (HNS_EXTENDED_CONTENT_START + 338)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  336
+#define HNS_EXTENDED_CONTENT_COUNT                  339
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

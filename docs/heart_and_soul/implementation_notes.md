@@ -1211,3 +1211,69 @@ confirmés dans `pokehns.map`. ROM 31704980 octets, 94.49 % ROM, 94.47 % EWRAM, 
 possible côté agent — en particulier l'affichage réel des `bg_events` de type `sign` sur ces
 2 nouvelles maps n'a jamais été vérifié en exécution (mécanisme réutilisé tel quel depuis
 Route 1, mais jamais testé sur une map neuve comme celle-ci).
+
+**Retour utilisateur (2026-09-02)** : les 2 panneaux du Manoir n'ont pas été trouvés en jeu.
+Vérification technique (lecture de `events.inc` compilé + décodage de `map.bin`) : les 2
+`bg_sign_event` sont bien compilés aux bonnes coordonnées `(3,3)`/`(8,6)`, toutes deux
+passables, accessibles sans détour depuis le point d'entrée `(4,8)`. Cause la plus probable :
+mécanisme invisible (pas de sprite) dans une pièce vide sans repère visuel, pas un bug
+confirmé — coordonnées de re-test précises données à l'utilisateur. Pas de correction
+appliquée tant que ce n'est pas confirmé (règle « ne pas sur-corriger ») ; si confirmé bug
+réel plus tard, ou si la découvrabilité reste un problème même en marchant dessus
+volontairement, remplacer par un objet visible (ex. sprite de note/papier) sera la correction
+la plus probable.
+
+## Acte IV — alliance des 3 Championnes restantes (Erika/Sabrina/Janine) + rescale niveaux
+
+Chantier demandé explicitement (« continue jusqu'à la 7e arène ») : compléter « l'alliance
+complète des Champions (Erika, Koga, Sabrina, Major Bob) » prévue par histoire.md section 2
+(Acte IV) — Major Bob déjà fait en Acte II. Même patron exact que Pierre/Ondine/Major Bob
+(`heart_and_soul_act2.inc`) : sous-script `Doute` appelé avant le combat, flag de conviction
+posé uniquement dans la branche victoire de l'appelant. Nouveau fichier
+`data/scripts/heart_and_soul_act4.inc`, ajouté à `data/event_scripts.s` (un oubli d'include a
+été détecté et corrigé avant la fin du premier build de contrôle — voir plus bas).
+
+**Décision documentée (pas une correction silencieuse)** : histoire.md nomme « Koga
+(Fuchsia) », mais la Championne d'Arène de Fuchsia dans ce fork est **Janine**
+(`TRAINER_JANINE_HNS`), pas Koga — qui n'existe pas comme personnage combattable dans cette
+base. Plutôt que d'inventer un PNJ Koga ou de renommer Janine, la scène de doute la fait
+parler de son père Koga qui lui a laissé l'Arène (cohérent avec le canon des jeux Johto où
+Janine succède à Koga) : le lien avec histoire.md est honoré narrativement sans toucher aux
+données existantes. Flag nommé `FLAG_JANINE_CONVAINCUE` en conséquence (pas
+`FLAG_KOGA_CONVAINCUE`, pour rester fidèle aux données réelles).
+
+3 flags alloués en fin de registre (`flags_hns.h`, `HNS_EXTENDED_CONTENT_START + 336/337/338`,
+`HNS_EXTENDED_CONTENT_COUNT` 336→339) : `FLAG_ERIKA_CONVAINCUE`, `FLAG_SABRINA_CONVAINCUE`,
+`FLAG_JANINE_CONVAINCUE`.
+
+**Bug critique trouvé et corrigé avant de considérer ce chantier terminé** : les 3 équipes de
+Championnes (Erika/Sabrina/Janine) et les 12 dresseurs élèves de leurs 3 Arènes (Alice/Linda/
+Cindy/Barry à Fuchsia ; Michelle/Tanya/Julia/Jo&Zoe à Céladopole ; Rebecca/Franklin/Doris/
+Jared à Safrania) étaient encore au niveau d'origine du jeu de base (54 à 66) — exactement la
+même classe de bug déjà trouvée et corrigée pour Brock (retour de test n°6, « dresseurs
+surclassés (Brock niveau 66) »), mais dont le correctif précédent ne portait apparemment que
+jusqu'à Carmin-sur-Mer, pas jusqu'à ces 3 Arènes plus loin dans le jeu. Avec une équipe joueur
+à plat niveau 34, ces combats auraient été **impossibles à gagner tels quels** — bloquant de
+fait tout objectif « atteindre la 7e Arène ». Vérifié avant modification que chacun de ces 15
+dresseurs n'est utilisé que dans son propre fichier de script (`grep` sur tout `data/maps/`,
+aucune réutilisation ailleurs dans le jeu Johto) : rescale sans risque d'effet de bord.
+31 Pokémon (12 dresseurs élèves) + 18 Pokémon (3 Championnes) ramenés à `Level: 34`
+directement dans `src/data/trainers_hns.party`, même convention que partout ailleurs.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**, les 3 symboles
+`HeartSoul_EventScript_{Erika,Sabrina,Janine}Doute` confirmés dans `pokehns.map`. ROM
+31705988 octets, 94.49 % ROM, 94.47 % EWRAM, 78.37 % IWRAM.
+
+**⚠️ Point ouvert avant de continuer plus loin (7e Arène)** : dans ce jeu de base, l'ordre des
+badges Kanto (`VAR_0x8008`, 9 à 16) place **Seafoam Islands** en position 7
+(`SeafoamIslands_Gym_hns`, `VAR_0x8008 = 15`), juste avant Viridian/Blue en 8e. Or
+`CinnabarIsland_Gym_Frlg` (l'ancien panneau, déjà documenté comme contredisant la porte
+Cinnabar) indique explicitement que « l'Arène de Cinnabar a déménagé à Seafoam Islands » —
+ce qui signifie que le combattant qui y attend est très probablement **Blaine**, déjà
+pleinement fonctionnel dans le jeu de base. Ça contredit frontalement la trame Heart & Soul
+(Blaine disparu depuis l'Acte I, retrouvé seulement en Acte IV/V) — **même nature de conflit
+que celui déjà tranché par l'utilisateur pour Blue/Blaine à Cinnabar** (voir plus haut dans ce
+journal, "Décisions utilisateur 2026-08-29"). Je ne l'ai pas touché : ni scripté de scène de
+doute dessus, ni vérifié/modifié son contenu, en attendant une décision plutôt que de deviner
+silencieusement sur un point déjà tranché une fois de façon similaire par une vraie
+discussion. Voir message de session pour la décision demandée.

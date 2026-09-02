@@ -755,15 +755,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Vileplume
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Arbok
-Level: 59
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Vileplume
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KRISE_HNS ===
@@ -810,15 +810,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Venusaur
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Qwilfish
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Muk
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LAURA_HNS ===
@@ -873,15 +873,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Jumpluff
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Jumpluff
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Jumpluff
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DANA_HNS ===
@@ -1896,15 +1896,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Parasect
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Exeggutor
-Level: 56
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Sunflora
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_THERESA_HNS ===
@@ -5508,7 +5508,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Alakazam
-Level: 60
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HERMAN_HNS ===
@@ -5669,15 +5669,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Unown
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Mr Mime
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Exeggutor
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RODNEY_HNS ===
@@ -5763,11 +5763,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Tentacruel
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Nidoqueen
-Level: 60
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HOPE_HNS ===
@@ -5899,15 +5899,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Bellossom
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Exeggutor
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Sunflora
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROLAND_HNS ===
@@ -5980,11 +5980,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Tentacruel
-Level: 57
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Nidoking
-Level: 60
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LLOYD_HNS ===
@@ -6572,15 +6572,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Hypno
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Jynx
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Hypno
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DORIS_HNS ===
@@ -6593,15 +6593,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Noctowl
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Slowbro
-Level: 59
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Xatu
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RONALD_HNS ===
@@ -6985,11 +6985,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Victreebel
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Vileplume
-Level: 58
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MEG_AND_PEG_HNS ===
@@ -8462,7 +8462,7 @@ Mugshot: Green
 Items: Full Restore / Full Restore
 
 Jumpluff @ Focus Band
-Level: 61
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Acrobatics
 - U Turn
@@ -8470,7 +8470,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Leech Seed
 
 Roserade
-Level: 60
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Synthesis
 - Grass Whistle
@@ -8478,7 +8478,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Petal Dance
 
 Tangrowth
-Level: 60
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Power Whip
 - Wring Out
@@ -8486,7 +8486,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Tickle
 
 Venusaur @ Leftovers
-Level: 61
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Sunny Day
 - Solar Beam
@@ -8494,7 +8494,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Sleep Powder
 
 Victreebel @ Poison Barb
-Level: 62
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Sludge Bomb
 - Leaf Blade
@@ -8502,7 +8502,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Sleep Powder
 
 Bellossom @ Miracle Seed
-Level: 62
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Petal Blizzard
 - Quiver Dance
@@ -8521,7 +8521,7 @@ Mugshot: Pink
 Items: Full Restore / Full Restore
 
 Mr Mime @ Quick Claw
-Level: 65
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Magical Leaf
 - Psychic
@@ -8529,7 +8529,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Reflect
 
 Jynx
-Level: 64
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Psychic
 - Ice Beam
@@ -8537,7 +8537,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Grass Knot
 
 Slowbro @ Chesto Berry
-Level: 64
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rest
 - Sleep Talk
@@ -8545,7 +8545,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Surf
 
 Wobbuffet @ Leftovers
-Level: 64
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Mirror Coat
 - Counter
@@ -8553,7 +8553,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Destiny Bond
 
 Espeon
-Level: 65
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Psychic
 - Morning Sun
@@ -8561,7 +8561,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Power Gem
 
 Alakazam @ Twisted Spoon
-Level: 66
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shadow Ball
 - Psychic
@@ -8580,7 +8580,7 @@ Mugshot: Purple
 Items: Full Restore / Full Restore
 
 Weezing @ Leftovers
-Level: 63
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Sludge Bomb
 - Flamethrower
@@ -8588,7 +8588,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Amnesia
 
 Muk
-Level: 62
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Minimize
 - Gunk Shot
@@ -8596,7 +8596,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Acid Armor
 
 Swalot
-Level: 61
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Swallow
 - Stockpile
@@ -8604,7 +8604,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Spit Up
 
 Nidoqueen @ Quick Claw
-Level: 62
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Earthquake
 - Cross Poison
@@ -8612,7 +8612,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Superpower
 
 Crobat
-Level: 63
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Air Slash
 - Venoshock
@@ -8620,7 +8620,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Confuse Ray
 
 Venomoth @ Bright Powder
-Level: 64
+Level: 34
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Signal Beam
 - Poison Fang

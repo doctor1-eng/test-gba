@@ -34,6 +34,7 @@ SaffronCity_Gym_EventScript_Sabrina::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_SAFFRON_GYM, SaffronCity_Gym_EventScript_Sabrina_Defeated
+	call HeartSoul_EventScript_SabrinaDoute
 	msgbox SaffronCity_Gym_Text_SabrinaIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_SABRINA_HNS, SaffronCity_Gym_Text_SabrinaWinLoss
 	message SaffronCity_Gym_Text_ReceivedMarshBadge
@@ -45,6 +46,7 @@ SaffronCity_Gym_EventScript_Sabrina::
 	msgbox SaffronCity_Gym_Text_Sabrina_ExplainTM, MSGBOX_DEFAULT
 	setflag FLAG_BADGE13_GET
 	setflag FLAG_DEFEATED_SAFFRON_GYM
+	call HeartSoul_EventScript_SabrinaConvaincue
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 13
 	call Common_EventScript_SetGymTrainers_hns

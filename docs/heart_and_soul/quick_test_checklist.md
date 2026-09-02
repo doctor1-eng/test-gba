@@ -102,6 +102,14 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
   - [ ] Après une défaite (quelle que soit la branche combat), reparler à Terrence : la séquence de questions ne doit **pas** se rejouer, le jeu doit relancer directement le même combat.
 - [ ] Pour les 3 : vérifier qu'aucun des 3 lieutenants ne bloque le passage ou ne casse le déplacement après le combat (pas de blocage de contrôles).
 
+## 14. Acte IV — 3 Championnes ralliées (Céladopole/Safrania/Fuchsia)
+
+- [ ] **Erika (Céladopole)** : avant le combat, un dialogue de doute en français s'affiche (méfiance envers une Championne qui a perdu son île), puis le dialogue anglais d'origine, puis le combat. Équipe niveau ~34 (pas 60+).
+- [ ] **Sabrina (Safrania)** : même schéma (doute FR → dialogue original → combat), équipe niveau ~34.
+- [ ] **Janine (Fuchsia)** : même schéma, son dialogue de doute mentionne son père Koga. Équipe niveau ~34.
+- [ ] Pour les 3 : les dresseurs élèves rencontrés avant la Championne (ex. Michelle/Tanya/Julia à Céladopole, Rebecca/Franklin/Doris/Jared à Safrania, Alice/Linda/Cindy/Barry à Fuchsia) sont aussi niveau ~34, pas surclassés.
+- [ ] Badge reçu normalement après chaque victoire.
+
 ---
 
 **Après chaque test**, dites-moi simplement : ce qui a marché (pas besoin de détail), et pour
