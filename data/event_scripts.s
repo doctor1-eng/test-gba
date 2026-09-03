@@ -2117,6 +2117,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/CinnabarIsland_PokemonCenter_hns/scripts.inc"
 	.include "data/maps/CinnabarIsland_Gym_Hns/scripts.inc"
 	.include "data/maps/CinnabarIsland_Mansion_Hns/scripts.inc"
+	.include "data/maps/CinnabarIsland_BoatCabin_hns/scripts.inc"
 	.include "data/maps/CinnabarIsland_PokemonLab_Hns/scripts.inc"
 	.include "data/maps/IndigoPlateau_PokemonCenter_hns/scripts.inc"
 	.include "data/maps/PokemonLeague_WillsRoom_hns/scripts.inc"

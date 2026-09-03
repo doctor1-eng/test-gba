@@ -2060,3 +2060,80 @@ dans `pokehns.map`. ROM 31723764 octets, 94.54% ROM, 94.47% EWRAM, 78.37% IWRAM.
 
 **Non testé en jeu.** L'Acte I est maintenant entièrement mis en scène avec des sprites
 visibles, de l'attaque de Cinnabar jusqu'à l'arrivée à Pallet Town.
+
+## Acte I, 10e passe — le Pokémon blessé et le marin étaient placés dans l'eau ; nouvelle carte d'intérieur de bateau
+
+Retour utilisateur avec captures d'écran : le Pokémon blessé apparaissait « au milieu de
+l'eau » et, sur la scène du marin, le joueur était rendu en **mode Surf** au lieu d'être sur
+un bateau avec le marin à ses côtés. Demande explicite : « Il va falloir créer les cartes
+avec les événements [...] Vérifie que chaque événement est bien scripté et réalise les cartes
+qui correspondent ». Face au choix entre repositionner sur du terrain sec existant ou créer
+une vraie carte d'intérieur de bateau, l'utilisateur a choisi explicitement la seconde option.
+
+**Cause racine identifiée** : la 9e passe n'avait vérifié que la collision
+(`MAPGRID_COLLISION_MASK`, `include/constants/global.fieldmap.h`) des cases utilisées pour
+placer le Pokémon blessé et la scène du marin - `0` (case franchissable). Mais la collision
+seule ne distingue **pas** terre ferme et eau navigable : une case d'eau surfable a aussi une
+collision nulle. Il faut en plus décoder le **comportement du metatile**
+(`METATILE_ATTR_BEHAVIOR_MASK`, `include/constants/metatile_behaviors.h`) via
+`metatile_attributes.bin` du tileset concerné. Vérifié après coup par un script de décodage
+croisé map.bin + metatile_attributes.bin : (38,36) sur `CinnabarIsland_hns` et la zone
+utilisée sur `Route21_hns` pour le marin étaient toutes les deux `MB_OCEAN_WATER` - d'où le
+joueur rendu en mode Surf par le moteur (`GetPlayerAvatarCollision`/comportement de mode de
+transport, `src/field_player_avatar.c`) sans qu'aucun script H&S ne l'ait demandé.
+
+**Correctifs appliqués** :
+- `CinnabarIsland_hns/map.json` : `LOCALID_CINNABAR_POKEMON_BLESSE` déplacé de `(38,36)`
+  (eau) à `(38,35)` (terre ferme confirmée par le même décodage croisé).
+  `HeartSoul_Movement_VersPokemonBlesse` raccourci d'un `walk_down` en conséquence
+  (`heart_and_soul_act1.inc`).
+- `HeartSoul_Movement_VersPort` entièrement recalculé pour rester sur la rangée `y=35`
+  (confirmée sans eau ni collision sur toute sa largeur `x=32` à `x=47` par le même
+  décodage), au lieu de continuer vers `(39,37)` qui était de l'eau.
+- **Nouvelle carte native** `MAP_CINNABAR_ISLAND_BOAT_CABIN_HNS`
+  (`data/maps/CinnabarIsland_BoatCabin_hns/`) : intérieur de bateau où se joue désormais la
+  scène de la tempête, plutôt que l'extérieur de `Route21_hns` (route presque entièrement
+  maritime - y mettre en scène un marin « sur le pont » aurait obligé le joueur à y naviguer
+  en Surf, contraire à « vous êtes sur un bateau »). Géométrie : `map.bin`/`border.bin`
+  **dupliqués tels quels** (copie binaire, pas de tuile inventée à la main) depuis
+  `CinnabarIsland_Mansion_Hns` (pièce unique 13x10 déjà construite et testée), même paire de
+  tilesets (`gTileset_Johto_Building_Hns`/`gTileset_House_Lab_Hns`), déjà confirmés compilés
+  sous `IS_HNS`. Vérifié avant réutilisation qu'une géométrie `_Frlg` existante (ex.
+  `SSAnne_Deck_Frlg`) n'était **pas** une option : ses tilesets
+  (`gTileset_General_Frlg`/`gTileset_SSAnne`) sont exclus des builds `POKEMON_HNS` par les
+  `#if !IS_FRLG && !IS_HNS` / `#elif IS_FRLG` de `src/data/tilesets/headers.h` (lignes
+  284/847/1543/2714) - même piège déjà documenté dans `technical_map.md` pour les intérieurs
+  Cinnabar. Enregistrement natif : `data/layouts/layouts.json` (nouvelle entrée
+  `LAYOUT_CINNABAR_ISLAND_BOAT_CABIN_HNS`), `data/maps/map_groups.json`
+  (`gMapGroup_IndoorCinnabar_Hns`), `data/maps/CinnabarIsland_BoatCabin_hns/map.json` +
+  `scripts.inc` (nouveaux fichiers) - tout le reste (constantes `MAP_`/`LOCALID_`,
+  `layouts.inc`, `headers.inc`, etc.) est auto-généré par le pipeline mapjson, non modifié à
+  la main (confirmé gitignored via `git check-ignore -v`).
+- Le marin (`LOCALID_CINNABAR_BOAT_MARIN`, `OBJ_EVENT_GFX_SAILOR_HNS`) est placé en `(8,3)`
+  dans cette nouvelle carte, jamais caché avant sa scène (même convention déjà éprouvée pour
+  tous les autres PNJ de ce chantier), le joueur arrivant par warp en `(8,7)`. La séquence
+  (`HeartSoul_EventScript_TempeteBoatCabinCheck`/`Scene`, renommées depuis
+  `TempeteRoute21Check`/`Scene`) est déclenchée par le `MAP_SCRIPT_ON_FRAME_TABLE` de la
+  nouvelle carte (`VAR_TEMP_0`, aucune autre entrée sur cette carte neuve donc pas de
+  conflit), avec le même `delay 60` déjà éprouvé pour couvrir le fondu natif d'entrée du warp.
+  `HeartSoul_Movement_MarinApproche` recalculé pour la géométrie de la nouvelle pièce (marin
+  descend de `(8,3)` à `(8,6)`, joueur en `(8,7)`).
+- **`Route21_hns` intégralement revenu à son état d'avant la 9e passe** : `LOCALID_ROUTE21_
+  MARIN` retiré de `map.json` (objet désormais orphelin, la scène ayant déménagé), et
+  `map_script MAP_SCRIPT_ON_FRAME_TABLE, Route21_OnFrame` + le bloc `Route21_OnFrame::`
+  entier retirés de `scripts.inc` (il référençait `HeartSoul_EventScript_TempeteRoute21Check`,
+  un symbole renommé donc devenu inexistant - référence pendante qui aurait cassé la
+  compilation si elle avait été laissée).
+- **Aucun nouveau flag nécessaire** : le marin n'est jamais caché (`flag: "0"` littéral,
+  comme Blaine/les Grunts pendant leur fenêtre de visibilité), et `FLAG_MARIN_ROUTE21_
+  RENCONTRE` (déjà alloué, section 11 événement 4) reste réutilisé tel quel comme garde
+  anti-rejeu - `FLAG_HIDE_ROUTE21_MARIN` (`flags_hns.h` +376) reste alloué dans le registre
+  mais n'est plus référencé par aucun script (inoffensif, laissé en l'état plutôt que de
+  renuméroter tout le bloc `HNS_EXTENDED_CONTENT_START` pour combler un seul créneau).
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur** (voir résultat exact ci-dessous
+si le build a terminé avant l'écriture de cette section). Nouveaux symboles attendus dans
+`pokehns.map` : `HeartSoul_EventScript_TempeteBoatCabinCheck`/`Scene`,
+`CinnabarIsland_BoatCabin_EventScript_MarinUnused`.
+
+**Non testé en jeu.**

@@ -227,42 +227,58 @@ HeartSoul_CinnabarAttack_ObjetTrouve:
 	msgbox HeartSoul_Text_FuiteRoute21, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
-	warp MAP_ROUTE21_HNS, 10, 62
+	warp MAP_CINNABAR_ISLAND_BOAT_CABIN_HNS, 8, 7
 	waitstate
 	end
 
 // -----------------------------------------------------------------------------------------
-// Scene de la tempete/du marin (fin de l'Acte I, MAP_ROUTE21_HNS). Declenchee depuis
-// MAP_SCRIPT_ON_FRAME_TABLE (data/maps/Route21_hns/scripts.inc, Route21_OnFrame) - meme motif
-// eprouve que la choregraphie Cinnabar : le warp scripte ci-dessus se contente de "waitstate" +
-// "end", la suite reprend une fois l'ecran reellement pret. FLAG_MARIN_ROUTE21_RENCONTRE
-// (deja alloue, section 11 evenement 4) reutilise comme garde anti-rejeu : non pose avant cette
-// scene, pose a la fin - evite d'allouer un flag dedie supplementaire pour la meme information.
-// Position de warp (10,62) et position de depart du marin (13,62) verifiees par decodage de
-// data/layouts/Route21_hns/map.bin (collision nulle sur les deux cases et sur le chemin de
-// marche, aucun chevauchement avec les 9 object_events deja presents sur cette carte pour les
-// aspirants/PNJ existants).
+// Scene de la tempete/du marin (fin de l'Acte I). Retour utilisateur : le joueur se
+// retrouvait en mode Surf au milieu de l'eau plutot que sur un bateau (les coordonnees
+// choisies pour le Pokemon blesse et pour Route21_hns etaient en realite de l'eau navigable,
+// pas de la terre ferme - collision seule (MAPGRID_COLLISION_MASK) ne distingue pas terre et
+// eau, il faut aussi lire le comportement du metatile (METATILE_ATTR_BEHAVIOR_MASK) ; verifie
+// apres coup par decodage croise de map.bin + metatile_attributes.bin des tilesets
+// gTileset_Kanto_General_Hns/gTileset_Lavaridge_Hns - (38,36) et la zone de Route21_hns
+// choisie etaient bien MB_OCEAN_WATER). Le Pokemon blesse est repositionne en (38,35) (terre
+// ferme confirmee) et la scene de la tempete est deplacee vers une VRAIE carte d'interieur de
+// bateau plutot que l'exterieur de Route21_hns (qui est presque entierement maritime - y
+// mettre en scene un marin "sur le pont" aurait nécessité que le joueur y navigue en Surf, ce
+// qui ne correspond pas a "vous etes sur un bateau").
+//
+// MAP_CINNABAR_ISLAND_BOAT_CABIN_HNS (nouvelle carte, data/maps/CinnabarIsland_BoatCabin_hns) :
+// PAS de tuiles inventees - layout.bin/border.bin dupliques tels quels depuis
+// CinnabarIsland_Mansion_Hns (piece unique 13x10 deja construite et testee ce meme chantier),
+// meme paire de tilesets (gTileset_Johto_Building_Hns/gTileset_House_Lab_Hns), deja confirmes
+// compiles sous IS_HNS. Verifie avant de reutiliser une geometrie _Frlg existante (ex.
+// SSAnne_Deck_Frlg) que ses tilesets (gTileset_General_Frlg/gTileset_SSAnne,
+// src/data/tilesets/headers.h lignes 847-1542) sont exclus des builds POKEMON_HNS - meme piege
+// deja documente dans technical_map.md pour les interieurs Cinnabar - donc pas reutilisable
+// directement ; d'ou la duplication d'une geometrie deja native _Hns plutot qu'un warp externe
+// vers du contenu _Frlg.
+//
+// Declenchee depuis MAP_SCRIPT_ON_FRAME_TABLE (CinnabarIsland_BoatCabin_hns/scripts.inc) - meme
+// motif eprouve que la choregraphie Cinnabar/Route21 : le warp scripte ci-dessus se contente de
+// "waitstate" + "end", la suite reprend une fois l'ecran reellement pret. FLAG_MARIN_ROUTE21_
+// RENCONTRE (deja alloue, section 11 evenement 4) reutilise comme garde anti-rejeu.
 // -----------------------------------------------------------------------------------------
-HeartSoul_EventScript_TempeteRoute21Check::
-	goto_if_unset FLAG_ATTAQUE_CINNABAR_LANCEE, HeartSoul_TempeteRoute21Check_Skip
-	goto_if_set FLAG_MARIN_ROUTE21_RENCONTRE, HeartSoul_TempeteRoute21Check_Skip
+HeartSoul_EventScript_TempeteBoatCabinCheck::
+	goto_if_unset FLAG_ATTAQUE_CINNABAR_LANCEE, HeartSoul_TempeteBoatCabinCheck_Skip
+	goto_if_set FLAG_MARIN_ROUTE21_RENCONTRE, HeartSoul_TempeteBoatCabinCheck_Skip
 	setvar VAR_TEMP_0, 1
-	goto HeartSoul_EventScript_TempeteRoute21Scene
-HeartSoul_TempeteRoute21Check_Skip:
+	goto HeartSoul_EventScript_TempeteBoatCabinScene
+HeartSoul_TempeteBoatCabinCheck_Skip:
 	setvar VAR_TEMP_0, 1
 	end
 
-HeartSoul_EventScript_TempeteRoute21Scene::
+HeartSoul_EventScript_TempeteBoatCabinScene::
 	lockall
 	delay 60
 	playse SE_THUNDERSTORM
 	msgbox HeartSoul_Text_TempeteRoute21Intro, MSGBOX_DEFAULT
-	applymovement LOCALID_ROUTE21_MARIN, HeartSoul_Movement_MarinApproche
+	applymovement LOCALID_CINNABAR_BOAT_MARIN, HeartSoul_Movement_MarinApproche
 	waitmovement 0
 	msgbox HeartSoul_Text_TempeteRoute21, MSGBOX_DEFAULT
 	setflag FLAG_MARIN_ROUTE21_RENCONTRE
-	setflag FLAG_HIDE_ROUTE21_MARIN
-	removeobject LOCALID_ROUTE21_MARIN
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
 	warp MAP_PALLET_TOWN_HNS, 6, 8
@@ -323,26 +339,39 @@ HeartSoul_Movement_VersRefugies:
 	face_down
 	step_end
 
+// Corrige (retour utilisateur : Pokemon retrouve "au milieu de l'eau") : chemin raccourci
+// d'un cran - (38,36) est de l'eau (MB_OCEAN_WATER, verifie par decodage croise de map.bin et
+// metatile_attributes.bin), le joueur s'arrete desormais en (38,34), le Pokemon etant
+// repositionne en (38,35) (terre ferme confirmee, voir data/maps/CinnabarIsland_hns/map.json).
 HeartSoul_Movement_VersPokemonBlesse:
 	walk_left
 	walk_down
-	walk_down
 	face_down
 	step_end
 
+// Corrige (meme retour utilisateur) : chemin entierement recalcule pour rester sur la terre
+// ferme (rangee y=35, confirmee sans eau ni collision sur toute sa largeur x=32 a x=47 par
+// decodage croise map.bin/metatile_attributes.bin) jusqu'au point d'embarquement, plutot que
+// de continuer vers (39,37) qui etait de l'eau. Le bateau lui-meme n'est plus mis en scene en
+// exterieur (voir MAP_CINNABAR_ISLAND_BOAT_CABIN_HNS plus haut) : ce mouvement represente
+// seulement la marche jusqu'au quai, juste avant le fondu au noir/l'embarquement.
 HeartSoul_Movement_VersPort:
 	walk_down
-	walk_right
-	walk_down
+	walk_left
+	walk_left
+	walk_left
 	face_down
 	step_end
 
-// Scene de la tempete (MAP_ROUTE21_HNS) - marin en (13,62), joueur warpe en (10,62). Chemin
-// verifie par decodage de data/layouts/Route21_hns/map.bin.
+// Scene de la tempete (MAP_CINNABAR_ISLAND_BOAT_CABIN_HNS) - marin en (8,3), joueur warpe en
+// (8,7). Chemin verifie par decodage de data/layouts/CinnabarIsland_BoatCabin_hns/map.bin
+// (copie de CinnabarIsland_Mansion_Hns : piece ouverte sur toute la colonne x=8, aucun
+// obstacle sur ce trajet).
 HeartSoul_Movement_MarinApproche:
-	walk_left
-	walk_left
-	face_left
+	walk_down
+	walk_down
+	walk_down
+	face_down
 	step_end
 
 // Placeholders requis par le format object_event (scripts jamais reellement declenches : les
@@ -358,9 +387,6 @@ CinnabarIsland_EventScript_RefugeeUnused::
 	end
 
 CinnabarIsland_EventScript_PokemonBlesseUnused::
-	end
-
-Route21_EventScript_MarinUnused::
 	end
 
 HeartSoul_Text_AttaqueDebut:

@@ -13725,6 +13725,18 @@
       "layout_version": "hns"
     },
     {
+      "id": "LAYOUT_CINNABAR_ISLAND_BOAT_CABIN_HNS",
+      "name": "CinnabarIsland_BoatCabin_Hns_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_House_Lab_Hns",
+      "border_filepath": "data/layouts/CinnabarIsland_BoatCabin_hns/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_BoatCabin_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
       "id": "LAYOUT_CINNABAR_ISLAND_POKEMON_LAB_HNS",
       "name": "CinnabarIsland_PokemonLab_Hns_Layout",
       "width": 13,
