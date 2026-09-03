@@ -1590,3 +1590,70 @@ manquantes lors du commit précédent, ajoutées dans ce même chantier.
 Sections 11 et 12 de `histoire.md` sont maintenant toutes les deux entièrement implémentées et
 compilées. Ancienne section « Points ouverts » (désormais section 13) toujours en attente,
 comme documenté plus haut.
+
+## Section 8 complétée — les 3 histoires secondaires restantes
+
+Suite au chantier « attaque la suite » : `histoire.md` section 13 (« Points ouverts ») ne
+liste plus rien de majeur en suspens sur la trame elle-même, mais renvoyait implicitement aux
+2 limitations documentées à la fin du chantier Acte V (voir plus haut, « Non fait, documenté
+comme limitation connue ») — la zone bonus post-game de Kaïn (nécessite une nouvelle map, hors
+périmètre, non traitée ici) et **3 sous-intrigues de la section 8 encore non scriptées** :
+débat du clan à Fuchsia, financement Rocket à Céladopole, dossier de Mira Voss à Saffron. Ce
+sont ces 3-là qui sont traitées dans ce chantier.
+
+**Débat du clan de Fuchsia** (`HeartSoul_EventScript_FuchsiaDebatClan`,
+`heart_and_soul_act4.inc`) : « le clan ninja de Koga est divisé entre engagement direct et
+stratégie de l'ombre. Le choix du joueur (...) conditionne quels alliés sont disponibles pour
+l'assaut final. » Repliée en tête du script du Champion (`call` avant
+`HeartSoul_EventScript_JanineDoute`, `FuchsiaCity_Gym_hns/scripts.inc`), guardée par son propre
+flag (`FLAG_FUCHSIA_DEBAT_RESOLU`) pour ne se jouer qu'une seule fois — contrairement au doute
+qui se rejoue à chaque tentative de combat, ce débat n'a pas de raison de se répéter. Choix à 2
+options (`dynmultipush`/`dynmultistack`/`switch`, même patron que Terrence/Kess/Blue) stocké
+dans un nouveau var (`VAR_FUCHSIA_DEBAT`, 1 = direct, 2 = ombre). Relu dans l'événement 18
+(« retour des alliés », `HeartSoul_EventScript_BlueConfrontation`, `heart_and_soul_act5.inc`) :
+une ligne additionnelle après les branches Terrence/Kess existantes, plutôt que multiplier les
+branches (4 combinaisons Terrence/Kess × 2 combinaisons Fuchsia = 8 aurait été disproportionné
+pour un seul beat de texte).
+
+**Financement Rocket à Céladopole** et **dossier de Mira Voss à Saffron** : nouveau fichier
+`data/scripts/heart_and_soul_histoires_secondaires.inc`, même méthode que
+`heart_and_soul_evenements.inc` (nouveaux `bg_events` sign sur des cartes existantes, position
+vérifiée par décodage de `map.bin`, collision nulle sur la case, à distance des `object_events`/
+`warp_events`/`bg_events` déjà présents) :
+- `CeladonCity_DepartmentStore_1F_hns`, position (10,6) : registres de comptes qui ne
+  correspondent pas aux ventes officielles du grand magasin. Optionnel, ne bloque rien.
+  **Connecté** à `HeartSoul_EventScript_ErikaConvaincue` (`heart_and_soul_act4.inc`) : si le
+  flag (`FLAG_FINANCEMENT_ROCKET_EXPOSE`) est posé avant la victoire sur Erika, une ligne de
+  remerciement supplémentaire s'affiche - sinon rien ne change, cohérent avec « quête
+  d'infiltration (...) avant qu'Erika ne s'engage pleinement » sans pour autant bloquer sa
+  scène si le joueur ne le trouve pas.
+- `SaffronCity_SilphCo_hns`, position (22,7), proche de Mira Voss (24,7) sans chevaucher son
+  `object_event`. **Décision documentée** : histoire.md demande explicitement que la
+  motivation de Mira Voss ne soit « pas amenée seulement par exposition orale » — le contenu
+  du dossier RH (réaffectation, motif « restructuration ») est donc rédigé dans un registre
+  différent (ton de dossier administratif) de `HeartSoul_Text_MiraVossRecit` déjà existant
+  (dialogue parlé), pour compléter la scène plutôt que la répéter mot pour mot.
+
+**2 nouveaux flags** (`FLAG_FUCHSIA_DEBAT_RESOLU`, `FLAG_FINANCEMENT_ROCKET_EXPOSE`,
+`FLAG_DOSSIER_MIRA_VU` - 3 en réalité) ajoutés à `flags_hns.h`
+(`HNS_EXTENDED_CONTENT_COUNT` 368 → 371), **1 nouveau var** (`VAR_FUCHSIA_DEBAT`,
+`vars_hns.h` 0x40E0).
+
+**Aucun bug de charset cette fois** : vérification systématique faite avant le premier build
+(même script Python que pour la section 11) sur tous les fichiers modifiés - aucune occurrence
+de guillemets droits/courbes ou de tiret cadratin.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur** au premier essai. Les 3 nouveaux
+symboles (`HeartSoul_EventScript_FuchsiaDebatClan`,
+`CeladonCity_DepartmentStore_1F_EventScript_FinancementRocket`,
+`SaffronCity_SilphCo_EventScript_DossierMiraVoss`) confirmés dans `pokehns.map`. ROM 31724404
+octets, 94.55 % ROM, 94.47 % EWRAM, 78.37 % IWRAM.
+
+**Non testé en jeu.** Checklist mise à jour (`quick_test_checklist.md`, nouvelle section 19 +
+complément à la section 18 pour la ligne « retour des alliés »).
+
+**Ce qui reste ouvert** (inchangé depuis le chantier Acte V, toujours hors périmètre) : la
+zone bonus post-game de Kaïn nécessite une nouvelle map (sous-sol du Pokémon Mansion,
+inexistante dans l'architecture actuelle à pièce unique) - un chantier de map design à part
+entière, pas un ajout de dialogue/script. `histoire.md` section 13 ne signale plus aucun autre
+point ouvert sur la trame elle-même.

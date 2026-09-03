@@ -77,6 +77,19 @@ HeartSoul_RetourAllies_TerrenceEtKess:
 HeartSoul_RetourAllies_KessSeule:
 	msgbox HeartSoul_Text_RetourAlliesKessSeule, MSGBOX_DEFAULT
 HeartSoul_RetourAllies_Fin:
+	// histoire.md section 8 (Fuchsia City) : ligne additionnelle selon l'issue du debat du clan
+	// (HeartSoul_EventScript_FuchsiaDebatClan, heart_and_soul_act4.inc) - complete la scene
+	// plutot que de multiplier les branches ci-dessus (4 x 2 = 8 combinaisons aurait ete trop
+	// pour un seul beat de texte).
+	goto_if_eq VAR_FUCHSIA_DEBAT, 1, HeartSoul_RetourAllies_ClanDirect
+	goto_if_eq VAR_FUCHSIA_DEBAT, 2, HeartSoul_RetourAllies_ClanOmbre
+	goto HeartSoul_RetourAllies_ClanFin
+HeartSoul_RetourAllies_ClanDirect:
+	msgbox HeartSoul_Text_RetourAlliesClanDirect, MSGBOX_DEFAULT
+	goto HeartSoul_RetourAllies_ClanFin
+HeartSoul_RetourAllies_ClanOmbre:
+	msgbox HeartSoul_Text_RetourAlliesClanOmbre, MSGBOX_DEFAULT
+HeartSoul_RetourAllies_ClanFin:
 	setflag FLAG_RETOUR_ALLIES_VU
 HeartSoul_BlueConfrontation_ApresRetourAllies:
 	setvar VAR_DIALOGUE_BLUE, 0
@@ -257,6 +270,19 @@ HeartSoul_Text_RetourAlliesTerrenceEtKess:
 	.string "Tout ce que tu as accompli\l"
 	.string "jusqu'ici tient dans ce\l"
 	.string "couloir.$"
+
+HeartSoul_Text_RetourAlliesClanDirect:
+	.string "Quelques ninjas du clan de\n"
+	.string "JANINE se postent en renfort\l"
+	.string "visible, comme tu les avais\l"
+	.string "encouragés à le faire.$"
+
+HeartSoul_Text_RetourAlliesClanOmbre:
+	.string "Aucun ninja du clan de JANINE\n"
+	.string "en vue - mais un signal discret\l"
+	.string "confirme qu'ils surveillent\l"
+	.string "déjà chaque issue, comme tu\l"
+	.string "l'avais conseillé.$"
 
 HeartSoul_Text_BlueRevelation:
 	.string "BLUE: Tu crois que je fais ça\n"

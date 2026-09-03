@@ -184,8 +184,29 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] **Retour des alliés (avant Blue)** : juste avant la scène de révélation de Blue à
   l'Arène de Viridian, un texte récapitule les Champions déjà ralliés qui sécurisent l'accès —
   le texte varie légèrement si Terrence et/ou Kess ont été convaincus (pas seulement vaincus)
-  au cours de la partie. Ne doit s'afficher qu'une seule fois, même en cas de défaite et de
-  nouvelle tentative contre Blue.
+  au cours de la partie, **puis** une seconde ligne selon l'issue du débat du clan de Janine
+  (voir section 19 ci-dessous). Ne doit s'afficher qu'une seule fois, même en cas de défaite et
+  de nouvelle tentative contre Blue.
+
+## 19. Les 3 histoires secondaires restantes (section 8)
+
+- [ ] **Fuchsia (débat du clan)** : en entrant dans l'Arène de Fuchsia pour la première fois
+  (après l'Acte II), avant même le dialogue de doute habituel de Janine, un texte présente le
+  clan divisé entre engagement direct et stratégie de l'ombre, puis propose un choix entre les
+  deux. Ne doit se jouer **qu'une seule fois** (revenir dans l'Arène ensuite ne le rejoue pas).
+- [ ] Le choix fait à Fuchsia doit influencer la ligne additionnelle de la scène « retour des
+  alliés » juste avant Blue (section 18) : ninjas visibles en renfort si « engagement direct »,
+  ligne sur une surveillance discrète si « stratégie de l'ombre ».
+- [ ] **Céladopole (financement Rocket)** : dans le grand magasin (rez-de-chaussée), un panneau
+  invisible (marcher dessus + A) révèle des registres de comptes qui ne correspondent pas aux
+  ventes officielles — optionnel, ne bloque rien.
+- [ ] Si ce panneau a été trouvé **avant** de battre Erika : une ligne de remerciement
+  supplémentaire s'affiche une fois d'accord obtenue (immédiatement après le combat). Si le
+  panneau n'a pas été trouvé, rien ne change dans la scène d'Erika.
+- [ ] **Safrania/Silph Co (dossier de Mira Voss)** : avant le combat contre Mira Voss, un
+  panneau invisible affiche un dossier RH à son nom (réaffectation, motif « restructuration »)
+  — texte différent de ce que Mira dit elle-même à l'oral juste après. Optionnel, ne bloque
+  rien non plus.
 
 ---
 

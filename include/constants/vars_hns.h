@@ -125,6 +125,10 @@
 // (condition de coda de l'epilogue exemplaire, >= 6).
 #define VAR_ASPIRANTS_BATTUS                            0x40DF
 #define VAR_UNUSED_HNS_0x40DF                           0x40DF
+// histoire.md section 8 (Fuchsia City) : resultat du debat du clan de Janine (0 = non resolu,
+// 1 = engagement direct, 2 = strategie de l'ombre) - conditionne le texte de l'evenement 18
+// (retour des allies, heart_and_soul_act5.inc).
+#define VAR_FUCHSIA_DEBAT                               0x40E0
 #define VAR_UNUSED_HNS_0x40E0                           0x40E0
 #define VAR_UNUSED_HNS_0x40E1                           0x40E1
 #define VAR_UNUSED_HNS_0x40E2                           0x40E2

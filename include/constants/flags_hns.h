@@ -1273,7 +1273,15 @@
 #define FLAG_ALARME_SILPHCO_VUE                      (HNS_EXTENDED_CONTENT_START + 366)
 #define FLAG_RETOUR_ALLIES_VU                        (HNS_EXTENDED_CONTENT_START + 367)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  368
+// histoire.md section 8 (histoires secondaires par lieu) : les 3 sous-intrigues restees non
+// scriptees a l'issue de la section 11/12 (voir implementation_notes.md, "Non fait,
+// documente comme limitation connue" du chantier Acte V) - debat du clan a Fuchsia,
+// financement Rocket au grand magasin de Celadopole, dossier interne de Mira Voss a Silph Co.
+#define FLAG_FUCHSIA_DEBAT_RESOLU                    (HNS_EXTENDED_CONTENT_START + 368)
+#define FLAG_FINANCEMENT_ROCKET_EXPOSE               (HNS_EXTENDED_CONTENT_START + 369)
+#define FLAG_DOSSIER_MIRA_VU                         (HNS_EXTENDED_CONTENT_START + 370)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  371
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

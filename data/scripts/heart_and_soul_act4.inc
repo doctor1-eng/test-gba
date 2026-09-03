@@ -28,8 +28,15 @@ HeartSoul_EventScript_ErikaDoute::
 HeartSoul_ErikaDoute_Skip:
 	return
 
+// histoire.md section 8 (Celadopole) : ligne additionnelle si le joueur a trouve le sign de
+// CeladonCity_DepartmentStore_1F_EventScript_FinancementRocket
+// (heart_and_soul_histoires_secondaires.inc) avant le combat - optionnel, la conviction
+// d'Erika ne depend pas de ce flag.
 HeartSoul_EventScript_ErikaConvaincue::
 	setflag FLAG_ERIKA_CONVAINCUE
+	goto_if_unset FLAG_FINANCEMENT_ROCKET_EXPOSE, HeartSoul_ErikaConvaincue_Fin
+	msgbox HeartSoul_Text_ErikaRemercieFinancement, MSGBOX_DEFAULT
+HeartSoul_ErikaConvaincue_Fin:
 	return
 
 HeartSoul_Text_ErikaDouteIntro:
@@ -48,6 +55,13 @@ HeartSoul_Text_ErikaDouteConclusion:
 	.string "ERIKA: Un combat, alors. Que je\n"
 	.string "voie si votre détermination\l"
 	.string "vaut mieux que vos mots.$"
+
+HeartSoul_Text_ErikaRemercieFinancement:
+	.string "ERIKA: …Le grand magasin,\n"
+	.string "vraiment ? J'ignorais. Merci de\l"
+	.string "me l'avoir montré - j'aurais dû\l"
+	.string "le voir moi-même, depuis le\l"
+	.string "temps.$"
 
 HeartSoul_EventScript_SabrinaDoute::
 	goto_if_unset FLAG_ACTE_2_TERMINE, HeartSoul_SabrinaDoute_Skip
@@ -79,6 +93,66 @@ HeartSoul_Text_SabrinaDouteConclusion:
 	.string "…\p"
 	.string "SABRINA: Battons-nous. Ça, au\n"
 	.string "moins, m'éclairera.$"
+
+// histoire.md section 8 (Fuchsia City) : "le clan ninja de Koga est divise entre engagement
+// direct contre la Team Rocket et strategie de l'ombre. Le choix du joueur dans ce debat
+// conditionne quels allies sont disponibles pour l'assaut final." Appele en tete du script du
+// Champion (FuchsiaCity_Gym_hns/scripts.inc), avant HeartSoul_EventScript_JanineDoute - meme
+// motif call/return, mais garde par son propre flag (FLAG_FUCHSIA_DEBAT_RESOLU) car ce debat
+// ne doit se jouer qu'une seule fois, contrairement au doute qui se rejoue a chaque tentative
+// tant que Janine n'est pas convaincue/vaincue. VAR_FUCHSIA_DEBAT (1 = engagement direct,
+// 2 = strategie de l'ombre) reutilise ensuite dans HeartSoul_EventScript_BlueConfrontation
+// (heart_and_soul_act5.inc, evenement 18 "retour des allies").
+HeartSoul_EventScript_FuchsiaDebatClan::
+	goto_if_set FLAG_FUCHSIA_DEBAT_RESOLU, HeartSoul_FuchsiaDebatClan_Skip
+	goto_if_unset FLAG_ACTE_2_TERMINE, HeartSoul_FuchsiaDebatClan_Skip
+	msgbox HeartSoul_Text_FuchsiaDebatIntro, MSGBOX_DEFAULT
+HeartSoul_FuchsiaDebatClan_Choice:
+	dynmultipush HeartSoul_Text_FuchsiaDebat_Direct, 0
+	dynmultipush HeartSoul_Text_FuchsiaDebat_Ombre, 1
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, HeartSoul_FuchsiaDebatClan_ChoixDirect
+	case 1, HeartSoul_FuchsiaDebatClan_ChoixOmbre
+	goto HeartSoul_FuchsiaDebatClan_Choice
+
+HeartSoul_FuchsiaDebatClan_ChoixDirect:
+	setvar VAR_FUCHSIA_DEBAT, 1
+	msgbox HeartSoul_Text_FuchsiaDebat_DirectResultat, MSGBOX_DEFAULT
+	goto HeartSoul_FuchsiaDebatClan_Fin
+HeartSoul_FuchsiaDebatClan_ChoixOmbre:
+	setvar VAR_FUCHSIA_DEBAT, 2
+	msgbox HeartSoul_Text_FuchsiaDebat_OmbreResultat, MSGBOX_DEFAULT
+HeartSoul_FuchsiaDebatClan_Fin:
+	setflag FLAG_FUCHSIA_DEBAT_RESOLU
+	return
+HeartSoul_FuchsiaDebatClan_Skip:
+	return
+
+HeartSoul_Text_FuchsiaDebatIntro:
+	.string "JANINE: Avant le combat…\n"
+	.string "mon clan est divise. Certains\l"
+	.string "veulent frapper la TEAM ROCKET\l"
+	.string "de front. D'autres preferent\l"
+	.string "agir dans l'ombre, sans jamais\l"
+	.string "se montrer.\p"
+	.string "Un avis exterieur m'aiderait\n"
+	.string "a trancher.$"
+
+HeartSoul_Text_FuchsiaDebat_Direct:
+	.string "L'engagement direct$"
+HeartSoul_Text_FuchsiaDebat_Ombre:
+	.string "La strategie de l'ombre$"
+
+HeartSoul_Text_FuchsiaDebat_DirectResultat:
+	.string "JANINE: …Direct, alors. Mon\n"
+	.string "clan se tiendra pret a se\l"
+	.string "montrer, le moment venu.$"
+
+HeartSoul_Text_FuchsiaDebat_OmbreResultat:
+	.string "JANINE: …L'ombre. Un vrai ninja\n"
+	.string "n'a jamais eu besoin d'etre vu\l"
+	.string "pour agir.$"
 
 HeartSoul_EventScript_JanineDoute::
 	goto_if_unset FLAG_ACTE_2_TERMINE, HeartSoul_JanineDoute_Skip

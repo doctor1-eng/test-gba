@@ -45,6 +45,7 @@ FuchsiaCity_Gym_EventScript_Janine::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_FUCHSIA_GYM, FuchsiaCity_Gym_EventScript_Janine_Defeated
+	call HeartSoul_EventScript_FuchsiaDebatClan
 	call HeartSoul_EventScript_JanineDoute
 	msgbox FuchsiaCity_Gym_Text_Janine_DisappointYou, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_JANINE_HNS, FuchsiaCity_Gym_Text_Janine_ToughOne
