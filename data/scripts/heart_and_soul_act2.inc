@@ -155,6 +155,10 @@ HeartSoul_Text_OndineDouteConclusion:
 // restriction de placement comme pour HeartSoul_EventScript_MiliceRoute1).
 HeartSoul_EventScript_CommercantViridian::
 	goto_if_unset FLAG_ACTE_1_TERMINE, HeartSoul_CommercantViridian_Skip
+	goto_if_set FLAG_DISCOURS_BLUE_ENTENDU, HeartSoul_CommercantViridian_ApresDiscours
+	setflag FLAG_DISCOURS_BLUE_ENTENDU
+	msgbox HeartSoul_Text_DiscoursBlueRadio, MSGBOX_DEFAULT
+HeartSoul_CommercantViridian_ApresDiscours:
 	goto_if_set FLAG_COMMERCANT_VIRIDIAN_RESOLU, HeartSoul_CommercantViridian_Skip
 	msgbox HeartSoul_Text_CommercantIntro, MSGBOX_DEFAULT
 HeartSoul_CommercantViridian_Choice:
@@ -176,6 +180,19 @@ HeartSoul_CommercantViridian_Ignorer:
 	return
 HeartSoul_CommercantViridian_Skip:
 	return
+
+// Evenement 6 (histoire.md section 11, Acte II) : premier moment ou le joueur comprend que
+// BLUE ne se voit pas comme un simple criminel aux yeux de tous - narration seule.
+HeartSoul_Text_DiscoursBlueRadio:
+	.string "Une annonce publique crepite\n"
+	.string "dans les haut-parleurs de la\l"
+	.string "ville.\p"
+	.string "BLUE: \"La Ligue protege une\n"
+	.string "elite. Pas le talent. Vous le\l"
+	.string "savez tous, au fond.\"\p"
+	.string "Autour de toi, personne ne\n"
+	.string "semble choque. Certains\l"
+	.string "hochent meme la tete.$"
 
 HeartSoul_Text_CommercantIntro:
 	.string "…\p"
@@ -388,7 +405,9 @@ HeartSoul_EventScript_PalletJeuneDresseur::
 	goto_if_unset FLAG_ACTE_1_TERMINE, HeartSoul_PalletJeuneDresseur_Skip
 	goto_if_set FLAG_PALLET_JEUNE_DRESSEUR_RESOLU, HeartSoul_PalletJeuneDresseur_Apres
 	msgbox HeartSoul_Text_PalletJeuneDresseurIntro, MSGBOX_NPC
+	msgbox HeartSoul_Text_ProfesseurPalletDisparu, MSGBOX_NPC
 	setflag FLAG_PALLET_JEUNE_DRESSEUR_RESOLU
+	setflag FLAG_PROFESSEUR_PALLET_RESOLU
 	return
 HeartSoul_PalletJeuneDresseur_Apres:
 	msgbox HeartSoul_Text_PalletJeuneDresseurApres, MSGBOX_NPC
@@ -401,6 +420,16 @@ HeartSoul_Text_PalletJeuneDresseurIntro:
 	.string "mais bon, ici tout va bien.\p"
 	.string "Vous vous en faites toujours\n"
 	.string "trop, vous les gens du sud.$"
+
+// Evenement 5 (histoire.md section 11, Acte II) : sous-intrigue qui peut rester non
+// resolue - narration seule, pas de choix, FLAG_PROFESSEUR_PALLET_RESOLU pose juste pour
+// eviter la repetition (pas encore relu ailleurs, laisse ouvert comme prevu par le brief).
+HeartSoul_Text_ProfesseurPalletDisparu:
+	.string "…Enfin, le professeur d'ici, lui,\n"
+	.string "il ne dit plus grand-chose.\p"
+	.string "Terre depuis l'histoire de\n"
+	.string "CINNABAR. Il a peur de\l"
+	.string "represailles, a ce qu'on dit.$"
 
 HeartSoul_Text_PalletJeuneDresseurApres:
 	.string "J'espere que tu retrouveras\n"

@@ -126,6 +126,67 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Juste après la victoire sur Blue : un épilogue en français s'affiche automatiquement (3 variantes possibles selon les choix faits pendant la partie — réputation ternie/équilibrée/exemplaire). Vérifier qu'il ne se rejoue pas en revenant à l'Arène de Viridian plus tard.
 - [ ] Si l'épilogue "exemplaire" s'affiche : vérifier que le texte mentionne un accès aux sous-sols du Pokémon Mansion (le contenu réel de cette zone n'est pas encore implémenté — normal que rien de plus ne se passe pour l'instant).
 
+## 17. Les 8 aspirants Champions (rencontres aléatoires)
+
+- [ ] Sur `Route21_hns`, `ViridianForest_hns`, `Route15_hns`, `SeafoamIslands_1F_hns`,
+  `Route1_hns`, `RockTunnel_1F_hns` et `CeladonCity_hns` : en entrant/traversant la zone
+  plusieurs fois de suite (1 chance sur 20 par visite, donc parfois plusieurs essais
+  nécessaires), un dresseur aspirant apparaît parfois là où il n'y avait rien avant.
+- [ ] Chaque aspirant a un dialogue d'avant-combat, de défaite et d'après-victoire propre (pas
+  de texte générique/dupliqué entre deux aspirants).
+- [ ] **Corvin (Route 1)** : ne doit apparaître que **de nuit** (vérifier avec l'horloge de la
+  console/`gettimeofday` — ne pas le chercher en plein jour).
+- [ ] **Ael (Route 21, ×2)** et **Orin (Route 21, ×2)** : les deux peuvent apparaître sur la
+  même route, à des occasions différentes, sans se remplacer l'un l'autre.
+- [ ] Chaque aspirant reste rejouable à une rencontre aléatoire ultérieure (pas de flag qui le
+  ferait disparaître définitivement après une victoire — comportement voulu, documenté comme
+  simplification : pas de vraie boucle « VS Seeker » progressive).
+- [ ] En battant au moins 6 des 8 aspirants sur la partie, puis en terminant le scénario
+  (voir section 16) avec l'épilogue **exemplaire** : un texte additionnel dédié aux aspirants
+  doit s'afficher à la suite de l'épilogue normal.
+
+## 18. Les 18 événements narratifs supplémentaires (section 11)
+
+- [ ] **Acte I** : au fil des scènes déjà connues de la chute de Cinnabar, 4 nouveaux moments
+  s'intercalent (choix de sauvetage, carnet du grunt trouvé, choix pour un Pokémon blessé,
+  scène avec un marin sur la Route 21 pendant la tempête) — aucun ne doit bloquer la
+  progression normale de l'Acte I.
+- [ ] **Acte II** : à Jadielle, le jeune dresseur croisé près du Bourg Palette a une ligne de
+  dialogue supplémentaire ; à Argenta, le commerçant a une ligne après le discours de Blue
+  entendu à la radio/en ville.
+- [ ] **Pewter (panneau photo)** : sur `PewterCity_hns`, près du marché, un panneau invisible
+  (marcher dessus + A) affiche un vieux cliché de Blaine jeune avec une dresseuse qui
+  ressemble au joueur — uniquement visible après l'Acte I (`FLAG_ACTE_1_TERMINE`).
+- [ ] **Route 3 (patrouille de reconnaissance)** : entre Jadielle et le Mont Sélénite, un
+  Grunt Rocket isolé lance un combat mineur, avant les vrais lieutenants de l'Acte III.
+- [ ] **Mont Sélénite** : fragments de folklore Clefairy déjà présents dans le jeu de base,
+  visibles avant/pendant la scène avec Selen (pas de nouveau contenu à vérifier ici au-delà de
+  ce qui existe déjà).
+- [ ] **Capture d'un Champion allié** : au fil de l'Acte III, une ligne de texte évoque la
+  capture brève d'un Champion déjà rallié (Pierre ou Ondine) par la Team Rocket.
+- [ ] **Terrence (éboulement du Rock Tunnel)** : juste avant la séquence de conviction de
+  Terrence, un texte d'éboulement/alliance temporaire s'affiche avant les 3 questions
+  habituelles.
+- [ ] **Kess (labo caché de la Zone Safari)** : juste avant la séquence de conviction de Kess,
+  un texte décrit d'anciennes installations d'expérimentation portant le sceau de Giovanni.
+- [ ] **Céladopole (subordonné admiratif)** : un dresseur optionnel, convaincu par le discours
+  de Blue mais pas violent, propose un combat facultatif ; sa défaite montre un doute dans son
+  texte d'après-combat.
+- [ ] **Janine (scission du clan)** : juste après avoir obtenu le badge de Fuchsia, un texte
+  supplémentaire de Janine évoque une tentative de sabotage isolée par une minorité de son
+  clan, déjà réglée — ne doit apparaître qu'une seule fois.
+- [ ] **Silph Co (piste de Blaine + alarme)** : juste avant le combat contre Mira Voss, deux
+  textes s'affichent dans l'ordre — un registre de détention au nom de Blaine (précisant qu'il
+  est déjà retrouvé), puis une alarme qui se déclenche dans les étages supérieurs.
+- [ ] **Retrouvailles avec Blaine (Seafoam)** : déjà couvert par la section 15 de cette
+  checklist — pas de nouveau point à tester ici (c'est l'implémentation existante de
+  l'événement 17 du scénario).
+- [ ] **Retour des alliés (avant Blue)** : juste avant la scène de révélation de Blue à
+  l'Arène de Viridian, un texte récapitule les Champions déjà ralliés qui sécurisent l'accès —
+  le texte varie légèrement si Terrence et/ou Kess ont été convaincus (pas seulement vaincus)
+  au cours de la partie. Ne doit s'afficher qu'une seule fois, même en cas de défaite et de
+  nouvelle tentative contre Blue.
+
 ---
 
 **Après chaque test**, dites-moi simplement : ce qui a marché (pas besoin de détail), et pour

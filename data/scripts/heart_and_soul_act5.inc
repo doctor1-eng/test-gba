@@ -50,7 +50,35 @@ HeartSoul_VerifierActeV_Skip:
 // -2/0/+2 deviennent 0/2/4, -1/+1 deviennent 1/3. Seuils recalcules (total original ->
 // decale, +6 sur 3 questions) : original >=3 -> decale >=9 ; 0 a 2 -> decale 6-8 ; negatif
 // -> decale <=5.
+// Evenement 18 (histoire.md section 11) : "juste avant la confrontation avec Blue, les
+// lieutenants convertis (Terrence, Kess) et les Champions ralliés apparaissent brièvement pour
+// sécuriser l'accès au Mansion". Implemente en un seul msgbox recapitulatif plutot qu'en
+// object_events additionnels sur ViridianCity_Gym_hns (la piece est deja occupee par le
+// combat scripte de Blue - ajouter des sprites supplementaires risquerait de gener le
+// placement du trainerbattle_no_intro d'origine, non touche par ce chantier). Le texte varie
+// legerement selon qui a effectivement ete convaincu/vaincu (FLAG_TERRENCE_CONVAINCU,
+// FLAG_KESS_CONVAINCUE), pour que la scene "materialise concretement le score de reputation
+// accumule" comme demande, sans dupliquer le calcul complet des epilogues plus bas dans ce
+// fichier. Guarde par FLAG_RETOUR_ALLIES_VU pour ne s'afficher qu'une fois, meme si le joueur
+// perd le combat de Blue et retente la sequence.
 HeartSoul_EventScript_BlueConfrontation::
+	goto_if_set FLAG_RETOUR_ALLIES_VU, HeartSoul_BlueConfrontation_ApresRetourAllies
+	goto_if_set FLAG_TERRENCE_CONVAINCU, HeartSoul_RetourAllies_CheckKessAvecTerrence
+	goto_if_set FLAG_KESS_CONVAINCUE, HeartSoul_RetourAllies_KessSeule
+	msgbox HeartSoul_Text_RetourAlliesChampionsSeuls, MSGBOX_DEFAULT
+	goto HeartSoul_RetourAllies_Fin
+HeartSoul_RetourAllies_CheckKessAvecTerrence:
+	goto_if_set FLAG_KESS_CONVAINCUE, HeartSoul_RetourAllies_TerrenceEtKess
+	msgbox HeartSoul_Text_RetourAlliesTerrenceSeul, MSGBOX_DEFAULT
+	goto HeartSoul_RetourAllies_Fin
+HeartSoul_RetourAllies_TerrenceEtKess:
+	msgbox HeartSoul_Text_RetourAlliesTerrenceEtKess, MSGBOX_DEFAULT
+	goto HeartSoul_RetourAllies_Fin
+HeartSoul_RetourAllies_KessSeule:
+	msgbox HeartSoul_Text_RetourAlliesKessSeule, MSGBOX_DEFAULT
+HeartSoul_RetourAllies_Fin:
+	setflag FLAG_RETOUR_ALLIES_VU
+HeartSoul_BlueConfrontation_ApresRetourAllies:
 	setvar VAR_DIALOGUE_BLUE, 0
 	msgbox HeartSoul_Text_BlueRevelation, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_BlueQ1, MSGBOX_DEFAULT
@@ -200,6 +228,35 @@ HeartSoul_EpilogueExemplaire_CodaAspirants:
 
 HeartSoul_Epilogue_Skip:
 	return
+
+HeartSoul_Text_RetourAlliesChampionsSeuls:
+	.string "Les Champions déjà ralliés se\n"
+	.string "postent le long du couloir,\l"
+	.string "gardant chaque sortie.\p"
+	.string "Aucune trace de TERRENCE ni de\n"
+	.string "KESS. Tu devras faire sans eux.$"
+
+HeartSoul_Text_RetourAlliesTerrenceSeul:
+	.string "Les Champions déjà ralliés se\n"
+	.string "postent le long du couloir.\p"
+	.string "TERRENCE est là aussi,\n"
+	.string "silencieux, à surveiller l'accès\l"
+	.string "au MANOIR.$"
+
+HeartSoul_Text_RetourAlliesKessSeule:
+	.string "Les Champions déjà ralliés se\n"
+	.string "postent le long du couloir.\p"
+	.string "KESS est là aussi, prête à\n"
+	.string "couvrir tes arrières si ça\l"
+	.string "tourne mal.$"
+
+HeartSoul_Text_RetourAlliesTerrenceEtKess:
+	.string "Les Champions déjà ralliés se\n"
+	.string "postent le long du couloir.\p"
+	.string "TERRENCE et KESS sont là aussi.\n"
+	.string "Tout ce que tu as accompli\l"
+	.string "jusqu'ici tient dans ce\l"
+	.string "couloir.$"
 
 HeartSoul_Text_BlueRevelation:
 	.string "BLUE: Tu crois que je fais ça\n"

@@ -90,8 +90,16 @@ HeartSoul_EventScript_JanineDoute::
 HeartSoul_JanineDoute_Skip:
 	return
 
+// Evenement 14 (histoire.md section 11, Acte IV) : "apres le debat (section 8), une faction
+// minoritaire du clan, en desaccord avec le choix du joueur, tente un sabotage isole".
+// Consequence directe et visible du choix fait, sans bloquer la progression - implementee en
+// texte de suite dans la meme scene de victoire (aucun nouveau PNJ/trainerbattle : le sabotage
+// est deja contenu et raconte au passe par Janine elle-meme, pour ne pas ouvrir un second
+// combat facultatif juste apres celui qui vient de se terminer).
 HeartSoul_EventScript_JanineConvaincue::
 	setflag FLAG_JANINE_CONVAINCUE
+	msgbox HeartSoul_Text_ScissionClan, MSGBOX_DEFAULT
+	setflag FLAG_SCISSION_CLAN_VUE
 	return
 
 HeartSoul_Text_JanineDouteIntro:
@@ -111,6 +119,16 @@ HeartSoul_Text_JanineDouteConclusion:
 	.string "…\p"
 	.string "JANINE: Alors montrez-moi vos\n"
 	.string "actes. Un combat suffira.$"
+
+HeartSoul_Text_ScissionClan:
+	.string "JANINE: …Avant que vous\n"
+	.string "n'arriviez : une poignée d'élèves\l"
+	.string "n'a pas accepté ma décision.\l"
+	.string "Ils ont tenté de saboter le\l"
+	.string "dojo, seuls, sans mon accord.\p"
+	.string "Personne n'a été blessé. Je les\n"
+	.string "ai renvoyés. Ça, au moins,\l"
+	.string "c'est réglé.$"
 
 // Retrouvailles avec Blaine (Seafoam Islands). Decision utilisateur (2026-09-02, meme nature
 // de conflit que Blue/Blaine a Cinnabar) : ce jeu de base fait deja combattre un BLAINE
@@ -182,6 +200,7 @@ FuchsiaCity_SafariZoneCave_EventScript_Kess::
 	goto_if_set FLAG_KESS_CONVAINCUE, FuchsiaCity_SafariZoneCave_Kess_ApresConvaincue
 	goto_if_set FLAG_KESS_VAINCUE, FuchsiaCity_SafariZoneCave_Kess_ApresVaincue
 	goto_if_ne VAR_PERSUASION_KESS, 0, FuchsiaCity_SafariZoneCave_Kess_Evaluate
+	msgbox HeartSoul_Text_LaboCacheSafari, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_KessIntro, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_KessQ1, MSGBOX_DEFAULT
 FuchsiaCity_SafariZoneCave_Kess_Q1Choice:
@@ -321,6 +340,18 @@ FuchsiaCity_SafariZoneCave_Kess_ApresVaincue:
 	closemessage
 	release
 	end
+
+// Evenement 12 (histoire.md section 11, Acte IV) : installations d'experimentation
+// heritees de l'ere Giovanni, echo aux carnets de Blaine (Acte I,
+// heart_and_soul_cinnabar_interiors.inc) et aux revelations d'Acte V.
+HeartSoul_Text_LaboCacheSafari:
+	.string "Au detour d'un sentier, des\n"
+	.string "installations abandonnees,\l"
+	.string "cachees sous la vegetation.\p"
+	.string "Du materiel d'experimentation\n"
+	.string "ancien, portant encore le sceau\l"
+	.string "de GIOVANNI. Personne ici ne\l"
+	.string "semble savoir qu'elles existent.$"
 
 HeartSoul_Text_KessIntro:
 	.string "KESS: …Ne m'oblige pas à faire\n"
@@ -462,10 +493,34 @@ HeartSoul_Text_KessApresConvaincue:
 //
 // Defaite de Mira Voss = dernier verrou avant l'Acte V (voir
 // HeartSoul_EventScript_VerifierDeblocageActeV plus bas, meme fichier).
+//
+// Evenements 15 et 16 (histoire.md section 11, Acte IV) repliés dans cette meme scene plutot
+// que sur de nouveaux object_events/bg_events, pour la meme raison que l'evenement 14
+// ci-dessus (eviter de multiplier les arrets scriptes juste avant/apres un combat de
+// lieutenant deja dense).
+//
+// Evenement 15 ("la piste de Blaine") - decision documentee : reinterprete en fragment
+// retrospectif plutot qu'en veritable indice de recherche. histoire.md le decrit comme
+// preparant le sauvetage de Blaine en Acte V, mais la decision utilisateur du 2026-09-02 (voir
+// HeartSoul_EventScript_BlaineRetrouve plus haut dans ce fichier) a deja resolu les
+// retrouvailles avec Blaine a Seafoam, plus tot dans l'Acte IV. Le registre trouve ici confirme
+// donc ce que le joueur sait deja au lieu de l'annoncer - closure narrative, pas un nouvel
+// indice, coherent avec la regle "ne pas contredire une decision deja prise".
+//
+// Evenement 16 ("l'alarme de Silph Co") - "un passage en infiltration (eviter des patrouilles
+// plutot que combattre)". Aucune mecanique de furtivite scriptable n'existe dans ce moteur de
+// script d'evenements (pas d'equivalent d'un systeme de detection/patrouille en dehors du
+// combat de dresseur classique) sans nouveau code moteur, hors perimetre de ce chantier -
+// implemente ici comme un beat de texte qui installe la tension annoncee (alarme, urgence)
+// immediatement avant le combat de Mira Voss, plutot que d'inventer un mini-jeu non supporte.
 SaffronCity_SilphCo_EventScript_MiraVoss::
 	lock
 	faceplayer
 	goto_if_set FLAG_MIRA_VOSS_VAINCUE, SaffronCity_SilphCo_MiraVoss_ApresVaincue
+	msgbox HeartSoul_Text_PisteBlaine, MSGBOX_DEFAULT
+	setflag FLAG_PISTE_BLAINE_VUE
+	msgbox HeartSoul_Text_AlarmeSilphCo, MSGBOX_DEFAULT
+	setflag FLAG_ALARME_SILPHCO_VUE
 	msgbox HeartSoul_Text_MiraVossIntro, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_MiraVossRecit, MSGBOX_DEFAULT
 	trainerbattle_single TRAINER_MIRA_VOSS_HNS, HeartSoul_Text_MiraVossSeen, HeartSoul_Text_MiraVossBeaten, SaffronCity_SilphCo_EventScript_MiraVossVictoire
@@ -489,6 +544,24 @@ SaffronCity_SilphCo_MiraVoss_ApresVaincue:
 	closemessage
 	release
 	end
+
+HeartSoul_Text_PisteBlaine:
+	.string "Un registre de détention, sur\n"
+	.string "un bureau abandonné à la hâte.\l"
+	.string "Le nom de BLAINE y figure,\l"
+	.string "avec un lieu de transfert :\l"
+	.string "les îles Écume.\p"
+	.string "Trop tard pour que ça serve\n"
+	.string "d'indice. Tu l'as déjà retrouvé\l"
+	.string "là-bas.$"
+
+HeartSoul_Text_AlarmeSilphCo:
+	.string "Une alarme se déclenche quelque\n"
+	.string "part dans les étages supérieurs.\l"
+	.string "Des bottes résonnent dans les\l"
+	.string "couloirs voisins.\p"
+	.string "Pas le temps d'attendre que ça\n"
+	.string "se calme.$"
 
 HeartSoul_Text_MiraVossIntro:
 	.string "MIRA VOSS: J'ai dirigé un\n"

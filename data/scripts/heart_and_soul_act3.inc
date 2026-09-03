@@ -28,6 +28,7 @@ ViridianForest_EventScript_LyrePostBattle::
 	waitmovement 0
 	msgbox HeartSoul_Text_LyreAfterBattle, MSGBOX_DEFAULT
 	setflag FLAG_LYRE_VAINCUE
+	setflag FLAG_CHAMPION_ALLIE_SAUVE
 	closemessage
 	release
 	end
@@ -49,7 +50,13 @@ HeartSoul_Text_LyreAfterBattle:
 	.string "LYRE: Je reste convaincue que\n"
 	.string "cette forêt méritait d'être\l"
 	.string "protégée. Sur les moyens, par\l"
-	.string "contre… je commence à douter.$"
+	.string "contre… je commence à douter.\p"
+	.string "…Attends. Une info vient de\n"
+	.string "circuler : PIERRE, capturé près\l"
+	.string "d'ici il y a quelques heures.\p"
+	.string "Mes hommes ne le savaient pas\n"
+	.string "encore. Je le fais relâcher tout\l"
+	.string "de suite, sans condition.$"
 
 // Deuxieme lieutenante scriptee : Selen (Mont Selenite / MtMoon_Outside_hns). Meme methode
 // que Lyre : nouvel objet-evenement (aucun PNJ existant a reflavorer sur cette carte -
@@ -93,7 +100,11 @@ HeartSoul_Text_SelenBeaten:
 HeartSoul_Text_SelenAfterBattle:
 	.string "SELEN: Un signe peut en cacher\n"
 	.string "un autre. Peut-être que je n'ai\l"
-	.string "pas lu le bon.$"
+	.string "pas lu le bon.\p"
+	.string "Les CLEFAIRY dansent encore\n"
+	.string "certaines nuits, autour des\l"
+	.string "cratères. Ça, au moins, ce\l"
+	.string "n'est pas une légende.$"
 
 // Troisieme lieutenant scripte : Terrence (Route de la Centrale / RockTunnel_1F_hns), seul
 // des trois a porter la mecanique de conviction a 3 choix (histoire.md section 3
@@ -135,6 +146,8 @@ RockTunnel_EventScript_Terrence::
 	goto_if_set FLAG_TERRENCE_COMBAT_ALLEGE, RockTunnel_Terrence_ApresAllege
 	goto_if_set FLAG_TERRENCE_VAINCU, RockTunnel_Terrence_ApresVaincu
 	goto_if_ne VAR_PERSUASION_TERRENCE, 0, RockTunnel_Terrence_Evaluate
+	setflag FLAG_EBOULEMENT_ROCKTUNNEL_VU
+	msgbox HeartSoul_Text_EboulementRockTunnel, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_TerrenceIntro, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_TerrenceQ1, MSGBOX_DEFAULT
 RockTunnel_Terrence_Q1Choice:
@@ -279,6 +292,18 @@ RockTunnel_Terrence_ApresVaincu:
 	closemessage
 	release
 	end
+
+// Evenement 11 (histoire.md section 11, Acte III) : humanise Terrence avant la sequence de
+// conviction, sans changer son bareme de points.
+HeartSoul_Text_EboulementRockTunnel:
+	.string "Un grondement secoue la\n"
+	.string "galerie. Un pan de plafond\l"
+	.string "s'effondre entre vous deux.\p"
+	.string "Sans un mot, TERRENCE t'aide a\n"
+	.string "degager le passage face a un\l"
+	.string "GRAVELER devenu incontrolable.\p"
+	.string "Une fois le calme revenu, il\n"
+	.string "reprend son air mefiant.$"
 
 HeartSoul_Text_TerrenceIntro:
 	.string "TERRENCE: Encore un pas et je\n"

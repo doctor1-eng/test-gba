@@ -1267,7 +1267,13 @@
 #define FLAG_HIDE_LILA_ASPIRANTE                     (HNS_EXTENDED_CONTENT_START + 363)
 #define FLAG_LILA_ASPIRANTE_RENCONTRE                (HNS_EXTENDED_CONTENT_START + 364)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  365
+// Suite histoire.md section 11 (evenements 15, 16, 18 - le 17 reste sans flag dedie, voir
+// commentaire plus haut).
+#define FLAG_PISTE_BLAINE_VUE                        (HNS_EXTENDED_CONTENT_START + 365)
+#define FLAG_ALARME_SILPHCO_VUE                      (HNS_EXTENDED_CONTENT_START + 366)
+#define FLAG_RETOUR_ALLIES_VU                        (HNS_EXTENDED_CONTENT_START + 367)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  368
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

@@ -13,6 +13,23 @@ HeartSoul_EventScript_CinnabarAttack::
 	setflag FLAG_BLAINE_DISPARU
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox HeartSoul_Text_BlaineDisparu, MSGBOX_DEFAULT
+	msgbox HeartSoul_Text_SauvetageIntro, MSGBOX_DEFAULT
+HeartSoul_CinnabarAttack_SauvetageChoice:
+	dynmultipush HeartSoul_Text_SauvetageCentre, 0
+	dynmultipush HeartSoul_Text_SauvetageArene, 1
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, HeartSoul_CinnabarAttack_SauvetageCentre
+	case 1, HeartSoul_CinnabarAttack_SauvetageArene
+	goto HeartSoul_CinnabarAttack_SauvetageChoice
+HeartSoul_CinnabarAttack_SauvetageCentre:
+	addvar VAR_REPUTATION, 1
+	msgbox HeartSoul_Text_SauvetageCentreResultat, MSGBOX_DEFAULT
+	goto HeartSoul_CinnabarAttack_CarnetGrunt
+HeartSoul_CinnabarAttack_SauvetageArene:
+	msgbox HeartSoul_Text_SauvetageAreneResultat, MSGBOX_DEFAULT
+HeartSoul_CinnabarAttack_CarnetGrunt:
+	msgbox HeartSoul_Text_CarnetGrunt, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_RefugiesIntro, MSGBOX_DEFAULT
 HeartSoul_CinnabarAttack_RefugiesChoice:
 	dynmultipush HeartSoul_Text_RefugiesGuider, 0
@@ -35,8 +52,27 @@ HeartSoul_CinnabarAttack_Verrouillage:
 	setflag FLAG_CINNABAR_VERROUILLEE
 	setflag FLAG_ACTE_1_TERMINE
 	setflag FLAG_OBJET_PERDU_TROUVE
+	msgbox HeartSoul_Text_PokemonBlesseIntro, MSGBOX_DEFAULT
+HeartSoul_CinnabarAttack_PokemonBlesseChoice:
+	dynmultipush HeartSoul_Text_PokemonBlesseSoigner, 0
+	dynmultipush HeartSoul_Text_PokemonBlesseIgnorer, 1
+	dynmultistack 0, 0, TRUE, 8, FALSE, 0, 0
+	switch VAR_RESULT
+	case 0, HeartSoul_CinnabarAttack_PokemonBlesseSoigner
+	case 1, HeartSoul_CinnabarAttack_PokemonBlesseIgnorer
+	goto HeartSoul_CinnabarAttack_PokemonBlesseChoice
+HeartSoul_CinnabarAttack_PokemonBlesseSoigner:
+	setflag FLAG_POKEMON_BLESSE_SAUVE
+	addvar VAR_REPUTATION, 1
+	msgbox HeartSoul_Text_PokemonBlesseSoignerResultat, MSGBOX_DEFAULT
+	goto HeartSoul_CinnabarAttack_ObjetTrouve
+HeartSoul_CinnabarAttack_PokemonBlesseIgnorer:
+	msgbox HeartSoul_Text_PokemonBlesseIgnorerResultat, MSGBOX_DEFAULT
+HeartSoul_CinnabarAttack_ObjetTrouve:
 	msgbox HeartSoul_Text_ObjetTrouve, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_FuiteRoute21, MSGBOX_DEFAULT
+	setflag FLAG_MARIN_ROUTE21_RENCONTRE
+	msgbox HeartSoul_Text_TempeteRoute21, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
 	warp MAP_PALLET_TOWN_HNS, 6, 8
@@ -56,6 +92,43 @@ HeartSoul_Text_BlaineDisparu:
 	.string "disparu.\p"
 	.string "Capture ? En fuite ? Impossible\n"
 	.string "de le savoir pour l'instant.$"
+
+// Evenement 1 (histoire.md section 11, Acte I) : choix rapide, sans jugement moral appuye,
+// entre securiser le Centre Pokemon (soigner les blesses) ou l'Arene (proteger son propre
+// titre). +1 reputation si Centre Pokemon, 0 si Arene - barème documente dans histoire.md.
+HeartSoul_Text_SauvetageIntro:
+	.string "Dans le chaos, deux batiments\n"
+	.string "ont encore besoin de toi avant\l"
+	.string "de fuir : le CENTRE POKEMON, ou\l"
+	.string "ta propre ARENE.$"
+
+HeartSoul_Text_SauvetageCentre:
+	.string "Securiser le CENTRE POKEMON$"
+
+HeartSoul_Text_SauvetageArene:
+	.string "Securiser ton ARENE$"
+
+HeartSoul_Text_SauvetageCentreResultat:
+	.string "Tu aides a evacuer les blesses du\n"
+	.string "CENTRE POKEMON avant de\l"
+	.string "repartir en courant.$"
+
+HeartSoul_Text_SauvetageAreneResultat:
+	.string "Tu recuperes en vitesse ce qui\n"
+	.string "prouve ton titre de Championne,\l"
+	.string "avant de repartir en courant.$"
+
+// Evenement 2 (histoire.md section 11, Acte I) : objet de lore, prepare la quete
+// d'interception radio de Carmin-sur-Mer (HeartSoul_EventScript_InterceptionRadio,
+// heart_and_soul_act2.inc) - purement narratif, aucun flag necessaire.
+HeartSoul_Text_CarnetGrunt:
+	.string "Un GRUNT de la TEAM ROCKET te\n"
+	.string "double en courant et laisse\l"
+	.string "tomber un carnet couvert de\l"
+	.string "codes radio griffonnes.\p"
+	.string "Tu le ramasses sans vraiment\n"
+	.string "savoir a quoi il sert. Pas le\l"
+	.string "moment de t'attarder.$"
 
 HeartSoul_Text_RefugiesIntro:
 	.string "En te frayant un chemin vers le\n"
@@ -98,6 +171,43 @@ HeartSoul_Text_ObjetTrouve:
 	.string "Tu le glisses dans ta poche. Il\n"
 	.string "faudra le rendre, si tu croises\l"
 	.string "quelqu'un qui le reconnait.$"
+
+// Evenement 3 (histoire.md section 11, Acte I) : compagnon informel, paie en Acte V (mention
+// ajoutee dans HeartSoul_EventScript_BlaineRetrouve, heart_and_soul_act4.inc, si
+// FLAG_POKEMON_BLESSE_SAUVE est pose). Pas un membre d'equipe (aucun givemon), purement
+// narratif + flag de suivi.
+HeartSoul_Text_PokemonBlesseIntro:
+	.string "Un POKEMON sauvage erre pres du\n"
+	.string "port, blesse par les combats.\p"
+	.string "Tu as le temps de l'aider, ou de\n"
+	.string "continuer ta course.$"
+
+HeartSoul_Text_PokemonBlesseSoigner:
+	.string "L'aider$"
+
+HeartSoul_Text_PokemonBlesseIgnorer:
+	.string "Continuer ta course$"
+
+HeartSoul_Text_PokemonBlesseSoignerResultat:
+	.string "Tu prends un instant pour le\n"
+	.string "soigner. Il te suit, mefiant,\l"
+	.string "jusqu'au port.$"
+
+HeartSoul_Text_PokemonBlesseIgnorerResultat:
+	.string "Pas le temps. Tu le laisses\n"
+	.string "derriere toi.$"
+
+// Evenement 4 (histoire.md section 11, Acte II) : marin secondaire, reapparait en Acte V
+// pour le retour par mer - purement narratif ici, FLAG_MARIN_ROUTE21_RENCONTRE pose pour un
+// eventuel rappel ulterieur.
+HeartSoul_Text_TempeteRoute21:
+	.string "La traversee est interrompue par\n"
+	.string "une tempete soudaine.\p"
+	.string "Un marin te hurle de te\n"
+	.string "cramponner et force l'accostage\l"
+	.string "en urgence sur le continent.\p"
+	.string "Tu ne connais meme pas son nom.\n"
+	.string "Tu ne l'oublieras pas.$"
 
 // Blocage physique du retour a Cinnabar (FLAG_CINNABAR_VERROUILLEE). Declenche depuis
 // CinnabarIsland_hns_MapScripts (data/maps/CinnabarIsland_hns/scripts.inc), via
