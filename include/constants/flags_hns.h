@@ -1281,7 +1281,15 @@
 #define FLAG_FINANCEMENT_ROCKET_EXPOSE               (HNS_EXTENDED_CONTENT_START + 369)
 #define FLAG_DOSSIER_MIRA_VU                         (HNS_EXTENDED_CONTENT_START + 370)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  371
+// Cutscene d'ouverture Acte I (LOCALID_CINNABAR_GRUNT_INTRO, MAP_CINNABAR_ISLAND_HNS) : flag
+// de visibilite du Grunt visible pendant la choregraphie avec Blaine, meme convention que
+// FLAG_HIDE_CINNABAR_BLAINE (flag CLEAR = visible, flag SET = cache). Pose explicitement au
+// debut du script pour le cacher par defaut (l'objet n'est de toute facon visible qu'apres le
+// warp sur cette carte), leve pendant la cutscene, repose apres le combat (le Grunt disparait
+// definitivement).
+#define FLAG_HIDE_CINNABAR_GRUNT_INTRO                (HNS_EXTENDED_CONTENT_START + 371)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  372
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

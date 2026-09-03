@@ -3,41 +3,65 @@
 // HeartSoul_EventScript_ChooseTeam_Feu (data/scripts/heart_and_soul_intro.inc), une fois
 // l'equipe de depart donnee. Se termine par "end", pas "return" : appele par goto, pas call.
 //
-// Decision d'adaptation documentee (2026-09-03, a partir du template fourni
-// docs/heart_and_soul/scripts/cinnabar_acte1.pory, version enrichie avec un Grunt qui entre
-// dans le champ et une choregraphie de mouvement Blaine/Grunt/joueur) : cette cutscene entiere
-// se declenche depuis map_script_2 sur CinnabarIsland_PokemonCenter_hns (voir
-// data/maps/CinnabarIsland_PokemonCenter_hns/scripts.inc, VAR_TYPE_CHOISI) - le joueur est donc
-// physiquement A L'INTERIEUR du Centre Pokemon a ce moment, sur une carte differente de
-// CinnabarIsland_hns ou vivent LOCALID_CINNABAR_BLAINE et tout nouvel object_event de Grunt.
-// Une choregraphie applymovement/waitmovement viserait donc un object event absent de la carte
-// chargee - invisible pour le joueur au mieux, comportement indefini au pire. Plutot que de
-// deplacer toute la cutscene sur la carte exterieure (chantier de repositionnement bien plus
-// large, hors perimetre d'un ajout de cutscene), les beats de mouvement du template (le Grunt
-// fait irruption, Blaine reagit et s'interpose) sont traduits en texte narre, meme convention
-// que le reste de cette cutscene deja 100% textuelle. En revanche, le combat force de l'Etape 2
-// du template (TRAINER_ROCKET_GRUNT_CINNABAR_HNS, obstacle mineur avant de pouvoir continuer)
-// EST implemente reellement : trainerbattle_single ne necessite aucun object_event sur la carte
-// courante (LOCALID_NONE cote macro, asm/macros/event.inc) - un combat scripte sans PNJ visible
-// est un motif deja utilise nativement dans ce fork (ex. trainerbattle_earlyrival du rival dans
-// PalletTown_ProfessorOaksLab_Frlg). Forme a 3 arguments (pas de victory script) : le combat
-// termine, l'execution continue simplement a la ligne suivante - inutile d'ajouter un
-// sous-script de victoire pour un simple enchainement narratif.
+// Revision 2026-09-03 (2e passe) : la 1ere version de cette cutscene enrichie (Grunt + combat)
+// gardait tout en texte narre car le declenchement se fait depuis
+// CinnabarIsland_PokemonCenter_hns (map_script_2 sur VAR_TYPE_CHOISI) - le joueur y est donc
+// physiquement a l'interieur du Centre, sur une autre carte que LOCALID_CINNABAR_BLAINE.
+// Retour utilisateur explicite : la choregraphie doit etre visible, pas seulement racontee.
+// Solution retenue : un warp vers CinnabarIsland_hns est insere en tout debut de cutscene
+// (juste apres le premier message, toujours sous lockall - meme motif deja utilise sans
+// probleme par le warp final de ce meme script vers Pallet Town), avant toute autre mise en
+// scene. A partir de la, Blaine (deja present sur cette carte) et un nouvel object_event Grunt
+// (LOCALID_CINNABAR_GRUNT_INTRO, cache par defaut via FLAG_HIDE_CINNABAR_GRUNT_INTRO, revele au
+// bon moment) sont tous les deux reellement sur l'ecran, et la choregraphie utilise de vrais
+// applymovement/waitmovement. Position de warp (37,31) et position de depart du Grunt (41,28)
+// verifiees par decodage de data/layouts/CinnabarIsland_hns/map.bin (collision nulle sur les
+// deux cases et sur tout le chemin de marche utilise ci-dessous).
+//
+// Le Grunt visible pendant la choregraphie EST le meme qui affronte ensuite le joueur (pas un
+// second Grunt distinct) : narrativement plus simple (Blaine gagne du temps face a CE Grunt
+// precis, qui se retourne ensuite contre le joueur une fois Blaine hors-jeu) et techniquement
+// plus simple (un seul object_event, un seul trainer). trainerbattle_single est appele
+// directement depuis ce script verrouille (pas depuis le script d'interaction de l'objet,
+// inutilise ici) : verifie au prealable que ce macro ne necessite aucun object_event pour
+// fonctionner (LOCALID_NONE cote macro, asm/macros/event.inc) - mais ici l'objet est bel et
+// bien present et visible, donc le combat demarre avec le bon sprite a l'ecran. Forme a 3
+// arguments (pas de victory script) : le combat termine, l'execution continue simplement a la
+// ligne suivante.
 HeartSoul_EventScript_CinnabarAttack::
 	lockall
 	setflag FLAG_ATTAQUE_CINNABAR_LANCEE
+	setflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
 	msgbox HeartSoul_Text_AttaqueDebut, MSGBOX_DEFAULT
+	closemessage
+	fadescreenswapbuffers FADE_TO_BLACK
+	warp MAP_CINNABAR_ISLAND_HNS, 37, 31
+	waitstate
+	clearflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
+	fadescreenswapbuffers FADE_FROM_BLACK
+	applymovement LOCALID_CINNABAR_GRUNT_INTRO, HeartSoul_Movement_GruntEntree
+	waitmovement 0
+	applymovement LOCALID_CINNABAR_BLAINE, HeartSoul_Movement_BlaineReagit
+	waitmovement 0
+	msgbox HeartSoul_Text_BlaineReagit, MSGBOX_DEFAULT
+	applymovement LOCALID_CINNABAR_BLAINE, HeartSoul_Movement_BlaineSeplaceDevant
+	waitmovement 0
+	msgbox HeartSoul_Text_BlaineSeplaceDevant, MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, HeartSoul_Movement_JoueurRecule
+	waitmovement 0
+	msgbox HeartSoul_Text_EclatCombat, MSGBOX_DEFAULT
 	fadescreenswapbuffers FADE_TO_BLACK
 	setflag FLAG_HIDE_CINNABAR_BLAINE
 	removeobject LOCALID_CINNABAR_BLAINE
 	setflag FLAG_BLAINE_DISPARU
 	fadescreenswapbuffers FADE_FROM_BLACK
-	msgbox HeartSoul_Text_GruntFaitIrruption, MSGBOX_DEFAULT
-	msgbox HeartSoul_Text_BlaineSeplaceDevant, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_BlaineDisparu, MSGBOX_DEFAULT
-	msgbox HeartSoul_Text_GruntBloqueLePassage, MSGBOX_DEFAULT
+	applymovement LOCALID_CINNABAR_GRUNT_INTRO, HeartSoul_Movement_GruntSeRetourne
+	waitmovement 0
 	trainerbattle_single TRAINER_ROCKET_GRUNT_CINNABAR_HNS, HeartSoul_Text_GruntSeen, HeartSoul_Text_GruntBeaten
 	msgbox HeartSoul_Text_GruntApresBattle, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
+	removeobject LOCALID_CINNABAR_GRUNT_INTRO
 	msgbox HeartSoul_Text_SauvetageIntro, MSGBOX_DEFAULT
 HeartSoul_CinnabarAttack_SauvetageChoice:
 	dynmultipush HeartSoul_Text_SauvetageCentre, 0
@@ -104,6 +128,44 @@ HeartSoul_CinnabarAttack_ObjetTrouve:
 	waitstate
 	end
 
+// ---------------------------------------------------------------------------------------
+// Mouvements de la choregraphie d'ouverture (Grunt/Blaine/joueur sur CinnabarIsland_hns).
+// Meme convention que le reste du fork : label + actions de mouvement + step_end
+// (data/scripts/movement.inc, asm/macros/movement.inc).
+// ---------------------------------------------------------------------------------------
+HeartSoul_Movement_GruntEntree:
+	walk_left
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+HeartSoul_Movement_BlaineReagit:
+	emote_exclamation_mark
+	face_right
+	step_end
+
+HeartSoul_Movement_BlaineSeplaceDevant:
+	walk_down
+	walk_down
+	face_down
+	step_end
+
+HeartSoul_Movement_JoueurRecule:
+	walk_right
+	face_left
+	step_end
+
+HeartSoul_Movement_GruntSeRetourne:
+	face_down
+	step_end
+
+// Placeholder requis par le format object_event (script jamais reellement declenche : l'objet
+// est verrouille sous lockall pendant toute la fenetre ou il est visible, puis retire par
+// removeobject des la fin du combat).
+CinnabarIsland_EventScript_GruntIntroUnused::
+	end
+
 HeartSoul_Text_AttaqueDebut:
 	.string "Un grondement secoue Cinnabar.\p"
 	.string "Des silhouettes en uniforme noir\n"
@@ -112,11 +174,8 @@ HeartSoul_Text_AttaqueDebut:
 	.string "Les liaisons avec le reste de\n"
 	.string "Kanto viennent d'etre coupees.$"
 
-HeartSoul_Text_GruntFaitIrruption:
-	.string "Un GRUNT de la TEAM ROCKET fait\n"
-	.string "irruption, droit sur toi.\p"
-	.string "BLAINE reagit avant meme que tu\n"
-	.string "aies le temps de bouger.$"
+HeartSoul_Text_BlaineReagit:
+	.string "BLAINE: Rocket… deja ?!$"
 
 HeartSoul_Text_BlaineSeplaceDevant:
 	.string "BLAINE se place entre le GRUNT\n"
@@ -124,21 +183,19 @@ HeartSoul_Text_BlaineSeplaceDevant:
 	.string "BLAINE: Pars maintenant, je le\n"
 	.string "retiens !$"
 
-HeartSoul_Text_BlaineDisparu:
+HeartSoul_Text_EclatCombat:
 	.string "Un eclair jaillit derriere toi.\n"
 	.string "Tu ne vois pas l'issue du\l"
-	.string "combat.\p"
-	.string "... Le silence retombe. BLAINE\n"
-	.string "a disparu dans la fumee.$"
+	.string "combat.$"
 
-// Evenement 0 (histoire.md section 11, Acte I) : obstacle mineur, pas un boss - un second
-// GRUNT force le passage juste apres la disparition de Blaine, avant que le joueur puisse
-// continuer vers les refugies du Mont Cinnabar. TRAINER_ROCKET_GRUNT_CINNABAR_HNS (niveau 34,
-// convention plate deja utilisee partout dans ce projet).
-HeartSoul_Text_GruntBloqueLePassage:
-	.string "Un autre GRUNT te bloque le\n"
-	.string "passage.$"
+HeartSoul_Text_BlaineDisparu:
+	.string "… Le silence retombe. BLAINE a\n"
+	.string "disparu dans la fumee.$"
 
+// Evenement 0 (histoire.md section 11, Acte I) : obstacle mineur, pas un boss - le GRUNT que
+// Blaine a retenu se retourne desormais contre le joueur, avant que celui-ci puisse continuer
+// vers les refugies du Mont Cinnabar. TRAINER_ROCKET_GRUNT_CINNABAR_HNS (niveau 34, convention
+// plate deja utilisee partout dans ce projet).
 HeartSoul_Text_GruntSeen:
 	.string "GRUNT: Tiens, une Championne.\n"
 	.string "Ca tombe bien.$"
@@ -148,8 +205,9 @@ HeartSoul_Text_GruntBeaten:
 	.string "Pas cette fois.$"
 
 HeartSoul_Text_GruntApresBattle:
-	.string "Le passage vers le MONT\n"
-	.string "CINNABAR est libre.$"
+	.string "Le GRUNT bat en retraite. Le\n"
+	.string "passage vers le MONT CINNABAR\l"
+	.string "est libre.$"
 
 // Evenement 1 (histoire.md section 11, Acte I) : choix rapide, sans jugement moral appuye,
 // entre securiser le Centre Pokemon (soigner les blesses) ou l'Arene (proteger son propre

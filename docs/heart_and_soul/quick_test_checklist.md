@@ -25,8 +25,10 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 
 ## 3. Attaque de Cinnabar (Acte I)
 
-- [ ] Narration de l'attaque, un Grunt fait irruption, Blaine s'interpose puis disparaît (texte uniquement, pas de sprite visible à ce moment — le joueur est encore dans le Centre Pokémon).
-- [ ] **Nouveau** : juste après, un second Grunt bloque le passage — combat forcé (pas de choix, pas de fuite possible), équipe niveau ~34. Après la victoire, le texte confirme que le passage vers le Mont Cinnabar est libre.
+- [ ] **⚠️ Point de test prioritaire (nouveau, à vérifier en premier)** : après le premier message d'alarme, un fondu au noir doit vous téléporter automatiquement sur la carte extérieure de Cinnabar (près de Blaine), **pas** rester dans le Centre Pokémon. Si l'écran reste noir, se bloque, ou si le jeu plante à cet instant, c'est le point exact à signaler.
+- [ ] Une fois sur la carte extérieure : un Grunt entre visiblement en marchant vers Blaine, Blaine réagit (point d'exclamation) puis marche pour se placer entre le Grunt et vous, vous reculez d'une case — tout ceci doit être **visible à l'écran**, pas seulement raconté en texte.
+- [ ] Après le flash/l'impact : fondu au noir, Blaine disparaît (son sprite n'est plus là au fondu suivant).
+- [ ] Le même Grunt se retourne alors vers vous et lance un **combat forcé** (pas de choix, pas de fuite possible), équipe niveau ~34. Après la victoire, le texte confirme que le passage vers le Mont Cinnabar est libre et le Grunt disparaît.
 - [ ] Choix réfugiés (guider / cacher) : les deux options fonctionnent, message de résultat cohérent.
 - [ ] Message de fuite → fondu au noir → **téléportation automatique à Pallet Town**, sans avoir à marcher ni utiliser un CS Fly.
 - [ ] Essayer de retourner vers Cinnabar (Route 21, vers le sud) : le jeu doit repousser le joueur avec un message, pas de possibilité d'entrer.

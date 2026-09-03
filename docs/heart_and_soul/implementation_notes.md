@@ -1697,3 +1697,66 @@ CinnabarAttack` confirmé dans `pokehns.map`. ROM 31725028 octets, 94.55% ROM, 9
 78.37% IWRAM.
 
 **Non testé en jeu.** Checklist mise à jour (`quick_test_checklist.md` section 3).
+
+## Cutscene d'ouverture (Acte I), 2e passe — choregraphie réellement visible
+
+Retour utilisateur explicite sur le chantier précédent : la choregraphie Grunt/Blaine devait
+être **visible**, pas seulement racontée en texte. Le blocage technique (le joueur est à
+l'intérieur de `CinnabarIsland_PokemonCenter_hns` quand la cutscene se déclenche, sur une
+carte différente de `CinnabarIsland_hns` où vit Blaine) est résolu en insérant un warp vers la
+carte extérieure en tout début de cutscene, plutôt qu'en abandonnant la mise en scène.
+
+**Nouvelle séquence** : `lockall` → message d'alarme → `closemessage` → fondu au noir → `warp
+MAP_CINNABAR_ISLAND_HNS, 37, 31` → `waitstate` (position vérifiée par décodage de
+`map.bin`, collision nulle sur la case et sur tout le chemin de marche utilisé ensuite) →
+fondu depuis le noir → choregraphie réelle via `applymovement`/`waitmovement` (le Grunt entre
+en marchant depuis (41,28), Blaine réagit avec `emote_exclamation_mark` et s'interpose en
+marchant vers le joueur, le joueur recule d'une case) → flash/impact → Blaine disparaît
+(`removeobject`, identique à avant) → le **même** Grunt se retourne et déclenche le combat
+forcé déjà implémenté lors de la 1ère passe (`trainerbattle_single`
+`TRAINER_ROCKET_GRUNT_CINNABAR_HNS`, inchangé) → le Grunt est retiré définitivement
+(`removeobject`) → la suite de la cutscene (choix réfugiés, Pokémon blessé, etc.) continue
+exactement comme avant, désormais sur la carte extérieure au lieu de l'intérieur du Centre.
+
+**Décision documentée** : un seul Grunt visible plutôt que deux (un pour la choregraphie avec
+Blaine, un autre pour le combat) - narrativement plus cohérent (c'est le même Grunt que Blaine
+retient qui se retourne ensuite contre le joueur) et techniquement plus simple (un seul
+`object_event`, un seul trainer, pas de doublon à synchroniser).
+
+**Nouveau contenu technique** :
+- `LOCALID_CINNABAR_GRUNT_INTRO` (13) ajouté au bloc `MAP_CINNABAR_ISLAND_HNS` de
+  `map_event_ids.h` (local id positionnel, 13e entrée de `object_events` sur cette carte -
+  vérifié que les 12 entrées existantes n'utilisent pas ce numéro).
+- `FLAG_HIDE_CINNABAR_GRUNT_INTRO` (`flags_hns.h` +371, `HNS_EXTENDED_CONTENT_COUNT` 371→372) :
+  même convention que `FLAG_HIDE_CINNABAR_BLAINE` (flag clear = visible, flag set = caché).
+  Posé explicitement en tout début de script (défensif : l'objet n'est de toute façon visible
+  qu'après le warp), levé pendant la choregraphie, reposé après le combat.
+- Nouvel `object_event` sur `data/maps/CinnabarIsland_hns/map.json` : position de départ
+  (41,28), `OBJ_EVENT_GFX_ROCKET_M_HNS` (sprite déjà utilisé ailleurs dans ce fork, pas
+  inventé), script placeholder `CinnabarIsland_EventScript_GruntIntroUnused` (jamais réellement
+  déclenché : l'objet est sous `lockall` pendant toute sa fenêtre de visibilité, puis retiré).
+- 5 blocs `movement` natifs (`HeartSoul_Movement_GruntEntree/BlaineReagit/
+  BlaineSeplaceDevant/JoueurRecule/GruntSeRetourne`), macros vérifiées avant usage
+  (`walk_left`, `face_left`, `face_right`, `walk_down`, `face_down`, `walk_right`,
+  `emote_exclamation_mark`, `step_end` - toutes confirmées dans `asm/macros/movement.inc` et
+  `data/scripts/movement.inc`).
+
+**Limitation disclosée, plus significative que d'habitude** : `warp` suivi de `waitstate` puis
+d'autres commandes de script (au lieu d'un simple `end` juste après, seul motif déjà présent
+dans ce fork) n'a pas de précédent trouvé dans ce dépôt spécifique - recherché explicitement,
+aucune occurrence de `warp`+`applymovement` dans le même script existant. C'est en revanche un
+motif standard et bien documenté du moteur pokeemerald (`waitstate` bloque jusqu'à ce que la
+transition de carte, chargement des object_events inclus, soit terminée), utilisé couramment
+dans l'écosystème ROM hacking pour des cutscenes multi-cartes. Confiance élevée mais **pas
+vérifiée visuellement** (aucun émulateur disponible dans cet environnement) - c'est le point le
+plus important à tester en priorité sur cette 2e passe, plus que les précédents ajouts de ce
+chantier.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**.
+`HeartSoul_EventScript_CinnabarAttack` et `CinnabarIsland_EventScript_GruntIntroUnused`
+confirmés dans `pokehns.map` (les 5 blocs `movement`, locaux/non `::`, n'apparaissent pas dans
+la table de symboles - normal, même comportement que tous les autres blocs `movement` de ce
+fork). ROM 31725028 octets (taille identique au build précédent - texte réarrangé, pas
+ajouté), 94.55% ROM, 94.47% EWRAM, 78.37% IWRAM.
+
+**Non testé en jeu, priorité de test élevée sur ce point precis.**
