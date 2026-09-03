@@ -22,13 +22,15 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Menu START : entrée « Pokémon » présente (équipe consultable).
 - [ ] Menu START : entrée « Pokénav »/Pokégear présente (carte accessible).
 - [ ] Chaussures de course actives (bouton B pour courir sur la carte).
+- [ ] **Nouveau** : aucun message « {PLAYER} a reçu... » ne s'affiche pendant la remise de ces objets (Poké Balls, CT, cannes à pêche, Bicyclette) — les objets doivent être présents dans le sac silencieusement, sans popup ni fanfare.
 
 ## 3. Attaque de Cinnabar (Acte I)
 
-- [ ] **⚠️ Point de test prioritaire (nouveau, à vérifier en premier)** : après le premier message d'alarme, un fondu au noir doit vous téléporter automatiquement sur la carte extérieure de Cinnabar (près de Blaine), **pas** rester dans le Centre Pokémon. Si l'écran reste noir, se bloque, ou si le jeu plante à cet instant, c'est le point exact à signaler.
-- [ ] Une fois sur la carte extérieure : un Grunt entre visiblement en marchant vers Blaine, Blaine réagit (point d'exclamation) puis marche pour se placer entre le Grunt et vous, vous reculez d'une case — tout ceci doit être **visible à l'écran**, pas seulement raconté en texte.
+- [ ] Après le premier message d'alarme, un fondu au noir doit vous téléporter automatiquement sur la carte extérieure de Cinnabar (près de Blaine), **pas** rester dans le Centre Pokémon.
+- [ ] **⚠️ Point de test prioritaire (corrigé, à vérifier en premier)** : une fois sur la carte extérieure, **le sprite de Blaine doit être visible** (immobile ou en train de regarder autour de lui) juste à côté de vous. Si aucun personnage n'est visible sur la carte, c'est le point exact à signaler.
+- [ ] Toujours sur la carte extérieure : un Grunt Team Rocket (sprite visible) entre en marchant vers Blaine, Blaine réagit (point d'exclamation) puis marche pour se placer entre le Grunt et vous, vous reculez d'une case — tout ceci doit être **visible à l'écran**, pas seulement raconté en texte.
 - [ ] Après le flash/l'impact : fondu au noir, Blaine disparaît (son sprite n'est plus là au fondu suivant).
-- [ ] Le même Grunt se retourne alors vers vous et lance un **combat forcé** (pas de choix, pas de fuite possible), équipe niveau ~34. Après la victoire, le texte confirme que le passage vers le Mont Cinnabar est libre et le Grunt disparaît.
+- [ ] Le même Grunt (sprite visible) se retourne alors vers vous et lance un **combat forcé** (pas de choix, pas de fuite possible), équipe niveau ~34. Après la victoire, le texte confirme que le passage vers le Mont Cinnabar est libre et le sprite du Grunt disparaît.
 - [ ] Choix réfugiés (guider / cacher) : les deux options fonctionnent, message de résultat cohérent.
 - [ ] Message de fuite → fondu au noir → **téléportation automatique à Pallet Town**, sans avoir à marcher ni utiliser un CS Fly.
 - [ ] Essayer de retourner vers Cinnabar (Route 21, vers le sud) : le jeu doit repousser le joueur avec un message, pas de possibilité d'entrer.

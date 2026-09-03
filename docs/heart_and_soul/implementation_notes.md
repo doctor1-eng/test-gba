@@ -1813,3 +1813,53 @@ Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**. Les 3 symbole
 
 **Toujours non testé en jeu** - c'est la correction d'un bug remonté par test réel, donc
 priorité maximale pour la prochaine vérification.
+
+## Cutscene d'ouverture (Acte I), 4e passe — sprites invisibles + suppression des messages d'objets
+
+Retour utilisateur après test réel : « les déplacements sont bons » (donc la correction du
+point d'accroche ON_FRAME_TABLE de la 3e passe fonctionne - la choregraphie se déclenche et
+s'exécute), **mais** « aucun sprite de Blaine ou de Team Rocket ». Deuxième demande dans le
+même message : retirer tous les messages de réception d'objets/CT au tout début du jeu.
+
+**Sprites invisibles - cause identifiée dans le code moteur** (pas une supposition) : le Grunt
+était caché par défaut via `FLAG_HIDE_CINNABAR_GRUNT_INTRO` (`setflag` en tout début de
+`HeartSoul_EventScript_CinnabarAttack`), puis « révélé » via `clearflag` en tête de
+`HeartSoul_EventScript_CinnabarAttackPart2`. Lecture de `TrySpawnObjectEvents`
+(`src/event_object_movement.c`) : la condition `!FlagGet(template->flagId)` n'est évaluée
+**qu'au moment où l'objet entre dans le champ de la caméra** (chargement de carte, scroll),
+jamais en continu - `clearflag` après coup ne fait donc pas apparaître rétroactivement un objet
+déjà ignoré à ce moment précis. Le Grunt n'a donc jamais été spawné du tout.
+
+Ceci n'explique pas, en toute rigueur, pourquoi Blaine (dont le flag n'est touché nulle part
+avant la choregraphie) n'apparaissait pas non plus - **limitation honnêtement disclosée** :
+aucune certitude absolue sans émulateur, seulement une mitigation de bon sens. Corrigé sur les
+deux fronts :
+- Le Grunt est désormais visible dès le spawn (comme Blaine et tout autre PNJ de ce projet) -
+  le `setflag`/`clearflag` de pré-masquage est retiré. `FLAG_HIDE_CINNABAR_GRUNT_INTRO` reste
+  utilisé plus bas pour le faire disparaître après le combat (`setflag` + `removeobject`, motif
+  déjà éprouvé et fonctionnel avec Blaine - confirmé par le retour utilisateur : Blaine
+  disparaît bien avec ce même mécanisme, donc `removeobject` fonctionne correctement).
+- Un `delay 20` (~1/3 de seconde) ajouté juste après le `lockall` en tête de
+  `HeartSoul_EventScript_CinnabarAttackPart2`, avant le premier `applymovement` - laisse le
+  temps au rendu des `object_events` de se stabiliser après le warp scripté. Mitigation standard
+  pour ce type de problème de timing post-transition, peu coûteuse, mais non prouvée
+  nécessaire faute d'émulateur.
+
+**Suppression des messages d'objets/CT au début** : les 234 appels `giveitem` du choix
+d'équipe de départ (`data/scripts/heart_and_soul_intro.inc`, 13 objets × 18 types) affichaient
+chacun un message « {PLAYER} a reçu... » + fanfare (`giveitem` appelle `STD_OBTAIN_ITEM`).
+Remplacés en bloc par `additem` (macro strictement équivalente côté inventaire -
+`SCR_OP_ADDITEM` direct - mais sans aucun message ni fanfare, vérifié dans
+`asm/macros/event.inc`). Les objets sont toujours donnés normalement (Poké Balls, CT de
+capacités de terrain, cannes à pêche, Bicyclette) ; seuls les popups de réception disparaissent.
+Remplacement fait par un `sed` ciblé sur les lignes `giveitem` du fichier, vérifié après coup
+(0 `giveitem` restant, 234 `additem`).
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**. Les 3 symboles de la cutscene
+confirmés dans `pokehns.map`. ROM 31723444 octets (légèrement plus petite qu'avant - les 234
+messages de réception supprimés réduisent le nombre d'appels `callstd`), 94.54% ROM, 94.47%
+EWRAM, 78.37% IWRAM.
+
+**Toujours non testé en jeu.** Priorité de test : confirmer que Blaine et le Grunt sont
+maintenant visibles pendant la choregraphie, et que le début de partie ne montre plus aucun
+message de réception d'objet.

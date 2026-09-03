@@ -38,7 +38,6 @@
 HeartSoul_EventScript_CinnabarAttack::
 	lockall
 	setflag FLAG_ATTAQUE_CINNABAR_LANCEE
-	setflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
 	msgbox HeartSoul_Text_AttaqueDebut, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -67,9 +66,24 @@ HeartSoul_CinnabarAttackPart2Check_Skip:
 // macro, asm/macros/event.inc) - mais ici l'objet est bel et bien present et visible, donc le
 // combat demarre avec le bon sprite a l'ecran. Forme a 3 arguments (pas de victory script) : le
 // combat termine, l'execution continue simplement a la ligne suivante.
+//
+// Correction (retour utilisateur : "aucun sprite de Blaine ou de Team Rocket") : le Grunt
+// n'etait plus cache par defaut via FLAG_HIDE_CINNABAR_GRUNT_INTRO puis "clearflag" ici pour le
+// reveler - cause identifiee dans le code moteur (TrySpawnObjectEvents,
+// src/event_object_movement.c : "!FlagGet(template->flagId)" n'est evalue QU'AU MOMENT ou la
+// carte est chargee/l'objet entre dans le champ de la camera, pas en continu ; clearflag apres
+// coup ne fait donc pas apparaitre retroactivement un objet deja ignore a ce moment-la).
+// Corrige en laissant le Grunt visible des le depart (flag jamais pose avant ce point), meme
+// convention que Blaine et tous les autres PNJ de ce projet - FLAG_HIDE_CINNABAR_GRUNT_INTRO
+// reste utilise plus bas pour le faire disparaitre apres le combat (setflag + removeobject,
+// motif deja eprouve avec Blaine). Un court delay est egalement ajoute avant le premier
+// applymovement : par prudence, le temps que le rendu des object_events se stabilise
+// completement apres un warp scripte (aucune preuve definitive que cela ait contribue au bug
+// signale - Blaine n'a jamais eu son flag touche par ce chantier - mais mitigation standard,
+// peu couteuse, pour ce type de probleme de timing juste apres une transition de carte).
 HeartSoul_EventScript_CinnabarAttackPart2::
 	lockall
-	clearflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
+	delay 20
 	applymovement LOCALID_CINNABAR_GRUNT_INTRO, HeartSoul_Movement_GruntEntree
 	waitmovement 0
 	applymovement LOCALID_CINNABAR_BLAINE, HeartSoul_Movement_BlaineReagit
