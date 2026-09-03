@@ -115,7 +115,6 @@ HeartSoul_EventScript_CinnabarAttackPart2::
 	msgbox HeartSoul_Text_BlaineSeplaceDevant, MSGBOX_DEFAULT
 	applymovement LOCALID_PLAYER, HeartSoul_Movement_JoueurRecule
 	waitmovement 0
-	msgbox HeartSoul_Text_EclatCombat, MSGBOX_DEFAULT
 	playse SE_THUNDER
 	fadescreenswapbuffers FADE_TO_WHITE
 	setflag FLAG_HIDE_CINNABAR_BLAINE
@@ -124,10 +123,27 @@ HeartSoul_EventScript_CinnabarAttackPart2::
 	setflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
 	removeobject LOCALID_CINNABAR_GRUNT_INTRO
 	fadescreenswapbuffers FADE_FROM_WHITE
+	msgbox HeartSoul_Text_EclatCombat, MSGBOX_DEFAULT
 	msgbox HeartSoul_Text_BlaineDisparu, MSGBOX_DEFAULT
 	applymovement LOCALID_CINNABAR_GRUNT2, HeartSoul_Movement_Grunt2Approche
 	waitmovement 0
-	trainerbattle_single TRAINER_ROCKET_GRUNT_CINNABAR_HNS, HeartSoul_Text_GruntSeen, HeartSoul_Text_GruntBeaten
+	trainerbattle_single TRAINER_ROCKET_GRUNT_CINNABAR_HNS, HeartSoul_Text_GruntSeen, HeartSoul_Text_GruntBeaten, HeartSoul_EventScript_CinnabarAttackGrunt2Victoire
+	end
+
+// Retour utilisateur : apres la victoire sur le 2e Grunt, "on ne peut pas reparler au grunt et
+// rien ne se declenche" - la suite du scenario (choix refugies, etc.) ne s'enchainait pas.
+// Cause : trainerbattle_single a 3 arguments (sans script de victoire) utilise TRAINER_BATTLE_
+// SINGLE (asm/macros/event.inc), un type de combat concu pour l'approche normale d'un PNJ
+// (walk-up), pas pour un combat force sans object_event associe (LOCALID_NONE cote macro,
+// comme documente plus haut). Sans objet reellement approchant, ce type ne rend pas la main de
+// facon fiable au script apres la victoire. Meme correction que celle deja appliquee avec
+// succes aux evenements 8/13 de la section 11 (Route3_EventScript_PatrouilleRecon,
+// CeladonCity_EventScript_SubordonneAdmiratif) : forme a 4 arguments (TRAINER_BATTLE_CONTINUE_
+// SCRIPT), qui redirige explicitement vers un script de victoire au lieu de compter sur un
+// retour implicite.
+HeartSoul_EventScript_CinnabarAttackGrunt2Victoire::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
 	msgbox HeartSoul_Text_GruntApresBattle, MSGBOX_DEFAULT
 	setflag FLAG_HIDE_CINNABAR_GRUNT2
 	removeobject LOCALID_CINNABAR_GRUNT2

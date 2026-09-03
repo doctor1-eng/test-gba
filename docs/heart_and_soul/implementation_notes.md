@@ -1975,3 +1975,40 @@ Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**.
 confirmés dans `pokehns.map`. ROM 31723492 octets, 94.54% ROM, 94.47% EWRAM, 78.37% IWRAM.
 
 **Non testé en jeu.**
+
+## Cutscene d'ouverture (Acte I), 8e passe — ordre du texte + blocage après le 2e Grunt
+
+Retour utilisateur après test de la 7e passe : « tout fonctionne » pour l'éclair et le 2e
+Grunt, mais deux ajustements demandés :
+1. L'écran blanc + le son de tonnerre doivent précéder le texte descriptif (« Un éclair
+   jaillit... »), pas le suivre.
+2. Après avoir battu le 2e Grunt, plus rien ne s'enchaîne (pas de message de fin de combat, la
+   suite du scénario ne se déclenche pas - le joueur se retrouve avec le contrôle rendu,
+   pouvant tenter de reparler au Grunt).
+
+**Réordonnancement** : `playse SE_THUNDER` + `fadescreenswapbuffers FADE_TO_WHITE` déplacés
+juste après le recul du joueur (avant tout msgbox), Blaine et le 1er Grunt disparaissent
+toujours pendant l'écran blanc, puis `fadescreenswapbuffers FADE_FROM_WHITE` et **ensuite**
+`msgbox HeartSoul_Text_EclatCombat` (le texte qui décrit l'éclair, affiché maintenant après
+qu'il se soit produit) suivi de `msgbox HeartSoul_Text_BlaineDisparu`.
+
+**Cause du blocage post-combat, identifiée avec certitude** : `trainerbattle_single` était
+appelé à **3 arguments** (sans script de victoire), qui utilise en interne
+`TRAINER_BATTLE_SINGLE` (`asm/macros/event.inc`) - un type de combat conçu pour l'approche
+normale d'un PNJ marché-vers (walk-up), pas pour un combat forcé sans `object_event`
+réellement approché (`LOCALID_NONE` côté macro, documenté aux passes précédentes). Sans objet
+qui approche réellement, ce type ne rend pas la main de façon fiable au script après la
+victoire - la main revient silencieusement au contrôle normal du joueur au lieu de continuer
+le script verrouillé. **Exactement la même correction déjà appliquée avec succès plus tôt
+dans ce projet** pour ce type de combat forcé (`Route3_EventScript_PatrouilleRecon`,
+`CeladonCity_EventScript_SubordonneAdmiratif`, section 11) : passage à la forme **4
+arguments** (`TRAINER_BATTLE_CONTINUE_SCRIPT`), avec un script de victoire dédié
+(`HeartSoul_EventScript_CinnabarAttackGrunt2Victoire`, `special PlayerFaceTrainerAfterBattle`
+en tête, même motif que `FuchsiaCity_SafariZoneCave_EventScript_KessVictoire` et les autres
+scripts de victoire déjà utilisés dans ce fork) qui enchaîne directement (sans `goto`, simple
+continuité de fichier) sur `HeartSoul_CinnabarAttack_SauvetageChoice` déjà existant.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**.
+`HeartSoul_EventScript_CinnabarAttackGrunt2Victoire` confirmé dans `pokehns.map`.
+
+**Non testé en jeu.**

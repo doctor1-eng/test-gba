@@ -28,9 +28,10 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 
 - [ ] Après le premier message d'alarme, un fondu au noir doit vous téléporter automatiquement sur la carte extérieure de Cinnabar (près de Blaine), **pas** rester dans le Centre Pokémon.
 - [ ] Une fois sur la carte extérieure : Blaine est visible juste à côté de vous, et un premier Grunt Team Rocket (sprite visible) entre en marchant vers lui. Blaine réagit (point d'exclamation) puis marche pour se placer entre le Grunt et vous, vous reculez d'une case — tout ceci doit être **visible à l'écran**.
-- [ ] **Nouveau** : au texte « Un éclair jaillit derrière toi... », un vrai éclair se produit — un son de tonnerre puis l'écran devient **blanc** (pas noir).
-- [ ] Pendant que l'écran est blanc : Blaine **et** le premier Grunt disparaissent tous les deux. Au retour de l'écran blanc, aucun des deux ne doit plus être visible.
-- [ ] Un **second** Grunt (sprite distinct du premier) apparaît alors et marche vers vous pour engager le **combat forcé** (pas de choix, pas de fuite possible), équipe niveau ~34. Après la victoire, le texte confirme que le passage vers le Mont Cinnabar est libre et son sprite disparaît.
+- [ ] **Corrigé** : l'éclair (son de tonnerre + écran **blanc**, pas noir) se produit **avant** que le texte « Un éclair jaillit derrière toi... » ne s'affiche, pas après.
+- [ ] Pendant que l'écran est blanc : Blaine **et** le premier Grunt disparaissent tous les deux. Au retour de l'écran blanc, aucun des deux ne doit plus être visible, puis le texte de l'éclair s'affiche.
+- [ ] Un **second** Grunt (sprite distinct du premier) apparaît alors et marche vers vous pour engager le **combat forcé** (pas de choix, pas de fuite possible), équipe niveau ~34.
+- [ ] **⚠️ Point de test prioritaire (corrigé)** : après la victoire sur ce 2e Grunt, la suite doit s'enchaîner automatiquement — texte confirmant que le passage vers le Mont Cinnabar est libre, sprite du Grunt qui disparaît, puis directement le choix des réfugiés. Si le jeu vous rend la main sans rien afficher (possibilité de bouger librement, de reparler au Grunt), c'est le point exact à signaler.
 - [ ] Choix réfugiés (guider / cacher) : les deux options fonctionnent, message de résultat cohérent.
 - [ ] Message de fuite → fondu au noir → **téléportation automatique à Pallet Town**, sans avoir à marcher ni utiliser un CS Fly.
 - [ ] Essayer de retourner vers Cinnabar (Route 21, vers le sud) : le jeu doit repousser le joueur avec un message, pas de possibilité d'entrer.
