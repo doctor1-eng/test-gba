@@ -32,9 +32,13 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Pendant que l'écran est blanc : Blaine **et** le premier Grunt disparaissent tous les deux. Au retour de l'écran blanc, aucun des deux ne doit plus être visible, puis le texte de l'éclair s'affiche.
 - [ ] Un **second** Grunt (sprite distinct du premier) apparaît alors et marche vers vous pour engager le **combat forcé** (pas de choix, pas de fuite possible), équipe niveau ~34.
 - [ ] **⚠️ Point de test prioritaire (corrigé)** : après la victoire sur ce 2e Grunt, la suite doit s'enchaîner automatiquement — texte confirmant que le passage vers le Mont Cinnabar est libre, sprite du Grunt qui disparaît, puis directement le choix des réfugiés. Si le jeu vous rend la main sans rien afficher (possibilité de bouger librement, de reparler au Grunt), c'est le point exact à signaler.
-- [ ] Choix réfugiés (guider / cacher) : les deux options fonctionnent, message de résultat cohérent.
-- [ ] Message de fuite → fondu au noir → **téléportation automatique à Pallet Town**, sans avoir à marcher ni utiliser un CS Fly.
-- [ ] Essayer de retourner vers Cinnabar (Route 21, vers le sud) : le jeu doit repousser le joueur avec un message, pas de possibilité d'entrer.
+- [ ] **Nouveau** : après le texte du carnet du Grunt, le joueur marche automatiquement (quelques cases, visible à l'écran) jusqu'à une PNJ (sprite visible) représentant des réfugiés cachés, avant que le texte des réfugiés ne s'affiche.
+- [ ] Choix réfugiés (guider / cacher) : les deux options fonctionnent, message de résultat cohérent. Une fois le choix fait, la PNJ réfugiée disparaît.
+- [ ] **Nouveau** : le joueur marche ensuite jusqu'à un Pokémon sauvage blessé (sprite visible, un Growlithe) avant que le texte du Pokémon blessé ne s'affiche.
+- [ ] Choix Pokémon blessé (aider / continuer) : les deux options fonctionnent. Une fois le choix fait, le sprite du Pokémon disparaît.
+- [ ] Le joueur marche une dernière fois vers le « port » (quelques cases), le texte de l'objet trouvé (bracelet) s'affiche, puis fondu au noir et **téléportation automatique sur la Route 21** (pas directement à Pallet Town).
+- [ ] **Nouveau** : sur la Route 21, un bref texte annonce la tempête, puis un marin (sprite visible) marche vers vous et vous parle, avant un nouveau fondu au noir et la **téléportation automatique à Pallet Town**.
+- [ ] Essayer de retourner vers Cinnabar (Route 21, vers le sud, une fois à Pallet Town) : le jeu doit repousser le joueur avec un message, pas de possibilité d'entrer.
 
 ## 4. Route 1
 

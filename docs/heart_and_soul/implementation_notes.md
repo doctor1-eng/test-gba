@@ -2012,3 +2012,51 @@ Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**.
 `HeartSoul_EventScript_CinnabarAttackGrunt2Victoire` confirmé dans `pokehns.map`.
 
 **Non testé en jeu.**
+
+## Acte I, 9e passe — le reste de la fuite mis en scène jusqu'à Pallet Town
+
+Demande utilisateur : « continue à réaliser l'histoire avec des sprites visibles jusqu'à ce
+qu'on arrive à Pallet Town ». Le reste de l'Acte I (choix réfugiés, Pokémon blessé, objet
+trouvé, tempête/marin) était resté 100% textuel après le chantier de la cutscene Blaine/Grunt.
+Cette passe met en scène ce qui est raisonnablement stageable sans inventer de nouvelle carte.
+
+**Vérifié avant de commencer** : aucune carte « grotte du Mont Cinnabar » séparée n'existe dans
+ce fork (`ls data/maps/` ne montre que les intérieurs déjà connus - Gym/Mansion/Lab/Pokémon
+Center). Les réfugiés et le Pokémon blessé restent donc mis en scène sur `CinnabarIsland_hns`
+elle-même (zone rocheuse déjà utilisée pour la choregraphie Blaine/Grunt) plutôt que d'ouvrir un
+nouveau chantier de map design hors périmètre. L'objet trouvé (bracelet) reste purement
+narratif - un flavor item ramassé en courant ne justifie pas un sprite dédié.
+
+**Réfugiés** (`LOCALID_CINNABAR_REFUGEE`, `OBJ_EVENT_GFX_WOMAN_3_HNS`, position (39,34)) et
+**Pokémon blessé** (`LOCALID_CINNABAR_POKEMON_BLESSE`, `OBJ_EVENT_GFX_MON_BASE+SPECIES_
+GROWLITHE`, position (38,36)) : mêmes règle et convention déjà éprouvées 3 fois de suite sur
+cette carte cette session - **jamais cachés avant leur scène** (`FLAG_HIDE_CINNABAR_REFUGEE`/
+`FLAG_HIDE_CINNABAR_POKEMON_BLESSE`, `flags_hns.h` +374/+375), simplement hors du champ initial
+de la choregraphie, retirés par `setflag`+`removeobject` une fois leur scène jouée. Le joueur
+marche réellement jusqu'à eux (`HeartSoul_Movement_VersRefugies`/`VersPokemonBlesse`/`VersPort`,
+chemins vérifiés par décodage de `map.bin`) plutôt que d'enchaîner les `msgbox` sur place - les
+textes déjà existants (`RefugiesIntro`, `PokemonBlesseIntro`, etc.) fonctionnent tels quels une
+fois rattachés à une vraie scène, aucune réécriture nécessaire.
+
+**Tempête/marin, sur `MAP_ROUTE21_HNS`** : la fuite se termine maintenant par un warp scripté
+vers Route 21 (10,62) plutôt qu'un warp direct vers Pallet Town. Nouveau `MAP_SCRIPT_ON_FRAME_
+TABLE` ajouté sur cette carte (`Route21_hns/scripts.inc`, `Route21_OnFrame`) - **aucune entrée
+`ON_FRAME_TABLE` n'y existait avant**, donc `VAR_TEMP_0` réutilisable directement sans le
+conflit rencontré sur `CinnabarIsland_hns` (qui avait nécessité `VAR_TEMP_1`). Marin
+(`LOCALID_ROUTE21_MARIN`, `OBJ_EVENT_GFX_SAILOR_HNS`, position (13,62)) marche vers le joueur
+(`HeartSoul_Movement_MarinApproche`), texte existant `HeartSoul_Text_TempeteRoute21` scindé en
+deux (un nouveau `TempeteRoute21Intro` pour l'annonce de la tempête, le texte original -
+légèrement retouché en réplique directe du marin - pour son arrivée), puis warp final vers
+Pallet Town (`MAP_PALLET_TOWN_HNS, 6, 8`, inchangé). `FLAG_MARIN_ROUTE21_RENCONTRE` (déjà
+alloué, section 11 événement 4) réutilisé comme garde anti-rejeu plutôt que d'allouer un
+nouveau flag redondant.
+
+**3 nouveaux flags** (`FLAG_HIDE_CINNABAR_REFUGEE`/`FLAG_HIDE_CINNABAR_POKEMON_BLESSE`/
+`FLAG_HIDE_ROUTE21_MARIN`, `flags_hns.h` +374 à +376, `HNS_EXTENDED_CONTENT_COUNT` 374→377).
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**. Les 5 nouveaux symboles
+(`HeartSoul_EventScript_TempeteRoute21Check`/`Scene`, les 3 placeholders d'objets) confirmés
+dans `pokehns.map`. ROM 31723764 octets, 94.54% ROM, 94.47% EWRAM, 78.37% IWRAM.
+
+**Non testé en jeu.** L'Acte I est maintenant entièrement mis en scène avec des sprites
+visibles, de l'attaque de Cinnabar jusqu'à l'arrivée à Pallet Town.

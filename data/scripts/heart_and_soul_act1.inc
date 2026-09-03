@@ -162,8 +162,20 @@ HeartSoul_CinnabarAttack_SauvetageCentre:
 	goto HeartSoul_CinnabarAttack_CarnetGrunt
 HeartSoul_CinnabarAttack_SauvetageArene:
 	msgbox HeartSoul_Text_SauvetageAreneResultat, MSGBOX_DEFAULT
+// Suite de l'Acte I mise en scene (retour utilisateur : "continue de realiser l'histoire avec
+// des sprites visibles jusqu'a Pallet Town"). Refugies et Pokemon blesse restent sur
+// CinnabarIsland_hns (aucune carte "grotte du Mont Cinnabar" separee n'existe dans ce fork -
+// verifie par listing de data/maps/ avant de commencer, voir technical_map.md - le joueur
+// traverse simplement une autre partie de la meme zone rocheuse ou se joue deja la
+// choregraphie Blaine/Grunt). Meme regle deja eprouvee 3 fois sur cette carte : les deux PNJ
+// (LOCALID_CINNABAR_REFUGEE, LOCALID_CINNABAR_POKEMON_BLESSE) ne sont jamais caches avant leur
+// scene - ils existent des le chargement de la carte, simplement hors du champ initial de la
+// choregraphie, et sont retires par setflag+removeobject une fois leur scene jouee. Positions
+// et chemins de marche verifies par decodage de data/layouts/CinnabarIsland_hns/map.bin.
 HeartSoul_CinnabarAttack_CarnetGrunt:
 	msgbox HeartSoul_Text_CarnetGrunt, MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, HeartSoul_Movement_VersRefugies
+	waitmovement 0
 	msgbox HeartSoul_Text_RefugiesIntro, MSGBOX_DEFAULT
 HeartSoul_CinnabarAttack_RefugiesChoice:
 	dynmultipush HeartSoul_Text_RefugiesGuider, 0
@@ -183,9 +195,13 @@ HeartSoul_CinnabarAttack_RefugiesCacher:
 	addvar VAR_REPUTATION, 1
 	msgbox HeartSoul_Text_RefugiesCacherResultat, MSGBOX_DEFAULT
 HeartSoul_CinnabarAttack_Verrouillage:
+	setflag FLAG_HIDE_CINNABAR_REFUGEE
+	removeobject LOCALID_CINNABAR_REFUGEE
 	setflag FLAG_CINNABAR_VERROUILLEE
 	setflag FLAG_ACTE_1_TERMINE
 	setflag FLAG_OBJET_PERDU_TROUVE
+	applymovement LOCALID_PLAYER, HeartSoul_Movement_VersPokemonBlesse
+	waitmovement 0
 	msgbox HeartSoul_Text_PokemonBlesseIntro, MSGBOX_DEFAULT
 HeartSoul_CinnabarAttack_PokemonBlesseChoice:
 	dynmultipush HeartSoul_Text_PokemonBlesseSoigner, 0
@@ -203,10 +219,50 @@ HeartSoul_CinnabarAttack_PokemonBlesseSoigner:
 HeartSoul_CinnabarAttack_PokemonBlesseIgnorer:
 	msgbox HeartSoul_Text_PokemonBlesseIgnorerResultat, MSGBOX_DEFAULT
 HeartSoul_CinnabarAttack_ObjetTrouve:
+	setflag FLAG_HIDE_CINNABAR_POKEMON_BLESSE
+	removeobject LOCALID_CINNABAR_POKEMON_BLESSE
 	msgbox HeartSoul_Text_ObjetTrouve, MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, HeartSoul_Movement_VersPort
+	waitmovement 0
 	msgbox HeartSoul_Text_FuiteRoute21, MSGBOX_DEFAULT
-	setflag FLAG_MARIN_ROUTE21_RENCONTRE
+	closemessage
+	fadescreenswapbuffers FADE_TO_BLACK
+	warp MAP_ROUTE21_HNS, 10, 62
+	waitstate
+	end
+
+// -----------------------------------------------------------------------------------------
+// Scene de la tempete/du marin (fin de l'Acte I, MAP_ROUTE21_HNS). Declenchee depuis
+// MAP_SCRIPT_ON_FRAME_TABLE (data/maps/Route21_hns/scripts.inc, Route21_OnFrame) - meme motif
+// eprouve que la choregraphie Cinnabar : le warp scripte ci-dessus se contente de "waitstate" +
+// "end", la suite reprend une fois l'ecran reellement pret. FLAG_MARIN_ROUTE21_RENCONTRE
+// (deja alloue, section 11 evenement 4) reutilise comme garde anti-rejeu : non pose avant cette
+// scene, pose a la fin - evite d'allouer un flag dedie supplementaire pour la meme information.
+// Position de warp (10,62) et position de depart du marin (13,62) verifiees par decodage de
+// data/layouts/Route21_hns/map.bin (collision nulle sur les deux cases et sur le chemin de
+// marche, aucun chevauchement avec les 9 object_events deja presents sur cette carte pour les
+// aspirants/PNJ existants).
+// -----------------------------------------------------------------------------------------
+HeartSoul_EventScript_TempeteRoute21Check::
+	goto_if_unset FLAG_ATTAQUE_CINNABAR_LANCEE, HeartSoul_TempeteRoute21Check_Skip
+	goto_if_set FLAG_MARIN_ROUTE21_RENCONTRE, HeartSoul_TempeteRoute21Check_Skip
+	setvar VAR_TEMP_0, 1
+	goto HeartSoul_EventScript_TempeteRoute21Scene
+HeartSoul_TempeteRoute21Check_Skip:
+	setvar VAR_TEMP_0, 1
+	end
+
+HeartSoul_EventScript_TempeteRoute21Scene::
+	lockall
+	delay 60
+	playse SE_THUNDERSTORM
+	msgbox HeartSoul_Text_TempeteRoute21Intro, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE21_MARIN, HeartSoul_Movement_MarinApproche
+	waitmovement 0
 	msgbox HeartSoul_Text_TempeteRoute21, MSGBOX_DEFAULT
+	setflag FLAG_MARIN_ROUTE21_RENCONTRE
+	setflag FLAG_HIDE_ROUTE21_MARIN
+	removeobject LOCALID_ROUTE21_MARIN
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
 	warp MAP_PALLET_TOWN_HNS, 6, 8
@@ -257,13 +313,54 @@ HeartSoul_Movement_Grunt2Approche:
 	face_left
 	step_end
 
+// Suite Acte I mise en scene (refugies/Pokemon blesse/port) - joueur en (38,31) apres le
+// combat contre le 2e Grunt. Chemins verifies par decodage de map.bin, aucun chevauchement
+// avec les object_events deja presents.
+HeartSoul_Movement_VersRefugies:
+	walk_right
+	walk_down
+	walk_down
+	face_down
+	step_end
+
+HeartSoul_Movement_VersPokemonBlesse:
+	walk_left
+	walk_down
+	walk_down
+	face_down
+	step_end
+
+HeartSoul_Movement_VersPort:
+	walk_down
+	walk_right
+	walk_down
+	face_down
+	step_end
+
+// Scene de la tempete (MAP_ROUTE21_HNS) - marin en (13,62), joueur warpe en (10,62). Chemin
+// verifie par decodage de data/layouts/Route21_hns/map.bin.
+HeartSoul_Movement_MarinApproche:
+	walk_left
+	walk_left
+	face_left
+	step_end
+
 // Placeholders requis par le format object_event (scripts jamais reellement declenches : les
-// deux objets sont verrouilles sous lockall pendant toute leur fenetre de visibilite, puis
-// retires par removeobject).
+// objets sont verrouilles sous lockall pendant toute leur fenetre de visibilite, puis retires
+// par removeobject).
 CinnabarIsland_EventScript_GruntIntroUnused::
 	end
 
 CinnabarIsland_EventScript_Grunt2Unused::
+	end
+
+CinnabarIsland_EventScript_RefugeeUnused::
+	end
+
+CinnabarIsland_EventScript_PokemonBlesseUnused::
+	end
+
+Route21_EventScript_MarinUnused::
 	end
 
 HeartSoul_Text_AttaqueDebut:
@@ -416,10 +513,14 @@ HeartSoul_Text_PokemonBlesseIgnorerResultat:
 // Evenement 4 (histoire.md section 11, Acte II) : marin secondaire, reapparait en Acte V
 // pour le retour par mer - purement narratif ici, FLAG_MARIN_ROUTE21_RENCONTRE pose pour un
 // eventuel rappel ulterieur.
+HeartSoul_Text_TempeteRoute21Intro:
+	.string "La traversee est a peine\n"
+	.string "commencee qu'une tempete\l"
+	.string "soudaine s'abat sur la mer.$"
+
 HeartSoul_Text_TempeteRoute21:
-	.string "La traversee est interrompue par\n"
-	.string "une tempete soudaine.\p"
-	.string "Un marin te hurle de te\n"
+	.string "MARIN: Accroche-toi !\p"
+	.string "Le marin te hurle de te\n"
 	.string "cramponner et force l'accostage\l"
 	.string "en urgence sur le continent.\p"
 	.string "Tu ne connais meme pas son nom.\n"

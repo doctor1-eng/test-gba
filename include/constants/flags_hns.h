@@ -1301,7 +1301,14 @@
 // pour le faire disparaitre apres le combat.
 #define FLAG_HIDE_CINNABAR_GRUNT2                     (HNS_EXTENDED_CONTENT_START + 373)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  374
+// Suite de l'Acte I mise en scene avec sprites reels (refugies, Pokemon blesse sur
+// CinnabarIsland_hns, marin sur Route21_hns) : meme motif deja eprouve, jamais caches avant
+// leur scene respective, poses seulement pour les faire disparaitre une fois la scene jouee.
+#define FLAG_HIDE_CINNABAR_REFUGEE                    (HNS_EXTENDED_CONTENT_START + 374)
+#define FLAG_HIDE_CINNABAR_POKEMON_BLESSE             (HNS_EXTENDED_CONTENT_START + 375)
+#define FLAG_HIDE_ROUTE21_MARIN                       (HNS_EXTENDED_CONTENT_START + 376)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  377
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

@@ -210,6 +210,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CinnabarIsland_EventScript_Grunt2Unused",
       "flag": "FLAG_HIDE_CINNABAR_GRUNT2"
+    },
+    {
+      "local_id": "LOCALID_CINNABAR_REFUGEE",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3_HNS",
+      "x": 39,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CinnabarIsland_EventScript_RefugeeUnused",
+      "flag": "FLAG_HIDE_CINNABAR_REFUGEE"
+    },
+    {
+      "local_id": "LOCALID_CINNABAR_POKEMON_BLESSE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GROWLITHE",
+      "x": 38,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CinnabarIsland_EventScript_PokemonBlesseUnused",
+      "flag": "FLAG_HIDE_CINNABAR_POKEMON_BLESSE"
     }
   ],
   "warp_events": [
