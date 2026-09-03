@@ -1760,3 +1760,56 @@ fork). ROM 31725028 octets (taille identique au build précédent - texte réarr
 ajouté), 94.55% ROM, 94.47% EWRAM, 78.37% IWRAM.
 
 **Non testé en jeu, priorité de test élevée sur ce point precis.**
+
+## Cutscene d'ouverture (Acte I), 3e passe — corrige le blocage constaté en test
+
+Retour utilisateur avec capture d'écran : « on est bien téléporté mais rien ne se passe ». La
+2e passe avait bien mis en place le warp vers `CinnabarIsland_hns`, mais continuait la
+choregraphie (`applymovement`/`msgbox`) **dans le même script**, juste après le `waitstate` du
+warp - c'est cette suite immédiate qui ne s'exécutait pas.
+
+**Cause identifiée en relisant le dépôt lui-même** : ce problème est déjà documenté ailleurs,
+dans ce même fichier de scripts de carte. Le commentaire au-dessus de
+`CinnabarIsland_EventScript_Blaine` (`data/maps/CinnabarIsland_hns/scripts.inc`) précise qu'un
+essai antérieur (d'une session précédente) déclenchait une cutscène depuis
+`MAP_SCRIPT_ON_TRANSITION` et a été retiré car « ce point d'accroche tourne avant que l'écran
+soit prêt pour des fenêtres/menus ». Continuer un script avec `applymovement`/`msgbox`
+immédiatement après un `warp` scripté se heurte à la même fenêtre d'indisponibilité - le warp
+en lui-même fonctionne (le joueur arrive bien, comme le confirme la capture d'écran), c'est la
+suite dans la même exécution de script qui échoue silencieusement.
+
+**Solution, alignée sur le motif déjà éprouvé dans ce dépôt pour exactement ce problème**
+(`HeartSoul_EventScript_CinnabarVerrouilleeCheck`, déjà présent et fonctionnel) :
+- `HeartSoul_EventScript_CinnabarAttack` (déclenché depuis le Centre Pokémon) est réduit à
+  l'essentiel : message d'alarme, fondu, warp, `waitstate`, `end` - identique au motif du warp
+  final de ce même script vers Pallet Town, déjà éprouvé.
+- La choregraphie complète est déplacée dans un nouveau script,
+  `HeartSoul_EventScript_CinnabarAttackPart2`, déclenché depuis
+  `MAP_SCRIPT_ON_FRAME_TABLE` de `CinnabarIsland_hns` (`CinnabarIsland_OnFrame`) via un nouveau
+  `map_script_2 VAR_TEMP_1, 0, HeartSoul_EventScript_CinnabarAttackPart2Check` - qui tourne une
+  fois l'écran réellement prêt, contrairement à `ON_TRANSITION`.
+- `VAR_TEMP_1` plutôt que réutiliser `VAR_TEMP_0` (déjà pris par
+  `HeartSoul_EventScript_CinnabarVerrouilleeCheck`) : vérifié dans le code moteur
+  (`MapHeaderCheckScriptTable`, `src/script.c`) que la table `ON_FRAME_TABLE` s'arrête à la
+  **première** entrée dont la condition est vraie à chaque frame - deux entrées sur la même
+  paire var/valeur se bloqueraient l'une l'autre.
+- `HeartSoul_EventScript_CinnabarAttackPart2Check` vérifie `FLAG_ATTAQUE_CINNABAR_LANCEE` (pour
+  ne réagir qu'après le warp) et pose immédiatement un nouveau flag,
+  `FLAG_ATTAQUE_CINNABAR_PART2_LANCEE` (`flags_hns.h` +372, `HNS_EXTENDED_CONTENT_COUNT`
+  372→373), pour ne jamais se rejouer même si `ON_FRAME_TABLE` est réévalué en cours de route
+  (ex. au retour du combat).
+- Retiré le `fadescreenswapbuffers FADE_FROM_BLACK` manuel qui suivait le `waitstate` du warp
+  dans la 2e passe : un warp scripté gère déjà son propre fondu d'entrée nativement, cette
+  ligne était redondante (et n'a jamais été nécessaire dans aucun des warps déjà existants du
+  fork).
+
+Aucun changement à la choregraphie elle-même (mouvements, textes, combat) ni au reste de la
+cutscene (choix réfugiés/Pokémon blessé/etc.) - uniquement le point d'accroche qui la déclenche.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**. Les 3 symboles
+(`HeartSoul_EventScript_CinnabarAttack`, `HeartSoul_EventScript_CinnabarAttackPart2Check`,
+`HeartSoul_EventScript_CinnabarAttackPart2`) confirmés dans `pokehns.map`. ROM 31725076 octets,
+94.55% ROM, 94.47% EWRAM, 78.37% IWRAM.
+
+**Toujours non testé en jeu** - c'est la correction d'un bug remonté par test réel, donc
+priorité maximale pour la prochaine vérification.

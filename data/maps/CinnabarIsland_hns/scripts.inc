@@ -16,8 +16,20 @@ CinnabarIsland_OnTransition:
 @ tourner avant que l'ecran soit pret. VAR_TEMP_0, 0 est une condition toujours vraie (meme motif
 @ que CeruleanCity_Gym_hns/scripts.inc, CeruleanCity_Gym_OnFrame) : le script appele decide
 @ lui-meme, via goto_if_set/unset sur les vrais flags, s'il doit agir ou ne rien faire.
+@ Heart & Soul (2026-09-03, 2e passe) : la choregraphie visible Grunt/Blaine de l'Acte I
+@ (HeartSoul_EventScript_CinnabarAttackPart2, data/scripts/heart_and_soul_act1.inc) reprend
+@ ici, sur cette meme carte, une fois le joueur teleporte depuis CinnabarIsland_PokemonCenter_hns
+@ par HeartSoul_EventScript_CinnabarAttack. Meme regle documentee juste en dessous pour le
+@ verrouillage (et deja invalidee une fois par le passe pour un declenchement direct depuis
+@ CinnabarIsland_OnTransition) : ON_FRAME_TABLE, pas ON_TRANSITION, car l'ecran n'est pas encore
+@ pret pour des fenetres/menus juste apres un chargement de carte. VAR_TEMP_1 (distinct de
+@ VAR_TEMP_0 deja utilise par l'entree ci-dessous) car MapHeaderCheckScriptTable (src/script.c)
+@ s'arrete a la 1ere entree dont la condition est vraie a chaque frame - deux entrees sur la
+@ meme paire var/valeur se genent l'une l'autre. HeartSoul_EventScript_CinnabarAttackPart2Check
+@ decide lui-meme, via goto_if_set/unset sur les vrais flags, s'il doit agir ou ne rien faire.
 CinnabarIsland_OnFrame::
 	map_script_2 VAR_TEMP_0, 0, HeartSoul_EventScript_CinnabarVerrouilleeCheck
+	map_script_2 VAR_TEMP_1, 0, HeartSoul_EventScript_CinnabarAttackPart2Check
 	.2byte 0
 
 @ Heart & Soul : l'attaque (HeartSoul_EventScript_CinnabarAttack, dans

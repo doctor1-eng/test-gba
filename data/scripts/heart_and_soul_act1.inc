@@ -3,31 +3,38 @@
 // HeartSoul_EventScript_ChooseTeam_Feu (data/scripts/heart_and_soul_intro.inc), une fois
 // l'equipe de depart donnee. Se termine par "end", pas "return" : appele par goto, pas call.
 //
-// Revision 2026-09-03 (2e passe) : la 1ere version de cette cutscene enrichie (Grunt + combat)
-// gardait tout en texte narre car le declenchement se fait depuis
-// CinnabarIsland_PokemonCenter_hns (map_script_2 sur VAR_TYPE_CHOISI) - le joueur y est donc
-// physiquement a l'interieur du Centre, sur une autre carte que LOCALID_CINNABAR_BLAINE.
-// Retour utilisateur explicite : la choregraphie doit etre visible, pas seulement racontee.
-// Solution retenue : un warp vers CinnabarIsland_hns est insere en tout debut de cutscene
-// (juste apres le premier message, toujours sous lockall - meme motif deja utilise sans
-// probleme par le warp final de ce meme script vers Pallet Town), avant toute autre mise en
-// scene. A partir de la, Blaine (deja present sur cette carte) et un nouvel object_event Grunt
-// (LOCALID_CINNABAR_GRUNT_INTRO, cache par defaut via FLAG_HIDE_CINNABAR_GRUNT_INTRO, revele au
-// bon moment) sont tous les deux reellement sur l'ecran, et la choregraphie utilise de vrais
-// applymovement/waitmovement. Position de warp (37,31) et position de depart du Grunt (41,28)
-// verifiees par decodage de data/layouts/CinnabarIsland_hns/map.bin (collision nulle sur les
-// deux cases et sur tout le chemin de marche utilise ci-dessous).
+// Revision 2026-09-03 (3e passe - corrige un blocage constate en test) : la 2e passe faisait
+// un warp vers CinnabarIsland_hns puis continuait la CHOREGRAPHIE DANS LE MEME SCRIPT juste
+// apres le "waitstate" du warp. Teste en jeu : le joueur arrive bien sur la carte exterieure,
+// mais plus rien ne se passe ensuite (aucun mouvement, aucun texte). Cause identifiee a
+// posteriori : ce depot documente deja EXACTEMENT ce probleme ailleurs sur cette meme carte
+// (voir le commentaire au-dessus de CinnabarIsland_EventScript_Blaine,
+// data/maps/CinnabarIsland_hns/scripts.inc - "un ancien essai [de declencher un msgbox/lockall]
+// depuis CinnabarIsland_OnTransition [...] retire, car ce point d'accroche tourne avant que
+// l'ecran soit pret pour des fenetres/menus"). Continuer un script avec applymovement/msgbox
+// immediatement apres un warp scripte se heurte a la meme fenetre "ecran pas encore pret" - le
+// warp lui-meme n'est pas le probleme (le joueur arrive bien), c'est la suite immediate dans le
+// meme run de script qui ne s'execute pas de facon fiable.
 //
-// Le Grunt visible pendant la choregraphie EST le meme qui affronte ensuite le joueur (pas un
-// second Grunt distinct) : narrativement plus simple (Blaine gagne du temps face a CE Grunt
-// precis, qui se retourne ensuite contre le joueur une fois Blaine hors-jeu) et techniquement
-// plus simple (un seul object_event, un seul trainer). trainerbattle_single est appele
-// directement depuis ce script verrouille (pas depuis le script d'interaction de l'objet,
-// inutilise ici) : verifie au prealable que ce macro ne necessite aucun object_event pour
-// fonctionner (LOCALID_NONE cote macro, asm/macros/event.inc) - mais ici l'objet est bel et
-// bien present et visible, donc le combat demarre avec le bon sprite a l'ecran. Forme a 3
-// arguments (pas de victory script) : le combat termine, l'execution continue simplement a la
-// ligne suivante.
+// Solution retenue, alignee sur le motif deja EPROUVE dans ce depot pour ce genre de probleme
+// (HeartSoul_EventScript_CinnabarVerrouilleeCheck juste plus bas, et le commentaire cite plus
+// haut) : la choregraphie ne continue plus dans CE script apres le warp. Elle repart depuis
+// MAP_SCRIPT_ON_FRAME_TABLE de CinnabarIsland_hns (CinnabarIsland_OnFrame, voir
+// data/maps/CinnabarIsland_hns/scripts.inc), qui tourne UNE FOIS l'ecran pret, contrairement a
+// ON_TRANSITION. HeartSoul_EventScript_CinnabarAttack se contente donc de l'alarme + du warp,
+// puis "end" immediatement apres le "waitstate" (meme motif que le warp final de ce script vers
+// Pallet Town, deja eprouve) ; HeartSoul_EventScript_CinnabarAttackPart2Check (declenche depuis
+// la carte) detecte l'arrivee et lance HeartSoul_EventScript_CinnabarAttackPart2, qui contient
+// toute la choregraphie + le combat + la suite du scenario (choix refugies, etc.), inchangee
+// par ailleurs. FLAG_ATTAQUE_CINNABAR_PART2_LANCEE evite tout rejeu si ON_FRAME_TABLE est
+// re-evalue en cours de route (ex. au retour du combat).
+//
+// Position de warp (37,31) et position de depart du Grunt (41,28) verifiees par decodage de
+// data/layouts/CinnabarIsland_hns/map.bin (collision nulle sur les deux cases et sur tout le
+// chemin de marche utilise plus bas). Le Grunt visible pendant la choregraphie EST le meme qui
+// affronte ensuite le joueur (pas un second Grunt distinct) : narrativement plus simple (Blaine
+// gagne du temps face a CE Grunt precis, qui se retourne ensuite contre le joueur une fois
+// Blaine hors-jeu) et techniquement plus simple (un seul object_event, un seul trainer).
 HeartSoul_EventScript_CinnabarAttack::
 	lockall
 	setflag FLAG_ATTAQUE_CINNABAR_LANCEE
@@ -37,8 +44,32 @@ HeartSoul_EventScript_CinnabarAttack::
 	fadescreenswapbuffers FADE_TO_BLACK
 	warp MAP_CINNABAR_ISLAND_HNS, 37, 31
 	waitstate
+	end
+
+// Declenche par CinnabarIsland_OnFrame (MAP_SCRIPT_ON_FRAME_TABLE, VAR_TEMP_1) une fois l'ecran
+// pret apres le warp ci-dessus. VAR_TEMP_1 est mis a 1 sur les deux branches, meme motif
+// defensif que HeartSoul_EventScript_CinnabarVerrouilleeCheck (desarme la condition jusqu'au
+// prochain chargement de carte, sans quoi ce script tournerait en boucle chaque frame).
+HeartSoul_EventScript_CinnabarAttackPart2Check::
+	goto_if_unset FLAG_ATTAQUE_CINNABAR_LANCEE, HeartSoul_CinnabarAttackPart2Check_Skip
+	goto_if_set FLAG_ATTAQUE_CINNABAR_PART2_LANCEE, HeartSoul_CinnabarAttackPart2Check_Skip
+	setflag FLAG_ATTAQUE_CINNABAR_PART2_LANCEE
+	setvar VAR_TEMP_1, 1
+	goto HeartSoul_EventScript_CinnabarAttackPart2
+HeartSoul_CinnabarAttackPart2Check_Skip:
+	setvar VAR_TEMP_1, 1
+	end
+
+// La choregraphie proprement dite, plus le combat force et la suite deja existante du scenario
+// (choix refugies/Pokemon blesse/etc., inchangee depuis la 1ere passe). trainerbattle_single
+// appele directement ici (pas depuis le script d'interaction de l'objet, inutilise) : verifie
+// au prealable que ce macro ne necessite aucun object_event pour fonctionner (LOCALID_NONE cote
+// macro, asm/macros/event.inc) - mais ici l'objet est bel et bien present et visible, donc le
+// combat demarre avec le bon sprite a l'ecran. Forme a 3 arguments (pas de victory script) : le
+// combat termine, l'execution continue simplement a la ligne suivante.
+HeartSoul_EventScript_CinnabarAttackPart2::
+	lockall
 	clearflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
-	fadescreenswapbuffers FADE_FROM_BLACK
 	applymovement LOCALID_CINNABAR_GRUNT_INTRO, HeartSoul_Movement_GruntEntree
 	waitmovement 0
 	applymovement LOCALID_CINNABAR_BLAINE, HeartSoul_Movement_BlaineReagit

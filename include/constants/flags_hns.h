@@ -1289,7 +1289,14 @@
 // definitivement).
 #define FLAG_HIDE_CINNABAR_GRUNT_INTRO                (HNS_EXTENDED_CONTENT_START + 371)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  372
+// Garde anti-rejeu de la 2e moitie de la cutscene d'ouverture (HeartSoul_EventScript_
+// CinnabarAttackPart2, declenchee via MAP_SCRIPT_ON_FRAME_TABLE sur CinnabarIsland_hns - voir
+// CinnabarIsland_hns/scripts.inc). Pose des le declenchement, avant meme le premier
+// applymovement, pour eviter tout double-declenchement si ON_FRAME_TABLE est re-evalue en
+// cours de route (ex. au retour du combat).
+#define FLAG_ATTAQUE_CINNABAR_PART2_LANCEE            (HNS_EXTENDED_CONTENT_START + 372)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  373
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 
