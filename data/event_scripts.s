@@ -1066,6 +1066,7 @@ gStdScripts_End::
 	.include "data/scripts/heart_and_soul_act4.inc"
 	.include "data/scripts/heart_and_soul_cinnabar_interiors.inc"
 	.include "data/scripts/heart_and_soul_act5.inc"
+	.include "data/scripts/heart_and_soul_aspirants.inc"
 
 EventScript_WhiteOut::
 	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour

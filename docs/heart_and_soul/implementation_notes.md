@@ -1449,3 +1449,53 @@ additif, pas de perte de contenu). **Rien de tout ça n'est encore scripté ni i
 le jeu** — c'est un enrichissement du cahier des charges, pas un chantier réalisé. À traiter
 comme les autres chantiers en attente (un lot à la fois, pas mélangé avec le reste), si
 l'utilisateur le demande.
+
+## Section 12 implémentée — les 8 aspirants Champions
+
+Chantier demandé explicitement (« attaque les deux blocs »). 26 nouveaux flags/vars alloués
+en un lot (`flags_hns.h` +339 à +364, `HNS_EXTENDED_CONTENT_COUNT` 339→365 ;
+`VAR_ASPIRANTS_BATTUS` `vars_hns.h` 0x40DF) et 10 trainers (`opponents_hns.h`, ids 638-647 :
+2 combats mineurs de section 11 + 8 aspirants).
+
+**Simplifications assumées et documentées** (commentaire en tête de
+`data/scripts/heart_and_soul_aspirants.inc`, à relire pour le détail complet) :
+- **Niveau fixe 34** au lieu d'une mise à l'échelle dynamique sur le niveau moyen de
+  l'équipe du joueur — vérifié qu'aucune fonction n'est exposée au niveau script pour ça dans
+  ce fork (`GetHighestLevelInPlayerParty` existe côté C mais uniquement pour la Battle
+  Frontier) ; implémenter une vraie mise à l'échelle demanderait du nouveau code moteur C,
+  hors périmètre de ce chantier.
+- **Pas de cooldown hebdomadaire ni d'équipe qui se renforce à chaque revanche** : chaque
+  aspirant reste rejouable à chaque nouvelle apparition aléatoire, toujours avec la même
+  équipe (boucle "VS Seeker" progressive non implémentée).
+- **Corvin placé sur une seule route** (Route 1) plutôt que « n'importe quelle route » au
+  sens littéral — la contrainte « uniquement de nuit » est en revanche implémentée
+  réellement, via `gettimeofday`/`TIME_NIGHT` (mécanisme déjà utilisé ailleurs dans ce fork,
+  ex. `AkalaIsle_hns`), vérifié avant usage plutôt que deviné.
+
+**Mécanique de rencontre** : chaque route/ville concernée (`Route21_hns` ×2 pour Ael/Orin,
+`ViridianForest_hns`, `Route15_hns`, `SeafoamIslands_1F_hns`, `Route1_hns`,
+`RockTunnel_1F_hns`, `CeladonCity_hns`) reçoit un appel `call HeartSoul_EventScript_Check<Nom>`
+en première ligne de son `MAP_SCRIPT_ON_TRANSITION` existant (pas de nouveau map script créé
+— extension des 8 existants). `random 20` (1 chance sur 20) détermine la visibilité de
+l'aspirant pour cette visite via son propre `FLAG_HIDE_<NOM>`. 8 nouveaux `object_events`
+(sprites déjà compilés, `OBJ_EVENT_GFX_COOLTRAINER_M_HNS`/`BUG_CATCHER_HNS`/`BLACK_BELT_HNS`/
+`SKIER_F_HNS`/`BIKER_HNS`/`ENGINEER_HNS`/`BEAUTY_HNS`), positions vérifiées par décodage de
+`map.bin` (méthode déjà systématique cette session). `TRAINER_TYPE_NORMAL` (approche
+automatique), même patron que Quinn/Lyre/Selen déjà validé.
+
+**Bug de sprite attrapé avant compilation** : premier essai avec un
+`OBJ_EVENT_GFX_BIRD_KEEPER_HNS` pour Ael (Vol) — ce sprite **n'existe pas** dans ce fork
+(vérifié par grep sur `event_objects.h`, pas supposé à partir du nom intuitif). Remplacé par
+`OBJ_EVENT_GFX_COOLTRAINER_M_HNS`, cohérent avec son `Pic` de combat (« Cooltrainer M »).
+Même vérification faite pour les 7 autres sprites avant utilisation (aucun autre manquant).
+
+`VAR_ASPIRANTS_BATTUS` incrémenté une seule fois par aspirant (à la première victoire,
+protégé par son propre `FLAG_*_RENCONTRE`) ; scène de coda ajoutée à l'épilogue « exemplaire »
+(`heart_and_soul_act5.inc`) si `VAR_ASPIRANTS_BATTUS >= 6`.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**, les 8 symboles de script des
+aspirants confirmés dans `pokehns.map`. ROM 31718596 octets, 94.53 % ROM, 94.47 % EWRAM,
+78.37 % IWRAM.
+
+**Non testé en jeu.** Suite : section 11 (18 événements narratifs) à implémenter dans la
+foulée, dans le même chantier.

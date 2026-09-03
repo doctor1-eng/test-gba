@@ -4,6 +4,7 @@ Route15_hns_MapScripts::
 	.byte 0
 
 Route15_OnTransition:
+	call HeartSoul_EventScript_CheckRook
 	callnative SetTimeBasedEncounters
 	end
 

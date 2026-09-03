@@ -14911,3 +14911,337 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Trick Room
 - Hyper Beam
 
+=== TRAINER_PATROUILLE_RECON_HNS ===
+Name: PATROUILLE
+Class: Rocket Admin Hns
+Pic: Rocket Grunt M Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Zubat @ Chesto Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Wing Attack
+- Toxic
+- Confuse Ray
+- Substitute
+
+Koffing @ Black Sludge
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Sludge Bomb
+- Flamethrower
+- Toxic
+- Self-Destruct
+
+=== TRAINER_SUBORDONNE_ADMIRATIF_HNS ===
+Name: SUBORDONNE
+Class: Rocket Admin Hns
+Pic: Rocket Grunt M Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Persian @ Silk Scarf
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Return
+- Fake Out
+- Toxic
+- Substitute
+
+Raticate @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Return
+- Earthquake
+- Sucker Punch
+- Facade
+
+=== TRAINER_AEL_HNS ===
+Name: AEL
+Class: Cooltrainer Hns
+Pic: Cooltrainer M
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Pidgeot @ Sitrus Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Brave Bird
+- Hurricane
+- U-turn
+- Roost
+
+Fearow @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Drill Peck
+- Return
+- U-turn
+- Substitute
+
+Noctowl @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Hurricane
+- Psychic
+- Roost
+- Toxic
+
+=== TRAINER_NAO_HNS ===
+Name: NAO
+Class: Cooltrainer Hns
+Pic: Cooltrainer M
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Butterfree @ Sitrus Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Sleep Powder
+- Giga Drain
+- Psychic
+- Substitute
+
+Scyther @ Life Orb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- X-Scissor
+- Aerial Ace
+- Swords Dance
+- U-turn
+
+Heracross @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Close Combat
+- Megahorn
+- X-Scissor
+- Substitute
+
+=== TRAINER_ROOK_HNS ===
+Name: ROOK
+Class: Cooltrainer Hns
+Pic: Cooltrainer M
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Hitmonlee @ Life Orb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Close Combat
+- Mach Punch
+- Substitute
+- Swords Dance
+
+Hitmonchan @ Life Orb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Close Combat
+- Mach Punch
+- Iron Head
+- Substitute
+
+Machamp @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Dynamic Punch
+- Close Combat
+- Earthquake
+- Facade
+
+=== TRAINER_IRIS_ASPIRANTE_HNS ===
+Name: IRIS
+Class: Cooltrainer Hns
+Pic: Cooltrainer F
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Cloyster @ Life Orb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Ice Beam
+- Surf
+- Toxic
+- Substitute
+
+Piloswine @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Blizzard
+- Earthquake
+- Toxic
+- Substitute
+
+Dewgong @ Sitrus Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Blizzard
+- Surf
+- Toxic
+- Rest
+
+=== TRAINER_ORIN_HNS ===
+Name: ORIN
+Class: Cooltrainer Hns
+Pic: Cooltrainer M
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Dragonair @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Dragon Pulse
+- Surf
+- Dragon Dance
+- Substitute
+
+Kingdra @ Life Orb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Dragon Pulse
+- Surf
+- Ice Beam
+- Substitute
+
+Flygon @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Outrage
+- Earthquake
+- U-turn
+- Dragon Dance
+
+=== TRAINER_CORVIN_HNS ===
+Name: CORVIN
+Class: Cooltrainer Hns
+Pic: Cooltrainer M
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Umbreon @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Foul Play
+- Toxic
+- Calm Mind
+- Rest
+
+Houndoom @ Life Orb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Dark Pulse
+- Flamethrower
+- Sludge Bomb
+- Substitute
+
+Absol @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Dark Pulse
+- Sucker Punch
+- Return
+- Swords Dance
+
+=== TRAINER_FERRA_HNS ===
+Name: FERRA
+Class: Cooltrainer Hns
+Pic: Cooltrainer F
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Skarmory @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Iron Head
+- Spikes
+- Toxic
+- Substitute
+
+Forretress @ Sitrus Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Iron Head
+- Spikes
+- Earthquake
+- Substitute
+
+Scizor @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Bullet Punch
+- X-Scissor
+- Iron Head
+- Swords Dance
+
+=== TRAINER_LILA_ASPIRANTE_HNS ===
+Name: LILA
+Class: Cooltrainer Hns
+Pic: Cooltrainer F
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Granbull @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Play Rough
+- Return
+- Earthquake
+- Substitute
+
+Togetic @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Dazzling Gleam
+- Calm Mind
+- Roost
+- Toxic
+
+Wigglytuff @ Sitrus Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Dazzling Gleam
+- Calm Mind
+- Toxic
+- Rest
+

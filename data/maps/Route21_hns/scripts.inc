@@ -4,6 +4,8 @@ Route21_hns_MapScripts::
 	.byte 0
 
 Route21_OnTransition:
+	call HeartSoul_EventScript_CheckAel
+	call HeartSoul_EventScript_CheckOrin
 	callnative SetTimeBasedEncounters
 	end
 

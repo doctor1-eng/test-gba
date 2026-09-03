@@ -121,6 +121,9 @@
 #define VAR_PERSUASION_TERRENCE                         0x40DC
 #define VAR_PERSUASION_KESS                             0x40DD
 #define VAR_DIALOGUE_BLUE                               0x40DE
+// histoire.md section 12 : compteur global d'aspirants Champions battus au moins une fois
+// (condition de coda de l'epilogue exemplaire, >= 6).
+#define VAR_ASPIRANTS_BATTUS                            0x40DF
 #define VAR_UNUSED_HNS_0x40DF                           0x40DF
 #define VAR_UNUSED_HNS_0x40E0                           0x40E0
 #define VAR_UNUSED_HNS_0x40E1                           0x40E1

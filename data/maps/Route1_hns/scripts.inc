@@ -3,7 +3,8 @@ Route1_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
-Route1_OnTransition: 
+Route1_OnTransition:
+	call HeartSoul_EventScript_CheckCorvin
 	callnative SetTimeBasedEncounters
 	end
 

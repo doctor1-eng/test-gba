@@ -3,6 +3,7 @@ CeladonCity_hns_MapScripts::
 	.byte 0
 
 CeladonCity_EventScript_CityEnter::
+	call HeartSoul_EventScript_CheckLila
 	setflag FLAG_VISITED_CELADON_CITY
 	end
 

@@ -3,6 +3,7 @@ ViridianForest_hns_MapScripts::
 	.byte 0
 
 ViridianForest_hns_OnTransition::
+	call HeartSoul_EventScript_CheckNao
 	goto_if_ge VAR_VIRIDIAN_FOREST_PICHU, 1, ViridianForest_hns_NoOp
 	specialvar VAR_RESULT, CheckCelebi
 	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_SetPichu

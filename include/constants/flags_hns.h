@@ -1227,7 +1227,47 @@
 #define FLAG_SABRINA_CONVAINCUE                     (HNS_EXTENDED_CONTENT_START + 337)
 #define FLAG_JANINE_CONVAINCUE                      (HNS_EXTENDED_CONTENT_START + 338)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  339
+// histoire.md section 11 : 18 evenements narratifs supplementaires. Evenement 17 (sauvetage
+// de Blaine) deja couvert par la scene de retrouvailles a Seafoam (FLAG_BLAINE_SAUVE,
+// implementee en Acte IV) - pas de nouveau flag necessaire pour celui-la.
+#define FLAG_POKEMON_BLESSE_SAUVE                   (HNS_EXTENDED_CONTENT_START + 339)
+#define FLAG_MARIN_ROUTE21_RENCONTRE                 (HNS_EXTENDED_CONTENT_START + 340)
+#define FLAG_PROFESSEUR_PALLET_RESOLU                (HNS_EXTENDED_CONTENT_START + 341)
+#define FLAG_DISCOURS_BLUE_ENTENDU                   (HNS_EXTENDED_CONTENT_START + 342)
+#define FLAG_PHOTO_BLAINE_VUE                        (HNS_EXTENDED_CONTENT_START + 343)
+#define FLAG_EMBUSCADE_RECON_VAINCUE                 (HNS_EXTENDED_CONTENT_START + 344)
+#define FLAG_CHAMPION_ALLIE_SAUVE                    (HNS_EXTENDED_CONTENT_START + 345)
+#define FLAG_EBOULEMENT_ROCKTUNNEL_VU                (HNS_EXTENDED_CONTENT_START + 346)
+#define FLAG_SUBORDONNE_ADMIRATIF_VAINCU             (HNS_EXTENDED_CONTENT_START + 347)
+#define FLAG_SCISSION_CLAN_VUE                       (HNS_EXTENDED_CONTENT_START + 348)
+
+// histoire.md section 12 : 8 aspirants Champions (rencontres aleatoires). Un flag de
+// visibilite (FLAG_HIDE_*, controle par le MAP_SCRIPT_ON_TRANSITION de leur route) + un flag
+// de premiere victoire (FLAG_*_RENCONTRE, incremente VAR_ASPIRANTS_BATTUS une seule fois) par
+// aspirant. Niveau des 8 equipes fixe a 34 (simplification assumee et documentee : le fork
+// n'expose pas de mise a l'echelle dynamique sur le niveau moyen d'equipe au niveau script -
+// GetHighestLevelInPlayerParty existe cote C pour la Battle Frontier mais rien d'equivalent
+// n'est accessible depuis un trainerbattle_single classique sans nouveau code moteur, hors
+// perimetre de ce chantier - coherent avec le niveau plat 34 deja utilise partout ailleurs
+// dans Heart & Soul).
+#define FLAG_HIDE_AEL                                (HNS_EXTENDED_CONTENT_START + 349)
+#define FLAG_AEL_RENCONTRE                           (HNS_EXTENDED_CONTENT_START + 350)
+#define FLAG_HIDE_NAO                                (HNS_EXTENDED_CONTENT_START + 351)
+#define FLAG_NAO_RENCONTRE                           (HNS_EXTENDED_CONTENT_START + 352)
+#define FLAG_HIDE_ROOK                               (HNS_EXTENDED_CONTENT_START + 353)
+#define FLAG_ROOK_RENCONTRE                          (HNS_EXTENDED_CONTENT_START + 354)
+#define FLAG_HIDE_IRIS_ASPIRANTE                     (HNS_EXTENDED_CONTENT_START + 355)
+#define FLAG_IRIS_ASPIRANTE_RENCONTRE                (HNS_EXTENDED_CONTENT_START + 356)
+#define FLAG_HIDE_ORIN                               (HNS_EXTENDED_CONTENT_START + 357)
+#define FLAG_ORIN_RENCONTRE                          (HNS_EXTENDED_CONTENT_START + 358)
+#define FLAG_HIDE_CORVIN                             (HNS_EXTENDED_CONTENT_START + 359)
+#define FLAG_CORVIN_RENCONTRE                        (HNS_EXTENDED_CONTENT_START + 360)
+#define FLAG_HIDE_FERRA                              (HNS_EXTENDED_CONTENT_START + 361)
+#define FLAG_FERRA_RENCONTRE                         (HNS_EXTENDED_CONTENT_START + 362)
+#define FLAG_HIDE_LILA_ASPIRANTE                     (HNS_EXTENDED_CONTENT_START + 363)
+#define FLAG_LILA_ASPIRANTE_RENCONTRE                (HNS_EXTENDED_CONTENT_START + 364)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  365
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

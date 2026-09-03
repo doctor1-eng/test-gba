@@ -663,9 +663,21 @@
 #define TRAINER_KESS_LIGHT_HNS                636
 // Mira Voss (Silph Co, Acte IV) - dernier lieutenant, combat direct.
 #define TRAINER_MIRA_VOSS_HNS                 637
+// histoire.md section 11 : 2 combats mineurs (evenements 8 et 13).
+#define TRAINER_PATROUILLE_RECON_HNS          638
+#define TRAINER_SUBORDONNE_ADMIRATIF_HNS      639
+// histoire.md section 12 : 8 aspirants Champions.
+#define TRAINER_AEL_HNS                       640
+#define TRAINER_NAO_HNS                       641
+#define TRAINER_ROOK_HNS                      642
+#define TRAINER_IRIS_ASPIRANTE_HNS            643
+#define TRAINER_ORIN_HNS                      644
+#define TRAINER_CORVIN_HNS                    645
+#define TRAINER_FERRA_HNS                     646
+#define TRAINER_LILA_ASPIRANTE_HNS            647
 
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       638
+#define TRAINERS_COUNT_HNS                       648
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

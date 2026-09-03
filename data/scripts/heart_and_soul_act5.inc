@@ -192,6 +192,10 @@ HeartSoul_EpilogueExemplaire_SkipKess:
 	msgbox HeartSoul_Text_EpilogueExemplaireFin, MSGBOX_DEFAULT
 	setflag FLAG_ZONE_BONUS_DEBLOQUEE
 	msgbox HeartSoul_Text_EpilogueZoneBonus, MSGBOX_DEFAULT
+	goto_if_ge VAR_ASPIRANTS_BATTUS, 6, HeartSoul_EpilogueExemplaire_CodaAspirants
+	return
+HeartSoul_EpilogueExemplaire_CodaAspirants:
+	msgbox HeartSoul_Text_EpilogueCodaAspirants, MSGBOX_DEFAULT
 	return
 
 HeartSoul_Epilogue_Skip:
@@ -361,3 +365,13 @@ HeartSoul_Text_EpilogueZoneBonus:
 	.string "Un accès aux sous-sols du\n"
 	.string "POKéMON MANSION est désormais\l"
 	.string "ouvert.$"
+
+HeartSoul_Text_EpilogueCodaAspirants:
+	.string "La Ligue KANTO annonce la\n"
+	.string "création de nouvelles Arènes\l"
+	.string "officielles, pour les types\l"
+	.string "que personne n'avait pris au\l"
+	.string "sérieux.\p"
+	.string "Les dresseurs que tu as\n"
+	.string "croisés en chemin y sont\l"
+	.string "nommés Champions.$"

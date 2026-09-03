@@ -4,7 +4,8 @@ SeafoamIslands_1F_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SeafoamIslands_1F_SetHoleWarp
 	.byte 0
 
-SeafoamIslands_1F_OnTransition: 
+SeafoamIslands_1F_OnTransition:
+	call HeartSoul_EventScript_CheckIris
 	setvar VAR_ICE_STEP_COUNT, 1
 	end
 

@@ -3,7 +3,8 @@ RockTunnel_1F_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
 	.byte 0
 
-RockTunnel_1F_OnTransition: 
+RockTunnel_1F_OnTransition:
+	call HeartSoul_EventScript_CheckFerra
 	callnative SetTimeBasedEncounters
 	end
 
