@@ -1935,3 +1935,43 @@ Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**.
 
 **Toujours non testé en jeu** - priorité de test : confirmer que Blaine est désormais visible
 dès l'arrivée sur la carte extérieure, en plus du Grunt (déjà confirmé fonctionnel).
+
+## Cutscene d'ouverture (Acte I), 7e passe — éclair visuel + 2e Grunt distinct
+
+Blaine confirmé visible par l'utilisateur après la 6e passe. Nouvelle demande, cette fois une
+évolution de mise en scène plutôt qu'une correction de bug : un véritable éclair visuel
+(écran blanc, pas juste le texte) au moment du texte « Un éclair jaillit... », Blaine ET le
+1er Grunt qui disparaissent tous les deux pendant cet écran blanc, puis un **2e Grunt distinct**
+qui marche vers le joueur après l'écran blanc pour engager le combat (plutôt que le 1er Grunt
+qui se retournait, motif de la 1ère passe).
+
+**Éclair** : `playse SE_THUNDER` + `fadescreenswapbuffers FADE_TO_WHITE` (au lieu de
+`FADE_TO_BLACK`) juste après le msgbox `HeartSoul_Text_EclatCombat`. `FADE_TO_WHITE`/
+`FADE_FROM_WHITE` vérifiés existants dans `include/constants/field_weather.h` avant usage
+(valeurs 3/2), acceptés tels quels par `fadescreenswapbuffers` (même macro que
+`FADE_TO_BLACK`/`FADE_FROM_BLACK` déjà utilisés partout ailleurs).
+
+**Disparition simultanée** : `setflag`+`removeobject` pour Blaine ET pour le 1er Grunt
+(`LOCALID_CINNABAR_GRUNT_INTRO`) sont maintenant tous les deux placés **avant** le
+`fadescreenswapbuffers FADE_FROM_WHITE` - donc bien pendant que l'écran est blanc, pas après.
+
+**2e Grunt** (`LOCALID_CINNABAR_GRUNT2`, nouvel `object_event` sur `CinnabarIsland_hns`,
+14e entrée) : appliqué la même leçon que pour Blaine et le 1er Grunt lors des passes
+précédentes - un objet qui doit être visible dès son entrée en scène ne peut pas être révélé
+par un `clearflag` après le chargement de la carte (cause racine déjà documentée deux fois plus
+haut), donc **jamais caché** avant ce point (`FLAG_HIDE_CINNABAR_GRUNT2` alloué mais seulement
+posé après le combat, jamais avant). Position de départ (44,31) et chemin de marche (5 cases
+vers l'ouest) vérifiés par décodage de `map.bin`, même rangée que le joueur après son recul -
+collision nulle sur tout le trajet. Réutilise le même trainer
+(`TRAINER_ROCKET_GRUNT_CINNABAR_HNS`) plutôt que d'en créer un nouveau - c'est une évolution de
+mise en scène (deux sprites Grunt) demandée par l'utilisateur, pas une nouvelle rencontre
+narrative distincte.
+
+**1 nouveau flag** (`FLAG_HIDE_CINNABAR_GRUNT2`, `flags_hns.h` +373,
+`HNS_EXTENDED_CONTENT_COUNT` 373→374).
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**.
+`HeartSoul_EventScript_CinnabarAttackPart2` et `CinnabarIsland_EventScript_Grunt2Unused`
+confirmés dans `pokehns.map`. ROM 31723492 octets, 94.54% ROM, 94.47% EWRAM, 78.37% IWRAM.
+
+**Non testé en jeu.**

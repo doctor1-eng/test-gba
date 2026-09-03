@@ -27,10 +27,10 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 ## 3. Attaque de Cinnabar (Acte I)
 
 - [ ] Après le premier message d'alarme, un fondu au noir doit vous téléporter automatiquement sur la carte extérieure de Cinnabar (près de Blaine), **pas** rester dans le Centre Pokémon.
-- [ ] **⚠️ Point de test prioritaire (corrigé, à vérifier en premier)** : une fois sur la carte extérieure, **le sprite de Blaine doit être visible** (immobile ou en train de regarder autour de lui) juste à côté de vous. Si aucun personnage n'est visible sur la carte, c'est le point exact à signaler.
-- [ ] Toujours sur la carte extérieure : un Grunt Team Rocket (sprite visible) entre en marchant vers Blaine, Blaine réagit (point d'exclamation) puis marche pour se placer entre le Grunt et vous, vous reculez d'une case — tout ceci doit être **visible à l'écran**, pas seulement raconté en texte.
-- [ ] Après le flash/l'impact : fondu au noir, Blaine disparaît (son sprite n'est plus là au fondu suivant).
-- [ ] Le même Grunt (sprite visible) se retourne alors vers vous et lance un **combat forcé** (pas de choix, pas de fuite possible), équipe niveau ~34. Après la victoire, le texte confirme que le passage vers le Mont Cinnabar est libre et le sprite du Grunt disparaît.
+- [ ] Une fois sur la carte extérieure : Blaine est visible juste à côté de vous, et un premier Grunt Team Rocket (sprite visible) entre en marchant vers lui. Blaine réagit (point d'exclamation) puis marche pour se placer entre le Grunt et vous, vous reculez d'une case — tout ceci doit être **visible à l'écran**.
+- [ ] **Nouveau** : au texte « Un éclair jaillit derrière toi... », un vrai éclair se produit — un son de tonnerre puis l'écran devient **blanc** (pas noir).
+- [ ] Pendant que l'écran est blanc : Blaine **et** le premier Grunt disparaissent tous les deux. Au retour de l'écran blanc, aucun des deux ne doit plus être visible.
+- [ ] Un **second** Grunt (sprite distinct du premier) apparaît alors et marche vers vous pour engager le **combat forcé** (pas de choix, pas de fuite possible), équipe niveau ~34. Après la victoire, le texte confirme que le passage vers le Mont Cinnabar est libre et son sprite disparaît.
 - [ ] Choix réfugiés (guider / cacher) : les deux options fonctionnent, message de résultat cohérent.
 - [ ] Message de fuite → fondu au noir → **téléportation automatique à Pallet Town**, sans avoir à marcher ni utiliser un CS Fly.
 - [ ] Essayer de retourner vers Cinnabar (Route 21, vers le sud) : le jeu doit repousser le joueur avec un message, pas de possibilité d'entrer.

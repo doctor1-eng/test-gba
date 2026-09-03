@@ -1296,7 +1296,12 @@
 // cours de route (ex. au retour du combat).
 #define FLAG_ATTAQUE_CINNABAR_PART2_LANCEE            (HNS_EXTENDED_CONTENT_START + 372)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  373
+// 2e Grunt (LOCALID_CINNABAR_GRUNT2, MAP_CINNABAR_ISLAND_HNS) : n'apparait qu'apres l'eclair -
+// jamais cache avant ce point (meme motif que FLAG_HIDE_CINNABAR_GRUNT_INTRO), pose seulement
+// pour le faire disparaitre apres le combat.
+#define FLAG_HIDE_CINNABAR_GRUNT2                     (HNS_EXTENDED_CONTENT_START + 373)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  374
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

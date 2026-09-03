@@ -116,18 +116,21 @@ HeartSoul_EventScript_CinnabarAttackPart2::
 	applymovement LOCALID_PLAYER, HeartSoul_Movement_JoueurRecule
 	waitmovement 0
 	msgbox HeartSoul_Text_EclatCombat, MSGBOX_DEFAULT
-	fadescreenswapbuffers FADE_TO_BLACK
+	playse SE_THUNDER
+	fadescreenswapbuffers FADE_TO_WHITE
 	setflag FLAG_HIDE_CINNABAR_BLAINE
 	removeobject LOCALID_CINNABAR_BLAINE
 	setflag FLAG_BLAINE_DISPARU
-	fadescreenswapbuffers FADE_FROM_BLACK
+	setflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
+	removeobject LOCALID_CINNABAR_GRUNT_INTRO
+	fadescreenswapbuffers FADE_FROM_WHITE
 	msgbox HeartSoul_Text_BlaineDisparu, MSGBOX_DEFAULT
-	applymovement LOCALID_CINNABAR_GRUNT_INTRO, HeartSoul_Movement_GruntSeRetourne
+	applymovement LOCALID_CINNABAR_GRUNT2, HeartSoul_Movement_Grunt2Approche
 	waitmovement 0
 	trainerbattle_single TRAINER_ROCKET_GRUNT_CINNABAR_HNS, HeartSoul_Text_GruntSeen, HeartSoul_Text_GruntBeaten
 	msgbox HeartSoul_Text_GruntApresBattle, MSGBOX_DEFAULT
-	setflag FLAG_HIDE_CINNABAR_GRUNT_INTRO
-	removeobject LOCALID_CINNABAR_GRUNT_INTRO
+	setflag FLAG_HIDE_CINNABAR_GRUNT2
+	removeobject LOCALID_CINNABAR_GRUNT2
 	msgbox HeartSoul_Text_SauvetageIntro, MSGBOX_DEFAULT
 HeartSoul_CinnabarAttack_SauvetageChoice:
 	dynmultipush HeartSoul_Text_SauvetageCentre, 0
@@ -222,14 +225,29 @@ HeartSoul_Movement_JoueurRecule:
 	face_left
 	step_end
 
-HeartSoul_Movement_GruntSeRetourne:
-	face_down
+// Evenement 0bis (retour utilisateur) : un 2e Grunt distinct, jamais cache avant ce point (meme
+// motif deja eprouve pour le 1er Grunt et pour Blaine - un objet qui doit etre visible/mobile
+// des le debut de la choregraphie ne peut pas etre revele par un clearflag apres coup, cause
+// racine documentee plus haut), qui marche vers le joueur juste apres l'eclair pour engager le
+// combat. Position de depart (44,31) et chemin de marche verifies par decodage de
+// data/layouts/CinnabarIsland_hns/map.bin (collision nulle, meme rangee que le joueur apres son
+// recul).
+HeartSoul_Movement_Grunt2Approche:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_left
 	step_end
 
-// Placeholder requis par le format object_event (script jamais reellement declenche : l'objet
-// est verrouille sous lockall pendant toute la fenetre ou il est visible, puis retire par
-// removeobject des la fin du combat).
+// Placeholders requis par le format object_event (scripts jamais reellement declenches : les
+// deux objets sont verrouilles sous lockall pendant toute leur fenetre de visibilite, puis
+// retires par removeobject).
 CinnabarIsland_EventScript_GruntIntroUnused::
+	end
+
+CinnabarIsland_EventScript_Grunt2Unused::
 	end
 
 HeartSoul_Text_AttaqueDebut:

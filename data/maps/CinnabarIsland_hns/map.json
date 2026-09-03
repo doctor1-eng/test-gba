@@ -196,6 +196,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CinnabarIsland_EventScript_GruntIntroUnused",
       "flag": "FLAG_HIDE_CINNABAR_GRUNT_INTRO"
+    },
+    {
+      "local_id": "LOCALID_CINNABAR_GRUNT2",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
+      "x": 44,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CinnabarIsland_EventScript_Grunt2Unused",
+      "flag": "FLAG_HIDE_CINNABAR_GRUNT2"
     }
   ],
   "warp_events": [
