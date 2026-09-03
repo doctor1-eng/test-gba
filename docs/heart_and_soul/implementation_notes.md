@@ -1499,3 +1499,94 @@ aspirants confirmés dans `pokehns.map`. ROM 31718596 octets, 94.53 % ROM, 94.47
 
 **Non testé en jeu.** Suite : section 11 (18 événements narratifs) à implémenter dans la
 foulée, dans le même chantier.
+
+## Section 11 implémentée — les 18 événements narratifs supplémentaires
+
+Suite directe du chantier « attaque les deux blocs » (section 12 ci-dessus). Les 18 événements
+listés dans `histoire.md` section 11 (Actes I à V) sont maintenant tous couverts, avec deux
+stratégies d'implémentation selon le type d'événement :
+
+- **Repli dans une scène/dialogue déjà scriptée** (événements 1-6, 9-16, 18) : pas de nouvel
+  `object_event`/`bg_event`, juste un `msgbox` supplémentaire inséré dans une séquence
+  `call`/`return` existante (même motif que les scènes de doute Pierre/Ondine/Erika/etc.).
+  Choix délibéré pour éviter de multiplier les arrêts scriptés dans des zones déjà denses en
+  contenu (Acte III/IV en particulier), et pour ne pas risquer de nouveaux conflits de
+  placement de sprite comme ceux déjà rencontrés en section 12.
+- **Nouveau placement** (événements 7, 8, 13) : aucune scène existante ne s'y prêtait
+  naturellement, donc nouveau fichier `data/scripts/heart_and_soul_evenements.inc` + nouveaux
+  `bg_event`/`object_events` sur `PewterCity_hns`, `Route3_hns`, `CeladonCity_hns` (positions
+  vérifiées par décodage de `map.bin`, même méthode que toute la session). Fichier ajouté à
+  `data/event_scripts.s`.
+
+**Détail par événement** :
+- **1-4 (Acte I, chute de Cinnabar)** : choix de sauvetage (Centre Pokémon/Arène), carnet du
+  grunt trouvé, choix pour un Pokémon blessé, marin sur la Route 21 pendant la tempête — repliés
+  dans `heart_and_soul_act1.inc`.
+- **5-6 (Acte II)** : jeune dresseur à Jadielle (`heart_and_soul_act2.inc`), commerçant
+  d'Argenta réagissant au discours radio de Blue (`HeartSoul_Text_DiscoursBlueRadio` — voir bug
+  ci-dessous).
+- **7 (Pewter, panneau photo de Blaine)** et **8 (Route 3, embuscade de reconnaissance)** :
+  nouveau fichier `heart_and_soul_evenements.inc`, guardés respectivement par
+  `FLAG_ACTE_1_TERMINE` (sign, `MSGBOX_SIGN`) et un `trainerbattle_single` mineur
+  (`TRAINER_PATROUILLE_RECON_HNS`).
+- **9 (légende du Mont Sélénite)** : déjà présent dans le jeu de base, aucun changement requis.
+- **10 (capture d'un Champion allié)** et **11 (éboulement du Rock Tunnel)** : texte replié
+  autour de la séquence Selen/Terrence dans `heart_and_soul_act3.inc`.
+- **12 (labo caché de la Zone Safari)** : texte replié avant la séquence de conviction de Kess
+  (`heart_and_soul_act4.inc`, `HeartSoul_Text_LaboCacheSafari`).
+- **13 (Céladopole, subordonné admiratif)** : nouveau `trainerbattle_single` optionnel dans
+  `heart_and_soul_evenements.inc` (`TRAINER_SUBORDONNE_ADMIRATIF_HNS`), défaite ébranlant ses
+  certitudes sans le convertir (pas de flag de conviction, juste `FLAG_SUBORDONNE_ADMIRATIF_VAINCU`).
+- **14 (scission du clan de Janine)** : texte replié dans
+  `HeartSoul_EventScript_JanineConvaincue` (`heart_and_soul_act4.inc`), affiché une seule fois
+  juste après l'obtention du badge — pas de nouveau combat pour ne pas ouvrir un second
+  affrontement facultatif immédiatement après celui qui vient de se terminer.
+- **15 (piste de Blaine) et 16 (alarme de Silph Co)** : repliés dans
+  `SaffronCity_SilphCo_EventScript_MiraVoss` (`heart_and_soul_act4.inc`). **Décision
+  documentée** : l'événement 15 est réinterprété en fragment *rétrospectif* plutôt qu'en
+  véritable indice de recherche, car la décision utilisateur du 2026-09-02 a déjà résolu les
+  retrouvailles avec Blaine à Seafoam plus tôt dans l'Acte IV (voir
+  `HeartSoul_EventScript_BlaineRetrouve`) — le registre trouvé ici confirme donc ce que le
+  joueur sait déjà, cohérent avec la règle « ne pas contredire une décision déjà prise ».
+  L'événement 16 (« passage en infiltration, éviter des patrouilles ») n'a pas de mécanique de
+  furtivité scriptable dans ce moteur sans nouveau code C (hors périmètre) ; implémenté comme
+  un simple beat de texte (alarme, urgence) juste avant le combat de Mira Voss.
+- **17 (sauvetage de Blaine)** : **aucun changement de code** — déjà entièrement couvert par
+  `HeartSoul_EventScript_BlaineRetrouve` (Acte IV, Seafoam), implémenté lors d'un chantier
+  précédent. Simple note de documentation, pas un nouvel événement.
+- **18 (retour des alliés avant Blue)** : texte ajouté en tête de
+  `HeartSoul_EventScript_BlueConfrontation` (`heart_and_soul_act5.inc`), avec 4 variantes selon
+  que Terrence et/ou Kess ont été *convaincus* (`FLAG_TERRENCE_CONVAINCU`/
+  `FLAG_KESS_CONVAINCUE`, pas seulement vaincus) — matérialise concrètement le score de
+  réputation accumulé sans dupliquer le calcul des épilogues plus bas dans le même fichier.
+  Guardé par un nouveau flag (`FLAG_RETOUR_ALLIES_VU`) pour ne s'afficher qu'une fois, même en
+  cas de défaite et de nouvelle tentative contre Blue.
+
+**3 nouveaux flags** ajoutés à `flags_hns.h` (`FLAG_PISTE_BLAINE_VUE`,
+`FLAG_ALARME_SILPHCO_VUE`, `FLAG_RETOUR_ALLIES_VU`), `HNS_EXTENDED_CONTENT_COUNT` 365 → 368
+(le flag `FLAG_SCISSION_CLAN_VUE` de l'événement 14 était déjà alloué lors du lot de section
+12).
+
+**Bug de charset attrapé après un premier build en échec** : `HeartSoul_Text_DiscoursBlueRadio`
+(événement 6) utilisait des guillemets droits (`\"`) autour d'une citation de Blue —
+`charmap.txt` ne mappe ni les guillemets droits/courbes ni le tiret cadratin (même limitation
+déjà documentée plusieurs fois cette session, ex. retrouvailles de Blaine). `preproc` a rejeté
+la compilation avec « no mapping exists for double quote » (`data/scripts/
+heart_and_soul_act2.inc:190`). Corrigé en discours indirect, sans guillemets, plutôt qu'en
+devinant un caractère de remplacement. Vérification systématique faite ensuite sur tous les
+fichiers modifiés de ce chantier (script Python, recherche de `\"`, guillemets courbes et tiret
+cadratin) : aucune autre occurrence.
+
+Build de contrôle (après correction) : `make hns -j$(nproc)` → **PASS, 0 erreur**. Symboles des
+3 nouveaux events de `heart_and_soul_evenements.inc` confirmés dans `pokehns.map`
+(`PewterCity_EventScript_PhotoBlaine`, `Route3_EventScript_PatrouilleRecon`,
+`CeladonCity_EventScript_SubordonneAdmiratif`). ROM 31722996 octets, 94.54 % ROM, 94.47 %
+EWRAM, 78.37 % IWRAM.
+
+**Non testé en jeu.** Checklist de test mise à jour (`quick_test_checklist.md`, sections 17-18)
+pour couvrir les 8 aspirants (section 12) et les 18 événements (section 11) — sections
+manquantes lors du commit précédent, ajoutées dans ce même chantier.
+
+Sections 11 et 12 de `histoire.md` sont maintenant toutes les deux entièrement implémentées et
+compilées. Ancienne section « Points ouverts » (désormais section 13) toujours en attente,
+comme documenté plus haut.
