@@ -1,0 +1,11 @@
+# Le moteur pokeemerald-expansion n'est pas versionné ici (voir INSTALL.md) :
+# trop volumineux (assets graphiques/sonores communs à tous les hacks du moteur).
+# Il se reconstruit via `git clone` + copie de changed_files/ (voir INSTALL.md).
+engine/
+tools/qa_harness/qa_runner
+__pycache__/
+
+# Sorties de scan regenerables via tools/rom_ripper/scan_rom.py + find_palettes.py, propres a une
+# ROM externe fournie hors depot (pas de valeur a versionner, juste du cache d'analyse).
+tools/rom_ripper/candidates.json
+tools/rom_ripper/palette_candidates.txt

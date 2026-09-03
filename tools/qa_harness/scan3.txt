@@ -1,0 +1,8 @@
+1900 0
+SHOT title_ready.png
+5 8
+60 0
+SHOT after_start.png
+5 1
+60 0
+SHOT after_a.png

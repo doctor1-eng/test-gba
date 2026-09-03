@@ -1,0 +1,9 @@
+1900 0
+5 8
+60 0
+5 1
+60 0
+SHOT menu01.png
+5 8
+40 0
+SHOT menu02.png

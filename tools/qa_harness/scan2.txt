@@ -1,0 +1,12 @@
+600 0
+SHOT far_01.png
+600 0
+SHOT far_02.png
+600 0
+SHOT far_03.png
+600 0
+SHOT far_04.png
+600 0
+SHOT far_05.png
+600 0
+SHOT far_06.png

@@ -1,0 +1,21 @@
+{
+    "id": "MAP_VIRIDIAN_CITY_KANTO_DEMO",
+    "name": "ViridianCityKantoDemo",
+    "layout": "LAYOUT_VIRIDIAN_CITY_KANTO_DEMO",
+    "music": "MUS_LITTLEROOT",
+    "region": "REGION_HOENN",
+    "region_map_section": "MAPSEC_NONE",
+    "requires_flash": false,
+    "weather": "WEATHER_SUNNY",
+    "map_type": "MAP_TYPE_TOWN",
+    "allow_cycling": true,
+    "allow_escaping": true,
+    "allow_running": true,
+    "show_map_name": false,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": [],
+    "object_events": [],
+    "warp_events": [],
+    "coord_events": [],
+    "bg_events": []
+}
