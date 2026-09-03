@@ -319,8 +319,82 @@ Dernière ligne : *"Pour une fois, Kanto entier a regardé dans la même directi
 
 **Après défaite** : il ne se rend pas au sens classique — il s'assoit simplement, indifférent à la suite, laissant le joueur libre d'accéder aux archives. Aucune rédemption, aucune conversion : juste la fin d'une attente qui n'avait plus de sens.
 
-## 12. Points ouverts
+## 11. Événements supplémentaires par acte
+
+Ces événements s'insèrent dans la trame existante sans la modifier — ils l'étoffent en ajoutant des respirations, des rebondissements et des liens entre les fils narratifs déjà posés (Blaine, les lieutenants, la réputation).
+
+### Acte I — La chute de Cinnabar
+
+1. **Le choix du premier sauvetage** — pendant l'attaque, le joueur doit choisir entre sécuriser le Centre Pokémon (soigner les blessés) ou les archives de l'Arène (protéger son propre badge/titre). Choix rapide, sans jugement moral appuyé, mais qui teste immédiatement la personnalité qu'on prête au joueur. *(+1 réputation si Centre Pokémon choisi, 0 si Arène — cohérent avec le barème existant.)*
+2. **Le carnet du grunt** — un Rocket Grunt en fuite laisse tomber un carnet de codes radio. Objet de lore qui prépare la quête d'interception de Vermilion (section 8) — le joueur comprend plus tard à quoi il servait.
+3. **Le Pokémon blessé** — un Pokémon sauvage errant, blessé par les combats, peut être soigné et suit le joueur de façon informelle (pas un membre d'équipe, un "compagnon" cosmétique/narratif) jusqu'à un moment clé de l'Acte V où il joue un petit rôle (aide à localiser Blaine, par exemple).
+
+### Acte II — L'exil et la méfiance
+
+4. **La tempête de Route 21** — la traversée est interrompue par une tempête ; un marin secondaire aide à accoster en urgence. Il réapparaît en Acte V pour organiser le retour par mer vers Cinnabar.
+5. **La disparition du Professeur** — à Pallet Town, la rumeur circule que le professeur local s'est terré, redoutant des représailles Rocket. Sous-intrigue qui peut rester non résolue (renforce le sentiment de monde qui se fissure) ou se refermer brièvement en Acte IV.
+6. **Le discours de Blue à la radio** — à Viridian, une annonce publique de Blue expose pour la première fois sa position ("la Ligue protège une élite") directement aux habitants. Premier moment où le joueur — et le joueur seul jusque-là — comprend qu'il n'est pas un simple criminel aux yeux de tous.
+7. **La photo de Blaine** — à Pewter, un vieux cliché ou une lettre révèle un pan du passé du joueur avec Blaine, humanisant leur lien avant même de savoir s'il est vivant.
+
+### Acte III — L'ampleur du réseau
+
+8. **L'embuscade de reconnaissance** — entre deux zones ouvertes, une petite patrouille Rocket teste le joueur avant les vrais lieutenants (obstacle mineur, pas un boss).
+9. **La légende du Mont Sélénite** — fragments de folklore Clefairy trouvés en jeu, qui nourrissent la scène avec Selen sans être indispensables à la comprendre.
+10. **La capture d'un Champion allié** — un des Champions déjà ralliés (Pierre ou Ondine, à choisir selon le scénario) est brièvement capturé par la Team Rocket, forçant un petit arc de sauvetage avant de poursuivre l'Acte III. Renforce l'idée que personne n'est à l'abri, y compris les alliés du joueur.
+11. **L'éboulement du Rock Tunnel** — juste avant Terrence, un effondrement force une alliance temporaire contre un Pokémon sauvage en furie. Ce moment humanise Terrence avant la séquence de conviction, sans changer son barème de points.
+
+### Acte IV — La reconquête
+
+12. **Le laboratoire caché de la Zone Safari** — découverte d'anciennes installations d'expérimentation héritées de l'ère Giovanni, faisant écho aux carnets de Blaine (Acte I) et annonçant les révélations finales sur les archives du Mansion.
+13. **Le subordonné admiratif** — à Céladopole, un dresseur travaillant pour Blue, sincèrement convaincu par son discours mais pas violent, défie le joueur dans un combat optionnel. Sa défaite ébranle ses certitudes sans le convertir complètement — personnage à réutiliser en post-game si souhaité.
+14. **La scission du clan de Koga** — après le débat (section 8), une faction minoritaire du clan, en désaccord avec le choix du joueur, tente un sabotage isolé. Conséquence directe et visible du choix fait, sans bloquer la progression.
+15. **La piste de Blaine** — à Silph Co, un registre de détention ou un badge confisqué confirme où Blaine est retenu, préparant sa scène de sauvetage en Acte V.
+16. **L'alarme de Silph Co** — avant Mira Voss, un passage en infiltration (éviter des patrouilles plutôt que combattre) casse le rythme purement frontal de l'Acte IV.
+
+### Acte V — Confrontation finale
+
+17. **Le sauvetage de Blaine** — scène dédiée, distincte de la simple mention en épilogue : le joueur le retrouve physiquement avant l'assaut final sur le Mansion, ce qui conditionne `FLAG_BLAINE_SAUVE` (utilisé dans les épilogues).
+18. **Le retour des alliés** — juste avant la confrontation avec Blue, les lieutenants convertis (Terrence, Kess) et les Champions ralliés apparaissent brièvement pour sécuriser l'accès au Mansion — scène collective qui matérialise concrètement le score de réputation accumulé, avant même de connaître le palier d'épilogue.
+
+## 12. Champions d'arène en devenir (rencontres aléatoires)
+
+**Concept** : en résonance directe avec le thème central de l'histoire — un système de Ligue qui ne reconnaît pas tous les talents également (l'argument même de Blue) — Kanto compte des dresseurs qui s'entraînent pour devenir les **prochains Champions d'Arène**, sur des types encore non représentés officiellement (Vol, Insecte, Combat, Glace, Dragon, Ténèbres, Acier, Fée). Ils apparaissent en **rencontre aléatoire** sur des routes précises, indépendamment de la progression de l'histoire — un joueur peut en croiser dès l'Acte II comme ne jamais en croiser un seul en fin de partie s'il ne s'attarde pas.
+
+Cette mécanique sert directement la durée de vie : contenu optionnel, rejouable, avec un système de revanche à niveau croissant, et un **effet concret sur l'épilogue exemplaire** (voir plus bas).
+
+### Table des 8 aspirants
+
+| Type | Nom | Lieu de rencontre (aléatoire) | Personnalité |
+|---|---|---|---|
+| Vol | **Ael** | Route 21 (traversée maritime) | Discret, observe les Pokémon Vol en vol libre plutôt que de les capturer par la force — philosophie du dressage "par le respect". |
+| Insecte | **Nao** | Viridian Forest | Entomologiste passionné, un peu maladroit socialement, admire en secret l'engagement de Lyre pour la forêt. |
+| Combat | **Rook** | Route entre Fuchsia et Saffron | Ancien élève du dojo de Fuchsia, discipline stricte, méprise les dresseurs qui misent tout sur la puissance brute sans technique. |
+| Glace | **Iris** | Seafoam Islands (zone glacée canonique, proche de Cinnabar/Fuchsia) | Solitaire, peu bavarde, teste le joueur sans prévenir puis s'en va sans grand discours. |
+| Dragon | **Orin** | Route 21 (traversée maritime, rencontre distincte d'Ael) | Fascination quasi religieuse pour les Dragons, discours grandiloquent, sincère plus que théâtral. |
+| Ténèbres | **Corvin** | N'importe quelle route, uniquement **de nuit** | Encounter conditionnée à l'heure du jeu si le fork la supporte — renforce le thème par la mécanique elle-même. |
+| Acier | **Ferra** | Route de la Centrale (Rock Tunnel) | Ancienne apprentie mécanicienne, pragmatique, parle de ses Pokémon comme de machines de précision. |
+| Fée | **Lila** | Céladopole et alentours | Ancienne vendeuse du grand magasin, a quitté son poste après le scandale du financement Rocket (écho à la quête annexe de Céladopole). |
+
+### Mécanique de rencontre
+
+- Sur chaque route concernée, une **vérification aléatoire à faible probabilité** (ex. 1 chance sur 20-30 par entrée sur la carte ou par pas, selon ce que permet le fork) déclenche l'apparition de l'aspirant correspondant, s'il n'a pas déjà été affronté ce jour-ci.
+- **Niveau du combat** : calé sur le niveau moyen de l'équipe du joueur au moment de la rencontre (plutôt qu'un niveau fixe), pour rester pertinent quel que soit le moment où le joueur les croise.
+- **Revanche** : chaque aspirant peut être réaffronté un nombre limité de fois par semaine de jeu (ou via un flag de cooldown simple), avec une équipe renforcée à chaque victoire du joueur — boucle de progression optionnelle façon "VS Seeker".
+
+### Effet sur l'épilogue exemplaire
+
+Si le joueur atteint le palier de réputation "exemplaire" (section 9) **et** a battu au moins 6 des 8 aspirants au moins une fois, une scène de coda s'ajoute à l'épilogue exemplaire : la Ligue Kanto annonce la création de nouvelles Arènes officielles pour ces 8 types, et les aspirants rencontrés y sont nommés Champions — clôture concrète du thème de la méritocratie porté (à tort, dans sa méthode) par Blue tout au long de l'histoire.
+
+### Implémentation technique suggérée
+
+- Un objet événement invisible ou un script de type "wandering NPC" par route concernée, avec vérification `random(X)` à chaque passage et flag journalier de cooldown (`FLAG_DAILY_<NOM>` remis à zéro par un script de changement de jour si le fork en a un, sinon flag simple à usage unique par visite de map).
+- `VAR_ASPIRANTS_BATTUS` : compteur global incrémenté à la première victoire contre chaque aspirant (pas à chaque revanche), utilisé pour la condition de coda (`>= 6`).
+- Niveau de l'équipe adverse calculé dynamiquement à partir du niveau moyen de l'équipe du joueur (`getpartyaveragelevel` ou équivalent selon la version du fork) plutôt que codé en dur.
+
+## 13. Points ouverts
 
 Aucun point majeur ne reste en suspens sur la trame, les personnages et les mécaniques narratives. Restent à trancher, si besoin, des détails de mise en œuvre pure (dialogues additionnels, textes de combat, équilibrage précis des niveaux post-game) — au fur et à mesure du scriptage réel dans le fork.
+
+Les 18 événements de la section 11 et le système des 8 aspirants de la section 12 ne sont pas encore scriptés (`scripts/`) — à faire au fur et à mesure, en suivant le même modèle que les autres fichiers (flags de progression, `addvar` sur `VAR_REPUTATION` quand applicable).
 
 

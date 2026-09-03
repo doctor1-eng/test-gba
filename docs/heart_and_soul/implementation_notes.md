@@ -1426,3 +1426,26 @@ confrontation Blue, épilogue selon réputation). **TECHNICAL PASS, non testé e
   agent. La séquence de dialogue à choix multiples de Blue (la plus longue et la plus visible
   du jeu, 3 questions + branchement réputation + combat + épilogue) n'a jamais été vue à
   l'écran.
+
+## Mise à jour du brief narratif (2026-09-03) — sections 11/12 de histoire.md
+
+L'utilisateur a fourni une version mise à jour de `docs/heart_and_soul/docs/histoire.md` et
+`README.md` (archive `heart-and-soul-project.zip`). Diff systématique avant tout remplacement
+(règle « ne pas écraser silencieusement ») : sections 1-10 de `histoire.md` et les 9 templates
+`.pory` de `scripts/` sont **strictement identiques** à ce qui était déjà dans le dépôt — donc
+aucun risque d'écraser une décision déjà actée. Seul ajout réel, purement additif :
+
+- **Section 11 — 18 événements narratifs supplémentaires**, répartis sur les 5 actes, qui
+  étoffent les fils déjà posés (Blaine, lieutenants, réputation) sans les modifier.
+- **Section 12 — 8 « aspirants Champions »** en rencontre aléatoire (un par type non encore
+  représenté officiellement : Vol/Insecte/Combat/Glace/Dragon/Ténèbres/Acier/Fée), avec
+  mécanique de rencontre (`random`+cooldown journalier), niveau calé sur la moyenne de
+  l'équipe du joueur, système de revanche, et une scène de coda conditionnelle à l'épilogue
+  « exemplaire » (`VAR_ASPIRANTS_BATTUS >= 6`).
+- Ancienne section 11 (« Points ouverts ») renumérotée en section 13 dans la nouvelle version.
+
+`histoire.md` et `README.md` remplacés par les versions fournies (diff confirmé purement
+additif, pas de perte de contenu). **Rien de tout ça n'est encore scripté ni implémenté dans
+le jeu** — c'est un enrichissement du cahier des charges, pas un chantier réalisé. À traiter
+comme les autres chantiers en attente (un lot à la fois, pas mélangé avec le reste), si
+l'utilisateur le demande.
