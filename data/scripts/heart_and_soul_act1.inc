@@ -76,14 +76,21 @@ HeartSoul_CinnabarAttackPart2Check_Skip:
 // Corrige en laissant le Grunt visible des le depart (flag jamais pose avant ce point), meme
 // convention que Blaine et tous les autres PNJ de ce projet - FLAG_HIDE_CINNABAR_GRUNT_INTRO
 // reste utilise plus bas pour le faire disparaitre apres le combat (setflag + removeobject,
-// motif deja eprouve avec Blaine). Un court delay est egalement ajoute avant le premier
-// applymovement : par prudence, le temps que le rendu des object_events se stabilise
-// completement apres un warp scripte (aucune preuve definitive que cela ait contribue au bug
-// signale - Blaine n'a jamais eu son flag touche par ce chantier - mais mitigation standard,
-// peu couteuse, pour ce type de probleme de timing juste apres une transition de carte).
+// motif deja eprouve avec Blaine).
+//
+// 2e correction (retour utilisateur suivant : Grunt visible mais immobile) : ce script tourne
+// sur MAP_SCRIPT_ON_FRAME_TABLE, qui s'execute chaque frame independamment du fondu natif
+// d'entree du warp (WarpFadeInScreen/FieldCB_DefaultWarpExit, src/field_screen_effect.c,
+// declenche automatiquement par DoWarp() une fois la nouvelle carte chargee). Un simple delay
+// de 20 frames (essai precedent) n'etait probablement pas suffisant pour couvrir tout le temps
+// de ce fondu + la mise en place native du warp (SetUpWarpExitTask) : la choregraphie
+// s'executait donc bien, mais en grande partie PENDANT que l'ecran etait encore noir/en train
+// de s'eclaircir - invisible au joueur, pas absente du script. Delay porte a 60 frames (~1
+// seconde) par securite, largement au-dela de la duree d'un fondu standard, pour garantir que
+// l'ecran est completement visible avant le premier applymovement.
 HeartSoul_EventScript_CinnabarAttackPart2::
 	lockall
-	delay 20
+	delay 60
 	applymovement LOCALID_CINNABAR_GRUNT_INTRO, HeartSoul_Movement_GruntEntree
 	waitmovement 0
 	applymovement LOCALID_CINNABAR_BLAINE, HeartSoul_Movement_BlaineReagit

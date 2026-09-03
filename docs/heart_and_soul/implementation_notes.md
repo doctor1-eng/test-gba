@@ -1863,3 +1863,42 @@ EWRAM, 78.37% IWRAM.
 **Toujours non testé en jeu.** Priorité de test : confirmer que Blaine et le Grunt sont
 maintenant visibles pendant la choregraphie, et que le début de partie ne montre plus aucun
 message de réception d'objet.
+
+## Cutscene d'ouverture (Acte I), 5e passe — délai insuffisant pour le fondu natif du warp
+
+Retour utilisateur avec captures d'écran, après test réel de la 4e passe : le message log
+confirme que toute la choregraphie s'enchaîne dans le bon ordre (BlaineReagit →
+BlaineSeplaceDevant → EclatCombat → GruntSeen), et le Grunt est bien visible cette fois - mais
+**immobile** (« on voit simplement le grunt en haut et il ne se déplace pas »). Blaine restait
+également invisible sur ce retour.
+
+**Piste retenue après relecture du code moteur** (`src/field_screen_effect.c`) :
+`HeartSoul_EventScript_CinnabarAttackPart2` se déclenche via `MAP_SCRIPT_ON_FRAME_TABLE`, qui
+tourne à chaque frame **indépendamment** du fondu natif d'entrée du warp
+(`WarpFadeInScreen`/`FieldCB_DefaultWarpExit`, déclenché automatiquement par `DoWarp()` une
+fois la nouvelle carte chargée). Le `delay 20` de la 4e passe (~1/3 de seconde) n'était très
+probablement pas suffisant pour couvrir la durée de ce fondu + la mise en place native du warp
+(`SetUpWarpExitTask`) : la choregraphie s'exécutait bien dans le bon ordre (d'où les messages
+corrects dans le log), mais en grande partie **pendant que l'écran était encore noir ou en
+train de s'éclaircir** - le mouvement du Grunt n'était donc pas absent du script, juste
+invisible à l'écran au moment où il se jouait.
+
+**Confiance modérée, pas certaine** - disclosé clairement à l'utilisateur : plusieurs autres
+pistes ont été vérifiées et écartées avant de retenir celle-ci (mismatch de `LOCALID` -
+vérifié correct dans le header auto-généré ; validité du sprite `OBJ_EVENT_GFX_ROCKET_M_HNS` -
+table d'animation standard, déjà utilisée ailleurs sans problème ; mismatch d'élévation -
+vérifié identique partout, 3, par décodage de `map.bin` ; double `lockall` gelant les objets -
+écarté par un précédent vanilla prouvé dans ce même dépôt, `PetalburgCity_Gym_EventScript_
+ReturnFromWallyTutorial`, qui combine `lockall` + `applymovement` sur un PNJ non-joueur
+fonctionnellement à l'identique).
+
+Délai porté de 20 à **60 frames** (~1 seconde), largement au-delà de la durée d'un fondu
+standard, avant le premier `applymovement`.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**. `HeartSoul_EventScript_
+CinnabarAttackPart2` confirmé dans `pokehns.map`.
+
+**Toujours non testé en jeu.** Si ce délai plus long ne suffit toujours pas, la piste du fondu
+sera à écarter à son tour et il faudra probablement instrumenter davantage (ex. un message de
+debug affichant l'état de l'objet juste avant l'`applymovement`) plutôt que de continuer à
+deviner par lecture de code seule.
