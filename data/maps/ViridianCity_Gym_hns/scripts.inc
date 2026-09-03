@@ -19,6 +19,7 @@ ViridianCity_Gym_EventScript_Blue::
 	goto_if_unset FLAG_HIDE_DOJO_BLUE, ViridianCity_Gym_EventScript_BlueAtDojo
 	goto_if_set FLAG_DEFEATED_VIRIDIAN_GYM, ViridianCity_Gym_EventScript_BlueGotoDojo
 	goto_if_set FLAG_DEFEATED_VIRIDIAN_GYM, ViridianCity_Gym_EventScript_Blue_Defeated
+	call HeartSoul_EventScript_BlueConfrontation
 	msgbox ViridianCity_Gym_Text_LeaderBlue_Before, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_BLUE_HNS, ViridianCity_Gym_Text_LeaderBlue_Win
 	message ViridianCity_Gym_Text_ReceivedEarthBadge
@@ -30,6 +31,8 @@ ViridianCity_Gym_EventScript_Blue::
 	msgbox ViridianCity_Gym_Text_LeaderBlue_ExplainTM, MSGBOX_DEFAULT
 	setflag FLAG_BADGE16_GET
 	setflag FLAG_DEFEATED_VIRIDIAN_GYM
+	setflag FLAG_BLUE_VAINCU
+	call HeartSoul_EventScript_DeclencherEpilogue
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 16
 	call Common_EventScript_SetGymTrainers_hns

@@ -117,6 +117,15 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 - [ ] Badge reçu normalement après victoire.
 - [ ] En reparlant à Blaine après la victoire (ou en revenant plus tard) : le texte anglais d'origine s'affiche, suivi d'une ligne française (« On rentre à Cinnabar dès que possible »).
 
+## 16. Fin du scénario — Kess, Mira Voss, Blue, épilogue
+
+- [ ] **Kess (Zone Safari, grotte de Fuchsia)** : à aborder (pas d'approche automatique). Même séquence de conviction à 3 questions que Terrence : convaincue sans combat (score élevé), combat allégé (2 Pokémon), ou combat complet (4 Pokémon) selon les réponses. Après une défaite, reparler à Kess relance directement le même combat sans reposer les questions.
+- [ ] **Mira Voss (Silph Co, Safrania)** : combat direct après un court dialogue (pas de choix), équipe niveau ~34.
+- [ ] Une fois Erika + Sabrina + Janine + Major Bob + Blaine + Mira Voss tous obtenus/vaincus : le retour à Cinnabar (Route 20/21) n'est plus bloqué, et Blue apparaît désormais à l'Arène de Viridian (auparavant caché).
+- [ ] **Blue (Arène de Viridian, 8e badge)** : dialogue de révélation, puis 3 questions à choix multiples, puis le dialogue anglais d'origine, puis le combat. Perdre puis retenter doit rejouer toute la séquence de dialogue (comme Pierre/Ondine/etc., pas comme Terrence/Kess).
+- [ ] Juste après la victoire sur Blue : un épilogue en français s'affiche automatiquement (3 variantes possibles selon les choix faits pendant la partie — réputation ternie/équilibrée/exemplaire). Vérifier qu'il ne se rejoue pas en revenant à l'Arène de Viridian plus tard.
+- [ ] Si l'épilogue "exemplaire" s'affiche : vérifier que le texte mentionne un accès aux sous-sols du Pokémon Mansion (le contenu réel de cette zone n'est pas encore implémenté — normal que rien de plus ne se passe pour l'instant).
+
 ---
 
 **Après chaque test**, dites-moi simplement : ce qui a marché (pas besoin de détail), et pour

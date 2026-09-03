@@ -14798,3 +14798,116 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Megahorn
 - Substitute
 
+=== TRAINER_KESS_HNS ===
+Name: KESS
+Class: Rocket Admin Hns
+Pic: Rocket Grunt F Hns
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Tauros @ Choice Band
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Return
+- Earthquake
+- Close Combat
+- Swords Dance
+
+Vileplume @ Black Sludge
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Sleep Powder
+- Giga Drain
+- Moonlight
+- Toxic
+
+Kingler @ Leftovers
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Crabhammer
+- X-Scissor
+- Swords Dance
+- Toxic
+
+Ursaring @ Silk Scarf
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Facade
+- Close Combat
+- Earthquake
+- Swords Dance
+
+=== TRAINER_KESS_LIGHT_HNS ===
+Name: KESS
+Class: Rocket Admin Hns
+Pic: Rocket Grunt F Hns
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Tauros
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Return
+- Earthquake
+- Close Combat
+- Swords Dance
+
+Vileplume
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Sleep Powder
+- Giga Drain
+- Moonlight
+- Toxic
+
+=== TRAINER_MIRA_VOSS_HNS ===
+Name: MIRA VOSS
+Class: Rocket Admin Hns
+Pic: Rocket Grunt F Hns
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Alakazam @ Twisted Spoon
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Psychic
+- Calm Mind
+- Recover
+- Signal Beam
+
+Jolteon @ Magnet
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Thunderbolt
+- Volt Switch
+- Signal Beam
+- Calm Mind
+
+Magnezone @ Assault Vest
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Zap Cannon
+- Flash Cannon
+- Volt Switch
+- Thunderbolt
+
+Metagross @ Life Orb
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Meteor Mash
+- Psychic
+- Trick Room
+- Hyper Beam
+

@@ -18,6 +18,7 @@ CeladonCity_Gym_EventScript_Erika::
 	setflag FLAG_BADGE12_GET
 	setflag FLAG_DEFEATED_CELADON_GYM
 	call HeartSoul_EventScript_ErikaConvaincue
+	call HeartSoul_EventScript_VerifierDeblocageActeV
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 12
 	call Common_EventScript_SetGymTrainers_hns

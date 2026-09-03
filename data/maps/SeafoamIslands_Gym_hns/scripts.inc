@@ -22,6 +22,7 @@ SeafoamIslands_Gym_EventScript_Blaine::
 	setflag FLAG_BADGE15_GET
 	setflag FLAG_DEFEATED_CINNABAR_ISLAND_GYM
 	call HeartSoul_EventScript_BlaineSauve
+	call HeartSoul_EventScript_VerifierDeblocageActeV
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 15
 	clearflag FLAG_HIDE_SEAFOAM_GYMGUY

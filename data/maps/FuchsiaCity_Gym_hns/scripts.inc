@@ -57,6 +57,7 @@ FuchsiaCity_Gym_EventScript_Janine::
 	setflag FLAG_BADGE14_GET
 	setflag FLAG_DEFEATED_FUCHSIA_GYM
 	call HeartSoul_EventScript_JanineConvaincue
+	call HeartSoul_EventScript_VerifierDeblocageActeV
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 14
 	call Common_EventScript_SetGymTrainers_hns

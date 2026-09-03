@@ -658,9 +658,14 @@
 // section 3 "Mecanique de conviction". Score >=5 : pas de combat, aucun TRAINER_ requis.
 #define TRAINER_TERRENCE_HNS                  633
 #define TRAINER_TERRENCE_LIGHT_HNS            634
+// Kess (Zone Safari, Acte IV) - meme mecanique de conviction que Terrence.
+#define TRAINER_KESS_HNS                      635
+#define TRAINER_KESS_LIGHT_HNS                636
+// Mira Voss (Silph Co, Acte IV) - dernier lieutenant, combat direct.
+#define TRAINER_MIRA_VOSS_HNS                 637
 
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       635
+#define TRAINERS_COUNT_HNS                       638
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

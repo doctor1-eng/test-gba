@@ -1323,3 +1323,106 @@ reste). Reste hors périmètre de ce chantier : la 8e Arène (Viridian/Blue, ver
 jusqu'à l'Acte V par conception), le contenu de section 8 encore manquant pour les zones
 d'Acte IV (débat clan Koga/Janine à Fuchsia, financement Rocket à Céladopole, documents Mira
 Voss à Saffron), et Silph Co/Mira Voss elle-même (lieutenant final, jamais scriptée).
+
+## Fin du scénario principal : Kess, Mira Voss, confrontation Blue, épilogues (Acte IV/V)
+
+Chantier demandé explicitement (« continue jusqu'à la fin du scénario »). Complète les 3
+morceaux narratifs qui restaient : le 2e lieutenant convertible (Kess), le dernier lieutenant
+(Mira Voss), et toute la trame de clôture (confrontation Blue + épilogues), adaptés depuis
+les templates `docs/heart_and_soul/scripts/kess_conviction.pory`, `blue_final.pory` et
+`epilogues.pory` (texte français déjà rédigé dans ces templates, traduit en macros natives
+plutôt qu'en Poryscript — voir « Convention de scripting réelle » plus haut dans ce journal).
+
+**Kess (Zone Safari)** : reconnaissance de connectivité nécessaire avant de placer quoi que
+ce soit — ce dépôt contient **deux jeux de cartes Safari Zone distincts** (piège du même
+genre que `_Frlg`/`_hns` à Cinnabar, découvert par lecture systématique des `connections`/
+`warp_events` plutôt que supposé) : `SafariZone1/2/3_hns`+`_Indoor_hns` est en réalité la
+Zone Safari **johtoise**, reliée à New Bark Town via Route 47/48 — sans rapport avec Fuchsia.
+La vraie Zone Safari kantoise de Heart & Soul est `FuchsiaCity_SafariZone{Entrance,Beach,
+Brush,Mountain,Cave}_hns`, seule chaîne directement warpée depuis `FuchsiaCity_hns`. Kess
+placée dans `_Cave_hns` (thème « Pokémon braconnés », zone la plus reculée de la chaîne),
+nouvel `object_event` `OBJ_EVENT_GFX_ROCKET_F_HNS` en `(24,12)`, vérifié par décodage de
+`map.bin` (carte vide de tout dresseur, seulement des Pokémon sauvages).
+
+**Mira Voss (Silph Co)** : `SaffronCity_SilphCo_hns` est une seule pièce (pas d'étages,
+contrairement à la version `_Frlg` à 11 étages — confirmé, pas supposé) avec 3 PNJ narratifs
+sans combat (Officer/Steven/Receptionist). Nouvel `object_event`, même sprite Rocket, position
+`(24,7)` vérifiée par décodage collision.
+
+**Mécanique de conviction de Kess** : même piège de décalage d'entier non signé que Terrence
+(voir plus haut), même solution (+1 par question, seuils recalculés à >=8/6-7/<=5 — identiques
+à Terrence car même forme de barème -1/0/+2 par question). 2 trainers ajoutés
+(`TRAINER_KESS_HNS`/`_LIGHT_HNS`, ids 635/636), équipe Normal/Grass/Water (Tauros/Vileplume/
+Kingler/Ursaring niveau 34) cohérente avec « équipe variée et opportuniste » (histoire.md).
+`TRAINER_MIRA_VOSS_HNS` (id 637) : Alakazam/Jolteon/Magnezone/Metagross niveau 34, thème
+Psychic/Steel/Electric à contrôle de terrain/statut.
+
+**Verrou d'Acte V** (`HeartSoul_EventScript_VerifierDeblocageActeV`, nouveau fichier
+`data/scripts/heart_and_soul_act5.inc`) : sous-script `call`/`return` posant
+`FLAG_ACTE_5_DEBLOQUE` uniquement si les 6 conditions de histoire.md section 2 sont toutes
+remplies (Erika/Sabrina/Janine convaincues, Major Bob convaincu, Blaine sauvé, Mira Voss
+vaincue). Câblé aux 5 points de victoire qui peuvent être le dernier dans n'importe quel
+ordre (monde ouvert). **Aucune autre modification nécessaire pour débloquer Cinnabar et
+Blue** : `HeartSoul_EventScript_CinnabarVerrouilleeCheck` (Acte I) et
+`ViridianCity_Gym_OnTransition` (résolution du conflit Blue du 2026-08-29) vérifiaient déjà
+ce même flag, posé par une session précédente en anticipation — juste jamais alimenté avant
+aujourd'hui.
+
+**Confrontation Blue** (`HeartSoul_EventScript_BlueConfrontation`, câblée dans
+`ViridianCity_Gym_EventScript_Blue` avant le `msgbox`/`trainerbattle_no_intro` d'origine, non
+touchés — même patron que toutes les scènes de doute). Séquence rejouée à chaque tentative
+tant que le combat n'est pas gagné (comme Pierre/Ondine/etc.), donc **pas** de garde anti-
+répétition comme pour Terrence/Kess. Même piège de décalage d'entier, mais amplitude
+différente : barème d'origine va de -2 à +2 (pas -1 à +2), décalage de **+2** par question
+au lieu de +1, seuils recalculés à >=9/6-8/<=5.
+
+**Épilogues** (`HeartSoul_EventScript_DeclencherEpilogue`) : 3 branches selon
+`VAR_REPUTATION` (histoire.md section 9, seuils déjà utilisés tels quels : <=8/9-16/>=17),
+chacune avec des blocs conditionnels (`goto_if_set`/`goto_if_unset`) sur `FLAG_BLAINE_SAUVE`/
+`FLAG_TERRENCE_CONVAINCU`/`FLAG_KESS_CONVAINCUE` pour adapter le texte à ce que le joueur a
+réellement accompli, palier « exemplaire » posant `FLAG_ZONE_BONUS_DEBLOQUEE` (post-game).
+`FLAG_EPILOGUE_JOUE` empêche la rejouer à chaque retour à l'Arène de Viridian.
+
+**Bug de contrôle de flux trouvé et corrigé avant compilation** (relecture personnelle, pas
+un crash observé) : la première version de `HeartSoul_EventScript_DeclencherEpilogue`
+terminait ses 3 branches par `release`/`end` au lieu de `return`, alors qu'elle est appelée
+en `call` depuis `ViridianCity_Gym_EventScript_Blue` — `release`/`end` aurait coupé
+l'exécution avant les lignes suivantes de l'appelant (`addvar VAR_NUM_BADGES`, mise à jour de
+la carte des badges, relocalisation de Blaine de Seafoam vers Cinnabar via `clearflag
+FLAG_HIDE_CINNABAR_BLAINE` déjà présente dans le jeu de base). Corrigé en `return` sur les 3
+branches avant tout build.
+
+**2 bugs de charset trouvés avant compilation** (même classe que le tiret cadratin déjà
+rencontré une fois pour Blaine) : les guillemets droits `"` utilisés pour citer du dialogue
+dans les épilogues (ex. « "On a gagné..." ») ne sont **pas dans `charmap.txt`** de ce fork
+(vérifié directement, aucune entrée pour ce caractère) — `preproc` les aurait rejetés. Retirés
+purement et simplement (le texte reste lisible sans guillemets, cohérent avec le style déjà
+utilisé partout ailleurs dans le projet qui n'utilise jamais de guillemets autour des
+répliques).
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**, les 4 symboles clés
+(`FuchsiaCity_SafariZoneCave_EventScript_Kess`, `SaffronCity_SilphCo_EventScript_MiraVoss`,
+`HeartSoul_EventScript_BlueConfrontation`, `HeartSoul_EventScript_DeclencherEpilogue`)
+confirmés dans `pokehns.map`. ROM 31713220 octets, 94.51 % ROM (+0.02 point), 94.47 % EWRAM,
+78.37 % IWRAM.
+
+**Le scénario principal de Heart & Soul est maintenant scriptable de bout en bout** : Acte I
+(chute de Cinnabar) → Acte II (Pierre/Ondine/Major Bob) → Acte III (Lyre/Selen/Terrence) →
+Acte IV (Erika/Sabrina/Janine/Blaine/Kess/Mira Voss) → Acte V (déblocage automatique,
+confrontation Blue, épilogue selon réputation). **TECHNICAL PASS, non testé en jeu à aucune
+étape.**
+
+**Non fait, documenté comme limitation connue plutôt que deviné** :
+- **Zone bonus post-game (Commandant Kaïn)** : le palier « réputation exemplaire » pose déjà
+  `FLAG_ZONE_BONUS_DEBLOQUEE`, mais le contenu lui-même (`docs/heart_and_soul/scripts/
+  postgame_kain.pory`) n'a pas été implémenté — nécessiterait une nouvelle map (sous-sol du
+  Pokémon Mansion, qui n'existe pas dans l'architecture actuelle à pièce unique, voir
+  `technical_map.md`), donc un chantier de map design à part entière, hors périmètre de « finir
+  le scénario » au sens strict (c'est du contenu bonus, pas la fin de l'histoire).
+- Contenu de section 8 encore manquant pour les zones d'Acte IV (débat clan Janine à Fuchsia,
+  financement Rocket à Céladopole, documents Mira Voss à Saffron) — narration secondaire, pas
+  bloquante pour finir l'histoire principale.
+- Comme pour tout ce chantier : aucune validation visuelle en émulateur n'a été possible côté
+  agent. La séquence de dialogue à choix multiples de Blue (la plus longue et la plus visible
+  du jeu, 3 questions + branchement réputation + combat + épilogue) n'a jamais été vue à
+  l'écran.
