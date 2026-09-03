@@ -1657,3 +1657,43 @@ zone bonus post-game de Kaïn nécessite une nouvelle map (sous-sol du Pokémon 
 inexistante dans l'architecture actuelle à pièce unique) - un chantier de map design à part
 entière, pas un ajout de dialogue/script. `histoire.md` section 13 ne signale plus aucun autre
 point ouvert sur la trame elle-même.
+
+## Cutscene d'ouverture (Acte I) enrichie — Grunt + combat forcé
+
+Chantier « Réalise l'intro » : l'utilisateur a fourni une version enrichie du template
+`docs/heart_and_soul/scripts/cinnabar_acte1.pory` (diff confirmé : seul ce fichier change par
+rapport à la version déjà en dépôt, `histoire.md`/`README.md`/les 8 autres templates sont
+identiques). La nouvelle version ajoute une choregraphie visuelle (un Grunt entre dans le
+champ, Blaine réagit avec une emote et se place entre le Grunt et le joueur, le joueur recule)
+et un combat forcé contre un second Grunt juste après.
+
+**Décision d'adaptation documentée avant tout code** : la choregraphie `applymovement`/
+`waitmovement` du template cible `LOCALID_CINNABAR_BLAINE` et un nouveau `LOCALID_GRUNT_INTRO`
+sur `CinnabarIsland_hns` (la carte extérieure). Or toute cette cutscene se déclenche depuis
+`map_script_2` sur `CinnabarIsland_PokemonCenter_hns` (`VAR_TYPE_CHOISI`) - le joueur est donc
+physiquement à l'intérieur du Centre Pokémon, sur une carte différente de celle où vivent ces
+object_events. Une choregraphie de mouvement y serait invisible au mieux (object event absent
+de la carte chargée), indéfinie au pire. Plutôt que de déplacer toute la cutscène sur la carte
+extérieure (repositionnement bien plus large que l'ajout demandé), les beats de mouvement sont
+traduits en texte narré - même convention que le reste de cette cutscene, déjà 100% textuelle
+avant ce chantier.
+
+**Le combat forcé, en revanche, est implémenté réellement** : nouveau trainer
+`TRAINER_ROCKET_GRUNT_CINNABAR_HNS` (`opponents_hns.h` 648→649, une seule Raticate niveau 34,
+`trainers_hns.party`), appelé via `trainerbattle_single` à 3 arguments (sans script de
+victoire) directement depuis la cutscene verrouillée (`lockall`). Vérifié avant d'écrire le
+code que ce macro n'exige aucun `object_event` sur la carte courante (`LOCALID_NONE` côté
+`asm/macros/event.inc`) - un combat scripté sans PNJ visible est un motif déjà natif dans ce
+fork (`trainerbattle_earlyrival` du rival dans `PalletTown_ProfessorOaksLab_Frlg`), donc pas
+une invention. Avec la forme à 3 arguments, l'exécution continue simplement à la ligne
+suivante après la victoire - pas besoin de sous-script de victoire pour un simple enchaînement
+narratif.
+
+**Aucun bug de charset** : vérification systématique faite avant build, aucune occurrence de
+guillemets droits/courbes ou de tiret cadratin dans le texte ajouté.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**. `HeartSoul_EventScript_
+CinnabarAttack` confirmé dans `pokehns.map`. ROM 31725028 octets, 94.55% ROM, 94.47% EWRAM,
+78.37% IWRAM.
+
+**Non testé en jeu.** Checklist mise à jour (`quick_test_checklist.md` section 3).

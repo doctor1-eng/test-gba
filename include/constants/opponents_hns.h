@@ -676,8 +676,12 @@
 #define TRAINER_FERRA_HNS                     646
 #define TRAINER_LILA_ASPIRANTE_HNS            647
 
+// histoire.md section 11 evenement 0 (cutscene d'ouverture Acte I) : Grunt Rocket force lors
+// de l'attaque de Cinnabar, juste apres la disparition de Blaine.
+#define TRAINER_ROCKET_GRUNT_CINNABAR_HNS     648
+
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       648
+#define TRAINERS_COUNT_HNS                       649
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

@@ -15245,3 +15245,22 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Toxic
 - Rest
 
+
+=== TRAINER_ROCKET_GRUNT_CINNABAR_HNS ===
+Name: GRUNT
+Class: Rocket Admin Hns
+Pic: Rocket Grunt M Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Raticate @ Chesto Berry
+Level: 34
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Hyper Fang
+- Crunch
+- Toxic
+- Substitute
