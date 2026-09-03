@@ -35,9 +35,23 @@
 // affronte ensuite le joueur (pas un second Grunt distinct) : narrativement plus simple (Blaine
 // gagne du temps face a CE Grunt precis, qui se retourne ensuite contre le joueur une fois
 // Blaine hors-jeu) et techniquement plus simple (un seul object_event, un seul trainer).
+// 3e correction (retour utilisateur : Grunt maintenant visible ET mobile, mais Blaine
+// toujours invisible) : FLAG_HIDE_CINNABAR_BLAINE est pose par defaut des la creation de la
+// partie (data/scripts/new_game.inc, gros bloc "setflag FLAG_HIDE_<Champion>" - Blaine, comme
+// tous les autres Champions, reste cache jusqu'a son evenement de reapparition prevu par le
+// jeu de base, ici HeartSoul_EventScript_DeclencherEpilogue/ViridianCity_Gym_hns en toute fin
+// de scenario). Contrairement au Grunt (jamais cache par ce chantier), Blaine EST donc bel et
+// bien cache au moment ou CinnabarIsland_hns charge ses object_events - meme cause racine que
+// le bug du Grunt corrige plus haut (clearflag apres le chargement de la carte n'aurait rien
+// change). Corrige en revelant Blaine ICI, avant le warp, pendant que l'ecran est encore noir -
+// il est donc deja visible (flag clair) au moment ou la carte charge ses objets. Il est re-cache
+// plus bas dans HeartSoul_EventScript_CinnabarAttackPart2 quand il "disparait" dans la
+// choregraphie (setflag + removeobject, inchange) - coherent avec le reste du jeu ou il reste
+// cache jusqu'a l'epilogue.
 HeartSoul_EventScript_CinnabarAttack::
 	lockall
 	setflag FLAG_ATTAQUE_CINNABAR_LANCEE
+	clearflag FLAG_HIDE_CINNABAR_BLAINE
 	msgbox HeartSoul_Text_AttaqueDebut, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK

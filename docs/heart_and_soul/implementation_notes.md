@@ -1902,3 +1902,36 @@ CinnabarAttackPart2` confirmé dans `pokehns.map`.
 sera à écarter à son tour et il faudra probablement instrumenter davantage (ex. un message de
 debug affichant l'état de l'objet juste avant l'`applymovement`) plutôt que de continuer à
 deviner par lecture de code seule.
+
+## Cutscene d'ouverture (Acte I), 6e passe — Blaine caché par défaut dès la création de partie
+
+Retour utilisateur après test de la 5e passe : le délai allongé a résolu le mouvement du Grunt
+(« le placement du grunt fonctionne »), confirmant la piste du fondu. **Mais Blaine reste
+invisible**, cette fois de façon isolée (le Grunt fonctionne, seul Blaine pose encore problème)
+- donc une cause différente, spécifique à Blaine.
+
+**Cause trouvée avec certitude** (pas une hypothèse cette fois) : `grep` sur
+`FLAG_HIDE_CINNABAR_BLAINE` dans tout le dépôt révèle `data/scripts/new_game.inc:358 -
+setflag FLAG_HIDE_CINNABAR_BLAINE`, dans un gros bloc `setflag FLAG_HIDE_<Champion>` exécuté à
+**chaque création de partie**. Comme tous les autres Champions de ce jeu de base (structure
+post-game façon HGSS), Blaine reste caché par défaut jusqu'à son événement de réapparition
+prévu par le jeu original - ici `ViridianCity_Gym_hns/scripts.inc:42` (`clearflag
+FLAG_HIDE_CINNABAR_BLAINE`), câblé sur l'épilogue de fin de partie
+(`HeartSoul_EventScript_DeclencherEpilogue`). Contrairement au Grunt (jamais caché par ce
+chantier), Blaine est donc bel et bien caché au moment où `CinnabarIsland_hns` charge ses
+`object_events` en tout début de partie - exactement la même cause racine que le bug du Grunt
+de la 3e passe (`!FlagGet(template->flagId)` évalué une seule fois, au chargement), simplement
+non traitée pour Blaine car son flag n'avait jamais été identifié comme actif à ce stade.
+
+**Corrigé** : `clearflag FLAG_HIDE_CINNABAR_BLAINE` ajouté en tête de
+`HeartSoul_EventScript_CinnabarAttack`, avant le `warp` - pendant que l'écran est encore noir,
+donc le flag est déjà clair au moment où la carte charge ses objets. Il est re-caché plus loin
+dans la choregraphie existante (`setflag` + `removeobject`, inchangé) quand Blaine « disparaît »
+- cohérent avec le reste du jeu où il reste caché jusqu'à l'épilogue.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur**.
+`HeartSoul_EventScript_CinnabarAttack` confirmé dans `pokehns.map`. ROM 31723444 octets,
+94.54% ROM, 94.47% EWRAM, 78.37% IWRAM.
+
+**Toujours non testé en jeu** - priorité de test : confirmer que Blaine est désormais visible
+dès l'arrivée sur la carte extérieure, en plus du Grunt (déjà confirmé fonctionnel).
