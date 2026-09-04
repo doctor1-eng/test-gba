@@ -1308,7 +1308,12 @@
 #define FLAG_HIDE_CINNABAR_POKEMON_BLESSE             (HNS_EXTENDED_CONTENT_START + 375)
 #define FLAG_HIDE_ROUTE21_MARIN                       (HNS_EXTENDED_CONTENT_START + 376)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  377
+// Reconciliation du document de design detaille (Grunt en fuite qui laisse tomber le carnet,
+// enfant decoratif a cote de la refugiee) : meme motif, jamais caches avant leur scene.
+#define FLAG_HIDE_CINNABAR_GRUNT_FUITE                (HNS_EXTENDED_CONTENT_START + 377)
+#define FLAG_HIDE_CINNABAR_REFUGEE_ENFANT             (HNS_EXTENDED_CONTENT_START + 378)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  379
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

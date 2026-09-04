@@ -2136,4 +2136,118 @@ si le build a terminé avant l'écriture de cette section). Nouveaux symboles at
 `pokehns.map` : `HeartSoul_EventScript_TempeteBoatCabinCheck`/`Scene`,
 `CinnabarIsland_BoatCabin_EventScript_MarinUnused`.
 
+**Erreur de build découverte et corrigée juste après** : le premier essai de compilation a
+échoué au lien (`undefined reference to CinnabarIsland_BoatCabin_EventScript_MarinUnused` et
+`..._MapScripts`) - `data/maps/CinnabarIsland_BoatCabin_hns/scripts.inc`, nouveau fichier,
+n'était référencé nulle part. Contrairement à ce que la convention `.pory`/mapjson laissait
+supposer, l'inclusion des `scripts.inc` de carte dans ce fork passe par une liste manuelle et
+explicite : `data/event_scripts.s`, un `.include "data/maps/<Carte>/scripts.inc"` par carte.
+Ligne ajoutée à la suite de celle de `CinnabarIsland_Mansion_Hns` (même groupe de cartes).
+Rebuild : **PASS, 0 erreur**, les deux symboles confirmés dans `pokehns.map`.
+
+## Acte I, 11e passe — réconciliation du document de design détaillé + bug de decodage plus profond que prévu
+
+Le protagoniste a fourni un document de conception détaillé (« Design détaillé — Introduction »)
+décrivant carte par carte ce qui devrait exister pour l'Acte I, écrit à partir des anciens
+templates `.pory` (non utilisés tels quels dans ce fork, voir plus haut). Demande explicite,
+face à plusieurs écarts avec ce qui est déjà implémenté et testé : **réconcilier tout le
+document**, quitte à revenir sur du contenu déjà validé.
+
+### Découverte majeure : le seuil de décodage primaire/secondaire de la 10e passe était faux
+
+En re-décodant le terrain pour placer les nouveaux PNJ du document (voir plus bas), une
+vérification croisée a révélé que **le repositionnement du Pokémon blessé fait à la 10e passe
+était lui-même toujours dans l'eau**. Cause : le script de décodage de la 10e passe (et,
+vraisemblablement, des passes précédentes concernées) séparait les tuiles primaires/secondaires
+au seuil **512**, la convention Emerald standard (`NUM_METATILES_IN_PRIMARY_EMERALD` dans
+`include/fieldmap.h`). Mais ce fork compile en `MODERN=1`, où
+`NUM_METATILES_IN_PRIMARY = 640` (confirmé en lisant `include/fieldmap.h` : le bloc `#if
+MODERN` définit 640, le bloc Emerald classique 512). Toute case dont le metatile ID tombe entre
+512 et 639 était donc lue dans le **mauvais tileset** (secondaire au lieu de primaire, avec un
+indice décalé de 512), ce qui pouvait renvoyer un comportement erroné ou `None` plutôt que le
+vrai comportement de la case.
+
+Redécodage complet avec le bon seuil (640), zone `x=30..48` autour de la chorégraphie sur
+`CinnabarIsland_hns` : **la rangée y=35 est intégralement `MB_OCEAN_WATER`**, tout comme y=36
+et y=37, sur toute la largeur testée. La position `(38,35)` retenue à la 10e passe pour le
+Pokémon blessé (et le raisonnement "rangée y=35 sèche" qui avait aussi servi à recalculer
+`HeartSoul_Movement_VersPort`) était donc toujours fausse - la 10e passe n'avait, sans le
+savoir, que déplacé le bug d'une case d'eau à une autre.
+
+**Correctif définitif** :
+- `LOCALID_CINNABAR_POKEMON_BLESSE` déplacé à `(42,34)` - vérifié `MB_NORMAL`, collision nulle,
+  avec le seuil 640 cette fois. Toute la bande `y=34` de `x=38` à `x=42` est confirmée sèche
+  (`MB_NORMAL`), ce qui permet d'y faire tenir tout le trajet du joueur sans jamais retoucher
+  y=35.
+- `HeartSoul_Movement_VersPokemonBlesse` et `HeartSoul_Movement_VersPort`
+  (`heart_and_soul_act1.inc`) entièrement recalculés pour rester sur cette bande y=34.
+- Commentaires de la 10e passe corrigés en place (pas juste remplacés silencieusement) pour
+  que l'historique du diagnostic raté reste lisible plutôt que caché.
+- **Leçon ajoutée à la méthode déjà documentée cette session** (collision seule ne suffit pas,
+  il faut le comportement de metatile) : sur un fork `MODERN=1`, vérifier `NUM_METATILES_
+  IN_PRIMARY` réel (`include/fieldmap.h`) avant de choisir le seuil de séparation primaire/
+  secondaire - ne jamais supposer 512 par défaut.
+
+### Éléments du document ajoutés
+
+- **GRUNT en fuite avec le carnet** (événement 2) : mis en scène physiquement plutôt que
+  narré uniquement. Nouvel objet `LOCALID_CINNABAR_GRUNT_FUITE`
+  (`OBJ_EVENT_GFX_ROCKET_M_HNS`, même sprite que les deux autres Grunts), jamais caché avant
+  sa scène (même convention), traverse l'écran sur la rangée `y=30` (confirmée sèche de `x=37`
+  à `x=47`, une rangée au-dessus du joueur - visible sans croiser son chemin) avant de
+  disparaître (`setflag`/`removeobject`), puis le texte du carnet s'affiche comme s'il venait
+  de le laisser tomber en courant.
+- **Enfant décoratif à côté de la réfugiée** : `LOCALID_CINNABAR_REFUGEE_ENFANT`
+  (`OBJ_EVENT_GFX_LITTLE_GIRL_HNS`, position `(38,34)`, confirmée sèche), purement visuel
+  (`script: NULL`-équivalent via placeholder, comme les Pokémon sauvages déjà présents sur
+  cette carte), retiré en même temps que la mère (`HeartSoul_CinnabarAttack_Verrouillage`).
+- **2 nouveaux flags** (`FLAG_HIDE_CINNABAR_GRUNT_FUITE`/`FLAG_HIDE_CINNABAR_REFUGEE_ENFANT`,
+  `flags_hns.h` +377/+378, `HNS_EXTENDED_CONTENT_COUNT` 377→379).
+
+### Éléments du document déjà couverts, sans nouveau code
+
+- **Milo (jeune dresseur, contraste léger « monde d'avant »)** et **rumeur du Professeur** :
+  déjà entièrement implémentés dans `heart_and_soul_act2.inc`
+  (`HeartSoul_EventScript_PalletJeuneDresseur`, rattaché au PNJ `PalletTown_EventScript_Woman`
+  déjà présent sur `PalletTown_hns`, gated par `FLAG_ACTE_1_TERMINE`) - texte quasi identique
+  en ton et en fond à ce que demande le document (contraste naïf : « Cinnabar ? [...] ici tout
+  va bien » ; rumeur : « le professeur d'ici [...] terré depuis l'histoire de Cinnabar »).
+  Le document lui-même autorise cette adaptation (« substituer par l'équivalent le plus proche
+  si absent [...] l'important est la position relative décrite, pas les chiffres exacts ») -
+  ajouter un second PNJ dupliquant la même intention aurait été redondant et sans valeur
+  narrative supplémentaire. Aucun changement.
+- **Ael et Orin (« aspirants Champions »)** : ces deux noms existent déjà comme dresseurs
+  récurrents dans ce fork, apparaissant sur plusieurs routes (Route 21, Forêt de Jade, Route
+  15, Seafoam - voir `quick_test_checklist.md` section rencontres). Contenu de base déjà
+  présent, pas un système à créer pour Heart & Soul. Aucun changement.
+
+### Éléments du document délibérément non repris, avec justification
+
+- **Carte séparée « Mont Cinnabar - Grotte des réfugiés »** : la scène des réfugiés reste sur
+  `CinnabarIsland_hns` (déjà mise en scène et confirmée fonctionnelle par l'utilisateur).
+  Construire une carte intérieure dédiée est techniquement possible (méthode déjà prouvée cette
+  session avec `CinnabarIsland_BoatCabin_hns`), mais referait entièrement une scène qui
+  fonctionne déjà pour un gain purement géographique/cosmétique (le choix moral, l'enjeu
+  narratif et les deux PNJ existent déjà) - le risque de régression sur du contenu validé n'est
+  pas justifié par ce gain. Le document lui-même qualifie ses coordonnées de suggestions
+  ajustables ; cette adaptation reste dans cet esprit. Décision réversible si le protagoniste
+  souhaite explicitement cette carte séparée malgré le compromis.
+- **PNJ « Civil » dédié pour le choix Centre Pokémon/Arène** : le choix moral existe déjà
+  (menu `dynmultipush`/`dynmultistack` juste après la victoire sur le 2e Grunt), avec le même
+  résultat narratif que le document. Le remplacer par un PNJ physique obligerait à faire marcher
+  le joueur jusqu'au Centre ou à l'Arène (terrain non encore décodé à ces endroits précis) pour
+  un gain de mise en scène marginal face au risque déjà rencontré plusieurs fois cette session
+  (mauvais placement sur une case invalide). Non repris.
+- **Effets visuels de tuiles** (fumée/débris sur Cinnabar après l'attaque, pluie en surimpression
+  pendant la tempête) : nécessitent de peindre de nouvelles tuiles ou calques dans un éditeur de
+  carte (Porymap). Aucun accès à un tel outil dans cet environnement (déjà documenté comme
+  limite depuis l'audit initial) - non réalisable par script seul sans deviner des ID de tuiles.
+  Non repris, limite technique honnête plutôt que contournée.
+
+Build de contrôle : `make hns -j$(nproc)` → **PASS, 0 erreur** (voir résultat exact au moment
+de la livraison). Nouveaux symboles attendus dans `pokehns.map` :
+`CinnabarIsland_EventScript_GruntFuiteUnused`, `CinnabarIsland_EventScript_RefugeeEnfantUnused`.
+
+**Non testé en jeu.**
+
 **Non testé en jeu.**

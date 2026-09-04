@@ -172,7 +172,16 @@ HeartSoul_CinnabarAttack_SauvetageArene:
 // scene - ils existent des le chargement de la carte, simplement hors du champ initial de la
 // choregraphie, et sont retires par setflag+removeobject une fois leur scene jouee. Positions
 // et chemins de marche verifies par decodage de data/layouts/CinnabarIsland_hns/map.bin.
+// Reconciliation du document de design detaille : le carnet n'est plus ramasse par simple
+// narration, un GRUNT en fuite (jamais cache avant sa scene, meme motif que les autres) traverse
+// reellement l'ecran (rangee y=30, terrain sec verifie - voir HeartSoul_Movement_GruntFuite plus
+// bas) avant de disparaitre, puis le texte du carnet s'affiche comme s'il venait de le laisser
+// tomber en courant.
 HeartSoul_CinnabarAttack_CarnetGrunt:
+	applymovement LOCALID_CINNABAR_GRUNT_FUITE, HeartSoul_Movement_GruntFuite
+	waitmovement 0
+	setflag FLAG_HIDE_CINNABAR_GRUNT_FUITE
+	removeobject LOCALID_CINNABAR_GRUNT_FUITE
 	msgbox HeartSoul_Text_CarnetGrunt, MSGBOX_DEFAULT
 	applymovement LOCALID_PLAYER, HeartSoul_Movement_VersRefugies
 	waitmovement 0
@@ -197,6 +206,8 @@ HeartSoul_CinnabarAttack_RefugiesCacher:
 HeartSoul_CinnabarAttack_Verrouillage:
 	setflag FLAG_HIDE_CINNABAR_REFUGEE
 	removeobject LOCALID_CINNABAR_REFUGEE
+	setflag FLAG_HIDE_CINNABAR_REFUGEE_ENFANT
+	removeobject LOCALID_CINNABAR_REFUGEE_ENFANT
 	setflag FLAG_CINNABAR_VERROUILLEE
 	setflag FLAG_ACTE_1_TERMINE
 	setflag FLAG_OBJET_PERDU_TROUVE
@@ -239,9 +250,13 @@ HeartSoul_CinnabarAttack_ObjetTrouve:
 // eau, il faut aussi lire le comportement du metatile (METATILE_ATTR_BEHAVIOR_MASK) ; verifie
 // apres coup par decodage croise de map.bin + metatile_attributes.bin des tilesets
 // gTileset_Kanto_General_Hns/gTileset_Lavaridge_Hns - (38,36) et la zone de Route21_hns
-// choisie etaient bien MB_OCEAN_WATER). Le Pokemon blesse est repositionne en (38,35) (terre
-// ferme confirmee) et la scene de la tempete est deplacee vers une VRAIE carte d'interieur de
-// bateau plutot que l'exterieur de Route21_hns (qui est presque entierement maritime - y
+// choisie etaient bien MB_OCEAN_WATER). Le Pokemon blesse a ete repositionne en (38,35), mais
+// cette premiere correction s'est averee ELLE AUSSI fausse (seuil de decodage primaire/
+// secondaire errone - voir le commentaire au-dessus de HeartSoul_Movement_VersPokemonBlesse
+// plus bas pour le detail) : la case etait toujours de l'eau. Reposition finale en (42,34),
+// verifiee avec le bon seuil. La scene de la tempete est deplacee vers une VRAIE carte
+// d'interieur de bateau plutot que l'exterieur de Route21_hns (qui est presque entierement
+// maritime - y
 // mettre en scene un marin "sur le pont" aurait nécessité que le joueur y navigue en Surf, ce
 // qui ne correspond pas a "vous etes sur un bateau").
 //
@@ -339,25 +354,33 @@ HeartSoul_Movement_VersRefugies:
 	face_down
 	step_end
 
-// Corrige (retour utilisateur : Pokemon retrouve "au milieu de l'eau") : chemin raccourci
-// d'un cran - (38,36) est de l'eau (MB_OCEAN_WATER, verifie par decodage croise de map.bin et
-// metatile_attributes.bin), le joueur s'arrete desormais en (38,34), le Pokemon etant
-// repositionne en (38,35) (terre ferme confirmee, voir data/maps/CinnabarIsland_hns/map.json).
+// 2e correctif (reconciliation du document de design detaille) : la 9e passe avait deja
+// deplace le Pokemon blesse de (38,36) vers (38,35) en le croyant sur terre ferme, mais ce
+// diagnostic reposait sur un decodage errone - le seuil primaire/secondaire utilise etait
+// 512 (convention Emerald standard), alors que ce fork (MODERN=1, NUM_METATILES_IN_PRIMARY,
+// include/fieldmap.h) utilise en realite 640 metatiles primaires. Tout metatile d'ID compris
+// entre 512 et 639 etait donc lu dans le mauvais tileset secondaire (ou hors limites), ce qui
+// a masque le vrai comportement de la rangee. Redecode avec le bon seuil (640) : **toute la
+// rangee y=35 (et y=36/37) sur CinnabarIsland_hns, de x=30 a x=48, est MB_OCEAN_WATER** -
+// (38,35) etait donc TOUJOURS de l'eau malgre la passe precedente. Le Pokemon blesse est
+// repositionne en (42,34), verifie MB_NORMAL/collision nulle par le meme decodage corrige, et
+// atteignable depuis la position du joueur en restant entierement sur la bande seche y=34
+// (x=38 a x=42, confirmee).
 HeartSoul_Movement_VersPokemonBlesse:
-	walk_left
 	walk_down
-	face_down
+	walk_right
+	walk_right
+	face_right
 	step_end
 
-// Corrige (meme retour utilisateur) : chemin entierement recalcule pour rester sur la terre
-// ferme (rangee y=35, confirmee sans eau ni collision sur toute sa largeur x=32 a x=47 par
-// decodage croise map.bin/metatile_attributes.bin) jusqu'au point d'embarquement, plutot que
-// de continuer vers (39,37) qui etait de l'eau. Le bateau lui-meme n'est plus mis en scene en
-// exterieur (voir MAP_CINNABAR_ISLAND_BOAT_CABIN_HNS plus haut) : ce mouvement represente
-// seulement la marche jusqu'au quai, juste avant le fondu au noir/l'embarquement.
+// 2e correctif (meme cause : seuil de decodage errone dans la 9e passe, voir commentaire
+// ci-dessus). Chemin recalcule pour rester sur la bande seche y=34 (jamais y=35, qui est de
+// l'eau sur toute sa largeur) : simple repli vers l'interieur avant le fondu au noir. Le
+// bateau lui-meme n'est plus mis en scene en exterieur (voir MAP_CINNABAR_ISLAND_BOAT_CABIN_HNS
+// plus haut) : ce mouvement represente seulement quelques pas vers le quai, juste avant le
+// fondu au noir/l'embarquement - la destination reelle (l'interieur du bateau) est atteinte
+// par warp, pas par une correspondance visuelle exacte avec un quai dessine.
 HeartSoul_Movement_VersPort:
-	walk_down
-	walk_left
 	walk_left
 	walk_left
 	face_down
@@ -374,6 +397,22 @@ HeartSoul_Movement_MarinApproche:
 	face_down
 	step_end
 
+// Reconciliation du document de design detaille : le GRUNT en fuite qui laisse tomber le
+// carnet (evenement 2), traverse reellement l'ecran. Position de depart (44,30) et chemin
+// verifies par le decodage corrige (voir commentaire au-dessus de HeartSoul_Movement_
+// VersPokemonBlesse) : toute la rangee y=30 de x=37 a x=47 est seche (MB_NORMAL/MB_TALL_GRASS,
+// collision nulle), une rangee au-dessus du joueur (qui se trouve alors vers y=31) - visible
+// a l'ecran sans traverser son chemin.
+HeartSoul_Movement_GruntFuite:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_left
+	step_end
+
 // Placeholders requis par le format object_event (scripts jamais reellement declenches : les
 // objets sont verrouilles sous lockall pendant toute leur fenetre de visibilite, puis retires
 // par removeobject).
@@ -386,7 +425,13 @@ CinnabarIsland_EventScript_Grunt2Unused::
 CinnabarIsland_EventScript_RefugeeUnused::
 	end
 
+CinnabarIsland_EventScript_RefugeeEnfantUnused::
+	end
+
 CinnabarIsland_EventScript_PokemonBlesseUnused::
+	end
+
+CinnabarIsland_EventScript_GruntFuiteUnused::
 	end
 
 HeartSoul_Text_AttaqueDebut:
