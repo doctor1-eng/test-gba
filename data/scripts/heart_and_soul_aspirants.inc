@@ -123,14 +123,14 @@ HeartSoul_AelVictoire_DejaCompte:
 
 HeartSoul_Text_AelSeen:
 	.string "AEL: Ces POKéMON Vol\n"
-	.string "meritent d'etre observes, pas\l"
-	.string "juste captures. Montre-moi que\l"
+	.string "meritent d'être observés, pas\l"
+	.string "juste capturés. Montre-moi que\l"
 	.string "tu les respectes autant que\l"
 	.string "moi.$"
 
 HeartSoul_Text_AelBeaten:
 	.string "AEL: …\p"
-	.string "Bien joue. Vraiment.$"
+	.string "Bien joué. Vraiment.$"
 
 HeartSoul_Text_AelAfterBattle:
 	.string "AEL: Un jour, je serai\n"
@@ -156,18 +156,18 @@ HeartSoul_NaoVictoire_DejaCompte:
 	end
 
 HeartSoul_Text_NaoSeen:
-	.string "NAO: Euh… d-desole, je\n"
+	.string "NAO: Euh… d-désolé, je\n"
 	.string "collectionnais des specimens,\l"
 	.string "mais… un combat, why not ?\p"
-	.string "LYRE avait raison de defendre\n"
-	.string "cette foret, tu sais.$"
+	.string "LYRE avait raison de défendre\n"
+	.string "cette forêt, tu sais.$"
 
 HeartSoul_Text_NaoBeaten:
-	.string "NAO: Ah… c'etait fascinant a\n"
+	.string "NAO: Ah… c'était fascinant à\n"
 	.string "observer, au moins.$"
 
 HeartSoul_Text_NaoAfterBattle:
-	.string "NAO: Les Insecte meritent leur\n"
+	.string "NAO: Les Insecte méritent leur\n"
 	.string "propre ARENE. J'y travaille.$"
 
 // --- Rook (Combat, Route 15) ---
@@ -192,15 +192,15 @@ HeartSoul_Text_RookSeen:
 	.string "ROOK: La puissance brute sans\n"
 	.string "technique n'est que du bruit.\l"
 	.string "Le DOJO de Fuchsia m'a appris\l"
-	.string "mieux que ca.$"
+	.string "mieux que ça.$"
 
 HeartSoul_Text_RookBeaten:
 	.string "ROOK: …\p"
 	.string "Ta technique parle pour toi.$"
 
 HeartSoul_Text_RookAfterBattle:
-	.string "ROOK: Continue comme ca, et tu\n"
-	.string "seras plus dure a battre que\l"
+	.string "ROOK: Continue comme ça, et tu\n"
+	.string "seras plus dure à battre que\l"
 	.string "moi un jour.$"
 
 // --- Iris (Glace, Seafoam Islands) ---
@@ -231,7 +231,7 @@ HeartSoul_Text_IrisAspiranteBeaten:
 
 HeartSoul_Text_IrisAspiranteAfterBattle:
 	.string "IRIS: …\p"
-	.string "(Elle est deja repartie.)$"
+	.string "(Elle est déjà repartie.)$"
 
 // --- Orin (Dragon, Route 21) ---
 Route21_EventScript_Orin::
@@ -253,7 +253,7 @@ HeartSoul_OrinVictoire_DejaCompte:
 
 HeartSoul_Text_OrinSeen:
 	.string "ORIN: Les Dragon sont les\n"
-	.string "derniers vrais mysteres de ce\l"
+	.string "derniers vrais mystères de ce\l"
 	.string "monde ! Prouve que tu es digne\l"
 	.string "d'en approcher un !$"
 
@@ -320,13 +320,13 @@ HeartSoul_FerraVictoire_DejaCompte:
 
 HeartSoul_Text_FerraSeen:
 	.string "FERRA: Mes POKéMON sont des\n"
-	.string "machines de precision. Voyons\l"
+	.string "machines de précision. Voyons\l"
 	.string "si les tiens tiennent la\l"
 	.string "cadence.$"
 
 HeartSoul_Text_FerraBeaten:
 	.string "FERRA: …\p"
-	.string "Bien calibre.$"
+	.string "Bien calibré.$"
 
 HeartSoul_Text_FerraAfterBattle:
 	.string "FERRA: Un jour, l'ARENE Acier\n"
@@ -352,10 +352,10 @@ HeartSoul_LilaAspiranteVictoire_DejaCompte:
 	end
 
 HeartSoul_Text_LilaAspiranteSeen:
-	.string "LILA: J'ai quitte mon poste au\n"
-	.string "grand magasin apres le\l"
+	.string "LILA: J'ai quitté mon poste au\n"
+	.string "grand magasin après le\l"
 	.string "scandale. Depuis, je ne\l"
-	.string "m'entraine que pour ca.$"
+	.string "m'entraîne que pour ça.$"
 
 HeartSoul_Text_LilaAspiranteBeaten:
 	.string "LILA: …\p"
@@ -363,4 +363,4 @@ HeartSoul_Text_LilaAspiranteBeaten:
 
 HeartSoul_Text_LilaAspiranteAfterBattle:
 	.string "LILA: L'ARENE Fee viendra.\n"
-	.string "En attendant, je m'entraine.$"
+	.string "En attendant, je m'entraîne.$"

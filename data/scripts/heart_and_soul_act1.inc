@@ -493,7 +493,7 @@ HeartSoul_Text_SauvetageArene:
 	.string "Sécuriser ton ARÈNE$"
 
 HeartSoul_Text_SauvetageCentreResultat:
-	.string "Tu aides à évacuer les blesses du\n"
+	.string "Tu aides à évacuer les blessés du\n"
 	.string "CENTRE POKÉMON avant de\l"
 	.string "repartir en courant.$"
 
@@ -561,7 +561,7 @@ HeartSoul_Text_ObjetTrouve:
 // FLAG_POKEMON_BLESSE_SAUVE est pose). Pas un membre d'equipe (aucun givemon), purement
 // narratif + flag de suivi.
 HeartSoul_Text_PokemonBlesseIntro:
-	.string "Un POKÉMON sauvage erre pres du\n"
+	.string "Un POKÉMON sauvage erre près du\n"
 	.string "port, blesse par les combats.\p"
 	.string "Tu as le temps de l'aider, ou de\n"
 	.string "continuer ta course.$"

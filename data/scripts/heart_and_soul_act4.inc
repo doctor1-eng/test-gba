@@ -151,7 +151,7 @@ HeartSoul_Text_FuchsiaDebat_DirectResultat:
 
 HeartSoul_Text_FuchsiaDebat_OmbreResultat:
 	.string "JANINE: …L'ombre. Un vrai ninja\n"
-	.string "n'a jamais eu besoin d'etre vu\l"
+	.string "n'a jamais eu besoin d'être vu\l"
 	.string "pour agir.$"
 
 HeartSoul_EventScript_JanineDoute::
