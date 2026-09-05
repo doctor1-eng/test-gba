@@ -34,12 +34,30 @@ NewBarkTown_Lab_EventScript_TriggerStartLabRight::
 	goto NewBarkTown_Lab_EventScript_TriggerStartLab
 	end
 
+// Heart & Soul : garde-fou de dernier recours. Johto est cense etre inatteignable tant que
+// FLAG_BLUE_VAINCU n'est pas pose (4 points de passage verrouilles independamment, voir
+// CinnabarIsland_hns/FuchsiaCity_hns/Trees_hns/Route26North_hns), mais si un joueur atteint
+// quand meme cette carte (Fly, bug de collision non identifie, etc.), ce trigger natif de
+// selection de starter Elm ne doit jamais pouvoir s'executer avant l'heure - il ecraserait
+// l'equipe deja donnee par Heart & Soul et pourrait corrompre l'etat de progression.
 NewBarkTown_Lab_EventScript_TriggerStartLab::
 	lock
+	goto_if_unset FLAG_BLUE_VAINCU, NewBarkTown_Lab_EventScript_JohtoLocked
 	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_LabMovement_WalkToElm
 	waitmovement 0
 	goto NewBarkTown_Lab_EventScript_ElmIntro
 	end
+
+NewBarkTown_Lab_EventScript_JohtoLocked::
+	msgbox NewBarkTown_Lab_Text_JohtoLocked, MSGBOX_DEFAULT
+	release
+	end
+
+NewBarkTown_Lab_Text_JohtoLocked:
+	.string "Impossible d'avancer.\p"
+	.string "Les liaisons vers Johto sont\n"
+	.string "coupees depuis l'attaque de\l"
+	.string "Cinnabar.$"
 
 NewBarkTown_EventScript_Aide1::
 	lock
