@@ -302,18 +302,26 @@ MahoganyTown_Text_GymSign:
     .string "LEADER: PRYCE\p"
     .string "The Teacher of Winter's Harshness$"
 
+// Heart & Soul : continuite narrative Kanto -> Johto (option C validee par l'utilisateur).
+// Traduit en francais (texte anglais a l'origine, comme le reste du contenu Radio Tower/Johto
+// natif) car ce dialogue precis sert de pont vers l'histoire Heart & Soul - PROF.ELM reste non
+// traduit, meme convention que BLAINE/PIERRE/ONDINE/JANINE dans tout le reste du projet.
+// Le doute du professeur ("Je me demande...") reste une supposition, jamais une affirmation.
 ElmPhoneRadioTowerRocketTakeoverText:
-	.string "PROF.ELM: {PLAYER}, how are\n"
-	.string "things going?\p"
-	.string "I called because something weird\n"
-	.string "is happening with the radio\l"
-	.string "broadcasts.\p"
-	.string "They were talking about TEAM\n"
+	.string "PROF.ELM: {PLAYER}, comment\n"
+	.string "vas-tu ?\p"
+	.string "Je t'appelle parce qu'il se\n"
+	.string "passe quelque chose d'étrange\l"
+	.string "avec les émissions radio.\p"
+	.string "Ils parlaient de la TEAM\n"
 	.string "ROCKET.\p"
-	.string "{PLAYER}, do you know anything\n"
-	.string "about it?\p"
-	.string "Maybe TEAM ROCKET has returned.\n"
-	.string "No, that just can't be true.\p"
-	.string "Sorry to bug you.\n"
-	.string "Take care!$"
+	.string "{PLAYER}, tu es au courant de\n"
+	.string "quelque chose ?\p"
+	.string "La TEAM ROCKET serait peut-être\n"
+	.string "de retour.\p"
+	.string "Ça ne serait pas lié à ce qui\n"
+	.string "s'est passé à CINNABAR,\l"
+	.string "récemment ? Je me demande…\p"
+	.string "Désolé de te déranger.\n"
+	.string "Prends soin de toi !$"
 
