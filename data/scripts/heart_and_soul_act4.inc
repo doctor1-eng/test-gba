@@ -42,7 +42,7 @@ HeartSoul_ErikaConvaincue_Fin:
 HeartSoul_Text_ErikaDouteIntro:
 	.string "ERIKA: …Une île qui tombe, un\n"
 	.string "réseau qui s'étend sous nos\l"
-	.string "pieds. Vous en êtes sûre ?$"
+	.string "pieds. Vous en êtes sûr{E_ACCORD} ?$"
 
 HeartSoul_Text_ErikaDouteRecit:
 	.string "ERIKA: Céladopole vit bien, sans\n"
@@ -86,7 +86,7 @@ HeartSoul_Text_SabrinaDouteIntro:
 HeartSoul_Text_SabrinaDouteRecit:
 	.string "SABRINA: Ce que je ne vois pas\n"
 	.string "encore, c'est si vous êtes\l"
-	.string "assez forte pour ce qui vous\l"
+	.string "assez fort{E_ACCORD} pour ce qui vous\l"
 	.string "attend.$"
 
 HeartSoul_Text_SabrinaDouteConclusion:

@@ -279,6 +279,10 @@
 #define PLACEHOLDER_ID_CHAMPION_DEF        0x12 // lowercase definite: "le Champion"/"la Championne"
 #define PLACEHOLDER_ID_CHAMPION_POSS       0x13 // lowercase possessive: "son Champion"/"sa Championne"
 
+// Heart & Soul: generic silent feminine agreement suffix (adjectives/participles
+// referring to the player, e.g. "attendu{E_ACCORD}"). Expands to "" for MALE, "e" otherwise.
+#define PLACEHOLDER_ID_E_ACCORD            0x14
+
 // battle placeholders are located in battle_message.h
 
 // Hiragana from 0x1-0x50, Katakana from 0x51-0xA0.

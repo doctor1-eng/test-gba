@@ -360,6 +360,9 @@ CHAMPION_INDEF_CAP = FD 11
 CHAMPION_DEF       = FD 12
 CHAMPION_POSS      = FD 13
 
+@ Heart & Soul: generic silent feminine agreement suffix, e.g. "attendu{E_ACCORD}"
+E_ACCORD           = FD 14
+
 @ battle string placeholders
 
 B_BUFF1 = FD 00

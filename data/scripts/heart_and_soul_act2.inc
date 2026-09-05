@@ -94,7 +94,7 @@ HeartSoul_Text_GarderObjet:
 HeartSoul_Text_MiliceRendreResultat:
 	.string "QUINN: Merci. Ça va compter, pour\n"
 	.string "eux comme pour nous.\p"
-	.string "Passe, tu es attendue en ville.$"
+	.string "Passe, tu es attendu{E_ACCORD} en ville.$"
 
 HeartSoul_Text_MiliceGarderResultat:
 	.string "QUINN: …\p"

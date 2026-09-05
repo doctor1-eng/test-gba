@@ -582,6 +582,17 @@ static const u8 *ExpandPlaceholder_ChampionPoss(void)
         return gText_ExpandedPlaceholder_ChampionPossF;
 }
 
+// Heart & Soul: generic silent feminine agreement suffix for adjectives/participles
+// referring to the player (e.g. "attendu{E_ACCORD}"), for cases too simple/varied to
+// justify a dedicated Champion*-style placeholder per word.
+static const u8 *ExpandPlaceholder_E(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_EAccordM;
+    else
+        return gText_ExpandedPlaceholder_EAccordF;
+}
+
 const u8 *GetExpandedPlaceholder(u32 id)
 {
     typedef const u8 *(*ExpandPlaceholderFunc)(void);
@@ -608,6 +619,7 @@ const u8 *GetExpandedPlaceholder(u32 id)
         [PLACEHOLDER_ID_CHAMPION_INDEF_CAP] = ExpandPlaceholder_ChampionIndefCap,
         [PLACEHOLDER_ID_CHAMPION_DEF]       = ExpandPlaceholder_ChampionDef,
         [PLACEHOLDER_ID_CHAMPION_POSS]      = ExpandPlaceholder_ChampionPoss,
+        [PLACEHOLDER_ID_E_ACCORD]           = ExpandPlaceholder_E,
     };
 
     if (id >= ARRAY_COUNT(funcs))

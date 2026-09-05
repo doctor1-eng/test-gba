@@ -31,6 +31,8 @@ extern const u8 gText_ExpandedPlaceholder_ChampionDefM[];
 extern const u8 gText_ExpandedPlaceholder_ChampionDefF[];
 extern const u8 gText_ExpandedPlaceholder_ChampionPossM[];
 extern const u8 gText_ExpandedPlaceholder_ChampionPossF[];
+extern const u8 gText_ExpandedPlaceholder_EAccordM[];
+extern const u8 gText_ExpandedPlaceholder_EAccordF[];
 
 extern const u8 gText_Lv50[];
 extern const u8 gText_OpenLevel[];
