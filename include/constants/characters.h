@@ -270,6 +270,15 @@
 #define PLACEHOLDER_ID_GROUDON       0xD
 #define PLACEHOLDER_ID_REGION        0xE
 
+// Heart & Soul: gendered "Champion" title (agrees with gSaveBlock2Ptr->playerGender),
+// since the player character is narratively already a Champion from the game's start
+// and this title appears throughout the story regardless of chosen gender.
+#define PLACEHOLDER_ID_CHAMPION            0xF  // bare noun: "Champion"/"Championne"
+#define PLACEHOLDER_ID_CHAMPION_INDEF      0x10 // lowercase indefinite: "un Champion"/"une Championne"
+#define PLACEHOLDER_ID_CHAMPION_INDEF_CAP  0x11 // capitalized indefinite: "Un Champion"/"Une Championne"
+#define PLACEHOLDER_ID_CHAMPION_DEF        0x12 // lowercase definite: "le Champion"/"la Championne"
+#define PLACEHOLDER_ID_CHAMPION_POSS       0x13 // lowercase possessive: "son Champion"/"sa Championne"
+
 // battle placeholders are located in battle_message.h
 
 // Hiragana from 0x1-0x50, Katakana from 0x51-0xA0.

@@ -105,7 +105,7 @@ HeartSoul_Text_PierreDouteIntro:
 	.string "j'ai entendu ce qui se dit sur\l"
 	.string "CINNABAR.\p"
 	.string "Une île entière coupée du monde,\n"
-	.string "et toi, sa Championne, en fuite…$"
+	.string "et toi, {CHAMPION_POSS}, en fuite…$"
 
 HeartSoul_Text_PierreDouteRecit:
 	.string "PIERRE: Tu n'as pas su protéger ta\n"
@@ -125,7 +125,7 @@ HeartSoul_Text_PierreApresVictoire:
 	.string "PIERRE: D'accord. Tu tiens le\n"
 	.string "choc, et tu n'as pas menti sur\l"
 	.string "CINNABAR.\p"
-	.string "Une Championne qui perd sa ville\n"
+	.string "{CHAMPION_INDEF_CAP} qui perd sa ville\n"
 	.string "et qui vient quand même se\l"
 	.string "battre pour convaincre les\l"
 	.string "autres, ça mérite du respect.\p"
@@ -137,7 +137,7 @@ HeartSoul_Text_OndineDouteIntro:
 	.string "est tombée.$"
 
 HeartSoul_Text_OndineDouteRecit:
-	.string "ONDINE: Une Championne qui perd\n"
+	.string "ONDINE: {CHAMPION_INDEF_CAP} qui perd\n"
 	.string "son arène dès le premier assaut…\l"
 	.string "et qui vient maintenant me parler\l"
 	.string "de réseau, de lieutenants, d'une\l"
@@ -199,7 +199,7 @@ HeartSoul_Text_CommercantIntro:
 	.string "Écoute. Depuis CINNABAR, certains\n"
 	.string "ici pensent que la TEAM ROCKET\l"
 	.string "'apporte de l'ordre', vu qu'il n'y\l"
-	.string "a plus de Championne en ville.\p"
+	.string "a plus de {CHAMPION} en ville.\p"
 	.string "Moi, je finance une résistance\n"
 	.string "discrète. J'ai besoin de gens qui\l"
 	.string "remontent des informations.$"
@@ -454,7 +454,7 @@ HeartSoul_EventScript_MajorBobConvaincu::
 
 HeartSoul_Text_MajorBobDouteIntro:
 	.string "MAJOR BOB: Alors comme ça c'est\n"
-	.string "toi, la Championne de CINNABAR.$"
+	.string "toi, {CHAMPION_DEF} de CINNABAR.$"
 
 HeartSoul_Text_MajorBobDouteRecit:
 	.string "MAJOR BOB: On m'a parlé d'un\n"

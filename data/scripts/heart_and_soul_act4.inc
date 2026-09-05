@@ -184,7 +184,7 @@ HeartSoul_Text_JanineDouteIntro:
 	.string "rumeurs.$"
 
 HeartSoul_Text_JanineDouteRecit:
-	.string "JANINE: Une Championne qui a\n"
+	.string "JANINE: {CHAMPION_INDEF_CAP} qui a\n"
 	.string "perdu son île dès la première\l"
 	.string "attaque… les rumeurs ne jouent\l"
 	.string "pas en votre faveur.$"
@@ -245,8 +245,8 @@ HeartSoul_Text_BlaineRetrouveConclusion:
 	.string "BLAINE: Avant qu'on reparte\n"
 	.string "d'ici : montre-moi ce que tu\l"
 	.string "vaux. J'ai besoin de savoir que\l"
-	.string "CINNABAR a toujours sa\l"
-	.string "Championne.$"
+	.string "CINNABAR a toujours\l"
+	.string "{CHAMPION_POSS}.$"
 
 HeartSoul_Text_BlaineApresRetrouvailles:
 	.string "BLAINE: On rentre à CINNABAR\n"

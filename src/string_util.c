@@ -539,6 +539,49 @@ static const u8 *ExpandPlaceholder_Region(void)
         return gText_Hoenn;
 }
 
+// Heart & Soul: the player is narratively a Champion from the start of the story,
+// so this title is used throughout regardless of the chosen player gender. One
+// table per determiner form needed by the existing text, same pattern as Kun/Chan.
+static const u8 *ExpandPlaceholder_Champion(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_ChampionM;
+    else
+        return gText_ExpandedPlaceholder_ChampionF;
+}
+
+static const u8 *ExpandPlaceholder_ChampionIndef(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_ChampionIndefM;
+    else
+        return gText_ExpandedPlaceholder_ChampionIndefF;
+}
+
+static const u8 *ExpandPlaceholder_ChampionIndefCap(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_ChampionIndefCapM;
+    else
+        return gText_ExpandedPlaceholder_ChampionIndefCapF;
+}
+
+static const u8 *ExpandPlaceholder_ChampionDef(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_ChampionDefM;
+    else
+        return gText_ExpandedPlaceholder_ChampionDefF;
+}
+
+static const u8 *ExpandPlaceholder_ChampionPoss(void)
+{
+    if (gSaveBlock2Ptr->playerGender == MALE)
+        return gText_ExpandedPlaceholder_ChampionPossM;
+    else
+        return gText_ExpandedPlaceholder_ChampionPossF;
+}
+
 const u8 *GetExpandedPlaceholder(u32 id)
 {
     typedef const u8 *(*ExpandPlaceholderFunc)(void);
@@ -560,6 +603,11 @@ const u8 *GetExpandedPlaceholder(u32 id)
         [PLACEHOLDER_ID_KYOGRE]       = ExpandPlaceholder_Kyogre,
         [PLACEHOLDER_ID_GROUDON]      = ExpandPlaceholder_Groudon,
         [PLACEHOLDER_ID_REGION]       = ExpandPlaceholder_Region,
+        [PLACEHOLDER_ID_CHAMPION]           = ExpandPlaceholder_Champion,
+        [PLACEHOLDER_ID_CHAMPION_INDEF]     = ExpandPlaceholder_ChampionIndef,
+        [PLACEHOLDER_ID_CHAMPION_INDEF_CAP] = ExpandPlaceholder_ChampionIndefCap,
+        [PLACEHOLDER_ID_CHAMPION_DEF]       = ExpandPlaceholder_ChampionDef,
+        [PLACEHOLDER_ID_CHAMPION_POSS]      = ExpandPlaceholder_ChampionPoss,
     };
 
     if (id >= ARRAY_COUNT(funcs))

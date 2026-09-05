@@ -20,6 +20,18 @@ extern const u8 gText_ExpandedPlaceholder_Red[];
 extern const u8 gText_ExpandedPlaceholder_Green[];
 extern const u8 gText_ExpandedPlaceholder_Silver[];
 
+// Heart & Soul: gendered "Champion" title, see PLACEHOLDER_ID_CHAMPION* in characters.h
+extern const u8 gText_ExpandedPlaceholder_ChampionM[];
+extern const u8 gText_ExpandedPlaceholder_ChampionF[];
+extern const u8 gText_ExpandedPlaceholder_ChampionIndefM[];
+extern const u8 gText_ExpandedPlaceholder_ChampionIndefF[];
+extern const u8 gText_ExpandedPlaceholder_ChampionIndefCapM[];
+extern const u8 gText_ExpandedPlaceholder_ChampionIndefCapF[];
+extern const u8 gText_ExpandedPlaceholder_ChampionDefM[];
+extern const u8 gText_ExpandedPlaceholder_ChampionDefF[];
+extern const u8 gText_ExpandedPlaceholder_ChampionPossM[];
+extern const u8 gText_ExpandedPlaceholder_ChampionPossF[];
+
 extern const u8 gText_Lv50[];
 extern const u8 gText_OpenLevel[];
 

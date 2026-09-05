@@ -481,7 +481,7 @@ HeartSoul_Text_BlaineDisparu:
 // vers les refugies du Mont Cinnabar. TRAINER_ROCKET_GRUNT_CINNABAR_HNS (niveau 34, convention
 // plate deja utilisee partout dans ce projet).
 HeartSoul_Text_GruntSeen:
-	.string "GRUNT: Tiens, une Championne.\n"
+	.string "GRUNT: Tiens, {CHAMPION_INDEF}.\n"
 	.string "Ça tombe bien.$"
 
 HeartSoul_Text_GruntBeaten:
@@ -515,7 +515,7 @@ HeartSoul_Text_SauvetageCentreResultat:
 
 HeartSoul_Text_SauvetageAreneResultat:
 	.string "Tu récupères en vitesse ce qui\n"
-	.string "prouve ton titre de Championne,\l"
+	.string "prouve ton titre de {CHAMPION},\l"
 	.string "avant de repartir en courant.$"
 
 // Evenement 2 (histoire.md section 11, Acte I) : objet de lore, prepare la quete

@@ -353,6 +353,13 @@ KYOGRE         = FD 0C
 GROUDON        = FD 0D
 REGION         = FD 0E
 
+@ Heart & Soul: gendered "Champion" title
+CHAMPION           = FD 0F
+CHAMPION_INDEF     = FD 10
+CHAMPION_INDEF_CAP = FD 11
+CHAMPION_DEF       = FD 12
+CHAMPION_POSS      = FD 13
+
 @ battle string placeholders
 
 B_BUFF1 = FD 00
