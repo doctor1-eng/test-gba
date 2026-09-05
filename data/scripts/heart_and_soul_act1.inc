@@ -48,9 +48,25 @@
 // plus bas dans HeartSoul_EventScript_CinnabarAttackPart2 quand il "disparait" dans la
 // choregraphie (setflag + removeobject, inchange) - coherent avec le reste du jeu ou il reste
 // cache jusqu'a l'epilogue.
+// Heart & Soul : FLAG_IS_KANTO_CHAMPION pose ici plutot que dans les 18 scripts HeartSoul_
+// EventScript_ChooseTeam_{type} (data/scripts/heart_and_soul_intro.inc) qui donnent l'equipe
+// de depart - tous convergent deja vers ce point unique juste apres le choix des capacites
+// (goto HeartSoul_EventScript_CinnabarAttack en fin de move relearner), donc un seul endroit a
+// modifier plutot que 18. Consommateurs verifies (aucun ne casse quoi que ce soit a le poser
+// plus tot que prevu par le moteur) :
+// - src/trainer_card.c:737 (GetHnSTrainerStars) : ajoute une etoile cosmetique au palmares du
+//   Dresseur, coherent avec la premisse "deja Championne".
+// - src/caps.c:73 (challenge setting "Level Cap" optionnel, desactive par defaut) : retire le
+//   palier de niveau intermediaire specifique a Kanto pour les joueurs qui ont explicitement
+//   active ce mode de jeu difficulte - effet de bord mineur et concerne uniquement un reglage
+//   non-defaut, coherent avec le fait que l'equipe de depart est deja niveau 34.
+// - src/battle_setup.c:2244 (GetMaxRematchStageForBadges) : le vrai objectif de ce correctif -
+//   sans ce flag, les dresseurs a revanche restent bloques sur un scaling base sur le nombre de
+//   badges (quasi nul en tout debut de partie) au lieu de refleter le niveau reel du joueur.
 HeartSoul_EventScript_CinnabarAttack::
 	lockall
 	setflag FLAG_ATTAQUE_CINNABAR_LANCEE
+	setflag FLAG_IS_KANTO_CHAMPION
 	clearflag FLAG_HIDE_CINNABAR_BLAINE
 	msgbox HeartSoul_Text_AttaqueDebut, MSGBOX_DEFAULT
 	closemessage
