@@ -169,6 +169,7 @@ Route20_Text_SwimmermCameronAfterBattle:
 
 Route20_Text_CinnabarIsland_GymUnusedSign:
 	.string "Que dit ce panneau ?\p"
-	.string "CHAMPION DE L'ARENE DE\n"
-	.string "CINNABAR : BLAINE$"
+	.string "ANCIEN CHAMPION DE\n"
+	.string "L'ARENE DE CINNABAR :\l"
+	.string "BLAINE$"
 
