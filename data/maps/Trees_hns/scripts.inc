@@ -34,5 +34,5 @@ Trees_JohtoLocked_Skip:
 Trees_Text_JohtoLocked:
 	.string "Impossible de passer. Les\n"
 	.string "liaisons vers Johto sont\l"
-	.string "coupees depuis l'attaque de\l"
+	.string "coupées depuis l'attaque de\l"
 	.string "Cinnabar.$"

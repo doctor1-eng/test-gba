@@ -89,7 +89,7 @@ CinnabarIsland_JohtoLocked_Open:
 CinnabarIsland_Text_JohtoLocked:
 	.string "Impossible de passer. Les\n"
 	.string "liaisons vers Johto sont\l"
-	.string "coupees depuis l'attaque de\l"
+	.string "coupées depuis l'attaque de\l"
 	.string "Cinnabar.$"
 
 CinnabarIsland_EventScript_GymSign::

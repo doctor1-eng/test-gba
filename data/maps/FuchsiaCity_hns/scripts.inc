@@ -24,7 +24,7 @@ FuchsiaCity_JohtoLocked_Open:
 FuchsiaCity_Text_JohtoLocked:
 	.string "Aucun marin n'accepte de\n"
 	.string "prendre la mer vers Johto.\l"
-	.string "Les liaisons sont coupees\l"
+	.string "Les liaisons sont coupées\l"
 	.string "depuis l'attaque de Cinnabar.$"
 
 FuchsiaCity_EventScript_BaobaCall::

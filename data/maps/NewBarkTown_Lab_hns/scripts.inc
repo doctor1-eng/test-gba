@@ -56,7 +56,7 @@ NewBarkTown_Lab_EventScript_JohtoLocked::
 NewBarkTown_Lab_Text_JohtoLocked:
 	.string "Impossible d'avancer.\p"
 	.string "Les liaisons vers Johto sont\n"
-	.string "coupees depuis l'attaque de\l"
+	.string "coupées depuis l'attaque de\l"
 	.string "Cinnabar.$"
 
 NewBarkTown_EventScript_Aide1::

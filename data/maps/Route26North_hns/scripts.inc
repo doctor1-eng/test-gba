@@ -30,7 +30,7 @@ Route26North_JohtoLocked_Skip:
 Route26North_Text_JohtoLocked:
 	.string "Impossible de passer. Les\n"
 	.string "liaisons vers Johto sont\l"
-	.string "coupees depuis l'attaque de\l"
+	.string "coupées depuis l'attaque de\l"
 	.string "Cinnabar.$"
 
 Route26North_Trigger::
