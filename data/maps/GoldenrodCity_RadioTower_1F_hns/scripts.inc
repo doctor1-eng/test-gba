@@ -239,19 +239,22 @@ RadioTower1F_Text_Youngster:
     .string "though.$"
 
 RadioTower1F_Text_GruntM3Seen:
-    .string "We've finally taken over the\n"
-    .string "RADIO TOWER!\p"
-    .string "Now everyone will get to experience\n"
-    .string "the true terror of TEAM ROCKET!\p"
-    .string "We'll show you how scary we are!$"
+    .string "On m'a parlé d'un problème du\n"
+    .string "côté de KANTO récemment…\p"
+    .string "On a enfin pris le contrôle de\n"
+    .string "la RADIO TOWER !\p"
+    .string "Maintenant, vous allez tous connaître\n"
+    .string "la vraie terreur de la TEAM ROCKET !\p"
+    .string "On va vous montrer à quel point on\n"
+    .string "est effrayants !$"
 
 RadioTower1F_Text_GruntM3Beaten:
-    .string "Too strong! I'm sorry boss…$"
+    .string "Trop fort ! Désolé, chef…$"
 
 RadioTower1F_Text_GruntM3After:
-    .string "You're too strong.\p"
-    .string "Our plan could be ruined. I must\n"
-    .string "warn the others…$"
+    .string "Vous êtes trop fort.\p"
+    .string "Notre plan pourrait être ruiné. Je dois\n"
+    .string "prévenir les autres…$"
 
 RadioTower1F_Text_Directory:
     .string "1F RECEPTION\n"
