@@ -6,6 +6,27 @@ FuchsiaCity_EventScript_CityEnter::
 	setflag FLAG_VISITED_FUCHSIA_CITY
 	end
 
+@ Heart & Soul : verrouillage de Johto (3/5). Meme motif que CinnabarIsland_hns (coord_event
+@ trigger a la place du warp direct vers MAP_NEW_BARK_TOWN_HNS en (19,30)). VAR_TEMP_0 libre
+@ sur cette carte (aucun autre usage trouve dans ce fichier ni dans map.json).
+FuchsiaCity_EventScript_JohtoLocked::
+	lock
+	goto_if_set FLAG_BLUE_VAINCU, FuchsiaCity_JohtoLocked_Open
+	msgbox FuchsiaCity_Text_JohtoLocked, MSGBOX_DEFAULT
+	release
+	end
+FuchsiaCity_JohtoLocked_Open:
+	release
+	warp MAP_NEW_BARK_TOWN_HNS, 10, 9
+	waitstate
+	end
+
+FuchsiaCity_Text_JohtoLocked:
+	.string "Aucun marin n'accepte de\n"
+	.string "prendre la mer vers Johto.\l"
+	.string "Les liaisons sont coupees\l"
+	.string "depuis l'attaque de Cinnabar.$"
+
 FuchsiaCity_EventScript_BaobaCall::
 	lock
 	setspeaker FuchsiaCity_Text_BaobaName

@@ -270,13 +270,6 @@
   ],
   "warp_events": [
     {
-      "x": 41,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_NEW_BARK_TOWN_HNS",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 45,
       "y": 29,
       "elevation": 0,
@@ -305,7 +298,17 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "CinnabarIsland_EventScript_JohtoLocked"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

@@ -66,6 +66,32 @@ CinnabarIsland_EventScript_Sign::
 	msgbox CinnabarIsland_Text_Sign, MSGBOX_SIGN
 	end
 
+@ Heart & Soul : verrouillage de Johto (2/5). L'ancien warp direct vers MAP_NEW_BARK_TOWN_HNS
+@ en (41,1) est remplace par un coord_event trigger sur la meme case (les deux systemes ne
+@ s'interferent pas - GetCoordEventScriptAtPosition/TryStartCoordEventScript, src/field_control_
+@ avatar.c, est verifie AVANT TryStartWarpEventScript et fonctionne uniquement par position
+@ exacte, independant de MapHeaderCheckScriptTable qui gere les ON_FRAME_TABLE). VAR_TEMP_2
+@ utilise (pas VAR_TEMP_0/1, deja consommes par CinnabarIsland_OnFrame juste au-dessus et mis a
+@ 1 des la premiere frame sur cette carte - un coord_event teste "VAR_TEMP_0 == 0" ne se
+@ declencherait donc quasiment jamais en pratique une fois le joueur en mouvement).
+CinnabarIsland_EventScript_JohtoLocked::
+	lock
+	goto_if_set FLAG_BLUE_VAINCU, CinnabarIsland_JohtoLocked_Open
+	msgbox CinnabarIsland_Text_JohtoLocked, MSGBOX_DEFAULT
+	release
+	end
+CinnabarIsland_JohtoLocked_Open:
+	release
+	warp MAP_NEW_BARK_TOWN_HNS, 10, 9
+	waitstate
+	end
+
+CinnabarIsland_Text_JohtoLocked:
+	.string "Impossible de passer. Les\n"
+	.string "liaisons vers Johto sont\l"
+	.string "coupees depuis l'attaque de\l"
+	.string "Cinnabar.$"
+
 CinnabarIsland_EventScript_GymSign::
 	msgbox CinnabarIsland_Text_GymSign, MSGBOX_SIGN
 	end
