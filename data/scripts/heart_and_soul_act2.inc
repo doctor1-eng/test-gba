@@ -80,9 +80,9 @@ HeartSoul_MiliceRoute1_Skip:
 	return
 
 HeartSoul_Text_MiliceIntro:
-	.string "QUINN: Attends. Ce bracelet, a ta\n"
+	.string "QUINN: Attends. Ce bracelet, à ta\n"
 	.string "ceinture… je le reconnais.\p"
-	.string "Il appartient a une famille de\n"
+	.string "Il appartient à une famille de\n"
 	.string "CINNABAR qu'on a recueillie ici.$"
 
 HeartSoul_Text_RendreObjet:
@@ -92,7 +92,7 @@ HeartSoul_Text_GarderObjet:
 	.string "Le garder$"
 
 HeartSoul_Text_MiliceRendreResultat:
-	.string "QUINN: Merci. Ca va compter, pour\n"
+	.string "QUINN: Merci. Ça va compter, pour\n"
 	.string "eux comme pour nous.\p"
 	.string "Passe, tu es attendue en ville.$"
 
@@ -104,13 +104,13 @@ HeartSoul_Text_PierreDouteIntro:
 	.string "PIERRE: Attends. Avant le combat,\n"
 	.string "j'ai entendu ce qui se dit sur\l"
 	.string "CINNABAR.\p"
-	.string "Une ile entiere coupee du monde,\n"
+	.string "Une île entière coupée du monde,\n"
 	.string "et toi, sa Championne, en fuite…$"
 
 HeartSoul_Text_PierreDouteRecit:
-	.string "PIERRE: Tu n'as pas su proteger ta\n"
+	.string "PIERRE: Tu n'as pas su protéger ta\n"
 	.string "propre ville. Alors pourquoi je\l"
-	.string "t'ecouterais parler d'une menace\l"
+	.string "t'écouterais parler d'une menace\l"
 	.string "qui toucherait tout KANTO ?$"
 
 HeartSoul_Text_PierreDouteConclusion:
@@ -118,7 +118,7 @@ HeartSoul_Text_PierreDouteConclusion:
 	.string "PIERRE: Prouve-le sur le terrain\n"
 	.string "que je connais. Un combat, pour\l"
 	.string "commencer.\p"
-	.string "Apres, on reparlera de la TEAM\n"
+	.string "Après, on reparlera de la TEAM\n"
 	.string "ROCKET.$"
 
 HeartSoul_Text_PierreApresVictoire:
@@ -126,27 +126,27 @@ HeartSoul_Text_PierreApresVictoire:
 	.string "choc, et tu n'as pas menti sur\l"
 	.string "CINNABAR.\p"
 	.string "Une Championne qui perd sa ville\n"
-	.string "et qui vient quand meme se\l"
+	.string "et qui vient quand même se\l"
 	.string "battre pour convaincre les\l"
-	.string "autres, ca merite du respect.\p"
+	.string "autres, ça mérite du respect.\p"
 	.string "Si la TEAM ROCKET avance vers\n"
-	.string "JADIELLE, je serai pret.$"
+	.string "JADIELLE, je serai prêt.$"
 
 HeartSoul_Text_OndineDouteIntro:
 	.string "ONDINE: Alors c'est vrai. CINNABAR\n"
-	.string "est tombee.$"
+	.string "est tombée.$"
 
 HeartSoul_Text_OndineDouteRecit:
 	.string "ONDINE: Une Championne qui perd\n"
-	.string "son arene des le premier assaut…\l"
+	.string "son arène dès le premier assaut…\l"
 	.string "et qui vient maintenant me parler\l"
-	.string "de reseau, de lieutenants, d'une\l"
+	.string "de réseau, de lieutenants, d'une\l"
 	.string "menace sur tout KANTO ?$"
 
 HeartSoul_Text_OndineDouteConclusion:
 	.string "…\p"
 	.string "ONDINE: Bats-toi. Si tu tiens le\n"
-	.string "choc face a moi, j'ecouterai le\l"
+	.string "choc face à moi, j'écouterai le\l"
 	.string "reste.$"
 
 // Viridian City, commercant resistant (section 8/9 de histoire.md). Appele depuis
@@ -184,34 +184,34 @@ HeartSoul_CommercantViridian_Skip:
 // Evenement 6 (histoire.md section 11, Acte II) : premier moment ou le joueur comprend que
 // BLUE ne se voit pas comme un simple criminel aux yeux de tous - narration seule.
 HeartSoul_Text_DiscoursBlueRadio:
-	.string "Une annonce publique crepite\n"
+	.string "Une annonce publique crépite\n"
 	.string "dans les haut-parleurs de la\l"
 	.string "ville.\p"
-	.string "BLUE: La Ligue protege une\n"
-	.string "elite. Pas le talent. Vous le\l"
+	.string "BLUE: La Ligue protège une\n"
+	.string "élite. Pas le talent. Vous le\l"
 	.string "savez tous, au fond.\p"
 	.string "Autour de toi, personne ne\n"
 	.string "semble choque. Certains\l"
-	.string "hochent meme la tete.$"
+	.string "hochent même la tête.$"
 
 HeartSoul_Text_CommercantIntro:
 	.string "…\p"
-	.string "Ecoute. Depuis CINNABAR, certains\n"
+	.string "Écoute. Depuis CINNABAR, certains\n"
 	.string "ici pensent que la TEAM ROCKET\l"
 	.string "'apporte de l'ordre', vu qu'il n'y\l"
 	.string "a plus de Championne en ville.\p"
-	.string "Moi, je finance une resistance\n"
-	.string "discrete. J'ai besoin de gens qui\l"
+	.string "Moi, je finance une résistance\n"
+	.string "discrète. J'ai besoin de gens qui\l"
 	.string "remontent des informations.$"
 
 HeartSoul_Text_AiderCommercant:
-	.string "Aider a recolter des infos$"
+	.string "Aider à récolter des infos$"
 
 HeartSoul_Text_IgnorerCommercant:
-	.string "Decliner$"
+	.string "Décliner$"
 
 HeartSoul_Text_CommercantAiderResultat:
-	.string "Bien. Reviens me voir des que tu\n"
+	.string "Bien. Reviens me voir dès que tu\n"
 	.string "apprends quelque chose d'utile\l"
 	.string "sur leurs mouvements.$"
 
@@ -221,8 +221,8 @@ HeartSoul_Text_CommercantIgnorerResultat:
 	.string "valable, si tu changes d'avis.$"
 
 HeartSoul_Text_CommercantApresResolu:
-	.string "Reste discrete. On ne sait jamais\n"
-	.string "qui ecoute.$"
+	.string "Reste discrète. On ne sait jamais\n"
+	.string "qui écoute.$"
 
 // Foret de Jade, bucherons deplaces (section 8/9 de histoire.md). Appele depuis
 // Route2_EventScript_Doug (data/maps/Route2_hns/scripts.inc), objet-evenement place sur
@@ -256,10 +256,10 @@ HeartSoul_BucheronsForet_Skip:
 HeartSoul_Text_BucheronsIntro:
 	.string "…\p"
 	.string "On coupait ce bois depuis des\n"
-	.string "annees. La TEAM ROCKET a mis fin\l"
+	.string "années. La TEAM ROCKET a mis fin\l"
 	.string "aux permis, d'un coup, sans rien\l"
-	.string "proposer a la place.\p"
-	.string "'Rendre la foret aux Pokemon',\n"
+	.string "proposer à la place.\p"
+	.string "'Rendre la forêt aux Pokémon',\n"
 	.string "ils disent. Nous, on n'a plus\l"
 	.string "rien pour nourrir nos familles.$"
 
@@ -270,13 +270,13 @@ HeartSoul_Text_IgnorerBucherons:
 	.string "Continuer ta route$"
 
 HeartSoul_Text_BucheronsAiderResultat:
-	.string "Merci. Ca ne regle rien sur le\n"
-	.string "fond, mais ca aide a tenir\l"
+	.string "Merci. Ça ne règle rien sur le\n"
+	.string "fond, mais ça aide à tenir\l"
 	.string "quelques jours de plus.$"
 
 HeartSoul_Text_BucheronsIgnorerResultat:
 	.string "…\p"
-	.string "Ouais, c'est ca. File.$"
+	.string "Ouais, c'est ça. File.$"
 
 // Azuria (Cerulean), canalisations sabotees (section 8/9 de histoire.md). Appele depuis
 // CeruleanCity_EventScript_Boy (data/maps/CeruleanCity_hns/scripts.inc), PNJ existant a
@@ -308,12 +308,12 @@ HeartSoul_CanalisationsCerulean_Skip:
 
 HeartSoul_Text_CanalisationsIntro:
 	.string "…\p"
-	.string "La TEAM ROCKET a sabote nos\n"
+	.string "La TEAM ROCKET a saboté nos\n"
 	.string "canalisations avant de repartir.\l"
-	.string "L'ARENE d'ONDINE sert de poste de\l"
+	.string "L'ARÈNE d'ONDINE sert de poste de\l"
 	.string "secours, en attendant.\p"
 	.string "Un coup de main pour les\n"
-	.string "reparations, ca compterait pour\l"
+	.string "réparations, ça compterait pour\l"
 	.string "elle.$"
 
 HeartSoul_Text_ReparerCanalisations:
@@ -323,16 +323,16 @@ HeartSoul_Text_IgnorerCanalisations:
 	.string "Passer ton chemin$"
 
 HeartSoul_Text_CanalisationsReparerResultat:
-	.string "Merci. Avec toi, ca ira plus\n"
+	.string "Merci. Avec toi, ça ira plus\n"
 	.string "vite. ONDINE pourra rouvrir son\l"
-	.string "ARENE normalement.$"
+	.string "ARÈNE normalement.$"
 
 HeartSoul_Text_CanalisationsIgnorerResultat:
 	.string "…\p"
-	.string "Bon, tant pis. On se debrouillera.$"
+	.string "Bon, tant pis. On se débrouillera.$"
 
 HeartSoul_Text_CanalisationsApres:
-	.string "Grace a toi, les canalisations\n"
+	.string "Grâce à toi, les canalisations\n"
 	.string "tiennent de nouveau.$"
 
 // Azuria - Arene fermee tant que les canalisations ne sont pas reparees (retour de test n°11).
@@ -347,18 +347,18 @@ HeartSoul_EventScript_OndineAvantCanalisations::
 
 HeartSoul_Text_OndineAvantCanalisationsIntro:
 	.string "ONDINE: N'approche pas plus.\n"
-	.string "L'ARENE est hors service.\p"
+	.string "L'ARÈNE est hors service.\p"
 	.string "Un type de la TEAM ROCKET a\n"
-	.string "sabote nos canalisations avant\l"
-	.string "de filer. Je gere l'inondation,\l"
+	.string "saboté nos canalisations avant\l"
+	.string "de filer. Je gère l'inondation,\l"
 	.string "pas le temps de me battre.$"
 
 HeartSoul_Text_OndineAvantCanalisationsDemande:
 	.string "ONDINE: Si tu veux vraiment que\n"
-	.string "je t'ecoute parler de reseau\l"
-	.string "ROCKET, commence par m'aider a\l"
-	.string "reparer ce gachis en ville.\p"
-	.string "Apres, on parlera.$"
+	.string "je t'écoute parler de réseau\l"
+	.string "ROCKET, commence par m'aider à\l"
+	.string "réparer ce gâchis en ville.\p"
+	.string "Après, on parlera.$"
 
 HeartSoul_EventScript_RocketGruntCerulean::
 	lock
@@ -371,8 +371,8 @@ HeartSoul_Text_RocketGruntCerulean:
 	.string "Alors, elle est belle ma\n"
 	.string "petite inondation ?\p"
 	.string "Tu peux toujours essayer de\n"
-	.string "reparer ca, ca ne rouvrira pas\l"
-	.string "cette ARENE de sitot.$"
+	.string "réparer ça, ça ne rouvrira pas\l"
+	.string "cette ARÈNE de sitôt.$"
 
 // Declenche depuis CeruleanCity_Gym_OnFrame (map_script_2 VAR_TEMP_1, 0), meme motif que
 // CeruleanCity_Gym_EventScript_TryMachinePart juste au-dessus dans le meme fichier (condition
@@ -429,10 +429,10 @@ HeartSoul_Text_ProfesseurPalletDisparu:
 	.string "il ne dit plus grand-chose.\p"
 	.string "Terre depuis l'histoire de\n"
 	.string "CINNABAR. Il a peur de\l"
-	.string "represailles, a ce qu'on dit.$"
+	.string "représailles, à ce qu'on dit.$"
 
 HeartSoul_Text_PalletJeuneDresseurApres:
-	.string "J'espere que tu retrouveras\n"
+	.string "J'espère que tu retrouveras\n"
 	.string "vite BLAINE.$"
 
 // Vermilion, doute de Major Bob avant le combat de badge (meme motif que Pierre/Ondine,
@@ -453,20 +453,20 @@ HeartSoul_EventScript_MajorBobConvaincu::
 	return
 
 HeartSoul_Text_MajorBobDouteIntro:
-	.string "MAJOR BOB: Alors comme ca c'est\n"
+	.string "MAJOR BOB: Alors comme ça c'est\n"
 	.string "toi, la Championne de CINNABAR.$"
 
 HeartSoul_Text_MajorBobDouteRecit:
-	.string "MAJOR BOB: On m'a parle d'un\n"
-	.string "reseau ROCKET, de lieutenants…\l"
-	.string "Facile a dire. Difficile a\l"
+	.string "MAJOR BOB: On m'a parlé d'un\n"
+	.string "réseau ROCKET, de lieutenants…\l"
+	.string "Facile à dire. Difficile à\l"
 	.string "prouver.$"
 
 HeartSoul_Text_MajorBobDouteConclusion:
 	.string "…\p"
 	.string "MAJOR BOB: Montre-moi ce que tu\n"
 	.string "vaux au combat. On en reparlera\l"
-	.string "apres.$"
+	.string "après.$"
 
 // Azuria->Vermilion, interception radio (section 8/9). PNJ existant reflavore
 // (VermilionCity_EventScript_Nerd). Simplification volontaire, documentee : le brief decrit
@@ -502,23 +502,23 @@ HeartSoul_Text_InterceptionRadioIntro:
 	.string "MAJOR BOB me fait intercepter\n"
 	.string "les transmissions radio de la\l"
 	.string "TEAM ROCKET. J'ai besoin d'un\l"
-	.string "coup de main pour trier tout ca.$"
+	.string "coup de main pour trier tout ça.$"
 
 HeartSoul_Text_AiderRadio:
-	.string "Aider a trier les transmissions$"
+	.string "Aider à trier les transmissions$"
 
 HeartSoul_Text_IgnorerRadio:
 	.string "Laisser faire$"
 
 HeartSoul_Text_InterceptionRadioAiderResultat:
-	.string "Merci. On a repere des mouvements\n"
-	.string "suspects du cote de SAFRANIA.\p"
-	.string "Ca servira, pour la suite.$"
+	.string "Merci. On a repéré des mouvements\n"
+	.string "suspects du côté de SAFRANIA.\p"
+	.string "Ça servira, pour la suite.$"
 
 HeartSoul_Text_InterceptionRadioIgnorerResultat:
 	.string "…\p"
-	.string "Tant pis, je me debrouillerai.$"
+	.string "Tant pis, je me débrouillerai.$"
 
 HeartSoul_Text_InterceptionRadioApres:
 	.string "Toujours rien de neuf sur les\n"
-	.string "frequences ROCKET.$"
+	.string "fréquences ROCKET.$"

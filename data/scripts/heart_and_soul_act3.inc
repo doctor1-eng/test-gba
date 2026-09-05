@@ -38,7 +38,7 @@ HeartSoul_Text_LyreSeen:
 	.string "vient jouer les héroïnes dans MA\l"
 	.string "forêt.\p"
 	.string "La TEAM ROCKET va rendre ces\n"
-	.string "bois aux POKéMON. Toi, tu ne\l"
+	.string "bois aux POKÉMON. Toi, tu ne\l"
 	.string "fais que passer.$"
 
 HeartSoul_Text_LyreBeaten:
@@ -299,16 +299,16 @@ HeartSoul_Text_EboulementRockTunnel:
 	.string "Un grondement secoue la\n"
 	.string "galerie. Un pan de plafond\l"
 	.string "s'effondre entre vous deux.\p"
-	.string "Sans un mot, TERRENCE t'aide a\n"
-	.string "degager le passage face a un\l"
-	.string "GRAVELER devenu incontrolable.\p"
+	.string "Sans un mot, TERRENCE t'aide à\n"
+	.string "dégager le passage face à un\l"
+	.string "GRAVELER devenu incontrôlable.\p"
 	.string "Une fois le calme revenu, il\n"
-	.string "reprend son air mefiant.$"
+	.string "reprend son air méfiant.$"
 
 HeartSoul_Text_TerrenceIntro:
 	.string "TERRENCE: Encore un pas et je\n"
 	.string "te bute. …Ou pas.\p"
-	.string "T'as l'air du genre a vouloir\n"
+	.string "T'as l'air du genre à vouloir\n"
 	.string "discuter avant de te battre.\l"
 	.string "Vas-y, j'ai deux minutes.$"
 
@@ -320,12 +320,12 @@ HeartSoul_Text_TerrenceQ1:
 HeartSoul_Text_TerrenceQ1_A:
 	.string "BLUE tient toujours parole$"
 HeartSoul_Text_TerrenceQ1_B:
-	.string "Tu as deja vu quelqu'un d'autre\npaye apres un echec ?$"
+	.string "Tu as déjà vu quelqu'un d'autre\npaye après un échec ?$"
 HeartSoul_Text_TerrenceQ1_C:
 	.string "Je me fiche de ta dette, bats-toi$"
 
 HeartSoul_Text_TerrenceQ1_A_Resultat:
-	.string "TERRENCE: …Ouais. P't-etre.$"
+	.string "TERRENCE: …Ouais. P't-être.$"
 
 HeartSoul_Text_TerrenceQ1_B_Resultat:
 	.string "TERRENCE: …\p"
@@ -337,23 +337,23 @@ HeartSoul_Text_TerrenceQ1_C_Resultat:
 
 HeartSoul_Text_TerrenceQ2:
 	.string "TERRENCE: Et si t'avais une\n"
-	.string "meilleure offre a me faire ?$"
+	.string "meilleure offre à me faire ?$"
 
 HeartSoul_Text_TerrenceQ2_A:
-	.string "Un contrat minier legitime,\nvia PIERRE$"
+	.string "Un contrat minier légitime,\nvia PIERRE$"
 HeartSoul_Text_TerrenceQ2_B:
-	.string "Trouve une solution toi-meme$"
+	.string "Trouve une solution toi-même$"
 HeartSoul_Text_TerrenceQ2_C:
-	.string "Ce n'est pas mon probleme$"
+	.string "Ce n'est pas mon problème$"
 
 HeartSoul_Text_TerrenceQ2_A_Resultat:
 	.string "TERRENCE: …Un vrai contrat ?\n"
 	.string "Avec PIERRE ?\p"
-	.string "Ca, ca m'interesse plus que\n"
+	.string "Ça, ça m'intéresse plus que\n"
 	.string "les promesses de BLUE.$"
 
 HeartSoul_Text_TerrenceQ2_B_Resultat:
-	.string "TERRENCE: Facile a dire, pour\n"
+	.string "TERRENCE: Facile à dire, pour\n"
 	.string "toi.$"
 
 HeartSoul_Text_TerrenceQ2_C_Resultat:
@@ -375,7 +375,7 @@ HeartSoul_Text_TerrenceQ3_C:
 
 HeartSoul_Text_TerrenceQ3_A_Resultat:
 	.string "TERRENCE: …\p"
-	.string "Ma ville. J'y avais meme plus\n"
+	.string "Ma ville. J'y avais même plus\n"
 	.string "pense.$"
 
 HeartSoul_Text_TerrenceQ3_B_Resultat:
@@ -385,19 +385,19 @@ HeartSoul_Text_TerrenceQ3_B_Resultat:
 
 HeartSoul_Text_TerrenceQ3_C_Resultat:
 	.string "TERRENCE: …\p"
-	.string "Bon. On regle ca autrement,\n"
+	.string "Bon. On règle ça autrement,\n"
 	.string "alors.$"
 
 HeartSoul_Text_TerrenceConvaincu:
 	.string "TERRENCE: …\p"
-	.string "D'accord. J'arrete. La dette,\n"
+	.string "D'accord. J'arrête. La dette,\n"
 	.string "BLUE peut se la garder.\p"
 	.string "Ce tunnel, c'est le mien avant\n"
-	.string "d'etre le sien.$"
+	.string "d'être le sien.$"
 
 HeartSoul_Text_TerrenceCombatAllege:
-	.string "TERRENCE: …T'as pas tout a fait\n"
-	.string "tort. Mais ca reste pas gagne\l"
+	.string "TERRENCE: …T'as pas tout à fait\n"
+	.string "tort. Mais ça reste pas gagné\l"
 	.string "d'avance.$"
 
 HeartSoul_Text_TerrenceLightSeen:
@@ -406,19 +406,19 @@ HeartSoul_Text_TerrenceLightSeen:
 
 HeartSoul_Text_TerrenceLightBeaten:
 	.string "TERRENCE: …\p"
-	.string "OK. T'as gagne ca, au moins.$"
+	.string "OK. T'as gagné ça, au moins.$"
 
 HeartSoul_Text_TerrenceLightAfterBattle:
-	.string "TERRENCE: J'y reflechirai. Le\n"
-	.string "contrat minier, ca tient\l"
+	.string "TERRENCE: J'y réfléchirai. Le\n"
+	.string "contrat minier, ça tient\l"
 	.string "toujours ?$"
 
 HeartSoul_Text_TerrenceCombatComplet:
-	.string "TERRENCE: Ca suffit, les mots.\n"
-	.string "J'ai une dette a effacer.$"
+	.string "TERRENCE: Ça suffit, les mots.\n"
+	.string "J'ai une dette à effacer.$"
 
 HeartSoul_Text_TerrenceSeen:
-	.string "TERRENCE: J'ai une dette a\n"
+	.string "TERRENCE: J'ai une dette à\n"
 	.string "effacer. Rien de personnel.$"
 
 HeartSoul_Text_TerrenceBeaten:
@@ -426,9 +426,9 @@ HeartSoul_Text_TerrenceBeaten:
 	.string "La dette reste. Mais j'ai mal.$"
 
 HeartSoul_Text_TerrenceAfterBattle:
-	.string "TERRENCE: T'as gagne. Ca\n"
+	.string "TERRENCE: T'as gagné. Ça\n"
 	.string "n'efface rien, mais… t'as\l"
-	.string "gagne.$"
+	.string "gagné.$"
 
 HeartSoul_Text_TerrenceApresConvaincu:
 	.string "TERRENCE: Ce tunnel reste sous\n"

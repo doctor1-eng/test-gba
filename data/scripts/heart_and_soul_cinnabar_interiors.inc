@@ -24,9 +24,9 @@ CinnabarIslandGym_Hns_EventScript_Worker::
 	end
 
 HeartSoul_Text_GymWorker:
-	.string "OUVRIER: On remet l'ARENE en\n"
-	.string "etat, mur par mur. Ca prend le\l"
-	.string "temps que ca prend.\p"
+	.string "OUVRIER: On remet l'ARÈNE en\n"
+	.string "état, mur par mur. Ça prend le\l"
+	.string "temps que ça prend.\p"
 	.string "BLAINE dirige les combats\n"
 	.string "depuis le DOJO en attendant.\l"
 	.string "Revenez quand ce sera fini.$"
@@ -43,10 +43,10 @@ HeartSoul_Text_LabAssistant:
 	.string "ASSISTANTE: Le LABO tourne au\n"
 	.string "ralenti depuis que BLAINE a\l"
 	.string "disparu.\p"
-	.string "Personne n'a eu le cœur a\n"
+	.string "Personne n'a eu le cœur à\n"
 	.string "continuer ses recherches sans\l"
 	.string "lui. On garde les lieux, c'est\l"
-	.string "deja ca.$"
+	.string "déjà ça.$"
 
 // Manoir : 2 fragments des "carnets de Blaine" (histoire.md section 8), fil qui se referme en
 // Acte V ("c'est ce que BLUE cherchait precisement a recuperer"). Contenu ecrit pour
@@ -58,7 +58,7 @@ CinnabarIslandMansion_Hns_EventScript_CarnetBlaine1::
 	end
 
 HeartSoul_Text_CarnetBlaine1:
-	.string "Une page arrachee, glissee sous\n"
+	.string "Une page arrachée, glissée sous\n"
 	.string "une latte du plancher.\p"
 	.string "'Les dossiers de GIOVANNI\n"
 	.string "parlent d'accélération\l"
@@ -71,9 +71,9 @@ CinnabarIslandMansion_Hns_EventScript_CarnetBlaine2::
 	end
 
 HeartSoul_Text_CarnetBlaine2:
-	.string "Une autre page, plus recente,\n"
-	.string "l'encre a peine seche.\p"
-	.string "'Je n'ai jamais tout dit a la\n"
+	.string "Une autre page, plus récente,\n"
+	.string "l'encre à peine sèche.\p"
+	.string "'Je n'ai jamais tout dit à la\n"
 	.string "Ligue. Si quelqu'un met la main\l"
 	.string "sur ces notes un jour, il\l"
 	.string "comprendra pourquoi je me\l"

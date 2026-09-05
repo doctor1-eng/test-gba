@@ -14,9 +14,9 @@ PewterCity_PhotoBlaine_Skip:
 
 HeartSoul_Text_PhotoBlaine:
 	.string "Un vieux cliche, glisse entre\n"
-	.string "deux etals du marche.\p"
+	.string "deux étals du marche.\p"
 	.string "BLAINE, plus jeune, un bras sur\n"
-	.string "l'epaule d'une dresseuse qui te\l"
+	.string "l'épaule d'une dresseuse qui te\l"
 	.string "ressemble beaucoup.\p"
 	.string "Personne ne t'avait jamais dit\n"
 	.string "qu'il te connaissait depuis si\l"
@@ -48,7 +48,7 @@ HeartSoul_Text_PatrouilleReconSeen:
 HeartSoul_Text_PatrouilleReconBeaten:
 	.string "GRUNT: …\p"
 	.string "Ils vont vouloir un rapport\n"
-	.string "plus complet que ca.$"
+	.string "plus complet que ça.$"
 
 HeartSoul_Text_PatrouilleReconAfterBattle:
 	.string "Le GRUNT bat en retraite en\n"
@@ -74,15 +74,15 @@ CeladonCity_EventScript_SubordonneAdmiratifVictoire::
 HeartSoul_Text_SubordonneAdmiratifSeen:
 	.string "SUBORDONNE: BLUE a raison sur\n"
 	.string "un point : la Ligue ne\l"
-	.string "recompense pas le talent. Je\l"
+	.string "récompense pas le talent. Je\l"
 	.string "vais te le prouver.$"
 
 HeartSoul_Text_SubordonneAdmiratifBeaten:
 	.string "SUBORDONNE: …\p"
-	.string "Ce n'etait pas cense se passer\n"
-	.string "comme ca.$"
+	.string "Ce n'était pas censé se passer\n"
+	.string "comme ça.$"
 
 HeartSoul_Text_SubordonneAdmiratifAfterBattle:
-	.string "SUBORDONNE: …Peut-etre que la\n"
+	.string "SUBORDONNE: …Peut-être que la\n"
 	.string "force ne suffit pas non plus.\l"
-	.string "Peut-etre.$"
+	.string "Peut-être.$"

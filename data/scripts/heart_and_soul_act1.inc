@@ -437,13 +437,13 @@ CinnabarIsland_EventScript_GruntFuiteUnused::
 HeartSoul_Text_AttaqueDebut:
 	.string "Un grondement secoue Cinnabar.\p"
 	.string "Des silhouettes en uniforme noir\n"
-	.string "debarquent sur le port, la TEAM\l"
+	.string "débarquent sur le port, la TEAM\l"
 	.string "ROCKET.\p"
 	.string "Les liaisons avec le reste de\n"
-	.string "Kanto viennent d'etre coupees.$"
+	.string "Kanto viennent d'être coupées.$"
 
 HeartSoul_Text_BlaineReagit:
-	.string "BLAINE: Rocket… deja ?!$"
+	.string "BLAINE: Rocket… déjà ?!$"
 
 HeartSoul_Text_BlaineSeplaceDevant:
 	.string "BLAINE se place entre le GRUNT\n"
@@ -452,13 +452,13 @@ HeartSoul_Text_BlaineSeplaceDevant:
 	.string "retiens !$"
 
 HeartSoul_Text_EclatCombat:
-	.string "Un eclair jaillit derriere toi.\n"
+	.string "Un éclair jaillit derrière toi.\n"
 	.string "Tu ne vois pas l'issue du\l"
 	.string "combat.$"
 
 HeartSoul_Text_BlaineDisparu:
 	.string "… Le silence retombe. BLAINE a\n"
-	.string "disparu dans la fumee.$"
+	.string "disparu dans la fumée.$"
 
 // Evenement 0 (histoire.md section 11, Acte I) : obstacle mineur, pas un boss - le GRUNT que
 // Blaine a retenu se retourne desormais contre le joueur, avant que celui-ci puisse continuer
@@ -466,7 +466,7 @@ HeartSoul_Text_BlaineDisparu:
 // plate deja utilisee partout dans ce projet).
 HeartSoul_Text_GruntSeen:
 	.string "GRUNT: Tiens, une Championne.\n"
-	.string "Ca tombe bien.$"
+	.string "Ça tombe bien.$"
 
 HeartSoul_Text_GruntBeaten:
 	.string "GRUNT: …\p"
@@ -481,24 +481,24 @@ HeartSoul_Text_GruntApresBattle:
 // entre securiser le Centre Pokemon (soigner les blesses) ou l'Arene (proteger son propre
 // titre). +1 reputation si Centre Pokemon, 0 si Arene - barème documente dans histoire.md.
 HeartSoul_Text_SauvetageIntro:
-	.string "Dans le chaos, deux batiments\n"
+	.string "Dans le chaos, deux bâtiments\n"
 	.string "ont encore besoin de toi avant\l"
-	.string "de fuir : le CENTRE POKEMON, ou\l"
-	.string "ta propre ARENE.$"
+	.string "de fuir : le CENTRE POKÉMON, ou\l"
+	.string "ta propre ARÈNE.$"
 
 HeartSoul_Text_SauvetageCentre:
-	.string "Securiser le CENTRE POKEMON$"
+	.string "Sécuriser le CENTRE POKÉMON$"
 
 HeartSoul_Text_SauvetageArene:
-	.string "Securiser ton ARENE$"
+	.string "Sécuriser ton ARÈNE$"
 
 HeartSoul_Text_SauvetageCentreResultat:
-	.string "Tu aides a evacuer les blesses du\n"
-	.string "CENTRE POKEMON avant de\l"
+	.string "Tu aides à évacuer les blesses du\n"
+	.string "CENTRE POKÉMON avant de\l"
 	.string "repartir en courant.$"
 
 HeartSoul_Text_SauvetageAreneResultat:
-	.string "Tu recuperes en vitesse ce qui\n"
+	.string "Tu récupères en vitesse ce qui\n"
 	.string "prouve ton titre de Championne,\l"
 	.string "avant de repartir en courant.$"
 
@@ -509,9 +509,9 @@ HeartSoul_Text_CarnetGrunt:
 	.string "Un GRUNT de la TEAM ROCKET te\n"
 	.string "double en courant et laisse\l"
 	.string "tomber un carnet couvert de\l"
-	.string "codes radio griffonnes.\p"
+	.string "codes radio griffonnés.\p"
 	.string "Tu le ramasses sans vraiment\n"
-	.string "savoir a quoi il sert. Pas le\l"
+	.string "savoir à quoi il sert. Pas le\l"
 	.string "moment de t'attarder.$"
 
 HeartSoul_Text_RefugiesIntro:
@@ -519,7 +519,7 @@ HeartSoul_Text_RefugiesIntro:
 	.string "port, tu croises des habitants\l"
 	.string "caches dans les grottes du\l"
 	.string "MONT CINNABAR.\p"
-	.string "Ils te supplient de decider pour\n"
+	.string "Ils te supplient de décider pour\n"
 	.string "eux.$"
 
 HeartSoul_Text_RefugiesGuider:
@@ -529,29 +529,29 @@ HeartSoul_Text_RefugiesCacher:
 	.string "Les cacher sur place$"
 
 HeartSoul_Text_RefugiesGuiderResultat:
-	.string "Tu guides le petit groupe jusqu'a\n"
+	.string "Tu guides le petit groupe jusqu'à\n"
 	.string "un bateau de fortune, au risque\l"
-	.string "d'etre reperes par la TEAM\l"
+	.string "d'être repérés par la TEAM\l"
 	.string "ROCKET.\p"
-	.string "Ils s'eloignent du port, vivants.$"
+	.string "Ils s'éloignent du port, vivants.$"
 
 HeartSoul_Text_RefugiesCacherResultat:
 	.string "Tu les caches du mieux que tu\n"
 	.string "peux dans les grottes.\p"
 	.string "Pas de garantie qu'ils soient\n"
-	.string "toujours la a ton retour…$"
+	.string "toujours là à ton retour…$"
 
 HeartSoul_Text_FuiteRoute21:
-	.string "Il n'y a plus rien a faire ici.\p"
-	.string "Cinnabar est coupee du monde. Un\n"
+	.string "Il n'y a plus rien à faire ici.\p"
+	.string "Cinnabar est coupée du monde. Un\n"
 	.string "dernier bateau attend au port,\l"
-	.string "pret a partir vers le continent.$"
+	.string "prêt à partir vers le continent.$"
 
 HeartSoul_Text_ObjetTrouve:
 	.string "En courant vers le port, tu\n"
-	.string "trebuches sur un bracelet grave,\l"
+	.string "trébuches sur un bracelet grave,\l"
 	.string "tombe des affaires d'une famille\l"
-	.string "de refugies.\p"
+	.string "de réfugies.\p"
 	.string "Tu le glisses dans ta poche. Il\n"
 	.string "faudra le rendre, si tu croises\l"
 	.string "quelqu'un qui le reconnait.$"
@@ -561,7 +561,7 @@ HeartSoul_Text_ObjetTrouve:
 // FLAG_POKEMON_BLESSE_SAUVE est pose). Pas un membre d'equipe (aucun givemon), purement
 // narratif + flag de suivi.
 HeartSoul_Text_PokemonBlesseIntro:
-	.string "Un POKEMON sauvage erre pres du\n"
+	.string "Un POKÉMON sauvage erre pres du\n"
 	.string "port, blesse par les combats.\p"
 	.string "Tu as le temps de l'aider, ou de\n"
 	.string "continuer ta course.$"
@@ -574,19 +574,19 @@ HeartSoul_Text_PokemonBlesseIgnorer:
 
 HeartSoul_Text_PokemonBlesseSoignerResultat:
 	.string "Tu prends un instant pour le\n"
-	.string "soigner. Il te suit, mefiant,\l"
+	.string "soigner. Il te suit, méfiant,\l"
 	.string "jusqu'au port.$"
 
 HeartSoul_Text_PokemonBlesseIgnorerResultat:
 	.string "Pas le temps. Tu le laisses\n"
-	.string "derriere toi.$"
+	.string "derrière toi.$"
 
 // Evenement 4 (histoire.md section 11, Acte II) : marin secondaire, reapparait en Acte V
 // pour le retour par mer - purement narratif ici, FLAG_MARIN_ROUTE21_RENCONTRE pose pour un
 // eventuel rappel ulterieur.
 HeartSoul_Text_TempeteRoute21Intro:
-	.string "La traversee est a peine\n"
-	.string "commencee qu'une tempete\l"
+	.string "La traversée est à peine\n"
+	.string "commencée qu'une tempête\l"
 	.string "soudaine s'abat sur la mer.$"
 
 HeartSoul_Text_TempeteRoute21:
@@ -594,7 +594,7 @@ HeartSoul_Text_TempeteRoute21:
 	.string "Le marin te hurle de te\n"
 	.string "cramponner et force l'accostage\l"
 	.string "en urgence sur le continent.\p"
-	.string "Tu ne connais meme pas son nom.\n"
+	.string "Tu ne connais même pas son nom.\n"
 	.string "Tu ne l'oublieras pas.$"
 
 // Blocage physique du retour a Cinnabar (FLAG_CINNABAR_VERROUILLEE). Declenche depuis
