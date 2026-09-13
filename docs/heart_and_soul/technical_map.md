@@ -58,7 +58,7 @@ réutiliser" — une correspondance `map.json`/`map.bin` propre ne suffit pas.
 | Fuchsia City | `FuchsiaCity_hns` (+ `_Gym_hns`) | Routes 15, 18, 19 | Oui | Débat clan de Koga à scripter. |
 | Céladopole | `CeladonCity_hns` (+ `_Gym_hns`, `_DepartmentStore_*_hns`, `_GameCorner_hns`) | Routes 7, 16 | Oui | Game Corner `_hns` existant = bon point d'ancrage pour "financement Rocket exposé". |
 | Saffron City | `SaffronCity_hns` (+ `_Gym_hns`) | Routes 5, 6, 7, 8 — carrefour central | Oui | — |
-| Silph Co | `SaffronCity_SilphCo_hns` | Warps internes uniquement (pas de `connections` externe, normal pour un intérieur) | Oui | Repaire de Mira Voss (lieutenant final) + documents à lire (section 8). À vérifier : nombre d'étages réellement modélisés côté `_hns` (la version `_Frlg` en a 11 ; la version `_hns` est un seul fichier de map, structure interne à explorer avant de répartir le contenu). |
+| Silph Co | `SaffronCity_SilphCo_hns` | Warps internes uniquement (pas de `connections` externe, normal pour un intérieur) | Oui | Repaire de Mira Voss (lieutenant final) + documents à lire (section 8). **Étages confirmés (2026-09-13, rendu `tools/gba_tiles render-map` + lecture de `map.json`)** : **1 seul niveau**, pas d'étages côté `_hns` (contrairement à `_Frlg` qui en a 11) — `map.json` ne contient qu'1 `warp_event`, la sortie vers `MAP_SAFFRON_CITY_HNS` ; aucun warp interne vers un étage supérieur. Le rendu montre un escalier visible en haut à droite du hall (36×22 blocs), mais purement décoratif : non câblé à un warp. 4 `object_events`, 3 `bg_events` déjà présents à répartir (voir capture `renders/silph_co_ground_floor.png`). Si plusieurs étages sont voulus pour le contenu prévu (repaire + documents), il faudra soit les caser dans ce seul niveau, soit créer de nouvelles maps `_Hns` (comme fait pour Cinnabar) et câbler l'escalier existant vers la première. |
 
 ## Bâtiments de Cinnabar — statut actuel (mis à jour 2026-09-02)
 
@@ -94,15 +94,43 @@ salles séparées du Labo n'existent plus dans cette architecture ; à repenser 
 contenu reste souhaité). Suffisant pour valider warps/collisions/transitions ; une passe de
 contenu (mobilier, PNJ, subdivision en salles si nécessaire) reste à faire.
 
-**Ce qui reste à faire** : validation visuelle en émulateur (aucun rendu graphique
-disponible côté agent, voir `MAP_TEST_README.md`), contenu scénaristique interne (carnets de
-Blaine au Labo, etc., section 8 de `histoire.md`), et décision sur la zone bonus Kaïn
-(nécessite un sous-sol qui n'existe plus dans l'architecture actuelle).
+**⚠️ Correction (2026-09-13) — la pièce n'a jamais été vide.** Premier rendu visuel réel de
+ces 3 intérieurs obtenu via `tools/gba_tiles` (`render-map`, voir son README), qui décode
+directement `data/layouts/*/map.bin` + les tilesets réels — la limite « aucun rendu
+graphique disponible côté agent » citée ci-dessus et dans `MAP_TEST_README.md` ne tient
+donc plus pour ce type de vérification. Résultat : les 3 bâtiments affichent le mobilier
+complet du template `VermilionCity_House1_hns` d'où leur `map.bin` a été copié (bibliothèque,
+téléviseur, tableau, table + 4 chaises, rideaux, buffet, plantes) — **pas une pièce vide**.
+Comparaison pixel par pixel confirmée entre les 3 bâtiments et `VermilionCity_House1_hns` :
+identiques. Conséquence directe sur le retour utilisateur du 2026-09-02 (2 panneaux du
+Manoir introuvables en jeu, diagnostiqué dans `implementation_notes.md` comme « pièce vide
+sans repère visuel ») : ce diagnostic reposait sur une prémisse fausse. Les 2 cases de
+panneau (`3,3` et `8,6`) ont été localisées précisément dans le rendu : les deux tombent sur
+la bordure décorative du tapis, **collées aux chaises** (pas sur une case de sol isolée),
+collision confirmée à 0 (donc pas bloquées). Pas de cause racine confirmée à ce stade,
+mais l'hypothèse « aucun repère visuel » doit être écartée — voir
+`implementation_notes.md` pour le détail et les captures. À décider par l'équipe :
+déplacer les panneaux vers une case de sol ouverte plus évidente, ou considérer que le
+souci vient d'ailleurs (mécanisme des `bg_events` de type sign lui-même, jamais testé sur
+une map neuve avant celle-ci selon la note déjà présente dans `implementation_notes.md`).
+
+Captures (`docs/heart_and_soul/renders/`) :
+![Intérieur meublé (Gym/Manoir/Labo, identiques)](renders/cinnabar_interior_furnished.png)
+![Case du panneau 1 (3,3), collée aux chaises](renders/cinnabar_mansion_sign1_location.png)
+![Case du panneau 2 (8,6), collée aux chaises](renders/cinnabar_mansion_sign2_location.png)
+
+**Ce qui reste à faire** : contenu scénaristique interne (carnets de Blaine au Labo, etc.,
+section 8 de `histoire.md`), et décision sur la zone bonus Kaïn (nécessite un sous-sol qui
+n'existe plus dans l'architecture actuelle). La validation visuelle de la géométrie/du
+mobilier n'est plus bloquée (voir correction ci-dessus) ; reste ouverte la validation en
+jeu du comportement runtime (scripts, `bg_events`, collisions en mouvement) qu'un rendu
+statique ne peut pas remplacer.
 
 ## Point vérifié
 
 `_hns` est confirmé comme Kanto complet, connecté et fonctionnel dans cette variante.
 Cinnabar est complète elle aussi : les 3 bâtiments (Gym/Manoir/Labo) ont des warps
 fonctionnels vers des maps natives `_Hns` (plus de dépendance à une géométrie `_Frlg`
-inutilisable pour ce type de build). Seule la validation visuelle en émulateur reste
-ouverte, ainsi que le contenu interne (mobilier/PNJ/étages) de ces 3 bâtiments.
+inutilisable pour ce type de build). Le rendu visuel de la géométrie/du mobilier de ces 3
+bâtiments est maintenant disponible (voir correction 2026-09-13 ci-dessus) ; reste ouverte
+la validation en jeu du comportement runtime (scripts, découvrabilité des `bg_events`).

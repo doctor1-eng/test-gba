@@ -1223,6 +1223,23 @@ réel plus tard, ou si la découvrabilité reste un problème même en marchant 
 volontairement, remplacer par un objet visible (ex. sprite de note/papier) sera la correction
 la plus probable.
 
+**⚠️ Correction (2026-09-13) — la prémisse « pièce vide sans repère visuel » était fausse,
+la limite « aucune validation visuelle possible côté agent » ci-dessus ne tient plus.**
+Rendu réel obtenu via `tools/gba_tiles render-map` (décodage direct de `map.bin` + tilesets,
+voir son README) : la pièce affiche le mobilier complet hérité de `VermilionCity_House1_hns`
+(bibliothèque, TV, tableau, table + 4 chaises, rideaux, buffet, plantes) — identique aux 2
+autres bâtiments et au template source, comparé pixel par pixel. Localisation précise des 2
+cases de panneau dans ce rendu : `(3,3)` et `(8,6)` tombent toutes les deux sur la bordure
+décorative du tapis, **immédiatement collées aux chaises** — pas sur une case de sol isolée
+comme le supposait le diagnostic « aucun repère visuel ». Collision toujours confirmée à 0.
+Ça n'identifie pas de cause racine confirmée (le mécanisme `bg_sign_event` lui-même reste
+« jamais testé sur une map neuve », cf. note ci-dessus), mais retire la piste « pièce vide »
+de la liste des causes probables. Recommandation avant nouveau re-test utilisateur : essayer
+aussi le mécanisme sur une case de sol ouverte (loin du tapis) pour isoler si le problème
+vient de la position (proximité chaises/bordure tapis, potentiellement confondu visuellement
+avec un déplacement bloqué) ou du mécanisme `bg_sign_event` en general sur ces 2 maps
+précises. Voir `technical_map.md` (section Cinnabar) pour les captures.
+
 ## Acte IV — alliance des 3 Championnes restantes (Erika/Sabrina/Janine) + rescale niveaux
 
 Chantier demandé explicitement (« continue jusqu'à la 7e arène ») : compléter « l'alliance
