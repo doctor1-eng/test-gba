@@ -67,6 +67,21 @@ class PngRoundTripTests(unittest.TestCase):
             self.assertEqual(img.rows, pixels)
             self.assertEqual(img.palette[:4], palette)
 
+    def test_4bit_indexed_png_round_trip(self):
+        # The majority of this real project's tiles.png files (139 of 238 at
+        # last count) are 4-bit indexed PNGs, not 8-bit -- render-map failed
+        # outright on them (NotImplementedError) until the reader learned to
+        # unpack sub-byte pixel depths.
+        palette = [(i * 16, i * 16, i * 16) for i in range(16)]
+        pixels = [[0, 1, 2, 3, 4], [15, 14, 13, 12, 11]]  # odd width: tests row padding
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "test4.png")
+            write_indexed_png(path, 5, 2, pixels, palette, bit_depth=4)
+            img = read_png(path)
+            self.assertEqual((img.width, img.height, img.color_type), (5, 2, 3))
+            self.assertEqual(img.rows, pixels)
+            self.assertEqual(img.palette[:16], palette)
+
     def test_rgb_png_round_trip(self):
         rows = [[(10, 20, 30), (40, 50, 60)], [(70, 80, 90), (100, 110, 120)]]
         with tempfile.TemporaryDirectory() as d:

@@ -39,14 +39,21 @@ def write_indexed_png(
     pixels: Sequence[Sequence[int]],
     palette: Sequence[RGB],
     transparent_index: Optional[int] = None,
+    bit_depth: int = 8,
 ) -> None:
-    """Write an 8-bit indexed-color PNG.
+    """Write an indexed-color PNG (8-bit by default, or 4-bit -- the depth
+    most tiles.png files in a real pokeemerald-family repo actually use, two
+    16-color-or-fewer pixels packed per byte).
 
     pixels: row-major list of rows, each row a sequence of palette indices.
-    palette: list of up to 256 (r, g, b) tuples.
+    palette: list of up to 256 (r, g, b) tuples (16 max when bit_depth=4).
     """
     if len(palette) > 256:
         raise ValueError(f"palette has {len(palette)} entries, PNG PLTE allows <=256")
+    if bit_depth not in (4, 8):
+        raise ValueError(f"unsupported bit_depth {bit_depth} (use 4 or 8)")
+    if bit_depth == 4 and len(palette) > 16:
+        raise ValueError(f"bit_depth=4 allows <=16 palette entries, got {len(palette)}")
     if len(pixels) != height:
         raise ValueError(f"expected {height} rows, got {len(pixels)}")
 
@@ -57,9 +64,15 @@ def write_indexed_png(
         if len(row) != width:
             raise ValueError(f"row has {len(row)} pixels, expected {width}")
         raw.append(0)  # filter type 0 (None) per scanline
-        raw.extend(row)
+        if bit_depth == 8:
+            raw.extend(row)
+        else:
+            for i in range(0, width, 2):
+                hi = row[i] & 0xF
+                lo = row[i + 1] & 0xF if i + 1 < width else 0
+                raw.append((hi << 4) | lo)
 
-    ihdr = struct.pack(">IIBBBBB", width, height, 8, 3, 0, 0, 0)
+    ihdr = struct.pack(">IIBBBBB", width, height, bit_depth, 3, 0, 0, 0)
     idat = zlib.compress(bytes(raw), 9)
 
     out = bytearray(PNG_SIGNATURE)
@@ -166,17 +179,28 @@ def read_png(path: str) -> DecodedPNG:
         raise ValueError(f"{path}: missing IHDR")
     if interlace != 0:
         raise NotImplementedError(f"{path}: interlaced PNGs are not supported")
-    if bit_depth != 8:
-        raise NotImplementedError(f"{path}: only 8-bit depth is supported (got {bit_depth})")
     if color_type == 3 and palette is None:
         raise ValueError(f"{path}: indexed PNG missing PLTE")
 
     channels = {0: 1, 2: 3, 3: 1, 4: 2, 6: 4}.get(color_type)
     if channels is None:
         raise NotImplementedError(f"{path}: unsupported color type {color_type}")
+    if bit_depth != 8 and color_type not in (0, 3):
+        # RGB/RGBA/grayscale+alpha are always >=8 bits per the PNG spec;
+        # only grayscale and indexed color ever use sub-byte depths.
+        raise NotImplementedError(
+            f"{path}: bit depth {bit_depth} with color type {color_type} is not supported"
+        )
+    if bit_depth not in (1, 2, 4, 8):
+        raise NotImplementedError(f"{path}: unsupported bit depth {bit_depth}")
+
+    # Per the PNG spec, "bpp" for filtering purposes is bytes per *complete*
+    # pixel, minimum 1 -- for sub-byte indexed/grayscale depths this is 1
+    # regardless of bit_depth, since a pixel never spans a byte boundary.
+    bpp = max(1, (bit_depth * channels) // 8)
+    stride = (width * bit_depth * channels + 7) // 8
 
     raw = zlib.decompress(bytes(idat))
-    stride = width * channels
 
     rows_bytes: List[bytearray] = []
     prev = bytearray(stride)
@@ -191,21 +215,21 @@ def read_png(path: str) -> DecodedPNG:
             pass
         elif filt == 1:  # Sub
             for i in range(stride):
-                a = cur[i - channels] if i >= channels else 0
+                a = cur[i - bpp] if i >= bpp else 0
                 cur[i] = (cur[i] + a) & 0xFF
         elif filt == 2:  # Up
             for i in range(stride):
                 cur[i] = (cur[i] + prev[i]) & 0xFF
         elif filt == 3:  # Average
             for i in range(stride):
-                a = cur[i - channels] if i >= channels else 0
+                a = cur[i - bpp] if i >= bpp else 0
                 b = prev[i]
                 cur[i] = (cur[i] + ((a + b) // 2)) & 0xFF
         elif filt == 4:  # Paeth
             for i in range(stride):
-                a = cur[i - channels] if i >= channels else 0
+                a = cur[i - bpp] if i >= bpp else 0
                 b = prev[i]
-                c = prev[i - channels] if i >= channels else 0
+                c = prev[i - bpp] if i >= bpp else 0
                 cur[i] = (cur[i] + _paeth(a, b, c)) & 0xFF
         else:
             raise ValueError(f"{path}: unknown filter type {filt}")
@@ -213,9 +237,24 @@ def read_png(path: str) -> DecodedPNG:
         rows_bytes.append(cur)
         prev = cur
 
+    def unpack_subbyte_row(rb: bytearray) -> List[int]:
+        pixels_per_byte = 8 // bit_depth
+        mask = (1 << bit_depth) - 1
+        out = []
+        for byte in rb:
+            for shift in range(8 - bit_depth, -1, -bit_depth):
+                out.append((byte >> shift) & mask)
+                if len(out) == width:
+                    break
+            if len(out) == width:
+                break
+        return out
+
     rows: List[List] = []
     for rb in rows_bytes:
-        if color_type == 3 or color_type == 0:
+        if color_type in (3, 0) and bit_depth < 8:
+            rows.append(unpack_subbyte_row(rb))
+        elif color_type == 3 or color_type == 0:
             rows.append(list(rb))
         elif color_type == 2:
             rows.append([tuple(rb[i : i + 3]) for i in range(0, stride, 3)])
