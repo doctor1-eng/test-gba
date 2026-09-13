@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "description": "Index local et curé de packs de tiles communautaires potentiellement compatibles avec un projet GBA/pokeemerald-expansion. Vérifié par recherche web au moment de la création (2026-09-13) -- les URLs et licences DOIVENT être reconfirmées sur la page source avant tout import : ce fichier n'est qu'un point de départ, pas une source de vérité juridique.",
+    "last_reviewed": "2026-09-13"
+  },
+  "entries": [
+    {
+      "id": "kenney-roguelike-rpg-pack",
+      "title": "Kenney - Roguelike/RPG pack",
+      "url": "https://kenney.nl/assets/roguelike-rpg-pack",
+      "author": "Kenney",
+      "declared_license": "CC0 1.0 Universal (licence de site, appliquée à tous les packs Kenney)",
+      "license_confidence": "high",
+      "tags": ["overworld", "route", "forest", "grass", "town", "village", "generic", "rpg", "16x16"],
+      "notes": "~1700 assets, style tres proche d'un RPG 2D classique. Bonne base generique pour route/overworld."
+    },
+    {
+      "id": "kenney-rpg-base",
+      "title": "Kenney - RPG Base",
+      "url": "https://kenney.nl/assets/rpg-base",
+      "author": "Kenney",
+      "declared_license": "CC0 1.0 Universal (licence de site, appliquée à tous les packs Kenney)",
+      "license_confidence": "high",
+      "tags": ["overworld", "building", "interior", "town", "generic", "rpg"],
+      "notes": "Pack plus petit (230 assets), utile pour interieurs/exterieurs de batiments simples."
+    },
+    {
+      "id": "kenney-1bit-pack",
+      "title": "Kenney - 1-Bit Pack",
+      "url": "https://kenney-assets.itch.io/1-bit-pack",
+      "author": "Kenney",
+      "declared_license": "CC0 1.0 Universal (licence de site, appliquée à tous les packs Kenney)",
+      "license_confidence": "high",
+      "tags": ["dungeon", "cave", "roguelike", "interior", "monochrome"],
+      "notes": "Style tres minimaliste (1-bit) -- utile seulement si le tileset cible est lui-meme tres depouille."
+    },
+    {
+      "id": "oga-forest-tileset-sample",
+      "title": "[Free Sample] 16x16 Pixel Forest Tileset - Top-down RPG Style",
+      "url": "https://opengameart.org/content/free-sample-16x16-pixel-forest-tileset-%E2%80%93-top-down-rpg-style",
+      "author": "voir page OpenGameArt",
+      "declared_license": "CC0 (indiqué par le résumé de recherche -- à reconfirmer sur la page)",
+      "license_confidence": "medium",
+      "tags": ["forest", "route", "route forestiere", "trees", "overworld", "16x16"],
+      "notes": "Echantillon gratuit d'un pack payant : verifier que l'echantillon lui-meme est bien CC0 et pas seulement une demo."
+    },
+    {
+      "id": "oga-pokemon-inspired-16x16",
+      "title": "Pokemon-inspired 16x16 tiles",
+      "url": "https://opengameart.org/content/pokemon-inspired-16x16-tiles",
+      "author": "voir page OpenGameArt",
+      "declared_license": "Non confirmée automatiquement -- vérifier la licence exacte sur la page produit",
+      "license_confidence": "low",
+      "tags": ["overworld", "route", "town", "pokemon-style", "16x16"],
+      "notes": "Tres proche stylistiquement de la cible (explicitement 'pokemon-inspired'), mais licence a verifier avant tout usage."
+    },
+    {
+      "id": "oga-16x16-indoor-rpg-tileset",
+      "title": "[16x16] Indoor RPG Tileset",
+      "url": "https://opengameart.org/content/16x16-indoor-rpg-tileset",
+      "author": "voir page OpenGameArt",
+      "declared_license": "Non confirmée automatiquement -- vérifier la licence exacte sur la page produit",
+      "license_confidence": "low",
+      "tags": ["interior", "indoor", "pokecenter", "building interior", "16x16"],
+      "notes": "Fourni en fichier unique + fichiers separes par categorie -- pratique pour extraire seulement le mobilier necessaire."
+    },
+    {
+      "id": "oga-16x16-rpg-tileset",
+      "title": "16x16 RPG Tileset (interieur + exterieur)",
+      "url": "https://opengameart.org/content/16x16-rpg-tileset",
+      "author": "voir page OpenGameArt",
+      "declared_license": "Non confirmée automatiquement -- vérifier la licence exacte sur la page produit",
+      "license_confidence": "low",
+      "tags": ["interior", "exterior", "building", "house", "castle", "dungeon", "16x16"],
+      "notes": "Couvre a la fois interieur et exterieur de batiments, utile pour completer un set existant."
+    },
+    {
+      "id": "oga-16x16-cave-tileset",
+      "title": "(16x16) Cave tileset",
+      "url": "https://opengameart.org/content/16x16-cave-tileset",
+      "author": "voir page OpenGameArt",
+      "declared_license": "Non confirmée automatiquement -- vérifier la licence exacte sur la page produit",
+      "license_confidence": "low",
+      "tags": ["cave", "dungeon", "rock", "underground", "16x16"],
+      "notes": "Tileset de grotte dedie, format 16x16."
+    },
+    {
+      "id": "oga-16x16-puny-dungeon-tileset",
+      "title": "16x16 Puny Dungeon Tileset",
+      "url": "https://opengameart.org/content/16x16-puny-dungeon-tileset",
+      "author": "voir page OpenGameArt",
+      "declared_license": "CC0 (indiqué par le résumé de recherche -- à reconfirmer sur la page)",
+      "license_confidence": "medium",
+      "tags": ["dungeon", "cave", "old-school", "rpg", "16x16"],
+      "notes": "Base de dungeon pensee pour etre etendue, bon point de depart pour un style retro."
+    },
+    {
+      "id": "oga-16x16-town-remix",
+      "title": "16x16 Town Remix",
+      "url": "https://opengameart.org/content/16x16-town-remix",
+      "author": "voir page OpenGameArt",
+      "declared_license": "Non confirmée automatiquement -- vérifier la licence exacte sur la page produit",
+      "license_confidence": "low",
+      "tags": ["town", "village", "exterior", "houses", "overworld", "16x16"],
+      "notes": "Variante 'remix' d'un set de ville existant -- verifier la chaine de licence (remix d'une oeuvre elle-meme sous licence)."
+    }
+  ]
+}
