@@ -319,10 +319,12 @@ cacher = `+1`, via `dynmultipush`/`dynmultistack`, `FLAG_REFUGIES_GUIDES` ou
 fuite vers Route 21.
 
 **Simplifications volontaires de cette passe, documentées plutôt que cachées :**
-- Le choix des réfugiés est présenté par narration directe (pas de PNJ dédié placé sur la
-  carte) : ça évite de deviner des coordonnées d'objet-événement sans pouvoir vérifier
-  visuellement le résultat dans un émulateur. Une vraie rencontre de PNJ reste une amélioration
-  naturelle, pas un mensonge sur ce qui existe.
+- ~~Le choix des réfugiés est présenté par narration directe (pas de PNJ dédié placé sur la
+  carte)~~ **Périmé, remplacé par la 9e passe** (« le reste de la fuite mis en scène jusqu'à
+  Pallet Town », plus bas dans ce fichier) : les réfugiés ont depuis de vrais `object_events`
+  sur `CinnabarIsland_hns` (`LOCALID_CINNABAR_REFUGEE`/`LOCALID_CINNABAR_REFUGEE_ENFANT`,
+  positions vérifiées par décodage de `map.bin`). Cette note n'a jamais été mise à jour après
+  coup — corrigé ici (2026-09-13) plutôt que laissé à contredire silencieusement la 9e passe.
 - ~~La fuite vers Route 21/Pallet/Route 1 ne fait l'objet d'aucun `warp` scripté...~~ **Erreur
   corrigée au retour de test n°5** (voir section dédiée plus bas) : cette hypothèse initiale
   était fausse et bloquait réellement la progression. `Route21_hns`/`Route20_hns` sont des
@@ -2268,3 +2270,43 @@ de la livraison). Nouveaux symboles attendus dans `pokehns.map` :
 **Non testé en jeu.**
 
 **Non testé en jeu.**
+
+## Acte V — conséquence du choix « réfugiés » de l'Acte I (2026-09-13)
+
+Demande utilisateur (« réalise les éléments historiques directement en map » pour Cinnabar,
+option retenue : « derniers habitants »). `histoire.md` section 8 exige que ce choix
+« influence qui est retrouvé vivant à Cinnabar en Acte V » — vérifié avant de coder : ce
+payoff n'existait nulle part (`grep FLAG_REFUGIES_GUIDES\|FLAG_REFUGIES_CACHES` sur tout le
+dépôt ne remontait que l'Acte I et le tableau de registre de ce fichier). Le choix lui-même
+existait déjà et fonctionne (voir « Acte I, 9e passe » plus haut) ; seule la conséquence
+d'Acte V manquait.
+
+**Carte séparée écartée à nouveau, sciemment** : avant de coder quoi que ce soit, la section
+« Éléments du document délibérément non repris » ci-dessus a été relue - elle documente déjà
+la décision de ne pas créer de carte « Mont Cinnabar - Grotte des réfugiés » séparée, décision
+qualifiée de réversible seulement si explicitement redemandée. Ce n'était pas le cas ici (la
+demande portait sur la conséquence du choix, pas sur sa mise en scène) - construire une
+nouvelle carte aurait été une sur-correction contredisant une décision déjà actée et testée
+par l'utilisateur.
+
+**Ajouté** : dans les 3 branches d'épilogue (`data/scripts/heart_and_soul_act5.inc`,
+`HeartSoul_EpilogueTerni/Equilibre/Exemplaire`), un bloc `goto_if_unset FLAG_REFUGIES_GUIDES/
+FLAG_REFUGIES_CACHES` par palier, exactement le même patron que les blocs `FLAG_BLAINE_SAUVE`/
+`FLAG_TERRENCE_CONVAINCU`/`FLAG_KESS_CONVAINCUE` déjà en place (aucune nouvelle mécanique,
+aucun nouveau flag - `FLAG_REFUGIES_GUIDES`/`FLAG_REFUGIES_CACHES` existaient déjà dans
+`include/constants/flags_hns.h`, offsets `+303`/`+304`). 6 nouveaux blocs de texte au total (2
+flags × 3 paliers de réputation), ton calé sur le palier concerné (palier bas : indifférent/
+non résolu pour le choix « cacher », conforme à « sans garantie de retour » de `histoire.md` ;
+palier moyen : les deux issues se résolvent positivement ; palier haut : les deux groupes sont
+explicitement présents à la cérémonie finale).
+
+**Limite technique à signaler** : contrairement aux chantiers précédents de ce fichier, cette
+session n'a pas accès à la toolchain de compilation GBA (`arm-none-eabi-gcc`/devkitARM absent
+de cet environnement) - impossible de confirmer `make hns → PASS, 0 erreur` comme le fait
+systématiquement le reste de ce document. Le code a été écrit en copiant exactement la
+structure déjà compilée et fonctionnelle des blocs Blaine/Terrence/Kess (mêmes macros
+`goto_if_set`/`goto_if_unset`/`msgbox`/`return`, aucune commande nouvelle), donc le risque de
+non-compilation est faible, mais ce n'est pas une vérification et ne doit pas être lu comme
+telle. **À confirmer avec `make hns` avant tout commit vers une branche de production.**
+
+**Non testé en jeu** (et non compilé, voir ci-dessus).

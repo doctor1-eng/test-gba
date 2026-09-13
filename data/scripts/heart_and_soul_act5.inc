@@ -198,9 +198,16 @@ HeartSoul_EpilogueTerni:
 	msgbox HeartSoul_Text_EpilogueTerni2, MSGBOX_DEFAULT
 	goto_if_set FLAG_BLAINE_SAUVE, HeartSoul_EpilogueTerni_BlaineSauve
 	msgbox HeartSoul_Text_EpilogueTerni_BlaineDisparu, MSGBOX_DEFAULT
-	goto HeartSoul_EpilogueTerni_Fin
+	goto HeartSoul_EpilogueTerni_Refugies
 HeartSoul_EpilogueTerni_BlaineSauve:
 	msgbox HeartSoul_Text_EpilogueTerni_BlaineSauve, MSGBOX_DEFAULT
+HeartSoul_EpilogueTerni_Refugies:
+	goto_if_unset FLAG_REFUGIES_GUIDES, HeartSoul_EpilogueTerni_SkipRefugiesGuides
+	msgbox HeartSoul_Text_EpilogueTerni_RefugiesGuides, MSGBOX_DEFAULT
+	goto HeartSoul_EpilogueTerni_Fin
+HeartSoul_EpilogueTerni_SkipRefugiesGuides:
+	goto_if_unset FLAG_REFUGIES_CACHES, HeartSoul_EpilogueTerni_Fin
+	msgbox HeartSoul_Text_EpilogueTerni_RefugiesCaches, MSGBOX_DEFAULT
 HeartSoul_EpilogueTerni_Fin:
 	msgbox HeartSoul_Text_EpilogueTerniFin, MSGBOX_DEFAULT
 	return
@@ -216,6 +223,13 @@ HeartSoul_EpilogueEquilibre_SkipTerrence:
 	goto_if_unset FLAG_KESS_CONVAINCUE, HeartSoul_EpilogueEquilibre_SkipKess
 	msgbox HeartSoul_Text_EpilogueEquilibre_Kess, MSGBOX_DEFAULT
 HeartSoul_EpilogueEquilibre_SkipKess:
+	goto_if_unset FLAG_REFUGIES_GUIDES, HeartSoul_EpilogueEquilibre_SkipRefugiesGuides
+	msgbox HeartSoul_Text_EpilogueEquilibre_RefugiesGuides, MSGBOX_DEFAULT
+	goto HeartSoul_EpilogueEquilibre_SkipRefugies
+HeartSoul_EpilogueEquilibre_SkipRefugiesGuides:
+	goto_if_unset FLAG_REFUGIES_CACHES, HeartSoul_EpilogueEquilibre_SkipRefugies
+	msgbox HeartSoul_Text_EpilogueEquilibre_RefugiesCaches, MSGBOX_DEFAULT
+HeartSoul_EpilogueEquilibre_SkipRefugies:
 	msgbox HeartSoul_Text_EpilogueEquilibreFin, MSGBOX_DEFAULT
 	return
 
@@ -230,6 +244,13 @@ HeartSoul_EpilogueExemplaire_SkipTerrence:
 	goto_if_unset FLAG_KESS_CONVAINCUE, HeartSoul_EpilogueExemplaire_SkipKess
 	msgbox HeartSoul_Text_EpilogueExemplaire_Kess, MSGBOX_DEFAULT
 HeartSoul_EpilogueExemplaire_SkipKess:
+	goto_if_unset FLAG_REFUGIES_GUIDES, HeartSoul_EpilogueExemplaire_SkipRefugiesGuides
+	msgbox HeartSoul_Text_EpilogueExemplaire_RefugiesGuides, MSGBOX_DEFAULT
+	goto HeartSoul_EpilogueExemplaire_SkipRefugies
+HeartSoul_EpilogueExemplaire_SkipRefugiesGuides:
+	goto_if_unset FLAG_REFUGIES_CACHES, HeartSoul_EpilogueExemplaire_SkipRefugies
+	msgbox HeartSoul_Text_EpilogueExemplaire_RefugiesCaches, MSGBOX_DEFAULT
+HeartSoul_EpilogueExemplaire_SkipRefugies:
 	msgbox HeartSoul_Text_EpilogueExemplaireFin, MSGBOX_DEFAULT
 	setflag FLAG_ZONE_BONUS_DEBLOQUEE
 	msgbox HeartSoul_Text_EpilogueZoneBonus, MSGBOX_DEFAULT
@@ -390,6 +411,20 @@ HeartSoul_Text_EpilogueTerni_BlaineDisparu:
 	.string "la victoire sur BLUE ne comble\l"
 	.string "pas.$"
 
+HeartSoul_Text_EpilogueTerni_RefugiesGuides:
+	.string "Les réfugiés du bateau de\n"
+	.string "fortune sont bien rentrés. Une\l"
+	.string "des rares choses de cette\l"
+	.string "histoire qui se sont bien\l"
+	.string "passées.$"
+
+HeartSoul_Text_EpilogueTerni_RefugiesCaches:
+	.string "Ceux que tu avais aidés à se\n"
+	.string "cacher n'ont jamais vraiment\l"
+	.string "refait surface. Personne ne\l"
+	.string "sait dire s'il faut encore les\l"
+	.string "attendre.$"
+
 HeartSoul_Text_EpilogueTerniFin:
 	.string "On a gagné. Personne n'est\n"
 	.string "venu le dire.$"
@@ -413,6 +448,20 @@ HeartSoul_Text_EpilogueEquilibre_Terrence:
 HeartSoul_Text_EpilogueEquilibre_Kess:
 	.string "KESS réapparaît, disponible\n"
 	.string "pour un combat amical.$"
+
+HeartSoul_Text_EpilogueEquilibre_RefugiesGuides:
+	.string "Les réfugiés du bateau de\n"
+	.string "fortune ont retrouvé leurs\l"
+	.string "proches. L'un d'eux te\l"
+	.string "reconnaît dans la rue et te\l"
+	.string "remercie.$"
+
+HeartSoul_Text_EpilogueEquilibre_RefugiesCaches:
+	.string "Ceux que tu avais aidés à se\n"
+	.string "cacher ont fini par ressortir,\l"
+	.string "plus tard que prévu mais\l"
+	.string "entiers. Ils ne parlent pas\l"
+	.string "beaucoup de cette attente.$"
 
 HeartSoul_Text_EpilogueEquilibreFin:
 	.string "Ça ne répare pas tout. Mais\n"
@@ -438,6 +487,20 @@ HeartSoul_Text_EpilogueExemplaire_Terrence:
 HeartSoul_Text_EpilogueExemplaire_Kess:
 	.string "KESS obtient la reconnaissance\n"
 	.string "légale de la réserve Safari.$"
+
+HeartSoul_Text_EpilogueExemplaire_RefugiesGuides:
+	.string "Les réfugiés du bateau de\n"
+	.string "fortune sont là, à la\l"
+	.string "cérémonie. Ce sont eux qui\l"
+	.string "insistent pour raconter cette\l"
+	.string "nuit-là, pas toi.$"
+
+HeartSoul_Text_EpilogueExemplaire_RefugiesCaches:
+	.string "Ceux que tu avais aidés à se\n"
+	.string "cacher sont là aussi,\l"
+	.string "aujourd'hui. Ils lèvent leur\l"
+	.string "verre en silence, plus que\l"
+	.string "quiconque ce jour-là.$"
 
 HeartSoul_Text_EpilogueExemplaireFin:
 	.string "Pour une fois, KANTO entier a\n"
