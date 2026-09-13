@@ -1,0 +1,58 @@
+# Exemple : laboratoire de Cinnabar (acte 1, Heart & Soul)
+map:
+  name: CinnabarLab
+  region: REGION_KANTO
+  region_map_section: MAPSEC_CINNABAR_ISLAND
+  map_type: MAP_TYPE_INDOOR
+  music: MUS_LITTLEROOT
+  weather: WEATHER_NONE
+  allow_escaping: true
+  allow_running: true
+  battle_scene: MAP_BATTLE_SCENE_NORMAL
+
+  layout:
+    # Combo réel déjà utilisé et validé pour les intérieurs Cinnabar _Hns
+    # (voir docs/heart_and_soul/technical_map.md) : compilé pour un build
+    # HNS, contrairement à gTileset_General/gTileset_PokemonLab (Frlg/générique).
+    width: 15
+    height: 12
+    primary_tileset: gTileset_Johto_Building_Hns
+    secondary_tileset: gTileset_House_Lab_Hns
+
+  connections: []
+
+  npcs:
+    - local_id: 1
+      graphics: OBJ_EVENT_GFX_SCIENTIST_1
+      x: 3
+      y: 4
+      elevation: 0
+      movement_type: MOVEMENT_TYPE_FACE_DOWN
+      dialogue: "Le Dr Fuji n'est pas revenu du sous-sol depuis hier soir…"
+
+    - local_id: 2
+      graphics: OBJ_EVENT_GFX_SCIENTIST_2
+      x: 8
+      y: 6
+      elevation: 0
+      movement_type: MOVEMENT_TYPE_FACE_LEFT
+      dialogue: "La Team Rocket a été aperçue près du port ce matin."
+
+  items:
+    - x: 12
+      y: 3
+      elevation: 0
+      item: ITEM_POTION
+      flag: FLAG_ITEM_CINNABAR_LAB_POTION
+
+  warps:
+    - x: 7
+      y: 11
+      elevation: 0
+      dest_map: MAP_CINNABAR_ISLAND_HNS
+      dest_warp_id: 3
+
+  requirements:
+    entrances: 1
+    npcs: 2
+    items: 1
