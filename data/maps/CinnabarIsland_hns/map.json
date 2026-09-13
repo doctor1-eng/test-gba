@@ -303,6 +303,13 @@
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_POKEMON_LAB_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 54,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_CAVE_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

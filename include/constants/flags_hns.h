@@ -1313,7 +1313,14 @@
 #define FLAG_HIDE_CINNABAR_GRUNT_FUITE                (HNS_EXTENDED_CONTENT_START + 377)
 #define FLAG_HIDE_CINNABAR_REFUGEE_ENFANT             (HNS_EXTENDED_CONTENT_START + 378)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  379
+// Grotte du Mont Cinnabar (MAP_CINNABAR_ISLAND_CAVE_HNS) - histoire.md section 8, "Les
+// derniers habitants". Flag "hide" standard des 2 object_events LOCALID_CINNABAR_CAVE_
+// HABITANT1/2 : visibles seulement si FLAG_ACTE_1_TERMINE est pose ET FLAG_REFUGIES_CACHES a
+// ete choisi (pas FLAG_REFUGIES_GUIDES) - voir le garde-fou dans
+// data/maps/CinnabarIsland_Cave_Hns/scripts.inc.
+#define FLAG_HIDE_CINNABAR_CAVE_HABITANTS             (HNS_EXTENDED_CONTENT_START + 379)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  380
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

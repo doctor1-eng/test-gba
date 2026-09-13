@@ -2310,3 +2310,71 @@ non-compilation est faible, mais ce n'est pas une vérification et ne doit pas �
 telle. **À confirmer avec `make hns` avant tout commit vers une branche de production.**
 
 **Non testé en jeu** (et non compilé, voir ci-dessus).
+
+## Grotte du Mont Cinnabar — construction de la carte écartée en 2026-09-13a (2026-09-13b)
+
+**Décision utilisateur explicite qui invoque la clause de réversibilité.** La section
+« Éléments du document délibérément non repris » ci-dessus documentait le choix de ne pas
+construire de carte séparée « Mont Cinnabar - Grotte des réfugiés », qualifié de « réversible
+si le protagoniste souhaite explicitement cette carte séparée malgré le compromis ». Demande
+utilisateur reçue en ces termes : la raison de départ (aucun outil de rendu visuel disponible
+côté agent) ne tient plus depuis l'ajout de `tools/gba_tiles` (voir plus haut, chantier
+render-map) — protagoniste souhaite explicitement cette carte maintenant que la validation
+visuelle est possible. Construite.
+
+**Choix de conception pour limiter le risque sur du contenu déjà testé** : la séquence
+d'attaque de l'Acte I (choix guider/cacher, ses flags, son texte, son minutage) **n'a pas été
+modifiée**. La nouvelle carte est une destination optionnelle, explorable librement une fois
+`FLAG_ACTE_1_TERMINE` posé, pas un détour forcé dans la chorégraphie de fuite déjà validée par
+l'utilisateur. `LOCALID_CINNABAR_CAVE_HABITANT1/2` reprennent volontairement les mêmes graphics
+(`OBJ_EVENT_GFX_WOMAN_3_HNS`/`OBJ_EVENT_GFX_LITTLE_GIRL_HNS`) que
+`LOCALID_CINNABAR_REFUGEE`/`LOCALID_CINNABAR_REFUGEE_ENFANT` : continuité narrative, ce sont
+les mêmes personnes si `FLAG_REFUGIES_CACHES` a été choisi.
+
+**Géométrie** : reprise telle quelle de `CliffEdgeCave_hns` (44×34,
+`gTileset_Johto_General_Hns`/`gTileset_Cave_Default_Hns`, déjà compilé pour `IS_HNS` - vérifié
+dans `tools/map_agent/map_agent.py` avant de choisir ce combo), même convention que les 3
+bâtiments de Cinnabar copiés depuis `VermilionCity_House1_hns` : peindre une nouvelle carte
+nécessiterait Porymap, non disponible dans cet environnement. `CliffEdgeCave_hns` reste
+utilisée ailleurs (Route 47) sans changement - seuls `map.bin`/`border.bin` sont dupliqués
+dans `data/layouts/CinnabarIsland_Cave_Hns/`, pas la map elle-même.
+
+**Entrée** : nouveau warp sur `CinnabarIsland_hns` en `(54,15)`, choisi par script
+(`tools/gba_tiles`) parmi les tuiles réellement praticables (`collision == 0`) et effectivement
+terrestres (exclusion des tuiles d'océan par couleur, plusieurs faux positifs rencontrés et
+écartés avant celui-ci) sur le versant rocheux extérieur, à l'écart des 5 warps existants -
+choix volontairement discret (pas de nouvelle tuile "entrée de grotte" peinte), cohérent avec
+l'idée d'un refuge caché. `dest_warp_id` calculé par position dans le tableau
+`warp_events` existant (6e entrée, index 5) - vérifié en relisant le mécanisme réel plutôt que
+supposé (voir index utilisé par `CinnabarIsland_Gym_Hns` lui-même : `dest_warp_id: 2`
+correspond à sa propre position, 3e élément, dans ce même tableau).
+
+**Contenu** : 2 PNJ + 1 panneau (`data/scripts/heart_and_soul_cinnabar_cave.inc`), visibles
+seulement si `FLAG_ACTE_1_TERMINE` posé ET `FLAG_REFUGIES_CACHES` choisi (garde-fou
+`CinnabarIslandCave_Hns_OnTransition`, réévalué à chaque chargement de carte plutôt qu'un
+`setflag` figé une fois pour toutes - un `setflag` conditionnel se serait figé de façon
+incorrecte en cas de visite dans le mauvais ordre). Le panneau réagit aussi à
+`FLAG_REFUGIES_GUIDES` (traces de départ) et à l'état neutre avant tout choix.
+
+**Registre complet des fichiers touchés** (checklist obtenue en listant tous les fichiers
+référençant `CinnabarIsland_Gym_Hns` avant de commencer, pour ne rien oublier) :
+`data/layouts/layouts.json` (entrée layout), `data/maps/CinnabarIsland_Cave_Hns/map.json` +
+`scripts.inc` (nouveaux), `data/maps/CinnabarIsland_hns/map.json` (nouveau warp),
+`data/maps/map_groups.json` (`gMapGroup_IndoorCinnabar_Hns`), `data/event_scripts.s` (2
+`.include`), `include/constants/flags_hns.h` (`FLAG_HIDE_CINNABAR_CAVE_HABITANTS`, offset
+`+379`, `HNS_EXTENDED_CONTENT_COUNT` 379→380).
+
+**Limite technique identique au chantier précédent** : toujours pas de toolchain de
+compilation GBA dans cet environnement. JSON validé syntaxiquement (`python3 -m json.tool`
+sur chaque fichier modifié) et macros de script copiées exactement de blocs déjà compilés
+(`goto_if_set`/`goto_if_unset`/`setflag`/`clearflag`/`msgbox`/`map_script`), donc risque de
+non-compilation jugé faible, mais **non confirmé par `make hns`**. Rendu visuel de la
+géométrie et des positions (PNJ, panneau, warp) confirmé via `tools/gba_tiles render-map` -
+seule la partie compilable (scripts, JSON, registre de flags) n'a pas pu être vérifiée par
+build.
+
+Capture (`docs/heart_and_soul/renders/cinnabar_cave_habitants_room.png`) : la pièce des 2 PNJ
+et le point de sortie (repères roses posés par `tools/gba_tiles`, positions `(4,7)`/`(4,9)`
+pour les PNJ, `(10,11)` pour le warp de sortie).
+
+**Non testé en jeu, non compilé.**

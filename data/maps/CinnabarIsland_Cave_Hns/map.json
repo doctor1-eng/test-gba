@@ -1,0 +1,68 @@
+{
+  "id": "MAP_CINNABAR_ISLAND_CAVE_HNS",
+  "name": "CinnabarIsland_Cave_Hns",
+  "layout": "LAYOUT_CINNABAR_ISLAND_CAVE_HNS",
+  "music": "MUS_HG_UNION_CAVE",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "local_id": "LOCALID_CINNABAR_CAVE_HABITANT1",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3_HNS",
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CinnabarIslandCave_Hns_EventScript_Habitant1",
+      "flag": "FLAG_HIDE_CINNABAR_CAVE_HABITANTS"
+    },
+    {
+      "local_id": "LOCALID_CINNABAR_CAVE_HABITANT2",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_HNS",
+      "x": 4,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CinnabarIslandCave_Hns_EventScript_Habitant2",
+      "flag": "FLAG_HIDE_CINNABAR_CAVE_HABITANTS"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_HNS",
+      "dest_warp_id": "5"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CinnabarIslandCave_Hns_EventScript_TracesDepart"
+    }
+  ],
+  "game_version": "hns",
+  "region": "REGION_KANTO"
+}

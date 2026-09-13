@@ -13713,6 +13713,18 @@
       "layout_version": "hns"
     },
     {
+      "id": "LAYOUT_CINNABAR_ISLAND_CAVE_HNS",
+      "name": "CinnabarIsland_Cave_Hns_Layout",
+      "width": 44,
+      "height": 34,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Default_Hns",
+      "border_filepath": "data/layouts/CinnabarIsland_Cave_Hns/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Cave_Hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
       "id": "LAYOUT_CINNABAR_ISLAND_MANSION_HNS",
       "name": "CinnabarIsland_Mansion_Hns_Layout",
       "width": 13,
