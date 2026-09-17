@@ -1,5 +1,5 @@
 import { useGameStore } from '../../store/gameStore';
-import { getCurrentZone } from '../../engine/run';
+import { getCurrentZone, getAvailableNodes } from '../../engine/run';
 import { getHeroById } from '../../data/heroes';
 import { getRelicById } from '../../data/relics';
 import { HPBar, StressBar } from '../ui/Bars';
@@ -7,29 +7,23 @@ import { Button } from '../ui/Button';
 import { Portrait } from '../ui/Portrait';
 import './screens.css';
 
-const FLOOR_ICONS: Record<string, string> = { combat: '⚔', event: '❖', camp: '🔥', boss: '☠' };
+const NODE_ICONS: Record<string, string> = { combat: '⚔', event: '❖', camp: '🔥', boss: '☠' };
+const NODE_LABELS: Record<string, string> = { combat: 'Combat', event: 'Événement', camp: 'Campement', boss: 'Boss' };
 
 export function DungeonMap() {
   const run = useGameStore((s) => s.run);
-  const enterFloor = useGameStore((s) => s.enterFloor);
+  const chooseNode = useGameStore((s) => s.chooseNode);
   const abandonRun = useGameStore((s) => s.abandonRun);
   if (!run) return null;
 
   const zone = getCurrentZone(run);
-  const currentFloor = zone.floors[run.floorIndex];
+  const available = new Set(getAvailableNodes(run).map((n) => n.id));
+  const visited = new Set(run.visitedNodeIds);
 
   return (
     <div className="screen dungeon-map">
       <h1 className="gothic-title screen-title">{zone.name}</h1>
       <p className="screen-subtitle">{zone.description}</p>
-
-      <div className="floor-track">
-        {zone.floors.map((f) => (
-          <div key={f.index} className={`floor-node${f.index - 1 < run.floorIndex ? ' done' : ''}${f.index - 1 === run.floorIndex ? ' current' : ''}`}>
-            {FLOOR_ICONS[f.type]}
-          </div>
-        ))}
-      </div>
 
       <p className="gold-badge">🜏 {run.gold} or · {run.relicIds.length} relique(s)</p>
       {run.relicIds.length > 0 && (
@@ -37,6 +31,32 @@ export function DungeonMap() {
           {run.relicIds.map((id) => getRelicById(id).name).join(' · ')}
         </p>
       )}
+
+      <div className="labyrinth">
+        {zone.rowTemplates.map((_, row) => {
+          const rowNodes = run.mapNodes.filter((n) => n.row === row);
+          return (
+            <div key={row} className="labyrinth-row">
+              {rowNodes.map((node) => {
+                const isAvailable = available.has(node.id);
+                const isVisited = visited.has(node.id);
+                const classes = ['labyrinth-node', isAvailable ? 'available' : '', isVisited ? 'visited' : '', !isAvailable && !isVisited ? 'locked' : ''].filter(Boolean).join(' ');
+                return (
+                  <button
+                    key={node.id}
+                    className={classes}
+                    disabled={!isAvailable}
+                    onClick={() => chooseNode(node.id)}
+                    aria-label={NODE_LABELS[node.type]}
+                  >
+                    <span className="labyrinth-node-icon">{NODE_ICONS[node.type]}</span>
+                  </button>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
 
       <div className="party-status-row">
         {run.heroes.map((h) => {
@@ -58,9 +78,6 @@ export function DungeonMap() {
         })}
       </div>
 
-      <Button variant="primary" block onClick={enterFloor}>
-        {currentFloor.type === 'boss' ? 'Affronter le boss' : 'Avancer'}
-      </Button>
       <Button variant="danger" block onClick={() => { if (confirm('Abandonner cette expédition ?')) abandonRun(); }}>
         Abandonner l'expédition
       </Button>

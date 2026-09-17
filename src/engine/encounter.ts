@@ -2,15 +2,15 @@ import type { CombatState, NarrativeEvent, RunState } from './types';
 import type { RngFn } from './rng';
 import { pickWeighted, randInt } from './rng';
 import { initCombat } from './combat';
-import { getCurrentFloor, computeRunBonuses, addGold, healHero, healAll, adjustStress, adjustStressAll, addQuirkToHero, applyRelicGain, removeQuirkFromHero } from './run';
+import { getCurrentNode, computeRunBonuses, addGold, healHero, healAll, adjustStress, adjustStressAll, addQuirkToHero, applyRelicGain, removeQuirkFromHero } from './run';
 import { QUIRKS, rollRandomQuirk } from '../data/quirks';
 import { getHeroById } from '../data/heroes';
 
-export function startCombatForFloor(run: RunState, rng: RngFn): CombatState {
-  const floor = getCurrentFloor(run);
-  if (!floor.combat) throw new Error('Cet étage ne contient pas de combat.');
+export function startCombatForNode(run: RunState, rng: RngFn): CombatState {
+  const node = getCurrentNode(run);
+  if (!node || !node.enemyIds) throw new Error('Ce nœud ne contient pas de combat.');
   const bonuses = computeRunBonuses(run);
-  return initCombat(run.heroes, floor.combat.enemyIds, floor.type === 'boss', rng, bonuses);
+  return initCombat(run.heroes, node.enemyIds, node.type === 'boss', rng, bonuses);
 }
 
 export function resolveEventChoice(run: RunState, event: NarrativeEvent, choiceId: string, rng: RngFn): { run: RunState; resultText: string } {

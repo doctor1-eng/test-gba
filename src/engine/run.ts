@@ -1,6 +1,7 @@
-import type { CombatState, MetaState, RunHeroState, RunState } from './types';
+import type { CombatState, MapNode, MetaState, RunHeroState, RunState } from './types';
 import type { RngFn } from './rng';
-import { shuffle } from './rng';
+import { mulberry32, shuffle } from './rng';
+import { generateZoneMap } from './mapgen';
 import { getHeroById } from '../data/heroes';
 import { getRelicById } from '../data/relics';
 import { CARDS } from '../data/cards';
@@ -26,10 +27,16 @@ export function createRun(partyHeroIds: string[], meta: MetaState, seed: number)
     };
   });
 
+  const firstZone = ZONES[0];
+  const { nodes, edges } = generateZoneMap(firstZone, mulberry32(seed));
+
   return {
     seed,
-    zoneId: ZONES[0].id,
-    floorIndex: 0,
+    zoneId: firstZone.id,
+    mapNodes: nodes,
+    mapEdges: edges,
+    currentNodeId: null,
+    visitedNodeIds: [],
     partyHeroIds: [...partyHeroIds],
     heroes,
     gold: startGold,
@@ -44,8 +51,45 @@ export function getCurrentZone(run: RunState) {
   return getZoneById(run.zoneId);
 }
 
-export function getCurrentFloor(run: RunState) {
-  return getCurrentZone(run).floors[run.floorIndex];
+export function getCurrentNode(run: RunState): MapNode | null {
+  if (!run.currentNodeId) return null;
+  return run.mapNodes.find((n) => n.id === run.currentNodeId) ?? null;
+}
+
+// Nœuds que le joueur peut choisir maintenant : la rangée 0 s'il n'a pas encore
+// commencé la zone, sinon les nœuds reliés par une arête depuis le nœud courant.
+export function getAvailableNodes(run: RunState): MapNode[] {
+  if (!run.currentNodeId) {
+    return run.mapNodes.filter((n) => n.row === 0);
+  }
+  const targetIds = new Set(run.mapEdges.filter((e) => e.from === run.currentNodeId).map((e) => e.to));
+  return run.mapNodes.filter((n) => targetIds.has(n.id));
+}
+
+export function chooseMapNode(run: RunState, nodeId: string): RunState {
+  return { ...run, currentNodeId: nodeId, visitedNodeIds: [...run.visitedNodeIds, nodeId] };
+}
+
+// À appeler quand l'encounter du nœud courant est résolue (combat gagné, event/camp
+// terminé). Applique le bonus d'or par étage puis, si c'était le boss, fait
+// transitionner vers la zone suivante (ou déclare la victoire de la run).
+export function completeCurrentNode(run: RunState): RunState {
+  const bonuses = computeRunBonuses(run);
+  let next: RunState = { ...run, gold: run.gold + bonuses.goldOnFloor };
+  const node = getCurrentNode(next);
+
+  if (node?.type === 'boss') {
+    const nextZoneId = getNextZoneId(next.zoneId);
+    if (!nextZoneId) {
+      return { ...next, status: 'victory' };
+    }
+    const nextZone = getZoneById(nextZoneId);
+    const zoneIndex = ZONES.findIndex((z) => z.id === nextZoneId);
+    const { nodes, edges } = generateZoneMap(nextZone, mulberry32(next.seed + zoneIndex * 7919 + 1));
+    next = { ...next, zoneId: nextZoneId, mapNodes: nodes, mapEdges: edges, currentNodeId: null, visitedNodeIds: [] };
+  }
+
+  return next;
 }
 
 export function computeRunBonuses(run: RunState): CombatBonuses & { healOnCamp: number; goldOnFloor: number } {
@@ -72,22 +116,6 @@ export function syncHeroesFromCombat(run: RunState, combat: CombatState): RunSta
     return { ...rh, currentHp: ch.currentHp, maxHp: ch.maxHp, stress: ch.stress, dead: ch.dead || rh.dead };
   });
   return { ...run, heroes };
-}
-
-export function advanceFloor(run: RunState): RunState {
-  const bonuses = computeRunBonuses(run);
-  const gold = run.gold + bonuses.goldOnFloor;
-  const zone = getCurrentZone(run);
-  const nextIndex = run.floorIndex + 1;
-
-  if (nextIndex >= zone.floors.length) {
-    const nextZoneId = getNextZoneId(run.zoneId);
-    if (!nextZoneId) {
-      return { ...run, gold, status: 'victory' };
-    }
-    return { ...run, gold, zoneId: nextZoneId, floorIndex: 0 };
-  }
-  return { ...run, gold, floorIndex: nextIndex };
 }
 
 export function addGold(run: RunState, amount: number): RunState {
@@ -147,8 +175,8 @@ export function generateCardRewardOptions(partyHeroIds: string[], rng: RngFn, co
 export function computeGlobalFloorNumber(run: RunState): number {
   const zoneIdx = ZONES.findIndex((z) => z.id === run.zoneId);
   let total = 0;
-  for (let i = 0; i < zoneIdx; i++) total += ZONES[i].floors.length;
-  return total + run.floorIndex + 1;
+  for (let i = 0; i < zoneIdx; i++) total += ZONES[i].rowTemplates.length;
+  return total + run.visitedNodeIds.length;
 }
 
 export function isRunOver(run: RunState): boolean {
