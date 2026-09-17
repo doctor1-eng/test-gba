@@ -3,9 +3,9 @@ import type { Card, CombatState, MetaState, NarrativeEvent, RunState } from '../
 import type { RngFn } from '../engine/rng';
 import { mulberry32, randInt, randomSeed } from '../engine/rng';
 import { playCard as enginePlayCard, endPlayerTurn as engineEndPlayerTurn } from '../engine/combat';
-import { startCombatForFloor, resolveEventChoice, resolveCamp } from '../engine/encounter';
+import { startCombatForNode, resolveEventChoice, resolveCamp } from '../engine/encounter';
 import {
-  createRun, getCurrentFloor, syncHeroesFromCombat, advanceFloor, addGold,
+  createRun, chooseMapNode, completeCurrentNode, syncHeroesFromCombat, addGold,
   generateCardRewardOptions, addCardToHeroDeck, livingHeroCount, computeGlobalFloorNumber,
 } from '../engine/run';
 import { createDefaultMeta, purchaseUpgrade as metaPurchaseUpgrade, recordRunResult } from '../engine/meta';
@@ -32,7 +32,7 @@ interface GameState {
   init: () => void;
   startNewRun: (partyHeroIds: string[]) => void;
   goTo: (screen: Screen) => void;
-  enterFloor: () => void;
+  chooseNode: (nodeId: string) => void;
   playCard: (instanceId: string, targetId?: string) => void;
   endPlayerTurn: () => void;
   proceedAfterCombat: () => void;
@@ -87,7 +87,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const settings = loadSettings();
     const save = loadSave();
     if (save && save.run.status === 'inProgress') {
-      engineRng = mulberry32(save.run.seed + save.run.floorIndex + save.run.gold + 1);
+      engineRng = mulberry32(save.run.seed + save.run.visitedNodeIds.length + save.run.gold + 1);
       set({
         meta,
         run: save.run,
@@ -117,22 +117,25 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   goTo: (screen) => set({ screen }),
 
-  enterFloor: () => {
+  chooseNode: (nodeId) => {
     const { run } = get();
     if (!run) return;
-    const floor = getCurrentFloor(run);
-    if (floor.type === 'combat' || floor.type === 'boss') {
-      const combat = startCombatForFloor(run, engineRng);
-      const next = { combat, screen: 'combat' as Screen };
+    const updatedRun = chooseMapNode(run, nodeId);
+    const node = updatedRun.mapNodes.find((n) => n.id === nodeId);
+    if (!node) return;
+
+    if (node.type === 'combat' || node.type === 'boss') {
+      const combat = startCombatForNode(updatedRun, engineRng);
+      const next = { run: updatedRun, combat, screen: 'combat' as Screen };
       set(next);
       persist({ ...get(), ...next });
-    } else if (floor.type === 'event') {
+    } else if (node.type === 'event') {
       const event = EVENTS[randInt(engineRng, 0, EVENTS.length - 1)];
-      const next = { currentEvent: event, infoText: null, screen: 'event' as Screen };
+      const next = { run: updatedRun, currentEvent: event, infoText: null, screen: 'event' as Screen };
       set(next);
       persist({ ...get(), ...next });
-    } else if (floor.type === 'camp') {
-      const next = { screen: 'camp' as Screen, infoText: null };
+    } else if (node.type === 'camp') {
+      const next = { run: updatedRun, screen: 'camp' as Screen, infoText: null };
       set(next);
       persist({ ...get(), ...next });
     }
@@ -191,7 +194,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         updatedRun = addCardToHeroDeck(updatedRun, heroId, cardId);
       }
     }
-    updatedRun = advanceFloor(updatedRun);
+    updatedRun = completeCurrentNode(updatedRun);
 
     if (updatedRun.status === 'victory') {
       const { run: finalRun, meta: finalMeta } = finalizeRunEnd(updatedRun, true, meta);
@@ -224,7 +227,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   confirmEncounterContinue: () => {
     const { run, meta } = get();
     if (!run) return;
-    let updatedRun = advanceFloor(run);
+    let updatedRun = completeCurrentNode(run);
     if (updatedRun.status === 'victory') {
       const { run: finalRun, meta: finalMeta } = finalizeRunEnd(updatedRun, true, meta);
       set({ run: finalRun, meta: finalMeta, currentEvent: null, infoText: null, screen: 'gameOver' });

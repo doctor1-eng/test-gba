@@ -95,19 +95,44 @@ export interface CombatEncounterDef {
   enemyIds: string[];
 }
 
-export interface FloorDef {
-  index: number;
-  type: EncounterType;
-  combat?: CombatEncounterDef;
+export type EncounterTier = 'early' | 'mid' | 'late';
+
+export interface EncounterPool {
+  early: CombatEncounterDef[];
+  mid: CombatEncounterDef[];
+  late: CombatEncounterDef[];
 }
 
 export interface Zone {
   id: string;
   name: string;
   description: string;
-  floors: FloorDef[];
   bossId: string;
   ambiancePalette: { bg: string; accent: string };
+  // Gabarit du labyrinthe : une entrée par étage (rangée), la liste donnant les
+  // types de nœuds proposés au joueur à cet étage (2-3 choix par rangée).
+  rowTemplates: EncounterType[][];
+  encounterPool: EncounterPool;
+}
+
+// ---- Carte de donjon (labyrinthe à embranchements, générée par run) ----
+
+export interface MapNode {
+  id: string;
+  row: number;
+  col: number;
+  type: EncounterType;
+  enemyIds?: string[]; // pour type 'combat' | 'boss'
+}
+
+export interface MapEdge {
+  from: string;
+  to: string;
+}
+
+export interface ZoneMap {
+  nodes: MapNode[];
+  edges: MapEdge[];
 }
 
 export type QuirkType = 'affliction' | 'virtue';
@@ -202,7 +227,10 @@ export interface RunHeroState {
 export interface RunState {
   seed: number;
   zoneId: string;
-  floorIndex: number;
+  mapNodes: MapNode[];
+  mapEdges: MapEdge[];
+  currentNodeId: string | null; // null = pas encore entré dans la zone, choix parmi la rangée 0
+  visitedNodeIds: string[];
   partyHeroIds: string[];
   heroes: RunHeroState[];
   gold: number;
