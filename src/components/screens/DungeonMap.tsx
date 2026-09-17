@@ -4,6 +4,7 @@ import { getHeroById } from '../../data/heroes';
 import { getRelicById } from '../../data/relics';
 import { HPBar, StressBar } from '../ui/Bars';
 import { Button } from '../ui/Button';
+import { Portrait } from '../ui/Portrait';
 import './screens.css';
 
 const FLOOR_ICONS: Record<string, string> = { combat: '⚔', event: '❖', camp: '🔥', boss: '☠' };
@@ -42,7 +43,7 @@ export function DungeonMap() {
           const def = getHeroById(h.heroId);
           return (
             <div key={h.heroId} className="party-status-card">
-              <div className="unit-glyph" style={{ color: def.colorAccent, fontSize: '1.4rem' }}>{h.dead ? '†' : def.portraitGlyph}</div>
+              <Portrait iconKey={def.id} accent={def.colorAccent} glyphFallback={def.portraitGlyph} dead={h.dead} size={44} />
               <div className="party-status-bars">
                 <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.78rem' }}>{def.name}{h.dead ? ' (mort)' : ''}</span>
                 {!h.dead && (

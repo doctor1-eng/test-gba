@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useGameStore } from '../../store/gameStore';
 import { HEROES, PARTY_SIZE } from '../../data/heroes';
 import { Button } from '../ui/Button';
+import { Portrait } from '../ui/Portrait';
 import './screens.css';
 
 export function HeroSelect() {
@@ -34,7 +35,11 @@ export function HeroSelect() {
               className={`hero-select-card${isSelected ? ' selected' : ''}${!unlocked ? ' locked' : ''}`}
               onClick={() => toggle(hero.id, unlocked)}
             >
-              <div className="hero-select-glyph" style={{ color: hero.colorAccent }}>{unlocked ? hero.portraitGlyph : '🔒'}</div>
+              <div className="hero-select-glyph">
+                {unlocked
+                  ? <Portrait iconKey={hero.id} accent={hero.colorAccent} glyphFallback={hero.portraitGlyph} size={64} />
+                  : <span style={{ fontSize: '1.8rem' }}>🔒</span>}
+              </div>
               <div className="hero-select-name">{hero.name}</div>
               <div className="hero-select-archetype">{unlocked ? hero.archetype : `Verrouillé (${hero.unlockCost} 🜏)`}</div>
             </div>

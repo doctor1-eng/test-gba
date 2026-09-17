@@ -2,6 +2,7 @@ import type { HeroRuntimeState } from '../../engine/types';
 import { getHeroById } from '../../data/heroes';
 import { getQuirkById } from '../../data/quirks';
 import { HPBar, StressBar } from '../ui/Bars';
+import { Portrait } from '../ui/Portrait';
 import './combat.css';
 
 export function HeroPanel({ hero, targetable, onClick }: { hero: HeroRuntimeState; targetable?: boolean; onClick?: () => void }) {
@@ -10,7 +11,7 @@ export function HeroPanel({ hero, targetable, onClick }: { hero: HeroRuntimeStat
   return (
     <div className={classes} onClick={targetable ? onClick : undefined}>
       {hero.block > 0 && <span className="unit-block">🛡 {hero.block}</span>}
-      <div className="unit-glyph" style={{ color: def.colorAccent }}>{def.portraitGlyph}</div>
+      <Portrait iconKey={def.id} accent={def.colorAccent} glyphFallback={def.portraitGlyph} dead={hero.dead} size={52} />
       <div className="unit-name">{def.name}</div>
       <div className="unit-bars">
         <HPBar current={hero.currentHp} max={hero.maxHp} deathsDoor={hero.atDeathsDoor && !hero.dead} />
