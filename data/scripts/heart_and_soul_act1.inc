@@ -68,6 +68,11 @@ HeartSoul_EventScript_CinnabarAttack::
 	setflag FLAG_ATTAQUE_CINNABAR_LANCEE
 	setflag FLAG_IS_KANTO_CHAMPION
 	clearflag FLAG_HIDE_CINNABAR_BLAINE
+	// Cinematique d'ouverture en pixel art (src/hns_intro_cinematic.c, 5 tableaux peints par
+	// tools/hns_intro/paint_panels.py). Rend la main au script via
+	// CB2_ReturnToFieldContinueScriptPlayMapMusic, d'ou le waitstate.
+	special HnsPlayIntroCinematic
+	waitstate
 	msgbox HeartSoul_Text_AttaqueDebut, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -451,10 +456,8 @@ CinnabarIsland_EventScript_GruntFuiteUnused::
 	end
 
 HeartSoul_Text_AttaqueDebut:
-	.string "Un grondement secoue Cinnabar.\p"
-	.string "Des silhouettes en uniforme noir\n"
-	.string "débarquent sur le port, la TEAM\l"
-	.string "ROCKET.\p"
+	.string "Les vitres du CENTRE POKéMON\n"
+	.string "tremblent. Dehors, des cris.\p"
 	.string "Les liaisons avec le reste de\n"
 	.string "Kanto viennent d'être coupées.$"
 

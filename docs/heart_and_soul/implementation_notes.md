@@ -2419,3 +2419,23 @@ L'audit des lieux anime qui a servi de filtre est dans
   visibles.
 - **Non testé en jeu** : l'appel d'épilogue de l'Acte V (le chemin d'accès est trop long à
   scripter). Il est vérifié par compilation, et le script est un simple `call` avec `return`.
+
+---
+
+## 2026-09-26 (suite) — Cinématique d'ouverture en pixel art « La chute de Cinnabar »
+
+**Demande** : « Fais l'intro en scène pixel art ». L'annonce de l'attaque, qui n'était qu'un
+texte, devient une vraie cinématique plein écran, jouée au moment où l'attaque commence
+(`HeartSoul_EventScript_CinnabarAttack`, heart_and_soul_act1.inc).
+
+| Élément | Détail |
+|---|---|
+| Tableaux | 5 illustrations 256×160 peintes par `tools/hns_intro/paint_panels.py` (graine fixe, rendu reproductible) : Cinnabar la nuit, la flotte au R rouge avec projecteurs, Blue en contre-jour sur la proue, le port en feu et l'éclair, puis le Badge Volcan fissuré en carton-titre. Chaque tableau est converti en tuiles 8bpp dédupliquées (≤ 640), tilemap et palette (≤ 224 couleurs). |
+| Moteur | `src/hns_intro_cinematic.c` : `special HnsPlayIntroCinematic` suivi de `waitstate`. Callback principal dédié, BG3 en 8bpp pour l'image, BG0 pour une bande noire de type letterbox avec les sous-titres, fondus, panoramique lent, éclair (flash blanc, tonnerre, tremblement) sur le tableau 4, musique `MUS_HG_ROCKET_TAKEOVER`. A ou B passe au tableau suivant, START passe tout. Retour au terrain par `CB2_ReturnToFieldContinueScriptPlayMapMusic`, qui reprend le script. |
+| Script | Le special est inséré avant le message d'attaque. Ce message est raccourci, puisque la cinématique montre désormais le débarquement. Special ajouté en fin de `data/specials.inc` (aucun décalage d'index). |
+| Coût | ROM de 94,64 % à 94,96 %. |
+
+**Vérification** : cinématique jouée dans l'émulateur headless au cours d'une nouvelle partie
+(enregistrement image par image). Les 5 tableaux, les sous-titres, le retour au Centre
+Pokémon et la suite du script fonctionnent. L'Acte I complet a été rejoué jusqu'à Bourg
+Palette après l'ajout, sans régression (`FLAG_ACTE_1_TERMINE`, choix des réfugiés).
