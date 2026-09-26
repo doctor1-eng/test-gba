@@ -2165,6 +2165,15 @@ void CB2_ReturnToFieldContinueScriptPlayMapMusic(void)
     CB2_ReturnToField();
 }
 
+// Heart & Soul cinematics (src/hns_intro_cinematic.c): back to the map with the screen kept
+// black, for a script that warps right after the cinematic.
+void CB2_ReturnToFieldContinueScriptStayBlack(void)
+{
+    FieldClearVBlankHBlankCallbacks();
+    gFieldCallback = FieldCB_ContinueScriptStayBlack;
+    CB2_ReturnToField();
+}
+
 void CB2_ReturnToFieldFadeFromBlack(void)
 {
     FieldClearVBlankHBlankCallbacks();

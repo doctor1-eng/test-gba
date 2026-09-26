@@ -13,7 +13,7 @@ CinnabarIsland_PokemonCenter_OnTransition::
 @ ON_FRAME_TABLE tourne une fois la carte affichee : c'est le point d'accroche correct pour
 @ un evenement au premier chargement (meme motif que AzaleaTown_hns/scripts.inc).
 CinnabarIsland_PokemonCenter_OnFrame::
-	map_script_2 VAR_TYPE_CHOISI, 0, HeartSoul_EventScript_ChooseType
+	map_script_2 VAR_TYPE_CHOISI, 0, HeartSoul_EventScript_Prologue
 	.2byte 0
 
 CinnabarIsland_PokemonCenter_EventScript_Cooltrainer::

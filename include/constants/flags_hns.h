@@ -1341,7 +1341,13 @@
 #define FLAG_HIDE_ARENE_LIBRE_VESPER                  (HNS_EXTENDED_CONTENT_START + 392)
 #define FLAG_VESPER_VAINCUE                           (HNS_EXTENDED_CONTENT_START + 393)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  394
+// Cinematiques pixel art (src/hns_intro_cinematic.c) : choix "Centre ou Arene" de l'Acte I
+// (auparavant sans flag, seulement +1 reputation) - pilote le tableau affiche juste apres ;
+// prologue deja vu (garde anti-rejeu au debut de partie).
+#define FLAG_SAUVETAGE_ARENE                          (HNS_EXTENDED_CONTENT_START + 394)
+#define FLAG_PROLOGUE_VU                              (HNS_EXTENDED_CONTENT_START + 395)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  396
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

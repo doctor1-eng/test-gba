@@ -2,6 +2,19 @@
 // Genere a partir de docs/heart_and_soul/docs/histoire.md section 6.
 // Noms de Pokemon en francais (verifies un par un par recherche web).
 
+// Prologue en pixel art (HNS_CINEMATIC_PROLOGUE, src/hns_intro_cinematic.c) : la nuit ou la
+// TEAM ROCKET debarque, joue une seule fois avant le choix de l'equipe.
+HeartSoul_EventScript_Prologue::
+	goto_if_set FLAG_PROLOGUE_VU, HeartSoul_EventScript_ChooseType
+	lockall
+	setflag FLAG_PROLOGUE_VU
+	delay 30
+	setvar VAR_0x8004, HNS_CINEMATIC_PROLOGUE
+	setvar VAR_0x8005, 0
+	special HnsPlayCinematic
+	waitstate
+	goto HeartSoul_EventScript_ChooseType
+
 HeartSoul_EventScript_ChooseType::
 	lockall
 	dynmultipush HeartSoul_Text_Type_Normal, TYPE_NORMAL

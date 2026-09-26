@@ -68,11 +68,6 @@ HeartSoul_EventScript_CinnabarAttack::
 	setflag FLAG_ATTAQUE_CINNABAR_LANCEE
 	setflag FLAG_IS_KANTO_CHAMPION
 	clearflag FLAG_HIDE_CINNABAR_BLAINE
-	// Cinematique d'ouverture en pixel art (src/hns_intro_cinematic.c, 5 tableaux peints par
-	// tools/hns_intro/paint_panels.py). Rend la main au script via
-	// CB2_ReturnToFieldContinueScriptPlayMapMusic, d'ou le waitstate.
-	special HnsPlayIntroCinematic
-	waitstate
 	msgbox HeartSoul_Text_AttaqueDebut, MSGBOX_DEFAULT
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
@@ -168,6 +163,31 @@ HeartSoul_EventScript_CinnabarAttackGrunt2Victoire::
 	msgbox HeartSoul_Text_GruntApresBattle, MSGBOX_DEFAULT
 	setflag FLAG_HIDE_CINNABAR_GRUNT2
 	removeobject LOCALID_CINNABAR_GRUNT2
+	// Toute la fuite jusqu'a Bourg Palette est desormais une cinematique pixel art
+	// (HNS_CINEMATIC_FUITE, src/hns_intro_cinematic.c) : les 3 choix de l'Acte I (Centre/Arene,
+	// refugies, Caninos) s'y jouent, avec les memes flags et le meme bareme de reputation
+	// qu'avant, et chaque choix change les tableaux affiches ensuite. VAR_0x8005 = 1 : retour
+	// a la carte ecran noir, le warp ci-dessous suit immediatement.
+	setvar VAR_0x8004, HNS_CINEMATIC_FUITE
+	setvar VAR_0x8005, 1
+	special HnsPlayCinematic
+	waitstate
+	setflag FLAG_HIDE_CINNABAR_GRUNT_FUITE
+	setflag FLAG_HIDE_CINNABAR_REFUGEE
+	setflag FLAG_HIDE_CINNABAR_REFUGEE_ENFANT
+	setflag FLAG_HIDE_CINNABAR_POKEMON_BLESSE
+	setflag FLAG_CINNABAR_VERROUILLEE
+	setflag FLAG_ACTE_1_TERMINE
+	setflag FLAG_OBJET_PERDU_TROUVE
+	setflag FLAG_MARIN_ROUTE21_RENCONTRE
+	warp MAP_PALLET_TOWN_HNS, 6, 8
+	waitstate
+	end
+
+// Ancienne mise en scene de la fuite sur la carte (avant la cinematique pixel art). Plus
+// atteinte depuis HeartSoul_EventScript_CinnabarAttackGrunt2Victoire ; conservee telle quelle
+// comme reference et solution de repli.
+HeartSoul_CinnabarAttack_SauvetageIntroLegacy:
 	msgbox HeartSoul_Text_SauvetageIntro, MSGBOX_DEFAULT
 HeartSoul_CinnabarAttack_SauvetageChoice:
 	dynmultipush HeartSoul_Text_SauvetageCentre, 0

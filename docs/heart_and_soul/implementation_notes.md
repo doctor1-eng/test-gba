@@ -2439,3 +2439,59 @@ texte, devient une vraie cinématique plein écran, jouée au moment où l'attaq
 (enregistrement image par image). Les 5 tableaux, les sous-titres, le retour au Centre
 Pokémon et la suite du script fonctionnent. L'Acte I complet a été rejoué jusqu'à Bourg
 Palette après l'ajout, sans régression (`FLAG_ACTE_1_TERMINE`, choix des réfugiés).
+
+---
+
+## 2026-09-26 (suite 2) — Acte I restructuré : prologue et « La fuite » en pixel art, avec branches
+
+**Demande** : prologue en pixel art, puis choix de l'équipe et des attaques, sortie du Centre
+Pokémon (animation avec Blaine puis combat, conservés sur la carte), puis toute la suite en
+scènes pixel art jusqu'à la téléportation à Bourg Palette, **avec des scènes différentes selon
+les choix du joueur**.
+
+### Nouveau déroulé de l'Acte I
+1. **Prologue** (`HNS_CINEMATIC_PROLOGUE`) : les 5 tableaux de la nuit du débarquement, joués
+   au premier chargement du Centre Pokémon (`HeartSoul_EventScript_Prologue`, garde
+   `FLAG_PROLOGUE_VU`), puis `HeartSoul_EventScript_ChooseType`, inchangé.
+2. Choix du type, de l'équipe et des attaques, sortie, chorégraphie avec Blaine, combat
+   contre le 2e Grunt : **inchangés**, toujours joués sur la carte.
+3. **La fuite** (`HNS_CINEMATIC_FUITE`), 19 tableaux dont 12 variantes. Les trois choix se
+   font **dans la cinématique** (menu à 2 options), avec les mêmes flags et le même barème
+   qu'avant, et chaque choix change les tableaux suivants :
+
+| Choix | Option A | Option B | Tableaux affectés |
+|---|---|---|---|
+| Centre ou Arène | Centre (+1), Leveinard qui évacue les blessés | Arène (`FLAG_SAUVETAGE_ARENE`, nouveau), trophées dans les flammes | tableau suivant |
+| Réfugiés | Guider (`FLAG_REFUGIES_GUIDES`, +2), barque qui s'éloigne | Cacher (`FLAG_REFUGIES_CACHES`, +1), grotte dans le noir | tableau suivant **et** le bateau de fuite (barque visible devant) |
+| Caninos blessé | L'aider (`FLAG_POKEMON_BLESSE_SAUVE`, +1), pansement | Continuer, il reste dans la fumée | le bateau (Caninos à tes pieds) **et** l'arrivée à Bourg Palette |
+
+   Le bateau de fuite a 4 variantes (réfugiés × Caninos) et Bourg Palette 2. Au retour, le
+   script pose les flags de fin d'acte, puis téléporte directement à Bourg Palette (6,8),
+   écran resté noir grâce au nouveau `CB2_ReturnToFieldContinueScriptStayBlack`, ajouté dans
+   `overworld.c`. L'ancienne mise en scène sur la carte (choix, cabine du bateau) n'est plus
+   atteinte. Elle est conservée comme référence (`HeartSoul_CinnabarAttack_SauvetageIntroLegacy`).
+
+### Moteur (`src/hns_intro_cinematic.c`, réécrit)
+Petite machine à storyboard, avec les étapes `PANEL`, `PANEL_IF` (1 flag), `PANEL_IF2`
+(2 flags, 4 variantes), `CHOICE` (pose un flag et ajoute de la réputation) et `END`. Le même
+tableau repris deux fois ne change que la légende. START avance jusqu'au prochain choix sans
+jamais en sauter un. Effets disponibles : panoramique, éclair (flash blanc et tonnerre),
+tempête (roulis). Special unique `HnsPlayCinematic`, paramétré par `VAR_0x8004`
+(`include/constants/hns_cinematic.h`) et `VAR_0x8005` (retour à l'écran noir).
+
+### Art
+`tools/hns_intro/paint_fuite.py` (nouveau) peint les tableaux de la fuite. Il y intègre de
+**vrais sprites du jeu** (Caninos, Leveinard, le Marin, le Grunt Rocket en silhouette),
+ajustés aux éclairages nuit, incendie, tempête et aube. `tools/hns_intro/build.py` régénère
+les 24 tableaux et la table d'assets `src/data/hns_cinematic_panels.h`. Les tuiles et les
+tilemaps sont **compressées en LZ77** au build (règle `%.lz: %`). Résultat : ROM à 94,94 %,
+plus légère qu'avec les 5 seuls tableaux non compressés du prologue (94,96 %).
+
+### Vérification (émulateur headless, nouvelle partie à chaque fois)
+- **Chemin A** (Centre, Guider, Aider) : jusqu'à Bourg Palette, `REFUGIES_GUIDES=1`,
+  `POKEMON_BLESSE_SAUVE=1`, `SAUVETAGE_ARENE=0`, réputation 4 (1 + 2 + 1).
+- **Chemin B** (Arène, Cacher, Continuer) : jusqu'à Bourg Palette, `REFUGIES_CACHES=1`,
+  `SAUVETAGE_ARENE=1`, `POKEMON_BLESSE_SAUVE=0`, réputation 1.
+- Les tableaux de variante affichés correspondent aux choix sur les captures des deux
+  chemins. Les chemins mixtes (6 autres combinaisons) utilisent les mêmes étapes
+  conditionnelles, mais n'ont pas été joués un par un.

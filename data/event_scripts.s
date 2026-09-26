@@ -3,6 +3,7 @@
 #include "config/item.h"
 #include "config/randomizer.h"
 #include "constants/global.h"
+#include "constants/hns_cinematic.h"
 #include "constants/apprentice.h"
 #include "constants/apricorn_tree.h"
 #include "constants/battle.h"
