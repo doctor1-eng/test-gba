@@ -209,6 +209,7 @@ HeartSoul_EpilogueTerni_SkipRefugiesGuides:
 	goto_if_unset FLAG_REFUGIES_CACHES, HeartSoul_EpilogueTerni_Fin
 	msgbox HeartSoul_Text_EpilogueTerni_RefugiesCaches, MSGBOX_DEFAULT
 HeartSoul_EpilogueTerni_Fin:
+	call HeartSoul_EventScript_EpilogueOublies
 	msgbox HeartSoul_Text_EpilogueTerniFin, MSGBOX_DEFAULT
 	return
 
@@ -230,6 +231,7 @@ HeartSoul_EpilogueEquilibre_SkipRefugiesGuides:
 	goto_if_unset FLAG_REFUGIES_CACHES, HeartSoul_EpilogueEquilibre_SkipRefugies
 	msgbox HeartSoul_Text_EpilogueEquilibre_RefugiesCaches, MSGBOX_DEFAULT
 HeartSoul_EpilogueEquilibre_SkipRefugies:
+	call HeartSoul_EventScript_EpilogueOublies
 	msgbox HeartSoul_Text_EpilogueEquilibreFin, MSGBOX_DEFAULT
 	return
 
@@ -251,6 +253,7 @@ HeartSoul_EpilogueExemplaire_SkipRefugiesGuides:
 	goto_if_unset FLAG_REFUGIES_CACHES, HeartSoul_EpilogueExemplaire_SkipRefugies
 	msgbox HeartSoul_Text_EpilogueExemplaire_RefugiesCaches, MSGBOX_DEFAULT
 HeartSoul_EpilogueExemplaire_SkipRefugies:
+	call HeartSoul_EventScript_EpilogueOublies
 	msgbox HeartSoul_Text_EpilogueExemplaireFin, MSGBOX_DEFAULT
 	setflag FLAG_ZONE_BONUS_DEBLOQUEE
 	msgbox HeartSoul_Text_EpilogueZoneBonus, MSGBOX_DEFAULT

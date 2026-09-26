@@ -225,3 +225,25 @@ sauvegarde antérieure à l'ajout du contenu testé). Cocher au fur et à mesure
 ce qui a échoué, l'étape exacte de cette liste + ce qui s'est affiché ou pas affiché à
 l'écran. C'est ce niveau de détail (comme pour Quinn/Pierre) qui permet de retrouver la vraie
 cause au lieu de deviner.
+
+## 20. « Ceux que la Ligue a oubliés » (contenu inspiré de l'anime, 2026-09-26)
+
+**Le Village Caché** (au nord d'Azuria)
+- [ ] Route 25, dans la petite clairière sous la falaise (à gauche du labyrinthe d'arbres) :
+  un Bulbizarre attend. Parle-lui : il file entre les rochers, et « Le suivre ? » → OUI.
+- [ ] Au village : Bulbizarre surgit, l'écran tremble (Fouet Lianes), puis Mélanie arrive.
+- [ ] Si tu avais soigné le Caninos à Cinnabar, il accourt vers toi (cœur).
+- [ ] Deux collecteurs Rocket arrivent : combat **double contre deux dresseurs**.
+- [ ] Choix final : emmener Bulbizarre (il rejoint l'équipe, tenant un Évoluroc) ou le
+  laisser (tu reçois des Restes).
+- [ ] Après la scène, chacun reprend sa place. La cabane contient deux Pokémon et le carnet
+  de Mélanie (bibliothèque en haut à droite).
+- [ ] Sortie par le sentier du haut → Route 25. Revenir par les rochers → « Y retourner ? ».
+
+**Les Arènes Libres** (Céladopole)
+- [ ] La maison bleue à côté du Casino (autrefois « porte verrouillée ») s'ouvre.
+- [ ] Scène : rixe Kaz/Yas, Vesper descend, puis combat **2 contre 1** (Kaz en kimono rouge,
+  Yas aux cheveux argent).
+- [ ] Jugement : « Je vous présente à la LIGUE » → combat contre Vesper (cheveux violets), puis
+  Ceinture Pro. « La LIGUE ne vous doit rien » → Kaz et Yas partent avec Vesper, l'arène se vide.
+- [ ] En ressortant puis en revenant, la scène ne se rejoue pas.

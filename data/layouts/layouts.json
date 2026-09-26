@@ -16263,6 +16263,18 @@
       "blockdata_filepath": "data/layouts/NewSinjoh_KimonoHideout_hns/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_HIDDEN_VILLAGE_HNS",
+      "name": "HiddenVillage_Hns_Layout",
+      "width": 24,
+      "height": 20,
+      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "secondary_tileset": "gTileset_PalletTown_Hns",
+      "border_filepath": "data/layouts/HiddenVillage_Hns/border.bin",
+      "blockdata_filepath": "data/layouts/HiddenVillage_Hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }

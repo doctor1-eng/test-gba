@@ -228,6 +228,10 @@ enum __attribute__((packed)) TrainerPicID
     TRAINER_PIC_FRONT_TWINS_HNS,
     TRAINER_PIC_FRONT_YOUNGSTER_HNS,
     TRAINER_PIC_FRONT_SAMSON_OAK_HNS,
+    // Heart & Soul custom portraits (tools/hns_sprites/make_sprites.py)
+    TRAINER_PIC_FRONT_KAZ_HNS,
+    TRAINER_PIC_FRONT_YAS_HNS,
+    TRAINER_PIC_FRONT_VESPER_HNS,
     TRAINER_PIC_FRONT_COUNT,
     TRAINER_PIC_BACK_BRENDAN = TRAINER_PIC_FRONT_COUNT, // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
     TRAINER_PIC_BACK_MAY,

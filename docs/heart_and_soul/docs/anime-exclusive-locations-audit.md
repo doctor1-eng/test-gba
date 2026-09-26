@@ -76,3 +76,11 @@ Le conflit central de H&S (`histoire.md` §3) : Blue estime que la Ligue récomp
 4. Question ouverte à trancher : le hall de concours de Jadielle reste-t-il
    accessible dès le début, ou est-il fermé par la crise Rocket et rouvert en
    post-game ?
+
+## 5. Suite donnée (2026-09-26)
+
+L'utilisateur a délégué la décision. Retenus et **implémentés** : le Village Caché (refuge
+type Hidden Village) et les Arènes Libres (Dark City). Voir
+`docs/heart_and_soul/prompts/brief_autonome_ceux_que_la_ligue_a_oublies.md` et l'entrée du
+2026-09-26 dans `implementation_notes.md`. Gringey City, Pokémon Tech et la refonte du hall de
+concours restent candidats pour un prochain lot.

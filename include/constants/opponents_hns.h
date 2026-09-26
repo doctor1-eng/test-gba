@@ -680,8 +680,17 @@
 // de l'attaque de Cinnabar, juste apres la disparition de Blaine.
 #define TRAINER_ROCKET_GRUNT_CINNABAR_HNS     648
 
+// "Ceux que la Ligue a oublies" (data/scripts/heart_and_soul_oublies.inc) : les 2 collecteurs
+// Rocket du Village Cache (combat double a 2 dresseurs), Kaz et Yas (arenes libres de
+// Celadopole) et Vesper, recruteuse de Blue.
+#define TRAINER_COLLECTEUR_ROCKET_1_HNS       649
+#define TRAINER_COLLECTEUR_ROCKET_2_HNS       650
+#define TRAINER_KAZ_HNS                       651
+#define TRAINER_YAS_HNS                       652
+#define TRAINER_VESPER_HNS                    653
+
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       649
+#define TRAINERS_COUNT_HNS                       654
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

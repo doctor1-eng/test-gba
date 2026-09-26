@@ -15264,3 +15264,168 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Crunch
 - Toxic
 - Substitute
+
+=== TRAINER_COLLECTEUR_ROCKET_1_HNS ===
+Name: COLLECTEUR
+Class: Team Rocket Hns
+Pic: Rocket Grunt M Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+
+Houndoom @ Charcoal
+Level: 33
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Flamethrower
+- Crunch
+- Will-O-Wisp
+- Snarl
+
+Weezing @ Black Sludge
+Level: 33
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Sludge Bomb
+- Fire Blast
+- Toxic
+- Protect
+
+=== TRAINER_COLLECTEUR_ROCKET_2_HNS ===
+Name: GLANEUSE
+Class: Team Rocket Hns
+Pic: Rocket Grunt F Hns
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+
+Arbok @ Poison Barb
+Level: 33
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Gunk Shot
+- Glare
+- Crunch
+- Earthquake
+
+Golbat @ Sharp Beak
+Level: 33
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Air Slash
+- Confuse Ray
+- Bite
+- Protect
+
+=== TRAINER_KAZ_HNS ===
+Name: KAZ
+Class: Leader Hns
+Pic: Kaz Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Machamp @ Black Belt
+Level: 35
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Dynamic Punch
+- Knock Off
+- Stone Edge
+- Bullet Punch
+
+Hitmonchan @ Muscle Band
+Level: 34
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Drain Punch
+- Ice Punch
+- Thunder Punch
+- Mach Punch
+
+Primeape @ Choice Scarf
+Level: 34
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Close Combat
+- U-turn
+- Rock Slide
+- Stomping Tantrum
+
+=== TRAINER_YAS_HNS ===
+Name: YAS
+Class: Leader Hns
+Pic: Yas Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore
+
+Electabuzz @ Magnet
+Level: 35
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Thunderbolt
+- Cross Chop
+- Ice Punch
+- Light Screen
+
+Magneton @ Leftovers
+Level: 34
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Thunderbolt
+- Flash Cannon
+- Thunder Wave
+- Protect
+
+Jolteon @ Life Orb
+Level: 34
+IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+- Thunderbolt
+- Shadow Ball
+- Volt Switch
+- Double Kick
+
+=== TRAINER_VESPER_HNS ===
+Name: VESPER
+Class: Rocket Admin Hns
+Pic: Vesper Hns
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Honchkrow @ Scope Lens
+Level: 36
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Night Slash
+- Brave Bird
+- Sucker Punch
+- Heat Wave
+
+Skuntank @ Black Sludge
+Level: 35
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Poison Jab
+- Crunch
+- Flamethrower
+- Toxic
+
+Weavile @ Never-Melt Ice
+Level: 35
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Ice Punch
+- Knock Off
+- Low Kick
+- Fake Out
+
+Persian @ Silk Scarf
+Level: 35
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
+- Fake Out
+- Night Slash
+- Hypnosis
+- Play Rough

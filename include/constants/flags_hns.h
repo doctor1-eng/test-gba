@@ -1320,7 +1320,28 @@
 // data/maps/CinnabarIsland_Cave_Hns/scripts.inc.
 #define FLAG_HIDE_CINNABAR_CAVE_HABITANTS             (HNS_EXTENDED_CONTENT_START + 379)
 
-#define HNS_EXTENDED_CONTENT_COUNT                  380
+// "Ceux que la Ligue a oublies" (docs/heart_and_soul/prompts/brief_autonome_ceux_que_la_ligue_a_oublies.md,
+// data/scripts/heart_and_soul_oublies.inc). Evenement 1 - Le Village Cache (anime EP010) :
+// cutscene d'arrivee jouee une seule fois, visibilite des PNJ/Pokemon du village et du
+// Bulbizarre guide de la Route 25, choix final (Bulbizarre emmene ou laisse en gardien).
+#define FLAG_VILLAGE_CACHE_DECOUVERT                  (HNS_EXTENDED_CONTENT_START + 380)
+#define FLAG_VILLAGE_CACHE_DEFENDU                    (HNS_EXTENDED_CONTENT_START + 381)
+#define FLAG_BULBIZARRE_EMMENE                        (HNS_EXTENDED_CONTENT_START + 382)
+#define FLAG_HIDE_ROUTE25_BULBIZARRE                  (HNS_EXTENDED_CONTENT_START + 383)
+#define FLAG_HIDE_VILLAGE_MELANIE                     (HNS_EXTENDED_CONTENT_START + 384)
+#define FLAG_HIDE_VILLAGE_BULBIZARRE                  (HNS_EXTENDED_CONTENT_START + 385)
+#define FLAG_HIDE_VILLAGE_COLLECTEURS                 (HNS_EXTENDED_CONTENT_START + 386)
+#define FLAG_HIDE_VILLAGE_CANINOS                     (HNS_EXTENDED_CONTENT_START + 387)
+// Evenement 2 - Les Arenes Libres (anime Dark City) : cutscene d'entree, issue du jugement,
+// visibilite de Kaz/Yas/Vesper selon l'issue.
+#define FLAG_ARENES_LIBRES_VISITEES                   (HNS_EXTENDED_CONTENT_START + 388)
+#define FLAG_ARENES_LIBRES_RESOLUES                   (HNS_EXTENDED_CONTENT_START + 389)
+#define FLAG_HIDE_ARENE_LIBRE_KAZ                     (HNS_EXTENDED_CONTENT_START + 390)
+#define FLAG_HIDE_ARENE_LIBRE_YAS                     (HNS_EXTENDED_CONTENT_START + 391)
+#define FLAG_HIDE_ARENE_LIBRE_VESPER                  (HNS_EXTENDED_CONTENT_START + 392)
+#define FLAG_VESPER_VAINCUE                           (HNS_EXTENDED_CONTENT_START + 393)
+
+#define HNS_EXTENDED_CONTENT_COUNT                  394
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x4AE–0x4FF remaining reserved for future expansion
 

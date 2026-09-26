@@ -851,6 +851,15 @@ const u16 gObjectEventPal_Whitney_hns[] = INCBIN_U16("graphics/object_events/pal
 const u16 gObjectEventPal_Will_hns[] = INCBIN_U16("graphics/object_events/palettes/will_hns.gbapal");
 const u32 gObjectEventPic_NurseChansey_hns[] = INCBIN_U32("graphics/object_events/pics/misc/nurse_chansey_hns.4bpp");
 const u16 gObjectEventPal_AlolaOak_hns[] = INCBIN_U16("graphics/object_events/palettes/alola_oak_hns.gbapal");
+// Heart & Soul custom NPCs
+const u32 gObjectEventPic_Melanie_hns[] = INCBIN_U32("graphics/object_events/pics/people/hns_custom/melanie_hns.4bpp");
+const u16 gObjectEventPal_Melanie_hns[] = INCBIN_U16("graphics/object_events/palettes/melanie_hns.gbapal");
+const u32 gObjectEventPic_Kaz_hns[] = INCBIN_U32("graphics/object_events/pics/people/hns_custom/kaz_hns.4bpp");
+const u16 gObjectEventPal_Kaz_hns[] = INCBIN_U16("graphics/object_events/palettes/kaz_hns.gbapal");
+const u32 gObjectEventPic_Yas_hns[] = INCBIN_U32("graphics/object_events/pics/people/hns_custom/yas_hns.4bpp");
+const u16 gObjectEventPal_Yas_hns[] = INCBIN_U16("graphics/object_events/palettes/yas_hns.gbapal");
+const u32 gObjectEventPic_Vesper_hns[] = INCBIN_U32("graphics/object_events/pics/people/hns_custom/vesper_hns.4bpp");
+const u16 gObjectEventPal_Vesper_hns[] = INCBIN_U16("graphics/object_events/palettes/vesper_hns.gbapal");
 
 // HnS protagonist sprite data
 const u32 gObjectEventPic_GoldNormalRunning_hns[] = INCBIN_U32("graphics/object_events/pics/people/gold/walking_hns.4bpp", "graphics/object_events/pics/people/gold/running_hns.4bpp");

@@ -130,7 +130,10 @@
 // (retour des allies, heart_and_soul_act5.inc).
 #define VAR_FUCHSIA_DEBAT                               0x40E0
 #define VAR_UNUSED_HNS_0x40E0                           0x40E0
-#define VAR_UNUSED_HNS_0x40E1                           0x40E1
+// "Ceux que la Ligue a oublies", evenement 2 (Arenes Libres) : issue du jugement
+// (0 = pas encore rendu, 1 = parrainage devant la Ligue, 2 = "la Ligue ne vous doit rien",
+// 3 = Kaz et Yas renvoyes dos a dos).
+#define VAR_ARENES_LIBRES_JUGEMENT                      0x40E1
 #define VAR_UNUSED_HNS_0x40E2                           0x40E2
 
 #define VAR_UNUSED_HNS_0x40E3                            0x40E3

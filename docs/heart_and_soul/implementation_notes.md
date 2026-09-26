@@ -2378,3 +2378,44 @@ et le point de sortie (repères roses posés par `tools/gba_tiles`, positions `(
 pour les PNJ, `(10,11)` pour le warp de sortie).
 
 **Non testé en jeu, non compilé.**
+
+---
+
+## 2026-09-26 — « Ceux que la Ligue a oubliés » : Village Caché + Arènes Libres (autonome)
+
+**Demande utilisateur** : décider seul du meilleur contenu inspiré de l'anime, le créer en
+pixel art, l'intégrer et livrer une ROM finale (pas de tests intermédiaires). Le prompt de
+décision est dans `docs/heart_and_soul/prompts/brief_autonome_ceux_que_la_ligue_a_oublies.md`.
+L'audit des lieux anime qui a servi de filtre est dans
+`docs/heart_and_soul/docs/anime-exclusive-locations-audit.md`.
+
+### Contenu ajouté
+| Élément | Détail |
+|---|---|
+| Village Caché (EP010) | Nouvelle carte `MAP_HIDDEN_VILLAGE_HNS`. Son layout est généré par `tools/hns_maps/hidden_village.py` à partir des metatiles de Bourg Palette : une cabane, une prairie, un enclos, une mare. Intérieur `MAP_HIDDEN_VILLAGE_HOUSE_HNS`, qui réemploie `LAYOUT_PALLET_TOWN_HOUSE2_HNS`. Accès : Bulbizarre guide sur la Route 25, en (47,11), puis passage (bg_event (47,10), face nord). Sortie : coord_events (12,1)/(13,1). |
+| Cinématique | Bulbizarre surgit, Fouet Lianes (caméra qui tremble, recul), Mélanie. Le texte varie selon `FLAG_REFUGIES_GUIDES`/`CACHES`. Retrouvailles avec Caninos si `FLAG_POKEMON_BLESSE_SAUVE`. Deux collecteurs Rocket arrivent et le joueur mène un **combat à deux dresseurs** (`trainerbattle_two_trainers`). Choix final : emmener Bulbizarre (niv. 34, Évoluroc, Vampigraine / Poudre Dodo / Giga-Sangsue / Bombe Beurk) ou le laisser garder le village (Restes). +1 réputation pour avoir défendu le village. |
+| Arènes Libres (Dark City) | Nouvelle carte `MAP_CELADON_CITY_ARENE_LIBRE_HNS`, géométrie `LAYOUT_CIANWOOD_GYM_HNS`. Accès : la porte « verrouillée » de Céladopole (26,17), près du Casino. Le bg_event `Route7_EventScript_Door` y est remplacé par un warp (warp id 9). |
+| Cinématique | Rixe Kaz contre Yas (clash des Pokémon, caméra), Vesper (recruteuse de Blue) descend des gradins, puis combat 2 contre 1 face à Kaz et Yas. Jugement : « Je vous présente à la LIGUE » (+2 réputation, combat contre Vesper, Ceinture Pro) ou « La LIGUE ne vous doit rien » (Kaz et Yas partent avec Vesper). La réputation n'est comptée **qu'après** la victoire contre Vesper : une défaite rejoue la scène sans double comptage. |
+| Épilogue | `HeartSoul_EventScript_EpilogueOublies`, appelé dans les 3 paliers de `DeclencherEpilogue` (act5). |
+| Pixel art | 4 sprites overworld (Mélanie, Kaz avec lunettes noires dessinées, Yas, Vesper) et 3 portraits de combat assortis (Kaz, Yas, Vesper). Générateur reproductible : `tools/hns_sprites/make_sprites.py`. Assets déclarés dans `ASSETS_SOURCES.md`. |
+| Registre | Flags `HNS_EXTENDED_CONTENT_START + 380..393` (le compteur passe à 394). `VAR_ARENES_LIBRES_JUGEMENT` (0x40E1). Dresseurs 649..653. `OBJ_EVENT_GFX` 548..551 et palettes 0x119D..0x11A0. `TRAINER_PIC_FRONT_{KAZ,YAS,VESPER}_HNS` en fin de liste des portraits de face. Nouveau groupe de cartes `gMapGroup_HeartSoulOublies_Hns`, ajouté en fin de liste (aucune carte existante n'est renumérotée). |
+
+### Pièges rencontrés (root cause)
+- **Noms de dresseur > 10 caractères** : « COLLECTRICE » provoquait l'erreur `excess elements in array
+  initializer` sur `trainerName`. Renommée « GLANEUSE ».
+- **Caractères hors charmap** : `«`, `»` et `—` font échouer l'assemblage. Il faut utiliser `“ ”` et `-`.
+- **Fin de cinématique** : sans repositionnement, Mélanie, Caninos et Bulbizarre encerclaient
+  le joueur en (12,3) jusqu'au rechargement de la carte. Corrigé par un fondu au noir suivi de
+  `setobjectxy` pour remettre chacun à sa place.
+- **Genre du joueur** : toutes les répliques qui parlent du joueur passent par `{CHAMPION_DEF}`,
+  `{CHAMPION}` et `{E_ACCORD}` (plus de « Elle », « la vraie »).
+
+### Vérification
+- `make hns` : 0 erreur. ROM à 94,64 % (+0,08 %).
+- Joué de bout en bout dans l'émulateur headless (`tools/playtest/`, nouveau) à partir d'une
+  vraie partie (nouvelle partie, Acte I complet, sauvegarde). Cas vérifiés : les deux
+  branches de chaque choix, flags et réputation lus en RAM, sortie et retour par le
+  passage, cabane et carnet, revisite de l'arène sans rejouer la scène, portraits de combat
+  visibles.
+- **Non testé en jeu** : l'appel d'épilogue de l'Acte V (le chemin d'accès est trop long à
+  scripter). Il est vérifié par compilation, et le script est un simple `call` avec `return`.

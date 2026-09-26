@@ -105,7 +105,8 @@
     "gMapGroup_IndoorFiveIslandRoute_Frlg",
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
-    "gMapGroup_IndoorSevenIslandRoute_Frlg"
+    "gMapGroup_IndoorSevenIslandRoute_Frlg",
+    "gMapGroup_HeartSoulOublies_Hns"
   ],
   "gMapGroup_TownsAndRoutes_Hns": [
     "NewBarkTown_hns",
@@ -1818,5 +1819,10 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_HeartSoulOublies_Hns": [
+    "HiddenVillage_Hns",
+    "HiddenVillage_House_Hns",
+    "CeladonCity_AreneLibre_Hns"
   ]
 }

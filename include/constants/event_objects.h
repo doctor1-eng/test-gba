@@ -583,7 +583,12 @@
 #define OBJ_EVENT_GFX_SKIER_F_HNS               545
 #define OBJ_EVENT_GFX_SKIER_M_HNS               546
 #define OBJ_EVENT_GFX_ALOLA_OAK_HNS             547
-#define NUM_OBJ_EVENT_GFX                        548
+// Heart & Soul custom NPCs (tools/hns_sprites/make_sprites.py)
+#define OBJ_EVENT_GFX_MELANIE_HNS                   548
+#define OBJ_EVENT_GFX_KAZ_HNS                       549
+#define OBJ_EVENT_GFX_YAS_HNS                       550
+#define OBJ_EVENT_GFX_VESPER_HNS                    551
+#define NUM_OBJ_EVENT_GFX                        552
 
 
 // These are dynamic object gfx ids.
@@ -779,6 +784,10 @@
 #define OBJ_EVENT_PAL_TAG_KRIS_HNS                0x119A
 #define OBJ_EVENT_PAL_TAG_KRIS_REFLECTION_HNS     0x119B
 #define OBJ_EVENT_PAL_TAG_ALOLA_OAK_HNS           0x119C
+#define OBJ_EVENT_PAL_TAG_MELANIE_HNS               0x119D
+#define OBJ_EVENT_PAL_TAG_KAZ_HNS                   0x119E
+#define OBJ_EVENT_PAL_TAG_YAS_HNS                   0x119F
+#define OBJ_EVENT_PAL_TAG_VESPER_HNS                0x11A0
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

@@ -50,6 +50,41 @@ static EWRAM_DATA u8 sPlayerSelectHoldFrames = 0;
 
 COMMON_DATA u8 gSelectedObjectEvent = 0;
 
+// Heart & Soul headless playtest hook (tools/playtest/README.md). EWRAM is zeroed at boot and
+// nothing in the game writes this struct: only an external tool (the mGBA harness) poking
+// memory can arm it, so it is inert in normal play. When armed, it sets the listed flags and
+// vars, then warps the player, and disarms itself.
+#define HNS_PLAYTEST_MAGIC 0x54504E48 // "HNPT"
+struct HnsPlaytestRequest
+{
+    u32 magic;
+    s8 mapGroup;
+    s8 mapNum;
+    s8 x;
+    s8 y;
+    u16 flags[24];
+    u16 vars[8][2];
+};
+EWRAM_DATA struct HnsPlaytestRequest gHnsPlaytest = {0};
+
+static bool8 TryRunHnsPlaytestRequest(void)
+{
+    u32 i;
+
+    if (gHnsPlaytest.magic != HNS_PLAYTEST_MAGIC)
+        return FALSE;
+    gHnsPlaytest.magic = 0;
+    for (i = 0; i < ARRAY_COUNT(gHnsPlaytest.flags) && gHnsPlaytest.flags[i] != 0; i++)
+        FlagSet(gHnsPlaytest.flags[i]);
+    for (i = 0; i < ARRAY_COUNT(gHnsPlaytest.vars) && gHnsPlaytest.vars[i][0] != 0; i++)
+        VarSet(gHnsPlaytest.vars[i][0], gHnsPlaytest.vars[i][1]);
+    if (gHnsPlaytest.mapGroup < 0)
+        return FALSE;
+    SetWarpDestination(gHnsPlaytest.mapGroup, gHnsPlaytest.mapNum, WARP_ID_NONE, gHnsPlaytest.x, gHnsPlaytest.y);
+    DoWarp();
+    return TRUE;
+}
+
 static void GetPlayerPosition(struct MapPosition *);
 static void GetInFrontOfPlayerPosition(struct MapPosition *);
 static u16 GetPlayerCurMetatileBehavior(int);
@@ -185,6 +220,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     playerDirection = GetPlayerFacingDirection();
     GetPlayerPosition(&position);
     metatileBehavior = MapGridGetMetatileBehaviorAt(position.x, position.y);
+
+    if (TryRunHnsPlaytestRequest() == TRUE)
+        return TRUE;
 
     if (CheckForTrainersWantingBattle() == TRUE)
         return TRUE;
